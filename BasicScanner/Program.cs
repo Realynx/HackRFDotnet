@@ -19,14 +19,14 @@ namespace BasicScanner {
                 return;
             }
 
-            rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
-            //rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
+            //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
+            rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
             //rfDevice.SetFrequency(RadioBand.FromMHz(125.150f), RadioBand.FromKHz(8));
             //rfDevice.SetFrequency(RadioBand.FromMHz(162.4f), RadioBand.FromKHz(20));
 
             //rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
 
-            using var iqStream = new IQStream(rfDevice, RadioBand.FromMHz(2).Hz);
+            using var iqStream = new IQStream(rfDevice, RadioBand.FromMHz(8).Hz);
             iqStream.StartListening();
 
             // var scanningService = new ChannelScanningService(iqStream, rfDevice);

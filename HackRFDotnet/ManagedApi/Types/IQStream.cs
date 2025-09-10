@@ -36,7 +36,7 @@ namespace HackRFDotnet.ManagedApi.Types {
         private float _lastNoiseLevel = -100;
         private readonly ChannelFilteringService _channelFilteringService;
 
-        private readonly Queue<Complex[]> _complexFrames = new(1_000);
+        private readonly Queue<IQFrame> _complexFrames = new(1_000);
         private readonly RfDevice _managedRfDevice;
         public ManualResetEvent WaitForFrame { get; set; } = new ManualResetEvent(false);
 
@@ -50,16 +50,28 @@ namespace HackRFDotnet.ManagedApi.Types {
             _channelFilteringService = new ChannelFilteringService(this);
         }
 
+        private readonly string fileName = "94.7-radio.bin";
+        FileStream _binStream;
         public void StartListening() {
+            if (_binStream is not null) {
+                _binStream.Close();
+            }
+            if (File.Exists(fileName)) {
+                File.Delete(fileName);
+            }
+            _binStream = File.OpenWrite(fileName);
+
+
             _managedRfDevice.SetSampleRate(_sampleRate);
             _managedRfDevice.StartRx();
         }
 
         private void QueueSampleFrame(HackrfTransfer hackrfTransfer) {
             var rfTransferBuffer = new ReadOnlySpan<byte>(hackrfTransfer.buffer, hackrfTransfer.valid_length);
-
-            var iqFrame = IQConverter.ConvertIQBytes(rfTransferBuffer);
-            if (iqFrame is null) {
+            var iqFrame = new IQFrame(rfTransferBuffer);
+            // _binStream.Write(rfTransferBuffer.ToArray(), 0, rfTransferBuffer.Length);
+            // var iqFrame = IQConverter.ConvertIQBytes(rfTransferBuffer);
+            if (rfTransferBuffer.Length == 0) {
                 return;
             }
 
@@ -120,6 +132,8 @@ namespace HackRFDotnet.ManagedApi.Types {
         }
 
         public void Dispose() {
+            _binStream.Close();
+
             StopListening();
             lock (this) {
                 _complexFrames.Clear();
