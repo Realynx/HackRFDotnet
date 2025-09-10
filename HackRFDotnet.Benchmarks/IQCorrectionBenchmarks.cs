@@ -18,64 +18,72 @@ public class IQCorrectionBenchmarks {
     public void Setup() {
         _iq = Enumerable.Range(0, IqLength)
             .Select(_ => new Complex((Random.Shared.NextDouble() * 2) - 1, (Random.Shared.NextDouble() * 2) - 1))
-            .Select(x => x /= 100)
+            .Select(x => x / 100)
             .ToArray();
     }
 
     [Benchmark]
-    public void IQCorrection_QuadAccess() {
+    public Complex[] IQCorrection_QuadAccess() {
+        var iq = _iq.ToArray();
+
         var meanI = 0.0;
         var meanQ = 0.0;
 
-        var offset = _iq.Length % 4;
-        for (var i = 0; i < _iq.Length - offset; i += 4) {
-            meanI += _iq[i].Real;
-            meanQ += _iq[i].Imaginary;
-            meanI += _iq[i + 1].Real;
-            meanQ += _iq[i + 1].Imaginary;
-            meanI += _iq[i + 2].Real;
-            meanQ += _iq[i + 2].Imaginary;
-            meanI += _iq[i + 3].Real;
-            meanQ += _iq[i + 3].Imaginary;
+        var offset = iq.Length % 4;
+        for (var i = 0; i < iq.Length - offset; i += 4) {
+            meanI += iq[i + 0].Real;
+            meanQ += iq[i + 0].Imaginary;
+            meanI += iq[i + 1].Real;
+            meanQ += iq[i + 1].Imaginary;
+            meanI += iq[i + 2].Real;
+            meanQ += iq[i + 2].Imaginary;
+            meanI += iq[i + 3].Real;
+            meanQ += iq[i + 3].Imaginary;
         }
 
-        for (var i = _iq.Length - offset; i < _iq.Length; i++) {
-            meanI += _iq[i].Real;
-            meanQ += _iq[i].Imaginary;
+        for (var i = iq.Length - offset; i < iq.Length; i++) {
+            meanI += iq[i].Real;
+            meanQ += iq[i].Imaginary;
         }
 
-        meanI /= _iq.Length;
-        meanQ /= _iq.Length;
+        meanI /= iq.Length;
+        meanQ /= iq.Length;
 
         var mean = new Complex(meanI, meanQ);
-        for (var i = 0; i < _iq.Length - offset; i += 4) {
-            _iq[i] -= mean;
-            _iq[i + 1] -= mean;
-            _iq[i + 2] -= mean;
-            _iq[i + 3] -= mean;
+        for (var i = 0; i < iq.Length - offset; i += 4) {
+            iq[i + 0] -= mean;
+            iq[i + 1] -= mean;
+            iq[i + 2] -= mean;
+            iq[i + 3] -= mean;
         }
 
-        for (var i = _iq.Length - offset; i < _iq.Length; i++) {
-            _iq[i] -= mean;
+        for (var i = iq.Length - offset; i < iq.Length; i++) {
+            iq[i] -= mean;
         }
+
+        return iq;
     }
 
     [Benchmark(Baseline = true)]
-    public void IQCorrection_SingleAccess() {
+    public Complex[] IQCorrection_SingleAccess() {
+        var iq = _iq.ToArray();
+
         var meanI = 0.0;
         var meanQ = 0.0;
 
-        for (var i = 0; i < _iq.Length; i++) {
-            meanI += _iq[i].Real;
-            meanQ += _iq[i].Imaginary;
+        for (var i = 0; i < iq.Length; i++) {
+            meanI += iq[i].Real;
+            meanQ += iq[i].Imaginary;
         }
 
-        meanI /= _iq.Length;
-        meanQ /= _iq.Length;
+        meanI /= iq.Length;
+        meanQ /= iq.Length;
 
         var mean = new Complex(meanI, meanQ);
-        for (var i = 0; i < _iq.Length; i++) {
-            _iq[i] -= mean;
+        for (var i = 0; i < iq.Length; i++) {
+            iq[i] -= mean;
         }
+
+        return iq;
     }
 }
