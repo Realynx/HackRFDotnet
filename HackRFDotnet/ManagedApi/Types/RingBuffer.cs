@@ -1,6 +1,4 @@
-﻿using System.Buffers;
-
-namespace HackRFDotnet.ManagedApi.Types;
+﻿namespace HackRFDotnet.ManagedApi.Types;
 
 internal sealed class RingBuffer<T> {
     public int Capacity { get; }
@@ -15,6 +13,12 @@ internal sealed class RingBuffer<T> {
         }
     }
 
+    public bool IsEmpty {
+        get {
+            return Count == 0;
+        }
+    }
+
     private readonly T[] _array;
     private int _start;
     private int _end;
@@ -24,6 +28,9 @@ internal sealed class RingBuffer<T> {
         _array = new T[capacity];
     }
 
+    /// <summary>
+    /// Writes items to the ring buffer.
+    /// </summary>
     public void Write(ReadOnlySpan<T> buffer) {
         // Buffer larger than capacity - only write end of buffer
         if (buffer.Length >= Capacity) {
@@ -56,14 +63,10 @@ internal sealed class RingBuffer<T> {
         }
     }
 
-    public ReadOnlySequence<T> Peek() {
-        throw new NotImplementedException();
-    }
-
     /// <summary>
-    /// Reads items from the ringer buffer without advancing the end pointer
+    /// Reads items from the ringer buffer without modifying the start and end pointers.
     /// </summary>
-    /// <returns>The number of items read</returns>
+    /// <returns>The number of items read.</returns>
     public int Peek(Span<T> buffer) {
         // [||||||||||||||||||||||||||||]
         //  ^ start                 ^ end
@@ -90,19 +93,48 @@ internal sealed class RingBuffer<T> {
         }
     }
 
-    public ReadOnlySequence<T> Read(int count, out int read) {
-        throw new NotImplementedException();
+    /// <summary>
+    /// Consumes items from the ringer buffer.
+    /// </summary>
+    /// <returns>A <see cref="ReadOnlySpan{T}"/> pointing to the items in the backing array.</returns>
+    /// <remarks>The returned <see cref="ReadOnlySpan{T}"/> should not be read from if <see cref="Write"/> is called after <see cref="DangerousRead"/>.</remarks>
+    public ReadOnlySpan<T> DangerousRead(int count, out int read) {
+        var sliceStart = _start;
+
+        // [||||||||||||||||||||||||||||]
+        //  ^ start                 ^ end
+        if (_start < _end) {
+            read = Math.Min(count, _end - _start);
+
+            if (_end - _start == read) {
+                _start = 0;
+                _end = 0;
+            }
+            else {
+                _start += read;
+            }
+        }
+        // [||||||||||||||||||||||||||||]
+        //  ^ end                 ^ start
+        else {
+            read = Math.Min(count, Capacity - _start);
+
+            _start += read;
+            _start %= Capacity;
+        }
+
+        return _array.AsSpan(sliceStart, read);
     }
 
     /// <summary>
-    /// Reads items from the ringer buffer and advances the end pointer
+    /// Consumes items from the ringer buffer.
     /// </summary>
     /// <returns>The number of items read</returns>
     public int Read(Span<T> buffer) {
         var read = Peek(buffer);
 
         // Advance pointers
-        if (_start + read > _end) {
+        if (_start + read >= _end) {
             _start = 0;
             _end = 0;
         }
