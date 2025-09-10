@@ -5,7 +5,7 @@ using HackRFDotnet.ManagedApi.Streams;
 
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
     public unsafe class FMPlayer : BasePlayer {
-        public FMPlayer(IQStream iQStream) : base(iQStream) {
+        public FMPlayer(RfStream iQStream) : base(iQStream) {
 
         }
 
@@ -19,7 +19,7 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
             using var filterService = new ChannelFilteringService(_iQStream);
 
             while (true) {
-                var iqFrame = _iQStream.WaitAndDequeue();
+                var iqFrame = _iQStream.WaitAndDequeue().GetIqSamples();
 
                 //Simple arctangent FM demod
                 var audio = new float[iqFrame.Length - 1];

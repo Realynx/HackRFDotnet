@@ -4,7 +4,7 @@ using HackRFDotnet.ManagedApi.Streams;
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
     public unsafe class AMPlayer : BasePlayer {
 
-        public AMPlayer(IQStream iQStream) : base(iQStream) {
+        public AMPlayer(RfStream iQStream) : base(iQStream) {
 
         }
 
@@ -18,7 +18,7 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
             using var filterService = new ChannelFilteringService(_iQStream);
 
             while (true) {
-                var iqFrame = _iQStream.WaitAndDequeue();
+                var iqFrame = _iQStream.WaitAndDequeue().GetIqSamples();
                 var audio = new float[iqFrame.Length];
 
                 if (_iQStream.GetLastLevelDb() <= _iQStream.GetNoiseFloorDb() - 16.5) {

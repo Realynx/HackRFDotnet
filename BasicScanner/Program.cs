@@ -1,6 +1,7 @@
 ﻿using HackRFDotnet.ManagedApi;
 using HackRFDotnet.ManagedApi.AudioPlayers;
 using HackRFDotnet.ManagedApi.Services;
+using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Types;
 
 namespace BasicScanner {
@@ -26,7 +27,7 @@ namespace BasicScanner {
 
             //rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
 
-            using var iqStream = new IQStream(rfDevice, RadioBand.FromMHz(8).Hz);
+            using var iqStream = new RfStream(rfDevice, RadioBand.FromMHz(2).Hz);
             iqStream.StartListening();
 
             // var scanningService = new ChannelScanningService(iqStream, rfDevice);
@@ -46,7 +47,7 @@ namespace BasicScanner {
 
         private static void ControlChannel(RfDevice rfDevice) {
             for (; ; ) {
-                //Console.Write($"[{rfDevice.Frequency.Mhz} Mhz] Frequency: ");
+                Console.Write($"[{rfDevice.Frequency.Mhz} Mhz] Frequency: ");
                 var freq = Console.ReadLine();
 
                 if (double.TryParse(freq, out var userFrequency)) {

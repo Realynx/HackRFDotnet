@@ -12,7 +12,7 @@ public class ReadOnlyIQFrame : IIQFrame {
     protected readonly Complex[] _iqSample;
 
     public ReadOnlyIQFrame(ReadOnlySpan<byte> interleavedBytes) {
-        _iqSample = IQConverter.ConvertIQBytes(interleavedBytes);
+        // _iqSample = IQConverter.ConvertIQBytes(interleavedBytes);
 
     }
 
