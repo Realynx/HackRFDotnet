@@ -2,14 +2,14 @@
 
 namespace HackRFDotnet.ManagedApi.Streams;
 public class IQStreamReader : IDisposable {
-    private readonly RfStream _iQStream;
+    private readonly RfDeviceStream _iQStream;
     private readonly bool _keepOpen;
 
     private RadioBand _center;
     private RadioBand _bandwith;
 
 
-    public IQStreamReader(RfStream iQStream, bool keepOpen = true) {
+    public IQStreamReader(RfDeviceStream iQStream, bool keepOpen = true) {
         _iQStream = iQStream;
         _keepOpen = keepOpen;
     }

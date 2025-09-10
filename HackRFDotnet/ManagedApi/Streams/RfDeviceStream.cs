@@ -1,9 +1,8 @@
-﻿using HackRFDotnet.ManagedApi.Services;
-using HackRFDotnet.ManagedApi.Types;
+﻿using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.Structs;
 
 namespace HackRFDotnet.ManagedApi.Streams {
-    public unsafe class RfStream : IDisposable {
+    public unsafe class RfDeviceStream : IDisposable {
         public bool DataAvailable {
             get {
                 return _complexFrames.Count > 0;
@@ -18,7 +17,6 @@ namespace HackRFDotnet.ManagedApi.Streams {
 
         public double SampleRate { get; init; }
 
-
         private readonly Queue<float> _noiseHistory = new Queue<float>(100);
         private float _lastNoiseLevel = -100;
 
@@ -27,7 +25,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
         public ManualResetEvent WaitForFrame { get; set; } = new ManualResetEvent(false);
 
 
-        public RfStream(RfDevice managedRfDevice, double sampleRate) {
+        public RfDeviceStream(RfDevice managedRfDevice, double sampleRate) {
             _managedRfDevice = managedRfDevice;
             SampleRate = sampleRate;
 

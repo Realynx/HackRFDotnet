@@ -5,9 +5,9 @@ public class IQStream {
     public RadioBand CenterFrequency { get; set; }
     public RadioBand Bandwith { get; set; }
 
-    private readonly RfStream _rfStream;
+    private readonly RfDeviceStream _rfStream;
 
-    public IQStream(RfStream rfStream) {
+    public IQStream(RfDeviceStream rfStream) {
         _rfStream = rfStream;
     }
 }

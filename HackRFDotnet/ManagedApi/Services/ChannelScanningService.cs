@@ -5,13 +5,13 @@ using HackRFDotnet.ManagedApi.Types;
 
 namespace HackRFDotnet.ManagedApi.Services {
     public class ChannelScanningService {
-        private readonly RfStream _iQStream;
+        private readonly RfDeviceStream _iQStream;
         private readonly RfDevice _rfDevice;
 
         private DateTime _lastTxDetected = DateTime.MinValue;
         private TimeSpan _nextChannelDelay = TimeSpan.FromMilliseconds(200);
 
-        public ChannelScanningService(RfStream iQStream, RfDevice rfDevice) {
+        public ChannelScanningService(RfDeviceStream iQStream, RfDevice rfDevice) {
             _iQStream = iQStream;
             _rfDevice = rfDevice;
         }

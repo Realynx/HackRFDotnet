@@ -27,7 +27,7 @@ namespace BasicScanner {
 
             //rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
 
-            using var iqStream = new RfStream(rfDevice, RadioBand.FromMHz(2).Hz);
+            using var iqStream = new RfDeviceStream(rfDevice, RadioBand.FromMHz(2).Hz);
             iqStream.StartListening();
 
             // var scanningService = new ChannelScanningService(iqStream, rfDevice);

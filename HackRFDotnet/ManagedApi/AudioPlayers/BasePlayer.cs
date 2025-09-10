@@ -17,12 +17,12 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
         private OnlineFirFilter _lowPassFilter;
 
         private readonly Thread _playbackThread;
-        protected readonly RfStream _iQStream;
+        protected readonly RfDeviceStream _iQStream;
 
 
         private bool _running = true;
 
-        protected BasePlayer(RfStream iQStream) {
+        protected BasePlayer(RfDeviceStream iQStream) {
             _iQStream = iQStream;
 
             _playbackThread = new Thread(AudioPlaybackThread) { IsBackground = true };

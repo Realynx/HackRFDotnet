@@ -4,7 +4,7 @@ using HackRFDotnet.ManagedApi.Streams;
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
     public unsafe class AMPlayer : BasePlayer {
 
-        public AMPlayer(RfStream iQStream) : base(iQStream) {
+        public AMPlayer(RfDeviceStream iQStream) : base(iQStream) {
 
         }
 

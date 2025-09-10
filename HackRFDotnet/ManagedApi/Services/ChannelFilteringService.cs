@@ -11,9 +11,9 @@ namespace HackRFDotnet.ManagedApi.Services {
 
         private readonly OnlineFirFilter _filterI;
         private readonly OnlineFirFilter _filterQ;
-        private readonly RfStream _iQStream;
+        private readonly RfDeviceStream _iQStream;
 
-        public ChannelFilteringService(RfStream iQStream) {
+        public ChannelFilteringService(RfDeviceStream iQStream) {
             var halfOrder = 70;
             _lowPassFirCoefficients = FirCoefficients.LowPass(
                 samplingRate: iQStream.SampleRate,
