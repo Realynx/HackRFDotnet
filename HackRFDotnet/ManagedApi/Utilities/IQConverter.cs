@@ -24,19 +24,7 @@ namespace HackRFDotnet.ManagedApi.Utilities {
             var meanI = 0.0;
             var meanQ = 0.0;
 
-            var offset = iq.Length % 4;
-            for (var i = 0; i < iq.Length - offset; i += 4) {
-                meanI += iq[i + 0].Real;
-                meanQ += iq[i + 0].Imaginary;
-                meanI += iq[i + 1].Real;
-                meanQ += iq[i + 1].Imaginary;
-                meanI += iq[i + 2].Real;
-                meanQ += iq[i + 2].Imaginary;
-                meanI += iq[i + 3].Real;
-                meanQ += iq[i + 3].Imaginary;
-            }
-
-            for (var i = iq.Length - offset; i < iq.Length; i++) {
+            for (var i = 0; i < iq.Length; i++) {
                 meanI += iq[i].Real;
                 meanQ += iq[i].Imaginary;
             }
@@ -45,14 +33,7 @@ namespace HackRFDotnet.ManagedApi.Utilities {
             meanQ /= iq.Length;
 
             var mean = new Complex(meanI, meanQ);
-            for (var i = 0; i < iq.Length - offset; i += 4) {
-                iq[i + 0] -= mean;
-                iq[i + 1] -= mean;
-                iq[i + 2] -= mean;
-                iq[i + 3] -= mean;
-            }
-
-            for (var i = iq.Length - offset; i < iq.Length; i++) {
+            for (var i = 0; i < iq.Length; i++) {
                 iq[i] -= mean;
             }
         }
