@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 
 using HackRFDotnet.ManagedApi.Services;
-using HackRFDotnet.ManagedApi.Types;
+using HackRFDotnet.ManagedApi.Streams;
 
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
     public unsafe class FMPlayer : BasePlayer {

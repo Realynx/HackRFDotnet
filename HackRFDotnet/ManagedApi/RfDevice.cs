@@ -1,4 +1,6 @@
-﻿using HackRFDotnet.Enums;
+﻿using System.Collections.Immutable;
+
+using HackRFDotnet.Enums;
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.NativeApi;
 using HackRFDotnet.Structs;
@@ -18,7 +20,9 @@ namespace HackRFDotnet.ManagedApi {
         }
 
         private HackRFSampleBlockCallback? _rxCallback;
-        private Action<HackrfTransfer>? _userCallback;
+
+        public delegate void HackRfCallback(HackrfTransfer transferBlock);
+        public event HackRfCallback RfDataAvailable;
 
         internal RfDevice() {
             ConnectToFirstDevice();
@@ -58,10 +62,6 @@ namespace HackRFDotnet.ManagedApi {
             return HackRfNativeFunctions.hackrf_set_sample_rate(_devicePtr, sampleRate) != 0;
         }
 
-        public void OnSample(Action<HackrfTransfer> blockCallback) {
-            _userCallback = blockCallback;
-        }
-
         public bool StartRx() {
             _rxCallback = HandleTransferSample;
             HackRfNativeFunctions.hackrf_set_leds(_devicePtr, (byte)LedState.RxLight);
@@ -87,9 +87,17 @@ namespace HackRFDotnet.ManagedApi {
             if (transferStruct == null) {
                 return -1;
             }
-            // Invoke user callback
 
-            _userCallback?.Invoke(*transferStruct);
+            // Invoke user callback
+            var invokeList = RfDataAvailable?.GetInvocationList();
+            //foreach (HackRfCallback item in invokeList) {
+            //    Task.Run(() => item?.Invoke(*transferStruct));
+            //}
+
+            if (invokeList is not null && invokeList.Length != 0) {
+                RfDataAvailable?.Invoke(*transferStruct);
+            }
+
             return 0;
         }
 

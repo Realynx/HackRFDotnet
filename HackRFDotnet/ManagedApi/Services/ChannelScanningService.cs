@@ -1,5 +1,6 @@
 ﻿using System.IO;
 
+using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Types;
 
 namespace HackRFDotnet.ManagedApi.Services {

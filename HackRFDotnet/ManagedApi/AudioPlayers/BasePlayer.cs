@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-using HackRFDotnet.ManagedApi.Types;
+using HackRFDotnet.ManagedApi.Streams;
 
 using MathNet.Filtering.FIR;
 

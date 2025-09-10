@@ -1,10 +1,10 @@
 ﻿using System.Numerics;
 
 using HackRFDotnet.ManagedApi.Services;
-using HackRFDotnet.ManagedApi.Utilities;
+using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.Structs;
 
-namespace HackRFDotnet.ManagedApi.Types {
+namespace HackRFDotnet.ManagedApi.Streams {
     public unsafe class IQStream : IDisposable {
         public bool DataAvailable {
             get {
@@ -25,11 +25,8 @@ namespace HackRFDotnet.ManagedApi.Types {
         }
 
         public double SampleRate {
-            get {
-                return _sampleRate;
-            }
+            get; init;
         }
-        private readonly double _sampleRate;
 
 
         private readonly Queue<float> _noiseHistory = new Queue<float>(100);
@@ -44,9 +41,8 @@ namespace HackRFDotnet.ManagedApi.Types {
 
         public IQStream(RfDevice managedRfDevice, double sampleRate) {
             _managedRfDevice = managedRfDevice;
-            _sampleRate = sampleRate;
-            _managedRfDevice.OnSample(QueueSampleFrame);
-
+            SampleRate = sampleRate;
+            _managedRfDevice.RfDataAvailable += QueueSampleFrame;
             _channelFilteringService = new ChannelFilteringService(this);
         }
 
@@ -62,13 +58,14 @@ namespace HackRFDotnet.ManagedApi.Types {
             _binStream = File.OpenWrite(fileName);
 
 
-            _managedRfDevice.SetSampleRate(_sampleRate);
+            _managedRfDevice.SetSampleRate(SampleRate);
             _managedRfDevice.StartRx();
         }
 
         private void QueueSampleFrame(HackrfTransfer hackrfTransfer) {
             var rfTransferBuffer = new ReadOnlySpan<byte>(hackrfTransfer.buffer, hackrfTransfer.valid_length);
             var iqFrame = new IQFrame(rfTransferBuffer);
+
             // _binStream.Write(rfTransferBuffer.ToArray(), 0, rfTransferBuffer.Length);
             // var iqFrame = IQConverter.ConvertIQBytes(rfTransferBuffer);
             if (rfTransferBuffer.Length == 0) {

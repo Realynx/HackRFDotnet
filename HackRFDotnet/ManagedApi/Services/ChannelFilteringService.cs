@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 
+using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Types;
 
 using MathNet.Filtering.FIR;
