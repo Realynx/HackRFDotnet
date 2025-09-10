@@ -20,8 +20,8 @@ namespace HackRFDotnet.ManagedApi.Utilities {
         }
 
         private static void IQCorrection(Complex[] iq) {
-            double meanI = 0.0;
-            double meanQ = 0.0;
+            var meanI = 0.0;
+            var meanQ = 0.0;
 
             // Compute mean
             for (var i = 0; i < iq.Length; i++) {
