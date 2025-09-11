@@ -1,7 +1,7 @@
-﻿using HackRFDotnet.Enums;
-using HackRFDotnet.ManagedApi.Streams;
+﻿using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.NativeApi;
+using HackRFDotnet.NativeApi.Enums;
 using HackRFDotnet.Structs;
 
 namespace HackRFDotnet.ManagedApi {

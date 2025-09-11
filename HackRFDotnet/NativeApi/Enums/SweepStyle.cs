@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.Enums {
+﻿namespace HackRFDotnet.NativeApi.Enums {
     public enum SweepStyle {
         /**
          * step_width is added to the current frequency at each step.

@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.Enums {
+﻿namespace HackRFDotnet.NativeApi.Enums {
     public enum HackrfBoardId {
         /**
 	     * Jellybean (pre-production revision, not supported)

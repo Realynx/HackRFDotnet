@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.Enums {
+﻿namespace HackRFDotnet.NativeApi.Enums {
     public enum HackrfError : int {
         /**
 	     * no error happened

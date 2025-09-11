@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-using HackRFDotnet.Enums;
+using HackRFDotnet.NativeApi.Enums;
 
 namespace HackRFDotnet.Structs {
     [StructLayout(LayoutKind.Sequential)]

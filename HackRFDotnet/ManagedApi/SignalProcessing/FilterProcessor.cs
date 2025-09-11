@@ -42,7 +42,10 @@ public class FilterProcessor {
     }
 
     private void FilterFrame(Span<IQ> iqFrame) {
-        // SignalUtilities.FFT(true, 256, iqFrame);
+        SignalUtilities.FFT(true, 20, iqFrame);
+
+
+        SignalUtilities.FFT(false, 20, iqFrame);
 
         for (var x = 0; x < iqFrame.Length; x++) {
             var iFiltered = _filterI.ProcessSample(iqFrame[x].I);

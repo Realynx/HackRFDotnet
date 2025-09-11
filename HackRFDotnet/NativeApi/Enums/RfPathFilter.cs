@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.Enums {
+﻿namespace HackRFDotnet.NativeApi.Enums {
     public enum RfPathFilter {
         /**
          * No filter is selected, **the mixer is bypassed**, \f$f_{center} = f_{IF}\f$
