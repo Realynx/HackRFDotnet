@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+﻿
 using System.Runtime.CompilerServices;
 
 using HackRFDotnet.ManagedApi.Types;
@@ -7,18 +7,12 @@ namespace HackRFDotnet.ManagedApi.Utilities;
 
 public unsafe class SignalUtilities {
 
-    [UnsafeAccessor(UnsafeAccessorKind.Field, Name = "m_real")]
-    protected static extern ref double GetRefReal(Complex complex);
-
-    [UnsafeAccessor(UnsafeAccessorKind.Field, Name = "m_imaginary")]
-    protected static extern ref double GetRefImaginary(Complex complex);
-
-    public static void ApplyPhaseOffset(Span<Complex> iqFrame, RadioBand freqOffset, double _sampleRate) {
+    public static void ApplyPhaseOffset(Span<IQ> iqFrame, RadioBand freqOffset, double _sampleRate) {
         for (var x = 0; x < iqFrame.Length; x++) {
             var theta = x / _sampleRate;
             var phase = -2.0 * Math.PI * freqOffset.Hz * theta;
 
-            var osc = new Complex(Math.Cos(phase), Math.Sin(phase));
+            var osc = new IQ(Math.Cos(phase), Math.Sin(phase));
             iqFrame[x] *= osc;
         }
     }
@@ -40,7 +34,7 @@ public unsafe class SignalUtilities {
     /// This computes an in-place complex-to-complex FFT 
     /// x and y are the real and imaginary arrays of 2^m points.
     /// </summary>
-    public static void FFT(bool forward, int m, Span<Complex> iqPair) {
+    public static void FFT(bool forward, int m, Span<IQ> iqPair) {
         int n, i, i1, j, k, i2, l, l1, l2;
         double c1, c2, tx, ty, t1, t2, u1, u2, z;
 
@@ -55,13 +49,13 @@ public unsafe class SignalUtilities {
         j = 0;
         for (i = 0; i < n - 1; i++) {
             if (i < j) {
-                tx = iqPair[i].Real;
-                ty = iqPair[i].Imaginary;
-                GetRefReal(iqPair[i]) = iqPair[j].Real;
-                GetRefImaginary(iqPair[i]) = iqPair[j].Imaginary;
+                tx = iqPair[i].I;
+                ty = iqPair[i].Q;
+                iqPair[i].I = iqPair[j].I;
+                iqPair[j].Q = iqPair[j].Q;
 
-                GetRefReal(iqPair[j]) = tx;
-                GetRefImaginary(iqPair[j]) = ty;
+                iqPair[j].I = tx;
+                iqPair[j].Q = ty;
             }
             k = i2;
 
@@ -84,12 +78,12 @@ public unsafe class SignalUtilities {
             for (j = 0; j < l1; j++) {
                 for (i = j; i < n; i += l2) {
                     i1 = i + l1;
-                    t1 = u1 * iqPair[i1].Real - u2 * iqPair[i1].Imaginary;
-                    t2 = u1 * iqPair[i1].Imaginary + u2 * iqPair[i1].Real;
-                    GetRefReal(iqPair[i1]) = iqPair[i].Real - t1;
-                    GetRefImaginary(iqPair[i1]) = iqPair[i].Imaginary - t2;
-                    GetRefReal(iqPair[i]) += t1;
-                    GetRefImaginary(iqPair[i]) += t2;
+                    t1 = u1 * iqPair[i1].I - u2 * iqPair[i1].Q;
+                    t2 = u1 * iqPair[i1].Q + u2 * iqPair[i1].I;
+                    iqPair[i1].I = iqPair[i].I - t1;
+                    iqPair[j].Q = iqPair[i].Q - t2;
+                    iqPair[i].I += t1;
+                    iqPair[i].Q += t2;
                 }
                 z = u1 * c1 - u2 * c2;
                 u2 = u1 * c2 + u2 * c1;
@@ -106,8 +100,8 @@ public unsafe class SignalUtilities {
         // Scaling for forward transform 
         if (forward) {
             for (i = 0; i < n; i++) {
-                GetRefReal(iqPair[i]) /= n;
-                GetRefImaginary(iqPair[i]) /= n;
+                iqPair[i].I /= n;
+                iqPair[i].Q /= n;
             }
         }
     }

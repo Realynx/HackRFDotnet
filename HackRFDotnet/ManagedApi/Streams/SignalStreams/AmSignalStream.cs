@@ -1,5 +1,7 @@
 ﻿using System.Buffers;
-using System.Numerics;
+
+using HackRFDotnet.ManagedApi.Types;
+
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
 public class AmSignalStream : SignalStream {
@@ -7,7 +9,7 @@ public class AmSignalStream : SignalStream {
     }
 
     public override int Read(float[] buffer, int offset, int count) {
-        var iqBuffer = ArrayPool<Complex>.Shared.Rent(count);
+        var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
         try {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
@@ -18,7 +20,7 @@ public class AmSignalStream : SignalStream {
             return count;
         }
         finally {
-            ArrayPool<Complex>.Shared.Return(iqBuffer);
+            ArrayPool<IQ>.Shared.Return(iqBuffer);
         }
     }
 }

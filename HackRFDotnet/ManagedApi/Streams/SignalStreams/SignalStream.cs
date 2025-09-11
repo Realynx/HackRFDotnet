@@ -1,5 +1,5 @@
 ﻿using System.Buffers;
-using System.Numerics;
+
 
 using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Types;
@@ -30,7 +30,7 @@ public class SignalStream : ISampleProvider, IDisposable {
         _filterProcessor = new FilterProcessor(_rfDeviceStream.SampleRate, center, bandwidth);
     }
 
-    protected int ReadSpan(Span<Complex> iqPairs) {
+    protected int ReadSpan(Span<IQ> iqPairs) {
         var readBytes = _rfDeviceStream.ReadBuffer(iqPairs);
         _filterProcessor.ApplyFilter(iqPairs);
 
@@ -38,7 +38,7 @@ public class SignalStream : ISampleProvider, IDisposable {
     }
 
     public virtual int Read(float[] buffer, int offset, int count) {
-        var iqBuffer = ArrayPool<Complex>.Shared.Rent(count);
+        var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
         try {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
@@ -49,7 +49,7 @@ public class SignalStream : ISampleProvider, IDisposable {
             return count;
         }
         finally {
-            ArrayPool<Complex>.Shared.Return(iqBuffer);
+            ArrayPool<IQ>.Shared.Return(iqBuffer);
         }
     }
 

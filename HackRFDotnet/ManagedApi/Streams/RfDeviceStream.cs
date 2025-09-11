@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Numerics;
+
 
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.ManagedApi.Utilities;
@@ -24,7 +24,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
         public double SampleRate { get; private set; }
 
         private RingBuffer<float> _noiseHistory = new(100);
-        private RingBuffer<Complex>? _dataBuffer = null;
+        private RingBuffer<IQ>? _dataBuffer = null;
 
         private readonly RfDevice _managedRfDevice;
 
@@ -40,7 +40,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
         public void SetSampleRate(double sampleRate) {
             SampleRate = sampleRate;
 
-            _dataBuffer = new RingBuffer<Complex>((int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate));
+            _dataBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate));
             _managedRfDevice.SetSampleRate(SampleRate);
         }
 
@@ -48,7 +48,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
             _managedRfDevice.StopRx();
         }
 
-        public int ReadBuffer(Span<Complex> iqBuffer) {
+        public int ReadBuffer(Span<IQ> iqBuffer) {
             return _dataBuffer?.Read(iqBuffer) ?? throw new Exception("Empty Buffer");
         }
 

@@ -1,5 +1,6 @@
 ﻿using System.Buffers;
-using System.Numerics;
+
+using HackRFDotnet.ManagedApi.Types;
 
 using NAudio.Wave;
 
@@ -10,20 +11,20 @@ public class FmSignalStream : SignalStream {
     }
 
     public override int Read(float[] buffer, int offset, int count) {
-        var iqBuffer = ArrayPool<Complex>.Shared.Rent(count);
+        var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
         try {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
             for (var x = 1; x < count; x++) {
                 // Conjugate of a Complex number: the conjugate of x+i*y is x-i*y
-                var delta = iqBuffer[x] * Complex.Conjugate(iqBuffer[x - 1]);
+                var delta = iqBuffer[x] * IQ.Conjugate(iqBuffer[x - 1]);
                 buffer[x - 1] = (float)delta.Phase;
             }
 
             return count;
         }
         finally {
-            ArrayPool<Complex>.Shared.Return(iqBuffer);
+            ArrayPool<IQ>.Shared.Return(iqBuffer);
         }
     }
 }

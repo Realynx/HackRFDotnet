@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+﻿
 
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.ManagedApi.Utilities;
@@ -32,22 +32,22 @@ public class FilterProcessor {
         _filterQ = new OnlineFirFilter(lowPassFirCoefficients);
     }
 
-    public void ApplyFilter(Span<Complex> iqFrame) {
+    public void ApplyFilter(Span<IQ> iqFrame) {
         FilterFrame(iqFrame);
     }
 
-    public void ApplyPhaseOffset(Span<Complex> iqFrame, RadioBand freqOffset) {
+    public void ApplyPhaseOffset(Span<IQ> iqFrame, RadioBand freqOffset) {
         SignalUtilities.ApplyPhaseOffset(iqFrame, freqOffset, _sampleRate);
         FilterFrame(iqFrame);
     }
 
-    private void FilterFrame(Span<Complex> iqFrame) {
-        SignalUtilities.FFT(true, 256, iqFrame);
+    private void FilterFrame(Span<IQ> iqFrame) {
+        // SignalUtilities.FFT(true, 256, iqFrame);
 
         for (var x = 0; x < iqFrame.Length; x++) {
-            var iFiltered = _filterI.ProcessSample(iqFrame[x].Real);
-            var qFiltered = _filterQ.ProcessSample(iqFrame[x].Imaginary);
-            iqFrame[x] = new Complex(iFiltered, qFiltered);
+            var iFiltered = _filterI.ProcessSample(iqFrame[x].I);
+            var qFiltered = _filterQ.ProcessSample(iqFrame[x].Q);
+            iqFrame[x] = new IQ(iFiltered, qFiltered);
         }
     }
 }

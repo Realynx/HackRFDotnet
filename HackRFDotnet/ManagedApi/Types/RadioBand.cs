@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+﻿
 
 namespace HackRFDotnet.ManagedApi.Types {
     public class RadioBand {
