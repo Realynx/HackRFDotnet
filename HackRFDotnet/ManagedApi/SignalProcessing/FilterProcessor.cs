@@ -1,6 +1,7 @@
 ﻿using System.Numerics;
 
 using HackRFDotnet.ManagedApi.Types;
+using HackRFDotnet.ManagedApi.Utilities;
 
 using MathNet.Filtering.FIR;
 
@@ -35,15 +36,8 @@ public class FilterProcessor {
         FilterFrame(iqFrame);
     }
 
-    public void ApplyFilterOffset(Span<Complex> iqFrame, RadioBand freqOffset) {
-        for (var x = 0; x < iqFrame.Length; x++) {
-            var theta = x / _sampleRate;
-            var phase = -2.0 * Math.PI * freqOffset.Hz * theta;
-
-            var osc = new Complex(Math.Cos(phase), Math.Sin(phase));
-            iqFrame[x] *= osc;
-        }
-
+    public void ApplyPhaseOffset(Span<Complex> iqFrame, RadioBand freqOffset) {
+        SignalUtilities.ApplyPhaseOffset(iqFrame, freqOffset, _sampleRate);
         FilterFrame(iqFrame);
     }
 
