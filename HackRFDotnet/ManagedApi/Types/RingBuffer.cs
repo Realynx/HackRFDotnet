@@ -81,7 +81,7 @@ internal sealed class RingBuffer<T> {
                 return buffer.Length;
             }
 
-            _array.AsSpan(_start, _end).CopyTo(buffer);
+            _array.AsSpan(_start, _end - _start).CopyTo(buffer);
             return _end - _start;
         }
 
