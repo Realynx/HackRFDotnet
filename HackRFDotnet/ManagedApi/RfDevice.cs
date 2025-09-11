@@ -2,7 +2,7 @@
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.NativeApi;
 using HackRFDotnet.NativeApi.Enums;
-using HackRFDotnet.Structs;
+using HackRFDotnet.NativeApi.Structs;
 
 namespace HackRFDotnet.ManagedApi {
     public unsafe class RfDevice : IDisposable {

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace HackRFDotnet.Structs {
+namespace HackRFDotnet.NativeApi.Structs {
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct HackRFM0State {
         /// <summary>

@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 
 using HackRFDotnet.NativeApi.Enums;
-using HackRFDotnet.Structs;
+using HackRFDotnet.NativeApi.Structs;
 
 namespace HackRFDotnet.NativeApi {
     public static unsafe class HackRfNativeFunctions {

@@ -3,7 +3,7 @@
 
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.ManagedApi.Utilities;
-using HackRFDotnet.Structs;
+using HackRFDotnet.NativeApi.Structs;
 
 using NAudio.Wave;
 

@@ -2,7 +2,7 @@
 
 using HackRFDotnet.NativeApi.Enums;
 
-namespace HackRFDotnet.Structs {
+namespace HackRFDotnet.NativeApi.Structs {
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct HackRFDeviceList {
         /// <summary>
