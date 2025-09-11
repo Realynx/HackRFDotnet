@@ -1,9 +1,18 @@
 ﻿using System.Numerics;
+using System.Runtime.CompilerServices;
 
 using HackRFDotnet.ManagedApi.Types;
 
 namespace HackRFDotnet.ManagedApi.Utilities;
-public class SignalUtilities {
+
+public unsafe class SignalUtilities {
+
+    [UnsafeAccessor(UnsafeAccessorKind.Field, Name = "m_real")]
+    protected static extern ref double GetRefReal(Complex complex);
+
+    [UnsafeAccessor(UnsafeAccessorKind.Field, Name = "m_imaginary")]
+    protected static extern ref double GetRefImaginary(Complex complex);
+
     public static void ApplyPhaseOffset(Span<Complex> iqFrame, RadioBand freqOffset, double _sampleRate) {
         for (var x = 0; x < iqFrame.Length; x++) {
             var theta = x / _sampleRate;
@@ -14,11 +23,24 @@ public class SignalUtilities {
         }
     }
 
+
+    /*
+ * NAudio FFT Transform https://github.com/naudio/NAudio
+ * <see cref="FFT(bool, int, Complex[])"/>
+ Copyright 2020 Mark Heath
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
     /// <summary>
     /// This computes an in-place complex-to-complex FFT 
     /// x and y are the real and imaginary arrays of 2^m points.
     /// </summary>
-    public static void FFT(bool forward, int m, Complex[] iqPair) {
+    public static void FFT(bool forward, int m, Span<Complex> iqPair) {
         int n, i, i1, j, k, i2, l, l1, l2;
         double c1, c2, tx, ty, t1, t2, u1, u2, z;
 
@@ -35,10 +57,11 @@ public class SignalUtilities {
             if (i < j) {
                 tx = iqPair[i].Real;
                 ty = iqPair[i].Imaginary;
-                iqPair[i].Real = iqPair[j].Real;
-                iqPair[i].Imaginary = iqPair[j].Imaginary;
-                iqPair[j].Real = tx;
-                iqPair[j].Imaginary = ty;
+                GetRefReal(iqPair[i]) = iqPair[j].Real;
+                GetRefImaginary(iqPair[i]) = iqPair[j].Imaginary;
+
+                GetRefReal(iqPair[j]) = tx;
+                GetRefImaginary(iqPair[j]) = ty;
             }
             k = i2;
 
@@ -63,10 +86,10 @@ public class SignalUtilities {
                     i1 = i + l1;
                     t1 = u1 * iqPair[i1].Real - u2 * iqPair[i1].Imaginary;
                     t2 = u1 * iqPair[i1].Imaginary + u2 * iqPair[i1].Real;
-                    iqPair[i1].Real = iqPair[i].Real - t1;
-                    iqPair[i1].Imaginary = iqPair[i].Imaginary - t2;
-                    iqPair[i].Real += t1;
-                    iqPair[i].Imaginary += t2;
+                    GetRefReal(iqPair[i1]) = iqPair[i].Real - t1;
+                    GetRefImaginary(iqPair[i1]) = iqPair[i].Imaginary - t2;
+                    GetRefReal(iqPair[i]) += t1;
+                    GetRefImaginary(iqPair[i]) += t2;
                 }
                 z = u1 * c1 - u2 * c2;
                 u2 = u1 * c2 + u2 * c1;
@@ -83,8 +106,8 @@ public class SignalUtilities {
         // Scaling for forward transform 
         if (forward) {
             for (i = 0; i < n; i++) {
-                iqPair[i].Real /= n;
-                iqPair[i].Imaginary /= n;
+                GetRefReal(iqPair[i]) /= n;
+                GetRefImaginary(iqPair[i]) /= n;
             }
         }
     }
