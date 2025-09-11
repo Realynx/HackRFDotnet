@@ -1,5 +1,7 @@
 ﻿using System.Numerics;
 
+using HackRFDotnet.ManagedApi.Types;
+
 namespace HackRFDotnet.ManagedApi.Utilities {
     public static class IQConverter {
         /// <summary>

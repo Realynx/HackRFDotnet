@@ -1,5 +1,7 @@
-﻿using HackRFDotnet.ManagedApi.Services;
+﻿using System.Numerics;
+
 using HackRFDotnet.ManagedApi.Streams;
+using HackRFDotnet.ManagedApi.Types;
 
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
     public unsafe class AMPlayer : BasePlayer {
@@ -8,42 +10,47 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
 
         }
 
-        public override void PlayStreamAsync(int audioRate = 44100) {
-            base.PlayStreamAsync(audioRate);
+        public override void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwith, int audioRate = 44100) {
+            base.PlayStreamAsync(centerOffset, bandwith, audioRate);
 
-            new Thread(() => StreamIqFrames(audioRate)).Start();
+            new Thread(() => StreamIqFrames(centerOffset, bandwith, audioRate)).Start();
         }
 
-        private void StreamIqFrames(int audioRate = 44100) {
-            using var filterService = new ChannelFilteringService(_iQStream);
+        private void StreamIqFrames(RadioBand centerOffset, RadioBand bandwith, int audioRate = 44100) {
+            using var streamReader = new IQStreamReader(_rfDeviceStream);
+            streamReader.SetBand(centerOffset, bandwith);
 
             while (true) {
-                var iqFrame = _iQStream.WaitAndDequeue().GetIqSamples();
-                var audio = new float[iqFrame.Length];
+                var processingChunk = new Complex[4096];
+                streamReader.ReadBuffer(processingChunk);
 
-                if (_iQStream.GetLastLevelDb() <= _iQStream.GetNoiseFloorDb() - 16.5) {
-                    // Output silence if squelched
-                    for (int i = 0; i < audio.Length; i++)
-                        audio[i] = 0f;
-                }
-                else {
-                    // Envelope detection (magnitude of IQ)
-                    for (var i = 0; i < iqFrame.Length; i++) {
-                        var s = iqFrame[i];
-                        audio[i] = (float)Math.Sqrt(s.Real * s.Real + s.Imaginary * s.Imaginary);
-                    }
+                var audio = new float[processingChunk.Length];
 
-                    // Remove DC offset
-                    float avg = 0f;
-                    for (int i = 0; i < audio.Length; i++)
-                        avg += audio[i];
-                    avg /= audio.Length;
-                    for (int i = 0; i < audio.Length; i++)
-                        audio[i] -= avg;
+                //if (_rfDeviceStream.GetLastLevelDb() <= _rfDeviceStream.GetNoiseFloorDb() - 16.5) {
+                //    // Output silence if squelched
+                //    for (int i = 0; i < audio.Length; i++)
+                //        audio[i] = 0f;
+
+                //    return;
+                //}
+
+                // Envelope detection (magnitude of IQ)
+                for (var i = 0; i < processingChunk.Length; i++) {
+                    var s = processingChunk[i];
+                    audio[i] = (float)Math.Sqrt(s.Real * s.Real + s.Imaginary * s.Imaginary);
                 }
+
+                // Remove DC offset
+                float avg = 0f;
+                for (int i = 0; i < audio.Length; i++)
+                    avg += audio[i];
+                avg /= audio.Length;
+                for (int i = 0; i < audio.Length; i++)
+                    audio[i] -= avg;
+
 
                 // Downsample and play
-                PlayDownsampled(audio, (uint)_iQStream.SampleRate, audioRate);
+                PlayDownsampled(audio, (uint)_rfDeviceStream.SampleRate, audioRate);
             }
         }
 

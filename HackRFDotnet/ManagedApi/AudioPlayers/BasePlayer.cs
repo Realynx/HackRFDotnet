@@ -1,6 +1,7 @@
 ﻿using System.Collections.Concurrent;
 
 using HackRFDotnet.ManagedApi.Streams;
+using HackRFDotnet.ManagedApi.Types;
 
 using MathNet.Filtering.FIR;
 
@@ -17,18 +18,18 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
         private OnlineFirFilter _lowPassFilter;
 
         private readonly Thread _playbackThread;
-        protected readonly RfDeviceStream _iQStream;
+        protected readonly RfDeviceStream _rfDeviceStream;
 
 
         private bool _running = true;
 
-        protected BasePlayer(RfDeviceStream iQStream) {
-            _iQStream = iQStream;
+        protected BasePlayer(RfDeviceStream rfDeviceStream) {
+            _rfDeviceStream = rfDeviceStream;
 
             _playbackThread = new Thread(AudioPlaybackThread) { IsBackground = true };
         }
 
-        public virtual void PlayStreamAsync(int audioRate = 44100) {
+        public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwith, int audioRate = 44100) {
             _waveProvider = new BufferedWaveProvider(new WaveFormat(audioRate, 16, 1));
 
             _waveOut = new WaveOutEvent { Volume = 0.05f };
@@ -37,7 +38,7 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
 
             var halfOrder = 100;
             _firCoefficients = FirCoefficients.LowPass(
-                samplingRate: _iQStream.SampleRate,
+                samplingRate: _rfDeviceStream.SampleRate,
                 cutoff: audioRate / 2,
                 dcGain: 2.0,
                 halforder: halfOrder
@@ -69,8 +70,6 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
                 }
             }
         }
-
-
         protected void PlayDownsampled(float[] audio, uint iqSampleRate, int audioSampleRate = 44100) {
             // 2️⃣ Filter the signal
             for (var x = 0; x < audio.Length; x++) {

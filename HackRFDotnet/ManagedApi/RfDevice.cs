@@ -1,17 +1,17 @@
-﻿using System.Collections.Immutable;
-
-using HackRFDotnet.Enums;
+﻿using HackRFDotnet.Enums;
+using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.NativeApi;
 using HackRFDotnet.Structs;
 
 namespace HackRFDotnet.ManagedApi {
     public unsafe class RfDevice : IDisposable {
-        public RadioBand AntennaTuneOffset { get; set; } = RadioBand.FromHz(0);
         public RadioBand Frequency { get; set; } = RadioBand.FromHz(0);
         public RadioBand Bandwidth { get; set; } = RadioBand.FromHz(0);
 
-        private HackRFDevice* _devicePtr;
+        public RfDeviceStream RfDeviceStream { get; set; }
+        private readonly HackRFDevice* _devicePtr;
+        private readonly HackRFSampleBlockCallback _rxCallback;
 
         public bool IsConnected {
             get {
@@ -19,26 +19,22 @@ namespace HackRFDotnet.ManagedApi {
             }
         }
 
-        private HackRFSampleBlockCallback? _rxCallback;
+        internal RfDevice(HackRFDevice* devicePtr) {
+            _rxCallback = HandleTransferChunk;
+            _devicePtr = devicePtr;
 
-        public delegate void HackRfCallback(HackrfTransfer transferBlock);
-        public event HackRfCallback RfDataAvailable;
-
-        internal RfDevice() {
-            ConnectToFirstDevice();
+            RfDeviceStream = new RfDeviceStream(this);
+            RfDeviceStream.Open();
         }
 
-        private bool ConnectToFirstDevice() {
-            HackRFDevice* localDevice = null;
-            HackRfNativeFunctions.hackrf_open(&localDevice);
+        public void Dispose() {
+            HackRfNativeFunctions.hackrf_close(_devicePtr);
+        }
 
-            if (localDevice is null) {
-                return false;
-            }
-
-
-            _devicePtr = localDevice;
-            return true;
+        public void SetAmplifications(uint lna, uint vga, bool internalAmp) {
+            HackRfNativeFunctions.hackrf_set_lna_gain(_devicePtr, lna);
+            HackRfNativeFunctions.hackrf_set_vga_gain(_devicePtr, vga);
+            HackRfNativeFunctions.hackrf_set_amp_enable(_devicePtr, (byte)(internalAmp ? 1 : 0));
         }
 
         public bool SetFrequency(RadioBand radioFrequency) {
@@ -49,7 +45,7 @@ namespace HackRFDotnet.ManagedApi {
             Frequency = radioFrequency;
             Bandwidth = bandwidth;
 
-            var tuningOffset = radioFrequency + AntennaTuneOffset;
+            var tuningOffset = radioFrequency;
 
 
             var baseBandFilter = HackRfNativeFunctions.hackrf_compute_baseband_filter_bw((uint)tuningOffset.Hz);
@@ -63,12 +59,8 @@ namespace HackRFDotnet.ManagedApi {
         }
 
         public bool StartRx() {
-            _rxCallback = HandleTransferSample;
             HackRfNativeFunctions.hackrf_set_leds(_devicePtr, (byte)LedState.RxLight);
 
-            HackRfNativeFunctions.hackrf_set_lna_gain(_devicePtr, 32);
-            HackRfNativeFunctions.hackrf_set_vga_gain(_devicePtr, 24);
-            HackRfNativeFunctions.hackrf_set_amp_enable(_devicePtr, 0);
 
             var result = HackRfNativeFunctions.hackrf_start_rx(
                 _devicePtr,
@@ -83,27 +75,13 @@ namespace HackRFDotnet.ManagedApi {
             return HackRfNativeFunctions.hackrf_stop_rx(_devicePtr) != 0;
         }
 
-        private int HandleTransferSample(HackrfTransfer* transferStruct) {
+        private int HandleTransferChunk(HackrfTransfer* transferStruct) {
             if (transferStruct == null) {
                 return -1;
             }
 
-            // Invoke user callback
-            var invokeList = RfDataAvailable?.GetInvocationList();
-            //foreach (HackRfCallback item in invokeList) {
-            //    Task.Run(() => item?.Invoke(*transferStruct));
-            //}
-
-            if (invokeList is not null && invokeList.Length != 0) {
-                RfDataAvailable?.Invoke(*transferStruct);
-            }
-
+            RfDeviceStream.BufferTransferChunk(*transferStruct);
             return 0;
-        }
-
-        public void Dispose() {
-            HackRfNativeFunctions.hackrf_close(_devicePtr);
-            HackRfNativeFunctions.hackrf_exit();
         }
     }
 }

@@ -1,30 +1,51 @@
-﻿using HackRFDotnet.ManagedApi.Types;
+﻿using System.Numerics;
+
+using HackRFDotnet.ManagedApi.SignalProcessing;
+using HackRFDotnet.ManagedApi.Types;
+
+using NWaves.Effects;
 
 namespace HackRFDotnet.ManagedApi.Streams;
 public class IQStreamReader : IDisposable {
-    private readonly RfDeviceStream _iQStream;
+    private readonly RfDeviceStream _rfDeviceStream;
     private readonly bool _keepOpen;
 
     private RadioBand _center;
     private RadioBand _bandwith;
+    private FilterProcessor _filterProcessor;
 
-
-    public IQStreamReader(RfDeviceStream iQStream, bool keepOpen = true) {
-        _iQStream = iQStream;
+    public IQStreamReader(RfDeviceStream deviceStream, bool keepOpen = true) {
+        _rfDeviceStream = deviceStream;
         _keepOpen = keepOpen;
     }
 
-    public void SetCenterFrequency(RadioBand center) {
+    public void SetBand(RadioBand center, RadioBand bandwith) {
         _center = center;
+        _bandwith = bandwith;
+
+        _filterProcessor = new FilterProcessor(_rfDeviceStream.SampleRate, center, bandwith);
     }
 
-    public void SetBandwith(RadioBand bandwith) {
-        _bandwith = bandwith;
+    public Complex[] ReadTime(TimeSpan chunkSize) {
+        var samples = (int)(chunkSize.TotalSeconds * _rfDeviceStream.SampleRate);
+
+        var sampleChunk = new Complex[samples];
+        ReadBuffer(sampleChunk);
+
+        return sampleChunk;
+    }
+
+    public int ReadBuffer(Span<Complex> iqBuffer) {
+        while (iqBuffer.Length > _rfDeviceStream.BufferLength) {
+            Thread.Sleep(1);
+        }
+
+        return _rfDeviceStream.ReadBuffer(iqBuffer);
     }
 
     public void Dispose() {
         if (!_keepOpen) {
-            _iQStream.Dispose();
+            _rfDeviceStream.Dispose();
         }
     }
 }

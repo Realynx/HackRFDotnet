@@ -1,6 +1,6 @@
 ﻿using HackRFDotnet.ManagedApi;
 using HackRFDotnet.ManagedApi.AudioPlayers;
-using HackRFDotnet.ManagedApi.Services;
+using HackRFDotnet.ManagedApi.Extensions;
 using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Types;
 
@@ -10,15 +10,16 @@ namespace BasicScanner {
         static void Main(string[] args) {
             Console.WriteLine("looking for HackRf Device...");
 
-            var hackRf = new HackRf();
-            var deviceList = hackRf.FindDevices();
+            var deviceList = HackRfLib.FindDevices();
             Console.WriteLine($"Found {deviceList.devicecount} HackRf devices... Opening Rx");
 
-            using var rfDevice = hackRf.ConnectToFirstDevice();
+            using var rfDevice = HackRfLib.ConnectToFirstDevice();
             if (rfDevice is null) {
                 Console.WriteLine("Could not connect to Rf Device");
                 return;
             }
+
+            rfDevice.AttenuateAmplification();
 
             //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
             rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
@@ -27,8 +28,7 @@ namespace BasicScanner {
 
             //rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
 
-            using var iqStream = new RfDeviceStream(rfDevice, RadioBand.FromMHz(2).Hz);
-            iqStream.StartListening();
+
 
             // var scanningService = new ChannelScanningService(iqStream, rfDevice);
 
@@ -39,8 +39,8 @@ namespace BasicScanner {
             //var amPlayer = new AMPlayer(iqStream);
             //amPlayer.PlayStreamAsync(44100);
 
-            var fmPlayer = new FMPlayer(iqStream);
-            fmPlayer.PlayStreamAsync(44100);
+            var fmPlayer = new FMPlayer(rfDevice.RfDeviceStream);
+            fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 44100);
 
             ControlChannel(rfDevice);
         }
