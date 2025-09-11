@@ -98,7 +98,7 @@ namespace HackRFDotnet.ManagedApi {
                 _recordingFile.WriteBuffer(chunkBuffer);
             }
 
-            return transferStruct->buffer_length;
+            return 0;
         }
     }
 }

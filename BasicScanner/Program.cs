@@ -25,7 +25,6 @@ namespace BasicScanner {
             //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
             //rfDevice.SetFrequency(RadioBand.FromMHz(125.150f), RadioBand.FromKHz(8));
             //rfDevice.SetFrequency(RadioBand.FromMHz(162.4f), RadioBand.FromKHz(20));
-
             //rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
 
             // var scanningService = new ChannelScanningService(iqStream, rfDevice);
@@ -41,10 +40,10 @@ namespace BasicScanner {
 
             // rfDevice.StartRecordingToFile("Recording.bin");
 
-            //var rfFileStream = new RfFileStream("Recording.bin");
-            //rfFileStream.Open(5_000_000);
+            var rfFileStream = new RfFileStream("Recording.bin");
+            rfFileStream.Open(5_000_000);
 
-            var fmPlayer = new AnaloguePlayer(new FmSignalStream(rfDevice.RfDeviceStream));
+            var fmPlayer = new AnaloguePlayer(new FmSignalStream(rfFileStream));
             fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
 
             ControlChannel(rfDevice);
