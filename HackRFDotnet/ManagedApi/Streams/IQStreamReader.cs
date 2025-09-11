@@ -3,8 +3,6 @@
 using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Types;
 
-using NWaves.Effects;
-
 namespace HackRFDotnet.ManagedApi.Streams;
 public class IQStreamReader : IDisposable {
     private readonly RfDeviceStream _rfDeviceStream;
@@ -26,6 +24,14 @@ public class IQStreamReader : IDisposable {
         _filterProcessor = new FilterProcessor(_rfDeviceStream.SampleRate, center, bandwith);
     }
 
+    public int ReadBuffer(Span<Complex> iqBuffer) {
+        while (iqBuffer.Length > _rfDeviceStream.BufferLength) {
+            Thread.Sleep(1);
+        }
+
+        return _rfDeviceStream.ReadBuffer(iqBuffer);
+    }
+
     public Complex[] ReadTime(TimeSpan chunkSize) {
         var samples = (int)(chunkSize.TotalSeconds * _rfDeviceStream.SampleRate);
 
@@ -33,14 +39,6 @@ public class IQStreamReader : IDisposable {
         ReadBuffer(sampleChunk);
 
         return sampleChunk;
-    }
-
-    public int ReadBuffer(Span<Complex> iqBuffer) {
-        while (iqBuffer.Length > _rfDeviceStream.BufferLength) {
-            Thread.Sleep(1);
-        }
-
-        return _rfDeviceStream.ReadBuffer(iqBuffer);
     }
 
     public void Dispose() {

@@ -20,7 +20,7 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
             streamReader.SetBand(centerOffset, bandwith);
 
             while (true) {
-                var processingChunk = new Complex[4096];
+                var processingChunk = new Complex[1024 * 16];
                 streamReader.ReadBuffer(processingChunk);
 
                 //Simple arctangent FM demod

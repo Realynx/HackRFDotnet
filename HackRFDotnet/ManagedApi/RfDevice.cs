@@ -61,7 +61,6 @@ namespace HackRFDotnet.ManagedApi {
         public bool StartRx() {
             HackRfNativeFunctions.hackrf_set_leds(_devicePtr, (byte)LedState.RxLight);
 
-
             var result = HackRfNativeFunctions.hackrf_start_rx(
                 _devicePtr,
                 _rxCallback,
