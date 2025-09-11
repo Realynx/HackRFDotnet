@@ -15,12 +15,10 @@ public class FmSignalStream : SignalStream {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
             for (var x = 1; x < count; x++) {
+                // Conjugate of a Complex number: the conjugate of x+i*y is x-i*y
                 var delta = iqBuffer[x] * Complex.Conjugate(iqBuffer[x - 1]);
-                var fmSample = Math.Atan2(delta.Imaginary, delta.Real);
-                buffer[x - 1] = (float)fmSample;
+                buffer[x - 1] = (float)delta.Phase;
             }
-
-            buffer[0] = 0;
 
             return count;
         }

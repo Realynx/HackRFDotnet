@@ -1,8 +1,6 @@
 ﻿using System.Buffers;
 using System.Numerics;
 
-using NAudio.Wave;
-
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
 public class AmSignalStream : SignalStream {
     public AmSignalStream(RfDeviceStream deviceStream, bool keepOpen = true) : base(deviceStream, keepOpen) {
@@ -14,8 +12,7 @@ public class AmSignalStream : SignalStream {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
             for (var i = 0; i < iqBuffer.Length; i++) {
-                var s = iqBuffer[i];
-                buffer[i] = (float)Math.Sqrt(s.Real * s.Real + s.Imaginary * s.Imaginary);
+                buffer[i] = (float)iqBuffer[i].Magnitude;
             }
 
             return count;

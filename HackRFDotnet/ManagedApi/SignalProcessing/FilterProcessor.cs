@@ -42,6 +42,10 @@ public class FilterProcessor {
     }
 
     private void FilterFrame(Span<Complex> iqFrame) {
+
+
+        NAudio.Dsp.FastFourierTransform.FFT(true, 200, );
+
         for (var x = 0; x < iqFrame.Length; x++) {
             var iFiltered = _filterI.ProcessSample(iqFrame[x].Real);
             var qFiltered = _filterQ.ProcessSample(iqFrame[x].Imaginary);

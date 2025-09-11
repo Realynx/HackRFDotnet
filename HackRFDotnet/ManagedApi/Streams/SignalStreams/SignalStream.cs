@@ -43,7 +43,7 @@ public class SignalStream : ISampleProvider, IDisposable {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
             for (var i = 0; i < count; i++) {
-                buffer[offset + i] = (float)iqBuffer[i].Real;
+                buffer[offset + i] = (float)iqBuffer[i].Phase;
             }
 
             return count;
