@@ -21,6 +21,20 @@ public unsafe class SignalUtilities {
         }
     }
 
+    public static float CalculateDb(Span<IQ> sample) {
+        // Compute RMS magnitude
+        double power = 0f;
+        for (var x = 0; x < sample.Length; x++) {
+            var s = sample[x];
+            power += (s.I * s.I) + (s.Q * s.Q); // sum |x|^2
+        }
+        power /= sample.Length;
+
+        // Convert to dB
+        var dbAverage = 10f * (float)Math.Log10(power + 1e-12f);
+        return dbAverage;
+    }
+
     public static void ApplyPhaseOffset(Span<IQ> iqFrame, RadioBand freqOffset, double _sampleRate) {
         for (var x = 0; x < iqFrame.Length; x++) {
             var theta = x / _sampleRate;

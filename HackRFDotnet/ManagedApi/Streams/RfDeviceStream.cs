@@ -70,20 +70,6 @@ namespace HackRFDotnet.ManagedApi.Streams {
             }
         }
 
-        //public float CalculateDb() {
-        //    // Compute RMS magnitude
-        //    double power = 0f;
-        //    for (var x = 0; x < _iqSample.Length; x++) {
-        //        var s = _iqSample[x];
-        //        power += (s.Real * s.Real) + (s.Imaginary * s.Imaginary); // sum |x|^2
-        //    }
-        //    power /= _iqSample.Length;
-
-        //    // Convert to dB
-        //    var dbAverage = 10f * (float)Math.Log10(power + 1e-12f);
-        //    return dbAverage;
-        //}
-
         public void Dispose() {
         }
     }
