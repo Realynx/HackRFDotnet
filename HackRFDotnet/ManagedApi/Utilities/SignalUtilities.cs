@@ -1,11 +1,25 @@
-﻿
-using System.Runtime.CompilerServices;
-
-using HackRFDotnet.ManagedApi.Types;
+﻿using HackRFDotnet.ManagedApi.Types;
 
 namespace HackRFDotnet.ManagedApi.Utilities;
 
 public unsafe class SignalUtilities {
+    public static void IQCorrection(Span<IQ> iqFrame) {
+        var meanI = 0.0;
+        var meanQ = 0.0;
+
+        for (var i = 0; i < iqFrame.Length; i++) {
+            meanI += iqFrame[i].I;
+            meanQ += iqFrame[i].Q;
+        }
+
+        meanI /= iqFrame.Length;
+        meanQ /= iqFrame.Length;
+
+        var mean = new IQ(meanI, meanQ);
+        for (var i = 0; i < iqFrame.Length; i++) {
+            iqFrame[i] -= mean;
+        }
+    }
 
     public static void ApplyPhaseOffset(Span<IQ> iqFrame, RadioBand freqOffset, double _sampleRate) {
         for (var x = 0; x < iqFrame.Length; x++) {
