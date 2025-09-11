@@ -1,8 +1,11 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
 
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.ManagedApi.Utilities;
 using HackRFDotnet.Structs;
+
+using NAudio.Wave;
 
 namespace HackRFDotnet.ManagedApi.Streams {
     public unsafe class RfDeviceStream : IDisposable {
@@ -14,13 +17,20 @@ namespace HackRFDotnet.ManagedApi.Streams {
 
         public int BufferLength {
             get {
-                return _dataBuffer.Count;
+                return _dataBuffer?.Count ?? 0;
             }
         }
 
         public double SampleRate { get; private set; }
+
+        public WaveFormat WaveFormat {
+            get {
+                throw new NotImplementedException();
+            }
+        }
+
         private RingBuffer<float> _noiseHistory = new(100);
-        private RingBuffer<Complex> _dataBuffer = new(1);
+        private RingBuffer<Complex>? _dataBuffer = null;
 
         private readonly RfDevice _managedRfDevice;
 
@@ -28,15 +38,15 @@ namespace HackRFDotnet.ManagedApi.Streams {
             _managedRfDevice = managedRfDevice;
         }
 
-        public void Open() {
+        public void Open(double sampleRate) {
             _managedRfDevice.StartRx();
-            SetSampleRate(1_000_000);
+            SetSampleRate(sampleRate);
         }
 
         public void SetSampleRate(double sampleRate) {
             SampleRate = sampleRate;
-            _dataBuffer = new RingBuffer<Complex>((int)(0.5 * SampleRate));
 
+            _dataBuffer = new RingBuffer<Complex>((int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate));
             _managedRfDevice.SetSampleRate(SampleRate);
         }
 
@@ -45,7 +55,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
         }
 
         public int ReadBuffer(Span<Complex> iqBuffer) {
-            return _dataBuffer.Read(iqBuffer);
+            return _dataBuffer?.Read(iqBuffer) ?? throw new Exception("Empty Buffer");
         }
 
         internal void BufferTransferChunk(HackrfTransfer hackrfTransfer) {
@@ -57,7 +67,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
             }
 
             lock (this) {
-                _dataBuffer.Write(iqSample);
+                _dataBuffer?.Write(iqSample);
             }
         }
 

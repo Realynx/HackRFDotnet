@@ -1,5 +1,4 @@
 ﻿using System.Collections.Concurrent;
-using System.Reflection.PortableExecutable;
 
 using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Types;
@@ -27,8 +26,6 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
 
         protected BasePlayer(RfDeviceStream rfDeviceStream) {
             _rfDeviceStream = rfDeviceStream;
-
-            _playbackThread = new Thread(AudioPlaybackThread) { IsBackground = true };
         }
 
         public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwith, int audioRate = 44100) {
@@ -49,55 +46,14 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
             );
 
             _lowPassFilter = new OnlineFirFilter(_firCoefficients);
-            _playbackThread.Start();
         }
 
         protected void EnqueueAudio(float[] audioChunk) {
             _audioQueue.Enqueue(audioChunk);
         }
 
-        private void AudioPlaybackThread() {
-
-            while (_running) {
-                if (_audioQueue.TryDequeue(out var chunk)) {
-
-
-                    // Convert entire chunk to PCM
-                    byte[] buffer = new byte[chunk.Length * 2];
-                    for (int i = 0; i < chunk.Length; i++) {
-                        short val = (short)(Math.Clamp(chunk[i], -1f, 1f) * short.MaxValue);
-                        buffer[i * 2] = (byte)(val & 0xFF);
-                        buffer[i * 2 + 1] = (byte)((val >> 8) & 0xFF);
-                    }
-
-                    _waveProvider.AddSamples(buffer, 0, buffer.Length);
-                }
-                else {
-                    Thread.Sleep(1); // prevent CPU spin
-                }
-            }
-        }
-        protected void PlayDownsampled(float[] audio, uint iqSampleRate, int audioSampleRate = 44_100) {
-            // var sampleProvider = new SampleToWaveProvider16(ISampleProvider);
-
-            var resampler = new NAudio.Dsp.WdlResampler();
-            resampler.SetFeedMode(true); // input driven
-            resampler.SetRates(iqSampleRate, audioSampleRate);
-
-            var bytesWritten = resampler.ResamplePrepare(audio.Length, 1, out var inBuffer, out var inBufferOffset);
-            Array.Copy(audio, 0, inBuffer, inBufferOffset, bytesWritten * 1);
-
-            var outputSamples = (int)Math.Ceiling((double)(audio.Length * audioSampleRate / iqSampleRate));
-
-            var outAudio = new float[outputSamples];
-            var outAvailable = resampler.ResampleOut(outAudio, 0, bytesWritten, outputSamples, 1);
-
-            // 2️⃣ Filter the signal
-            for (var x = 0; x < outAudio.Length; x++) {
-                outAudio[x] = (float)_lowPassFilter.ProcessSample(outAudio[x]);
-            }
-
-            EnqueueAudio(outAudio);
+        protected void PlaySamples(byte[] waveProviderBuffer, int samples) {
+            _waveProvider.AddSamples(waveProviderBuffer, 0, samples);
         }
 
         public void Stop() {

@@ -17,12 +17,12 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
         }
 
         private void StreamIqFrames(RadioBand centerOffset, RadioBand bandwith, int audioRate = 44100) {
-            using var streamReader = new IQStreamReader(_rfDeviceStream);
+            using var streamReader = new FmSignalStream(_rfDeviceStream);
             streamReader.SetBand(centerOffset, bandwith);
 
             while (true) {
                 var processingChunk = new Complex[4096];
-                streamReader.ReadBuffer(processingChunk);
+                // streamReader.ReadBuffer(processingChunk);
 
                 var audio = new float[processingChunk.Length];
 
@@ -50,7 +50,7 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
 
 
                 // Downsample and play
-                PlayDownsampled(audio, (uint)_rfDeviceStream.SampleRate, audioRate);
+                // PlayDownsampled(audio, (int)_rfDeviceStream.SampleRate, audioRate);
             }
         }
 

@@ -1,12 +1,16 @@
-﻿using System.Numerics;
-
-using HackRFDotnet.ManagedApi.Streams;
+﻿using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Types;
+
+using NAudio.Wave;
+using NAudio.Wave.SampleProviders;
 
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
     public unsafe class FMPlayer : BasePlayer {
-        public FMPlayer(RfDeviceStream rfDeviceStream) : base(rfDeviceStream) {
+        private FmSignalStream _fmSignalStream;
+        private RawSourceWaveStream _rawSourceWaveStream;
 
+        public FMPlayer(RfDeviceStream rfDeviceStream) : base(rfDeviceStream) {
+            _fmSignalStream = new FmSignalStream(rfDeviceStream);
         }
 
         public override void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwith, int audioRate = 44100) {
@@ -16,27 +20,16 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
         }
 
         private void StreamIqFrames(RadioBand centerOffset, RadioBand bandwith, int audioRate = 44100) {
-            using var streamReader = new IQStreamReader(_rfDeviceStream);
-            streamReader.SetBand(centerOffset, bandwith);
+            _fmSignalStream.SetBand(centerOffset, bandwith);
 
+            var resampler = new WdlResamplingSampleProvider(_fmSignalStream, audioRate);
+            var pcmProvider = new SampleToWaveProvider16(resampler);
             while (true) {
-                var processingChunk = new Complex[1024 * 16];
-                streamReader.ReadBuffer(processingChunk);
-
-                //Simple arctangent FM demod
-                var audio = new float[processingChunk.Length - 1];
-                //if (_rfDeviceStream.GetLastLevelDb() <= _rfDeviceStream.GetNoiseFloorDb() - 5) {
-                //    continue;
-                //}
-
-                for (var x = 1; x < processingChunk.Length; x++) {
-                    var delta = processingChunk[x] * Complex.Conjugate(processingChunk[x - 1]);
-                    var fmSample = Math.Atan2(delta.Imaginary, delta.Real);
-                    audio[x - 1] = (float)fmSample;
+                var waveProviderBuffer = new byte[4096];
+                int read;
+                while ((read = pcmProvider.Read(waveProviderBuffer, 0, waveProviderBuffer.Length)) > 0) {
+                    PlaySamples(waveProviderBuffer, read);
                 }
-
-                // 4) Downsample and play
-                PlayDownsampled(audio, (uint)_rfDeviceStream.SampleRate, audioRate);
             }
         }
     }

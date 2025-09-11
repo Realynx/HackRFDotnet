@@ -31,11 +31,11 @@ public class FilterProcessor {
         _filterQ = new OnlineFirFilter(lowPassFirCoefficients);
     }
 
-    public void ApplyFilter(Complex[] iqFrame) {
+    public void ApplyFilter(Span<Complex> iqFrame) {
         FilterFrame(iqFrame);
     }
 
-    public void ApplyFilterOffset(Complex[] iqFrame, RadioBand freqOffset) {
+    public void ApplyFilterOffset(Span<Complex> iqFrame, RadioBand freqOffset) {
         for (var x = 0; x < iqFrame.Length; x++) {
             var theta = x / _sampleRate;
             var phase = -2.0 * Math.PI * freqOffset.Hz * theta;
@@ -47,7 +47,7 @@ public class FilterProcessor {
         FilterFrame(iqFrame);
     }
 
-    private void FilterFrame(Complex[] iqFrame) {
+    private void FilterFrame(Span<Complex> iqFrame) {
         for (var x = 0; x < iqFrame.Length; x++) {
             var iFiltered = _filterI.ProcessSample(iqFrame[x].Real);
             var qFiltered = _filterQ.ProcessSample(iqFrame[x].Imaginary);

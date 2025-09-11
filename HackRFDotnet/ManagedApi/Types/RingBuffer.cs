@@ -1,4 +1,6 @@
-﻿namespace HackRFDotnet.ManagedApi.Types;
+﻿using System.Runtime.InteropServices;
+
+namespace HackRFDotnet.ManagedApi.Types;
 
 internal sealed class RingBuffer<T> {
     public int Capacity { get; }
@@ -35,6 +37,7 @@ internal sealed class RingBuffer<T> {
         // Buffer larger than capacity - only write end of buffer
         if (buffer.Length >= Capacity) {
             buffer[^Capacity..].CopyTo(_array);
+
             _start = 0;
             _end = Capacity;
             return;
@@ -48,7 +51,7 @@ internal sealed class RingBuffer<T> {
             return;
         }
 
-        // Buffer is larger enough that two copies are needed
+        // Buffer is large enough that two copies are needed
         buffer[..freeUntilWrap].CopyTo(_array.AsSpan(_end));
         buffer[freeUntilWrap..].CopyTo(_array);
 
@@ -56,12 +59,14 @@ internal sealed class RingBuffer<T> {
         if (_end + buffer.Length > _start) {
             _end += buffer.Length;
             _end %= Capacity;
+
             _start = _end;
         }
         else {
             _end += buffer.Length;
         }
     }
+
 
     /// <summary>
     /// Reads items from the ringer buffer without modifying the start and end pointers.
