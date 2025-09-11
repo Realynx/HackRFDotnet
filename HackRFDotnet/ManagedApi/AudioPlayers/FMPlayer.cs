@@ -1,13 +1,12 @@
 ﻿using HackRFDotnet.ManagedApi.Streams;
+using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 using HackRFDotnet.ManagedApi.Types;
 
-using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
     public unsafe class FMPlayer : BasePlayer {
-        private FmSignalStream _fmSignalStream;
-        private RawSourceWaveStream _rawSourceWaveStream;
+        private readonly FmSignalStream _fmSignalStream;
 
         public FMPlayer(RfDeviceStream rfDeviceStream) : base(rfDeviceStream) {
             _fmSignalStream = new FmSignalStream(rfDeviceStream);
@@ -24,9 +23,11 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
 
             var resampler = new WdlResamplingSampleProvider(_fmSignalStream, audioRate);
             var pcmProvider = new SampleToWaveProvider16(resampler);
+
+            var waveProviderBuffer = new byte[4096];
+
+            int read;
             while (true) {
-                var waveProviderBuffer = new byte[4096];
-                int read;
                 while ((read = pcmProvider.Read(waveProviderBuffer, 0, waveProviderBuffer.Length)) > 0) {
                     PlaySamples(waveProviderBuffer, read);
                 }
