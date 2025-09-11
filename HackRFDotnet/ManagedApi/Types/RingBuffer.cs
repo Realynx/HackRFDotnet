@@ -72,7 +72,7 @@ internal sealed class RingBuffer<T> {
         //  ^ start                 ^ end
         if (_start < _end) {
             if (buffer.Length <= _end - _start) {
-                _array.AsSpan(_start, buffer.Length - _start).CopyTo(buffer);
+                _array.AsSpan(_start, buffer.Length).CopyTo(buffer);
                 return buffer.Length;
             }
 
@@ -83,7 +83,7 @@ internal sealed class RingBuffer<T> {
         //  ^ end                 ^ start
         else {
             if (buffer.Length <= Capacity - _start) {
-                _array.AsSpan(_start, Capacity - _start).CopyTo(buffer);
+                _array.AsSpan(_start, buffer.Length).CopyTo(buffer);
                 return buffer.Length;
             }
 
