@@ -84,6 +84,7 @@ internal sealed class RingBuffer<T> {
             _array.AsSpan(_start, _end).CopyTo(buffer);
             return _end - _start;
         }
+
         // [||||||||||||||||||||||||||||]
         //  ^ end                 ^ start
         else {

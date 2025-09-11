@@ -1,5 +1,4 @@
-﻿using HackRFDotnet.ManagedApi.Streams;
-using HackRFDotnet.ManagedApi.Streams.SignalStreams;
+﻿using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 using HackRFDotnet.ManagedApi.Types;
 
 using NAudio.Wave;
@@ -8,13 +7,11 @@ using NAudio.Wave.SampleProviders;
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
     public class AnaloguePlayer {
         private readonly SignalStream _sampleDeModulator;
-        protected readonly RfDeviceStream _rfDeviceStream;
 
         private BufferedWaveProvider _waveProvider;
         private WaveOutEvent _waveOut;
 
-        public AnaloguePlayer(RfDeviceStream rfDeviceStream, SignalStream signalStream) {
-            _rfDeviceStream = rfDeviceStream;
+        public AnaloguePlayer(SignalStream signalStream) {
             _sampleDeModulator = signalStream;
         }
 
@@ -23,7 +20,7 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
                 DiscardOnBufferOverflow = true
             };
 
-            _waveOut = new WaveOutEvent { Volume = 0.05f };
+            _waveOut = new WaveOutEvent { Volume = 0.5f };
             _waveOut.Init(_waveProvider);
             _waveOut.Play();
 
@@ -36,7 +33,7 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
             var resampler = new WdlResamplingSampleProvider(_sampleDeModulator, audioRate);
             var pcmProvider = new SampleToWaveProvider16(resampler);
 
-            var waveProviderBuffer = new byte[4096];
+            var waveProviderBuffer = new byte[8192];
 
             int read;
             while (true) {

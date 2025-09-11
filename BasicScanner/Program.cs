@@ -23,13 +23,10 @@ namespace BasicScanner {
             rfDevice.AttenuateAmplification();
 
             //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
-            rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
             //rfDevice.SetFrequency(RadioBand.FromMHz(125.150f), RadioBand.FromKHz(8));
             //rfDevice.SetFrequency(RadioBand.FromMHz(162.4f), RadioBand.FromKHz(20));
 
             //rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
-
-
 
             // var scanningService = new ChannelScanningService(iqStream, rfDevice);
 
@@ -40,7 +37,9 @@ namespace BasicScanner {
             //var amPlayer = new AMPlayer(iqStream);
             //amPlayer.PlayStreamAsync(44100);
 
-            var fmPlayer = new AnaloguePlayer(rfDevice.RfDeviceStream, new FmSignalStream(rfDevice.RfDeviceStream));
+            rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(500));
+
+            var fmPlayer = new AnaloguePlayer(new FmSignalStream(rfDevice.RfDeviceStream));
             fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 44100);
 
             ControlChannel(rfDevice);
