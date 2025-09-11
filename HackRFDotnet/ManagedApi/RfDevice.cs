@@ -24,7 +24,7 @@ namespace HackRFDotnet.ManagedApi {
             _devicePtr = devicePtr;
 
             RfDeviceStream = new RfDeviceStream(this);
-            RfDeviceStream.Open(1_000_000);
+            RfDeviceStream.Open(4_000_000);
         }
 
         public void Dispose() {

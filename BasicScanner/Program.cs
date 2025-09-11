@@ -2,6 +2,7 @@
 using HackRFDotnet.ManagedApi.AudioPlayers;
 using HackRFDotnet.ManagedApi.Extensions;
 using HackRFDotnet.ManagedApi.Streams;
+using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 using HackRFDotnet.ManagedApi.Types;
 
 namespace BasicScanner {
@@ -39,7 +40,7 @@ namespace BasicScanner {
             //var amPlayer = new AMPlayer(iqStream);
             //amPlayer.PlayStreamAsync(44100);
 
-            var fmPlayer = new FMPlayer(rfDevice.RfDeviceStream);
+            var fmPlayer = new AnaloguePlayer(rfDevice.RfDeviceStream, new FmSignalStream(rfDevice.RfDeviceStream));
             fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 44100);
 
             ControlChannel(rfDevice);

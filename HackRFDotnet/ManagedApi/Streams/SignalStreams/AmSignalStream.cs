@@ -13,7 +13,7 @@ public class AmSignalStream : SignalStream, ISampleProvider, IDisposable {
 
         for (var i = 0; i < iqBuffer.Length; i++) {
             var s = iqBuffer[i];
-            buffer[i] = (float)Math.Sqrt(s.Real * s.Real + s.Imaginary * s.Imaginary);
+            buffer[i] = (float)Math.Sqrt((s.Real * s.Real) + (s.Imaginary * s.Imaginary));
         }
 
         return buffer.Length;

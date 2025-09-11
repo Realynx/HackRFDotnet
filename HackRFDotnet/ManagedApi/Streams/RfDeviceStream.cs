@@ -23,12 +23,6 @@ namespace HackRFDotnet.ManagedApi.Streams {
 
         public double SampleRate { get; private set; }
 
-        public WaveFormat WaveFormat {
-            get {
-                throw new NotImplementedException();
-            }
-        }
-
         private RingBuffer<float> _noiseHistory = new(100);
         private RingBuffer<Complex>? _dataBuffer = null;
 
