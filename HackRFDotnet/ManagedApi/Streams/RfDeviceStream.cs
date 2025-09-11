@@ -1,11 +1,7 @@
-﻿using System;
-
+﻿using System.Buffers;
 
 using HackRFDotnet.ManagedApi.Types;
-using HackRFDotnet.ManagedApi.Utilities;
 using HackRFDotnet.NativeApi.Structs;
-
-using NAudio.Wave;
 
 namespace HackRFDotnet.ManagedApi.Streams {
     public unsafe class RfDeviceStream : IDisposable {
@@ -23,7 +19,6 @@ namespace HackRFDotnet.ManagedApi.Streams {
 
         public double SampleRate { get; private set; }
 
-        private RingBuffer<float> _noiseHistory = new(100);
         private RingBuffer<IQ>? _dataBuffer = null;
 
         private readonly RfDevice _managedRfDevice;
@@ -53,35 +48,26 @@ namespace HackRFDotnet.ManagedApi.Streams {
         }
 
         internal void BufferTransferChunk(HackrfTransfer hackrfTransfer) {
-            var rfTransferBuffer = new ReadOnlySpan<byte>(hackrfTransfer.buffer, hackrfTransfer.valid_length);
-            var iqSample = IQConverter.ConvertIQBytes(rfTransferBuffer);
+            var iqBuffer = (InterleavedSample*)hackrfTransfer.buffer;
+            var interleavedTransferFrame = new ReadOnlySpan<InterleavedSample>(iqBuffer, hackrfTransfer.valid_length / 2);
 
-            if (rfTransferBuffer.Length == 0) {
-                return;
+            var iqSamples = ArrayPool<IQ>.Shared.Rent(interleavedTransferFrame.Length);
+            try {
+                for (var x = 0; x < interleavedTransferFrame.Length; x++) {
+                    iqSamples[x] = new IQ(interleavedTransferFrame[x]);
+                }
+
+                if (iqSamples.Length == 0) {
+                    return;
+                }
+
+                lock (this) {
+                    _dataBuffer?.Write(iqSamples.AsSpan(0, interleavedTransferFrame.Length));
+                }
             }
-
-            lock (this) {
-                _dataBuffer?.Write(iqSample);
+            finally {
+                ArrayPool<IQ>.Shared.Return(iqSamples);
             }
-        }
-
-        public float GetNoiseFloorDb() {
-            if (_noiseHistory.Count == 0) {
-                return 0f;
-            }
-
-            // Sort values
-            var noiseFloorBuffer = new float[_noiseHistory.Count];
-            _noiseHistory.Peek(noiseFloorBuffer);
-
-            var sorted = noiseFloorBuffer.OrderBy(x => x).ToList();
-
-            var trimCount = (int)(sorted.Count * .15f);
-
-            // Remove lowest and highest values
-            var trimmed = sorted.Skip(trimCount).Take(sorted.Count - (2 * trimCount));
-
-            return trimmed.Average();
         }
 
         //public float CalculateDb() {

@@ -35,6 +35,11 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         m_imaginary = imaginary;
     }
 
+    public IQ(InterleavedSample interleavedSample) {
+        m_real = interleavedSample.I;
+        m_imaginary = interleavedSample.Q;
+    }
+
     /// <summary>
     /// Real
     /// </summary>
@@ -332,8 +337,10 @@ public struct IQ : IEquatable<IQ>, IFormattable {
             u = Math.Atan(bPrime);
         }
 
-        if (value.I < 0.0) u = -u;
-        if (value.Q < 0.0) v = -v;
+        if (value.I < 0.0)
+            u = -u;
+        if (value.Q < 0.0)
+            v = -v;
 
         return new IQ(u, v);
     }
@@ -360,8 +367,10 @@ public struct IQ : IEquatable<IQ>, IFormattable {
             u = Math.Atan(1.0 / bPrime);
         }
 
-        if (value.I < 0.0) u = Math.PI - u;
-        if (value.Q > 0.0) v = -v;
+        if (value.I < 0.0)
+            u = Math.PI - u;
+        if (value.Q > 0.0)
+            v = -v;
 
         return new IQ(u, v);
     }
@@ -610,7 +619,8 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         }
         else {
             y = Math.Sqrt((double.Hypot(realCopy, imaginaryCopy) - realCopy) * 0.5);
-            if (imaginaryCopy < 0.0) y = -y;
+            if (imaginaryCopy < 0.0)
+                y = -y;
             x = imaginaryCopy / (2.0 * y);
         }
 

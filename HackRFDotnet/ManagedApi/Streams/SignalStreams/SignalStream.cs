@@ -15,6 +15,8 @@ public class SignalStream : ISampleProvider, IDisposable {
 
     protected RadioBand _center = RadioBand.FromMHz(94.7f);
     protected RadioBand _bandwith = RadioBand.FromKHz(200);
+    private RingBuffer<float> _noiseHistory = new(100);
+
 
     protected FilterProcessor? _filterProcessor;
 
@@ -28,6 +30,25 @@ public class SignalStream : ISampleProvider, IDisposable {
         _bandwith = bandwidth;
 
         _filterProcessor = new FilterProcessor(_rfDeviceStream.SampleRate, center, bandwidth);
+    }
+
+    public float GetNoiseFloorDb() {
+        if (_noiseHistory.Count == 0) {
+            return 0f;
+        }
+
+        // Sort values
+        var noiseFloorBuffer = new float[_noiseHistory.Count];
+        _noiseHistory.Peek(noiseFloorBuffer);
+
+        var sorted = noiseFloorBuffer.OrderBy(x => x).ToList();
+
+        var trimCount = (int)(sorted.Count * .15f);
+
+        // Remove lowest and highest values
+        var trimmed = sorted.Skip(trimCount).Take(sorted.Count - (2 * trimCount));
+
+        return trimmed.Average();
     }
 
     protected int ReadSpan(Span<IQ> iqPairs) {
