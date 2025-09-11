@@ -1,10 +1,11 @@
 ﻿using System.Buffers;
 
+using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.NativeApi.Structs;
 
 namespace HackRFDotnet.ManagedApi.Streams {
-    public unsafe class RfDeviceStream : IDisposable {
+    public unsafe class RfDeviceStream : IDisposable, IRfDeviceStream {
         public RadioBand Frequency {
             get {
                 return _managedRfDevice.Frequency;
@@ -32,6 +33,10 @@ namespace HackRFDotnet.ManagedApi.Streams {
             SetSampleRate(sampleRate);
         }
 
+        public void Close() {
+            _managedRfDevice.StopRx();
+        }
+
         public void SetSampleRate(double sampleRate) {
             SampleRate = sampleRate;
 
@@ -39,8 +44,8 @@ namespace HackRFDotnet.ManagedApi.Streams {
             _managedRfDevice.SetSampleRate(SampleRate);
         }
 
-        public void Close() {
-            _managedRfDevice.StopRx();
+        public int TxBuffer(Span<IQ> iqFrame) {
+            throw new NotImplementedException();
         }
 
         public int ReadBuffer(Span<IQ> iqBuffer) {
@@ -52,6 +57,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
             var interleavedTransferFrame = new ReadOnlySpan<InterleavedSample>(iqBuffer, hackrfTransfer.valid_length / 2);
 
             var iqSamples = ArrayPool<IQ>.Shared.Rent(interleavedTransferFrame.Length);
+
             try {
                 for (var x = 0; x < interleavedTransferFrame.Length; x++) {
                     iqSamples[x] = new IQ(interleavedTransferFrame[x]);
@@ -71,6 +77,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
         }
 
         public void Dispose() {
+
         }
     }
 }

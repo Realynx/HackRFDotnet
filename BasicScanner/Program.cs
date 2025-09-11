@@ -39,8 +39,13 @@ namespace BasicScanner {
 
             rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(500));
 
+            // rfDevice.StartRecordingToFile("Recording.bin");
+
+            //var rfFileStream = new RfFileStream("Recording.bin");
+            //rfFileStream.Open(5_000_000);
+
             var fmPlayer = new AnaloguePlayer(new FmSignalStream(rfDevice.RfDeviceStream));
-            fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 44100);
+            fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
 
             ControlChannel(rfDevice);
         }

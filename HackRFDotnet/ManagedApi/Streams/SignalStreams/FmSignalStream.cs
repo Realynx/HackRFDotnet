@@ -1,12 +1,13 @@
 ﻿using System.Buffers;
 
+using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Types;
 
 using NAudio.Wave;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
 public class FmSignalStream : SignalStream {
-    public FmSignalStream(RfDeviceStream deviceStream, bool keepOpen = true) : base(deviceStream, keepOpen) {
+    public FmSignalStream(IRfDeviceStream deviceStream, bool keepOpen = true) : base(deviceStream, keepOpen) {
         WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat((int)_rfDeviceStream.SampleRate, 2);
     }
 

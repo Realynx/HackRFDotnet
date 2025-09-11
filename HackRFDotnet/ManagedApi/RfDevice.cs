@@ -10,8 +10,11 @@ namespace HackRFDotnet.ManagedApi {
         public RadioBand Bandwidth { get; set; } = RadioBand.FromHz(0);
 
         public RfDeviceStream RfDeviceStream { get; set; }
+
         private readonly HackRFDevice* _devicePtr;
         private readonly HackRFSampleBlockCallback _rxCallback;
+
+        private RfFileStream? _recordingFile = null;
 
         public bool IsConnected {
             get {
@@ -24,7 +27,16 @@ namespace HackRFDotnet.ManagedApi {
             _devicePtr = devicePtr;
 
             RfDeviceStream = new RfDeviceStream(this);
-            RfDeviceStream.Open(4_000_000);
+            RfDeviceStream.Open(5_000_000);
+        }
+
+        public void StartRecordingToFile(string fileName) {
+            _recordingFile = new RfFileStream(fileName);
+            _recordingFile.Open(0);
+        }
+
+        public void StopRecording() {
+            _recordingFile?.Close();
         }
 
         public void Dispose() {
@@ -80,7 +92,13 @@ namespace HackRFDotnet.ManagedApi {
             }
 
             RfDeviceStream.BufferTransferChunk(*transferStruct);
-            return 0;
+
+            if (_recordingFile is not null) {
+                var chunkBuffer = new Span<byte>(transferStruct->buffer, transferStruct->buffer_length);
+                _recordingFile.WriteBuffer(chunkBuffer);
+            }
+
+            return transferStruct->buffer_length;
         }
     }
 }

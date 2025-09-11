@@ -7,26 +7,32 @@ using NAudio.Wave.SampleProviders;
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
     public class AnaloguePlayer {
         private readonly SignalStream _sampleDeModulator;
-        private SampleToWaveProvider16 _sampleToWaveProvider16;
+        private IWaveProvider _sampleToWaveProvider16;
         private BufferedWaveProvider _waveProvider;
         private WaveOutEvent _waveOut;
         private Thread _playbackThread;
-
+        private int _audioRate;
         public AnaloguePlayer(SignalStream signalStream) {
             _sampleDeModulator = signalStream;
         }
 
         public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwith, int audioRate = 44100) {
+            _audioRate = audioRate;
+
             _waveProvider = new BufferedWaveProvider(new WaveFormat(audioRate, 16, 1)) {
-                DiscardOnBufferOverflow = true
+                BufferDuration = TimeSpan.FromMilliseconds(500)
             };
 
-            _waveOut = new WaveOutEvent { Volume = 0.5f };
+            _waveOut = new WaveOutEvent {
+                Volume = 0.5f,
+                DesiredLatency = 250,
+            };
+
             _waveOut.Init(_waveProvider);
             _waveOut.Play();
 
             var resampler = new WdlResamplingSampleProvider(_sampleDeModulator, audioRate);
-            _sampleToWaveProvider16 = new SampleToWaveProvider16(resampler);
+            _sampleToWaveProvider16 = resampler.ToWaveProvider16();
 
             _playbackThread = new Thread(() => StreamIqFrames(centerOffset, bandwith));
             _playbackThread.Start();
@@ -34,7 +40,9 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
 
         private void StreamIqFrames(RadioBand centerOffset, RadioBand bandwith) {
             _sampleDeModulator.SetBand(centerOffset, bandwith);
-            var waveProviderBuffer = new byte[10_000];
+
+            var bufferSize = (int)(TimeSpan.FromMilliseconds(250).TotalSeconds * _audioRate);
+            var waveProviderBuffer = new byte[bufferSize];
 
             int read;
             while (true) {

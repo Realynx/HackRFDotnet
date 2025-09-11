@@ -2,6 +2,7 @@
 
 
 using HackRFDotnet.ManagedApi.SignalProcessing;
+using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Types;
 
 using NAudio.Wave;
@@ -11,7 +12,7 @@ public class SignalStream : ISampleProvider, IDisposable {
     public WaveFormat? WaveFormat { get; protected set; }
 
     protected readonly bool _keepOpen;
-    protected readonly RfDeviceStream _rfDeviceStream;
+    protected readonly IRfDeviceStream _rfDeviceStream;
 
     protected RadioBand _center = RadioBand.FromMHz(94.7f);
     protected RadioBand _bandwith = RadioBand.FromKHz(200);
@@ -20,7 +21,7 @@ public class SignalStream : ISampleProvider, IDisposable {
 
     protected FilterProcessor? _filterProcessor;
 
-    public SignalStream(RfDeviceStream deviceStream, bool keepOpen = true) {
+    public SignalStream(IRfDeviceStream deviceStream, bool keepOpen = true) {
         _keepOpen = keepOpen;
         _rfDeviceStream = deviceStream;
     }
@@ -60,6 +61,10 @@ public class SignalStream : ISampleProvider, IDisposable {
 
     public virtual int Read(float[] buffer, int offset, int count) {
         var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
+
+        while (_rfDeviceStream.BufferLength < count) {
+        }
+
         try {
             ReadSpan(iqBuffer.AsSpan(0, count));
 

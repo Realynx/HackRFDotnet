@@ -1,11 +1,12 @@
 ﻿using System.Buffers;
 
+using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Types;
 
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
 public class AmSignalStream : SignalStream {
-    public AmSignalStream(RfDeviceStream deviceStream, bool keepOpen = true) : base(deviceStream, keepOpen) {
+    public AmSignalStream(IRfDeviceStream deviceStream, bool keepOpen = true) : base(deviceStream, keepOpen) {
     }
 
     public override int Read(float[] buffer, int offset, int count) {
