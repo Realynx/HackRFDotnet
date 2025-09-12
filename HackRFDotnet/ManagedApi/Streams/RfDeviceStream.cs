@@ -20,7 +20,6 @@ namespace HackRFDotnet.ManagedApi.Streams {
 
         public double SampleRate { get; private set; }
 
-        private const int HACK_RF_TRANSFER_SIZE = 131072;
         private RingBuffer<InterleavedSample>? _interleavedBuffer = null;
         private RingBuffer<IQ>? _iqBuffer = null;
         private Thread _bufferKeeping;
@@ -48,8 +47,8 @@ namespace HackRFDotnet.ManagedApi.Streams {
         public void SetSampleRate(double sampleRate) {
             SampleRate = sampleRate;
 
-            _interleavedBuffer = new RingBuffer<InterleavedSample>((int)(TimeSpan.FromMilliseconds(500).TotalSeconds * SampleRate));
-            _iqBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(500).TotalSeconds * SampleRate));
+            _interleavedBuffer = new RingBuffer<InterleavedSample>((int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate));
+            _iqBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate));
             _managedRfDevice.SetSampleRate(SampleRate);
         }
 
