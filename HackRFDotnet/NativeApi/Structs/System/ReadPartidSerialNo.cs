@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace HackRFDotnet.NativeApi.Structs {
+namespace HackRFDotnet.NativeApi.Structs.System {
     [StructLayout(LayoutKind.Sequential)]
     public unsafe struct ReadPartidSerialNo {
         // MCU part ID register value (2 x UInt32)

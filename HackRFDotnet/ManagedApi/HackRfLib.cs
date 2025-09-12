@@ -1,5 +1,5 @@
 ﻿using HackRFDotnet.NativeApi.Lib;
-using HackRFDotnet.NativeApi.Structs;
+using HackRFDotnet.NativeApi.Structs.Devices;
 
 namespace HackRFDotnet.ManagedApi {
     public unsafe static class HackRfLib {

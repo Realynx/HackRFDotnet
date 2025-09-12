@@ -1,7 +1,8 @@
 ﻿using System.Runtime.InteropServices;
 
 using HackRFDotnet.NativeApi.Enums;
-using HackRFDotnet.NativeApi.Structs;
+using HackRFDotnet.NativeApi.Structs.Devices;
+using HackRFDotnet.NativeApi.Structs.System;
 
 namespace HackRFDotnet.NativeApi.Lib;
 public static partial class HackRfNativeLib {

@@ -1,5 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 
+using HackRFDotnet.NativeApi.Structs.Devices;
+
 namespace HackRFDotnet.NativeApi.Structs {
     public unsafe struct HackrfTransfer {
         /** HackRF USB device for this transfer */

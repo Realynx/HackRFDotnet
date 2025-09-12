@@ -1,7 +1,6 @@
 ﻿using HackRFDotnet.ManagedApi;
 using HackRFDotnet.ManagedApi.AudioPlayers;
 using HackRFDotnet.ManagedApi.Extensions;
-using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 using HackRFDotnet.ManagedApi.Types;
 
