@@ -1,11 +1,4 @@
-﻿
-
-using System.Numerics;
-using System.Runtime.InteropServices;
-
-using FftSharp;
-
-using HackRFDotnet.ManagedApi.Types;
+﻿using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.ManagedApi.Utilities;
 
 using MathNet.Filtering.FIR;
@@ -48,21 +41,27 @@ public class FilterProcessor {
 
     private void FilterFrame(Span<IQ> iqFrame) {
         //var paddedLength = 1 << (int)Math.Ceiling(Math.Log2(iqFrame.Length));
-        //var complexFrame = new Complex[paddedLength];
-        //MemoryMarshal.Cast<IQ, Complex>(iqFrame).CopyTo(complexFrame);
 
-        //FFT.Forward(complexFrame);
+        //var complexFrame = new Complex[paddedLength];
+        //MemoryMarshal.Cast<IQ, Complex>(iqFrame);
 
         //var sampleRate = _sampleRate;
         //var cutoff = RadioBand.FromKHz(200);
         //var frameLength = complexFrame.Length;
+        //var resolution = FFT.FrequencyResolution(frameLength, _sampleRate);
+
+        ////for (var x = 0; x < frameLength; x++) {
+        ////    if (complexFrame[x].Imaginary < .2) {
+        ////        complexFrame[x] = Complex.Zero;
+        ////    }
+        ////}
+
+        //FFT.Forward(complexFrame);
 
         //for (var x = 0; x < frameLength; x++) {
-        //    var hzBin = (x < frameLength / 2)
-        //        ? (x * sampleRate / frameLength)
-        //        : ((x - frameLength) * sampleRate / frameLength);
+        //    var currentFreq = x * resolution;
 
-        //    if (Math.Abs(hzBin) > cutoff.Hz) {
+        //    if (currentFreq > cutoff.Hz + (cutoff.Hz / 2)) {
         //        complexFrame[x] = Complex.Zero;
         //    }
         //}
@@ -72,6 +71,7 @@ public class FilterProcessor {
         for (var x = 0; x < iqFrame.Length; x++) {
             var iFiltered = _filterI.ProcessSample(iqFrame[x].I);
             var qFiltered = _filterQ.ProcessSample(iqFrame[x].Q);
+
             iqFrame[x] = new IQ(iFiltered, qFiltered);
         }
     }

@@ -90,6 +90,8 @@ internal sealed class RingBuffer<T> {
                 _end %= Capacity;
             }
         }
+
+        Console.WriteLine($"[{DateTime.Now:HH:mm:ss-fff}] W Start: {_start}, End: {_end}");
     }
 
 
@@ -179,6 +181,8 @@ internal sealed class RingBuffer<T> {
             _start += read;
         }
 
+
+        Console.WriteLine($"[{DateTime.Now:HH:mm:ss-fff}] R Start: {_start}, End: {_end}");
         return read;
     }
 }

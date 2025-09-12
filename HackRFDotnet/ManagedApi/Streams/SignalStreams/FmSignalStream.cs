@@ -8,7 +8,7 @@ using NAudio.Wave;
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
 public class FmSignalStream : SignalStream {
     public FmSignalStream(IRfDeviceStream deviceStream, bool keepOpen = true) : base(deviceStream, keepOpen) {
-        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat((int)_rfDeviceStream.SampleRate, 2);
+        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat((int)_rfDeviceStream.SampleRate, 1);
     }
 
     public override int Read(float[] buffer, int offset, int count) {

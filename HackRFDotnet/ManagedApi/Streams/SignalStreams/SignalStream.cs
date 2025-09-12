@@ -52,9 +52,6 @@ public class SignalStream : ISampleProvider, IDisposable {
     }
 
     protected int ReadSpan(Span<IQ> iqPairs) {
-        while (_rfDeviceStream.BufferLength < iqPairs.Length) {
-        }
-
         var readBytes = _rfDeviceStream.ReadBuffer(iqPairs);
         _filterProcessor.ApplyFilter(iqPairs);
 
