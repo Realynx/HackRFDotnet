@@ -43,7 +43,7 @@ internal sealed class RingBuffer<T> {
             return;
         }
 
-        // Buffer smaller than capacity at end of No need to wrap around
+        // Buffer smaller than capacity at end, no need to wrap around
         var freeUntilWrap = Capacity - _end;
         if (buffer.Length <= freeUntilWrap) {
             buffer.CopyTo(_array.AsSpan(_end));
@@ -148,6 +148,7 @@ internal sealed class RingBuffer<T> {
             // _start = 0;
             // _end = 0;
             _start += read;
+            _start %= Capacity;
             _end = _start;
         }
         else {
