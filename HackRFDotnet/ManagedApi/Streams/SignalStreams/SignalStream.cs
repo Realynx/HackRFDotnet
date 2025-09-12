@@ -8,6 +8,11 @@ namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
 public class SignalStream : IDisposable {
     public RadioBand Center { get; protected set; } = RadioBand.FromMHz(94.7f);
     public RadioBand Bandwith { get; protected set; } = RadioBand.FromKHz(200);
+    public double SampleRate {
+        get {
+            return _iQStream.SampleRate;
+        }
+    }
 
     internal RingBuffer<IQ> _filteredBuffer;
     protected SignalProcessingPipeline? _processingPipeline;
@@ -24,17 +29,21 @@ public class SignalStream : IDisposable {
         new Thread(BufferKeeping).Start();
     }
 
-    internal void ReadSpan(Span<IQ> iqPairs) {
+    public void ReadSpan(Span<IQ> iqPairs) {
+        while (_filteredBuffer.Count < iqPairs.Length) {
+            Thread.Sleep(1);
+        }
+
         lock (_filteredBuffer) {
             var readBytes = _filteredBuffer.Read(iqPairs);
         }
     }
 
     private void BufferKeeping() {
-        var chunkSize = CalculateChunkSize();
+        var chunkSize = CalculateFFTChunkSize();
 
         while (true) {
-            if (_processingPipeline is null || _iQStream.BufferLength < chunkSize) {
+            if (_iQStream.BufferLength < chunkSize) {
                 Thread.Sleep(1);
                 continue;
             }
@@ -57,7 +66,7 @@ public class SignalStream : IDisposable {
         }
     }
 
-    private int CalculateChunkSize() {
+    public int CalculateFFTChunkSize() {
         /*
         We will send 4096 frames to the audio resampler/player
         We have a much higher sampling rate than the audio player so first we must filter

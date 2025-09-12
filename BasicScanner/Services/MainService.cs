@@ -68,7 +68,12 @@ internal class MainService : IHostedService {
         var fmPlayer = new AnaloguePlayer(fmSignalStream);
         fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
 
-        using var signalStream = new SignalStream(deviceStream);
+        new Thread(async () => {
+            using var signalStream = new SignalStream(deviceStream);
+            await _spectrumDisplayService.StartAsync(signalStream, new CancellationTokenSource().Token);
+        }).Start();
+
+
         ControlChannel(rfDevice);
 
         return Task.CompletedTask;
