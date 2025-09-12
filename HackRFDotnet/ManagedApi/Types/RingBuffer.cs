@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace HackRFDotnet.ManagedApi.Types;
+﻿namespace HackRFDotnet.ManagedApi.Types;
 
 internal sealed class RingBuffer<T> {
     public int Capacity { get; }
@@ -43,31 +41,55 @@ internal sealed class RingBuffer<T> {
             return;
         }
 
-        // Buffer smaller than capacity at end, no need to wrap around
-        var freeUntilWrap = Capacity - _end;
-        if (buffer.Length <= freeUntilWrap) {
-            buffer.CopyTo(_array.AsSpan(_end));
-            _end += buffer.Length;
-            _end %= Capacity;
-            return;
+        // [||||||||||||||||||||||||||||]
+        //  ^ end                 ^ start
+        if (_start > _end) {
+            if (_end + buffer.Length < Capacity) {
+                buffer.CopyTo(_array.AsSpan(_end));
+            }
+            else {
+                buffer[..(Capacity - _end)].CopyTo(_array.AsSpan(_end));
+                buffer[(Capacity - _end)..].CopyTo(_array);
+            }
+
+            // Advance pointers
+            if (_end + buffer.Length > _start) {
+                _end += buffer.Length;
+                _end %= Capacity;
+                _start = _end - 1;
+            }
+            else {
+                _end += buffer.Length;
+                _end %= Capacity;
+            }
         }
-
-        // Buffer is large enough that two copies are needed
-        buffer[..freeUntilWrap].CopyTo(_array.AsSpan(_end));
-        buffer[freeUntilWrap..].CopyTo(_array);
-
-        // Advance pointers
-        if (_end < _start && _end + buffer.Length > _start) {
-            _end += buffer.Length;
-            _end %= Capacity;
-
-            _start = _end;
-        }
+        // [||||||||||||||||||||||||||||]
+        //  ^ start                 ^ end
         else {
-            _end += buffer.Length;
-            _end %= Capacity;
-        }
+            // Buffer smaller than capacity at end, no need to wrap around
+            var freeUntilWrap = Capacity - _end;
+            if (buffer.Length <= freeUntilWrap) {
+                buffer.CopyTo(_array.AsSpan(_end));
+                _end += buffer.Length;
+                _end %= Capacity;
+                return;
+            }
 
+            // Buffer is large enough that two copies are needed
+            buffer[..freeUntilWrap].CopyTo(_array.AsSpan(_end));
+            buffer[freeUntilWrap..].CopyTo(_array);
+
+            // Advance pointers
+            if (_end + buffer.Length > _start) {
+                _end += buffer.Length;
+                _end %= Capacity;
+                _start = _end - 1;
+            }
+            else {
+                _end += buffer.Length;
+                _end %= Capacity;
+            }
+        }
     }
 
 
@@ -76,6 +98,10 @@ internal sealed class RingBuffer<T> {
     /// </summary>
     /// <returns>The number of items read.</returns>
     public int Peek(Span<T> buffer) {
+        if (_start == _end) {
+            return 0;
+        }
+
         // [||||||||||||||||||||||||||||]
         //  ^ start                 ^ end
         if (_start < _end) {
@@ -116,8 +142,9 @@ internal sealed class RingBuffer<T> {
             read = Math.Min(count, _end - _start);
 
             if (_end - _start == read) {
-                _start = 0;
-                _end = 0;
+                _start += read;
+                _start %= Capacity;
+                _end = _start;
             }
             else {
                 _start += read;
@@ -144,8 +171,6 @@ internal sealed class RingBuffer<T> {
 
         // Advance pointers
         if (_start + read >= _end) {
-            // _start = 0;
-            // _end = 0;
             _start += read;
             _start %= Capacity;
             _end = _start;
