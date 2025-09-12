@@ -53,7 +53,7 @@ internal class MainService : IHostedService {
         //rfFileStream.Open(20_000_000);
 
         rfDevice.AttenuateAmplification();
-        using var deviceStream = new IQDeviceStream(rfDevice, 8_000_000);
+        using var deviceStream = new IQDeviceStream(rfDevice, 16_000_000);
         deviceStream.OpenRx();
 
         var effectsPipeline = new SignalProcessingBuilder()
@@ -64,7 +64,7 @@ internal class MainService : IHostedService {
             .AddSignalEffect(new FftEffect(reducedSampleRate, false))
             .BuildPipeline();
 
-        using var fmSignalStream = new FmSignalStream(deviceStream, processingPipeline: effectsPipeline, keepOpen: false);
+        using var fmSignalStream = new FmSignalStream(deviceStream, true, processingPipeline: effectsPipeline, keepOpen: false);
         var fmPlayer = new AnaloguePlayer(fmSignalStream);
         fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
 

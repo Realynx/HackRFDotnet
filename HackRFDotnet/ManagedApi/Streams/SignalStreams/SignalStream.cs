@@ -10,7 +10,6 @@ public class SignalStream : IDisposable {
     public RadioBand Bandwith { get; protected set; } = RadioBand.FromKHz(200);
 
     internal RingBuffer<IQ> _filteredBuffer;
-    protected FilterProcessor? _filterProcessor;
     protected SignalProcessingPipeline? _processingPipeline;
 
     protected readonly IIQStream _iQStream;
@@ -35,7 +34,7 @@ public class SignalStream : IDisposable {
         var chunkSize = CalculateChunkSize();
 
         while (true) {
-            if (_filterProcessor is null || _iQStream.BufferLength < chunkSize) {
+            if (_processingPipeline is null || _iQStream.BufferLength < chunkSize) {
                 Thread.Sleep(1);
                 continue;
             }
@@ -82,8 +81,6 @@ public class SignalStream : IDisposable {
     public void SetBand(RadioBand center, RadioBand bandwidth) {
         Center = center;
         Bandwith = bandwidth;
-
-        _filterProcessor = new FilterProcessor(_iQStream.SampleRate, center, bandwidth);
     }
 
     public void Dispose() {
