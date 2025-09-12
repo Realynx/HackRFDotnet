@@ -172,7 +172,7 @@ internal sealed class RingBuffer<T> {
         var read = Peek(buffer);
 
         // Advance pointers
-        if (_start + read >= _end) {
+        if (_start <= _end && _start + read >= _end) {
             _start += read;
             _start %= Capacity;
             _end = _start;
