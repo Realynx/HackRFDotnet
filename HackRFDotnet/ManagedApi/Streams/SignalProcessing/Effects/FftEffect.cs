@@ -6,11 +6,9 @@ using FftSharp;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 public class FftEffect : SignalEffect {
-    private readonly int _sampleRate;
     private readonly bool _forward;
 
-    public FftEffect(int sampleRate, bool forward) {
-        _sampleRate = sampleRate;
+    public FftEffect(bool forward) {
         _forward = forward;
     }
 
@@ -18,8 +16,6 @@ public class FftEffect : SignalEffect {
         var complexFrame = MemoryMarshal
             .Cast<IQ, Complex>(signalTheta)
             .Slice(0, length);
-
-        var resolution = FFT.FrequencyResolution(length, _sampleRate);
 
         if (_forward) {
             FFT.Forward(complexFrame);

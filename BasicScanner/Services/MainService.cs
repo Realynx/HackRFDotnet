@@ -57,11 +57,11 @@ internal class MainService : IHostedService {
         deviceStream.OpenRx();
 
         var effectsPipeline = new SignalProcessingBuilder()
-            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(200), out var reducedSampleRate))
+            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(200), out var reducedSampleRate, 16))
 
-            .AddSignalEffect(new FftEffect(reducedSampleRate, true))
+            .AddSignalEffect(new FftEffect(true))
             .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(200)))
-            .AddSignalEffect(new FftEffect(reducedSampleRate, false))
+            .AddSignalEffect(new FftEffect(false))
             .BuildPipeline();
 
         using var fmSignalStream = new FmSignalStream(deviceStream, true, processingPipeline: effectsPipeline, keepOpen: false);

@@ -13,6 +13,13 @@ public class FmSignalStream : WaveSignalStream {
         var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
         try {
             ReadSpan(iqBuffer.AsSpan(0, count));
+
+            RemoveNoiseFloor(iqBuffer);
+
+            NormalizeRms(buffer);
+            Squelch(iqBuffer);
+
+
             for (var x = 1; x < count; x++) {
                 // Conjugate of a Complex number: the conjugate of x+i*y is x-i*y
                 var delta = iqBuffer[x] * IQ.Conjugate(iqBuffer[x - 1]);

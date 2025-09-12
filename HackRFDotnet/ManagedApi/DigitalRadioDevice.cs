@@ -11,7 +11,7 @@ namespace HackRFDotnet.ManagedApi {
         public RadioBand Bandwidth { get; set; } = RadioBand.FromHz(0);
 
         public readonly HackRFDevice* DevicePtr;
-
+        private HackRFSampleBlockCallback _rxCallback;
         public bool IsConnected {
             get {
                 return DevicePtr is not null;
@@ -42,7 +42,8 @@ namespace HackRFDotnet.ManagedApi {
             return HackRfNativeLib.DeviceStreaming.SetFrequency(DevicePtr, (uint)radioFrequency.Hz) == 0 && setFilter;
         }
 
-        public bool StartRx(HackRFSampleBlockCallback _rxCallback) {
+        public bool StartRx(HackRFSampleBlockCallback rxCallback) {
+            _rxCallback = rxCallback;
             if (_rxCallback is null) {
                 throw new NullCallbackException($"You cannot start Rx without a transfer callback '{nameof(_rxCallback)}'");
             }
