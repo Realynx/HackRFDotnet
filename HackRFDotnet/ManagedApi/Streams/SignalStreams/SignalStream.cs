@@ -18,7 +18,6 @@ public class SignalStream : ISampleProvider, IDisposable {
     protected RadioBand _bandwith = RadioBand.FromKHz(200);
     private RingBuffer<float> _noiseHistory = new(100);
 
-
     protected FilterProcessor? _filterProcessor;
 
     public SignalStream(IRfDeviceStream deviceStream, bool keepOpen = true) {
@@ -53,6 +52,9 @@ public class SignalStream : ISampleProvider, IDisposable {
     }
 
     protected int ReadSpan(Span<IQ> iqPairs) {
+        while (_rfDeviceStream.BufferLength < iqPairs.Length) {
+        }
+
         var readBytes = _rfDeviceStream.ReadBuffer(iqPairs);
         _filterProcessor.ApplyFilter(iqPairs);
 
@@ -61,9 +63,6 @@ public class SignalStream : ISampleProvider, IDisposable {
 
     public virtual int Read(float[] buffer, int offset, int count) {
         var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
-
-        while (_rfDeviceStream.BufferLength < count) {
-        }
 
         try {
             ReadSpan(iqBuffer.AsSpan(0, count));

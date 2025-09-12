@@ -27,7 +27,7 @@ namespace HackRFDotnet.ManagedApi {
             _devicePtr = devicePtr;
 
             RfDeviceStream = new RfDeviceStream(this);
-            RfDeviceStream.Open(5_000_000);
+            RfDeviceStream.Open(2_000_000);
         }
 
         public void StartRecordingToFile(string fileName) {

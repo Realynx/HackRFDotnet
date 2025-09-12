@@ -16,16 +16,16 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
             _sampleDeModulator = signalStream;
         }
 
-        public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwith, int audioRate = 44100) {
+        public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwith, int audioRate) {
             _audioRate = audioRate;
 
             _waveProvider = new BufferedWaveProvider(new WaveFormat(audioRate, 16, 1)) {
-                BufferDuration = TimeSpan.FromMilliseconds(500)
+                BufferDuration = TimeSpan.FromMilliseconds(500),
+                DiscardOnBufferOverflow = true,
             };
 
             _waveOut = new WaveOutEvent {
                 Volume = 0.5f,
-                DesiredLatency = 250,
             };
 
             _waveOut.Init(_waveProvider);
@@ -34,21 +34,28 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
             var resampler = new WdlResamplingSampleProvider(_sampleDeModulator, audioRate);
             _sampleToWaveProvider16 = resampler.ToWaveProvider16();
 
-            _playbackThread = new Thread(() => StreamIqFrames(centerOffset, bandwith));
+            _playbackThread = new Thread(() => StreamAudioFrames(centerOffset, bandwith));
             _playbackThread.Start();
         }
 
-        private void StreamIqFrames(RadioBand centerOffset, RadioBand bandwith) {
+        private void StreamAudioFrames(RadioBand centerOffset, RadioBand bandwith) {
             _sampleDeModulator.SetBand(centerOffset, bandwith);
 
-            var bufferSize = (int)(TimeSpan.FromMilliseconds(250).TotalSeconds * _audioRate);
+            var bufferSize = (int)(TimeSpan.FromMilliseconds(100).TotalSeconds * _audioRate);
             var waveProviderBuffer = new byte[bufferSize];
 
             int read;
             while (true) {
-                while ((read = _sampleToWaveProvider16.Read(waveProviderBuffer, 0, waveProviderBuffer.Length)) > 0) {
-                    _waveProvider.AddSamples(waveProviderBuffer, 0, read);
+                if (_waveProvider.BufferedBytes > 1000) {
+                    continue;
                 }
+
+                read = _sampleToWaveProvider16.Read(waveProviderBuffer, 0, waveProviderBuffer.Length);
+                if (read == 0) {
+                    continue;
+                }
+
+                _waveProvider.AddSamples(waveProviderBuffer, 0, read);
             }
         }
     }

@@ -1,5 +1,10 @@
 ﻿
 
+using System.Numerics;
+using System.Runtime.InteropServices;
+
+using FftSharp;
+
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.ManagedApi.Utilities;
 
@@ -42,10 +47,27 @@ public class FilterProcessor {
     }
 
     private void FilterFrame(Span<IQ> iqFrame) {
-        //SignalUtilities.FFT(true, 50, iqFrame);
+        //var paddedLength = 1 << (int)Math.Ceiling(Math.Log2(iqFrame.Length));
+        //var complexFrame = new Complex[paddedLength];
+        //MemoryMarshal.Cast<IQ, Complex>(iqFrame).CopyTo(complexFrame);
 
+        //FFT.Forward(complexFrame);
 
-        //SignalUtilities.FFT(false, 50, iqFrame);
+        //var sampleRate = _sampleRate;
+        //var cutoff = RadioBand.FromKHz(200);
+        //var frameLength = complexFrame.Length;
+
+        //for (var x = 0; x < frameLength; x++) {
+        //    var hzBin = (x < frameLength / 2)
+        //        ? (x * sampleRate / frameLength)
+        //        : ((x - frameLength) * sampleRate / frameLength);
+
+        //    if (Math.Abs(hzBin) > cutoff.Hz) {
+        //        complexFrame[x] = Complex.Zero;
+        //    }
+        //}
+
+        //FFT.Inverse(complexFrame);
 
         for (var x = 0; x < iqFrame.Length; x++) {
             var iFiltered = _filterI.ProcessSample(iqFrame[x].I);

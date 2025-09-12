@@ -56,15 +56,19 @@ internal sealed class RingBuffer<T> {
         buffer[freeUntilWrap..].CopyTo(_array);
 
         // Advance pointers
-        if (_end + buffer.Length > _start) {
+        if (_end < _start && _end + buffer.Length > _start) {
             _end += buffer.Length;
             _end %= Capacity;
 
+            Console.WriteLine("Overflow");
             _start = _end;
         }
         else {
             _end += buffer.Length;
+            _end %= Capacity;
         }
+
+        Console.WriteLine($"Start: {_start}, End: {_end}");
     }
 
 
@@ -148,6 +152,7 @@ internal sealed class RingBuffer<T> {
             _start += read;
         }
 
+        Console.WriteLine($"Start: {_start}, End: {_end}");
         return read;
     }
 }

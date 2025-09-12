@@ -1,5 +1,7 @@
 ﻿
 
+using System.Numerics;
+
 using BenchmarkDotNet.Attributes;
 
 namespace HackRFDotnet.Benchmarks;

@@ -1,5 +1,7 @@
 ﻿using System.Buffers;
 
+using NAudio.Utils;
+
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.NativeApi.Structs;
@@ -21,6 +23,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
         public double SampleRate { get; private set; }
 
         private RingBuffer<IQ>? _dataBuffer = null;
+
 
         private readonly RfDevice _managedRfDevice;
 

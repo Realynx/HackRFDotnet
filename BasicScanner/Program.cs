@@ -40,10 +40,10 @@ namespace BasicScanner {
 
             // rfDevice.StartRecordingToFile("Recording.bin");
 
-            var rfFileStream = new RfFileStream("Recording.bin");
-            rfFileStream.Open(5_000_000);
+            //var rfFileStream = new RfFileStream("Recording.bin");
+            //rfFileStream.Open(5_000_000);
 
-            var fmPlayer = new AnaloguePlayer(new FmSignalStream(rfFileStream));
+            var fmPlayer = new AnaloguePlayer(new FmSignalStream(rfDevice.RfDeviceStream));
             fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
 
             ControlChannel(rfDevice);
