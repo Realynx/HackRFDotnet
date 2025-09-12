@@ -1,6 +1,4 @@
-﻿
-
-namespace HackRFDotnet.ManagedApi.Types {
+﻿namespace HackRFDotnet.ManagedApi.SignalProcessing {
     public class RadioBand {
 
         private readonly int _hz;

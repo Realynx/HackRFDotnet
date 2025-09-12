@@ -1,4 +1,4 @@
-﻿using HackRFDotnet.ManagedApi.Types;
+﻿using HackRFDotnet.ManagedApi.SignalProcessing;
 
 namespace HackRFDotnet.ManagedApi.Utilities;
 

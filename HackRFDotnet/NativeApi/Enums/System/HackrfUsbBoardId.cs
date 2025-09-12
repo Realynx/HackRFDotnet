@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.NativeApi.Enums {
+﻿namespace HackRFDotnet.NativeApi.Enums.System {
     public enum HackrfUsbBoardId {
         /**
 	     * Jawbreaker (beta platform) USB product id

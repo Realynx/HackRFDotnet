@@ -4,7 +4,6 @@ using System.Runtime.InteropServices;
 
 using FftSharp;
 
-using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.ManagedApi.Utilities;
 
 using MathNet.Filtering.FIR;

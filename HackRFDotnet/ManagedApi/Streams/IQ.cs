@@ -7,7 +7,9 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
-namespace HackRFDotnet.ManagedApi.Types;
+using HackRFDotnet.ManagedApi.Streams.Device;
+
+namespace HackRFDotnet.ManagedApi.SignalProcessing;
 
 public struct IQ : IEquatable<IQ>, IFormattable {
     public static readonly IQ Zero = new IQ(0.0, 0.0);
@@ -140,8 +142,8 @@ public struct IQ : IEquatable<IQ>, IFormattable {
 
     public static IQ operator *(IQ left, IQ right) {
         // Multiplication:  (a + bi)(c + di) = (ac -bd) + (bc + ad)i
-        var result_realpart = (left.m_real * right.m_real) - (left.m_imaginary * right.m_imaginary);
-        var result_imaginarypart = (left.m_imaginary * right.m_real) + (left.m_real * right.m_imaginary);
+        var result_realpart = left.m_real * right.m_real - left.m_imaginary * right.m_imaginary;
+        var result_imaginarypart = left.m_imaginary * right.m_real + left.m_real * right.m_imaginary;
         return new IQ(result_realpart, result_imaginarypart);
     }
 
@@ -228,7 +230,7 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         // Computing c * c + d * d will overflow even in cases where the actual result of the division does not overflow.
         if (Math.Abs(d) < Math.Abs(c)) {
             var doc = d / c;
-            return new IQ(a / (c + d * doc), (-a * doc) / (c + d * doc));
+            return new IQ(a / (c + d * doc), -a * doc / (c + d * doc));
         }
         else {
             var cod = c / d;
@@ -244,7 +246,7 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         // Compute log(1 + x) without loss of accuracy when x is small.
 
         // Our only use case so far is for positive values, so this isn't coded to handle negative values.
-        Debug.Assert((x >= 0.0) || double.IsNaN(x));
+        Debug.Assert(x >= 0.0 || double.IsNaN(x));
 
         var xp1 = 1.0 + x;
         if (xp1 == 1.0) {
@@ -407,7 +409,7 @@ public struct IQ : IEquatable<IQ>, IFormattable {
 
     public static IQ Atan(IQ value) {
         var two = new IQ(2.0, 0.0);
-        return (ImaginaryOne / two) * (Log(One - ImaginaryOne * value) - Log(One + ImaginaryOne * value));
+        return ImaginaryOne / two * (Log(One - ImaginaryOne * value) - Log(One + ImaginaryOne * value));
     }
 
     private static void Asin_Internal(double x, double y, out double b, out double bPrime, out double v) {
@@ -449,11 +451,11 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         // to determine u. Compute u = arcsin(beta) or u = arctan(beta') for arcsin, u = arccos(beta)
         // or arctan(1/beta') for arccos.
 
-        Debug.Assert((x >= 0.0) || double.IsNaN(x));
-        Debug.Assert((y >= 0.0) || double.IsNaN(y));
+        Debug.Assert(x >= 0.0 || double.IsNaN(x));
+        Debug.Assert(y >= 0.0 || double.IsNaN(y));
 
         // For x or y large enough to overflow alpha^2, we can simplify our formulas and avoid overflow.
-        if ((x > s_asinOverflowThreshold) || (y > s_asinOverflowThreshold)) {
+        if (x > s_asinOverflowThreshold || y > s_asinOverflowThreshold) {
             b = -1.0;
             bPrime = x / y;
 
@@ -471,8 +473,8 @@ public struct IQ : IEquatable<IQ>, IFormattable {
             v = s_log2 + Math.Log(big) + 0.5 * Log1P(ratio * ratio);
         }
         else {
-            var r = double.Hypot((x + 1.0), y);
-            var s = double.Hypot((x - 1.0), y);
+            var r = double.Hypot(x + 1.0, y);
+            var s = double.Hypot(x - 1.0, y);
 
             var a = (r + s) * 0.5;
             b = x / a;
@@ -599,11 +601,11 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         var rescale = false;
         var realCopy = value.m_real;
         var imaginaryCopy = value.m_imaginary;
-        if ((Math.Abs(realCopy) >= s_sqrtRescaleThreshold) || (Math.Abs(imaginaryCopy) >= s_sqrtRescaleThreshold)) {
+        if (Math.Abs(realCopy) >= s_sqrtRescaleThreshold || Math.Abs(imaginaryCopy) >= s_sqrtRescaleThreshold) {
             if (double.IsInfinity(value.m_imaginary)) {
                 // We need to handle infinite imaginary parts specially because otherwise
                 // our formulas below produce inf/inf = NaN.
-                return (new IQ(double.PositiveInfinity, imaginaryCopy));
+                return new IQ(double.PositiveInfinity, imaginaryCopy);
             }
 
             realCopy *= 0.25;

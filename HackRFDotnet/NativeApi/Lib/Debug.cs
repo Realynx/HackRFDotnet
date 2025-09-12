@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-using HackRFDotnet.NativeApi.Enums;
+using HackRFDotnet.NativeApi.Enums.System;
 
 namespace HackRFDotnet.NativeApi.Lib;
 public static partial class HackRfNativeLib {

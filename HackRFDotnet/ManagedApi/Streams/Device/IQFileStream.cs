@@ -1,15 +1,16 @@
 ﻿using System.Buffers;
 using System.Runtime.InteropServices;
 
+using HackRFDotnet.ManagedApi.SignalProcessing;
+using HackRFDotnet.ManagedApi.Streams.Exceptions;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Types;
 
-namespace HackRFDotnet.ManagedApi.Streams;
-public class RfFileStream : IRfDeviceStream, IDisposable {
+namespace HackRFDotnet.ManagedApi.Streams.Device;
+public class IQFileStream : IIQStream, IDisposable {
     private readonly string _fileName;
     private FileStream? _stream = null;
 
-    public RfFileStream(string fileName) {
+    public IQFileStream(string fileName) {
         _fileName = fileName;
     }
 
@@ -31,9 +32,13 @@ public class RfFileStream : IRfDeviceStream, IDisposable {
         _stream?.Dispose();
     }
 
-    public void Open(double sampleRate) {
-        SampleRate = sampleRate;
+    public void OpenRx(double? sampleRate = null) {
+        if (sampleRate is null) {
+            sampleRate = SampleRate;
+        }
+
         _stream = File.Open(_fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+        SetSampleRate(sampleRate ?? throw new ZeroSampleRateException("Cannot have a 0 sample rate"));
     }
 
     public int WriteBuffer(Span<byte> iqFrame) {
@@ -46,7 +51,7 @@ public class RfFileStream : IRfDeviceStream, IDisposable {
         try {
             for (var x = 0; x < iqFrame.Length; x++) {
                 iqBytes[x * 2] = (byte)(iqFrame[x].I * 128);
-                iqBytes[(x * 2) + 1] = (byte)(iqFrame[x].Q * 128);
+                iqBytes[x * 2 + 1] = (byte)(iqFrame[x].Q * 128);
             }
 
             _stream?.Write(iqBytes, 0, iqBytes.Length);

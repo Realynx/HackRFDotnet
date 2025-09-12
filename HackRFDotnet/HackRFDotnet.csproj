@@ -24,4 +24,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ManagedApi\Streams\SignalStreams\Digital\" />
+  </ItemGroup>
+
 </Project>

@@ -1,13 +1,13 @@
 ﻿using System.Buffers;
 
+using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Types;
 
 using NAudio.Wave;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
-public class FmSignalStream : SignalStream {
-    public FmSignalStream(IRfDeviceStream deviceStream, bool keepOpen = true) : base(deviceStream, keepOpen) {
+namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
+public class FmSignalStream : WaveSignalStream {
+    public FmSignalStream(IIQStream deviceStream, bool stero = true, bool keepOpen = true) : base(deviceStream, stero, keepOpen) {
     }
 
     public override int Read(float[] buffer, int offset, int count) {

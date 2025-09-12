@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-using HackRFDotnet.NativeApi.Enums;
+using HackRFDotnet.NativeApi.Enums.System;
 using HackRFDotnet.NativeApi.Structs.Devices;
 using HackRFDotnet.NativeApi.Structs.System;
 

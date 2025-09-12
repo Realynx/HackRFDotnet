@@ -1,20 +1,29 @@
 ﻿using HackRFDotnet.ManagedApi;
-using HackRFDotnet.ManagedApi.AudioPlayers;
-using HackRFDotnet.ManagedApi.Streams.SignalStreams;
-using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.ManagedApi.Extensions;
+using HackRFDotnet.ManagedApi.Services;
+using HackRFDotnet.ManagedApi.SignalProcessing;
+using HackRFDotnet.ManagedApi.Streams.Device;
+using HackRFDotnet.ManagedApi.Streams.SignalStreams;
+using HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 
 using Microsoft.Extensions.Hosting;
 
 namespace BasicScanner.Services;
 internal class MainService : IHostedService {
+    private readonly RfDeviceControllerService _rfDeviceControllerService;
+    private readonly SpectrumDisplayService _spectrumDisplayService;
+
+    public MainService(RfDeviceControllerService rfDeviceControllerService, SpectrumDisplayService spectrumDisplayService) {
+        _rfDeviceControllerService = rfDeviceControllerService;
+        _spectrumDisplayService = spectrumDisplayService;
+    }
     public Task StartAsync(CancellationToken cancellationToken) {
         Console.WriteLine("looking for HackRf Device...");
 
-        var deviceList = HackRfLib.FindDevices();
+        var deviceList = _rfDeviceControllerService.FindDevices();
         Console.WriteLine($"Found {deviceList.devicecount} HackRf devices... Opening Rx");
 
-        using var rfDevice = HackRfLib.ConnectToFirstDevice();
+        using var rfDevice = _rfDeviceControllerService.ConnectToFirstDevice();
         if (rfDevice is null) {
             Console.WriteLine("Could not connect to Rf Device");
             return Task.CompletedTask;
@@ -43,7 +52,14 @@ internal class MainService : IHostedService {
         //rfFileStream.Open(20_000_000);
 
         rfDevice.AttenuateAmplification();
-        var fmPlayer = new AnaloguePlayer(new FmSignalStream(rfDevice.RfDeviceStream));
+        using var deviceStream = new IQDeviceStream(rfDevice, 16_000_000);
+        deviceStream.OpenRx();
+
+        using var fmSignalStream = new FmSignalStream(deviceStream, false);
+        using var signalStream = new WaveSignalStream(deviceStream);
+
+        var fmPlayer = new AnaloguePlayer(fmSignalStream);
+
         fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
 
         ControlChannel(rfDevice);
@@ -51,7 +67,7 @@ internal class MainService : IHostedService {
         return Task.CompletedTask;
     }
 
-    private static void ControlChannel(RfDevice rfDevice) {
+    private static void ControlChannel(DigitalRadioDevice rfDevice) {
         for (; ; ) {
             Console.Write($"[{rfDevice.Frequency.Mhz} Mhz] Frequency: ");
             var freq = Console.ReadLine();

@@ -1,4 +1,4 @@
-﻿using HackRFDotnet.NativeApi.Enums;
+﻿using HackRFDotnet.NativeApi.Enums.System;
 
 namespace HackRFDotnet.NativeApi {
     internal class NativeConstants {

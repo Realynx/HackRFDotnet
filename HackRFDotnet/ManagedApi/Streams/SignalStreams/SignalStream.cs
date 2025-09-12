@@ -4,56 +4,38 @@ using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Types;
 
-using NAudio.Wave;
-
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
-public class SignalStream : ISampleProvider, IDisposable {
-    public WaveFormat? WaveFormat { get; protected set; }
+public class SignalStream {
+    public RadioBand Center { get; protected set; } = RadioBand.FromMHz(94.7f);
+    public RadioBand Bandwith { get; protected set; } = RadioBand.FromKHz(200);
 
-    protected readonly bool _keepOpen;
-    protected readonly IRfDeviceStream _rfDeviceStream;
-
-    protected RadioBand _center = RadioBand.FromMHz(94.7f);
-    protected RadioBand _bandwith = RadioBand.FromKHz(200);
-
-    private RingBuffer<IQ> _filteredBuffer;
-    //private RingBuffer<float> _noiseHistory = new(100);
-
+    internal RingBuffer<IQ> _filteredBuffer;
     protected FilterProcessor? _filterProcessor;
 
-    public SignalStream(IRfDeviceStream deviceStream, bool keepOpen = true) {
+    protected readonly IIQStream _iQStream;
+    protected readonly bool _keepOpen;
+
+    public SignalStream(IIQStream iQStream, bool keepOpen = true) {
+        _iQStream = iQStream;
         _keepOpen = keepOpen;
-        _rfDeviceStream = deviceStream;
-        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(50).TotalSeconds
-            * _rfDeviceStream.SampleRate));
 
-        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat(_bandwith.Hz / 2, 2);
-    }
-
-    public void SetBand(RadioBand center, RadioBand bandwidth) {
-        _center = center;
-        _bandwith = bandwidth;
-
-        _filterProcessor = new FilterProcessor(_rfDeviceStream.SampleRate, center, bandwidth);
-
+        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(50).TotalSeconds * _iQStream.SampleRate));
         new Thread(BufferKeeping).Start();
     }
 
     private void BufferKeeping() {
-        var bufferChunk = 4096;
-        var decimationFactor = (int)(_rfDeviceStream.SampleRate / _bandwith.Hz);
-        var decimatedSize = bufferChunk * decimationFactor;
+        var chunkSize = CalculateChunkSize();
 
         while (true) {
-            if (_rfDeviceStream.BufferLength < decimatedSize) {
+            if (_filterProcessor is null || _iQStream.BufferLength < chunkSize) {
                 continue;
             }
 
-            var iqPairs = ArrayPool<IQ>.Shared.Rent(decimatedSize);
+            var iqPairs = ArrayPool<IQ>.Shared.Rent(chunkSize);
             try {
-                var readBytes = _rfDeviceStream.ReadBuffer(iqPairs.AsSpan(0, decimatedSize));
+                var readBytes = _iQStream.ReadBuffer(iqPairs.AsSpan(0, chunkSize));
+                var downSampledIq = _filterProcessor.ApplyPipeline(iqPairs.AsSpan(0, chunkSize), out var updatedSampleRate);
 
-                var downSampledIq = _filterProcessor.ApplyPipeline(iqPairs.AsSpan(0, decimatedSize), out var updatedSampleRate);
 
                 lock (_filteredBuffer) {
                     _filteredBuffer.Write(iqPairs.AsSpan(0, downSampledIq));
@@ -65,51 +47,37 @@ public class SignalStream : ISampleProvider, IDisposable {
         }
     }
 
-    //public float GetNoiseFloorDb() {
-    //    if (_noiseHistory.Count == 0) {
-    //        return 0f;
-    //    }
+    private int CalculateChunkSize() {
+        /*
+        We will send 4096 frames to the audio resampler/player
+        We have a much higher sampling rate than the audio player so first we must filter
+        out the rest of the spectrum to the bandwith
+        The bandwith get's centred to 0 meaning we can represent the entire bandwith with it's hz as MSPS
+        We decrease the time domain samples to reduce CPU time when we filter it for the audio playback
+        */
 
-    //    // Sort values
-    //    var noiseFloorBuffer = new float[_noiseHistory.Count];
-    //    _noiseHistory.Peek(noiseFloorBuffer);
+        var bufferChunk = 4096;
 
-    //    var sorted = noiseFloorBuffer.OrderBy(x => x).ToList();
-
-    //    var trimCount = (int)(sorted.Count * .15f);
-
-    //    // Remove lowest and highest values
-    //    var trimmed = sorted.Skip(trimCount).Take(sorted.Count - (2 * trimCount));
-
-    //    return trimmed.Average();
-    //}
-
-    protected void ReadSpan(Span<IQ> iqPairs) {
-        lock (_filteredBuffer) {
-            var readBytes = _filteredBuffer.Read(iqPairs);
-        }
+        var decimationFactor = (int)(_iQStream.SampleRate / Bandwith.Hz);
+        var decimatedSize = bufferChunk * decimationFactor;
+        return decimatedSize;
     }
 
-    public virtual int Read(float[] buffer, int offset, int count) {
-        var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
+    /// <summary>
+    /// Set the band and bandwidth the filtering engine will use.
+    /// </summary>
+    /// <param name="center"></param>
+    /// <param name="bandwidth"></param>
+    public void SetBand(RadioBand center, RadioBand bandwidth) {
+        Center = center;
+        Bandwith = bandwidth;
 
-        try {
-            ReadSpan(iqBuffer.AsSpan(0, count));
-
-            for (var i = 0; i < count; i++) {
-                buffer[offset + i] = (float)iqBuffer[i].Phase;
-            }
-
-            return count;
-        }
-        finally {
-            ArrayPool<IQ>.Shared.Return(iqBuffer);
-        }
+        _filterProcessor = new FilterProcessor(_iQStream.SampleRate, center, bandwidth);
     }
 
     public void Dispose() {
         if (!_keepOpen) {
-            _rfDeviceStream.Dispose();
+            _iQStream.Dispose();
         }
     }
 }

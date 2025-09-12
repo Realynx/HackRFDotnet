@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.ManagedApi.Builders;
+﻿namespace HackRFDotnet.ManagedApi.SignalProcessing.Builders;
 public class SignalProcessingBuilder {
     public SignalProcessingBuilder() {
 
