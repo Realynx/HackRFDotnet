@@ -1,4 +1,4 @@
-﻿using HackRFDotnet.ManagedApi.SignalProcessing;
+﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 
 using NAudio.Wave;

@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 
 using HackRFDotnet.ManagedApi.Streams.Device;
 
-namespace HackRFDotnet.ManagedApi.SignalProcessing;
+namespace HackRFDotnet.ManagedApi.Streams;
 
 public struct IQ : IEquatable<IQ>, IFormattable {
     public static readonly IQ Zero = new IQ(0.0, 0.0);

@@ -1,26 +1,21 @@
 ﻿using System.Buffers;
 
-using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 using NAudio.Wave;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
     public WaveFormat? WaveFormat { get; protected set; }
-    public WaveSignalStream(IIQStream deviceStream, bool stero = true, bool keepOpen = true) : base(deviceStream, keepOpen) {
+    public WaveSignalStream(IIQStream deviceStream, bool stero = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
+        : base(deviceStream, processingPipeline, keepOpen) {
         var sampleRate = Bandwith.Hz;
         if (stero) {
             sampleRate /= 2;
         }
 
         WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat(sampleRate, stero ? 2 : 1);
-    }
-
-    protected void ReadSpan(Span<IQ> iqPairs) {
-        lock (_filteredBuffer) {
-            var readBytes = _filteredBuffer.Read(iqPairs);
-        }
     }
 
     public virtual int Read(float[] buffer, int offset, int count) {

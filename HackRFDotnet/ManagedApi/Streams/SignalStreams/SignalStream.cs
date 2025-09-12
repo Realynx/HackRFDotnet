@@ -1,26 +1,34 @@
 ﻿using System.Buffers;
 
-using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 using HackRFDotnet.ManagedApi.Types;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
-public class SignalStream {
+public class SignalStream : IDisposable {
     public RadioBand Center { get; protected set; } = RadioBand.FromMHz(94.7f);
     public RadioBand Bandwith { get; protected set; } = RadioBand.FromKHz(200);
 
     internal RingBuffer<IQ> _filteredBuffer;
     protected FilterProcessor? _filterProcessor;
+    protected SignalProcessingPipeline? _processingPipeline;
 
     protected readonly IIQStream _iQStream;
     protected readonly bool _keepOpen;
 
-    public SignalStream(IIQStream iQStream, bool keepOpen = true) {
+    public SignalStream(IIQStream iQStream, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true) {
         _iQStream = iQStream;
+        _processingPipeline = processingPipeline;
         _keepOpen = keepOpen;
 
-        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(50).TotalSeconds * _iQStream.SampleRate));
+        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(120).TotalSeconds * _iQStream.SampleRate));
         new Thread(BufferKeeping).Start();
+    }
+
+    internal void ReadSpan(Span<IQ> iqPairs) {
+        lock (_filteredBuffer) {
+            var readBytes = _filteredBuffer.Read(iqPairs);
+        }
     }
 
     private void BufferKeeping() {
@@ -34,11 +42,13 @@ public class SignalStream {
             var iqPairs = ArrayPool<IQ>.Shared.Rent(chunkSize);
             try {
                 var readBytes = _iQStream.ReadBuffer(iqPairs.AsSpan(0, chunkSize));
-                var downSampledIq = _filterProcessor.ApplyPipeline(iqPairs.AsSpan(0, chunkSize), out var updatedSampleRate);
-
+                var sampleCount = chunkSize;
+                if (_processingPipeline != null) {
+                    sampleCount = _processingPipeline.ApplyPipeline(iqPairs.AsSpan(0, chunkSize));
+                }
 
                 lock (_filteredBuffer) {
-                    _filteredBuffer.Write(iqPairs.AsSpan(0, downSampledIq));
+                    _filteredBuffer.Write(iqPairs.AsSpan(0, sampleCount));
                 }
             }
             finally {

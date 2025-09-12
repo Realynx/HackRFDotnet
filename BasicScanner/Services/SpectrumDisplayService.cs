@@ -1,6 +1,4 @@
-﻿
-using HackRFDotnet.ManagedApi.Services;
-using HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
+﻿using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 
 namespace BasicScanner.Services;
 public class SpectrumDisplayService {
@@ -8,8 +6,7 @@ public class SpectrumDisplayService {
 
     }
 
-    public Task StartAsync(WaveSignalStream signalStream, CancellationToken cancellationToken) {
-
+    public Task StartAsync(SignalStream signalStream, CancellationToken cancellationToken) {
 
         return Task.CompletedTask;
     }

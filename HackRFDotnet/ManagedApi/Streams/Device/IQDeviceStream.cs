@@ -1,8 +1,8 @@
 ﻿using System.Buffers;
 
-using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.Exceptions;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;

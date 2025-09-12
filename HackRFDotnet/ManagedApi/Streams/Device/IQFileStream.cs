@@ -1,9 +1,9 @@
 ﻿using System.Buffers;
 using System.Runtime.InteropServices;
 
-using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.Exceptions;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 namespace HackRFDotnet.ManagedApi.Streams.Device;
 public class IQFileStream : IIQStream, IDisposable {

@@ -1,4 +1,5 @@
-﻿using HackRFDotnet.ManagedApi.SignalProcessing;
+﻿using HackRFDotnet.ManagedApi.Streams;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 namespace HackRFDotnet.ManagedApi.Utilities;
 

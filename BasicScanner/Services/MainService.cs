@@ -1,8 +1,9 @@
 ﻿using HackRFDotnet.ManagedApi;
 using HackRFDotnet.ManagedApi.Extensions;
 using HackRFDotnet.ManagedApi.Services;
-using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.Device;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 using HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 
@@ -44,7 +45,7 @@ internal class MainService : IHostedService {
         //amPlayer.PlayStreamAsync(44100);
 
         //rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
-        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), RadioBand.FromKHz(200));
+        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f));
 
         //rfDevice.StartRecordingToFile("Recording.bin");
 
@@ -52,16 +53,19 @@ internal class MainService : IHostedService {
         //rfFileStream.Open(20_000_000);
 
         rfDevice.AttenuateAmplification();
-        using var deviceStream = new IQDeviceStream(rfDevice, 16_000_000);
+        using var deviceStream = new IQDeviceStream(rfDevice, 10_000_000);
         deviceStream.OpenRx();
 
-        using var fmSignalStream = new FmSignalStream(deviceStream, false);
-        using var signalStream = new WaveSignalStream(deviceStream);
+        var effectsPipeline = new SignalProcessingBuilder()
+            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(200), out var reducedSampleRate))
+            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(200)))
+            .BuildPipeline();
 
+        using var fmSignalStream = new FmSignalStream(deviceStream, processingPipeline: effectsPipeline, keepOpen: false);
         var fmPlayer = new AnaloguePlayer(fmSignalStream);
-
         fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
 
+        using var signalStream = new SignalStream(deviceStream);
         ControlChannel(rfDevice);
 
         return Task.CompletedTask;
