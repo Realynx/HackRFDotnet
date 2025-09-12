@@ -53,12 +53,15 @@ internal class MainService : IHostedService {
         //rfFileStream.Open(20_000_000);
 
         rfDevice.AttenuateAmplification();
-        using var deviceStream = new IQDeviceStream(rfDevice, 10_000_000);
+        using var deviceStream = new IQDeviceStream(rfDevice, 8_000_000);
         deviceStream.OpenRx();
 
         var effectsPipeline = new SignalProcessingBuilder()
             .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(200), out var reducedSampleRate))
+
+            .AddSignalEffect(new FftEffect(reducedSampleRate, true))
             .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(200)))
+            .AddSignalEffect(new FftEffect(reducedSampleRate, false))
             .BuildPipeline();
 
         using var fmSignalStream = new FmSignalStream(deviceStream, processingPipeline: effectsPipeline, keepOpen: false);

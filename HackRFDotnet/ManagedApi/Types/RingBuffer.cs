@@ -42,7 +42,6 @@ internal sealed class RingBuffer<T> {
 
             _start = 0;
             _end = Capacity;
-
             // Console.WriteLine($"[{DateTime.Now:HH:mm:ss-fff}] W Start: {_start}, End: {_end} [{buffer.Length}]");
             return;
         }

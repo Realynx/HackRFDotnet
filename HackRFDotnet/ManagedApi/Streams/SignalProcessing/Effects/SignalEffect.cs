@@ -2,5 +2,5 @@
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 public abstract class SignalEffect : ISignalEffect {
-    public abstract int AffectSignal(Span<IQ> signalTheta, int lendth);
+    public abstract int AffectSignal(Span<IQ> signalTheta, int length);
 }

@@ -3,19 +3,19 @@
 using HackRFDotnet.ManagedApi.Streams.Exceptions;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Threading;
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;
 
 namespace HackRFDotnet.ManagedApi.Streams.Device {
     public unsafe class IQDeviceStream : IDisposable, IIQStream {
-        private RingBuffer<InterleavedSample>? _interleavedBuffer = null;
-        private RingBuffer<IQ>? _iqBuffer = null;
-        private Thread _bufferKeeping;
-
         private readonly DigitalRadioDevice _rfDevice;
-        public double SampleRate { get; private set; }
 
+        private ThreadedConvertingBuffer<InterleavedSample>? _interleavedBuffer = null;
+        private RingBuffer<IQ>? _iqBuffer = null;
+
+        public double SampleRate { get; private set; }
         public RadioBand Frequency {
             get {
                 return _rfDevice.Frequency;
@@ -28,12 +28,9 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             }
         }
 
-        public IQDeviceStream(DigitalRadioDevice managedRfDevice, int sampleRate) {
-            _rfDevice = managedRfDevice;
+        public IQDeviceStream(DigitalRadioDevice rfDevice, int sampleRate) {
+            _rfDevice = rfDevice;
             SetSampleRate(sampleRate);
-
-            _bufferKeeping = new Thread(ConvertInterleavedSamples);
-            _bufferKeeping.Start();
         }
 
         public void OpenRx(double? sampleRate = null) {
@@ -52,8 +49,9 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         public void SetSampleRate(double sampleRate) {
             SampleRate = sampleRate;
 
-            _interleavedBuffer = new RingBuffer<InterleavedSample>((int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate));
-            _iqBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate));
+            var bufferSize = (int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate);
+            _interleavedBuffer = new ThreadedConvertingBuffer<InterleavedSample>(new RingBuffer<InterleavedSample>(bufferSize), ConvertInterleavedSamples);
+            _iqBuffer = new RingBuffer<IQ>(bufferSize);
 
             HackRfNativeLib.DeviceStreaming.SetSampleRate(_rfDevice.DevicePtr, sampleRate);
         }
@@ -76,6 +74,37 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             }
         }
 
+        private void ConvertInterleavedSamples(RingBuffer<InterleavedSample> buffer) {
+            while (true) {
+                if (buffer.IsEmpty) {
+                    continue;
+                }
+
+                var sampleCount = buffer.Count;
+                var interleavedBytes = ArrayPool<InterleavedSample>.Shared.Rent(sampleCount);
+                buffer.Read(interleavedBytes.AsSpan(0, sampleCount));
+
+                var iqSamples = ArrayPool<IQ>.Shared.Rent(sampleCount);
+
+                try {
+                    for (var x = 0; x < sampleCount; x++) {
+                        iqSamples[x] = new IQ(interleavedBytes[x]);
+                    }
+
+                    if (_iqBuffer is null || iqSamples.Length == 0) {
+                        return;
+                    }
+
+                    lock (_iqBuffer) {
+                        _iqBuffer?.Write(iqSamples.AsSpan(0, sampleCount));
+                    }
+                }
+                finally {
+                    ArrayPool<InterleavedSample>.Shared.Return(interleavedBytes);
+                    ArrayPool<IQ>.Shared.Return(iqSamples);
+                }
+            }
+        }
 
         private DateTime _lastCall = DateTime.MinValue;
         internal int BufferTransferChunk(HackrfTransfer* hackrfTransfer) {
@@ -101,42 +130,8 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             lock (_interleavedBuffer) {
                 _interleavedBuffer?.Write(interleavedTransferFrame);
             }
-
             return 0;
         }
-
-        private void ConvertInterleavedSamples() {
-            while (true) {
-                if (_interleavedBuffer.IsEmpty) {
-                    continue;
-                }
-
-                var sampleCount = _interleavedBuffer.Count;
-                var interleavedBytes = ArrayPool<InterleavedSample>.Shared.Rent(sampleCount);
-                _interleavedBuffer.Read(interleavedBytes.AsSpan(0, sampleCount));
-
-                var iqSamples = ArrayPool<IQ>.Shared.Rent(sampleCount);
-
-                try {
-                    for (var x = 0; x < sampleCount; x++) {
-                        iqSamples[x] = new IQ(interleavedBytes[x]);
-                    }
-
-                    if (_iqBuffer is null || iqSamples.Length == 0) {
-                        return;
-                    }
-
-                    lock (_iqBuffer) {
-                        _iqBuffer?.Write(iqSamples.AsSpan(0, sampleCount));
-                    }
-                }
-                finally {
-                    ArrayPool<InterleavedSample>.Shared.Return(interleavedBytes);
-                    ArrayPool<IQ>.Shared.Return(iqSamples);
-                }
-            }
-        }
-
 
         public void Dispose() {
         }

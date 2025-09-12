@@ -1,7 +1,6 @@
 ﻿using System.Buffers;
 
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
-using HackRFDotnet.ManagedApi.Utilities;
 
 using MathNet.Filtering.FIR;
 
