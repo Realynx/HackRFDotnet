@@ -80,7 +80,7 @@ internal sealed class RingBuffer<T> {
             buffer[freeUntilWrap..].CopyTo(_array);
 
             // Advance pointers
-            if (_end + buffer.Length > _start) {
+            if (buffer.Length - (Capacity - _end) > _start) {
                 _end += buffer.Length;
                 _end %= Capacity;
                 _start = _end - 1;
