@@ -37,6 +37,7 @@ internal class ThreadedConvertingBuffer<T> : IDisposable {
     private void MaintainBuffer() {
         while ((!_cancelMaintainer?.IsCancellationRequested ?? false) && _bufferMaintainer is not null) {
             _bufferMaintainer.Invoke(_ringBuffer);
+            Thread.Sleep(1);
         }
     }
 }

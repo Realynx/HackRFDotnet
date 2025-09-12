@@ -21,7 +21,7 @@ public class SignalStream : IDisposable {
         _processingPipeline = processingPipeline;
         _keepOpen = keepOpen;
 
-        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(120).TotalSeconds * _iQStream.SampleRate));
+        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(150).TotalSeconds * _iQStream.SampleRate));
         new Thread(BufferKeeping).Start();
     }
 
@@ -36,6 +36,7 @@ public class SignalStream : IDisposable {
 
         while (true) {
             if (_filterProcessor is null || _iQStream.BufferLength < chunkSize) {
+                Thread.Sleep(1);
                 continue;
             }
 

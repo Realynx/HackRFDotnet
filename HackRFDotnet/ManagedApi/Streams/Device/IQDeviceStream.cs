@@ -77,6 +77,7 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         private void ConvertInterleavedSamples(RingBuffer<InterleavedSample> buffer) {
             while (true) {
                 if (buffer.IsEmpty) {
+                    Thread.Sleep(1);
                     continue;
                 }
 
