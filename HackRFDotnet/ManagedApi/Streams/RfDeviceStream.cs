@@ -1,10 +1,11 @@
 ﻿using System.Buffers;
 
-using NAudio.Utils;
 
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Types;
 using HackRFDotnet.NativeApi.Structs;
+
+using ILGPU.IR.Values;
 
 namespace HackRFDotnet.ManagedApi.Streams {
     public unsafe class RfDeviceStream : IDisposable, IRfDeviceStream {
@@ -23,6 +24,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
         public double SampleRate { get; private set; }
 
         private RingBuffer<IQ>? _dataBuffer = null;
+        //CircularBuffer<IQ> _dataBuffer = null;
 
 
         private readonly RfDevice _managedRfDevice;
@@ -43,7 +45,8 @@ namespace HackRFDotnet.ManagedApi.Streams {
         public void SetSampleRate(double sampleRate) {
             SampleRate = sampleRate;
 
-            _dataBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate));
+            _dataBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(500).TotalSeconds * SampleRate));
+            //            _dataBuffer = new CircularBuffer<IQ>((int)(TimeSpan.FromMilliseconds(500).TotalSeconds * SampleRate));
             _managedRfDevice.SetSampleRate(SampleRate);
         }
 
@@ -52,7 +55,9 @@ namespace HackRFDotnet.ManagedApi.Streams {
         }
 
         public int ReadBuffer(Span<IQ> iqBuffer) {
-            return _dataBuffer?.Read(iqBuffer) ?? throw new Exception("Empty Buffer");
+            lock (_dataBuffer) {
+                return _dataBuffer?.Read(iqBuffer) ?? throw new Exception("Empty Buffer");
+            }
         }
 
         internal void BufferTransferChunk(HackrfTransfer hackrfTransfer) {
@@ -70,7 +75,7 @@ namespace HackRFDotnet.ManagedApi.Streams {
                     return;
                 }
 
-                lock (this) {
+                lock (_dataBuffer) {
                     _dataBuffer?.Write(iqSamples.AsSpan(0, interleavedTransferFrame.Length));
                 }
             }

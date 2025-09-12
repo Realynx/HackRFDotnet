@@ -48,6 +48,7 @@ internal sealed class RingBuffer<T> {
         if (buffer.Length <= freeUntilWrap) {
             buffer.CopyTo(_array.AsSpan(_end));
             _end += buffer.Length;
+            _end %= Capacity;
             return;
         }
 
@@ -60,7 +61,6 @@ internal sealed class RingBuffer<T> {
             _end += buffer.Length;
             _end %= Capacity;
 
-            Console.WriteLine("Overflow");
             _start = _end;
         }
         else {
@@ -68,7 +68,6 @@ internal sealed class RingBuffer<T> {
             _end %= Capacity;
         }
 
-        Console.WriteLine($"W: Start: {_start}, End: {_end}");
     }
 
 
@@ -155,7 +154,6 @@ internal sealed class RingBuffer<T> {
             _start += read;
         }
 
-        Console.WriteLine($"R: Start: {_start}, End: {_end}");
         return read;
     }
 }
