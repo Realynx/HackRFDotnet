@@ -5,27 +5,29 @@ using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 
 namespace HackRFDotnet.ManagedApi.AudioPlayers {
-    public class AnaloguePlayer {
+    public class AnaloguePlayer : IDisposable {
         private readonly SignalStream _sampleDeModulator;
-        private IWaveProvider _sampleToWaveProvider16;
-
         private WaveOutEvent _waveOut;
 
         public AnaloguePlayer(SignalStream signalStream) {
             _sampleDeModulator = signalStream;
         }
 
+        public void Dispose() {
+            _waveOut.Dispose();
+        }
+
         public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwith, int audioRate) {
             _waveOut = new WaveOutEvent {
-                Volume = 0.5f,
+                Volume = 0.02f,
             };
 
             _sampleDeModulator.SetBand(centerOffset, bandwith);
 
             var resampler = new WdlResamplingSampleProvider(_sampleDeModulator, audioRate);
-            _sampleToWaveProvider16 = resampler.ToWaveProvider16();
+            var waveProvider = resampler.ToWaveProvider();
 
-            _waveOut.Init(_sampleToWaveProvider16);
+            _waveOut.Init(waveProvider);
             _waveOut.Play();
         }
     }

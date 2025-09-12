@@ -1,6 +1,5 @@
 ﻿using System.Buffers;
 
-
 using HackRFDotnet.ManagedApi.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Types;
@@ -16,13 +15,19 @@ public class SignalStream : ISampleProvider, IDisposable {
 
     protected RadioBand _center = RadioBand.FromMHz(94.7f);
     protected RadioBand _bandwith = RadioBand.FromKHz(200);
-    private RingBuffer<float> _noiseHistory = new(100);
+
+    private RingBuffer<IQ> _filteredBuffer;
+    //private RingBuffer<float> _noiseHistory = new(100);
 
     protected FilterProcessor? _filterProcessor;
 
     public SignalStream(IRfDeviceStream deviceStream, bool keepOpen = true) {
         _keepOpen = keepOpen;
         _rfDeviceStream = deviceStream;
+        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(50).TotalSeconds
+            * _rfDeviceStream.SampleRate));
+
+        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat(_bandwith.Hz, 1);
     }
 
     public void SetBand(RadioBand center, RadioBand bandwidth) {
@@ -30,32 +35,59 @@ public class SignalStream : ISampleProvider, IDisposable {
         _bandwith = bandwidth;
 
         _filterProcessor = new FilterProcessor(_rfDeviceStream.SampleRate, center, bandwidth);
+
+        new Thread(BufferKeeping).Start();
     }
 
-    public float GetNoiseFloorDb() {
-        if (_noiseHistory.Count == 0) {
-            return 0f;
+    private void BufferKeeping() {
+        var bufferChunk = 4096;
+        var decimationFactor = (int)(_rfDeviceStream.SampleRate / _bandwith.Hz);
+        var decimatedSize = bufferChunk * decimationFactor;
+
+        while (true) {
+            if (_rfDeviceStream.BufferLength < decimatedSize) {
+                continue;
+            }
+
+            var iqPairs = ArrayPool<IQ>.Shared.Rent(decimatedSize);
+            try {
+                var readBytes = _rfDeviceStream.ReadBuffer(iqPairs.AsSpan(0, decimatedSize));
+
+                var downSampledIq = _filterProcessor.ApplyPipeline(iqPairs.AsSpan(0, decimatedSize), out var updatedSampleRate);
+
+                lock (_filteredBuffer) {
+                    _filteredBuffer.Write(iqPairs.AsSpan(0, downSampledIq));
+                }
+            }
+            finally {
+                ArrayPool<IQ>.Shared.Return(iqPairs);
+            }
         }
-
-        // Sort values
-        var noiseFloorBuffer = new float[_noiseHistory.Count];
-        _noiseHistory.Peek(noiseFloorBuffer);
-
-        var sorted = noiseFloorBuffer.OrderBy(x => x).ToList();
-
-        var trimCount = (int)(sorted.Count * .15f);
-
-        // Remove lowest and highest values
-        var trimmed = sorted.Skip(trimCount).Take(sorted.Count - (2 * trimCount));
-
-        return trimmed.Average();
     }
 
-    protected int ReadSpan(Span<IQ> iqPairs) {
-        var readBytes = _rfDeviceStream.ReadBuffer(iqPairs);
-        _filterProcessor.ApplyFilter(iqPairs);
+    //public float GetNoiseFloorDb() {
+    //    if (_noiseHistory.Count == 0) {
+    //        return 0f;
+    //    }
 
-        return readBytes;
+    //    // Sort values
+    //    var noiseFloorBuffer = new float[_noiseHistory.Count];
+    //    _noiseHistory.Peek(noiseFloorBuffer);
+
+    //    var sorted = noiseFloorBuffer.OrderBy(x => x).ToList();
+
+    //    var trimCount = (int)(sorted.Count * .15f);
+
+    //    // Remove lowest and highest values
+    //    var trimmed = sorted.Skip(trimCount).Take(sorted.Count - (2 * trimCount));
+
+    //    return trimmed.Average();
+    //}
+
+    protected void ReadSpan(Span<IQ> iqPairs) {
+        lock (_filteredBuffer) {
+            var readBytes = _filteredBuffer.Read(iqPairs);
+        }
     }
 
     public virtual int Read(float[] buffer, int offset, int count) {

@@ -27,7 +27,7 @@ namespace HackRFDotnet.ManagedApi {
             _devicePtr = devicePtr;
 
             RfDeviceStream = new RfDeviceStream(this);
-            RfDeviceStream.Open(3_000_000);
+            RfDeviceStream.Open(20_000_000);
         }
 
         public void StartRecordingToFile(string fileName) {
@@ -93,11 +93,7 @@ namespace HackRFDotnet.ManagedApi {
 
             RfDeviceStream.BufferTransferChunk(*transferStruct);
 
-            if (_recordingFile is not null) {
-                var chunkBuffer = new Span<byte>(transferStruct->buffer, transferStruct->buffer_length);
-                _recordingFile.WriteBuffer(chunkBuffer);
-            }
-
+            // HackRF Expects 0 = success.
             return 0;
         }
     }

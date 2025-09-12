@@ -61,9 +61,6 @@ public class RfFileStream : IRfDeviceStream, IDisposable {
         var fileBytes = ArrayPool<byte>.Shared.Rent(iqFrame.Length);
         _stream?.Read(fileBytes, 0, iqFrame.Length);
 
-        var sampleRateDelay = TimeSpan.FromSeconds(iqFrame.Length / SampleRate);
-        Thread.Sleep(sampleRateDelay);
-
         try {
             var interleavedTransferFrame = MemoryMarshal.Cast<byte, InterleavedSample>(fileBytes);
             var iqSamples = ArrayPool<IQ>.Shared.Rent(interleavedTransferFrame.Length);

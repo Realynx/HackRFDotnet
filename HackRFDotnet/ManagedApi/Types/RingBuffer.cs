@@ -5,6 +5,10 @@ internal sealed class RingBuffer<T> {
 
     public int Count {
         get {
+            if (_start == _end) {
+                return 0;
+            }
+
             if (_start < _end) {
                 return _end - _start;
             }
@@ -38,6 +42,8 @@ internal sealed class RingBuffer<T> {
 
             _start = 0;
             _end = Capacity;
+
+            // Console.WriteLine($"[{DateTime.Now:HH:mm:ss-fff}] W Start: {_start}, End: {_end} [{buffer.Length}]");
             return;
         }
 
@@ -72,6 +78,8 @@ internal sealed class RingBuffer<T> {
                 buffer.CopyTo(_array.AsSpan(_end));
                 _end += buffer.Length;
                 _end %= Capacity;
+
+                // Console.WriteLine($"[{DateTime.Now:HH:mm:ss-fff}] W Start: {_start}, End: {_end} [{buffer.Length}]");
                 return;
             }
 
@@ -91,7 +99,7 @@ internal sealed class RingBuffer<T> {
             }
         }
 
-        Console.WriteLine($"[{DateTime.Now:HH:mm:ss-fff}] W Start: {_start}, End: {_end}");
+        // Console.WriteLine($"[{DateTime.Now:HH:mm:ss-fff}] W Start: {_start}, End: {_end} [{buffer.Length}]");
     }
 
 
@@ -183,7 +191,7 @@ internal sealed class RingBuffer<T> {
         }
 
 
-        Console.WriteLine($"[{DateTime.Now:HH:mm:ss-fff}] R Start: {_start}, End: {_end}");
+        // Console.WriteLine($"[{DateTime.Now:HH:mm:ss-fff}] R Start: {_start}, End: {_end} [{read}]");
         return read;
     }
 }

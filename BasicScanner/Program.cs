@@ -20,14 +20,12 @@ namespace BasicScanner {
                 return;
             }
 
-            rfDevice.AttenuateAmplification();
-
             //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
             //rfDevice.SetFrequency(RadioBand.FromMHz(125.150f), RadioBand.FromKHz(8));
             //rfDevice.SetFrequency(RadioBand.FromMHz(162.4f), RadioBand.FromKHz(20));
             //rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
 
-            // var scanningService = new ChannelScanningService(iqStream, rfDevice);
+            //var scanningService = new ChannelScanningService(iqStream, rfDevice);
 
             //scanningService.StartScanning(RadioBand.FromMHz(118.4f), RadioBand.FromMHz(118.575f),
             //    RadioBand.FromMHz(119.250f), RadioBand.FromMHz(119.450f), RadioBand.FromMHz(121.800f),
@@ -36,13 +34,14 @@ namespace BasicScanner {
             //var amPlayer = new AMPlayer(iqStream);
             //amPlayer.PlayStreamAsync(44100);
 
-            rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(500));
+            rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
 
-            // rfDevice.StartRecordingToFile("Recording.bin");
+            //rfDevice.StartRecordingToFile("Recording.bin");
 
             //var rfFileStream = new RfFileStream("Recording.bin");
-            //rfFileStream.Open(5_000_000);
+            //rfFileStream.Open(20_000_000);
 
+            rfDevice.AttenuateAmplification();
             var fmPlayer = new AnaloguePlayer(new FmSignalStream(rfDevice.RfDeviceStream));
             fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
 
