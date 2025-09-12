@@ -179,6 +179,7 @@ internal sealed class RingBuffer<T> {
         }
         else {
             _start += read;
+            _start %= Capacity;
         }
 
 
