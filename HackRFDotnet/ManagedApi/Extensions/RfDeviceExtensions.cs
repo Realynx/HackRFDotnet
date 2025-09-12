@@ -5,6 +5,6 @@ public static class RfDeviceExtensions {
     public static void AttenuateAmplification(this RfDevice rfDevice) {
         // TODO: Get the noise floor near a pre confogured db.
 
-        rfDevice.SetAmplifications(32, 24, false);
+        rfDevice.SetAmplifications(24, 15, true);
     }
 }

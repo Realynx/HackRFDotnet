@@ -34,7 +34,8 @@ namespace BasicScanner {
             //var amPlayer = new AMPlayer(iqStream);
             //amPlayer.PlayStreamAsync(44100);
 
-            rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
+            //rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
+            rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), RadioBand.FromKHz(200));
 
             //rfDevice.StartRecordingToFile("Recording.bin");
 

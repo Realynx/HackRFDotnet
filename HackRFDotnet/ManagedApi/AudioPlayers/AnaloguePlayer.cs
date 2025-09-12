@@ -19,12 +19,14 @@ namespace HackRFDotnet.ManagedApi.AudioPlayers {
 
         public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwith, int audioRate) {
             _waveOut = new WaveOutEvent {
-                Volume = 0.02f,
+                Volume = 0.005f,
             };
 
             _sampleDeModulator.SetBand(centerOffset, bandwith);
 
             var resampler = new WdlResamplingSampleProvider(_sampleDeModulator, audioRate);
+            resampler.ToStereo();
+
             var waveProvider = resampler.ToWaveProvider();
 
             _waveOut.Init(waveProvider);

@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.NativeApi.Enums {
+﻿namespace HackRFDotnet.NativeApi.Enums.Peripherals {
     public enum OperacakePorts {
         OPERACAKE_PA1 = 0,
         OPERACAKE_PA2 = 1,

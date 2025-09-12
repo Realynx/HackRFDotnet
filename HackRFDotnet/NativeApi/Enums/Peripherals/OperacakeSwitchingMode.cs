@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.NativeApi.Enums {
+﻿namespace HackRFDotnet.NativeApi.Enums.Peripherals {
     public enum OperacakeSwitchingMode {
         /**
          * Port connections are set manually using @ref hackrf_set_operacake_ports. Both ports can be specified, but not on the same side.

@@ -1,7 +1,7 @@
 ﻿using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Types;
-using HackRFDotnet.NativeApi;
-using HackRFDotnet.NativeApi.Enums;
+using HackRFDotnet.NativeApi.Enums.Peripherals;
+using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;
 
 namespace HackRFDotnet.ManagedApi {
@@ -40,13 +40,13 @@ namespace HackRFDotnet.ManagedApi {
         }
 
         public void Dispose() {
-            HackRfNativeFunctions.hackrf_close(_devicePtr);
+            HackRfNativeLib.Devices.CloseDevice(_devicePtr);
         }
 
         public void SetAmplifications(uint lna, uint vga, bool internalAmp) {
-            HackRfNativeFunctions.hackrf_set_lna_gain(_devicePtr, lna);
-            HackRfNativeFunctions.hackrf_set_vga_gain(_devicePtr, vga);
-            HackRfNativeFunctions.hackrf_set_amp_enable(_devicePtr, (byte)(internalAmp ? 1 : 0));
+            HackRfNativeLib.DeviceStreaming.SetLnaGain(_devicePtr, lna);
+            HackRfNativeLib.DeviceStreaming.SetVgaGain(_devicePtr, vga);
+            HackRfNativeLib.DeviceStreaming.EnableAmp(_devicePtr, (byte)(internalAmp ? 1 : 0));
         }
 
         public bool SetFrequency(RadioBand radioFrequency) {
@@ -60,20 +60,20 @@ namespace HackRFDotnet.ManagedApi {
             var tuningOffset = radioFrequency;
 
 
-            var baseBandFilter = HackRfNativeFunctions.hackrf_compute_baseband_filter_bw((uint)tuningOffset.Hz);
-            var setFilter = HackRfNativeFunctions.hackrf_set_baseband_filter_bandwidth(_devicePtr, baseBandFilter) != 0;
+            var baseBandFilter = HackRfNativeLib.DeviceStreaming.ComputeBasebandFilterBandWith((uint)tuningOffset.Hz);
+            var setFilter = HackRfNativeLib.DeviceStreaming.SetBasebandFilterBandith(_devicePtr, baseBandFilter) != 0;
 
-            return HackRfNativeFunctions.hackrf_set_freq(_devicePtr, (uint)tuningOffset.Hz) == 0 && setFilter;
+            return HackRfNativeLib.DeviceStreaming.SetFrequency(_devicePtr, (uint)tuningOffset.Hz) == 0 && setFilter;
         }
 
         public bool SetSampleRate(double sampleRate) {
-            return HackRfNativeFunctions.hackrf_set_sample_rate(_devicePtr, sampleRate) != 0;
+            return HackRfNativeLib.DeviceStreaming.SetSampleRate(_devicePtr, sampleRate) != 0;
         }
 
         public bool StartRx() {
-            HackRfNativeFunctions.hackrf_set_leds(_devicePtr, (byte)LedState.RxLight);
+            HackRfNativeLib.Devices.SetDeviceLeds(_devicePtr, (byte)LedState.RxLight);
 
-            var result = HackRfNativeFunctions.hackrf_start_rx(
+            var result = HackRfNativeLib.DeviceStreaming.StartRx(
                 _devicePtr,
                 _rxCallback,
                 null
@@ -83,7 +83,7 @@ namespace HackRFDotnet.ManagedApi {
         }
 
         public bool StopRx() {
-            return HackRfNativeFunctions.hackrf_stop_rx(_devicePtr) != 0;
+            return HackRfNativeLib.DeviceStreaming.StopRx(_devicePtr) != 0;
         }
 
         private int HandleTransferChunk(HackrfTransfer* transferStruct) {

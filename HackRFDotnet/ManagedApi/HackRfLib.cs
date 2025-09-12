@@ -1,25 +1,25 @@
-﻿using HackRFDotnet.NativeApi;
+﻿using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;
 
 namespace HackRFDotnet.ManagedApi {
     public unsafe static class HackRfLib {
         static HackRfLib() {
-            HackRfNativeFunctions.hackrf_init();
+            HackRfNativeLib.Init();
         }
 
         public static HackRFDeviceList FindDevices() {
-            var device = HackRfNativeFunctions.hackrf_device_list();
+            var deviceList = HackRfNativeLib.Devices.QueryDeviceList();
 
-            if (device is null) {
+            if (deviceList is null) {
                 Console.WriteLine("No Devices!");
             }
 
-            return *device;
+            return *deviceList;
         }
 
         public static RfDevice? ConnectToFirstDevice() {
             HackRFDevice* localDevice = null;
-            HackRfNativeFunctions.hackrf_open(&localDevice);
+            HackRfNativeLib.Devices.OpenDevice(&localDevice);
 
             if (localDevice is null) {
                 return null;
@@ -27,6 +27,5 @@ namespace HackRFDotnet.ManagedApi {
 
             return new RfDevice(localDevice);
         }
-
     }
 }

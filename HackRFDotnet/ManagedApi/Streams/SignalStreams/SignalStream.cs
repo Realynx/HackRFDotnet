@@ -27,7 +27,7 @@ public class SignalStream : ISampleProvider, IDisposable {
         _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(50).TotalSeconds
             * _rfDeviceStream.SampleRate));
 
-        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat(_bandwith.Hz, 1);
+        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat(_bandwith.Hz / 2, 2);
     }
 
     public void SetBand(RadioBand center, RadioBand bandwidth) {
