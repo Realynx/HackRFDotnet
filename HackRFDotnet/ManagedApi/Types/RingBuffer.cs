@@ -68,7 +68,7 @@ internal sealed class RingBuffer<T> {
             _end %= Capacity;
         }
 
-        Console.WriteLine($"Start: {_start}, End: {_end}");
+        Console.WriteLine($"W: Start: {_start}, End: {_end}");
     }
 
 
@@ -145,14 +145,16 @@ internal sealed class RingBuffer<T> {
 
         // Advance pointers
         if (_start + read >= _end) {
-            _start = 0;
-            _end = 0;
+            // _start = 0;
+            // _end = 0;
+            _start += read;
+            _end = _start;
         }
         else {
             _start += read;
         }
 
-        Console.WriteLine($"Start: {_start}, End: {_end}");
+        Console.WriteLine($"R: Start: {_start}, End: {_end}");
         return read;
     }
 }
