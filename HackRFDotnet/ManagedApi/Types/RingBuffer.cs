@@ -98,7 +98,7 @@ internal sealed class RingBuffer<T> {
             }
 
             _array.AsSpan(_start, Capacity - _start).CopyTo(buffer);
-            _array.AsSpan(0, _end).CopyTo(buffer[(Capacity - _start)..]);
+            _array.AsSpan(0, Math.Min(_end, buffer.Length - (Capacity - _start))).CopyTo(buffer[(Capacity - _start)..]);
             return Count;
         }
     }
