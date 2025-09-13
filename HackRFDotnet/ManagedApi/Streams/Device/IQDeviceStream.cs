@@ -1,6 +1,4 @@
-﻿using System.Buffers;
-
-using HackRFDotnet.ManagedApi.Streams.Buffers;
+﻿using HackRFDotnet.ManagedApi.Streams.Buffers;
 using HackRFDotnet.ManagedApi.Streams.Exceptions;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
@@ -10,10 +8,13 @@ using HackRFDotnet.NativeApi.Structs;
 namespace HackRFDotnet.ManagedApi.Streams.Device {
     public unsafe class IQDeviceStream : IDisposable, IIQStream {
         private readonly DigitalRadioDevice _rfDevice;
+        private readonly int _transferBufferSize = 0;
 
         private ThreadedRingBuffer<IQ>? _iqBuffer = null;
+        private readonly IQ[] _convertBuffer = [];
 
         public double SampleRate { get; private set; }
+
         public RadioBand Frequency {
             get {
                 return _rfDevice.Frequency;
@@ -28,6 +29,9 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
 
         public IQDeviceStream(DigitalRadioDevice rfDevice) {
             _rfDevice = rfDevice;
+
+            _transferBufferSize = (int)HackRfNativeLib.DeviceStreaming.GetTransferBufferSize(rfDevice.DevicePtr);
+            _convertBuffer = new IQ[_transferBufferSize];
         }
 
         public void OpenRx(double? sampleRate = null) {
@@ -46,7 +50,7 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         public void SetSampleRate(double sampleRate) {
             SampleRate = sampleRate;
 
-            var bufferSize = (int)(TimeSpan.FromMilliseconds(80).TotalSeconds * SampleRate);
+            var bufferSize = (int)(TimeSpan.FromMilliseconds(75).TotalSeconds * SampleRate);
             _iqBuffer = new ThreadedRingBuffer<IQ>(bufferSize);
 
             HackRfNativeLib.DeviceStreaming.SetSampleRate(_rfDevice.DevicePtr, sampleRate);
@@ -62,12 +66,11 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             }
 
             while (iqBuffer.Length > _iqBuffer.Length) {
+                Thread.Sleep(1);
             }
 
-            lock (_iqBuffer) {
-                var readSamples = _iqBuffer?.ReadSpan(iqBuffer) ?? throw new Exception("Empty Buffer");
-                return readSamples;
-            }
+            var readSamples = _iqBuffer?.ReadSpan(iqBuffer) ?? throw new Exception("Empty Buffer");
+            return readSamples;
         }
 
         private int BufferTransferChunk(HackrfTransfer* hackrfTransfer) {
@@ -84,23 +87,17 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             // 20MSPS =[6.5ms frame]  131072 / 6ms
 
             var interleavedSampels = new Span<InterleavedSample>(hackrfTransfer->buffer, hackrfTransfer->valid_length / 2);
-            var iqSamples = ArrayPool<IQ>.Shared.Rent(interleavedSampels.Length);
-            try {
-                for (var x = 0; x < interleavedSampels.Length; x++) {
-                    var byteSample = interleavedSampels[x];
-                    iqSamples[x] = new IQ(byteSample.I, byteSample.Q);
-                }
-
-                _iqBuffer?.WriteSpan(iqSamples, interleavedSampels.Length);
-            }
-            finally {
-                ArrayPool<IQ>.Shared.Return(iqSamples);
+            for (var x = 0; x < interleavedSampels.Length; x++) {
+                var byteSample = interleavedSampels[x];
+                _convertBuffer[x] = new IQ(byteSample.I, byteSample.Q);
             }
 
+            _iqBuffer?.WriteSpan(_convertBuffer, interleavedSampels.Length);
             return 0;
         }
 
         public void Dispose() {
+            Close();
         }
     }
 }

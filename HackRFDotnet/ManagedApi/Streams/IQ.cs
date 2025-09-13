@@ -7,8 +7,6 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
-using HackRFDotnet.ManagedApi.Streams.Device;
-
 namespace HackRFDotnet.ManagedApi.Streams;
 
 public struct IQ : IEquatable<IQ>, IFormattable {

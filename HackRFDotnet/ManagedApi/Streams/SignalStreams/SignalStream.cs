@@ -1,6 +1,4 @@
-﻿using System.Buffers;
-
-using HackRFDotnet.ManagedApi.Streams.Buffers;
+﻿using HackRFDotnet.ManagedApi.Streams.Buffers;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
@@ -40,26 +38,16 @@ public class SignalStream : IDisposable {
     private void BufferKeeping() {
         var chunkSize = CalculateFFTChunkSize();
 
+        var iqPairs = new IQ[chunkSize];
         while (true) {
-            if (_iQStream.BufferLength < chunkSize) {
-                Thread.Sleep(1);
-                continue;
+            _iQStream.ReadBuffer(iqPairs);
+            var sampleCount = chunkSize;
+            if (_processingPipeline != null) {
+                sampleCount = _processingPipeline.ApplyPipeline(iqPairs);
             }
 
-            var iqPairs = ArrayPool<IQ>.Shared.Rent(chunkSize);
-            try {
-                var readBytes = _iQStream.ReadBuffer(iqPairs.AsSpan(0, chunkSize));
-                var sampleCount = chunkSize;
-                if (_processingPipeline != null) {
-                    sampleCount = _processingPipeline.ApplyPipeline(iqPairs.AsSpan(0, chunkSize));
-                }
-
-                lock (_filteredBuffer) {
-                    _filteredBuffer.Write(iqPairs.AsSpan(0, sampleCount));
-                }
-            }
-            finally {
-                ArrayPool<IQ>.Shared.Return(iqPairs);
+            lock (_filteredBuffer) {
+                _filteredBuffer.Write(iqPairs.AsSpan(0, sampleCount));
             }
         }
     }
@@ -73,7 +61,7 @@ public class SignalStream : IDisposable {
         We decrease the time domain samples to reduce CPU time when we filter it for the audio playback
         */
 
-        var bufferChunk = 4096;
+        var bufferChunk = 1024;
 
         var decimationFactor = (int)(_iQStream.SampleRate / Bandwith.Hz);
         var decimatedSize = bufferChunk * decimationFactor;

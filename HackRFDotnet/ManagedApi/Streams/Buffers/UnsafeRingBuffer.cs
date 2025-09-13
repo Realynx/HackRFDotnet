@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 namespace HackRFDotnet.ManagedApi.Streams.Buffers;
 /// <summary>
@@ -22,7 +23,7 @@ internal class UnsafeRingBuffer<T> {
     /// <param name="bufferData"></param>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Write(ReadOnlySpan<T> bufferData, int offset, int count) {
-        if (count == 0) {
+        if (count == 0 || count > Length) {
             return;
         }
 
