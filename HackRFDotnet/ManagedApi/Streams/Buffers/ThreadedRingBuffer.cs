@@ -1,6 +1,16 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Threading;
 
 namespace HackRFDotnet.ManagedApi.Streams.Buffers;
+internal struct ThreadPointer {
+    public int readStart;
+    public bool empty = true;
+    public bool full = false;
+
+    public ThreadPointer() {
+    }
+}
+
 /// <summary>
 /// <see cref="ThreadedRingBuffer"/> allows for multi threadded access to a single ring buffer. Writing is not thread synced.
 /// </summary>
@@ -9,11 +19,30 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
     private int? _writerId = null;
     private int _writerStart = 0;
 
-    private readonly Dictionary<int, int> _threadIdPointers = [];
+    private readonly Dictionary<int, ThreadPointer> _threadIdPointers = [];
     private readonly bool _multiWrite;
 
     public ThreadedRingBuffer(int capacity, bool multiWrite = false) : base(capacity) {
         _multiWrite = multiWrite;
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public int BytesAvailable() {
+        var threadId = Environment.CurrentManagedThreadId;
+        if (!_threadIdPointers.TryGetValue(threadId, out var state)) {
+            _threadIdPointers.Add(threadId, state);
+        }
+
+        if (state.full) {
+            return Length;
+        }
+
+        if (state.empty) {
+            return 0;
+        }
+
+        var difference = _writerStart - state.readStart;
+        return difference < 0 ? Length + difference : difference;
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -24,22 +53,23 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public int ReadSpan(Span<T> emptyMemory, int count) {
         var threadId = Environment.CurrentManagedThreadId;
-        _threadIdPointers.TryGetValue(threadId, out var start);
+        _threadIdPointers.TryGetValue(threadId, out var state);
 
-        var readBytes = ReadSpan(emptyMemory, start, count);
-        _threadIdPointers[threadId] = (count + start) % Length;
+        var readBytes = ReadSpan(emptyMemory, state.readStart, count);
+        var newReadPoint = (state.readStart + readBytes) % Length;
 
-        return readBytes;
-    }
+        var looped = (state.readStart + readBytes) >= Length;
+        if ((looped && _writerStart > state.readStart) || (newReadPoint > _writerStart && state.readStart < _writerStart)) {
+            state.readStart = _writerStart;
+            state.empty = true;
 
-    public int BytesAvailable() {
-        var threadId = Environment.CurrentManagedThreadId;
-        if (!_threadIdPointers.TryGetValue(threadId, out var start)) {
-            _threadIdPointers.Add(threadId, 0);
+            _threadIdPointers[threadId] = state;
+            return readBytes;
         }
 
-        var difference = _writerStart - start;
-        return difference > 0 ? difference : difference * -1;
+        state.readStart = newReadPoint;
+        _threadIdPointers[threadId] = state;
+        return readBytes;
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -59,6 +89,25 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void WriteSpan(Span<T> emptyMemory, int count) {
         Write(emptyMemory, _writerStart, count);
-        _writerStart = (_writerStart + count) % Length;
+
+        var newWritePoint = (_writerStart + count) % Length;
+        var looped = (_writerStart + count) >= Length;
+
+        foreach (var thread in _threadIdPointers) {
+            var existingValue = thread.Value;
+            if ((looped && existingValue.readStart > _writerStart) ||
+                (newWritePoint > existingValue.readStart && _writerStart < existingValue.readStart)) {
+                existingValue.readStart = newWritePoint;
+                existingValue.full = true;
+            }
+            else {
+                existingValue.full = false;
+            }
+
+            existingValue.empty = false;
+            _threadIdPointers[thread.Key] = existingValue;
+        }
+
+        _writerStart = newWritePoint;
     }
 }

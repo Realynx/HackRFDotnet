@@ -38,9 +38,9 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             if (sampleRate is null) {
                 sampleRate = SampleRate;
             }
-            _rfDevice.StartRx(BufferTransferChunk);
 
             SetSampleRate(sampleRate ?? throw new ZeroSampleRateException("Cannot have a 0 sample rate"));
+            _rfDevice.StartRx(BufferTransferChunk);
         }
 
         public void Close() {
@@ -50,7 +50,7 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         public void SetSampleRate(double sampleRate) {
             SampleRate = sampleRate;
 
-            var bufferSize = (int)(TimeSpan.FromMilliseconds(75).TotalSeconds * SampleRate);
+            var bufferSize = (int)(TimeSpan.FromMilliseconds(60).TotalSeconds * SampleRate);
             _iqBuffer = new ThreadedRingBuffer<IQ>(bufferSize);
 
             HackRfNativeLib.DeviceStreaming.SetSampleRate(_rfDevice.DevicePtr, sampleRate);
@@ -61,11 +61,7 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         }
 
         public int ReadBuffer(Span<IQ> iqBuffer) {
-            if (_iqBuffer is null) {
-                return 0;
-            }
-
-            while (iqBuffer.Length > _iqBuffer.Length) {
+            while (iqBuffer.Length > _iqBuffer.BytesAvailable()) {
                 Thread.Sleep(1);
             }
 

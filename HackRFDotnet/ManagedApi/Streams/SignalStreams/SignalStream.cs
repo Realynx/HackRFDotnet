@@ -23,22 +23,24 @@ public class SignalStream : IDisposable {
         _processingPipeline = processingPipeline;
         _keepOpen = keepOpen;
 
-        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(30).TotalSeconds * _iQStream.SampleRate));
+        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(25).TotalSeconds * _iQStream.SampleRate));
         new Thread(BufferKeeping).Start();
     }
 
     public void ReadSpan(Span<IQ> iqPairs) {
-        while (_filteredBuffer.Count < iqPairs.Length) {
+        while (_filteredBuffer.AvailableBytes < iqPairs.Length) {
             Thread.Sleep(1);
         }
 
-        _filteredBuffer.Read(iqPairs);
+        lock (_filteredBuffer) {
+            _filteredBuffer.Read(iqPairs);
+        }
     }
 
     private void BufferKeeping() {
         var chunkSize = CalculateFFTChunkSize();
-
         var iqPairs = new IQ[chunkSize];
+
         while (true) {
             _iQStream.ReadBuffer(iqPairs);
             var sampleCount = chunkSize;
@@ -61,7 +63,7 @@ public class SignalStream : IDisposable {
         We decrease the time domain samples to reduce CPU time when we filter it for the audio playback
         */
 
-        var bufferChunk = 1024;
+        var bufferChunk = 4096;
 
         var decimationFactor = (int)(_iQStream.SampleRate / Bandwith.Hz);
         var decimatedSize = bufferChunk * decimationFactor;

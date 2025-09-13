@@ -13,6 +13,7 @@ public class FmSignalStream : WaveSignalStream {
         var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
         try {
             ReadSpan(iqBuffer.AsSpan(0, count));
+
             Squelch(iqBuffer.AsSpan(0, count));
 
             for (var x = 1; x < count; x++) {
@@ -22,10 +23,11 @@ public class FmSignalStream : WaveSignalStream {
             }
 
             NormalizeRms(buffer);
-            return count;
         }
         finally {
             ArrayPool<IQ>.Shared.Return(iqBuffer);
         }
+
+        return count;
     }
 }

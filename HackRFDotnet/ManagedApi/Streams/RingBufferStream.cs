@@ -39,7 +39,7 @@ internal sealed class RingBufferStream : Stream
 
     public override bool CanWrite => true;
 
-    public override long Length => _ringBuffer.Count;
+    public override long Length => _ringBuffer.AvailableBytes;
 
     public override long Position
     {

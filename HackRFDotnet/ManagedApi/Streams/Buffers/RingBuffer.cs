@@ -3,11 +3,21 @@
 internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
     private int _writeStart;
     private int _readStart;
+    private bool _empty = true;
+    private bool _full = false;
 
-    public int Count {
+    public int AvailableBytes {
         get {
+            if (_full) {
+                return Length;
+            }
+
+            if (_empty) {
+                return 0;
+            }
+
             var difference = _writeStart - _readStart;
-            return difference > 0 ? difference : difference * -1;
+            return difference < 0 ? Length + difference : difference;
         }
     }
 
@@ -26,12 +36,18 @@ internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
     /// </summary>
     public void Write(ReadOnlySpan<T> buffer, int count) {
         Write(buffer, _writeStart, count);
-
         var newWritePoint = (_writeStart + count) % Length;
-        if (_writeStart < _readStart && newWritePoint > _readStart) {
-            _readStart = newWritePoint + 1;
+
+        var looped = (_writeStart + count) >= Length;
+        if ((looped && _readStart > _writeStart) || (newWritePoint > _readStart && _writeStart < _readStart)) {
+            _readStart = newWritePoint;
+            _full = true;
+        }
+        else {
+            _full = false;
         }
 
+        _empty = false;
         _writeStart = newWritePoint;
     }
 
@@ -40,7 +56,7 @@ internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
     /// </summary>
     /// <returns>The number of items read.</returns>
     public int Peek(Span<T> buffer, int count) {
-        var bytesRead = ReadSpan(buffer, _writeStart, count);
+        var bytesRead = ReadSpan(buffer, _readStart, count);
         return bytesRead;
     }
 
@@ -59,8 +75,18 @@ internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
     /// <returns>The number of items read</returns>
     public int Read(Span<T> buffer, int count) {
         var bytesRead = Peek(buffer, count);
-        _readStart = (_readStart + bytesRead) % Length;
 
+        var newReadPoint = (_readStart + bytesRead) % Length;
+
+        var looped = (_readStart + count) >= Length;
+        if ((looped && _writeStart > _readStart) || (newReadPoint > _writeStart && _readStart < _writeStart)) {
+            _readStart = _writeStart;
+            _empty = true;
+
+            return bytesRead;
+        }
+
+        _readStart = newReadPoint;
         return bytesRead;
     }
 }

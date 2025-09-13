@@ -1,6 +1,4 @@
-﻿using System.Buffers;
-
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
+﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
 
 using MathNet.Filtering.FIR;
 
@@ -19,7 +17,7 @@ public class ReducerEffect : SignalEffect, ISignalEffect {
 
         var cheapFirCoefficients = FirCoefficients.LowPass(
             samplingRate: sampleRate,
-            cutoff: reducedSampleRate.Hz + (RadioBand.FromKHz(2).Hz / 2),
+            cutoff: (reducedSampleRate.Hz + RadioBand.FromKHz(2).Hz) / 2,
             dcGain: 1.0,
             halforder: halforder
         );
@@ -28,28 +26,18 @@ public class ReducerEffect : SignalEffect, ISignalEffect {
         _filterQ = new OnlineFirFilter(cheapFirCoefficients);
     }
 
-    public override int AffectSignal(Span<IQ> signalTheta, int lendth) {
-        for (var x = 0; x < lendth; x++) {
+    public override int AffectSignal(Span<IQ> signalTheta, int length) {
+        for (var x = 0; x < length; x++) {
             var iFiltered = _filterI.ProcessSample(signalTheta[x].I);
             var qFiltered = _filterQ.ProcessSample(signalTheta[x].Q);
             signalTheta[x] = new IQ(iFiltered, qFiltered);
         }
 
         var decimationFactor = (int)(_iqSampleRate / _reducedSampledRate.Hz);
-        var decimatedSize = lendth / decimationFactor;
+        var decimatedSize = length / decimationFactor;
 
-        var downsampled = ArrayPool<IQ>.Shared.Rent(decimatedSize);
-        try {
-
-            for (var x = 0; x < decimatedSize; x++) {
-                downsampled[x] = signalTheta[x * decimationFactor];
-            }
-
-            // SignalUtilities.IQCorrection(downsampled.AsSpan());
-            downsampled.AsSpan(0, decimatedSize).CopyTo(signalTheta);
-        }
-        finally {
-            ArrayPool<IQ>.Shared.Return(downsampled);
+        for (var x = 0; x < decimatedSize; x++) {
+            signalTheta[x] = signalTheta[x * decimationFactor];
         }
 
         return decimatedSize;

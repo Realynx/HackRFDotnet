@@ -28,8 +28,6 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
     public virtual int Read(float[] buffer, int offset, int count) {
         var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
 
-        NormalizeRms(buffer.AsSpan());
-
         try {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
@@ -37,6 +35,7 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
                 buffer[offset + i] = (float)iqBuffer[i].Phase;
             }
 
+            NormalizeRms(buffer.AsSpan());
             return count;
         }
         finally {
@@ -44,7 +43,7 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
         }
     }
 
-    protected void NormalizeRms(Span<float> buffer, float targetRms = 0.025f) {
+    protected void NormalizeRms(Span<float> buffer, float targetRms = 0.04f) {
         if (buffer == null || buffer.Length == 0) {
             return;
         }
