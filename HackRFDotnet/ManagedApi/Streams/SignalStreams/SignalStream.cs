@@ -1,5 +1,6 @@
 ﻿using System.Buffers;
 
+using HackRFDotnet.ManagedApi.Streams.Buffers;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 

@@ -1,5 +1,6 @@
 ﻿using System.Buffers;
 
+using HackRFDotnet.ManagedApi.Streams.Buffers;
 using HackRFDotnet.ManagedApi.Streams.Exceptions;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
@@ -12,7 +13,8 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         private readonly DigitalRadioDevice _rfDevice;
 
         private ThreadedConvertingBuffer<InterleavedSample>? _interleavedBuffer = null;
-        private RingBuffer<IQ>? _iqBuffer = null;
+        // private RingBuffer<IQ>? _iqBuffer = null;
+        private ThreadedRingBuffer<IQ>? _iqBuffer = null;
 
         public double SampleRate { get; private set; }
         public RadioBand Frequency {
@@ -23,7 +25,7 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
 
         public int BufferLength {
             get {
-                return _iqBuffer?.Count ?? 0;
+                return _iqBuffer?.BytesAvailable() ?? 0;
             }
         }
 
@@ -50,7 +52,8 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
 
             var bufferSize = (int)(TimeSpan.FromMilliseconds(250).TotalSeconds * SampleRate);
             _interleavedBuffer = new ThreadedConvertingBuffer<InterleavedSample>(new RingBuffer<InterleavedSample>(bufferSize), ConvertInterleavedSamples);
-            _iqBuffer = new RingBuffer<IQ>(bufferSize);
+            // _iqBuffer = new RingBuffer<IQ>(bufferSize);
+            _iqBuffer = new ThreadedRingBuffer<IQ>(bufferSize);
 
             HackRfNativeLib.DeviceStreaming.SetSampleRate(_rfDevice.DevicePtr, sampleRate);
         }
@@ -64,11 +67,11 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
                 return 0;
             }
 
-            while (iqBuffer.Length > _iqBuffer.Count) {
+            while (iqBuffer.Length > _iqBuffer.Length) {
             }
 
             lock (_iqBuffer) {
-                var readSamples = _iqBuffer?.Read(iqBuffer) ?? throw new Exception("Empty Buffer");
+                var readSamples = _iqBuffer?.ReadSpan(iqBuffer) ?? throw new Exception("Empty Buffer");
                 return readSamples;
             }
         }
@@ -96,7 +99,7 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
                     }
 
                     lock (_iqBuffer) {
-                        _iqBuffer?.Write(iqSamples.AsSpan(0, sampleCount));
+                        _iqBuffer?.WriteSpan(iqSamples.AsSpan(0, sampleCount));
                     }
                 }
                 finally {

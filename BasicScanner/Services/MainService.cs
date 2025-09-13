@@ -56,10 +56,10 @@ internal class MainService : IHostedService {
         //rfFileStream.Open(20_000_000);
 
         rfDevice.AttenuateAmplification();
-        using var deviceStream = new IQDeviceStream(rfDevice, 10_000_000);
+        using var deviceStream = new IQDeviceStream(rfDevice, 20_000_000);
         deviceStream.OpenRx();
 
-        //DemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        DemodulateAndPlayAsAudio(rfDevice, deviceStream);
         DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
         ControlChannel(rfDevice);
