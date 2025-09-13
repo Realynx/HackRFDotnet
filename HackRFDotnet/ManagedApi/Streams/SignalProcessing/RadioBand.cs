@@ -65,5 +65,9 @@
         public static bool operator !=(RadioBand a, RadioBand b) {
             return a.Hz != b.Hz;
         }
+
+        public static RadioBand operator %(RadioBand a, RadioBand b) {
+            return new RadioBand(a.Hz % b.Hz);
+        }
     }
 }

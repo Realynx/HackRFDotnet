@@ -29,6 +29,8 @@ public struct IQ : IEquatable<IQ>, IFormattable {
     // This value is used inside Asin and Acos.
     private static readonly double s_log2 = Math.Log(2.0);
 
+    // These are the only local variabels to the struct
+    // layout MUST be [I,Q] for SIMD vector
     private double m_real;
     private double m_imaginary;
 

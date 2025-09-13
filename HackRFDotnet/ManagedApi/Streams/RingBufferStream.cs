@@ -1,6 +1,4 @@
-﻿using HackRFDotnet.ManagedApi.Types;
-
-namespace HackRFDotnet.ManagedApi.Streams;
+﻿namespace HackRFDotnet.ManagedApi.Streams;
 
 internal sealed class RingBufferStream : Stream
 {

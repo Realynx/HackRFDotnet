@@ -1,4 +1,6 @@
-﻿using HackRFDotnet.ManagedApi;
+﻿using System.Security.Cryptography;
+
+using HackRFDotnet.ManagedApi;
 using HackRFDotnet.ManagedApi.Extensions;
 using HackRFDotnet.ManagedApi.Services;
 using HackRFDotnet.ManagedApi.Streams.Device;
@@ -18,6 +20,7 @@ internal class MainService : IHostedService {
         _rfDeviceControllerService = rfDeviceControllerService;
         _spectrumDisplayService = spectrumDisplayService;
     }
+
     public Task StartAsync(CancellationToken cancellationToken) {
         Console.WriteLine("looking for HackRf Device...");
 
@@ -53,30 +56,50 @@ internal class MainService : IHostedService {
         //rfFileStream.Open(20_000_000);
 
         rfDevice.AttenuateAmplification();
-        using var deviceStream = new IQDeviceStream(rfDevice, 16_000_000);
+        using var deviceStream = new IQDeviceStream(rfDevice, 10_000_000);
         deviceStream.OpenRx();
 
-        var effectsPipeline = new SignalProcessingBuilder()
-            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(200), out var reducedSampleRate, 16))
-
-            .AddSignalEffect(new FftEffect(true))
-            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(200)))
-            .AddSignalEffect(new FftEffect(false))
-            .BuildPipeline();
-
-        using var fmSignalStream = new FmSignalStream(deviceStream, true, processingPipeline: effectsPipeline, keepOpen: false);
-        var fmPlayer = new AnaloguePlayer(fmSignalStream);
-        fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
-
-        new Thread(async () => {
-            using var signalStream = new SignalStream(deviceStream);
-            await _spectrumDisplayService.StartAsync(signalStream, new CancellationTokenSource().Token);
-        }).Start();
-
+        //DemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
         ControlChannel(rfDevice);
-
         return Task.CompletedTask;
+    }
+
+    private static void DemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f));
+
+        // We must build an effects pipeline to clean up our recived signal from the SDR.
+        var effectsPipeline = new SignalProcessingBuilder()
+            // Reducer decimates your signal down to it's bandwidth. Since our signal has been frequency shifted by the SDR mixer
+            // our target frequency has been shifted to Direct Current (DC).
+            // Meaning we don't need any more sample rate than the band of the signal to represent it in the time domain,
+            // so we "Reduce" it's externaous information
+            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(200), out var reducedSampleRate, 10))
+
+            // Fast Fourier Transform from the Time domain signal to the Frequency domain
+            .AddSignalEffect(new FftEffect(true))
+            // Low pass filter our band (Since we are mixed to DC, we only need to low pass filter the signal it gets affected on + and -)
+            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(200)))
+            // Inverse Fast Fourier Transform from the Frequency domain back to the Time domain.
+            .AddSignalEffect(new FftEffect(false))
+            // Compile our effect pipeline
+            .BuildPipeline();
+
+        // Create a signal stream and configure it with our effects pipeline,
+        // it will allow us to read from it as a stream with pre-demoulated results, like a StreamReader
+        var fmSignalStream = new FmSignalStream(deviceStream, true, processingPipeline: effectsPipeline, keepOpen: false);
+
+        // And AnaloguePlayer let's us resample and pipe an audio out the speakers.
+        var fmPlayer = new AnaloguePlayer(fmSignalStream);
+        fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
+    }
+
+    private void DisplaySpectrumCliBasic(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+        new Thread(async () => {
+            using var signalStream = new SignalStream(deviceStream);
+            await _spectrumDisplayService.StartAsync(rfDevice, signalStream, new CancellationTokenSource().Token);
+        }).Start();
     }
 
     private static void ControlChannel(DigitalRadioDevice rfDevice) {

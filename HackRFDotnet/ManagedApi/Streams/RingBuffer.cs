@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.ManagedApi.Types;
+﻿namespace HackRFDotnet.ManagedApi.Streams;
 
 internal sealed class RingBuffer<T> {
     public int Capacity { get; }

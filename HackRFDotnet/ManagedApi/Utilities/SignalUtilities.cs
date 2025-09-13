@@ -1,5 +1,9 @@
-﻿using HackRFDotnet.ManagedApi.Streams;
+﻿using System.Numerics;
+
+using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+
+using MathNet.Numerics.Distributions;
 
 namespace HackRFDotnet.ManagedApi.Utilities;
 
@@ -22,15 +26,22 @@ public unsafe class SignalUtilities {
         }
     }
 
-    public static void ApplyPhaseOffset(Span<IQ> iqFrame, RadioBand freqOffset, double _sampleRate) {
-        for (var x = 0; x < iqFrame.Length; x++) {
-            var theta = x / _sampleRate;
-            var phase = -2.0 * Math.PI * freqOffset.Hz * theta;
+    public static void ApplyFrequencyOffset(Span<IQ> iqFrame, RadioBand freqOffset, double sampleRate) {
+        // Phase increment per sample in radians
+        var phaseIncrement = -2.0 * Math.PI * freqOffset.Hz / sampleRate;
 
-            var osc = new IQ(Math.Cos(phase), Math.Sin(phase));
+        var oscIncrement = new IQ(Math.Cos(phaseIncrement), Math.Sin(phaseIncrement));
+        var osc = new IQ(1.0, 0.0);
+
+
+        var simdChunk = new Vector<IQ>();
+
+        for (var x = 0; x < iqFrame.Length; x++) {
             iqFrame[x] *= osc;
+            osc *= oscIncrement;
         }
     }
+
 
     public static float CalculateDb(Span<IQ> iqFrame) {
         // Compute RMS magnitude
