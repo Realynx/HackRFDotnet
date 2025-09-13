@@ -26,24 +26,24 @@ public class SpectrumDisplayService {
 
         var fftChunksize = signalStream.CalculateFFTChunkSize();
 
-        var iqSamples = new IQ[8192];
+        var iqSamples = new IQ[16384];
         var magnitudes = new float[iqSamples.Length];
 
         var resolution = FFT.FrequencyResolution(iqSamples.Length, signalStream.SampleRate);
 
-        new Thread(() => {
-            while (true) {
-                var newFrequency = rfDevice.Frequency + RadioBand.FromKHz(25);
+        //new Thread(() => {
+        //    while (true) {
+        //        var newFrequency = rfDevice.Frequency + RadioBand.FromKHz(25);
 
-                newFrequency %= RadioBand.FromMHz(110);
+        //        newFrequency %= RadioBand.FromMHz(110);
 
-                if (newFrequency < RadioBand.FromMHz(80)) {
-                    newFrequency = RadioBand.FromMHz(80);
-                }
-                rfDevice.SetFrequency(newFrequency);
-                Thread.Sleep(150);
-            }
-        }).Start();
+        //        if (newFrequency < RadioBand.FromMHz(80)) {
+        //            newFrequency = RadioBand.FromMHz(80);
+        //        }
+        //        rfDevice.SetFrequency(newFrequency);
+        //        Thread.Sleep(150);
+        //    }
+        //}).Start();
 
         var spectrumBuilder = new StringBuilder();
         while (true) {
@@ -68,13 +68,17 @@ public class SpectrumDisplayService {
             var noiseFloor = magnitudes[index - 1];
             // var averageLevel = SignalUtilities.CalculateDb(iqSamples) / 2;
             var average = iqSamples.Average(i => i.Magnitude) / 3;
-            var maxHeight = 150;
+            var maxHeight = 400;
 
             for (var x = 0; x < iqSamples.Length; x++) {
                 var freq = RadioBand.FromHz((int)(resolution * x));
                 // var level = 10f * (float)Math.Log10(iqSamples[x].Magnitude + 1e-12f);
 
                 if (freq < RadioBand.FromKHz(300)) {
+                    if (average == 0) {
+                        continue;
+                    }
+
                     var ticks = iqSamples[x].Magnitude / average;
                     spectrumBuilder.Append(new string('*', (int)(ticks > maxHeight ? maxHeight : ticks)));
                     spectrumBuilder.AppendLine(new string(' ', maxHeight));

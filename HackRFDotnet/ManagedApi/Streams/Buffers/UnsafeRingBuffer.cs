@@ -22,6 +22,10 @@ internal class UnsafeRingBuffer<T> {
     /// <param name="bufferData"></param>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Write(ReadOnlySpan<T> bufferData, int offset, int count) {
+        if (count == 0) {
+            return;
+        }
+
         var writeTo = (offset + count) % _array.Length;
         if (writeTo > offset) {
             bufferData.Slice(0, count).CopyTo(_array.AsSpan(offset, count));
@@ -42,6 +46,10 @@ internal class UnsafeRingBuffer<T> {
     /// <returns></returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public int ReadSpan(Span<T> emptyMemory, int offset, int count) {
+        if (count == 0) {
+            return 0;
+        }
+
         if (emptyMemory.Length < count) {
             count = emptyMemory.Length;
         }

@@ -43,13 +43,9 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void WriteSpan(Span<T> emptyMemory) {
-        WriteSpan(emptyMemory, emptyMemory.Length);
-    }
+    public void WriteSpan(Span<T> emptyMemory, int? threadId = null) {
+        threadId ??= Environment.CurrentManagedThreadId;
 
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public void WriteSpan(Span<T> emptyMemory, int count) {
-        var threadId = Environment.CurrentManagedThreadId;
         if (_writerId is null) {
             _writerId = threadId;
         }
@@ -57,6 +53,11 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
             throw new BufferConcurrencyException("Cannot have more than one writing thread.");
         }
 
+        WriteSpan(emptyMemory, emptyMemory.Length);
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public void WriteSpan(Span<T> emptyMemory, int count) {
         Write(emptyMemory, _writerStart, count);
         _writerStart = (_writerStart + count) % Length;
     }

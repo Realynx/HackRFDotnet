@@ -25,7 +25,7 @@ public class SignalStream : IDisposable {
         _processingPipeline = processingPipeline;
         _keepOpen = keepOpen;
 
-        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(150).TotalSeconds * _iQStream.SampleRate));
+        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(30).TotalSeconds * _iQStream.SampleRate));
         new Thread(BufferKeeping).Start();
     }
 
@@ -34,9 +34,7 @@ public class SignalStream : IDisposable {
             Thread.Sleep(1);
         }
 
-        lock (_filteredBuffer) {
-            var readBytes = _filteredBuffer.Read(iqPairs);
-        }
+        _filteredBuffer.Read(iqPairs);
     }
 
     private void BufferKeeping() {
