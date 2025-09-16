@@ -20,9 +20,6 @@
         <None Update="hackrf.dll">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
-        <None Update="libfftw3f-3.dll">
-          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        </None>
     </ItemGroup>
 
     <ItemGroup>
