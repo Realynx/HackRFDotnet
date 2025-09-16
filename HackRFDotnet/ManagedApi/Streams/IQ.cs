@@ -10,29 +10,29 @@ using System.Runtime.CompilerServices;
 namespace HackRFDotnet.ManagedApi.Streams;
 
 public struct IQ : IEquatable<IQ>, IFormattable {
-    public static readonly IQ Zero = new IQ(0.0, 0.0);
-    public static readonly IQ One = new IQ(1.0, 0.0);
-    public static readonly IQ ImaginaryOne = new IQ(0.0, 1.0);
-    public static readonly IQ NaN = new IQ(double.NaN, double.NaN);
-    public static readonly IQ Infinity = new IQ(double.PositiveInfinity, double.PositiveInfinity);
+    public static readonly IQ Zero = new IQ(0.0f, 0.00f);
+    public static readonly IQ One = new IQ(1.0f, 0.0f);
+    public static readonly IQ ImaginaryOne = new IQ(0.0f, 1.0f);
+    public static readonly IQ NaN = new IQ(float.NaN, float.NaN);
+    public static readonly IQ Infinity = new IQ(float.PositiveInfinity, float.PositiveInfinity);
 
-    private const double InverseOfLog10 = 0.43429448190325; // 1 / Log(10)
+    private const float InverseOfLog10 = 0.43429448190325f; // 1 / Log(10)
 
     // This is the largest x for which (Hypot(x,x) + x) will not overflow. It is used for branching inside Sqrt.
-    private static readonly double s_sqrtRescaleThreshold = double.MaxValue / (Math.Sqrt(2.0) + 1.0);
+    private static readonly float s_sqrtRescaleThreshold = float.MaxValue / (MathF.Sqrt(2.0f) + 1.0f);
 
     // This is the largest x for which 2 x^2 will not overflow. It is used for branching inside Asin and Acos.
-    private static readonly double s_asinOverflowThreshold = Math.Sqrt(double.MaxValue) / 2.0;
+    private static readonly float s_asinOverflowThreshold = (float)MathF.Sqrt(float.MaxValue) / 2.0f;
 
     // This value is used inside Asin and Acos.
-    private static readonly double s_log2 = Math.Log(2.0);
+    private static readonly float s_log2 = MathF.Log(2.0f);
 
     // These are the only local variabels to the struct
     // layout MUST be [I,Q] for SIMD vector
-    private double m_real;
-    private double m_imaginary;
+    private float m_real = 0f;
+    private float m_imaginary = 0f;
 
-    public IQ(double real, double imaginary) {
+    public IQ(float real, float imaginary) {
         m_real = real;
         m_imaginary = imaginary;
     }
@@ -45,19 +45,19 @@ public struct IQ : IEquatable<IQ>, IFormattable {
     /// <summary>
     /// Real
     /// </summary>
-    public double I { get { return m_real; } set { m_real = value; } }
+    public float I { get { return m_real; } set { m_real = value; } }
 
     /// <summary>
     /// Imaginary
     /// </summary>
-    public double Q { get { return m_imaginary; } set { m_imaginary = value; } }
+    public float Q { get { return m_imaginary; } set { m_imaginary = value; } }
 
-    public double Magnitude { get { return Abs(this); } }
-    public double Phase { get { return Math.Atan2(m_imaginary, m_real); } }
+    public float Magnitude { get { return Abs(this); } }
+    public float Phase { get { return (float)MathF.Atan2(m_imaginary, m_real); } }
 
-    public static IQ FromPolarCoordinates(double magnitude, double phase) {
-        (var sin, var cos) = Math.SinCos(phase);
-        return new IQ(magnitude * cos, magnitude * sin);
+    public static IQ FromPolarCoordinates(float magnitude, float phase) {
+        (var sin, var cos) = MathF.SinCos(phase);
+        return new IQ((float)(magnitude * cos), (float)(magnitude * sin));
     }
 
     public static IQ Negate(IQ value) {
@@ -68,11 +68,11 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         return left + right;
     }
 
-    public static IQ Add(IQ left, double right) {
+    public static IQ Add(IQ left, float right) {
         return left + right;
     }
 
-    public static IQ Add(double left, IQ right) {
+    public static IQ Add(float left, IQ right) {
         return left + right;
     }
 
@@ -80,11 +80,11 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         return left - right;
     }
 
-    public static IQ Subtract(IQ left, double right) {
+    public static IQ Subtract(IQ left, float right) {
         return left - right;
     }
 
-    public static IQ Subtract(double left, IQ right) {
+    public static IQ Subtract(float left, IQ right) {
         return left - right;
     }
 
@@ -92,11 +92,11 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         return left * right;
     }
 
-    public static IQ Multiply(IQ left, double right) {
+    public static IQ Multiply(IQ left, float right) {
         return left * right;
     }
 
-    public static IQ Multiply(double left, IQ right) {
+    public static IQ Multiply(float left, IQ right) {
         return left * right;
     }
 
@@ -104,11 +104,11 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         return dividend / divisor;
     }
 
-    public static IQ Divide(IQ dividend, double divisor) {
+    public static IQ Divide(IQ dividend, float divisor) {
         return dividend / divisor;
     }
 
-    public static IQ Divide(double dividend, IQ divisor) {
+    public static IQ Divide(float dividend, IQ divisor) {
         return dividend / divisor;
     }
 
@@ -120,11 +120,11 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         return new IQ(left.m_real + right.m_real, left.m_imaginary + right.m_imaginary);
     }
 
-    public static IQ operator +(IQ left, double right) {
+    public static IQ operator +(IQ left, float right) {
         return new IQ(left.m_real + right, left.m_imaginary);
     }
 
-    public static IQ operator +(double left, IQ right) {
+    public static IQ operator +(float left, IQ right) {
         return new IQ(left + right.m_real, right.m_imaginary);
     }
 
@@ -132,11 +132,11 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         return new IQ(left.m_real - right.m_real, left.m_imaginary - right.m_imaginary);
     }
 
-    public static IQ operator -(IQ left, double right) {
+    public static IQ operator -(IQ left, float right) {
         return new IQ(left.m_real - right, left.m_imaginary);
     }
 
-    public static IQ operator -(double left, IQ right) {
+    public static IQ operator -(float left, IQ right) {
         return new IQ(left - right.m_real, -right.m_imaginary);
     }
 
@@ -147,33 +147,33 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         return new IQ(result_realpart, result_imaginarypart);
     }
 
-    public static IQ operator *(IQ left, double right) {
-        if (!double.IsFinite(left.m_real)) {
-            if (!double.IsFinite(left.m_imaginary)) {
-                return new IQ(double.NaN, double.NaN);
+    public static IQ operator *(IQ left, float right) {
+        if (!float.IsFinite(left.m_real)) {
+            if (!float.IsFinite(left.m_imaginary)) {
+                return new IQ(float.NaN, float.NaN);
             }
 
-            return new IQ(left.m_real * right, double.NaN);
+            return new IQ(left.m_real * right, float.NaN);
         }
 
-        if (!double.IsFinite(left.m_imaginary)) {
-            return new IQ(double.NaN, left.m_imaginary * right);
+        if (!float.IsFinite(left.m_imaginary)) {
+            return new IQ(float.NaN, left.m_imaginary * right);
         }
 
         return new IQ(left.m_real * right, left.m_imaginary * right);
     }
 
-    public static IQ operator *(double left, IQ right) {
-        if (!double.IsFinite(right.m_real)) {
-            if (!double.IsFinite(right.m_imaginary)) {
-                return new IQ(double.NaN, double.NaN);
+    public static IQ operator *(float left, IQ right) {
+        if (!float.IsFinite(right.m_real)) {
+            if (!float.IsFinite(right.m_imaginary)) {
+                return new IQ(float.NaN, float.NaN);
             }
 
-            return new IQ(left * right.m_real, double.NaN);
+            return new IQ(left * right.m_real, float.NaN);
         }
 
-        if (!double.IsFinite(right.m_imaginary)) {
-            return new IQ(double.NaN, left * right.m_imaginary);
+        if (!float.IsFinite(right.m_imaginary)) {
+            return new IQ(float.NaN, left * right.m_imaginary);
         }
 
         return new IQ(left * right.m_real, left * right.m_imaginary);
@@ -187,7 +187,7 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         var d = right.m_imaginary;
 
         // Computing c * c + d * d will overflow even in cases where the actual result of the division does not overflow.
-        if (Math.Abs(d) < Math.Abs(c)) {
+        if (MathF.Abs(d) < MathF.Abs(c)) {
             var doc = d / c;
             return new IQ((a + b * doc) / (c + d * doc), (b - a * doc) / (c + d * doc));
         }
@@ -197,38 +197,38 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         }
     }
 
-    public static IQ operator /(IQ left, double right) {
+    public static IQ operator /(IQ left, float right) {
         // IEEE prohibit optimizations which are value changing
         // so we make sure that behaviour for the simplified version exactly match
         // full version.
         if (right == 0) {
-            return new IQ(double.NaN, double.NaN);
+            return new IQ(float.NaN, float.NaN);
         }
 
-        if (!double.IsFinite(left.m_real)) {
-            if (!double.IsFinite(left.m_imaginary)) {
-                return new IQ(double.NaN, double.NaN);
+        if (!float.IsFinite(left.m_real)) {
+            if (!float.IsFinite(left.m_imaginary)) {
+                return new IQ(float.NaN, float.NaN);
             }
 
-            return new IQ(left.m_real / right, double.NaN);
+            return new IQ(left.m_real / right, float.NaN);
         }
 
-        if (!double.IsFinite(left.m_imaginary)) {
-            return new IQ(double.NaN, left.m_imaginary / right);
+        if (!float.IsFinite(left.m_imaginary)) {
+            return new IQ(float.NaN, left.m_imaginary / right);
         }
 
         // Here the actual optimized version of code.
         return new IQ(left.m_real / right, left.m_imaginary / right);
     }
 
-    public static IQ operator /(double left, IQ right) {
+    public static IQ operator /(float left, IQ right) {
         // Division : Smith's formula.
         var a = left;
         var c = right.m_real;
         var d = right.m_imaginary;
 
         // Computing c * c + d * d will overflow even in cases where the actual result of the division does not overflow.
-        if (Math.Abs(d) < Math.Abs(c)) {
+        if (MathF.Abs(d) < MathF.Abs(c)) {
             var doc = d / c;
             return new IQ(a / (c + d * doc), -a * doc / (c + d * doc));
         }
@@ -238,28 +238,28 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         }
     }
 
-    public static double Abs(IQ value) {
-        return double.Hypot(value.m_real, value.m_imaginary);
+    public static float Abs(IQ value) {
+        return float.Hypot(value.m_real, value.m_imaginary);
     }
 
-    private static double Log1P(double x) {
+    private static float Log1P(float x) {
         // Compute log(1 + x) without loss of accuracy when x is small.
 
         // Our only use case so far is for positive values, so this isn't coded to handle negative values.
-        Debug.Assert(x >= 0.0 || double.IsNaN(x));
+        Debug.Assert(x >= 0.0f || float.IsNaN(x));
 
-        var xp1 = 1.0 + x;
-        if (xp1 == 1.0) {
+        var xp1 = 1.0f + x;
+        if (xp1 == 1.0f) {
             return x;
         }
-        else if (x < 0.75) {
+        else if (x < 0.75f) {
             // This is accurate to within 5 ulp with any floating-point system that uses a guard digit,
             // as proven in Theorem 4 of "What Every Computer Scientist Should Know About Floating-Point
             // Arithmetic" (https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html)
-            return x * Math.Log(xp1) / (xp1 - 1.0);
+            return (float)(x * (float)MathF.Log(xp1) / (xp1 - 1.0f));
         }
         else {
-            return Math.Log(xp1);
+            return (float)MathF.Log(xp1);
         }
     }
 
@@ -313,8 +313,8 @@ public struct IQ : IEquatable<IQ>, IFormattable {
     }
 
     public static IQ Sin(IQ value) {
-        (var sin, var cos) = Math.SinCos(value.m_real);
-        return new IQ(sin * Math.Cosh(value.m_imaginary), cos * Math.Sinh(value.m_imaginary));
+        (var sin, var cos) = MathF.SinCos(value.m_real);
+        return new IQ((float)(sin * MathF.Cosh(value.m_imaginary)), (float)(cos * MathF.Sinh(value.m_imaginary)));
         // There is a known limitation with this algorithm: inputs that cause sinh and cosh to overflow, but for
         // which sin or cos are small enough that sin * cosh or cos * sinh are still representable, nonetheless
         // produce overflow. For example, Sin((0.01, 711.0)) should produce (~3.0E306, PositiveInfinity), but
@@ -328,28 +328,28 @@ public struct IQ : IEquatable<IQ>, IFormattable {
     }
 
     public static IQ Asin(IQ value) {
-        double b, bPrime, v;
-        Asin_Internal(Math.Abs(value.I), Math.Abs(value.Q), out b, out bPrime, out v);
+        float b, bPrime, v;
+        Asin_Internal(MathF.Abs(value.I), MathF.Abs(value.Q), out b, out bPrime, out v);
 
-        double u;
-        if (bPrime < 0.0) {
-            u = Math.Asin(b);
+        float u;
+        if (bPrime < 0.0f) {
+            u = (float)MathF.Asin(b);
         }
         else {
-            u = Math.Atan(bPrime);
+            u = (float)MathF.Atan(bPrime);
         }
 
-        if (value.I < 0.0)
+        if (value.I < 0.0f)
             u = -u;
-        if (value.Q < 0.0)
+        if (value.Q < 0.0f)
             v = -v;
 
         return new IQ(u, v);
     }
 
     public static IQ Cos(IQ value) {
-        (var sin, var cos) = Math.SinCos(value.m_real);
-        return new IQ(cos * Math.Cosh(value.m_imaginary), -sin * Math.Sinh(value.m_imaginary));
+        (var sin, var cos) = MathF.SinCos(value.m_real);
+        return new IQ((float)(cos * MathF.Cosh(value.m_imaginary)), (float)(-sin * MathF.Sinh(value.m_imaginary)));
     }
 
     public static IQ Cosh(IQ value) {
@@ -358,19 +358,19 @@ public struct IQ : IEquatable<IQ>, IFormattable {
     }
 
     public static IQ Acos(IQ value) {
-        double b, bPrime, v;
-        Asin_Internal(Math.Abs(value.I), Math.Abs(value.Q), out b, out bPrime, out v);
+        float b, bPrime, v;
+        Asin_Internal(MathF.Abs(value.I), MathF.Abs(value.Q), out b, out bPrime, out v);
 
-        double u;
+        float u;
         if (bPrime < 0.0) {
-            u = Math.Acos(b);
+            u = (float)MathF.Acos(b);
         }
         else {
-            u = Math.Atan(1.0 / bPrime);
+            u = (float)MathF.Atan(1.0f / bPrime);
         }
 
         if (value.I < 0.0)
-            u = Math.PI - u;
+            u = MathF.PI - u;
         if (value.Q > 0.0)
             v = -v;
 
@@ -387,17 +387,17 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         //   tan z = (sin(2x) / cosh(2y) + i \tanh(2y)) / (1 + cos(2x) / cosh(2y))
         // which correctly computes the (tiny) real part and the (normal-sized) imaginary part.
 
-        var x2 = 2.0 * value.m_real;
-        var y2 = 2.0 * value.m_imaginary;
-        (var sin, var cos) = Math.SinCos(x2);
-        var cosh = Math.Cosh(y2);
-        if (Math.Abs(value.m_imaginary) <= 4.0) {
+        var x2 = 2.0f * value.m_real;
+        var y2 = 2.0f * value.m_imaginary;
+        (var sin, var cos) = MathF.SinCos(x2);
+        var cosh = MathF.Cosh(y2);
+        if (MathF.Abs(value.m_imaginary) <= 4.0f) {
             var D = cos + cosh;
-            return new IQ(sin / D, Math.Sinh(y2) / D);
+            return new IQ((float)sin / (float)D, (float)MathF.Sinh(y2) / (float)D);
         }
         else {
-            var D = 1.0 + cos / cosh;
-            return new IQ(sin / cosh / D, Math.Tanh(y2) / D);
+            var D = 1.0f + cos / cosh;
+            return new IQ((float)sin / (float)cosh / (float)D, (float)MathF.Tanh(y2) / (float)D);
         }
     }
 
@@ -408,14 +408,14 @@ public struct IQ : IEquatable<IQ>, IFormattable {
     }
 
     public static IQ Atan(IQ value) {
-        var two = new IQ(2.0, 0.0);
+        var two = new IQ(2.0f, 0.0f);
         return ImaginaryOne / two * (Log(One - ImaginaryOne * value) - Log(One + ImaginaryOne * value));
     }
 
-    private static void Asin_Internal(double x, double y, out double b, out double bPrime, out double v) {
+    private static void Asin_Internal(float x, float y, out float b, out float bPrime, out float v) {
         // This method for the inverse complex sine (and cosine) is described in Hull, Fairgrieve,
         // and Tang, "Implementing the Complex Arcsine and Arccosine Functions Using Exception Handling",
-        // ACM Transactions on Mathematical Software (1997)
+        // ACM Transactions on MathFematical Software (1997)
         // (https://www.researchgate.net/profile/Ping_Tang3/publication/220493330_Implementing_the_Complex_Arcsine_and_Arccosine_Functions_Using_Exception_Handling/links/55b244b208ae9289a085245d.pdf)
 
         // First, the basics: start with sin(w) = (e^{iw} - e^{-iw}) / (2i) = z. Here z is the input
@@ -451,15 +451,15 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         // to determine u. Compute u = arcsin(beta) or u = arctan(beta') for arcsin, u = arccos(beta)
         // or arctan(1/beta') for arccos.
 
-        Debug.Assert(x >= 0.0 || double.IsNaN(x));
-        Debug.Assert(y >= 0.0 || double.IsNaN(y));
+        Debug.Assert(x >= 0.0 || float.IsNaN(x));
+        Debug.Assert(y >= 0.0 || float.IsNaN(y));
 
         // For x or y large enough to overflow alpha^2, we can simplify our formulas and avoid overflow.
         if (x > s_asinOverflowThreshold || y > s_asinOverflowThreshold) {
-            b = -1.0;
+            b = -1.0f;
             bPrime = x / y;
 
-            double small, big;
+            float small, big;
             if (x < y) {
                 small = x;
                 big = y;
@@ -470,64 +470,64 @@ public struct IQ : IEquatable<IQ>, IFormattable {
             }
 
             var ratio = small / big;
-            v = s_log2 + Math.Log(big) + 0.5 * Log1P(ratio * ratio);
+            v = s_log2 + (float)MathF.Log(big) + 0.5f * Log1P(ratio * ratio);
         }
         else {
-            var r = double.Hypot(x + 1.0, y);
-            var s = double.Hypot(x - 1.0, y);
+            var r = float.Hypot(x + 1.0f, y);
+            var s = float.Hypot(x - 1.0f, y);
 
-            var a = (r + s) * 0.5;
+            var a = (r + s) * 0.5f;
             b = x / a;
 
             if (b > 0.75) {
                 if (x <= 1.0) {
-                    var amx = (y * y / (r + (x + 1.0)) + (s + (1.0 - x))) * 0.5;
-                    bPrime = x / Math.Sqrt((a + x) * amx);
+                    var amx = (y * y / (r + (x + 1.0f)) + (s + (1.0f - x))) * 0.5f;
+                    bPrime = x / (float)MathF.Sqrt((a + x) * amx);
                 }
                 else {
                     // In this case, amx ~ y^2. Since we take the square root of amx, we should
                     // pull y out from under the square root so we don't lose its contribution
                     // when y^2 underflows.
-                    var t = (1.0 / (r + (x + 1.0)) + 1.0 / (s + (x - 1.0))) * 0.5;
-                    bPrime = x / y / Math.Sqrt((a + x) * t);
+                    var t = (1.0f / (r + (x + 1.0f)) + 1.0f / (s + (x - 1.0f))) * 0.5f;
+                    bPrime = x / y / (float)MathF.Sqrt((a + x) * t);
                 }
             }
             else {
-                bPrime = -1.0;
+                bPrime = -1.0f;
             }
 
-            if (a < 1.5) {
-                if (x < 1.0) {
+            if (a < 1.5f) {
+                if (x < 1.0f) {
                     // This is another case where our expression is proportional to y^2 and
                     // we take its square root, so again we pull out a factor of y from
                     // under the square root.
-                    var t = (1.0 / (r + (x + 1.0)) + 1.0 / (s + (1.0 - x))) * 0.5;
+                    var t = (1.0f / (r + (x + 1.0f)) + 1.0f / (s + (1.0f - x))) * 0.5f;
                     var am1 = y * y * t;
-                    v = Log1P(am1 + y * Math.Sqrt(t * (a + 1.0)));
+                    v = Log1P(am1 + y * (float)MathF.Sqrt(t * (a + 1.0f)));
                 }
                 else {
-                    var am1 = (y * y / (r + (x + 1.0)) + (s + (x - 1.0))) * 0.5;
-                    v = Log1P(am1 + Math.Sqrt(am1 * (a + 1.0)));
+                    var am1 = (y * y / (r + (x + 1.0f)) + (s + (x - 1.0f))) * 0.5f;
+                    v = Log1P(am1 + (float)MathF.Sqrt(am1 * (a + 1.0f)));
                 }
             }
             else {
                 // Because of the test above, we can be sure that a * a will not overflow.
-                v = Math.Log(a + Math.Sqrt((a - 1.0) * (a + 1.0)));
+                v = (float)MathF.Log(a + MathF.Sqrt((a - 1.0f) * (a + 1.0f)));
             }
         }
     }
 
-    public static bool IsFinite(IQ value) => double.IsFinite(value.m_real) && double.IsFinite(value.m_imaginary);
+    public static bool IsFinite(IQ value) => float.IsFinite(value.m_real) && float.IsFinite(value.m_imaginary);
 
-    public static bool IsInfinity(IQ value) => double.IsInfinity(value.m_real) || double.IsInfinity(value.m_imaginary);
+    public static bool IsInfinity(IQ value) => float.IsInfinity(value.m_real) || float.IsInfinity(value.m_imaginary);
 
     public static bool IsNaN(IQ value) => !IsInfinity(value) && !IsFinite(value);
 
     public static IQ Log(IQ value) {
-        return new IQ(Math.Log(Abs(value)), Math.Atan2(value.m_imaginary, value.m_real));
+        return new IQ((float)MathF.Log(Abs(value)), (float)MathF.Atan2(value.m_imaginary, value.m_real));
     }
 
-    public static IQ Log(IQ value, double baseValue) {
+    public static IQ Log(IQ value, float baseValue) {
         return Log(value) / Log(baseValue);
     }
 
@@ -537,39 +537,39 @@ public struct IQ : IEquatable<IQ>, IFormattable {
     }
 
     public static IQ Exp(IQ value) {
-        var expReal = Math.Exp(value.m_real);
-        return FromPolarCoordinates(expReal, value.m_imaginary);
+        var expReal = MathF.Exp(value.m_real);
+        return FromPolarCoordinates((float)expReal, value.m_imaginary);
     }
 
     public static IQ Sqrt(IQ value) {
         // Handle NaN input cases according to IEEE 754
-        if (double.IsNaN(value.m_real)) {
-            if (double.IsInfinity(value.m_imaginary)) {
-                return new IQ(double.PositiveInfinity, value.m_imaginary);
+        if (float.IsNaN(value.m_real)) {
+            if (float.IsInfinity(value.m_imaginary)) {
+                return new IQ(float.PositiveInfinity, value.m_imaginary);
             }
 
-            return new IQ(double.NaN, double.NaN);
+            return new IQ(float.NaN, float.NaN);
         }
 
-        if (double.IsNaN(value.m_imaginary)) {
-            if (double.IsPositiveInfinity(value.m_real)) {
-                return new IQ(double.NaN, double.PositiveInfinity);
+        if (float.IsNaN(value.m_imaginary)) {
+            if (float.IsPositiveInfinity(value.m_real)) {
+                return new IQ(float.NaN, float.PositiveInfinity);
             }
 
-            if (double.IsNegativeInfinity(value.m_real)) {
-                return new IQ(double.PositiveInfinity, double.NaN);
+            if (float.IsNegativeInfinity(value.m_real)) {
+                return new IQ(float.PositiveInfinity, float.NaN);
             }
 
-            return new IQ(double.NaN, double.NaN);
+            return new IQ(float.NaN, float.NaN);
         }
 
-        if (value.m_imaginary == 0.0) {
+        if (value.m_imaginary == 0.0f) {
             // Handle the trivial case quickly.
-            if (value.m_real < 0.0) {
-                return new IQ(0.0, Math.Sqrt(-value.m_real));
+            if (value.m_real < 0.0f) {
+                return new IQ(0.0f, (float)MathF.Sqrt(-value.m_real));
             }
 
-            return new IQ(Math.Sqrt(value.m_real), 0.0);
+            return new IQ((float)MathF.Sqrt(value.m_real), 0.0f);
         }
 
         // One way to compute Sqrt(z) is just to call Pow(z, 0.5), which coverts to polar coordinates
@@ -577,7 +577,7 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         // Not only is this more expensive than necessary, it also fails to preserve certain expected
         // symmetries, such as that the square root of a pure negative is a pure imaginary, and that the
         // square root of a pure imaginary has exactly equal real and imaginary parts. This all goes
-        // back to the fact that Math.PI is not stored with infinite precision, so taking half of Math.PI
+        // back to the fact that MathF.PI is not stored with infinite precision, so taking half of MathF.PI
         // does not land us on an argument with cosine exactly equal to zero.
 
         // To find a fast and symmetry-respecting formula for complex square root,
@@ -601,34 +601,34 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         var rescale = false;
         var realCopy = value.m_real;
         var imaginaryCopy = value.m_imaginary;
-        if (Math.Abs(realCopy) >= s_sqrtRescaleThreshold || Math.Abs(imaginaryCopy) >= s_sqrtRescaleThreshold) {
-            if (double.IsInfinity(value.m_imaginary)) {
+        if (MathF.Abs(realCopy) >= s_sqrtRescaleThreshold || MathF.Abs(imaginaryCopy) >= s_sqrtRescaleThreshold) {
+            if (float.IsInfinity(value.m_imaginary)) {
                 // We need to handle infinite imaginary parts specially because otherwise
                 // our formulas below produce inf/inf = NaN.
-                return new IQ(double.PositiveInfinity, imaginaryCopy);
+                return new IQ(float.PositiveInfinity, imaginaryCopy);
             }
 
-            realCopy *= 0.25;
-            imaginaryCopy *= 0.25;
+            realCopy *= 0.25f;
+            imaginaryCopy *= 0.25f;
             rescale = true;
         }
 
         // This is the core of the algorithm. Everything else is special case handling.
-        double x, y;
-        if (realCopy >= 0.0) {
-            x = Math.Sqrt((double.Hypot(realCopy, imaginaryCopy) + realCopy) * 0.5);
-            y = imaginaryCopy / (2.0 * x);
+        float x, y;
+        if (realCopy >= 0.0f) {
+            x = (float)MathF.Sqrt((float.Hypot(realCopy, imaginaryCopy) + realCopy) * 0.5f);
+            y = imaginaryCopy / (2.0f * x);
         }
         else {
-            y = Math.Sqrt((double.Hypot(realCopy, imaginaryCopy) - realCopy) * 0.5);
-            if (imaginaryCopy < 0.0)
+            y = (float)MathF.Sqrt((float.Hypot(realCopy, imaginaryCopy) - realCopy) * 0.5f);
+            if (imaginaryCopy < 0.0f)
                 y = -y;
-            x = imaginaryCopy / (2.0 * y);
+            x = imaginaryCopy / (2.0f * y);
         }
 
         if (rescale) {
-            x *= 2.0;
-            y *= 2.0;
+            x *= 2.0f;
+            y *= 2.0f;
         }
 
         return new IQ(x, y);
@@ -649,19 +649,19 @@ public struct IQ : IEquatable<IQ>, IFormattable {
         var powerImaginary = power.m_imaginary;
 
         var rho = Abs(value);
-        var theta = Math.Atan2(valueImaginary, valueReal);
-        var newRho = powerReal * theta + powerImaginary * Math.Log(rho);
+        var theta = MathF.Atan2(valueImaginary, valueReal);
+        var newRho = powerReal * theta + powerImaginary * MathF.Log(rho);
 
-        var t = Math.Pow(rho, powerReal) * Math.Exp(-powerImaginary * theta);
+        var t = MathF.Pow(rho, powerReal) * MathF.Exp(-powerImaginary * theta);
 
-        return FromPolarCoordinates(t, newRho);
+        return FromPolarCoordinates((float)t, (float)newRho);
     }
 
-    public static IQ Pow(IQ value, double power) {
+    public static IQ Pow(IQ value, float power) {
         return Pow(value, new IQ(power, 0));
     }
 
-    private static IQ Scale(IQ value, double factor) {
+    private static IQ Scale(IQ value, float factor) {
         var realResult = factor * value.m_real;
         var imaginaryResuilt = factor * value.m_imaginary;
         return new IQ(realResult, imaginaryResuilt);
@@ -672,7 +672,7 @@ public struct IQ : IEquatable<IQ>, IFormattable {
     //
 
     public static explicit operator IQ(decimal value) {
-        return new IQ((double)value, 0.0);
+        return new IQ((float)value, 0.0f);
     }
 
     //
@@ -680,63 +680,59 @@ public struct IQ : IEquatable<IQ>, IFormattable {
     //
 
     public static implicit operator IQ(byte value) {
-        return new IQ(value, 0.0);
+        return new IQ(value, 0.0f);
     }
 
     public static implicit operator IQ(char value) {
-        return new IQ(value, 0.0);
-    }
-
-    public static implicit operator IQ(double value) {
-        return new IQ(value, 0.0);
-    }
-
-    public static implicit operator IQ(Half value) {
-        return new IQ((double)value, 0.0);
-    }
-
-    public static implicit operator IQ(short value) {
-        return new IQ(value, 0.0);
-    }
-
-    public static implicit operator IQ(int value) {
-        return new IQ(value, 0.0);
-    }
-
-    public static implicit operator IQ(long value) {
-        return new IQ(value, 0.0);
-    }
-
-    public static implicit operator IQ(nint value) {
-        return new IQ(value, 0.0);
-    }
-
-    public static implicit operator IQ(sbyte value) {
-        return new IQ(value, 0.0);
+        return new IQ(value, 0.0f);
     }
 
     public static implicit operator IQ(float value) {
-        return new IQ(value, 0.0);
+        return new IQ(value, 0.0f);
+    }
+
+    public static implicit operator IQ(Half value) {
+        return new IQ((float)value, 0.0f);
+    }
+
+    public static implicit operator IQ(short value) {
+        return new IQ(value, 0.0f);
+    }
+
+    public static implicit operator IQ(int value) {
+        return new IQ(value, 0.0f);
+    }
+
+    public static implicit operator IQ(long value) {
+        return new IQ(value, 0.0f);
+    }
+
+    public static implicit operator IQ(nint value) {
+        return new IQ(value, 0.0f);
+    }
+
+    public static implicit operator IQ(sbyte value) {
+        return new IQ(value, 0.0f);
     }
 
     public static implicit operator IQ(ushort value) {
-        return new IQ(value, 0.0);
+        return new IQ(value, 0.0f);
     }
 
     public static implicit operator IQ(uint value) {
-        return new IQ(value, 0.0);
+        return new IQ(value, 0.0f);
     }
 
     public static implicit operator IQ(ulong value) {
-        return new IQ(value, 0.0);
+        return new IQ(value, 0.0f);
     }
 
     public static implicit operator IQ(nuint value) {
-        return new IQ(value, 0.0);
+        return new IQ(value, 0.0f);
     }
 
     public static implicit operator IQ(System.Numerics.Complex value) {
-        return new IQ(value.Real, value.Imaginary);
+        return new IQ((float)value.Real, (float)value.Imaginary);
     }
 
     public static implicit operator System.Numerics.Complex(IQ value) {

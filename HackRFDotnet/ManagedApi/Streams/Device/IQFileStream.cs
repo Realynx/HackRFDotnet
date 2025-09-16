@@ -1,5 +1,4 @@
 ﻿using System.Buffers;
-using System.Runtime.InteropServices;
 
 using HackRFDotnet.ManagedApi.Streams.Exceptions;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
@@ -22,7 +21,7 @@ public class IQFileStream : IIQStream, IDisposable {
 
     public RadioBand Frequency { get; set; }
 
-    public double SampleRate { get; set; }
+    public SampleRate SampleRate { get; set; }
 
     public void Close() {
         _stream?.Close();
@@ -32,7 +31,7 @@ public class IQFileStream : IIQStream, IDisposable {
         _stream?.Dispose();
     }
 
-    public void OpenRx(double? sampleRate = null) {
+    public void OpenRx(SampleRate? sampleRate = null) {
         if (sampleRate is null) {
             sampleRate = SampleRate;
         }
@@ -63,37 +62,38 @@ public class IQFileStream : IIQStream, IDisposable {
     }
 
     public int ReadBuffer(Span<IQ> iqFrame) {
-        var fileBytes = ArrayPool<byte>.Shared.Rent(iqFrame.Length);
-        _stream?.Read(fileBytes, 0, iqFrame.Length);
+        //var fileBytes = ArrayPool<byte>.Shared.Rent(iqFrame.Length);
+        //_stream?.Read(fileBytes, 0, iqFrame.Length);
 
-        try {
-            var interleavedTransferFrame = MemoryMarshal.Cast<byte, InterleavedSample>(fileBytes);
-            var iqSamples = ArrayPool<IQ>.Shared.Rent(interleavedTransferFrame.Length);
+        //try {
+        //    var interleavedTransferFrame = MemoryMarshal.Cast<byte, InterleavedSample>(fileBytes);
+        //    var iqSamples = ArrayPool<InterleavedSample>.Shared.Rent(interleavedTransferFrame.Length);
 
-            try {
-                for (var x = 0; x < interleavedTransferFrame.Length; x++) {
-                    iqSamples[x] = new IQ(interleavedTransferFrame[x]);
-                }
+        //    try {
+        //        for (var x = 0; x < interleavedTransferFrame.Length; x++) {
+        //            iqSamples[x] = new IQ(interleavedTransferFrame[x]);
+        //        }
 
-                if (iqSamples.Length == 0) {
-                    return 0;
-                }
+        //        if (iqSamples.Length == 0) {
+        //            return 0;
+        //        }
 
-                lock (this) {
-                    iqSamples.AsSpan(0, interleavedTransferFrame.Length).CopyTo(iqFrame);
-                    return iqSamples.Length;
-                }
-            }
-            finally {
-                ArrayPool<IQ>.Shared.Return(iqSamples);
-            }
-        }
-        finally {
-            ArrayPool<byte>.Shared.Return(fileBytes);
-        }
+        //        lock (this) {
+        //            iqSamples.AsSpan(0, interleavedTransferFrame.Length).CopyTo(iqFrame);
+        //            return iqSamples.Length;
+        //        }
+        //    }
+        //    finally {
+        //        ArrayPool<IQ>.Shared.Return(iqSamples);
+        //    }
+        //}
+        //finally {
+        //    ArrayPool<byte>.Shared.Return(fileBytes);
+        //}
+        return 0;
     }
 
-    public void SetSampleRate(double sampleRate) {
+    public void SetSampleRate(SampleRate sampleRate) {
         SampleRate = sampleRate;
     }
 }

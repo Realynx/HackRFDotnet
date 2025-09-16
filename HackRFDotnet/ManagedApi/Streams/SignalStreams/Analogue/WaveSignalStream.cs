@@ -15,7 +15,7 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
     public WaveFormat? WaveFormat { get; protected set; }
     public WaveSignalStream(IIQStream deviceStream, bool stero = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
         : base(deviceStream, processingPipeline, keepOpen) {
-        var sampleRate = Bandwith.Hz;
+        var sampleRate = BandWidth.Hz;
         if (stero) {
             sampleRate /= 2;
         }
@@ -32,7 +32,7 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
             for (var i = 0; i < count; i++) {
-                buffer[offset + i] = (float)iqBuffer[i].Phase;
+                buffer[offset + i] = iqBuffer[i].Phase;
             }
 
             NormalizeRms(buffer.AsSpan());
@@ -48,13 +48,13 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
             return;
         }
 
-        var sumSq = 0d;
+        var sumSq = 0f;
         for (var x = 0; x < buffer.Length; x++) {
-            double v = buffer[x];
+            var v = buffer[x];
             sumSq += v * v;
         }
 
-        var rms = Math.Sqrt(sumSq / buffer.Length);
+        var rms = MathF.Sqrt(sumSq / buffer.Length);
         if (rms <= 0.0) {
             return;
         }
@@ -72,7 +72,7 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
 
         var magnitudes = new float[buffer.Length];
         for (var x = 0; x < buffer.Length; x++) {
-            magnitudes[x] = (float)buffer[x].Magnitude;
+            magnitudes[x] = buffer[x].Magnitude;
         }
 
         Array.Sort(magnitudes);

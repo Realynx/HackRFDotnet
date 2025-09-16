@@ -29,17 +29,18 @@ namespace HackRFDotnet.ManagedApi {
         }
 
         public bool SetFrequency(RadioBand radioFrequency) {
-            return SetFrequency(radioFrequency, RadioBand.FromMHz(10));
+            return SetFrequency(radioFrequency, RadioBand.FromMHz(200));
         }
 
         public bool SetFrequency(RadioBand radioFrequency, RadioBand bandwidth) {
             Frequency = radioFrequency;
             Bandwidth = bandwidth;
 
-            var baseBandFilter = HackRfNativeLib.DeviceStreaming.ComputeBasebandFilterBandWith((uint)radioFrequency.Hz);
-            var setFilter = HackRfNativeLib.DeviceStreaming.SetBasebandFilterBandith(DevicePtr, baseBandFilter) != 0;
+            radioFrequency -= RadioBand.FromKHz(1);
+            //var baseBandFilter = HackRfNativeLib.DeviceStreaming.ComputeBasebandFilterBandWith((uint)radioFrequency.Hz);
+            //var setFilter = HackRfNativeLib.DeviceStreaming.SetBasebandFilterBandith(DevicePtr, baseBandFilter) != 0;
 
-            return HackRfNativeLib.DeviceStreaming.SetFrequency(DevicePtr, (uint)radioFrequency.Hz) == 0 && setFilter;
+            return HackRfNativeLib.DeviceStreaming.SetFrequency(DevicePtr, (uint)radioFrequency.Hz) == 0;
         }
 
         public bool StartRx(HackRFSampleBlockCallback rxCallback) {

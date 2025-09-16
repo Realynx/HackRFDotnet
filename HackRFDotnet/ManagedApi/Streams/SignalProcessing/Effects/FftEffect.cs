@@ -1,11 +1,11 @@
-﻿
-using System.Numerics;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 
-using FftSharp;
+using FftwF.Dotnet;
+
+using MathNet.Numerics;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
-public class FftEffect : SignalEffect {
+public unsafe class FftEffect : SignalEffect {
     private readonly bool _forward;
 
     public FftEffect(bool forward) {
@@ -13,16 +13,11 @@ public class FftEffect : SignalEffect {
     }
 
     public override int AffectSignal(Span<IQ> signalTheta, int length) {
-        var complexFrame = MemoryMarshal
-            .Cast<IQ, Complex>(signalTheta)
+        var complexFrame = signalTheta
             .Slice(0, length);
 
-        if (_forward) {
-            FFT.Forward(complexFrame);
-        }
-        else {
-            FFT.Inverse(complexFrame);
-        }
+        using var plan = new FftwPlan(length, MemoryMarshal.Cast<IQ, Complex32>(complexFrame), _forward, FftwFlags.Estimate);
+        plan.Execute();
 
         return length;
     }

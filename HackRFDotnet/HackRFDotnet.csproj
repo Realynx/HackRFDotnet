@@ -1,31 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <PlatformTarget>x64</PlatformTarget>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+        <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="FftSharp" Version="2.2.0" />
-    <PackageReference Include="ILGPU" Version="1.5.3" />
-    <PackageReference Include="MathNet.Filtering" Version="0.7.0" />
-    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
-    <PackageReference Include="MathNet.Numerics.MKL.Win-x64" Version="3.0.0" />
-    <PackageReference Include="NAudio" Version="2.2.1" />
-    <PackageReference Include="NWaves" Version="0.9.6" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="ILGPU" Version="1.5.3" />
+        <PackageReference Include="MathNet.Filtering" Version="0.7.0" />
+        <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+        <PackageReference Include="MathNet.Numerics.MKL.Win-x64" Version="3.0.0" />
+        <PackageReference Include="NAudio" Version="2.2.1" />
+        <PackageReference Include="NWaves" Version="0.9.6" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Update="hackrf.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <None Update="hackrf.dll">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="libfftw3f-3.dll">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ManagedApi\Streams\SignalStreams\Digital\" />
-  </ItemGroup>
+    <ItemGroup>
+        <Folder Include="ManagedApi\Streams\SignalStreams\Digital\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FftwF.Dotnet\FftwF.Dotnet.csproj" />
+    </ItemGroup>
 
 </Project>

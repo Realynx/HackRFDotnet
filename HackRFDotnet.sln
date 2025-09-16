@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScreenShots", "ScreenShots", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FftwF.Dotnet", "FftwF.Dotnet\FftwF.Dotnet.csproj", "{BAED8642-00F3-46B9-99F7-ED1BD53D1B64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{C17BDC8C-11C3-4EED-ADE7-88D81A08FA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C17BDC8C-11C3-4EED-ADE7-88D81A08FA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C17BDC8C-11C3-4EED-ADE7-88D81A08FA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAED8642-00F3-46B9-99F7-ED1BD53D1B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAED8642-00F3-46B9-99F7-ED1BD53D1B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAED8642-00F3-46B9-99F7-ED1BD53D1B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAED8642-00F3-46B9-99F7-ED1BD53D1B64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

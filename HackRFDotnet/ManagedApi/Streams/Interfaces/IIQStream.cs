@@ -4,12 +4,12 @@ namespace HackRFDotnet.ManagedApi.Streams.Interfaces;
 public interface IIQStream {
     int BufferLength { get; }
     RadioBand Frequency { get; }
-    double SampleRate { get; }
+    SampleRate SampleRate { get; }
 
     void Close();
     void Dispose();
-    void OpenRx(double? sampleRate = null);
+    void OpenRx(SampleRate? sampleRate = null);
     int ReadBuffer(Span<IQ> iqBuffer);
-    void SetSampleRate(double sampleRate);
+    void SetSampleRate(SampleRate sampleRate);
     int TxBuffer(Span<IQ> iqFrame);
 }

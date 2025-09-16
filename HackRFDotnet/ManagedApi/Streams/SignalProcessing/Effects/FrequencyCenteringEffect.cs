@@ -4,9 +4,9 @@ using HackRFDotnet.ManagedApi.Utilities;
 namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 public class FrequencyCenteringEffect : SignalEffect, ISignalEffect {
     private readonly RadioBand _frequencyOffset;
-    private readonly double _sampleRate;
+    private readonly SampleRate _sampleRate;
 
-    public FrequencyCenteringEffect(RadioBand frequencyOffset, double sampleRate) {
+    public FrequencyCenteringEffect(RadioBand frequencyOffset, SampleRate sampleRate) {
         _frequencyOffset = frequencyOffset;
         _sampleRate = sampleRate;
     }

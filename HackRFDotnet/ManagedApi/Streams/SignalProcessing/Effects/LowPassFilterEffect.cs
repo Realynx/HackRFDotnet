@@ -1,13 +1,12 @@
 ﻿
 using System.Numerics;
 
-using FftSharp;
-
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
+using HackRFDotnet.ManagedApi.Utilities;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 public class LowPassFilterEffect : SignalEffect, ISignalEffect {
-    private readonly int _sampleRate;
+    private readonly SampleRate _sampleRate;
     private readonly RadioBand _bandwith;
 
     /// <summary>
@@ -15,13 +14,13 @@ public class LowPassFilterEffect : SignalEffect, ISignalEffect {
     /// </summary>
     /// <param name="sampleRate"></param>
     /// <param name="bandwith"></param>
-    public LowPassFilterEffect(int sampleRate, RadioBand bandwith) {
+    public LowPassFilterEffect(SampleRate sampleRate, RadioBand bandwith) {
         _sampleRate = sampleRate;
         _bandwith = bandwith;
     }
 
     public override int AffectSignal(Span<IQ> signalTheta, int length) {
-        var resolution = FFT.FrequencyResolution(length, _sampleRate);
+        var resolution = SignalUtilities.FrequencyResolution(length, _sampleRate);
 
         for (var x = 0; x < length; x++) {
 

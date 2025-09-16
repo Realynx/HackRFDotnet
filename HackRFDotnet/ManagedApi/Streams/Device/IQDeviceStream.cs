@@ -11,9 +11,9 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         private readonly int _transferBufferSize = 0;
 
         private ThreadedRingBuffer<IQ>? _iqBuffer = null;
-        private readonly IQ[] _convertBuffer = [];
+        private IQ[] _sampleConvertBuffer = [];
 
-        public double SampleRate { get; private set; }
+        public SampleRate SampleRate { get; private set; }
 
         public RadioBand Frequency {
             get {
@@ -31,10 +31,9 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             _rfDevice = rfDevice;
 
             _transferBufferSize = (int)HackRfNativeLib.DeviceStreaming.GetTransferBufferSize(rfDevice.DevicePtr);
-            _convertBuffer = new IQ[_transferBufferSize];
         }
 
-        public void OpenRx(double? sampleRate = null) {
+        public void OpenRx(SampleRate? sampleRate = null) {
             if (sampleRate is null) {
                 sampleRate = SampleRate;
             }
@@ -47,13 +46,17 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             _rfDevice.StopRx();
         }
 
-        public void SetSampleRate(double sampleRate) {
+        public void SetSampleRate(SampleRate sampleRate) {
             SampleRate = sampleRate;
 
-            var bufferSize = (int)(TimeSpan.FromMilliseconds(60).TotalSeconds * SampleRate);
+            var bufferSize = (int)(TimeSpan.FromMilliseconds(64).TotalSeconds * SampleRate.Sps);
             _iqBuffer = new ThreadedRingBuffer<IQ>(bufferSize);
 
-            HackRfNativeLib.DeviceStreaming.SetSampleRate(_rfDevice.DevicePtr, sampleRate);
+
+            var transferSize = HackRfNativeLib.DeviceStreaming.GetTransferBufferSize(_rfDevice.DevicePtr) / 2;
+            _sampleConvertBuffer = new IQ[transferSize];
+
+            HackRfNativeLib.DeviceStreaming.SetSampleRate(_rfDevice.DevicePtr, sampleRate.Sps);
         }
 
         public int TxBuffer(Span<IQ> iqFrame) {
@@ -82,13 +85,18 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             // 16MSPS =[8.2ms frame]  131072 / 8ms
             // 20MSPS =[6.5ms frame]  131072 / 6ms
 
-            var interleavedSampels = new Span<InterleavedSample>(hackrfTransfer->buffer, hackrfTransfer->valid_length / 2);
-            for (var x = 0; x < interleavedSampels.Length; x++) {
-                var byteSample = interleavedSampels[x];
-                _convertBuffer[x] = new IQ(byteSample.I, byteSample.Q);
+            var iqSize = hackrfTransfer->valid_length / 2;
+            var interleavedSamples = new Span<InterleavedSample>(hackrfTransfer->buffer, iqSize);
+            fixed (InterleavedSample* packedSamples = interleavedSamples) {
+                fixed (IQ* iq = _sampleConvertBuffer) {
+                    for (var x = 0; x < iqSize; x++) {
+                        iq[x].I = packedSamples[x].I;
+                        iq[x].Q = packedSamples[x].Q;
+                    }
+                }
             }
 
-            _iqBuffer?.WriteSpan(_convertBuffer, interleavedSampels.Length);
+            _iqBuffer?.WriteSpan(_sampleConvertBuffer);
             return 0;
         }
 

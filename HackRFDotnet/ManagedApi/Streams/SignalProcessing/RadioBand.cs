@@ -1,4 +1,6 @@
-﻿namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing {
+﻿using System.Runtime.CompilerServices;
+
+namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing {
     public class RadioBand {
 
         private readonly int _hz;
@@ -16,6 +18,12 @@
         public float Khz {
             get {
                 return Hz / 1000f;
+            }
+        }
+
+        public SampleRate NyquistSampleRate {
+            get {
+                return new SampleRate(_hz * 2);
             }
         }
 
@@ -68,6 +76,10 @@
 
         public static RadioBand operator %(RadioBand a, RadioBand b) {
             return new RadioBand(a.Hz % b.Hz);
+        }
+
+        public static RadioBand operator -(RadioBand a) {
+            return new RadioBand(-a._hz);
         }
     }
 }

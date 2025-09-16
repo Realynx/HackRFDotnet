@@ -1,17 +1,19 @@
 ﻿using HackRFDotnet.ManagedApi.Streams.Buffers;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+using HackRFDotnet.ManagedApi.Utilities;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
 public class SignalStream : IDisposable {
     public RadioBand Center { get; protected set; } = RadioBand.FromMHz(94.7f);
-    public RadioBand Bandwith { get; protected set; } = RadioBand.FromKHz(200);
-    public double SampleRate {
+    public RadioBand BandWidth { get; protected set; } = RadioBand.FromKHz(200);
+    public SampleRate SampleRate {
         get {
             return _iQStream.SampleRate;
         }
     }
 
+    internal const int PROCESSING_SIZE = 262144;
     internal RingBuffer<IQ> _filteredBuffer;
     protected SignalProcessingPipeline? _processingPipeline;
 
@@ -23,7 +25,7 @@ public class SignalStream : IDisposable {
         _processingPipeline = processingPipeline;
         _keepOpen = keepOpen;
 
-        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(25).TotalSeconds * _iQStream.SampleRate));
+        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(25).TotalSeconds * _iQStream.SampleRate.Sps));
         new Thread(BufferKeeping).Start();
     }
 
@@ -38,36 +40,21 @@ public class SignalStream : IDisposable {
     }
 
     private void BufferKeeping() {
-        var chunkSize = CalculateFFTChunkSize();
-        var iqPairs = new IQ[chunkSize];
+        var convertedPairs = new IQ[PROCESSING_SIZE];
 
         while (true) {
-            _iQStream.ReadBuffer(iqPairs);
-            var sampleCount = chunkSize;
+            _iQStream.ReadBuffer(convertedPairs);
+            //SignalUtilities.ApplyFrequencyOffset(convertedPairs, -RadioBand.FromKHz(1), _iQStream.SampleRate);
+
+            var sampleCount = PROCESSING_SIZE;
             if (_processingPipeline != null) {
-                sampleCount = _processingPipeline.ApplyPipeline(iqPairs);
+                sampleCount = _processingPipeline.ApplyPipeline(convertedPairs);
             }
 
             lock (_filteredBuffer) {
-                _filteredBuffer.Write(iqPairs.AsSpan(0, sampleCount));
+                _filteredBuffer.Write(convertedPairs.AsSpan(0, sampleCount));
             }
         }
-    }
-
-    public int CalculateFFTChunkSize() {
-        /*
-        We will send 4096 frames to the audio resampler/player
-        We have a much higher sampling rate than the audio player so first we must filter
-        out the rest of the spectrum to the bandwith
-        The bandwith get's centred to 0 meaning we can represent the entire bandwith with it's hz as MSPS
-        We decrease the time domain samples to reduce CPU time when we filter it for the audio playback
-        */
-
-        var bufferChunk = 4096;
-
-        var decimationFactor = (int)(_iQStream.SampleRate / Bandwith.Hz);
-        var decimatedSize = bufferChunk * decimationFactor;
-        return decimatedSize;
     }
 
     /// <summary>
@@ -77,7 +64,7 @@ public class SignalStream : IDisposable {
     /// <param name="bandwidth"></param>
     public void SetBand(RadioBand center, RadioBand bandwidth) {
         Center = center;
-        Bandwith = bandwidth;
+        BandWidth = bandwidth;
     }
 
     public void Dispose() {

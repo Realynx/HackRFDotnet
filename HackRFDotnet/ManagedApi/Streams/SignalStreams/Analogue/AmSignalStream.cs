@@ -15,7 +15,7 @@ public class AmSignalStream : WaveSignalStream {
         try {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
-            for (var i = 0; i < iqBuffer.Length; i++) {
+            for (var i = 0; i < count; i++) {
                 buffer[i] = (float)iqBuffer[i].Magnitude;
             }
 

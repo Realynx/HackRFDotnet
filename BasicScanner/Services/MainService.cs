@@ -33,22 +33,9 @@ internal class MainService : IHostedService {
             return Task.CompletedTask;
         }
 
-        //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
-        //rfDevice.SetFrequency(RadioBand.FromMHz(125.150f), RadioBand.FromKHz(8));
-        //rfDevice.SetFrequency(RadioBand.FromMHz(162.4f), RadioBand.FromKHz(20));
-        //rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
 
-        //var scanningService = new ChannelScanningService(iqStream, rfDevice);
-
-        //scanningService.StartScanning(RadioBand.FromMHz(118.4f), RadioBand.FromMHz(118.575f),
-        //    RadioBand.FromMHz(119.250f), RadioBand.FromMHz(119.450f), RadioBand.FromMHz(121.800f),
-        //    RadioBand.FromMHz(124.05f), RadioBand.FromMHz(125.150f), RadioBand.FromMHz(135f));
-
-        //var amPlayer = new AMPlayer(iqStream);
-        //amPlayer.PlayStreamAsync(44100);
 
         //rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
-        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f));
 
         //rfDevice.StartRecordingToFile("Recording.bin");
 
@@ -57,16 +44,18 @@ internal class MainService : IHostedService {
 
         rfDevice.AttenuateAmplification();
         using var deviceStream = new IQDeviceStream(rfDevice);
-        deviceStream.OpenRx(20_000_000);
+        deviceStream.OpenRx(new SampleRate(20_000_000));
 
-        DemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        FrquencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
+
         DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
         ControlChannel(rfDevice);
         return Task.CompletedTask;
     }
 
-    private static void DemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+    private static void FrquencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         rfDevice.SetFrequency(RadioBand.FromMHz(98.7f));
 
         // We must build an effects pipeline to clean up our recived signal from the SDR.
@@ -75,7 +64,7 @@ internal class MainService : IHostedService {
             // our target frequency has been shifted to Direct Current (DC).
             // Meaning we don't need any more sample rate than the band of the signal to represent it in the time domain,
             // so we "Reduce" it's externaous information
-            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(200), out var reducedSampleRate, 10))
+            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(200).NyquistSampleRate, out var reducedSampleRate))
 
             // Fast Fourier Transform from the Time domain signal to the Frequency domain
             .AddSignalEffect(new FftEffect(true))
@@ -93,6 +82,31 @@ internal class MainService : IHostedService {
         // And AnaloguePlayer let's us resample and pipe an audio out the speakers.
         var fmPlayer = new AnaloguePlayer(fmSignalStream);
         fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
+    }
+
+    private static void AmplitudeDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+        //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
+        //rfDevice.SetFrequency(RadioBand.FromMHz(125.150f), RadioBand.FromKHz(8));
+        //rfDevice.SetFrequency(RadioBand.FromMHz(162.4f), RadioBand.FromKHz(20));
+
+        //var scanningService = new ChannelScanningService(iqStream, rfDevice);
+        //scanningService.StartScanning(RadioBand.FromMHz(118.4f), RadioBand.FromMHz(118.575f),
+        //    RadioBand.FromMHz(119.250f), RadioBand.FromMHz(119.450f), RadioBand.FromMHz(121.800f),
+        //    RadioBand.FromMHz(124.05f), RadioBand.FromMHz(125.150f), RadioBand.FromMHz(135f));
+
+        rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
+
+        var effectsPipeline = new SignalProcessingBuilder()
+            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(8).NyquistSampleRate, out var reducedSampleRate))
+            .AddSignalEffect(new FftEffect(true))
+            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(8)))
+            .AddSignalEffect(new FftEffect(false))
+            .BuildPipeline();
+
+        var amSignalStream = new AmSignalStream(deviceStream, true, processingPipeline: effectsPipeline, keepOpen: false);
+
+        var amPlayer = new AnaloguePlayer(amSignalStream);
+        amPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
     }
 
     private void DisplaySpectrumCliBasic(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
