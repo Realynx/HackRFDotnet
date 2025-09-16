@@ -8,13 +8,15 @@ namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 public unsafe class FftEffect : SignalEffect, IDisposable {
     private readonly bool _forward;
     private readonly Complex32[] _processingChunk = [];
+
     private readonly FftwPlan _fftwPlan;
 
     public FftEffect(bool forward, int chunkSize) {
         _forward = forward;
-
         _processingChunk = new Complex32[chunkSize];
-        _fftwPlan = new FftwPlan(chunkSize, _processingChunk.AsSpan(), _forward, FftwFlags.Measure);
+
+        _fftwPlan = new FftwPlan(chunkSize, _processingChunk.AsSpan(), _processingChunk.AsSpan(),
+            _forward, FftwFlags.Estimate);
     }
 
     public override int AffectSignal(Span<IQ> signalTheta, int length) {

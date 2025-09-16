@@ -34,9 +34,7 @@ public class SignalStream : IDisposable {
             Thread.Sleep(1);
         }
 
-        lock (_filteredBuffer) {
-            _filteredBuffer.Read(iqPairs);
-        }
+        _filteredBuffer.Read(iqPairs);
     }
 
     private void BufferKeeping() {
@@ -44,16 +42,14 @@ public class SignalStream : IDisposable {
 
         while (true) {
             _iQStream.ReadBuffer(convertedPairs);
-            //SignalUtilities.ApplyFrequencyOffset(convertedPairs, -RadioBand.FromKHz(1), _iQStream.SampleRate);
 
+            //SignalUtilities.ApplyFrequencyOffset(convertedPairs, -RadioBand.FromKHz(1), _iQStream.SampleRate);
             var sampleCount = PROCESSING_SIZE;
             if (_processingPipeline != null) {
                 sampleCount = _processingPipeline.ApplyPipeline(convertedPairs.AsSpan());
             }
 
-            lock (_filteredBuffer) {
-                _filteredBuffer.Write(convertedPairs.AsSpan(0, sampleCount));
-            }
+            _filteredBuffer.Write(convertedPairs.AsSpan(0, sampleCount));
         }
     }
 

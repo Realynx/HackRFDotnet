@@ -2,25 +2,17 @@
 
 using HackRFDotnet.ManagedApi;
 using HackRFDotnet.ManagedApi.Streams;
-using HackRFDotnet.ManagedApi.Streams.Device;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 using HackRFDotnet.ManagedApi.Utilities;
 
 namespace BasicScanner.Services;
-public class SpectrumDisplayService : IDisposable {
-    private FrequencyCenteringEffect _frequencyCenteringEffect;
-    private DownSampleEffect _reducerEffect;
-    private FftEffect _fftEffect;
+public class SpectrumDisplayService {
     private IQ[] _displayBuffer = [];
 
     public SpectrumDisplayService() {
 
-    }
-
-    public void Dispose() {
-        _fftEffect.Dispose();
     }
 
     private void SurfChannels(DigitalRadioDevice rfDevice) {
@@ -38,7 +30,7 @@ public class SpectrumDisplayService : IDisposable {
         }
     }
 
-    public Task StartAsync(DigitalRadioDevice rfDevice, SignalStream signalStream, CancellationToken cancellationToken) {
+    public async Task StartAsync(DigitalRadioDevice rfDevice, SignalStream signalStream, CancellationToken cancellationToken) {
         //new Thread(() => {
         //  SurfChannels(rfDevice);
         //}).Start();
@@ -53,16 +45,20 @@ public class SpectrumDisplayService : IDisposable {
             processingSize, out var reducedSampleRate, out var producedChunkSize))
         .AddSignalEffect(new FrequencyCenteringEffect(RadioBand.FromKHz(-100), reducedSampleRate))
         .AddSignalEffect(new FftEffect(true, producedChunkSize))
-        .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, rfDevice.Bandwidth))
         .BuildPipeline();
 
         var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, reducedSampleRate);
         var magnitudes = new float[producedChunkSize];
 
         var spectrumBuilder = new StringBuilder();
-        var columns = new string[Console.WindowWidth - 16];
+        var columns = new string[Console.WindowWidth];
         float? average = null;
-        while (true) {
+
+        Console.ForegroundColor = ConsoleColor.Red;
+        while (!cancellationToken.IsCancellationRequested) {
+            // 60 FPS
+            Thread.Sleep(1000 / 60);
+
             spectrumBuilder.Clear();
             Console.CursorVisible = false;
             Console.CursorTop = 0;
@@ -71,27 +67,22 @@ public class SpectrumDisplayService : IDisposable {
             signalStream.ReadSpan(_displayBuffer.AsSpan());
             var chunk = effectsPipeline.ApplyPipeline(_displayBuffer.AsSpan());
 
-            for (var y = 0; y < chunk; y++) {
-                magnitudes[y] = _displayBuffer[y].Magnitude;
-            }
+            var maxHeight = Console.WindowHeight - 4;
+            average = _displayBuffer.Average(i => i.Magnitude) / 5;
 
-            var maxHeight = Console.WindowHeight - 16;
-            average ??= _displayBuffer.Average(i => i.Magnitude) / 5;
+            for (var x = 0; x < columns.Length; x++) {
+                var binIndex = (int)((long)x * producedChunkSize / columns.Length);
 
-            for (var x = 0; x < producedChunkSize; x += producedChunkSize / columns.Length) {
-                var freq = RadioBand.FromHz(resolution * x);
+                var magSafe = Math.Max(_displayBuffer[binIndex].Magnitude, 1e-9f);
+                var db = 5f * MathF.Log10(magSafe / average ?? 1f);
+                var power = (int)Math.Clamp(db, 0, maxHeight);
 
-                var power = maxHeight / (_displayBuffer[x].Magnitude / average);
-                power *= maxHeight;
-                power = power < maxHeight ? power : maxHeight;
-
-                var binString = new string('█', (int)power);
-                binString += new string(' ', maxHeight - (int)power);
-                columns[x % columns.Length] = binString;
+                var binString = new string('█', power) + new string(' ', maxHeight - power);
+                columns[x] = binString;
             }
 
             for (var y = maxHeight - 1; y >= 0; y--) {
-                for (var x = 0; x < columns.Length - 1; x++) {
+                for (var x = 0; x < columns.Length; x++) {
                     if (columns[x] is null) {
                         spectrumBuilder.Append(' ');
                         continue;
@@ -99,7 +90,8 @@ public class SpectrumDisplayService : IDisposable {
 
                     spectrumBuilder.Append(columns[x][y]);
                 }
-                spectrumBuilder.AppendLine(columns[columns.Length - 1]);
+
+                spectrumBuilder.AppendLine();
             }
             Console.WriteLine(spectrumBuilder);
         }

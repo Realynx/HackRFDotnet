@@ -39,7 +39,9 @@ internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
         var newWritePoint = (_writeStart + count) % Length;
 
         var looped = (_writeStart + count) >= Length;
-        if ((looped && _readStart > _writeStart) || (newWritePoint > _readStart && _writeStart < _readStart)) {
+        if (newWritePoint == _readStart ||
+            (looped && _readStart > _writeStart)
+            || (newWritePoint > _readStart && _writeStart <= _readStart)) {
             _readStart = newWritePoint;
             _full = true;
         }
@@ -79,7 +81,9 @@ internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
         var newReadPoint = (_readStart + bytesRead) % Length;
 
         var looped = (_readStart + count) >= Length;
-        if ((looped && _writeStart > _readStart) || (newReadPoint > _writeStart && _readStart < _writeStart)) {
+        if (newReadPoint == _writeStart ||
+            (looped && _writeStart > _readStart)
+            || (newReadPoint > _writeStart && _readStart <= _writeStart)) {
             _readStart = _writeStart;
             _empty = true;
 

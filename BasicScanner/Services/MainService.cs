@@ -21,7 +21,7 @@ internal class MainService : IHostedService {
         _spectrumDisplayService = spectrumDisplayService;
     }
 
-    public Task StartAsync(CancellationToken cancellationToken) {
+    public async Task StartAsync(CancellationToken cancellationToken) {
         Console.WriteLine("looking for HackRf Device...");
 
         var deviceList = _rfDeviceControllerService.FindDevices();
@@ -30,7 +30,7 @@ internal class MainService : IHostedService {
         using var rfDevice = _rfDeviceControllerService.ConnectToFirstDevice();
         if (rfDevice is null) {
             Console.WriteLine("Could not connect to Rf Device");
-            return Task.CompletedTask;
+            return;
         }
 
         //rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
@@ -46,10 +46,9 @@ internal class MainService : IHostedService {
         FrquencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
         //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
 
-        DisplaySpectrumCliBasic(rfDevice, deviceStream);
+        //DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
         ControlChannel(rfDevice);
-        return Task.CompletedTask;
     }
 
     private static void FrquencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {

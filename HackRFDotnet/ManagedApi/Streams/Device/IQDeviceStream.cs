@@ -64,7 +64,7 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         }
 
         public int ReadBuffer(Span<IQ> iqBuffer) {
-            while (iqBuffer.Length > _iqBuffer.BytesAvailable()) {
+            while (iqBuffer.Length > _iqBuffer?.BytesAvailable()) {
                 Thread.Sleep(1);
             }
 

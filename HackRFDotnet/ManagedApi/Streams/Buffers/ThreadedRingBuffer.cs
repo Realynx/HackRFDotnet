@@ -1,5 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Threading;
 
 namespace HackRFDotnet.ManagedApi.Streams.Buffers;
 internal struct ThreadPointer {
@@ -83,7 +82,9 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
             throw new BufferConcurrencyException("Cannot have more than one writing thread.");
         }
 
-        WriteSpan(inputData, inputData.Length);
+        lock (this) {
+            WriteSpan(inputData, inputData.Length);
+        }
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -93,21 +94,24 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
         var newWritePoint = (_writerStart + count) % Length;
         var looped = (_writerStart + count) >= Length;
 
-        foreach (var thread in _threadIdPointers) {
-            var existingValue = thread.Value;
-            if ((looped && existingValue.readStart > _writerStart) ||
-                (newWritePoint > existingValue.readStart && _writerStart < existingValue.readStart)) {
-                existingValue.readStart = newWritePoint;
-                existingValue.full = true;
-            }
-            else {
-                existingValue.full = false;
+        lock (this) {
+            foreach (var thread in _threadIdPointers) {
+                var existingValue = thread.Value;
+                if (newWritePoint == existingValue.readStart ||
+                    (looped && existingValue.readStart > _writerStart) ||
+                    (newWritePoint > existingValue.readStart && _writerStart <= existingValue.readStart)) {
+                    existingValue.readStart = newWritePoint;
+                    existingValue.full = true;
+                }
+                else {
+                    existingValue.full = false;
+                }
+
+                existingValue.empty = false;
+                _threadIdPointers[thread.Key] = existingValue;
             }
 
-            existingValue.empty = false;
-            _threadIdPointers[thread.Key] = existingValue;
+            _writerStart = newWritePoint;
         }
-
-        _writerStart = newWritePoint;
     }
 }
