@@ -18,22 +18,29 @@ public class SquelchEffect : SignalEffect {
     }
 
     public override int AffectSignal(Span<IQ> signalTheta, int length) {
-        //if (length == 0) {
-        //    return 0;
-        //}
+        var basebandNoise = 0d;
+        var channelNoise = 0d;
+        for (var x = length; x < signalTheta.Length; x++) {
+            var i = signalTheta[x].I;
+            var q = signalTheta[x].Q;
+            basebandNoise += (i * i) + (q * q);
+        }
+        var basebandNoiseFloor = basebandNoise / signalTheta.Length;
 
-        //var db = SignalUtilities.CalculateSignalDb(signalTheta.Slice(0, length));
-        //var averageOverTime = _previousSamples.Average();
 
-        //if (db <= averageOverTime) {
-        //    for (var x = 0; x < length; x++) {
-        //        signalTheta[x] = IQ.Zero;
-        //    }
-        //}
+        for (var x = 0; x < length; x++) {
+            var i = signalTheta[x].I;
+            var q = signalTheta[x].Q;
+            channelNoise += (i * i) + (q * q);
+        }
+        var channelNoiseFloor = channelNoise / length;
 
-        //_previousSamples[_sampleIndex] = db;
-        //_sampleIndex = (_sampleIndex + 1) % _mod;
-        //_sampleIndex = _sampleIndex >= _previousSamples.Length ? (uint)_previousSamples.Length - 1 : _sampleIndex;
+
+        if (channelNoiseFloor < basebandNoiseFloor * 1.026) {
+            for (var x = 0; x < length; x++) {
+                signalTheta[x] = IQ.Zero;
+            }
+        }
 
         return length;
     }

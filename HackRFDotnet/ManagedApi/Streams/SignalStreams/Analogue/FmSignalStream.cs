@@ -2,7 +2,6 @@
 
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-using HackRFDotnet.ManagedApi.Utilities;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 public class FmSignalStream : WaveSignalStream {

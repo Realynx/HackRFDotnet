@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-
-using HackRFDotnet.ManagedApi;
+﻿using HackRFDotnet.ManagedApi;
 using HackRFDotnet.ManagedApi.Extensions;
 using HackRFDotnet.ManagedApi.Services;
 using HackRFDotnet.ManagedApi.Streams.Device;
@@ -43,8 +41,8 @@ internal class MainService : IHostedService {
         using var deviceStream = new IQDeviceStream(rfDevice);
         deviceStream.OpenRx(new SampleRate(20_000_000));
 
-        FrquencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
-        //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        //FrequencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
 
         DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
@@ -55,7 +53,7 @@ internal class MainService : IHostedService {
         //ControlChannel(rfDevice);
     }
 
-    private static void FrquencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+    private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
         rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), RadioBand.FromKHz(200));
 
@@ -67,6 +65,7 @@ internal class MainService : IHostedService {
             // so we "Reduce" it's extraneous information
             .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
                 rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
+            .AddSignalEffect(new SquelchEffect(reducedSampleRate))
 
             .AddSignalEffect(new SquelchEffect(reducedSampleRate))
             // Fast Fourier Transform from the Time domain signal to the Frequency domain
@@ -91,21 +90,17 @@ internal class MainService : IHostedService {
     }
 
     private static void AmplitudeDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        //rfDevice.SetFrequency(RadioBand.FromMHz(125.150f), RadioBand.FromKHz(8));
-        //rfDevice.SetFrequency(RadioBand.FromMHz(162.4f), RadioBand.FromKHz(20));
-
-        //var scanningService = new ChannelScanningService(iqStream, rfDevice);
-        //scanningService.StartScanning(RadioBand.FromMHz(118.4f), RadioBand.FromMHz(118.575f),
-        //    RadioBand.FromMHz(119.250f), RadioBand.FromMHz(119.450f), RadioBand.FromMHz(121.800f),
-        //    RadioBand.FromMHz(124.05f), RadioBand.FromMHz(125.150f), RadioBand.FromMHz(135f));
-
         rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(10));
 
         var effectsPipeline = new SignalProcessingBuilder()
             .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
                 rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
+            .AddSignalEffect(new BasicSignalScanningEffect(rfDevice, RadioBand.FromKHz(10), [RadioBand.FromMHz(118.4f),
+                RadioBand.FromMHz(118.575f), RadioBand.FromMHz(119.250f), RadioBand.FromMHz(119.450f),
+                RadioBand.FromMHz(121.800f),RadioBand.FromMHz(124.05f), RadioBand.FromMHz(125.150f), RadioBand.FromMHz(135f)]))
             .AddSignalEffect(new SquelchEffect(reducedSampleRate))
+
             .AddSignalEffect(new FftEffect(true, producedChunkSize))
             .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, rfDevice.Bandwidth))
             .AddSignalEffect(new FftEffect(false, producedChunkSize))

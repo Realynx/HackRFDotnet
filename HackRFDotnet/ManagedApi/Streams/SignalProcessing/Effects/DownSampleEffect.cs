@@ -41,7 +41,7 @@ public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable 
         _fftOutBuffer = new Complex32[SignalStream.PROCESSING_SIZE];
 
         _fftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftInBuffer, _fftOutBuffer, true, FftwFlags.Estimate);
-        _inverseFftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftOutBuffer, _fftInBuffer, false, FftwFlags.Estimate);
+        _inverseFftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftOutBuffer, _fftInBuffer, false, FftwFlags.Estimate); 
     }
 
     public DownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, int processingSize, out SampleRate newSampleRate, out int producedChunkSize) {
