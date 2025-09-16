@@ -46,9 +46,13 @@ internal class MainService : IHostedService {
         FrquencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
         //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
 
-        //DisplaySpectrumCliBasic(rfDevice, deviceStream);
+        DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
-        ControlChannel(rfDevice);
+        for (; ; ) {
+            Thread.Sleep(TimeSpan.FromSeconds(10));
+        }
+
+        //ControlChannel(rfDevice);
     }
 
     private static void FrquencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {

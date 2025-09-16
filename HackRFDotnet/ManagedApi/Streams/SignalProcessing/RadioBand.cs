@@ -50,6 +50,10 @@ namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing {
             return new RadioBand(a.Hz - b.Hz);
         }
 
+        public static RadioBand operator /(RadioBand a, int b) {
+            return new RadioBand(a.Hz / b);
+        }
+
         public static bool operator >(RadioBand a, RadioBand b) {
             return a.Hz > b.Hz;
         }

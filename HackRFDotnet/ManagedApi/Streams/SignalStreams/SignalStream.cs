@@ -1,6 +1,7 @@
 ﻿using HackRFDotnet.ManagedApi.Streams.Buffers;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+using HackRFDotnet.ManagedApi.Utilities;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
 public class SignalStream : IDisposable {
@@ -43,7 +44,7 @@ public class SignalStream : IDisposable {
         while (true) {
             _iQStream.ReadBuffer(convertedPairs);
 
-            //SignalUtilities.ApplyFrequencyOffset(convertedPairs, -RadioBand.FromKHz(1), _iQStream.SampleRate);
+            SignalUtilities.ApplyFrequencyOffset(convertedPairs, -RadioBand.FromKHz(1), _iQStream.SampleRate);
             var sampleCount = PROCESSING_SIZE;
             if (_processingPipeline != null) {
                 sampleCount = _processingPipeline.ApplyPipeline(convertedPairs.AsSpan());

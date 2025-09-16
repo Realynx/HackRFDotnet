@@ -50,7 +50,9 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
             SampleRate = sampleRate;
 
             var bufferSize = (int)(TimeSpan.FromMilliseconds(64).TotalSeconds * SampleRate.Sps);
-            _iqBuffer = new ThreadedRingBuffer<IQ>(bufferSize);
+
+            // TODO: Fix thread multiwrite (because hack rf seems to use multiple threads sometimes)
+            _iqBuffer = new ThreadedRingBuffer<IQ>(bufferSize, true);
 
 
             var transferSize = HackRfNativeLib.DeviceStreaming.GetTransferBufferSize(_rfDevice.DevicePtr) / 2;
