@@ -99,7 +99,7 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
                 var existingValue = thread.Value;
                 if (newWritePoint == existingValue.readStart ||
                     (looped && existingValue.readStart > _writerStart) ||
-                    (newWritePoint > existingValue.readStart && _writerStart <= existingValue.readStart)) {
+                    (newWritePoint > existingValue.readStart && _writerStart < existingValue.readStart)) {
                     existingValue.readStart = newWritePoint;
                     existingValue.full = true;
                 }
