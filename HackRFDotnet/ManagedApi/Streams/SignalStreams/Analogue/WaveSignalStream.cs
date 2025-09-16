@@ -1,5 +1,6 @@
 ﻿using System.Buffers;
 
+using HackRFDotnet.ManagedApi.Streams.Buffers;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 using HackRFDotnet.ManagedApi.Utilities;
@@ -10,6 +11,7 @@ namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
 
     public WaveFormat? WaveFormat { get; protected set; }
+
     public WaveSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stero = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
         : base(deviceStream, processingPipeline, keepOpen) {
 
@@ -61,12 +63,4 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
             buffer[x] *= gain;
         }
     }
-
-    protected void Squelch(Span<IQ> buffer) {
-        var averageDb = SignalUtilities.CalculateDb(buffer);
-        if (averageDb < 2.5) {
-            buffer.Fill(IQ.Zero);
-        }
-    }
-
 }

@@ -1,9 +1,5 @@
-﻿using System.Numerics;
-
-using HackRFDotnet.ManagedApi.Streams;
+﻿using HackRFDotnet.ManagedApi.Streams;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-
-using MathNet.Numerics.Distributions;
 
 namespace HackRFDotnet.ManagedApi.Utilities;
 
@@ -77,17 +73,33 @@ public unsafe class SignalUtilities {
             : sampleRate.Sps / length;
     }
 
-
-    public static float CalculateDb(Span<IQ> iqFrame) {
-        // Compute RMS magnitude
-        var power = 0f;
-        for (var x = 0; x < iqFrame.Length; x++) {
-            power += iqFrame[x].Magnitude;
+    public static float CalculateSignalDb(ReadOnlySpan<IQ> iqFrame) {
+        if (iqFrame.Length == 0) {
+            return float.NegativeInfinity;
         }
-        power /= iqFrame.Length;
 
-        // Convert to dB
-        var dbAverage = 10f * MathF.Log10(power + 1e-12f);
-        return dbAverage;
+        double power = 0;
+        for (var x = 0; x < iqFrame.Length; x++) {
+            var s = iqFrame[x];
+            power += (s.I * s.I) + (s.Q * s.Q); // instantaneous power
+        }
+
+        power /= iqFrame.Length; // mean power
+        return 10f * MathF.Log10((float)power + 1e-12f);
+    }
+
+    public static float CalculateRmsDb(ReadOnlySpan<IQ> iqFrame) {
+        if (iqFrame.Length == 0) {
+            return float.NegativeInfinity;
+        }
+
+        double sumSq = 0;
+        for (var x = 0; x < iqFrame.Length; x++) {
+            var s = iqFrame[x];
+            sumSq += (s.I * s.I) + (s.Q * s.Q);
+        }
+
+        var rms = Math.Sqrt(sumSq / iqFrame.Length);
+        return 20f * MathF.Log10((float)rms + 1e-12f);
     }
 }

@@ -56,8 +56,8 @@ internal class MainService : IHostedService {
     }
 
     private static void FrquencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
-        //rfDevice.SetFrequency(RadioBand.FromMHz(98.7f));
+        //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
+        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), RadioBand.FromKHz(200));
 
         // We must build an effects pipeline to clean up our recived signal from the SDR.
         var effectsPipeline = new SignalProcessingBuilder()
@@ -66,13 +66,14 @@ internal class MainService : IHostedService {
             // Meaning we don't need any more sample rate than the band of the signal to represent it in the time domain,
             // so we "Reduce" it's externaous information
             .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate,
-                RadioBand.FromKHz(20).NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
+                rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
+            .AddSignalEffect(new SquelchEffect(reducedSampleRate))
             // Fast Fourier Transform from the Time domain signal to the Frequency domain
             .AddSignalEffect(new FftEffect(true, producedChunkSize))
 
             // Low pass filter our band (Since we are mixed to DC, we only need to low pass filter the signal it gets affected on + and -)
-            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(20)))
+            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, rfDevice.Bandwidth))
 
             // Inverse Fast Fourier Transform from the Frequency domain back to the Time domain.
             .AddSignalEffect(new FftEffect(false, producedChunkSize))
@@ -98,14 +99,15 @@ internal class MainService : IHostedService {
         //    RadioBand.FromMHz(119.250f), RadioBand.FromMHz(119.450f), RadioBand.FromMHz(121.800f),
         //    RadioBand.FromMHz(124.05f), RadioBand.FromMHz(125.150f), RadioBand.FromMHz(135f));
 
-        rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(20));
+        rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(10));
 
         var effectsPipeline = new SignalProcessingBuilder()
             .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate,
-                RadioBand.FromKHz(8).NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
+                rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
+            .AddSignalEffect(new SquelchEffect(reducedSampleRate))
             .AddSignalEffect(new FftEffect(true, producedChunkSize))
-            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(8)))
+            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, rfDevice.Bandwidth))
             .AddSignalEffect(new FftEffect(false, producedChunkSize))
 
             .BuildPipeline();
