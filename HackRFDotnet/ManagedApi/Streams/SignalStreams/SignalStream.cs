@@ -44,7 +44,8 @@ public class SignalStream : IDisposable {
         while (true) {
             _iQStream.ReadBuffer(convertedPairs);
 
-            SignalUtilities.ApplyFrequencyOffset(convertedPairs, -RadioBand.FromKHz(1), _iQStream.SampleRate);
+            // This Re-Shifts the signal to the intended center, since we shift it by half the sample size earlier to avoid the HackRFOne's 0 DC spike
+            SignalUtilities.ApplyFrequencyOffset(convertedPairs, -_iQStream.SampleRate.NyquistFrequencyRange / 2, _iQStream.SampleRate);
             var sampleCount = PROCESSING_SIZE;
             if (_processingPipeline != null) {
                 sampleCount = _processingPipeline.ApplyPipeline(convertedPairs.AsSpan());

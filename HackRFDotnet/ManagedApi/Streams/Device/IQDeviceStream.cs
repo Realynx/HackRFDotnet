@@ -13,7 +13,11 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         private ThreadedRingBuffer<IQ>? _iqBuffer = null;
         private IQ[] _sampleConvertBuffer = [];
 
-        public SampleRate SampleRate { get; private set; }
+        public SampleRate SampleRate {
+            get {
+                return _rfDevice.DeviceSamplingRate;
+            }
+        }
 
         public RadioBand Frequency {
             get {
@@ -47,18 +51,14 @@ namespace HackRFDotnet.ManagedApi.Streams.Device {
         }
 
         public void SetSampleRate(SampleRate sampleRate) {
-            SampleRate = sampleRate;
-
             var bufferSize = (int)(TimeSpan.FromMilliseconds(64).TotalSeconds * SampleRate.Sps);
+            _rfDevice.SetSampleRate(sampleRate);
 
             // TODO: Fix thread multiwrite (because hack rf seems to use multiple threads sometimes)
             _iqBuffer = new ThreadedRingBuffer<IQ>(bufferSize, true);
 
-
             var transferSize = HackRfNativeLib.DeviceStreaming.GetTransferBufferSize(_rfDevice.DevicePtr) / 2;
             _sampleConvertBuffer = new IQ[transferSize];
-
-            HackRfNativeLib.DeviceStreaming.SetSampleRate(_rfDevice.DevicePtr, sampleRate.Sps);
         }
 
         public int TxBuffer(Span<IQ> iqFrame) {

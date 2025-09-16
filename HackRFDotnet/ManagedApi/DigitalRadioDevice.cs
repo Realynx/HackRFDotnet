@@ -9,6 +9,7 @@ namespace HackRFDotnet.ManagedApi {
     public unsafe class DigitalRadioDevice : IDisposable {
         public RadioBand Frequency { get; set; } = RadioBand.FromHz(0);
         public RadioBand Bandwidth { get; set; } = RadioBand.FromHz(0);
+        public SampleRate DeviceSamplingRate { get; set; } = SampleRate.FromMSps(10);
 
         public readonly HackRFDevice* DevicePtr;
         private HackRFSampleBlockCallback _rxCallback;
@@ -36,11 +37,18 @@ namespace HackRFDotnet.ManagedApi {
             Frequency = radioFrequency;
             Bandwidth = bandwidth;
 
-            radioFrequency -= RadioBand.FromKHz(1);
+            // This shifts the signal to offset the 0 dc spike away from the signal we want.
+            radioFrequency -= DeviceSamplingRate.NyquistFrequencyRange / 2;
+
             //var baseBandFilter = HackRfNativeLib.DeviceStreaming.ComputeBasebandFilterBandWith((uint)radioFrequency.Hz);
             //var setFilter = HackRfNativeLib.DeviceStreaming.SetBasebandFilterBandith(DevicePtr, baseBandFilter) != 0;
 
             return HackRfNativeLib.DeviceStreaming.SetFrequency(DevicePtr, (uint)radioFrequency.Hz) == 0;
+        }
+
+        public void SetSampleRate(SampleRate sampleRate) {
+            DeviceSamplingRate = sampleRate;
+            HackRfNativeLib.DeviceStreaming.SetSampleRate(DevicePtr, sampleRate.Sps);
         }
 
         public bool StartRx(HackRFSampleBlockCallback rxCallback) {

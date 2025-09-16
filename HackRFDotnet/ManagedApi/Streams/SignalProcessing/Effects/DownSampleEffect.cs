@@ -88,13 +88,15 @@ public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable 
         for (var x = 0; x < length; x++) {
             var freq = (x < length / 2) ? x * resolution : (x - length) * resolution;
 
+            // Remove the DC spike
+            //if (Math.Abs(freq) == 0) {
+            //    _fftOutBuffer[x] = Complex32.Zero;
+            //}
+
             if (Math.Abs(freq) > nyquist) {
                 _fftOutBuffer[x] = Complex32.Zero;
             }
         }
-
-        // Remove the DC spike
-        _fftOutBuffer[0] = Complex32.Zero;
 
         _inverseFftwPlan.Execute();
         MemoryMarshal.Cast<Complex32, IQ>(_fftInBuffer).CopyTo(signalTheta.Slice(0, length));

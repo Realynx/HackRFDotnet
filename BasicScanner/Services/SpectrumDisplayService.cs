@@ -14,21 +14,21 @@ public unsafe class SpectrumDisplayService {
     private readonly short[] _rainbowColors =
     [
         0x0004,           // red
-        //0x0004,           // red
-        //0x0006,           // yellow (red + green)
-        //0x0006,           // yellow (red + green)
-        //0x0002,           // green
-        //0x0002,           // green
-        //0x0003,           // cyan (green + blue)
-        //0x0003,           // cyan (green + blue)
-        //0x0001,           // blue
-        //0x0001,           // blue
-        //0x0005,           // magenta (red + blue)
-        //0x0005,           // magenta (red + blue)
-        //0x0008 | 0x0004,  // bright red
-        //0x0008 | 0x0004,  // bright red
-        //0x0008 | 0x0001,  // bright blue
-        //0x0008 | 0x0001,  // bright blue
+        0x0004,           // red
+        0x0006,           // yellow (red + green)
+        0x0006,           // yellow (red + green)
+        0x0002,           // green
+        0x0002,           // green
+        0x0003,           // cyan (green + blue)
+        0x0003,           // cyan (green + blue)
+        0x0001,           // blue
+        0x0001,           // blue
+        0x0005,           // magenta (red + blue)
+        0x0005,           // magenta (red + blue)
+        0x0008 | 0x0004,  // bright red
+        0x0008 | 0x0004,  // bright red
+        0x0008 | 0x0001,  // bright blue
+        0x0008 | 0x0001,  // bright blue
     ];
 
 
