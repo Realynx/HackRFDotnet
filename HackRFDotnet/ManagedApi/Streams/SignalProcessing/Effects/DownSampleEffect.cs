@@ -6,8 +6,6 @@ using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 using HackRFDotnet.ManagedApi.Utilities;
 
-using ILGPU.Util;
-
 using MathNet.Numerics;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
@@ -87,11 +85,6 @@ public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable 
         var nyquist = _reducedSampledRate.Sps / 2.0;
         for (var x = 0; x < length; x++) {
             var freq = (x < length / 2) ? x * resolution : (x - length) * resolution;
-
-            // Remove the DC spike
-            //if (Math.Abs(freq) == 0) {
-            //    _fftOutBuffer[x] = Complex32.Zero;
-            //}
 
             if (Math.Abs(freq) > nyquist) {
                 _fftOutBuffer[x] = Complex32.Zero;

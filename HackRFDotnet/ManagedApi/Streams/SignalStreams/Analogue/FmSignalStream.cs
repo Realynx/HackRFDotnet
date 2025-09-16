@@ -6,8 +6,8 @@ using HackRFDotnet.ManagedApi.Utilities;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 public class FmSignalStream : WaveSignalStream {
-    public FmSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stero = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
-        : base(deviceStream, sampleRate, stero, processingPipeline, keepOpen) {
+    public FmSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stereo = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
+        : base(deviceStream, sampleRate, stereo, processingPipeline, keepOpen) {
     }
 
     public override int Read(float[] buffer, int offset, int count) {

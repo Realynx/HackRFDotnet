@@ -11,30 +11,33 @@ namespace BasicScanner.Services;
 public unsafe class SpectrumDisplayService {
     private IQ[] _displayBuffer = [];
 
+    // This idea doesn't work so well with these colors :c
     private readonly short[] _rainbowColors =
     [
-        0x0004,           // red
-        0x0004,           // red
-        0x0006,           // yellow (red + green)
-        0x0006,           // yellow (red + green)
-        0x0002,           // green
-        0x0002,           // green
-        0x0003,           // cyan (green + blue)
-        0x0003,           // cyan (green + blue)
-        0x0001,           // blue
-        0x0001,           // blue
-        0x0005,           // magenta (red + blue)
-        0x0005,           // magenta (red + blue)
-        0x0008 | 0x0004,  // bright red
-        0x0008 | 0x0004,  // bright red
-        0x0008 | 0x0001,  // bright blue
-        0x0008 | 0x0001,  // bright blue
+        // Red Orange Yellow Green Blue Idagao Violet
+        (short)ConsoleColor.DarkRed,
+        //(short)ConsoleColor.Red,
+        //(short)ConsoleColor.DarkYellow,
+        //(short)ConsoleColor.Yellow,
+        //(short)ConsoleColor.Green,
+        //(short)ConsoleColor.Cyan,
+        //(short)ConsoleColor.DarkBlue,
+        //(short)ConsoleColor.DarkMagenta,
     ];
+
+    private readonly char[] _intensityChars =
+    {
+        //'·',   // very light dot
+        '˙',   // slightly heavier dot
+        '░',   // light shade
+        '▒',   // medium shade
+        '▓',   // dark shade
+        '█',   // full block
+    };
 
 
 
     public SpectrumDisplayService() {
-
     }
 
     private void SurfChannels(DigitalRadioDevice rfDevice) {
@@ -48,7 +51,7 @@ public unsafe class SpectrumDisplayService {
             }
 
             rfDevice.SetFrequency(newFrequency);
-            Thread.Sleep(150);
+            Thread.Sleep(20);
         }
     }
 
@@ -90,10 +93,10 @@ public unsafe class SpectrumDisplayService {
             Bottom = (short)(maxHeight - 1)
         };
 
-        var block = '█';
         var empty = ' ';
         Console.CursorVisible = false;
 
+        var rainbowWidth = maxWidth;
         while (!cancellationToken.IsCancellationRequested) {
             // 120 FPS
             Thread.Sleep(1000 / 120);
@@ -111,7 +114,8 @@ public unsafe class SpectrumDisplayService {
                 var power = (int)Math.Clamp(db, 0, maxHeight);
 
                 for (var i = 0; i < power; i++) {
-                    spectrumMatrix[x, i] = block;
+                    var level = (int)(i / (float)power * (_intensityChars.Length - 1));
+                    spectrumMatrix[x, i] = _intensityChars[level];
                 }
 
                 for (var i = power; i < maxHeight; i++) {
@@ -121,10 +125,12 @@ public unsafe class SpectrumDisplayService {
 
             for (var y = 0; y < maxHeight; y++) {
                 for (var x = 0; x < maxWidth; x++) {
+                    var color = ((int)(x / (float)rainbowWidth * (_rainbowColors.Length - 1))) % _rainbowColors.Length;
+
                     var bufferIndex = (y * maxWidth) + x;
                     var matrixY = maxHeight - 1 - y;
                     buffer[bufferIndex].UnicodeChar = spectrumMatrix[x, matrixY];
-                    buffer[bufferIndex].Attributes = _rainbowColors[(maxHeight - y) % _rainbowColors.Length];
+                    buffer[bufferIndex].Attributes = _rainbowColors[color];
                 }
             }
 

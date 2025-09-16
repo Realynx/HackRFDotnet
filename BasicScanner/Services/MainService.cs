@@ -83,7 +83,7 @@ internal class MainService : IHostedService {
 
         // Create a signal stream and configure it with our effects pipeline,
         // it will allow us to read from it as a stream with pre-demoulated results, like a StreamReader
-        var fmSignalStream = new FmSignalStream(deviceStream, reducedSampleRate, true, processingPipeline: effectsPipeline, keepOpen: false);
+        var fmSignalStream = new FmSignalStream(deviceStream, reducedSampleRate, stereo: true, processingPipeline: effectsPipeline, keepOpen: false);
 
         // And AnaloguePlayer let's us resample and pipe an audio out the speakers.
         var fmPlayer = new AnaloguePlayer(fmSignalStream);
