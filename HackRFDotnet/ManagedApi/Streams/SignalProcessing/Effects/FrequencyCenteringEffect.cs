@@ -13,6 +13,6 @@ public class FrequencyCenteringEffect : SignalEffect, ISignalEffect {
 
     public override int AffectSignal(Span<IQ> signalTheta, int length) {
         SignalUtilities.ApplyFrequencyOffset(signalTheta, _frequencyOffset, _sampleRate);
-        return signalTheta.Length;
+        return length;
     }
 }

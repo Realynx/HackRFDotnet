@@ -13,11 +13,11 @@ using MathNet.Numerics;
 namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 
 /// <summary>
-/// <see cref="ReducerEffect"/> removes extraneous information from your signal using your desired bandwidth.
+/// <see cref="DownSampleEffect"/> removes extraneous information from your signal using your desired bandwidth.
 /// Example: an FM radio's band is around 200 kHz; the minimum sample rate required to represent this is 400 kS/s (400,000 samples per second).
 /// It is recommended that you reduce the sample rate of your audio signal this way before further signal processing to save CPU.
 /// </summary>
-public unsafe class ReducerEffect : SignalEffect, ISignalEffect, IDisposable {
+public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable {
     private readonly SampleRate _iqSampleRate;
     private readonly SampleRate _reducedSampledRate;
 
@@ -27,7 +27,7 @@ public unsafe class ReducerEffect : SignalEffect, ISignalEffect, IDisposable {
 
     private readonly int _decimationFactor;
 
-    public ReducerEffect(SampleRate sampleRate, SampleRate reducedSampleRate, out SampleRate newSampleRate, out int producedChunkSize) {
+    public DownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, out SampleRate newSampleRate, out int producedChunkSize) {
         _iqSampleRate = sampleRate;
         _reducedSampledRate = reducedSampleRate;
 
@@ -41,6 +41,22 @@ public unsafe class ReducerEffect : SignalEffect, ISignalEffect, IDisposable {
         _fftBuffer = new Complex32[SignalStream.PROCESSING_SIZE];
         _fftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftBuffer, true, FftwFlags.Estimate);
         _inverseFftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftBuffer, false, FftwFlags.Estimate);
+    }
+
+    public DownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, int processingSize, out SampleRate newSampleRate, out int producedChunkSize) {
+        _iqSampleRate = sampleRate;
+        _reducedSampledRate = reducedSampleRate;
+
+        var desiredDecFactor = sampleRate.Sps / reducedSampleRate.Sps;
+        var realDeltaC = processingSize / desiredDecFactor;
+        producedChunkSize = BinaryUtilities.NextPowerOfTwo(realDeltaC);
+
+        _decimationFactor = processingSize / producedChunkSize;
+        newSampleRate = new SampleRate(sampleRate.Sps / _decimationFactor);
+
+        _fftBuffer = new Complex32[processingSize];
+        _fftwPlan = new FftwPlan(processingSize, _fftBuffer, true, FftwFlags.Estimate);
+        _inverseFftwPlan = new FftwPlan(processingSize, _fftBuffer, false, FftwFlags.Estimate);
     }
 
     /*

@@ -2,6 +2,7 @@
 
 using HackRFDotnet.ManagedApi;
 using HackRFDotnet.ManagedApi.Streams;
+using HackRFDotnet.ManagedApi.Streams.Device;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 using HackRFDotnet.ManagedApi.Streams.SignalStreams;
@@ -10,7 +11,7 @@ using HackRFDotnet.ManagedApi.Utilities;
 namespace BasicScanner.Services;
 public class SpectrumDisplayService : IDisposable {
     private FrequencyCenteringEffect _frequencyCenteringEffect;
-    private ReducerEffect _reducerEffect;
+    private DownSampleEffect _reducerEffect;
     private FftEffect _fftEffect;
     private IQ[] _displayBuffer = [];
 
@@ -22,75 +23,84 @@ public class SpectrumDisplayService : IDisposable {
         _fftEffect.Dispose();
     }
 
+    private void SurfChannels(DigitalRadioDevice rfDevice) {
+        while (true) {
+            var newFrequency = rfDevice.Frequency + RadioBand.FromKHz(25);
+
+            newFrequency %= RadioBand.FromMHz(110);
+
+            if (newFrequency < RadioBand.FromMHz(80)) {
+                newFrequency = RadioBand.FromMHz(80);
+            }
+
+            rfDevice.SetFrequency(newFrequency);
+            Thread.Sleep(150);
+        }
+    }
+
     public Task StartAsync(DigitalRadioDevice rfDevice, SignalStream signalStream, CancellationToken cancellationToken) {
-        Console.Clear();
-
         //new Thread(() => {
-        //    while (true) {
-        //        var newFrequency = rfDevice.Frequency + RadioBand.FromKHz(25);
-
-        //        newFrequency %= RadioBand.FromMHz(110);
-
-        //        if (newFrequency < RadioBand.FromMHz(80)) {
-        //            newFrequency = RadioBand.FromMHz(80);
-        //        }
-
-        //        rfDevice.SetFrequency(newFrequency);
-        //        Thread.Sleep(150);
-        //    }
+        //  SurfChannels(rfDevice);
         //}).Start();
 
+        Console.Clear();
 
         var processingSize = 65536;
         _displayBuffer = new IQ[processingSize];
 
-        _reducerEffect = new ReducerEffect(signalStream.SampleRate, signalStream.BandWidth.NyquistSampleRate,
-            out var newSampleRate, out var producedChunkSize);
+        var effectsPipeline = new SignalProcessingBuilder()
+        .AddSignalEffect(new DownSampleEffect(signalStream.SampleRate, rfDevice.Bandwidth.NyquistSampleRate,
+            processingSize, out var reducedSampleRate, out var producedChunkSize))
+        .AddSignalEffect(new FrequencyCenteringEffect(RadioBand.FromKHz(-100), reducedSampleRate))
+        .AddSignalEffect(new FftEffect(true, producedChunkSize))
+        .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, rfDevice.Bandwidth))
+        .BuildPipeline();
 
+        var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, reducedSampleRate);
         var magnitudes = new float[producedChunkSize];
 
-        _fftEffect = new FftEffect(true, producedChunkSize);
-        _frequencyCenteringEffect = new FrequencyCenteringEffect(RadioBand.FromKHz(-100), newSampleRate);
-
-        var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, newSampleRate);
         var spectrumBuilder = new StringBuilder();
+        var columns = new string[Console.WindowWidth - 16];
+        float? average = null;
         while (true) {
             spectrumBuilder.Clear();
             Console.CursorVisible = false;
             Console.CursorTop = 0;
             Console.CursorLeft = 0;
 
-            spectrumBuilder.AppendLine($"{rfDevice.Frequency.Mhz}");
-
             signalStream.ReadSpan(_displayBuffer.AsSpan());
-            var chunk = _reducerEffect.AffectSignal(_displayBuffer.AsSpan(), processingSize);
-
-            _frequencyCenteringEffect.AffectSignal(_displayBuffer.AsSpan(), chunk);
-            _fftEffect.AffectSignal(_displayBuffer.AsSpan(), chunk);
+            var chunk = effectsPipeline.ApplyPipeline(_displayBuffer.AsSpan());
 
             for (var y = 0; y < chunk; y++) {
                 magnitudes[y] = _displayBuffer[y].Magnitude;
             }
 
-            Array.Sort(magnitudes);
-            var average = _displayBuffer.Average(i => i.Magnitude) / 5;
-            var maxHeight = 200;
+            var maxHeight = Console.WindowHeight - 16;
+            average ??= _displayBuffer.Average(i => i.Magnitude) / 5;
 
-            for (var x = 0; x < producedChunkSize; x++) {
+            for (var x = 0; x < producedChunkSize; x += producedChunkSize / columns.Length) {
                 var freq = RadioBand.FromHz(resolution * x);
-                if (x % 4 == 0 && freq < RadioBand.FromKHz(300)) {
-                    if (average == 0) {
+
+                var power = maxHeight / (_displayBuffer[x].Magnitude / average);
+                power *= maxHeight;
+                power = power < maxHeight ? power : maxHeight;
+
+                var binString = new string('█', (int)power);
+                binString += new string(' ', maxHeight - (int)power);
+                columns[x % columns.Length] = binString;
+            }
+
+            for (var y = maxHeight - 1; y >= 0; y--) {
+                for (var x = 0; x < columns.Length - 1; x++) {
+                    if (columns[x] is null) {
+                        spectrumBuilder.Append(' ');
                         continue;
                     }
 
-                    var dotCount = _displayBuffer[x].Magnitude / average;
-                    dotCount = dotCount is float.NaN ? 0f : dotCount;
-
-                    spectrumBuilder.Append(new string('*', (int)(dotCount > maxHeight ? maxHeight : dotCount)));
-                    spectrumBuilder.AppendLine(new string(' ', maxHeight));
+                    spectrumBuilder.Append(columns[x][y]);
                 }
+                spectrumBuilder.AppendLine(columns[columns.Length - 1]);
             }
-
             Console.WriteLine(spectrumBuilder);
         }
     }

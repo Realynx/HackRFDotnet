@@ -33,10 +33,7 @@ internal class MainService : IHostedService {
             return Task.CompletedTask;
         }
 
-
-
         //rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
-
         //rfDevice.StartRecordingToFile("Recording.bin");
 
         //var rfFileStream = new RfFileStream("Recording.bin");
@@ -49,7 +46,7 @@ internal class MainService : IHostedService {
         FrquencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
         //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
 
-        //DisplaySpectrumCliBasic(rfDevice, deviceStream);
+        DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
         ControlChannel(rfDevice);
         return Task.CompletedTask;
@@ -64,8 +61,8 @@ internal class MainService : IHostedService {
             // Reducer decimates your signal down to it's bandwidth. Since our signal has been frequency shifted by the SDR mixer
             // our target frequency has been shifted to Direct Current (DC).
             // Meaning we don't need any more sample rate than the band of the signal to represent it in the time domain,
-            // so we "Reduce" it's externaous information
-            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate,
+            // so we "Reduce" it's extraneous information
+            .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
                 rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
             .AddSignalEffect(new SquelchEffect(reducedSampleRate))
@@ -102,7 +99,7 @@ internal class MainService : IHostedService {
         rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(10));
 
         var effectsPipeline = new SignalProcessingBuilder()
-            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate,
+            .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
                 rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
             .AddSignalEffect(new SquelchEffect(reducedSampleRate))
@@ -118,7 +115,6 @@ internal class MainService : IHostedService {
         amPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
     }
 
-    private Thread _thread;
     private void DisplaySpectrumCliBasic(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         var _thread = new Thread(async () => {
             var signalStream = new SignalStream(deviceStream);
