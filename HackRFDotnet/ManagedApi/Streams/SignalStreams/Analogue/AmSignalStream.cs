@@ -6,8 +6,9 @@ using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 public class AmSignalStream : WaveSignalStream {
-    public AmSignalStream(IIQStream deviceStream, bool stero = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
-        : base(deviceStream, stero, processingPipeline, keepOpen) {
+    public AmSignalStream(IIQStream deviceStream, SampleRate sampleRate,
+        SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
+        : base(deviceStream, sampleRate, false, processingPipeline, keepOpen) {
     }
 
     public override int Read(float[] buffer, int offset, int count) {
@@ -16,7 +17,7 @@ public class AmSignalStream : WaveSignalStream {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
             for (var i = 0; i < count; i++) {
-                buffer[i] = (float)iqBuffer[i].Magnitude;
+                buffer[i] = iqBuffer[i].Magnitude;
             }
 
             return count;

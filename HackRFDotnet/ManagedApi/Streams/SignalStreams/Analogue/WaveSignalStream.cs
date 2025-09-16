@@ -2,27 +2,23 @@
 
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 using HackRFDotnet.ManagedApi.Utilities;
 
 using NAudio.Wave;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
-    private readonly FftEffect _fft;
-    private readonly FftEffect _fftinverse;
 
     public WaveFormat? WaveFormat { get; protected set; }
-    public WaveSignalStream(IIQStream deviceStream, bool stero = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
+    public WaveSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stero = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
         : base(deviceStream, processingPipeline, keepOpen) {
-        var sampleRate = BandWidth.Hz;
+
+        var rate = sampleRate.Sps;
         if (stero) {
-            sampleRate /= 2;
+            rate /= 2;
         }
 
-        _fft = new FftEffect(true);
-        _fftinverse = new FftEffect(false);
-        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat(sampleRate, stero ? 2 : 1);
+        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat(rate, stero ? 2 : 1);
     }
 
     public virtual int Read(float[] buffer, int offset, int count) {
@@ -64,28 +60,6 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
         for (var x = 0; x < buffer.Length; x++) {
             buffer[x] *= gain;
         }
-    }
-
-    protected void RemoveNoiseFloor(Span<IQ> buffer) {
-
-        _fft.AffectSignal(buffer, buffer.Length);
-
-        var magnitudes = new float[buffer.Length];
-        for (var x = 0; x < buffer.Length; x++) {
-            magnitudes[x] = buffer[x].Magnitude;
-        }
-
-        Array.Sort(magnitudes);
-        var index = (int)(magnitudes.Length * .2f);
-        var noiseFloor = magnitudes[index - 1];
-
-        for (var x = 0; x < buffer.Length; x++) {
-            if (buffer[x].Magnitude <= noiseFloor) {
-                buffer[x] = IQ.Zero;
-            }
-        }
-
-        _fftinverse.AffectSignal(buffer, buffer.Length);
     }
 
     protected void Squelch(Span<IQ> buffer) {

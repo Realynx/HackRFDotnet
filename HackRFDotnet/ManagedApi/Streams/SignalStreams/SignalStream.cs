@@ -1,7 +1,6 @@
 ﻿using HackRFDotnet.ManagedApi.Streams.Buffers;
 using HackRFDotnet.ManagedApi.Streams.Interfaces;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-using HackRFDotnet.ManagedApi.Utilities;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
 public class SignalStream : IDisposable {
@@ -48,7 +47,7 @@ public class SignalStream : IDisposable {
 
             var sampleCount = PROCESSING_SIZE;
             if (_processingPipeline != null) {
-                sampleCount = _processingPipeline.ApplyPipeline(convertedPairs);
+                sampleCount = _processingPipeline.ApplyPipeline(convertedPairs.AsSpan());
             }
 
             lock (_filteredBuffer) {

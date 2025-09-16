@@ -49,14 +49,15 @@ internal class MainService : IHostedService {
         FrquencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
         //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
 
-        DisplaySpectrumCliBasic(rfDevice, deviceStream);
+        //DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
         ControlChannel(rfDevice);
         return Task.CompletedTask;
     }
 
     private static void FrquencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f));
+        rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
+        //rfDevice.SetFrequency(RadioBand.FromMHz(98.7f));
 
         // We must build an effects pipeline to clean up our recived signal from the SDR.
         var effectsPipeline = new SignalProcessingBuilder()
@@ -64,20 +65,24 @@ internal class MainService : IHostedService {
             // our target frequency has been shifted to Direct Current (DC).
             // Meaning we don't need any more sample rate than the band of the signal to represent it in the time domain,
             // so we "Reduce" it's externaous information
-            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(200).NyquistSampleRate, out var reducedSampleRate))
+            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate,
+                RadioBand.FromKHz(20).NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
             // Fast Fourier Transform from the Time domain signal to the Frequency domain
-            .AddSignalEffect(new FftEffect(true))
+            .AddSignalEffect(new FftEffect(true, producedChunkSize))
+
             // Low pass filter our band (Since we are mixed to DC, we only need to low pass filter the signal it gets affected on + and -)
-            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(200)))
+            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(20)))
+
             // Inverse Fast Fourier Transform from the Frequency domain back to the Time domain.
-            .AddSignalEffect(new FftEffect(false))
+            .AddSignalEffect(new FftEffect(false, producedChunkSize))
+
             // Compile our effect pipeline
             .BuildPipeline();
 
         // Create a signal stream and configure it with our effects pipeline,
         // it will allow us to read from it as a stream with pre-demoulated results, like a StreamReader
-        var fmSignalStream = new FmSignalStream(deviceStream, true, processingPipeline: effectsPipeline, keepOpen: false);
+        var fmSignalStream = new FmSignalStream(deviceStream, reducedSampleRate, true, processingPipeline: effectsPipeline, keepOpen: false);
 
         // And AnaloguePlayer let's us resample and pipe an audio out the speakers.
         var fmPlayer = new AnaloguePlayer(fmSignalStream);
@@ -85,7 +90,6 @@ internal class MainService : IHostedService {
     }
 
     private static void AmplitudeDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
         //rfDevice.SetFrequency(RadioBand.FromMHz(125.150f), RadioBand.FromKHz(8));
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.4f), RadioBand.FromKHz(20));
 
@@ -94,26 +98,32 @@ internal class MainService : IHostedService {
         //    RadioBand.FromMHz(119.250f), RadioBand.FromMHz(119.450f), RadioBand.FromMHz(121.800f),
         //    RadioBand.FromMHz(124.05f), RadioBand.FromMHz(125.150f), RadioBand.FromMHz(135f));
 
-        rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(8));
+        rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(20));
 
         var effectsPipeline = new SignalProcessingBuilder()
-            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate, RadioBand.FromKHz(8).NyquistSampleRate, out var reducedSampleRate))
-            .AddSignalEffect(new FftEffect(true))
+            .AddSignalEffect(new ReducerEffect(deviceStream.SampleRate,
+                RadioBand.FromKHz(8).NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
+
+            .AddSignalEffect(new FftEffect(true, producedChunkSize))
             .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(8)))
-            .AddSignalEffect(new FftEffect(false))
+            .AddSignalEffect(new FftEffect(false, producedChunkSize))
+
             .BuildPipeline();
 
-        var amSignalStream = new AmSignalStream(deviceStream, true, processingPipeline: effectsPipeline, keepOpen: false);
+        var amSignalStream = new AmSignalStream(deviceStream, reducedSampleRate, effectsPipeline, keepOpen: false);
 
         var amPlayer = new AnaloguePlayer(amSignalStream);
         amPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
     }
 
+    private Thread _thread;
     private void DisplaySpectrumCliBasic(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        new Thread(async () => {
-            using var signalStream = new SignalStream(deviceStream);
+        var _thread = new Thread(async () => {
+            var signalStream = new SignalStream(deviceStream);
             await _spectrumDisplayService.StartAsync(rfDevice, signalStream, new CancellationTokenSource().Token);
-        }).Start();
+        });
+
+        _thread.Start();
     }
 
     private static void ControlChannel(DigitalRadioDevice rfDevice) {

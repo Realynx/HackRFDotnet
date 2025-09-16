@@ -8,30 +8,22 @@ using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 using HackRFDotnet.ManagedApi.Utilities;
 
 namespace BasicScanner.Services;
-public class SpectrumDisplayService {
-    private readonly FftEffect _fft = new FftEffect(true);
-    private readonly FftEffect _fftInvert = new FftEffect(false);
+public class SpectrumDisplayService : IDisposable {
     private FrequencyCenteringEffect _frequencyCenteringEffect;
+    private ReducerEffect _reducerEffect;
+    private FftEffect _fftEffect;
+    private IQ[] _displayBuffer = [];
+
     public SpectrumDisplayService() {
 
     }
 
+    public void Dispose() {
+        _fftEffect.Dispose();
+    }
+
     public Task StartAsync(DigitalRadioDevice rfDevice, SignalStream signalStream, CancellationToken cancellationToken) {
         Console.Clear();
-        // we want to move our frequency a bit so the spectrum can see it
-        // otherwise DC is our base the spectrum would see half
-
-        _frequencyCenteringEffect = new FrequencyCenteringEffect(RadioBand.FromKHz(100), signalStream.SampleRate);
-
-
-        var bufferChunk = 4096;
-        var decimationFactor = signalStream.SampleRate.Sps / signalStream.BandWidth.Hz;
-        var fftChunksize = bufferChunk * decimationFactor;
-
-        var iqSamples = new IQ[16384];
-        var magnitudes = new float[iqSamples.Length];
-
-        var resolution = SignalUtilities.FrequencyResolution(iqSamples.Length, signalStream.SampleRate);
 
         //new Thread(() => {
         //    while (true) {
@@ -48,6 +40,19 @@ public class SpectrumDisplayService {
         //    }
         //}).Start();
 
+
+        var processingSize = 65536;
+        _displayBuffer = new IQ[processingSize];
+
+        _reducerEffect = new ReducerEffect(signalStream.SampleRate, signalStream.BandWidth.NyquistSampleRate,
+            out var newSampleRate, out var producedChunkSize);
+
+        var magnitudes = new float[producedChunkSize];
+
+        _fftEffect = new FftEffect(true, producedChunkSize);
+        _frequencyCenteringEffect = new FrequencyCenteringEffect(RadioBand.FromKHz(-100), newSampleRate);
+
+        var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, newSampleRate);
         var spectrumBuilder = new StringBuilder();
         while (true) {
             spectrumBuilder.Clear();
@@ -57,36 +62,35 @@ public class SpectrumDisplayService {
 
             spectrumBuilder.AppendLine($"{rfDevice.Frequency.Mhz}");
 
-            signalStream.ReadSpan(iqSamples);
-            _frequencyCenteringEffect.AffectSignal(iqSamples, iqSamples.Length);
+            signalStream.ReadSpan(_displayBuffer.AsSpan());
+            var chunk = _reducerEffect.AffectSignal(_displayBuffer.AsSpan(), processingSize);
 
-            _fft.AffectSignal(iqSamples, iqSamples.Length);
+            _frequencyCenteringEffect.AffectSignal(_displayBuffer.AsSpan(), chunk);
+            _fftEffect.AffectSignal(_displayBuffer.AsSpan(), chunk);
 
-            for (var y = 0; y < iqSamples.Length; y++) {
-                magnitudes[y] = (float)iqSamples[y].Magnitude;
+            for (var y = 0; y < chunk; y++) {
+                magnitudes[y] = _displayBuffer[y].Magnitude;
             }
+
             Array.Sort(magnitudes);
+            var average = _displayBuffer.Average(i => i.Magnitude) / 5;
+            var maxHeight = 200;
 
-            var index = (int)(magnitudes.Length * .2f);
-            var noiseFloor = magnitudes[index - 1];
-            // var averageLevel = SignalUtilities.CalculateDb(iqSamples) / 2;
-            var average = iqSamples.Average(i => i.Magnitude) / 5;
-            var maxHeight = 400;
-
-            for (var x = 0; x < iqSamples.Length; x++) {
-                var freq = RadioBand.FromHz((int)(resolution * x));
-                // var level = 10f * (float)MathF.Log10(iqSamples[x].Magnitude + 1e-12f);
-
-                if (freq < RadioBand.FromKHz(250)) {
+            for (var x = 0; x < producedChunkSize; x++) {
+                var freq = RadioBand.FromHz(resolution * x);
+                if (x % 4 == 0 && freq < RadioBand.FromKHz(300)) {
                     if (average == 0) {
                         continue;
                     }
 
-                    var ticks = iqSamples[x].Magnitude / average;
-                    spectrumBuilder.Append(new string('*', (int)(ticks > maxHeight ? maxHeight : ticks)));
+                    var dotCount = _displayBuffer[x].Magnitude / average;
+                    dotCount = dotCount is float.NaN ? 0f : dotCount;
+
+                    spectrumBuilder.Append(new string('*', (int)(dotCount > maxHeight ? maxHeight : dotCount)));
                     spectrumBuilder.AppendLine(new string(' ', maxHeight));
                 }
             }
+
             Console.WriteLine(spectrumBuilder);
         }
     }

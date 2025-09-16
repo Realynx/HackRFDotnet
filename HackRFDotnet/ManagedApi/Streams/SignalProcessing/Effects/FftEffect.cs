@@ -5,20 +5,29 @@ using FftwF.Dotnet;
 using MathNet.Numerics;
 
 namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
-public unsafe class FftEffect : SignalEffect {
+public unsafe class FftEffect : SignalEffect, IDisposable {
     private readonly bool _forward;
+    private readonly Complex32[] _processingChunk = [];
+    private readonly FftwPlan _fftwPlan;
 
-    public FftEffect(bool forward) {
+    public FftEffect(bool forward, int chunkSize) {
         _forward = forward;
+
+        _processingChunk = new Complex32[chunkSize];
+        _fftwPlan = new FftwPlan(chunkSize, _processingChunk.AsSpan(), _forward, FftwFlags.Measure);
     }
 
     public override int AffectSignal(Span<IQ> signalTheta, int length) {
-        var complexFrame = signalTheta
-            .Slice(0, length);
+        var complexFrame = signalTheta.Slice(0, length);
 
-        using var plan = new FftwPlan(length, MemoryMarshal.Cast<IQ, Complex32>(complexFrame), _forward, FftwFlags.Estimate);
-        plan.Execute();
+        MemoryMarshal.Cast<IQ, Complex32>(complexFrame).CopyTo(_processingChunk);
+        _fftwPlan.Execute();
+        MemoryMarshal.Cast<Complex32, IQ>(_processingChunk).CopyTo(signalTheta);
 
         return length;
+    }
+
+    public void Dispose() {
+        _fftwPlan.Dispose();
     }
 }

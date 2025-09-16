@@ -4,6 +4,8 @@ using System.Numerics;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
 using HackRFDotnet.ManagedApi.Utilities;
 
+using MathNet.Numerics;
+
 namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 public class LowPassFilterEffect : SignalEffect, ISignalEffect {
     private readonly SampleRate _sampleRate;
@@ -20,14 +22,13 @@ public class LowPassFilterEffect : SignalEffect, ISignalEffect {
     }
 
     public override int AffectSignal(Span<IQ> signalTheta, int length) {
-        var resolution = SignalUtilities.FrequencyResolution(length, _sampleRate);
+        var resolution = SignalUtilities.FrequencyResolution(length, _sampleRate, false);
 
         for (var x = 0; x < length; x++) {
-
-            var currentFreq = x * resolution;
-
-            if (currentFreq > _bandwith.Hz + (_bandwith.Hz / 2)) {
-                signalTheta[x] = Complex.Zero;
+            var freq = (x < length / 2) ? x * resolution : (x - length) * resolution;
+            var bandwidth = _bandwith.Hz;
+            if (Math.Abs(freq) > bandwidth) {
+                signalTheta[x] = IQ.Zero;
             }
         }
         return length;
