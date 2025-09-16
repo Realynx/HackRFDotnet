@@ -59,9 +59,15 @@ public unsafe class SpectrumDisplayService {
         //new Thread(() => {
         //    SurfChannels(rfDevice);
         //}).Start();
-
         Console.Clear();
-        var spectrumSize = RadioBand.FromMHz(1);
+
+        var maxHeight = Console.WindowHeight;
+        var maxWidth = Console.WindowWidth;
+        var spectrumMatrix = new char[maxWidth, maxHeight];
+        var buffer = new CHAR_INFO[maxWidth * maxHeight];
+
+
+        var spectrumSize = RadioBand.FromKHz(maxWidth);
         var processingSize = 65536;
         _displayBuffer = new IQ[processingSize];
 
@@ -78,10 +84,7 @@ public unsafe class SpectrumDisplayService {
         float? average = null;
 
 
-        var maxHeight = Console.WindowHeight;
-        var maxWidth = Console.WindowWidth;
-        var spectrumMatrix = new char[maxWidth, maxHeight];
-        var buffer = new CHAR_INFO[maxWidth * maxHeight];
+
 
         var consoleHandle = kernel32Methods.GetStdHandle(kernel32Methods.STD_OUTPUT_HANDLE);
         var bufferSize = new COORD((short)maxWidth, (short)maxHeight);
