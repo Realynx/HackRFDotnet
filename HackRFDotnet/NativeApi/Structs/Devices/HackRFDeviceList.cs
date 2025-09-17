@@ -11,27 +11,27 @@ namespace HackRFDotnet.NativeApi.Structs.Devices {
         public char** serial_numbers; // char**
 
         /// <summary>
-        /// ID of each board, based on USB product ID
+        /// ID of each board, based on USB product ID.
         /// </summary>
         public HackrfUsbBoardId* usb_board_ids; // enum hackrf_usb_board_id*
 
         /// <summary>
-        /// USB device index for each HW entry
+        /// USB device index for each HW entry.
         /// </summary>
         public int* usb_device_index; // int*
 
         /// <summary>
-        /// Number of connected HackRF devices
+        /// Number of connected HackRF devices.
         /// </summary>
         public int devicecount;
 
         /// <summary>
-        /// All USB devices (as libusb_device** array)
+        /// All USB devices (as libusb_device** array).
         /// </summary>
         public void** usb_devices; // void**
 
         /// <summary>
-        /// Number of all queried USB devices
+        /// Number of all queried USB devices.
         /// </summary>
         public int usb_devicecount;
     }
