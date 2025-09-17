@@ -6,7 +6,6 @@ using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Utilities;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 namespace BasicScanner.Services;
 public unsafe class SpectrumDisplayService {

@@ -1,6 +1,4 @@
-﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-
-namespace HackRFDotnet.Api;
+﻿namespace HackRFDotnet.Api;
 public class SampleRate : Hertz {
     public SampleRate(long sps) : base(sps) {
     }

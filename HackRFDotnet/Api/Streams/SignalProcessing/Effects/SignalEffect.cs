@@ -1,4 +1,4 @@
-﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces;
+﻿using HackRFDotnet.Api.Streams.SignalProcessing.Interfaces;
 
 namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 public abstract class SignalEffect : ISignalEffect {

@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Exceptions/NullCallbackException.cs
+      path: HackRFDotnet/Api/Streams/Exceptions/NullCallbackException.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: NullCallbackException
-    path: HackRFDotnet/ManagedApi/Streams/Exceptions/NullCallbackException.cs
+    path: HackRFDotnet/Api/Streams/Exceptions/NullCallbackException.cs
     startLine: 1
   assemblies:
   - HackRFDotnet
@@ -63,11 +63,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Exceptions/NullCallbackException.cs
+      path: HackRFDotnet/Api/Streams/Exceptions/NullCallbackException.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/Exceptions/NullCallbackException.cs
+    path: HackRFDotnet/Api/Streams/Exceptions/NullCallbackException.cs
     startLine: 2
   assemblies:
   - HackRFDotnet

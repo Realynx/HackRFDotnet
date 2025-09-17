@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SweepingIQStream.cs
+      path: HackRFDotnet/Api/Streams/SweepingIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SweepingIQStream
-    path: HackRFDotnet/ManagedApi/Streams/SweepingIQStream.cs
+    path: HackRFDotnet/Api/Streams/SweepingIQStream.cs
     startLine: 1
   assemblies:
   - HackRFDotnet
@@ -50,11 +50,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SweepingIQStream.cs
+      path: HackRFDotnet/Api/Streams/SweepingIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/SweepingIQStream.cs
+    path: HackRFDotnet/Api/Streams/SweepingIQStream.cs
     startLine: 2
   assemblies:
   - HackRFDotnet

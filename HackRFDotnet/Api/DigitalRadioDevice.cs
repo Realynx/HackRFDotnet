@@ -1,5 +1,4 @@
 ﻿using HackRFDotnet.Api.Streams.Exceptions;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 using HackRFDotnet.NativeApi.Enums.Peripherals;
 using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;

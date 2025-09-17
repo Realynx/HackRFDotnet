@@ -25,10 +25,17 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HackrfTransfer
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 5
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
+  summary: >-
+    USB transfer information passed to RX or TX callback.
+
+    A callback should treat all these fields as read-only except that a TX callback should write to the data buffer and may write to <xref href="HackRFDotnet.NativeApi.Structs.HackrfTransfer.valid_length" data-throw-if-not-resolved="false"></xref>
+
+    to indicate that a smaller number of bytes is to be transmitted.
+  example: []
   syntax:
     content: public struct HackrfTransfer
     content.vb: Public Structure HackrfTransfer
@@ -57,10 +64,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: device
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 7
+    startLine: 14
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
+  summary: HackRF USB device for this transfer.
   example: []
   syntax:
     content: public HackRFDevice* device
@@ -85,10 +93,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: buffer
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 10
+    startLine: 19
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
+  summary: Transfer data buffer (interleaved 8 bit I/Q samples).
   example: []
   syntax:
     content: public byte* buffer
@@ -113,10 +122,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: buffer_length
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 13
+    startLine: 24
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
+  summary: Length of data buffer in bytes.
   example: []
   syntax:
     content: public int buffer_length
@@ -141,10 +151,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: valid_length
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 16
+    startLine: 29
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
+  summary: Number of buffer bytes that were transferred.
   example: []
   syntax:
     content: public int valid_length
@@ -169,10 +180,14 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: rx_ctx
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 19
+    startLine: 35
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
+  summary: >-
+    User provided RX context. Not used by the library, but available to transfer callbacks for use. Set along with the transfer callback using <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cHackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback%2cSystem.Void*)" data-throw-if-not-resolved="false"></xref>
+
+    or <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cHackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback%2cSystem.Void*)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public void* rx_ctx
@@ -197,10 +212,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: tx_ctx
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 22
+    startLine: 40
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
+  summary: User provided TX context. Not used by the library, but available to transfer callbacks for use. Set along with the transfer callback using <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cHackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback%2cSystem.Void*)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public void* tx_ctx
@@ -208,6 +224,12 @@ items:
       type: System.Void*
     content.vb: Public tx_ctx As Void*
 references:
+- uid: HackRFDotnet.NativeApi.Structs.HackrfTransfer.valid_length
+  commentId: F:HackRFDotnet.NativeApi.Structs.HackrfTransfer.valid_length
+  href: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html#HackRFDotnet_NativeApi_Structs_HackrfTransfer_valid_length
+  name: valid_length
+  nameWithType: HackrfTransfer.valid_length
+  fullName: HackRFDotnet.NativeApi.Structs.HackrfTransfer.valid_length
 - uid: HackRFDotnet.NativeApi.Structs
   commentId: N:HackRFDotnet.NativeApi.Structs
   href: HackRFDotnet.html
@@ -503,6 +525,118 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRx_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__
+  name: StartRx(HackRFDevice*, HackRFSampleBlockCallback, void*)
+  nameWithType: HackRfNativeLib.DeviceStreaming.StartRx(HackRFDevice*, HackRFSampleBlockCallback, void*)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback, void*)
+  nameWithType.vb: HackRfNativeLib.DeviceStreaming.StartRx(HackRFDevice*, HackRFSampleBlockCallback, Void*)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback, Void*)
+  name.vb: StartRx(HackRFDevice*, HackRFSampleBlockCallback, Void*)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
+    name: StartRx
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRx_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
+    name: HackRFSampleBlockCallback
+    href: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
+    name: StartRx
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRx_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
+    name: HackRFSampleBlockCallback
+    href: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  - name: )
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRxSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__
+  name: StartRxSweep(HackRFDevice*, HackRFSampleBlockCallback, void*)
+  nameWithType: HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDevice*, HackRFSampleBlockCallback, void*)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback, void*)
+  nameWithType.vb: HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDevice*, HackRFSampleBlockCallback, Void*)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback, Void*)
+  name.vb: StartRxSweep(HackRFDevice*, HackRFSampleBlockCallback, Void*)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
+    name: StartRxSweep
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRxSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
+    name: HackRFSampleBlockCallback
+    href: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
+    name: StartRxSweep
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRxSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
+    name: HackRFSampleBlockCallback
+    href: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html
+  - name: ','
+  - name: " "
+  - uid: System.Void
+    name: Void
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.void
+  - name: '*'
+  - name: )
 - uid: System.Void*
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.void

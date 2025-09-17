@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingPipeline.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SignalProcessingPipeline
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingPipeline.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs
     startLine: 3
   assemblies:
   - HackRFDotnet
@@ -51,11 +51,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingPipeline.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingPipeline.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs
     startLine: 6
   assemblies:
   - HackRFDotnet
@@ -83,11 +83,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingPipeline.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ApplyPipeline
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingPipeline.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs
     startLine: 10
   assemblies:
   - HackRFDotnet

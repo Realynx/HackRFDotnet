@@ -89,7 +89,7 @@
 
 
   <h1 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_LowPassFilterEffect" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect" class="text-break">
-Class LowPassFilterEffect  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Class LowPassFilterEffect  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -119,7 +119,7 @@ Class LowPassFilterEffect  <a class="header-action link-secondary" title="View s
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><a class="xref" href="HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html">ISignalEffect</a></div>
+      <div><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.html">ISignalEffect</a></div>
     </dd>
   </dl>
 
@@ -161,9 +161,9 @@ Class LowPassFilterEffect  <a class="header-action link-secondary" title="View s
 
   <a id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_LowPassFilterEffect__ctor_" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.#ctor*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_LowPassFilterEffect__ctor_HackRFDotnet_Api_Streams_SignalProcessing_SampleRate_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.#ctor(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)">
-  LowPassFilterEffect(SampleRate, RadioBand)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h3 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_LowPassFilterEffect__ctor_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_Bandwidth_" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.#ctor(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.Bandwidth)">
+  LowPassFilterEffect(SampleRate, Bandwidth)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Apply a low pass filter on the signal. Expects Frequency Domain</p>
@@ -171,14 +171,14 @@ Class LowPassFilterEffect  <a class="header-action link-secondary" title="View s
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LowPassFilterEffect(SampleRate sampleRate, RadioBand bandwith)</code></pre>
+    <pre><code class="lang-csharp hljs">public LowPassFilterEffect(SampleRate sampleRate, Bandwidth bandwith)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.SampleRate.html">SampleRate</a></dt>
+    <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
     <dd></dd>
-    <dt><code>bandwith</code> <a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html">RadioBand</a></dt>
+    <dt><code>bandwith</code> <a class="xref" href="HackRFDotnet.Api.Bandwidth.html">Bandwidth</a></dt>
     <dd></dd>
   </dl>
 
@@ -201,7 +201,7 @@ Class LowPassFilterEffect  <a class="header-action link-secondary" title="View s
 
   <h3 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_LowPassFilterEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)">
   AffectSignal(Span&lt;IQ&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -239,7 +239,7 @@ Class LowPassFilterEffect  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

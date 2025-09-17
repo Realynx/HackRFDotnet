@@ -4,8 +4,20 @@ items:
   name: HackRFDotnet.Api
   type: Namespace
   items:
+  - uid: HackRFDotnet.Api.Bandwidth
+    name: Bandwidth
+    type: Class
   - uid: HackRFDotnet.Api.DigitalRadioDevice
     name: DigitalRadioDevice
+    type: Class
+  - uid: HackRFDotnet.Api.Hertz
+    name: Hertz
+    type: Class
+  - uid: HackRFDotnet.Api.RadioBand
+    name: RadioBand
+    type: Class
+  - uid: HackRFDotnet.Api.SampleRate
+    name: SampleRate
     type: Class
 - uid: HackRFDotnet.Api.Extensions
   name: HackRFDotnet.Api.Extensions
@@ -68,12 +80,6 @@ items:
   name: HackRFDotnet.Api.Streams.SignalProcessing
   type: Namespace
   items:
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-    name: RadioBand
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-    name: SampleRate
-    type: Class
   - uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
     name: SignalProcessingBuilder
     type: Class
@@ -105,6 +111,13 @@ items:
   - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect
     name: SquelchEffect
     type: Class
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  name: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  type: Namespace
+  items:
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
+    name: ISignalEffect
+    type: Interface
 - uid: HackRFDotnet.Api.Streams.SignalStreams
   name: HackRFDotnet.Api.Streams.SignalStreams
   type: Namespace
@@ -145,13 +158,6 @@ items:
   - uid: HackRFDotnet.Api.Utilities.SignalUtilities
     name: SignalUtilities
     type: Class
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  type: Namespace
-  items:
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
-    name: ISignalEffect
-    type: Interface
 - uid: HackRFDotnet.NativeApi
   name: HackRFDotnet.NativeApi
   type: Namespace

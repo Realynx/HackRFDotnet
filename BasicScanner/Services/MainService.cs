@@ -7,7 +7,6 @@ using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 using HackRFDotnet.Api.Streams.SignalStreams.Digital;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 using Microsoft.Extensions.Hosting;
 

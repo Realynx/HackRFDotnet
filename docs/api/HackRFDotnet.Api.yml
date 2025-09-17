@@ -4,7 +4,11 @@ items:
   commentId: N:HackRFDotnet.Api
   id: HackRFDotnet.Api
   children:
+  - HackRFDotnet.Api.Bandwidth
   - HackRFDotnet.Api.DigitalRadioDevice
+  - HackRFDotnet.Api.Hertz
+  - HackRFDotnet.Api.RadioBand
+  - HackRFDotnet.Api.SampleRate
   langs:
   - csharp
   - vb
@@ -15,6 +19,13 @@ items:
   assemblies:
   - HackRFDotnet
 references:
+- uid: HackRFDotnet.Api.Bandwidth
+  commentId: T:HackRFDotnet.Api.Bandwidth
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Bandwidth.html
+  name: Bandwidth
+  nameWithType: Bandwidth
+  fullName: HackRFDotnet.Api.Bandwidth
 - uid: HackRFDotnet.Api.DigitalRadioDevice
   commentId: T:HackRFDotnet.Api.DigitalRadioDevice
   parent: HackRFDotnet.Api
@@ -22,6 +33,27 @@ references:
   name: DigitalRadioDevice
   nameWithType: DigitalRadioDevice
   fullName: HackRFDotnet.Api.DigitalRadioDevice
+- uid: HackRFDotnet.Api.Hertz
+  commentId: T:HackRFDotnet.Api.Hertz
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Hertz.html
+  name: Hertz
+  nameWithType: Hertz
+  fullName: HackRFDotnet.Api.Hertz
+- uid: HackRFDotnet.Api.RadioBand
+  commentId: T:HackRFDotnet.Api.RadioBand
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.RadioBand.html
+  name: RadioBand
+  nameWithType: RadioBand
+  fullName: HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.SampleRate.html
+  name: SampleRate
+  nameWithType: SampleRate
+  fullName: HackRFDotnet.Api.SampleRate
 - uid: HackRFDotnet.Api
   commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html

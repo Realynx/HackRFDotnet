@@ -5,7 +5,7 @@ items:
   id: BasicSignalScanningEffect
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects
   children:
-  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand[])
+  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   langs:
   - csharp
@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BasicSignalScanningEffect
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
     startLine: 1
   assemblies:
   - HackRFDotnet
@@ -32,7 +32,7 @@ items:
   - System.Object
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
   implements:
-  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  - HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -41,42 +41,42 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand[])
-  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand[])
-  id: '#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand[])'
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])
+  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])
+  id: '#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])'
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
   langs:
   - csharp
   - vb
-  name: BasicSignalScanningEffect(DigitalRadioDevice, RadioBand, RadioBand[])
-  nameWithType: BasicSignalScanningEffect.BasicSignalScanningEffect(DigitalRadioDevice, RadioBand, RadioBand[])
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.BasicSignalScanningEffect(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, HackRFDotnet.Api.Streams.SignalProcessing.RadioBand[])
+  name: BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, RadioBand[])
+  nameWithType: BasicSignalScanningEffect.BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, RadioBand[])
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.BasicSignalScanningEffect(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.RadioBand[])
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
     startLine: 11
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
   syntax:
-    content: public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, RadioBand bandwidth, RadioBand[] scanChannels)
+    content: public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, RadioBand[] scanChannels)
     parameters:
     - id: digitalRadioDevice
       type: HackRFDotnet.Api.DigitalRadioDevice
     - id: bandwidth
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      type: HackRFDotnet.Api.Bandwidth
     - id: scanChannels
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand[]
-    content.vb: Public Sub New(digitalRadioDevice As DigitalRadioDevice, bandwidth As RadioBand, scanChannels As RadioBand())
+      type: HackRFDotnet.Api.RadioBand[]
+    content.vb: Public Sub New(digitalRadioDevice As DigitalRadioDevice, bandwidth As Bandwidth, scanChannels As RadioBand())
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor*
-  nameWithType.vb: BasicSignalScanningEffect.New(DigitalRadioDevice, RadioBand, RadioBand())
-  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.New(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, HackRFDotnet.Api.Streams.SignalProcessing.RadioBand())
-  name.vb: New(DigitalRadioDevice, RadioBand, RadioBand())
+  nameWithType.vb: BasicSignalScanningEffect.New(DigitalRadioDevice, Bandwidth, RadioBand())
+  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.New(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.RadioBand())
+  name.vb: New(DigitalRadioDevice, Bandwidth, RadioBand())
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   id: AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
@@ -90,11 +90,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AffectSignal
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs
     startLine: 17
   assemblies:
   - HackRFDotnet
@@ -180,13 +180,13 @@ references:
   name: SignalEffect
   nameWithType: SignalEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
-  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
-  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
+  parent: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.html
   name: ISignalEffect
   nameWithType: ISignalEffect
-  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -413,55 +413,55 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
   href: HackRFDotnet.html
-  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  name: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
   spec.csharp:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi
-    name: ManagedApi
-    href: HackRFDotnet.ManagedApi.html
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams
+  - uid: HackRFDotnet.Api.Streams
     name: Streams
-    href: HackRFDotnet.ManagedApi.Streams.html
+    href: HackRFDotnet.Api.Streams.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
   spec.vb:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi
-    name: ManagedApi
-    href: HackRFDotnet.ManagedApi.html
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams
+  - uid: HackRFDotnet.Api.Streams
     name: Streams
-    href: HackRFDotnet.ManagedApi.Streams.html
+    href: HackRFDotnet.Api.Streams.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor
-  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_HackRFDotnet_Api_DigitalRadioDevice_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand___
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_HackRFDotnet_Api_DigitalRadioDevice_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_RadioBand___
   name: BasicSignalScanningEffect
   nameWithType: BasicSignalScanningEffect.BasicSignalScanningEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.BasicSignalScanningEffect
@@ -475,32 +475,32 @@ references:
   name: DigitalRadioDevice
   nameWithType: DigitalRadioDevice
   fullName: HackRFDotnet.Api.DigitalRadioDevice
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand[]
+- uid: HackRFDotnet.Api.Bandwidth
+  commentId: T:HackRFDotnet.Api.Bandwidth
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Bandwidth.html
+  name: Bandwidth
+  nameWithType: Bandwidth
+  fullName: HackRFDotnet.Api.Bandwidth
+- uid: HackRFDotnet.Api.RadioBand[]
   isExternal: true
-  href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
+  href: HackRFDotnet.Api.RadioBand.html
   name: RadioBand[]
   nameWithType: RadioBand[]
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand[]
+  fullName: HackRFDotnet.Api.RadioBand[]
   nameWithType.vb: RadioBand()
-  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand()
+  fullName.vb: HackRFDotnet.Api.RadioBand()
   name.vb: RadioBand()
   spec.csharp:
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+  - uid: HackRFDotnet.Api.RadioBand
     name: RadioBand
-    href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
+    href: HackRFDotnet.Api.RadioBand.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+  - uid: HackRFDotnet.Api.RadioBand
     name: RadioBand
-    href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
+    href: HackRFDotnet.Api.RadioBand.html
   - name: (
   - name: )
 - uid: HackRFDotnet.Api
@@ -525,44 +525,6 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-- uid: HackRFDotnet.Api.Streams.SignalProcessing
-  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalProcessing
-  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect

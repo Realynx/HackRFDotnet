@@ -90,7 +90,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: ID of each board, based on USB product ID
+  summary: ID of each board, based on USB product ID.
   example: []
   syntax:
     content: public HackrfUsbBoardId* usb_board_ids
@@ -119,7 +119,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: USB device index for each HW entry
+  summary: USB device index for each HW entry.
   example: []
   syntax:
     content: public int* usb_device_index
@@ -148,7 +148,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: Number of connected HackRF devices
+  summary: Number of connected HackRF devices.
   example: []
   syntax:
     content: public int devicecount
@@ -177,7 +177,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: All USB devices (as libusb_device** array)
+  summary: All USB devices (as libusb_device** array).
   example: []
   syntax:
     content: public void** usb_devices
@@ -206,7 +206,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: Number of all queried USB devices
+  summary: Number of all queried USB devices.
   example: []
   syntax:
     content: public int usb_devicecount

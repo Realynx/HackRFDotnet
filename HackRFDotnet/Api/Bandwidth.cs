@@ -1,6 +1,4 @@
-﻿using HackRFDotnet.Api;
-
-namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+﻿namespace HackRFDotnet.Api;
 public class Bandwidth : Hertz {
     public SampleRate NyquistSampleRate {
         get {

@@ -1,5 +1,5 @@
-﻿using HackRFDotnet.Api.Utilities;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces;
+﻿using HackRFDotnet.Api.Streams.SignalProcessing.Interfaces;
+using HackRFDotnet.Api.Utilities;
 
 namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 public class FrequencyCenteringEffect : SignalEffect, ISignalEffect {

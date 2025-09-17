@@ -5,10 +5,10 @@ items:
   id: SignalUtilities
   parent: HackRFDotnet.Api.Utilities
   children:
-  - HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  - HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.Utilities.SignalUtilities.CalculateRmsDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})
   - HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})
-  - HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.Streams.SignalProcessing.SampleRate,System.Boolean)
+  - HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)
   - HackRFDotnet.Api.Utilities.SignalUtilities.IQCorrection(System.Span{HackRFDotnet.Api.Streams.IQ})
   langs:
   - csharp
@@ -19,12 +19,12 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
+      path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SignalUtilities
-    path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
-    startLine: 5
+    path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
+    startLine: 4
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Utilities
@@ -54,12 +54,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
+      path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: IQCorrection
-    path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
-    startLine: 6
+    path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
+    startLine: 5
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Utilities
@@ -73,25 +73,25 @@ items:
   nameWithType.vb: SignalUtilities.IQCorrection(Span(Of IQ))
   fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.IQCorrection(System.Span(Of HackRFDotnet.Api.Streams.IQ))
   name.vb: IQCorrection(Span(Of IQ))
-- uid: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
-  commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
-  id: ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+- uid: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
+  id: ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
   parent: HackRFDotnet.Api.Utilities.SignalUtilities
   langs:
   - csharp
   - vb
   name: ApplyFrequencyOffset(Span<IQ>, RadioBand, SampleRate)
   nameWithType: SignalUtilities.ApplyFrequencyOffset(Span<IQ>, RadioBand, SampleRate)
-  fullName: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span<HackRFDotnet.Api.Streams.IQ>, HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  fullName: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span<HackRFDotnet.Api.Streams.IQ>, HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
+      path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ApplyFrequencyOffset
-    path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
-    startLine: 37
+    path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
+    startLine: 36
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Utilities
@@ -101,51 +101,51 @@ items:
     - id: iqFrame
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
     - id: freqOffset
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      type: HackRFDotnet.Api.RadioBand
     - id: sampleRate
-      type: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+      type: HackRFDotnet.Api.SampleRate
     content.vb: Public Shared Sub ApplyFrequencyOffset(iqFrame As Span(Of IQ), freqOffset As RadioBand, sampleRate As SampleRate)
   overload: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset*
   nameWithType.vb: SignalUtilities.ApplyFrequencyOffset(Span(Of IQ), RadioBand, SampleRate)
-  fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span(Of HackRFDotnet.Api.Streams.IQ), HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span(Of HackRFDotnet.Api.Streams.IQ), HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
   name.vb: ApplyFrequencyOffset(Span(Of IQ), RadioBand, SampleRate)
-- uid: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.Streams.SignalProcessing.SampleRate,System.Boolean)
-  commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.Streams.SignalProcessing.SampleRate,System.Boolean)
-  id: FrequencyResolution(System.Int32,HackRFDotnet.Api.Streams.SignalProcessing.SampleRate,System.Boolean)
+- uid: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)
+  commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)
+  id: FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)
   parent: HackRFDotnet.Api.Utilities.SignalUtilities
   langs:
   - csharp
   - vb
   name: FrequencyResolution(int, SampleRate, bool)
   nameWithType: SignalUtilities.FrequencyResolution(int, SampleRate, bool)
-  fullName: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(int, HackRFDotnet.Api.Streams.SignalProcessing.SampleRate, bool)
+  fullName: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(int, HackRFDotnet.Api.SampleRate, bool)
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
+      path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FrequencyResolution
-    path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
-    startLine: 69
+    path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
+    startLine: 68
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Utilities
   syntax:
-    content: public static int FrequencyResolution(int length, SampleRate sampleRate, bool positiveOnly = true)
+    content: public static long FrequencyResolution(int length, SampleRate sampleRate, bool positiveOnly = true)
     parameters:
     - id: length
       type: System.Int32
     - id: sampleRate
-      type: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+      type: HackRFDotnet.Api.SampleRate
     - id: positiveOnly
       type: System.Boolean
     return:
-      type: System.Int32
-    content.vb: Public Shared Function FrequencyResolution(length As Integer, sampleRate As SampleRate, positiveOnly As Boolean = True) As Integer
+      type: System.Int64
+    content.vb: Public Shared Function FrequencyResolution(length As Integer, sampleRate As SampleRate, positiveOnly As Boolean = True) As Long
   overload: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution*
   nameWithType.vb: SignalUtilities.FrequencyResolution(Integer, SampleRate, Boolean)
-  fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(Integer, HackRFDotnet.Api.Streams.SignalProcessing.SampleRate, Boolean)
+  fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(Integer, HackRFDotnet.Api.SampleRate, Boolean)
   name.vb: FrequencyResolution(Integer, SampleRate, Boolean)
 - uid: HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})
   commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})
@@ -160,12 +160,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
+      path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: CalculateSignalDb
-    path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
-    startLine: 75
+    path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
+    startLine: 74
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Utilities
@@ -194,12 +194,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
+      path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: CalculateRmsDb
-    path: HackRFDotnet/ManagedApi/Utilities/SignalUtilities.cs
-    startLine: 90
+    path: HackRFDotnet/Api/Utilities/SignalUtilities.cs
+    startLine: 89
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Utilities
@@ -552,30 +552,30 @@ references:
   - name: )
 - uid: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset*
   commentId: Overload:HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset
-  href: HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_System_Span_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_HackRFDotnet_Api_Streams_SignalProcessing_SampleRate_
+  href: HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_System_Span_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_SampleRate_
   name: ApplyFrequencyOffset
   nameWithType: SignalUtilities.ApplyFrequencyOffset
   fullName: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
+- uid: HackRFDotnet.Api.RadioBand
+  commentId: T:HackRFDotnet.Api.RadioBand
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.RadioBand.html
   name: RadioBand
   nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate.html
+  fullName: HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.SampleRate.html
   name: SampleRate
   nameWithType: SampleRate
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-- uid: HackRFDotnet.Api.Streams.SignalProcessing
-  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
+  fullName: HackRFDotnet.Api.SampleRate
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalProcessing
-  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
   spec.csharp:
   - uid: HackRFDotnet
     name: HackRFDotnet
@@ -584,14 +584,6 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   spec.vb:
   - uid: HackRFDotnet
     name: HackRFDotnet
@@ -600,17 +592,9 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
 - uid: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution*
   commentId: Overload:HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution
-  href: HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_FrequencyResolution_System_Int32_HackRFDotnet_Api_Streams_SignalProcessing_SampleRate_System_Boolean_
+  href: HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_FrequencyResolution_System_Int32_HackRFDotnet_Api_SampleRate_System_Boolean_
   name: FrequencyResolution
   nameWithType: SignalUtilities.FrequencyResolution
   fullName: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution
@@ -636,6 +620,17 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
 - uid: HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb*
   commentId: Overload:HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb
   href: HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_CalculateSignalDb_System_ReadOnlySpan_HackRFDotnet_Api_Streams_IQ__

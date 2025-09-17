@@ -104,7 +104,10 @@ Structs
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.NativeApi.Structs.HackrfTransfer.html">HackrfTransfer</a></dt>
-      <dd></dd>
+      <dd><p>USB transfer information passed to RX or TX callback.
+A callback should treat all these fields as read-only except that a TX callback should write to the data buffer and may write to <a class="xref" href="HackRFDotnet.NativeApi.Structs.HackrfTransfer.html#HackRFDotnet_NativeApi_Structs_HackrfTransfer_valid_length">valid_length</a>
+to indicate that a smaller number of bytes is to be transmitted.</p>
+</dd>
     </dl>
     <h3 id="delegates">
 Delegates

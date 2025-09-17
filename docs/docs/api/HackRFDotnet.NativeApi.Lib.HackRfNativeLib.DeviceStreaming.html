@@ -171,14 +171,14 @@ Class HackRfNativeLib.DeviceStreaming  <a class="header-action link-secondary" t
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>bandwidth_hz</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>Desired filter bandwidth in Hz</p>
+    <dd><p>Desired filter bandwidth in Hz.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>Nearest valid filter bandwidth in Hz</p>
+    <dd><p>Nearest valid filter bandwidth in Hz.</p>
 </dd>
   </dl>
 
@@ -239,7 +239,7 @@ Class HackRfNativeLib.DeviceStreaming  <a class="header-action link-secondary" t
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Enable/disable 14dB RF amplifier.</p>
+  <div class="markdown level1 summary"><p>Enable / disable 14dB RF amplifier.</p>
 <p>Enable / disable the ~11dB RF RX/TX amplifiers U13/U25 via controlling switches U9 and U14.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -373,9 +373,7 @@ as setting it externally is not possible like it is with RTL-SDR for example.</p
   
   </h3>
 
-  <div class="markdown level1 summary"><p>RF filter path setting enum.
-Used only when performing explicit tuning using <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_SetFrequency_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt64_System_UInt64_HackRFDotnet_NativeApi_Enums_RfPathFilter_">SetFrequency(HackRFDevice*, ulong, ulong, RfPathFilter)</a>, or can be converted into a human readable string using <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_FilterPathName_HackRFDotnet_NativeApi_Enums_RfPathFilter_">FilterPathName(RfPathFilter)</a>.
-This can select the image rejection filter(U3, U8 or none) to use - using switches U5, U6, U9 and U11.When no filter is selected, the mixer itself is bypassed.</p>
+  <div class="markdown level1 summary"><p>Convert <a class="xref" href="HackRFDotnet.NativeApi.Enums.RfPathFilter.html">RfPathFilter</a> into human-readable string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -386,13 +384,15 @@ This can select the image rejection filter(U3, U8 or none) to use - using switch
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>path</code> <a class="xref" href="HackRFDotnet.NativeApi.Enums.RfPathFilter.html">RfPathFilter</a></dt>
-    <dd></dd>
+    <dd><p>Enum to convert.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>*</dt>
-    <dd></dd>
+    <dd><p>Human-readable name of filter path.</p>
+</dd>
   </dl>
 
 
@@ -551,7 +551,7 @@ received with different center frequencies.At the beginning of each block, a 10-
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Query device streaming status</p>
+  <div class="markdown level1 summary"><p>Query device streaming status.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -562,7 +562,7 @@ received with different center frequencies.At the beginning of each block, a 10-
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>device</code> <a class="xref" href="HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html">HackRFDevice</a>*</dt>
-    <dd><p>Device to query</p>
+    <dd><p>Device to query.</p>
 </dd>
   </dl>
 
@@ -605,17 +605,17 @@ The functions <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.D
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>device</code> <a class="xref" href="HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html">HackRFDevice</a>*</dt>
-    <dd><p>device to configure</p>
+    <dd><p>device to configure.</p>
 </dd>
     <dt><code>bandwidth_hz</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd><p>baseband filter bandwidth in Hz</p>
+    <dd><p>baseband filter bandwidth in Hz.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="HackRFDotnet.NativeApi.Enums.System.HackrfError.html">HackrfError</a></dt>
-    <dd><p><a class="xref" href="HackRFDotnet.NativeApi.Enums.System.HackrfError.html#HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_SUCCESS">HACKRF_SUCCESS</a> on success or <a class="xref" href="HackRFDotnet.NativeApi.Enums.System.HackrfError.html">HackrfError</a> variant</p>
+    <dd><p><a class="xref" href="HackRFDotnet.NativeApi.Enums.System.HackrfError.html#HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_SUCCESS">HACKRF_SUCCESS</a> on success or <a class="xref" href="HackRFDotnet.NativeApi.Enums.System.HackrfError.html">HackrfError</a> variant.</p>
 </dd>
   </dl>
 
@@ -643,10 +643,10 @@ or OFF state. By default, the HackRF switches off the bias tee when the RF path 
 0000000TmmRmmOmm</p>
 <p>Where setting T/R/O bits indicates that the TX/RX/Off behavior should be set to mode 'mm', 0 = don't modify</p>
 <p>mm specifies the bias tee mode:</p>
-<p>00 - do nothing
-01 - reserved, do not use
-10 - disable bias tee
-11 - enable bias tee</p>
+<p>00 - do nothing.
+01 - reserved, do not use.
+10 - disable bias tee.
+11 - enable bias tee.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -865,7 +865,7 @@ k\cdot f_ { LO }\f$ where \f$k\in\left{-1; 0; 1\right}\f$, depending on the valu
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Set receive overrun limit</p>
+  <div class="markdown level1 summary"><p>Set receive overrun limit.</p>
 <p>When this limit is set, after the specified number of samples (bytes, not whole IQ pairs) missing the device will automatically return to IDLE mode,
 thus stopping operation. Useful for handling cases like program/computer crashes or other problems. The default value 0 means no limit.</p>
 <p>Requires USB API version 0x0106 or above!</p>
@@ -991,7 +991,7 @@ thus stopping operation. Useful for handling cases like program/computer crashes
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Set transmit underrun limit</p>
+  <div class="markdown level1 summary"><p>Set transmit underrun limit.</p>
 <p>When this limit is set, after the specified number of samples (bytes, not whole IQ pairs) missing the device will automatically return to IDLE mode,
 thus stopping operation. Useful for handling cases like program/computer crashes or other problems. The default value 0 means no limit.</p>
 <p>Requires USB API version 0x0106 or above!</p>
@@ -1168,8 +1168,8 @@ The callback should treat its argument as read-only.</p>
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Start RX sweep</p>
-<p>See <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_InitSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16__System_Int32_System_UInt32_System_UInt32_System_UInt32_HackRFDotnet_NativeApi_Enums_SweepStyle_">InitSweep(HackRFDevice*, ushort*, int, uint, uint, uint, SweepStyle)</a> for more info</p>
+  <div class="markdown level1 summary"><p>Start RX sweep.</p>
+<p>See <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_InitSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16__System_Int32_System_UInt32_System_UInt32_System_UInt32_HackRFDotnet_NativeApi_Enums_SweepStyle_">InitSweep(HackRFDevice*, ushort*, int, uint, uint, uint, SweepStyle)</a> for more info.</p>
 <p>Requires USB API version 0x0104 or above!</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1262,7 +1262,7 @@ regulations (or equivalent regulatory authorities in your region) and could resu
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Stop receiving,</p>
+  <div class="markdown level1 summary"><p>Stop receiving.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1273,7 +1273,7 @@ regulations (or equivalent regulatory authorities in your region) and could resu
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>device</code> <a class="xref" href="HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html">HackRFDevice</a>*</dt>
-    <dd><p>device to stop RX on</p>
+    <dd><p>device to stop RX on.</p>
 </dd>
   </dl>
 

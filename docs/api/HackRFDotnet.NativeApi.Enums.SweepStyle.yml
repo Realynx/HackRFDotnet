@@ -50,6 +50,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums
+  summary: step_width is added to the current frequency at each step.
   example: []
   syntax:
     content: LINEAR = 0
@@ -73,10 +74,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: INTERLEAVED
     path: HackRFDotnet/NativeApi/Enums/SweepStyle.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums
+  summary: Each step is divided into two interleaved sub-steps, allowing the host to select the best portions of the FFT of each sub-step and discard the rest.
   example: []
   syntax:
     content: INTERLEAVED = 1

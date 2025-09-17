@@ -75,6 +75,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Bandwidth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Bandwidth.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.Api.Bandwidth",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/api/HackRFDotnet.Api.DigitalRadioDevice.yml",
       "output": {
         ".html": {
@@ -113,6 +127,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Hertz.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Hertz.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.Api.Hertz",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.RadioBand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.RadioBand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.Api.RadioBand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SampleRate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SampleRate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.Api.SampleRate",
       "Summary": null
     },
     {
@@ -435,6 +491,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Interfaces",
       "Summary": null
     },
     {
@@ -1429,7 +1513,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.yml\" sourcestartlinenumber=\"1\">Opera Cake port switching mode. Set via <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte%2cHackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)\" data-throw-if-not-resolved=\"false\"></xref> and queried via <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte%2cHackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1457,7 +1541,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.NativeApi.Enums.RfPathFilter",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.RfPathFilter.yml\" sourcestartlinenumber=\"1\">RF filter path setting enum.</p>\n<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.RfPathFilter.yml\" sourcestartlinenumber=\"3\">Used only when performing explicit tuning using <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.UInt64%2cSystem.UInt64%2cHackRFDotnet.NativeApi.Enums.RfPathFilter)\" data-throw-if-not-resolved=\"false\"></xref>,\nor can be converted into a human-readable string using <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.FilterPathName(HackRFDotnet.NativeApi.Enums.RfPathFilter)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.RfPathFilter.yml\" sourcestartlinenumber=\"6\">This can select the image rejection filter (U3, U8 or none) to use - using switches U5, U6, U9 and U11. When no filter is selected, the mixer itself is bypassed.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1485,7 +1569,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.NativeApi.Enums.System.HackrfBoardId",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.yml\" sourcestartlinenumber=\"1\">HACKRF board id enum.</p>\n<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.yml\" sourcestartlinenumber=\"3\">Returned by <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte*)\" data-throw-if-not-resolved=\"false\"></xref> and can be converted to a human-readable string using <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1513,7 +1597,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.NativeApi.Enums.System.HackrfError",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfError.yml\" sourcestartlinenumber=\"1\">Error enum, returned by many libhackrf functions.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1527,7 +1611,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml\" sourcestartlinenumber=\"1\">USB board ID (product ID) enum</p>\n<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml\" sourcestartlinenumber=\"3\">Contains USB-IF product id (field <code sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml\" sourcestartlinenumber=\"3\">idProduct</code> in <code sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml\" sourcestartlinenumber=\"3\">libusb_device_descriptor</code>). Can be used to identify general type of hardware.\nOnly used in <xref href=\"HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids\" data-throw-if-not-resolved=\"false\"></xref> field of <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList\" data-throw-if-not-resolved=\"false\"></xref>,\nand can be converted into human-readable string via <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1821,7 +1905,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.NativeApi.Structs.HackrfTransfer",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Structs.HackrfTransfer.yml\" sourcestartlinenumber=\"1\">USB transfer information passed to RX or TX callback.\nA callback should treat all these fields as read-only except that a TX callback should write to the data buffer and may write to <xref href=\"HackRFDotnet.NativeApi.Structs.HackrfTransfer.valid_length\" data-throw-if-not-resolved=\"false\"></xref>\nto indicate that a smaller number of bytes is to be transmitted.</p>\n"
     },
     {
       "type": "ManagedReference",

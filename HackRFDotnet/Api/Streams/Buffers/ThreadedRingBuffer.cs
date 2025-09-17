@@ -1,5 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 
+using HackRFDotnet.Api.Streams.Exceptions;
+
 namespace HackRFDotnet.Api.Streams.Buffers;
 internal struct ThreadPointer {
     public int readStart;

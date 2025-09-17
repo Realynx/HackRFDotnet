@@ -17,11 +17,11 @@ items:
   type: Struct
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/InterleavedSample.cs
+      path: HackRFDotnet/Api/Streams/InterleavedSample.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: InterleavedSample
-    path: HackRFDotnet/ManagedApi/Streams/InterleavedSample.cs
+    path: HackRFDotnet/Api/Streams/InterleavedSample.cs
     startLine: 1
   assemblies:
   - HackRFDotnet
@@ -49,11 +49,11 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/InterleavedSample.cs
+      path: HackRFDotnet/Api/Streams/InterleavedSample.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: I
-    path: HackRFDotnet/ManagedApi/Streams/InterleavedSample.cs
+    path: HackRFDotnet/Api/Streams/InterleavedSample.cs
     startLine: 2
   assemblies:
   - HackRFDotnet
@@ -76,11 +76,11 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/InterleavedSample.cs
+      path: HackRFDotnet/Api/Streams/InterleavedSample.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Q
-    path: HackRFDotnet/ManagedApi/Streams/InterleavedSample.cs
+    path: HackRFDotnet/Api/Streams/InterleavedSample.cs
     startLine: 3
   assemblies:
   - HackRFDotnet
@@ -103,11 +103,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/InterleavedSample.cs
+      path: HackRFDotnet/Api/Streams/InterleavedSample.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Clone
-    path: HackRFDotnet/ManagedApi/Streams/InterleavedSample.cs
+    path: HackRFDotnet/Api/Streams/InterleavedSample.cs
     startLine: 5
   assemblies:
   - HackRFDotnet

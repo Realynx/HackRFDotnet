@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct HackrfTransfer | HackrfDotnet ">
       
-      
+      <meta name="description" content="USB transfer information passed to RX or TX callback. A callback should treat all these fields as read-only except that a TX callback should write to the data buffer and may write to  to indicate that a smaller number of bytes is to be transmitted.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="HackRFDotnet_NativeApi_Structs_HackrfTransfer" data-uid="HackRFDotnet.NativeApi.Structs.HackrfTransfer" class="text-break">
-Struct HackrfTransfer  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Struct HackrfTransfer  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,10 @@ Struct HackrfTransfer  <a class="header-action link-secondary" title="View sourc
   <dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>USB transfer information passed to RX or TX callback.
+A callback should treat all these fields as read-only except that a TX callback should write to the data buffer and may write to <a class="xref" href="HackRFDotnet.NativeApi.Structs.HackrfTransfer.html#HackRFDotnet_NativeApi_Structs_HackrfTransfer_valid_length">valid_length</a>
+to indicate that a smaller number of bytes is to be transmitted.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -145,10 +148,11 @@ Struct HackrfTransfer  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="HackRFDotnet_NativeApi_Structs_HackrfTransfer_buffer" data-uid="HackRFDotnet.NativeApi.Structs.HackrfTransfer.buffer">
   buffer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Transfer data buffer (interleaved 8 bit I/Q samples).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -175,10 +179,11 @@ Struct HackrfTransfer  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="HackRFDotnet_NativeApi_Structs_HackrfTransfer_buffer_length" data-uid="HackRFDotnet.NativeApi.Structs.HackrfTransfer.buffer_length">
   buffer_length
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Length of data buffer in bytes.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -205,10 +210,11 @@ Struct HackrfTransfer  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="HackRFDotnet_NativeApi_Structs_HackrfTransfer_device" data-uid="HackRFDotnet.NativeApi.Structs.HackrfTransfer.device">
   device
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>HackRF USB device for this transfer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -235,10 +241,12 @@ Struct HackrfTransfer  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="HackRFDotnet_NativeApi_Structs_HackrfTransfer_rx_ctx" data-uid="HackRFDotnet.NativeApi.Structs.HackrfTransfer.rx_ctx">
   rx_ctx
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>User provided RX context. Not used by the library, but available to transfer callbacks for use. Set along with the transfer callback using <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRx_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__">StartRx(HackRFDevice*, HackRFSampleBlockCallback, void*)</a>
+or <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRxSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__">StartRxSweep(HackRFDevice*, HackRFSampleBlockCallback, void*)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -265,10 +273,11 @@ Struct HackrfTransfer  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="HackRFDotnet_NativeApi_Structs_HackrfTransfer_tx_ctx" data-uid="HackRFDotnet.NativeApi.Structs.HackrfTransfer.tx_ctx">
   tx_ctx
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>User provided TX context. Not used by the library, but available to transfer callbacks for use. Set along with the transfer callback using <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRx_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__">StartRx(HackRFDevice*, HackRFSampleBlockCallback, void*)</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -295,10 +304,11 @@ Struct HackrfTransfer  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="HackRFDotnet_NativeApi_Structs_HackrfTransfer_valid_length" data-uid="HackRFDotnet.NativeApi.Structs.HackrfTransfer.valid_length">
   valid_length
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of buffer bytes that were transferred.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -326,7 +336,7 @@ Struct HackrfTransfer  <a class="header-action link-secondary" title="View sourc
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -1,0 +1,1426 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
+  id: SampleRate
+  parent: HackRFDotnet.Api
+  children:
+  - HackRFDotnet.Api.SampleRate.#ctor(HackRFDotnet.Api.Hertz)
+  - HackRFDotnet.Api.SampleRate.#ctor(System.Int64)
+  - HackRFDotnet.Api.SampleRate.FromGsps(System.Double)
+  - HackRFDotnet.Api.SampleRate.FromKsps(System.Double)
+  - HackRFDotnet.Api.SampleRate.FromMsps(System.Double)
+  - HackRFDotnet.Api.SampleRate.Ksps
+  - HackRFDotnet.Api.SampleRate.Msps
+  - HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+  - HackRFDotnet.Api.SampleRate.Sps
+  - HackRFDotnet.Api.SampleRate.op_Addition(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.SampleRate.op_Division(HackRFDotnet.Api.SampleRate,System.Int32)
+  - HackRFDotnet.Api.SampleRate.op_Equality(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.SampleRate.op_GreaterThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.SampleRate.op_GreaterThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.SampleRate.op_Inequality(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.SampleRate.op_LessThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.SampleRate.op_LessThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.SampleRate.op_Modulus(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.SampleRate.op_Subtraction(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.SampleRate.op_UnaryNegation(HackRFDotnet.Api.SampleRate)
+  langs:
+  - csharp
+  - vb
+  name: SampleRate
+  nameWithType: SampleRate
+  fullName: HackRFDotnet.Api.SampleRate
+  type: Class
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: SampleRate
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 1
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: 'public class SampleRate : Hertz'
+    content.vb: Public Class SampleRate Inherits Hertz
+  inheritance:
+  - System.Object
+  - HackRFDotnet.Api.Hertz
+  inheritedMembers:
+  - HackRFDotnet.Api.Hertz.Hz
+  - HackRFDotnet.Api.Hertz.Mhz
+  - HackRFDotnet.Api.Hertz.Khz
+  - HackRFDotnet.Api.Hertz.FromHz(System.Int64)
+  - HackRFDotnet.Api.Hertz.FromKHz(System.Double)
+  - HackRFDotnet.Api.Hertz.FromMHz(System.Double)
+  - HackRFDotnet.Api.Hertz.FromGHz(System.Double)
+  - HackRFDotnet.Api.Hertz.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: HackRFDotnet.Api.SampleRate.#ctor(System.Int64)
+  commentId: M:HackRFDotnet.Api.SampleRate.#ctor(System.Int64)
+  id: '#ctor(System.Int64)'
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: SampleRate(long)
+  nameWithType: SampleRate.SampleRate(long)
+  fullName: HackRFDotnet.Api.SampleRate.SampleRate(long)
+  type: Constructor
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: .ctor
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 2
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public SampleRate(long sps)
+    parameters:
+    - id: sps
+      type: System.Int64
+    content.vb: Public Sub New(sps As Long)
+  overload: HackRFDotnet.Api.SampleRate.#ctor*
+  nameWithType.vb: SampleRate.New(Long)
+  fullName.vb: HackRFDotnet.Api.SampleRate.New(Long)
+  name.vb: New(Long)
+- uid: HackRFDotnet.Api.SampleRate.#ctor(HackRFDotnet.Api.Hertz)
+  commentId: M:HackRFDotnet.Api.SampleRate.#ctor(HackRFDotnet.Api.Hertz)
+  id: '#ctor(HackRFDotnet.Api.Hertz)'
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: SampleRate(Hertz)
+  nameWithType: SampleRate.SampleRate(Hertz)
+  fullName: HackRFDotnet.Api.SampleRate.SampleRate(HackRFDotnet.Api.Hertz)
+  type: Constructor
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: .ctor
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 5
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public SampleRate(Hertz hz)
+    parameters:
+    - id: hz
+      type: HackRFDotnet.Api.Hertz
+    content.vb: Public Sub New(hz As Hertz)
+  overload: HackRFDotnet.Api.SampleRate.#ctor*
+  nameWithType.vb: SampleRate.New(Hertz)
+  fullName.vb: HackRFDotnet.Api.SampleRate.New(HackRFDotnet.Api.Hertz)
+  name.vb: New(Hertz)
+- uid: HackRFDotnet.Api.SampleRate.Sps
+  commentId: P:HackRFDotnet.Api.SampleRate.Sps
+  id: Sps
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: Sps
+  nameWithType: SampleRate.Sps
+  fullName: HackRFDotnet.Api.SampleRate.Sps
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Sps
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 8
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public long Sps { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property Sps As Long
+  overload: HackRFDotnet.Api.SampleRate.Sps*
+- uid: HackRFDotnet.Api.SampleRate.Msps
+  commentId: P:HackRFDotnet.Api.SampleRate.Msps
+  id: Msps
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: Msps
+  nameWithType: SampleRate.Msps
+  fullName: HackRFDotnet.Api.SampleRate.Msps
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Msps
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 14
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public double Msps { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Msps As Double
+  overload: HackRFDotnet.Api.SampleRate.Msps*
+- uid: HackRFDotnet.Api.SampleRate.Ksps
+  commentId: P:HackRFDotnet.Api.SampleRate.Ksps
+  id: Ksps
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: Ksps
+  nameWithType: SampleRate.Ksps
+  fullName: HackRFDotnet.Api.SampleRate.Ksps
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Ksps
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 20
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public double Ksps { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Ksps As Double
+  overload: HackRFDotnet.Api.SampleRate.Ksps*
+- uid: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+  commentId: P:HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+  id: NyquistFrequencyBandwidth
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: NyquistFrequencyBandwidth
+  nameWithType: SampleRate.NyquistFrequencyBandwidth
+  fullName: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: NyquistFrequencyBandwidth
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 26
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public Bandwidth NyquistFrequencyBandwidth { get; }
+    parameters: []
+    return:
+      type: HackRFDotnet.Api.Bandwidth
+    content.vb: Public ReadOnly Property NyquistFrequencyBandwidth As Bandwidth
+  overload: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth*
+- uid: HackRFDotnet.Api.SampleRate.FromKsps(System.Double)
+  commentId: M:HackRFDotnet.Api.SampleRate.FromKsps(System.Double)
+  id: FromKsps(System.Double)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: FromKsps(double)
+  nameWithType: SampleRate.FromKsps(double)
+  fullName: HackRFDotnet.Api.SampleRate.FromKsps(double)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: FromKsps
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 32
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static SampleRate FromKsps(double khz)
+    parameters:
+    - id: khz
+      type: System.Double
+    return:
+      type: HackRFDotnet.Api.SampleRate
+    content.vb: Public Shared Function FromKsps(khz As Double) As SampleRate
+  overload: HackRFDotnet.Api.SampleRate.FromKsps*
+  nameWithType.vb: SampleRate.FromKsps(Double)
+  fullName.vb: HackRFDotnet.Api.SampleRate.FromKsps(Double)
+  name.vb: FromKsps(Double)
+- uid: HackRFDotnet.Api.SampleRate.FromMsps(System.Double)
+  commentId: M:HackRFDotnet.Api.SampleRate.FromMsps(System.Double)
+  id: FromMsps(System.Double)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: FromMsps(double)
+  nameWithType: SampleRate.FromMsps(double)
+  fullName: HackRFDotnet.Api.SampleRate.FromMsps(double)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: FromMsps
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 36
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static SampleRate FromMsps(double mhz)
+    parameters:
+    - id: mhz
+      type: System.Double
+    return:
+      type: HackRFDotnet.Api.SampleRate
+    content.vb: Public Shared Function FromMsps(mhz As Double) As SampleRate
+  overload: HackRFDotnet.Api.SampleRate.FromMsps*
+  nameWithType.vb: SampleRate.FromMsps(Double)
+  fullName.vb: HackRFDotnet.Api.SampleRate.FromMsps(Double)
+  name.vb: FromMsps(Double)
+- uid: HackRFDotnet.Api.SampleRate.FromGsps(System.Double)
+  commentId: M:HackRFDotnet.Api.SampleRate.FromGsps(System.Double)
+  id: FromGsps(System.Double)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: FromGsps(double)
+  nameWithType: SampleRate.FromGsps(double)
+  fullName: HackRFDotnet.Api.SampleRate.FromGsps(double)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: FromGsps
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 40
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static SampleRate FromGsps(double ghz)
+    parameters:
+    - id: ghz
+      type: System.Double
+    return:
+      type: HackRFDotnet.Api.SampleRate
+    content.vb: Public Shared Function FromGsps(ghz As Double) As SampleRate
+  overload: HackRFDotnet.Api.SampleRate.FromGsps*
+  nameWithType.vb: SampleRate.FromGsps(Double)
+  fullName.vb: HackRFDotnet.Api.SampleRate.FromGsps(Double)
+  name.vb: FromGsps(Double)
+- uid: HackRFDotnet.Api.SampleRate.op_GreaterThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_GreaterThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  id: op_GreaterThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator >(SampleRate, SampleRate)
+  nameWithType: SampleRate.operator >(SampleRate, SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator >(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_GreaterThan
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 44
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static bool operator >(SampleRate a, SampleRate b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator >(a As SampleRate, b As SampleRate) As Boolean
+  overload: HackRFDotnet.Api.SampleRate.op_GreaterThan*
+  nameWithType.vb: SampleRate.>(SampleRate, SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.>(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  name.vb: '>(SampleRate, SampleRate)'
+- uid: HackRFDotnet.Api.SampleRate.op_LessThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_LessThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  id: op_LessThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator <(SampleRate, SampleRate)
+  nameWithType: SampleRate.operator <(SampleRate, SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator <(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_LessThan
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 48
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static bool operator <(SampleRate a, SampleRate b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <(a As SampleRate, b As SampleRate) As Boolean
+  overload: HackRFDotnet.Api.SampleRate.op_LessThan*
+  nameWithType.vb: SampleRate.<(SampleRate, SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.<(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  name.vb: <(SampleRate, SampleRate)
+- uid: HackRFDotnet.Api.SampleRate.op_GreaterThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_GreaterThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  id: op_GreaterThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator >=(SampleRate, SampleRate)
+  nameWithType: SampleRate.operator >=(SampleRate, SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator >=(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_GreaterThanOrEqual
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 52
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static bool operator >=(SampleRate a, SampleRate b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator >=(a As SampleRate, b As SampleRate) As Boolean
+  overload: HackRFDotnet.Api.SampleRate.op_GreaterThanOrEqual*
+  nameWithType.vb: SampleRate.>=(SampleRate, SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.>=(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  name.vb: '>=(SampleRate, SampleRate)'
+- uid: HackRFDotnet.Api.SampleRate.op_LessThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_LessThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  id: op_LessThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator <=(SampleRate, SampleRate)
+  nameWithType: SampleRate.operator <=(SampleRate, SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator <=(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_LessThanOrEqual
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 56
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static bool operator <=(SampleRate a, SampleRate b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <=(a As SampleRate, b As SampleRate) As Boolean
+  overload: HackRFDotnet.Api.SampleRate.op_LessThanOrEqual*
+  nameWithType.vb: SampleRate.<=(SampleRate, SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.<=(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  name.vb: <=(SampleRate, SampleRate)
+- uid: HackRFDotnet.Api.SampleRate.op_Equality(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_Equality(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  id: op_Equality(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator ==(SampleRate, SampleRate)
+  nameWithType: SampleRate.operator ==(SampleRate, SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator ==(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Equality
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 60
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static bool operator ==(SampleRate a, SampleRate b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(a As SampleRate, b As SampleRate) As Boolean
+  overload: HackRFDotnet.Api.SampleRate.op_Equality*
+  nameWithType.vb: SampleRate.=(SampleRate, SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.=(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  name.vb: =(SampleRate, SampleRate)
+- uid: HackRFDotnet.Api.SampleRate.op_Inequality(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_Inequality(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  id: op_Inequality(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator !=(SampleRate, SampleRate)
+  nameWithType: SampleRate.operator !=(SampleRate, SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator !=(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Inequality
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 64
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static bool operator !=(SampleRate a, SampleRate b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(a As SampleRate, b As SampleRate) As Boolean
+  overload: HackRFDotnet.Api.SampleRate.op_Inequality*
+  nameWithType.vb: SampleRate.<>(SampleRate, SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.<>(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  name.vb: <>(SampleRate, SampleRate)
+- uid: HackRFDotnet.Api.SampleRate.op_Modulus(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_Modulus(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  id: op_Modulus(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator %(SampleRate, SampleRate)
+  nameWithType: SampleRate.operator %(SampleRate, SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator %(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Modulus
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 68
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static SampleRate operator %(SampleRate a, SampleRate b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: HackRFDotnet.Api.SampleRate
+    content.vb: Public Shared Operator Mod(a As SampleRate, b As SampleRate) As SampleRate
+  overload: HackRFDotnet.Api.SampleRate.op_Modulus*
+  nameWithType.vb: SampleRate.Mod(SampleRate, SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.Mod(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  name.vb: Mod(SampleRate, SampleRate)
+- uid: HackRFDotnet.Api.SampleRate.op_UnaryNegation(HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_UnaryNegation(HackRFDotnet.Api.SampleRate)
+  id: op_UnaryNegation(HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator -(SampleRate)
+  nameWithType: SampleRate.operator -(SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator -(HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_UnaryNegation
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 72
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static SampleRate operator -(SampleRate a)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: HackRFDotnet.Api.SampleRate
+    content.vb: Public Shared Operator -(a As SampleRate) As SampleRate
+  overload: HackRFDotnet.Api.SampleRate.op_UnaryNegation*
+  nameWithType.vb: SampleRate.-(SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.-(HackRFDotnet.Api.SampleRate)
+  name.vb: -(SampleRate)
+- uid: HackRFDotnet.Api.SampleRate.op_Division(HackRFDotnet.Api.SampleRate,System.Int32)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_Division(HackRFDotnet.Api.SampleRate,System.Int32)
+  id: op_Division(HackRFDotnet.Api.SampleRate,System.Int32)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator /(SampleRate, int)
+  nameWithType: SampleRate.operator /(SampleRate, int)
+  fullName: HackRFDotnet.Api.SampleRate.operator /(HackRFDotnet.Api.SampleRate, int)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Division
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 76
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static SampleRate operator /(SampleRate a, int b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: System.Int32
+    return:
+      type: HackRFDotnet.Api.SampleRate
+    content.vb: Public Shared Operator /(a As SampleRate, b As Integer) As SampleRate
+  overload: HackRFDotnet.Api.SampleRate.op_Division*
+  nameWithType.vb: SampleRate./(SampleRate, Integer)
+  fullName.vb: HackRFDotnet.Api.SampleRate./(HackRFDotnet.Api.SampleRate, Integer)
+  name.vb: /(SampleRate, Integer)
+- uid: HackRFDotnet.Api.SampleRate.op_Subtraction(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_Subtraction(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  id: op_Subtraction(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator -(SampleRate, SampleRate)
+  nameWithType: SampleRate.operator -(SampleRate, SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator -(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Subtraction
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 80
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static SampleRate operator -(SampleRate a, SampleRate b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: HackRFDotnet.Api.SampleRate
+    content.vb: Public Shared Operator -(a As SampleRate, b As SampleRate) As SampleRate
+  overload: HackRFDotnet.Api.SampleRate.op_Subtraction*
+  nameWithType.vb: SampleRate.-(SampleRate, SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.-(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  name.vb: -(SampleRate, SampleRate)
+- uid: HackRFDotnet.Api.SampleRate.op_Addition(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.SampleRate.op_Addition(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  id: op_Addition(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: operator +(SampleRate, SampleRate)
+  nameWithType: SampleRate.operator +(SampleRate, SampleRate)
+  fullName: HackRFDotnet.Api.SampleRate.operator +(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Addition
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 84
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public static SampleRate operator +(SampleRate a, SampleRate b)
+    parameters:
+    - id: a
+      type: HackRFDotnet.Api.SampleRate
+    - id: b
+      type: HackRFDotnet.Api.SampleRate
+    return:
+      type: HackRFDotnet.Api.SampleRate
+    content.vb: Public Shared Operator +(a As SampleRate, b As SampleRate) As SampleRate
+  overload: HackRFDotnet.Api.SampleRate.op_Addition*
+  nameWithType.vb: SampleRate.+(SampleRate, SampleRate)
+  fullName.vb: HackRFDotnet.Api.SampleRate.+(HackRFDotnet.Api.SampleRate, HackRFDotnet.Api.SampleRate)
+  name.vb: +(SampleRate, SampleRate)
+references:
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: HackRFDotnet.Api.Hertz
+  commentId: T:HackRFDotnet.Api.Hertz
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Hertz.html
+  name: Hertz
+  nameWithType: Hertz
+  fullName: HackRFDotnet.Api.Hertz
+- uid: HackRFDotnet.Api.Hertz.Hz
+  commentId: P:HackRFDotnet.Api.Hertz.Hz
+  parent: HackRFDotnet.Api.Hertz
+  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Hz
+  name: Hz
+  nameWithType: Hertz.Hz
+  fullName: HackRFDotnet.Api.Hertz.Hz
+- uid: HackRFDotnet.Api.Hertz.Mhz
+  commentId: P:HackRFDotnet.Api.Hertz.Mhz
+  parent: HackRFDotnet.Api.Hertz
+  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Mhz
+  name: Mhz
+  nameWithType: Hertz.Mhz
+  fullName: HackRFDotnet.Api.Hertz.Mhz
+- uid: HackRFDotnet.Api.Hertz.Khz
+  commentId: P:HackRFDotnet.Api.Hertz.Khz
+  parent: HackRFDotnet.Api.Hertz
+  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Khz
+  name: Khz
+  nameWithType: Hertz.Khz
+  fullName: HackRFDotnet.Api.Hertz.Khz
+- uid: HackRFDotnet.Api.Hertz.FromHz(System.Int64)
+  commentId: M:HackRFDotnet.Api.Hertz.FromHz(System.Int64)
+  parent: HackRFDotnet.Api.Hertz
+  isExternal: true
+  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromHz_System_Int64_
+  name: FromHz(long)
+  nameWithType: Hertz.FromHz(long)
+  fullName: HackRFDotnet.Api.Hertz.FromHz(long)
+  nameWithType.vb: Hertz.FromHz(Long)
+  fullName.vb: HackRFDotnet.Api.Hertz.FromHz(Long)
+  name.vb: FromHz(Long)
+  spec.csharp:
+  - uid: HackRFDotnet.Api.Hertz.FromHz(System.Int64)
+    name: FromHz
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromHz_System_Int64_
+  - name: (
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.Api.Hertz.FromHz(System.Int64)
+    name: FromHz
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromHz_System_Int64_
+  - name: (
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+- uid: HackRFDotnet.Api.Hertz.FromKHz(System.Double)
+  commentId: M:HackRFDotnet.Api.Hertz.FromKHz(System.Double)
+  parent: HackRFDotnet.Api.Hertz
+  isExternal: true
+  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromKHz_System_Double_
+  name: FromKHz(double)
+  nameWithType: Hertz.FromKHz(double)
+  fullName: HackRFDotnet.Api.Hertz.FromKHz(double)
+  nameWithType.vb: Hertz.FromKHz(Double)
+  fullName.vb: HackRFDotnet.Api.Hertz.FromKHz(Double)
+  name.vb: FromKHz(Double)
+  spec.csharp:
+  - uid: HackRFDotnet.Api.Hertz.FromKHz(System.Double)
+    name: FromKHz
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromKHz_System_Double_
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.Api.Hertz.FromKHz(System.Double)
+    name: FromKHz
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromKHz_System_Double_
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: HackRFDotnet.Api.Hertz.FromMHz(System.Double)
+  commentId: M:HackRFDotnet.Api.Hertz.FromMHz(System.Double)
+  parent: HackRFDotnet.Api.Hertz
+  isExternal: true
+  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromMHz_System_Double_
+  name: FromMHz(double)
+  nameWithType: Hertz.FromMHz(double)
+  fullName: HackRFDotnet.Api.Hertz.FromMHz(double)
+  nameWithType.vb: Hertz.FromMHz(Double)
+  fullName.vb: HackRFDotnet.Api.Hertz.FromMHz(Double)
+  name.vb: FromMHz(Double)
+  spec.csharp:
+  - uid: HackRFDotnet.Api.Hertz.FromMHz(System.Double)
+    name: FromMHz
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromMHz_System_Double_
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.Api.Hertz.FromMHz(System.Double)
+    name: FromMHz
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromMHz_System_Double_
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: HackRFDotnet.Api.Hertz.FromGHz(System.Double)
+  commentId: M:HackRFDotnet.Api.Hertz.FromGHz(System.Double)
+  parent: HackRFDotnet.Api.Hertz
+  isExternal: true
+  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromGHz_System_Double_
+  name: FromGHz(double)
+  nameWithType: Hertz.FromGHz(double)
+  fullName: HackRFDotnet.Api.Hertz.FromGHz(double)
+  nameWithType.vb: Hertz.FromGHz(Double)
+  fullName.vb: HackRFDotnet.Api.Hertz.FromGHz(Double)
+  name.vb: FromGHz(Double)
+  spec.csharp:
+  - uid: HackRFDotnet.Api.Hertz.FromGHz(System.Double)
+    name: FromGHz
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromGHz_System_Double_
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.Api.Hertz.FromGHz(System.Double)
+    name: FromGHz
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_FromGHz_System_Double_
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: HackRFDotnet.Api.Hertz.Equals(System.Object)
+  commentId: M:HackRFDotnet.Api.Hertz.Equals(System.Object)
+  parent: HackRFDotnet.Api.Hertz
+  isExternal: true
+  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: Hertz.Equals(object)
+  fullName: HackRFDotnet.Api.Hertz.Equals(object)
+  nameWithType.vb: Hertz.Equals(Object)
+  fullName.vb: HackRFDotnet.Api.Hertz.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: HackRFDotnet.Api.Hertz.Equals(System.Object)
+    name: Equals
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.Api.Hertz.Equals(System.Object)
+    name: Equals
+    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HackRFDotnet.Api.SampleRate.#ctor*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.#ctor
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate__ctor_System_Int64_
+  name: SampleRate
+  nameWithType: SampleRate.SampleRate
+  fullName: HackRFDotnet.Api.SampleRate.SampleRate
+  nameWithType.vb: SampleRate.New
+  fullName.vb: HackRFDotnet.Api.SampleRate.New
+  name.vb: New
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: HackRFDotnet.Api.SampleRate.Sps*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.Sps
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_Sps
+  name: Sps
+  nameWithType: SampleRate.Sps
+  fullName: HackRFDotnet.Api.SampleRate.Sps
+- uid: HackRFDotnet.Api.SampleRate.Msps*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.Msps
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_Msps
+  name: Msps
+  nameWithType: SampleRate.Msps
+  fullName: HackRFDotnet.Api.SampleRate.Msps
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: HackRFDotnet.Api.SampleRate.Ksps*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.Ksps
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_Ksps
+  name: Ksps
+  nameWithType: SampleRate.Ksps
+  fullName: HackRFDotnet.Api.SampleRate.Ksps
+- uid: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_NyquistFrequencyBandwidth
+  name: NyquistFrequencyBandwidth
+  nameWithType: SampleRate.NyquistFrequencyBandwidth
+  fullName: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+- uid: HackRFDotnet.Api.Bandwidth
+  commentId: T:HackRFDotnet.Api.Bandwidth
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Bandwidth.html
+  name: Bandwidth
+  nameWithType: Bandwidth
+  fullName: HackRFDotnet.Api.Bandwidth
+- uid: HackRFDotnet.Api.SampleRate.FromKsps*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.FromKsps
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_FromKsps_System_Double_
+  name: FromKsps
+  nameWithType: SampleRate.FromKsps
+  fullName: HackRFDotnet.Api.SampleRate.FromKsps
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.SampleRate.html
+  name: SampleRate
+  nameWithType: SampleRate
+  fullName: HackRFDotnet.Api.SampleRate
+- uid: HackRFDotnet.Api.SampleRate.FromMsps*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.FromMsps
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_FromMsps_System_Double_
+  name: FromMsps
+  nameWithType: SampleRate.FromMsps
+  fullName: HackRFDotnet.Api.SampleRate.FromMsps
+- uid: HackRFDotnet.Api.SampleRate.FromGsps*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.FromGsps
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_FromGsps_System_Double_
+  name: FromGsps
+  nameWithType: SampleRate.FromGsps
+  fullName: HackRFDotnet.Api.SampleRate.FromGsps
+- uid: HackRFDotnet.Api.SampleRate.op_GreaterThan*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_GreaterThan
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_GreaterThan_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+  name: operator >
+  nameWithType: SampleRate.operator >
+  fullName: HackRFDotnet.Api.SampleRate.operator >
+  nameWithType.vb: SampleRate.>
+  fullName.vb: HackRFDotnet.Api.SampleRate.>
+  name.vb: '>'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_GreaterThan*
+    name: '>'
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_GreaterThan_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: HackRFDotnet.Api.SampleRate.op_LessThan*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_LessThan
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_LessThan_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+  name: operator <
+  nameWithType: SampleRate.operator <
+  fullName: HackRFDotnet.Api.SampleRate.operator <
+  nameWithType.vb: SampleRate.<
+  fullName.vb: HackRFDotnet.Api.SampleRate.<
+  name.vb: <
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_LessThan*
+    name: <
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_LessThan_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+- uid: HackRFDotnet.Api.SampleRate.op_GreaterThanOrEqual*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_GreaterThanOrEqual
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_GreaterThanOrEqual_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+  name: operator >=
+  nameWithType: SampleRate.operator >=
+  fullName: HackRFDotnet.Api.SampleRate.operator >=
+  nameWithType.vb: SampleRate.>=
+  fullName.vb: HackRFDotnet.Api.SampleRate.>=
+  name.vb: '>='
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_GreaterThanOrEqual*
+    name: '>='
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_GreaterThanOrEqual_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+- uid: HackRFDotnet.Api.SampleRate.op_LessThanOrEqual*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_LessThanOrEqual
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_LessThanOrEqual_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+  name: operator <=
+  nameWithType: SampleRate.operator <=
+  fullName: HackRFDotnet.Api.SampleRate.operator <=
+  nameWithType.vb: SampleRate.<=
+  fullName.vb: HackRFDotnet.Api.SampleRate.<=
+  name.vb: <=
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_LessThanOrEqual*
+    name: <=
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_LessThanOrEqual_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+- uid: HackRFDotnet.Api.SampleRate.op_Equality*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_Equality
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Equality_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+  name: operator ==
+  nameWithType: SampleRate.operator ==
+  fullName: HackRFDotnet.Api.SampleRate.operator ==
+  nameWithType.vb: SampleRate.=
+  fullName.vb: HackRFDotnet.Api.SampleRate.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_Equality*
+    name: ==
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Equality_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+- uid: HackRFDotnet.Api.SampleRate.op_Inequality*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_Inequality
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Inequality_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+  name: operator !=
+  nameWithType: SampleRate.operator !=
+  fullName: HackRFDotnet.Api.SampleRate.operator !=
+  nameWithType.vb: SampleRate.<>
+  fullName.vb: HackRFDotnet.Api.SampleRate.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_Inequality*
+    name: '!='
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Inequality_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+- uid: HackRFDotnet.Api.SampleRate.op_Modulus*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_Modulus
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Modulus_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+  name: operator %
+  nameWithType: SampleRate.operator %
+  fullName: HackRFDotnet.Api.SampleRate.operator %
+  nameWithType.vb: SampleRate.Mod
+  fullName.vb: HackRFDotnet.Api.SampleRate.Mod
+  name.vb: Mod
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_Modulus*
+    name: '%'
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Modulus_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+- uid: HackRFDotnet.Api.SampleRate.op_UnaryNegation*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_UnaryNegation
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_UnaryNegation_HackRFDotnet_Api_SampleRate_
+  name: operator -
+  nameWithType: SampleRate.operator -
+  fullName: HackRFDotnet.Api.SampleRate.operator -
+  nameWithType.vb: SampleRate.-
+  fullName.vb: HackRFDotnet.Api.SampleRate.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_UnaryNegation*
+    name: '-'
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_UnaryNegation_HackRFDotnet_Api_SampleRate_
+- uid: HackRFDotnet.Api.SampleRate.op_Division*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_Division
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Division_HackRFDotnet_Api_SampleRate_System_Int32_
+  name: operator /
+  nameWithType: SampleRate.operator /
+  fullName: HackRFDotnet.Api.SampleRate.operator /
+  nameWithType.vb: SampleRate./
+  fullName.vb: HackRFDotnet.Api.SampleRate./
+  name.vb: /
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_Division*
+    name: /
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Division_HackRFDotnet_Api_SampleRate_System_Int32_
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: HackRFDotnet.Api.SampleRate.op_Subtraction*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_Subtraction
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Subtraction_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+  name: operator -
+  nameWithType: SampleRate.operator -
+  fullName: HackRFDotnet.Api.SampleRate.operator -
+  nameWithType.vb: SampleRate.-
+  fullName.vb: HackRFDotnet.Api.SampleRate.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_Subtraction*
+    name: '-'
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Subtraction_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+- uid: HackRFDotnet.Api.SampleRate.op_Addition*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.op_Addition
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Addition_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
+  name: operator +
+  nameWithType: SampleRate.operator +
+  fullName: HackRFDotnet.Api.SampleRate.operator +
+  nameWithType.vb: SampleRate.+
+  fullName.vb: HackRFDotnet.Api.SampleRate.+
+  name.vb: +
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.SampleRate.op_Addition*
+    name: +
+    href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_op_Addition_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_

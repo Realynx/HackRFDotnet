@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum OperacakeSwitchingMode | HackrfDotnet ">
       
-      
+      <meta name="description" content="Opera Cake port switching mode. Set via  and queried via .">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -90,7 +90,7 @@
 
 
   <h1 id="HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode" data-uid="HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode" class="text-break">
-Enum OperacakeSwitchingMode  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs/#L2"><i class="bi bi-code-slash"></i></a>
+Enum OperacakeSwitchingMode  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -98,7 +98,8 @@ Enum OperacakeSwitchingMode  <a class="header-action link-secondary" title="View
   <dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Opera Cake port switching mode. Set via <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode_">SetOperacakeMode(HackRFDevice*, byte, OperacakeSwitchingMode)</a> and queried via <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_GetOperacakeMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode__">GetOperacakeMode(HackRFDevice*, byte, OperacakeSwitchingMode*)</a>.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -118,13 +119,18 @@ Enum OperacakeSwitchingMode  <a class="header-action link-secondary" title="View
   <dl class="parameters">
     <dt id="HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode_OPERACAKE_MODE_FREQUENCY"><code>OPERACAKE_MODE_FREQUENCY = 1</code></dt>
   
-  <dd></dd>
+  <dd><p>Port connections are switched automatically when the frequency is changed. Frequency ranges can be set using <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeFrequencyRanges_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_Devices_HackRFOperacakeFreqRange__System_Byte_">SetOperacakeFrequencyRanges(HackRFDevice*, HackRFOperacakeFreqRange*, byte)</a>.
+In this mode, B0 mirrors A0.</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode_OPERACAKE_MODE_MANUAL"><code>OPERACAKE_MODE_MANUAL = 0</code></dt>
   
-  <dd></dd>
+  <dd><p>Port connections are set manually using <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakePorts_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_Byte_System_Byte_">SetOperacakePorts(HackRFDevice*, byte, byte, byte)</a>. Both ports can be specified, but not on the same side.</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode_OPERACAKE_MODE_TIME"><code>OPERACAKE_MODE_TIME = 2</code></dt>
   
-  <dd></dd>
+  <dd><p>Port connections are switched automatically over time. dwell times can be set with <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeDwellTimes_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_Devices_HackRFOperacakeDwellTime__System_Byte_">SetOperacakeDwellTimes(HackRFDevice*, HackRFOperacakeDwellTime*, byte)</a>.
+In this mode, B0 mirrors A0.</p>
+</dd>
   </dl>
 
 
@@ -132,7 +138,7 @@ Enum OperacakeSwitchingMode  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs/#L2" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs/#L5" class="edit-link">Edit this page</a>
         </div>
 
 

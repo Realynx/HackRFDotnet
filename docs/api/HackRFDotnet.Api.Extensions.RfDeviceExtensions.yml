@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Extensions/RfDeviceExtensions.cs
+      path: HackRFDotnet/Api/Extensions/RfDeviceExtensions.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: RfDeviceExtensions
-    path: HackRFDotnet/ManagedApi/Extensions/RfDeviceExtensions.cs
+    path: HackRFDotnet/Api/Extensions/RfDeviceExtensions.cs
     startLine: 1
   assemblies:
   - HackRFDotnet
@@ -51,11 +51,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Extensions/RfDeviceExtensions.cs
+      path: HackRFDotnet/Api/Extensions/RfDeviceExtensions.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AttenuateAmplification
-    path: HackRFDotnet/ManagedApi/Extensions/RfDeviceExtensions.cs
+    path: HackRFDotnet/Api/Extensions/RfDeviceExtensions.cs
     startLine: 2
   assemblies:
   - HackRFDotnet

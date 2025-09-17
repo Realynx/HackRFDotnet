@@ -18,11 +18,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: RfDeviceControllerService
-    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
     startLine: 4
   assemblies:
   - HackRFDotnet
@@ -53,11 +53,11 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: RfDevices
-    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
     startLine: 5
   assemblies:
   - HackRFDotnet
@@ -80,11 +80,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
     startLine: 7
   assemblies:
   - HackRFDotnet
@@ -109,11 +109,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FindDevices
-    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
     startLine: 11
   assemblies:
   - HackRFDotnet
@@ -137,11 +137,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ConnectToFirstDevice
-    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    path: HackRFDotnet/Api/Services/RfDeviceControllerService.cs
     startLine: 21
   assemblies:
   - HackRFDotnet

@@ -96,7 +96,11 @@ Enums
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.NativeApi.Enums.RfPathFilter.html">RfPathFilter</a></dt>
-      <dd></dd>
+      <dd><p>RF filter path setting enum.</p>
+<p>Used only when performing explicit tuning using <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_SetFrequency_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt64_System_UInt64_HackRFDotnet_NativeApi_Enums_RfPathFilter_">SetFrequency(HackRFDevice*, ulong, ulong, RfPathFilter)</a>,
+or can be converted into a human-readable string using <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_FilterPathName_HackRFDotnet_NativeApi_Enums_RfPathFilter_">FilterPathName(RfPathFilter)</a>.</p>
+<p>This can select the image rejection filter (U3, U8 or none) to use - using switches U5, U6, U9 and U11. When no filter is selected, the mixer itself is bypassed.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.NativeApi.Enums.SweepStyle.html">SweepStyle</a></dt>

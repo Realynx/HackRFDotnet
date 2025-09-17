@@ -61,6 +61,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Older than rev6
   example: []
   syntax:
     content: BOARD_REV_HACKRF1_OLD = 0
@@ -84,10 +85,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_HACKRF1_R6
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 6, generic
   example: []
   syntax:
     content: BOARD_REV_HACKRF1_R6 = 1
@@ -111,10 +113,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_HACKRF1_R7
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 7, generic
   example: []
   syntax:
     content: BOARD_REV_HACKRF1_R7 = 2
@@ -138,10 +141,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_HACKRF1_R8
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 8, generic
   example: []
   syntax:
     content: BOARD_REV_HACKRF1_R8 = 3
@@ -165,10 +169,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_HACKRF1_R9
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 21
+    startLine: 25
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 9, generic
   example: []
   syntax:
     content: BOARD_REV_HACKRF1_R9 = 4
@@ -192,10 +197,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_HACKRF1_R10
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 25
+    startLine: 30
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 10, generic
   example: []
   syntax:
     content: BOARD_REV_HACKRF1_R10 = 5
@@ -219,10 +225,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_GSG_HACKRF1_R6
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 30
+    startLine: 35
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 6, made by GSG
   example: []
   syntax:
     content: BOARD_REV_GSG_HACKRF1_R6 = 129
@@ -246,10 +253,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_GSG_HACKRF1_R7
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 34
+    startLine: 40
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 7, made by GSG
   example: []
   syntax:
     content: BOARD_REV_GSG_HACKRF1_R7 = 130
@@ -273,10 +281,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_GSG_HACKRF1_R8
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 38
+    startLine: 45
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 8, made by GSG
   example: []
   syntax:
     content: BOARD_REV_GSG_HACKRF1_R8 = 131
@@ -300,10 +309,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_GSG_HACKRF1_R9
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 42
+    startLine: 50
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 9, made by GSG
   example: []
   syntax:
     content: BOARD_REV_GSG_HACKRF1_R9 = 132
@@ -327,10 +337,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_GSG_HACKRF1_R10
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 46
+    startLine: 55
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Board revision 10, made by GSG
   example: []
   syntax:
     content: BOARD_REV_GSG_HACKRF1_R10 = 133
@@ -354,10 +365,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_UNRECOGNIZED
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 51
+    startLine: 60
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Unknown board revision (detection failed)
   example: []
   syntax:
     content: BOARD_REV_UNRECOGNIZED = 254
@@ -381,10 +393,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_REV_UNDETECTED
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
-    startLine: 55
+    startLine: 65
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Unknown board revision (detection not yet attempted)
   example: []
   syntax:
     content: BOARD_REV_UNDETECTED = 255

@@ -33,10 +33,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HackrfError
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 1
+    startLine: 4
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
+  summary: Error enum, returned by many libhackrf functions.
+  example: []
   syntax:
     content: public enum HackrfError
     content.vb: Public Enum HackrfError
@@ -58,11 +60,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_SUCCESS
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: no error happened
+  summary: No error happened.
   example: []
   syntax:
     content: HACKRF_SUCCESS = 0
@@ -86,7 +88,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_TRUE
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -114,7 +116,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_INVALID_PARAM
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -142,7 +144,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_NOT_FOUND
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -170,7 +172,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_BUSY
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -198,11 +200,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_NO_MEM
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Memory allocation (on host side) failed
+  summary: Memory allocation (on host side) failed.
   example: []
   syntax:
     content: HACKRF_ERROR_NO_MEM = -11
@@ -226,11 +228,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_LIBUSB
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 35
+    startLine: 38
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: LibUSB error, use @ref hackrf_error_name to get a human-readable error string (using `libusb_strerror`)
+  summary: LibUSB error, use @ref hackrf_error_name to get a human-readable error string (using `libusb_strerror`).
   example: []
   syntax:
     content: HACKRF_ERROR_LIBUSB = -1000
@@ -254,11 +256,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_THREAD
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Error setting up transfer thread (pthread-related error)
+  summary: Error setting up transfer thread (pthread-related error).
   example: []
   syntax:
     content: HACKRF_ERROR_THREAD = -1001
@@ -282,11 +284,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_STREAMING_THREAD_ERR
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Streaming thread could not start due to an error
+  summary: Streaming thread could not start due to an error.
   example: []
   syntax:
     content: HACKRF_ERROR_STREAMING_THREAD_ERR = -1002
@@ -310,11 +312,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_STREAMING_STOPPED
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 50
+    startLine: 53
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Streaming thread stopped due to an error
+  summary: Streaming thread stopped due to an error.
   example: []
   syntax:
     content: HACKRF_ERROR_STREAMING_STOPPED = -1003
@@ -338,11 +340,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_STREAMING_EXIT_CALLED
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 55
+    startLine: 58
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Streaming thread exited (normally)
+  summary: Streaming thread exited (normally).
   example: []
   syntax:
     content: HACKRF_ERROR_STREAMING_EXIT_CALLED = -1004
@@ -366,11 +368,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_USB_API_VERSION
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 60
+    startLine: 63
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: The installed firmware does not support this function
+  summary: The installed firmware does not support this function.
   example: []
   syntax:
     content: HACKRF_ERROR_USB_API_VERSION = -1005
@@ -394,11 +396,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_NOT_LAST_DEVICE
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 65
+    startLine: 68
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Can not exit library as one or more HackRFs still in use
+  summary: Can not exit library as one or more HackRFs still in use.
   example: []
   syntax:
     content: HACKRF_ERROR_NOT_LAST_DEVICE = -2000
@@ -422,11 +424,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_OTHER
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 70
+    startLine: 73
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Unspecified error
+  summary: Unspecified error.
   example: []
   syntax:
     content: HACKRF_ERROR_OTHER = -9999

@@ -4,8 +4,6 @@ items:
   commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
   id: HackRFDotnet.Api.Streams.SignalProcessing
   children:
-  - HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  - HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
   - HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
   - HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
   langs:
@@ -18,20 +16,6 @@ items:
   assemblies:
   - HackRFDotnet
 references:
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate.html
-  name: SampleRate
-  nameWithType: SampleRate
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
   commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
   parent: HackRFDotnet.Api.Streams.SignalProcessing

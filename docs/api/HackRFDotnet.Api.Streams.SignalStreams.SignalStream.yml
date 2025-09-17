@@ -6,12 +6,12 @@ items:
   parent: HackRFDotnet.Api.Streams.SignalStreams
   children:
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)
-  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span{HackRFDotnet.Api.Streams.IQ})
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
-  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._iQStream
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._keepOpen
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._processingPipeline
@@ -24,11 +24,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SignalStream
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
     startLine: 6
   assemblies:
   - HackRFDotnet
@@ -64,11 +64,11 @@ items:
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Center
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
     startLine: 7
   assemblies:
   - HackRFDotnet
@@ -77,38 +77,38 @@ items:
     content: public RadioBand Center { get; protected set; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      type: HackRFDotnet.Api.RadioBand
     content.vb: Public Property Center As RadioBand
   overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center*
-- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
-  commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
-  id: BandWidth
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth
+  commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth
+  id: Bandwidth
   parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
   langs:
   - csharp
   - vb
-  name: BandWidth
-  nameWithType: SignalStream.BandWidth
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
+  name: Bandwidth
+  nameWithType: SignalStream.Bandwidth
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
-    id: BandWidth
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    id: Bandwidth
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
     startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
   syntax:
-    content: public RadioBand BandWidth { get; protected set; }
+    content: public Bandwidth Bandwidth { get; protected set; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-    content.vb: Public Property BandWidth As RadioBand
-  overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth*
+      type: HackRFDotnet.Api.Bandwidth
+    content.vb: Public Property Bandwidth As Bandwidth
+  overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth*
 - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
   commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
   id: SampleRate
@@ -122,12 +122,12 @@ items:
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SampleRate
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
-    startLine: 9
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -135,7 +135,7 @@ items:
     content: public SampleRate SampleRate { get; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+      type: HackRFDotnet.Api.SampleRate
     content.vb: Public ReadOnly Property SampleRate As SampleRate
   overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate*
 - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream._processingPipeline
@@ -151,12 +151,12 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: _processingPipeline
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
-    startLine: 18
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
+    startLine: 19
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -178,12 +178,12 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: _iQStream
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
-    startLine: 20
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
+    startLine: 21
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -205,12 +205,12 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: _keepOpen
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
-    startLine: 21
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
+    startLine: 22
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -232,12 +232,12 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
-    startLine: 23
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
+    startLine: 24
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -268,12 +268,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ReadSpan
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
-    startLine: 32
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
+    startLine: 33
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -287,40 +287,40 @@ items:
   nameWithType.vb: SignalStream.ReadSpan(Span(Of IQ))
   fullName.vb: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span(Of HackRFDotnet.Api.Streams.IQ))
   name.vb: ReadSpan(Span(Of IQ))
-- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
-  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
-  id: SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  id: SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
   parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
   langs:
   - csharp
   - vb
-  name: SetBand(RadioBand, RadioBand)
-  nameWithType: SignalStream.SetBand(RadioBand, RadioBand)
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
+  name: SetBand(RadioBand, Bandwidth)
+  nameWithType: SignalStream.SetBand(RadioBand, Bandwidth)
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth)
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetBand
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
-    startLine: 62
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
+    startLine: 63
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
   summary: Set the band and bandwidth the filtering engine will use.
   example: []
   syntax:
-    content: public void SetBand(RadioBand center, RadioBand bandwidth)
+    content: public void SetBand(RadioBand center, Bandwidth bandwidth)
     parameters:
     - id: center
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      type: HackRFDotnet.Api.RadioBand
       description: ''
     - id: bandwidth
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      type: HackRFDotnet.Api.Bandwidth
       description: ''
-    content.vb: Public Sub SetBand(center As RadioBand, bandwidth As RadioBand)
+    content.vb: Public Sub SetBand(center As RadioBand, bandwidth As Bandwidth)
   overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand*
 - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
   commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
@@ -335,12 +335,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
-    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
-    startLine: 67
+    path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
+    startLine: 68
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -642,13 +642,68 @@ references:
   name: Center
   nameWithType: SignalStream.Center
   fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
+- uid: HackRFDotnet.Api.RadioBand
+  commentId: T:HackRFDotnet.Api.RadioBand
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.RadioBand.html
   name: RadioBand
   nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+  fullName: HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth*
+  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_Bandwidth
+  name: Bandwidth
+  nameWithType: SignalStream.Bandwidth
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth
+- uid: HackRFDotnet.Api.Bandwidth
+  commentId: T:HackRFDotnet.Api.Bandwidth
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Bandwidth.html
+  name: Bandwidth
+  nameWithType: Bandwidth
+  fullName: HackRFDotnet.Api.Bandwidth
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate*
+  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SampleRate
+  name: SampleRate
+  nameWithType: SignalStream.SampleRate
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.SampleRate.html
+  name: SampleRate
+  nameWithType: SampleRate
+  fullName: HackRFDotnet.Api.SampleRate
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  parent: HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html
+  name: SignalProcessingPipeline
+  nameWithType: SignalProcessingPipeline
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
 - uid: HackRFDotnet.Api.Streams.SignalProcessing
   commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
   href: HackRFDotnet.html
@@ -687,32 +742,6 @@ references:
   - uid: HackRFDotnet.Api.Streams.SignalProcessing
     name: SignalProcessing
     href: HackRFDotnet.Api.Streams.SignalProcessing.html
-- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth*
-  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
-  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_BandWidth
-  name: BandWidth
-  nameWithType: SignalStream.BandWidth
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
-- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate*
-  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
-  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SampleRate
-  name: SampleRate
-  nameWithType: SignalStream.SampleRate
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate.html
-  name: SampleRate
-  nameWithType: SampleRate
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html
-  name: SignalProcessingPipeline
-  nameWithType: SignalProcessingPipeline
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream
   commentId: T:HackRFDotnet.Api.Streams.Interfaces.IIQStream
   parent: HackRFDotnet.Api.Streams.Interfaces
@@ -847,7 +876,7 @@ references:
   - name: )
 - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand
-  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
   name: SetBand
   nameWithType: SignalStream.SetBand
   fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand

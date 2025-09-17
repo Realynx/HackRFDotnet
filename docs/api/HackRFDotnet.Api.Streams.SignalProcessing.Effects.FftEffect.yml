@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FftEffect
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
     startLine: 7
   assemblies:
   - HackRFDotnet
@@ -33,7 +33,7 @@ items:
   - System.Object
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
   implements:
-  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  - HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
   - System.IDisposable
   inheritedMembers:
   - System.Object.Equals(System.Object)
@@ -56,11 +56,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
     startLine: 13
   assemblies:
   - HackRFDotnet
@@ -90,11 +90,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AffectSignal
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
     startLine: 21
   assemblies:
   - HackRFDotnet
@@ -128,11 +128,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
     startLine: 31
   assemblies:
   - HackRFDotnet
@@ -210,13 +210,13 @@ references:
   name: SignalEffect
   nameWithType: SignalEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
-  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
-  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
+  parent: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.html
   name: ISignalEffect
   nameWithType: ISignalEffect
-  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
 - uid: System.IDisposable
   commentId: T:System.IDisposable
   parent: System
@@ -451,52 +451,52 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
   href: HackRFDotnet.html
-  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  name: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
   spec.csharp:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi
-    name: ManagedApi
-    href: HackRFDotnet.ManagedApi.html
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams
+  - uid: HackRFDotnet.Api.Streams
     name: Streams
-    href: HackRFDotnet.ManagedApi.Streams.html
+    href: HackRFDotnet.Api.Streams.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
   spec.vb:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi
-    name: ManagedApi
-    href: HackRFDotnet.ManagedApi.html
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams
+  - uid: HackRFDotnet.Api.Streams
     name: Streams
-    href: HackRFDotnet.ManagedApi.Streams.html
+    href: HackRFDotnet.Api.Streams.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.#ctor*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.#ctor
   href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_FftEffect__ctor_System_Boolean_System_Int32_

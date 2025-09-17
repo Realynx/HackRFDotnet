@@ -1,5 +1,4 @@
-﻿
-namespace HackRFDotnet.Api.Streams.Buffers;
+﻿namespace HackRFDotnet.Api.Streams.Exceptions;
 
 [Serializable]
 internal class BufferConcurrencyException : Exception {

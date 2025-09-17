@@ -15,11 +15,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Utilities/BinaryUtilities.cs
+      path: HackRFDotnet/Api/Utilities/BinaryUtilities.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BinaryUtilities
-    path: HackRFDotnet/ManagedApi/Utilities/BinaryUtilities.cs
+    path: HackRFDotnet/Api/Utilities/BinaryUtilities.cs
     startLine: 1
   assemblies:
   - HackRFDotnet
@@ -50,11 +50,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Utilities/BinaryUtilities.cs
+      path: HackRFDotnet/Api/Utilities/BinaryUtilities.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: NextPowerOfTwo
-    path: HackRFDotnet/ManagedApi/Utilities/BinaryUtilities.cs
+    path: HackRFDotnet/Api/Utilities/BinaryUtilities.cs
     startLine: 2
   assemblies:
   - HackRFDotnet

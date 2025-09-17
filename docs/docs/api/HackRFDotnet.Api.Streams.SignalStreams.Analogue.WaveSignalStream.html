@@ -89,7 +89,7 @@
 
 
   <h1 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream" class="text-break">
-Class WaveSignalStream  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class WaveSignalStream  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -139,7 +139,7 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_Center">SignalStream.Center</a>
     </div>
     <div>
-      <a class="xref" href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_BandWidth">SignalStream.BandWidth</a>
+      <a class="xref" href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_Bandwidth">SignalStream.Bandwidth</a>
     </div>
     <div>
       <a class="xref" href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SampleRate">SignalStream.SampleRate</a>
@@ -157,7 +157,7 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_ReadSpan_System_Span_HackRFDotnet_Api_Streams_IQ__">SignalStream.ReadSpan(Span&lt;IQ&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_">SignalStream.SetBand(RadioBand, RadioBand)</a>
+      <a class="xref" href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_">SignalStream.SetBand(RadioBand, Bandwidth)</a>
     </div>
     <div>
       <a class="xref" href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_Dispose">SignalStream.Dispose()</a>
@@ -196,9 +196,9 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
 
   <a id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_Streams_SignalProcessing_SampleRate_System_Boolean_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_System_Boolean_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SampleRate,System.Boolean,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)">
+  <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_SampleRate_System_Boolean_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_System_Boolean_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SampleRate,System.Boolean,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)">
   WaveSignalStream(IIQStream, SampleRate, bool, SignalProcessingPipeline?, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -212,7 +212,7 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
   <dl class="parameters">
     <dt><code>deviceStream</code> <a class="xref" href="HackRFDotnet.Api.Streams.Interfaces.IIQStream.html">IIQStream</a></dt>
     <dd></dd>
-    <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.SampleRate.html">SampleRate</a></dt>
+    <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
     <dd></dd>
     <dt><code>stero</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
@@ -241,7 +241,7 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
 
   <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream_WaveFormat" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.WaveFormat">
   WaveFormat
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the WaveFormat of this Sample Provider.</p>
@@ -278,7 +278,7 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
 
   <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream_NormalizeRms_System_Span_System_Single__System_Single_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.NormalizeRms(System.Span{System.Single},System.Single)">
   NormalizeRms(Span&lt;float&gt;, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -311,7 +311,7 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
 
   <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream_Read_System_Single___System_Int32_System_Int32_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.Read(System.Single[],System.Int32,System.Int32)">
   Read(float[], int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fill the specified buffer with 32 bit floating point samples</p>
@@ -356,7 +356,7 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/ManagedApi/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

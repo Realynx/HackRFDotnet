@@ -5,7 +5,7 @@ items:
   id: SquelchEffect
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects
   children:
-  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.#ctor(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.#ctor(HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   langs:
   - csharp
@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/SquelchEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SquelchEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SquelchEffect
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/SquelchEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SquelchEffect.cs
     startLine: 1
   assemblies:
   - HackRFDotnet
@@ -32,7 +32,7 @@ items:
   - System.Object
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
   implements:
-  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  - HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -41,24 +41,24 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.#ctor(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
-  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.#ctor(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
-  id: '#ctor(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)'
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.#ctor(HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.#ctor(HackRFDotnet.Api.SampleRate)
+  id: '#ctor(HackRFDotnet.Api.SampleRate)'
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect
   langs:
   - csharp
   - vb
   name: SquelchEffect(SampleRate)
   nameWithType: SquelchEffect.SquelchEffect(SampleRate)
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.SquelchEffect(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.SquelchEffect(HackRFDotnet.Api.SampleRate)
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/SquelchEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SquelchEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/SquelchEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SquelchEffect.cs
     startLine: 11
   assemblies:
   - HackRFDotnet
@@ -67,11 +67,11 @@ items:
     content: public SquelchEffect(SampleRate sampleRate)
     parameters:
     - id: sampleRate
-      type: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+      type: HackRFDotnet.Api.SampleRate
     content.vb: Public Sub New(sampleRate As SampleRate)
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.#ctor*
   nameWithType.vb: SquelchEffect.New(SampleRate)
-  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.New(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.New(HackRFDotnet.Api.SampleRate)
   name.vb: New(SampleRate)
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
@@ -86,11 +86,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/SquelchEffect.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SquelchEffect.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AffectSignal
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/SquelchEffect.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SquelchEffect.cs
     startLine: 19
   assemblies:
   - HackRFDotnet
@@ -176,13 +176,13 @@ references:
   name: SignalEffect
   nameWithType: SignalEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
-  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
-  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
+  parent: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.html
   name: ISignalEffect
   nameWithType: ISignalEffect
-  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -409,74 +409,74 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
   href: HackRFDotnet.html
-  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
-  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  name: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
   spec.csharp:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi
-    name: ManagedApi
-    href: HackRFDotnet.ManagedApi.html
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams
+  - uid: HackRFDotnet.Api.Streams
     name: Streams
-    href: HackRFDotnet.ManagedApi.Streams.html
+    href: HackRFDotnet.Api.Streams.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
   spec.vb:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi
-    name: ManagedApi
-    href: HackRFDotnet.ManagedApi.html
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams
+  - uid: HackRFDotnet.Api.Streams
     name: Streams
-    href: HackRFDotnet.ManagedApi.Streams.html
+    href: HackRFDotnet.Api.Streams.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.#ctor*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.#ctor
-  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SquelchEffect__ctor_HackRFDotnet_Api_Streams_SignalProcessing_SampleRate_
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SquelchEffect__ctor_HackRFDotnet_Api_SampleRate_
   name: SquelchEffect
   nameWithType: SquelchEffect.SquelchEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.SquelchEffect
   nameWithType.vb: SquelchEffect.New
   fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.New
   name.vb: New
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate.html
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.SampleRate.html
   name: SampleRate
   nameWithType: SampleRate
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-- uid: HackRFDotnet.Api.Streams.SignalProcessing
-  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
+  fullName: HackRFDotnet.Api.SampleRate
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalProcessing
-  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
   spec.csharp:
   - uid: HackRFDotnet
     name: HackRFDotnet
@@ -485,14 +485,6 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   spec.vb:
   - uid: HackRFDotnet
     name: HackRFDotnet
@@ -501,14 +493,6 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect

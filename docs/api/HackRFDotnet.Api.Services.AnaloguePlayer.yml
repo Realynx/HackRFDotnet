@@ -7,7 +7,7 @@ items:
   children:
   - HackRFDotnet.Api.Services.AnaloguePlayer.#ctor(HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream)
   - HackRFDotnet.Api.Services.AnaloguePlayer.Dispose
-  - HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,System.Int32)
+  - HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
   langs:
   - csharp
   - vb
@@ -17,12 +17,12 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Services/AnaloguePlayer.cs
+      path: HackRFDotnet/Api/Services/AnaloguePlayer.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AnaloguePlayer
-    path: HackRFDotnet/ManagedApi/Services/AnaloguePlayer.cs
-    startLine: 7
+    path: HackRFDotnet/Api/Services/AnaloguePlayer.cs
+    startLine: 6
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Services
@@ -54,12 +54,12 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Services/AnaloguePlayer.cs
+      path: HackRFDotnet/Api/Services/AnaloguePlayer.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Services/AnaloguePlayer.cs
-    startLine: 11
+    path: HackRFDotnet/Api/Services/AnaloguePlayer.cs
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Services
@@ -86,12 +86,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Services/AnaloguePlayer.cs
+      path: HackRFDotnet/Api/Services/AnaloguePlayer.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
-    path: HackRFDotnet/ManagedApi/Services/AnaloguePlayer.cs
-    startLine: 15
+    path: HackRFDotnet/Api/Services/AnaloguePlayer.cs
+    startLine: 14
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Services
@@ -103,42 +103,42 @@ items:
   overload: HackRFDotnet.Api.Services.AnaloguePlayer.Dispose*
   implements:
   - System.IDisposable.Dispose
-- uid: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,System.Int32)
-  commentId: M:HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,System.Int32)
-  id: PlayStreamAsync(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,System.Int32)
+- uid: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
+  commentId: M:HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
+  id: PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
   parent: HackRFDotnet.Api.Services.AnaloguePlayer
   langs:
   - csharp
   - vb
-  name: PlayStreamAsync(RadioBand, RadioBand, int)
-  nameWithType: AnaloguePlayer.PlayStreamAsync(RadioBand, RadioBand, int)
-  fullName: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, int)
+  name: PlayStreamAsync(RadioBand, Bandwidth, int)
+  nameWithType: AnaloguePlayer.PlayStreamAsync(RadioBand, Bandwidth, int)
+  fullName: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth, int)
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Services/AnaloguePlayer.cs
+      path: HackRFDotnet/Api/Services/AnaloguePlayer.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: PlayStreamAsync
-    path: HackRFDotnet/ManagedApi/Services/AnaloguePlayer.cs
-    startLine: 19
+    path: HackRFDotnet/Api/Services/AnaloguePlayer.cs
+    startLine: 18
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Services
   syntax:
-    content: public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwidth, int audioRate)
+    content: public virtual void PlayStreamAsync(RadioBand centerOffset, Bandwidth bandwidth, int audioRate)
     parameters:
     - id: centerOffset
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      type: HackRFDotnet.Api.RadioBand
     - id: bandwidth
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      type: HackRFDotnet.Api.Bandwidth
     - id: audioRate
       type: System.Int32
-    content.vb: Public Overridable Sub PlayStreamAsync(centerOffset As RadioBand, bandwidth As RadioBand, audioRate As Integer)
+    content.vb: Public Overridable Sub PlayStreamAsync(centerOffset As RadioBand, bandwidth As Bandwidth, audioRate As Integer)
   overload: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync*
-  nameWithType.vb: AnaloguePlayer.PlayStreamAsync(RadioBand, RadioBand, Integer)
-  fullName.vb: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, Integer)
-  name.vb: PlayStreamAsync(RadioBand, RadioBand, Integer)
+  nameWithType.vb: AnaloguePlayer.PlayStreamAsync(RadioBand, Bandwidth, Integer)
+  fullName.vb: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth, Integer)
+  name.vb: PlayStreamAsync(RadioBand, Bandwidth, Integer)
 references:
 - uid: HackRFDotnet.Api.Services
   commentId: N:HackRFDotnet.Api.Services
@@ -507,17 +507,24 @@ references:
   - name: )
 - uid: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync*
   commentId: Overload:HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync
-  href: HackRFDotnet.Api.Services.AnaloguePlayer.html#HackRFDotnet_Api_Services_AnaloguePlayer_PlayStreamAsync_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_System_Int32_
+  href: HackRFDotnet.Api.Services.AnaloguePlayer.html#HackRFDotnet_Api_Services_AnaloguePlayer_PlayStreamAsync_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_System_Int32_
   name: PlayStreamAsync
   nameWithType: AnaloguePlayer.PlayStreamAsync
   fullName: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
+- uid: HackRFDotnet.Api.RadioBand
+  commentId: T:HackRFDotnet.Api.RadioBand
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.RadioBand.html
   name: RadioBand
   nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+  fullName: HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.Bandwidth
+  commentId: T:HackRFDotnet.Api.Bandwidth
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Bandwidth.html
+  name: Bandwidth
+  nameWithType: Bandwidth
+  fullName: HackRFDotnet.Api.Bandwidth
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -529,12 +536,12 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: HackRFDotnet.Api.Streams.SignalProcessing
-  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalProcessing
-  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
   spec.csharp:
   - uid: HackRFDotnet
     name: HackRFDotnet
@@ -543,14 +550,6 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   spec.vb:
   - uid: HackRFDotnet
     name: HackRFDotnet
@@ -559,11 +558,3 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html

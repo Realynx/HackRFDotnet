@@ -22,10 +22,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: OperacakeSwitchingMode
     path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
-    startLine: 1
+    startLine: 4
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.Peripherals
+  summary: Opera Cake port switching mode. Set via <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte%2cHackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)" data-throw-if-not-resolved="false"></xref> and queried via <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte%2cHackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public enum OperacakeSwitchingMode
     content.vb: Public Enum OperacakeSwitchingMode
@@ -47,10 +49,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: OPERACAKE_MODE_MANUAL
     path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.Peripherals
+  summary: Port connections are set manually using <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakePorts(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte%2cSystem.Byte%2cSystem.Byte)" data-throw-if-not-resolved="false"></xref>. Both ports can be specified, but not on the same side.
   example: []
   syntax:
     content: OPERACAKE_MODE_MANUAL = 0
@@ -74,10 +77,14 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: OPERACAKE_MODE_FREQUENCY
     path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
-    startLine: 9
+    startLine: 14
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.Peripherals
+  summary: >-
+    Port connections are switched automatically when the frequency is changed. Frequency ranges can be set using <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cHackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange*%2cSystem.Byte)" data-throw-if-not-resolved="false"></xref>.
+
+    In this mode, B0 mirrors A0.
   example: []
   syntax:
     content: OPERACAKE_MODE_FREQUENCY = 1
@@ -101,16 +108,130 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: OPERACAKE_MODE_TIME
     path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
-    startLine: 13
+    startLine: 20
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.Peripherals
+  summary: >-
+    Port connections are switched automatically over time. dwell times can be set with <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeDwellTimes(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cHackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime*%2cSystem.Byte)" data-throw-if-not-resolved="false"></xref>.
+
+    In this mode, B0 mirrors A0.
   example: []
   syntax:
     content: OPERACAKE_MODE_TIME = 2
     return:
       type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
 references:
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode_
+  name: SetOperacakeMode(HackRFDevice*, byte, OperacakeSwitchingMode)
+  nameWithType: HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDevice*, byte, OperacakeSwitchingMode)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte, HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)
+  nameWithType.vb: HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDevice*, Byte, OperacakeSwitchingMode)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte, HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)
+  name.vb: SetOperacakeMode(HackRFDevice*, Byte, OperacakeSwitchingMode)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)
+    name: SetOperacakeMode
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+    name: OperacakeSwitchingMode
+    href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.html
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)
+    name: SetOperacakeMode
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+    name: OperacakeSwitchingMode
+    href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.html
+  - name: )
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_GetOperacakeMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode__
+  name: GetOperacakeMode(HackRFDevice*, byte, OperacakeSwitchingMode*)
+  nameWithType: HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDevice*, byte, OperacakeSwitchingMode*)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte, HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)
+  nameWithType.vb: HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDevice*, Byte, OperacakeSwitchingMode*)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte, HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)
+  name.vb: GetOperacakeMode(HackRFDevice*, Byte, OperacakeSwitchingMode*)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)
+    name: GetOperacakeMode
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_GetOperacakeMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+    name: OperacakeSwitchingMode
+    href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)
+    name: GetOperacakeMode
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_GetOperacakeMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_HackRFDotnet_NativeApi_Enums_Peripherals_OperacakeSwitchingMode__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+    name: OperacakeSwitchingMode
+    href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.html
+  - name: '*'
+  - name: )
 - uid: HackRFDotnet.NativeApi.Enums.Peripherals
   commentId: N:HackRFDotnet.NativeApi.Enums.Peripherals
   href: HackRFDotnet.html
@@ -149,6 +270,74 @@ references:
   - uid: HackRFDotnet.NativeApi.Enums.Peripherals
     name: Peripherals
     href: HackRFDotnet.NativeApi.Enums.Peripherals.html
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakePorts(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.Byte,System.Byte)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakePorts(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.Byte,System.Byte)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakePorts_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_Byte_System_Byte_
+  name: SetOperacakePorts(HackRFDevice*, byte, byte, byte)
+  nameWithType: HackRfNativeLib.Operacake.SetOperacakePorts(HackRFDevice*, byte, byte, byte)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakePorts(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte, byte, byte)
+  nameWithType.vb: HackRfNativeLib.Operacake.SetOperacakePorts(HackRFDevice*, Byte, Byte, Byte)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakePorts(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte, Byte, Byte)
+  name.vb: SetOperacakePorts(HackRFDevice*, Byte, Byte, Byte)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakePorts(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.Byte,System.Byte)
+    name: SetOperacakePorts
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakePorts_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_Byte_System_Byte_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakePorts(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.Byte,System.Byte)
+    name: SetOperacakePorts
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakePorts_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_Byte_System_Byte_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
 - uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
   commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
   parent: HackRFDotnet.NativeApi.Enums.Peripherals
@@ -156,3 +345,115 @@ references:
   name: OperacakeSwitchingMode
   nameWithType: OperacakeSwitchingMode
   fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange*,System.Byte)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange*,System.Byte)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeFrequencyRanges_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_Devices_HackRFOperacakeFreqRange__System_Byte_
+  name: SetOperacakeFrequencyRanges(HackRFDevice*, HackRFOperacakeFreqRange*, byte)
+  nameWithType: HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges(HackRFDevice*, HackRFOperacakeFreqRange*, byte)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange*, byte)
+  nameWithType.vb: HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges(HackRFDevice*, HackRFOperacakeFreqRange*, Byte)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange*, Byte)
+  name.vb: SetOperacakeFrequencyRanges(HackRFDevice*, HackRFOperacakeFreqRange*, Byte)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange*,System.Byte)
+    name: SetOperacakeFrequencyRanges
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeFrequencyRanges_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_Devices_HackRFOperacakeFreqRange__System_Byte_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange
+    name: HackRFOperacakeFreqRange
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange*,System.Byte)
+    name: SetOperacakeFrequencyRanges
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeFrequencyRanges_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_Devices_HackRFOperacakeFreqRange__System_Byte_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange
+    name: HackRFOperacakeFreqRange
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeDwellTimes(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime*,System.Byte)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeDwellTimes(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime*,System.Byte)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeDwellTimes_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_Devices_HackRFOperacakeDwellTime__System_Byte_
+  name: SetOperacakeDwellTimes(HackRFDevice*, HackRFOperacakeDwellTime*, byte)
+  nameWithType: HackRfNativeLib.Operacake.SetOperacakeDwellTimes(HackRFDevice*, HackRFOperacakeDwellTime*, byte)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeDwellTimes(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime*, byte)
+  nameWithType.vb: HackRfNativeLib.Operacake.SetOperacakeDwellTimes(HackRFDevice*, HackRFOperacakeDwellTime*, Byte)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeDwellTimes(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime*, Byte)
+  name.vb: SetOperacakeDwellTimes(HackRFDevice*, HackRFOperacakeDwellTime*, Byte)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeDwellTimes(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime*,System.Byte)
+    name: SetOperacakeDwellTimes
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeDwellTimes_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_Devices_HackRFOperacakeDwellTime__System_Byte_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime
+    name: HackRFOperacakeDwellTime
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeDwellTimes(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime*,System.Byte)
+    name: SetOperacakeDwellTimes
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_SetOperacakeDwellTimes_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_Devices_HackRFOperacakeDwellTime__System_Byte_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime
+    name: HackRFOperacakeDwellTime
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )

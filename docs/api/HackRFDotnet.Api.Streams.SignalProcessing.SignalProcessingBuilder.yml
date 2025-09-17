@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingBuilder.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SignalProcessingBuilder
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingBuilder.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
     startLine: 3
   assemblies:
   - HackRFDotnet
@@ -52,11 +52,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingBuilder.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingBuilder.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
     startLine: 5
   assemblies:
   - HackRFDotnet
@@ -81,11 +81,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingBuilder.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AddSignalEffect
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingBuilder.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
     startLine: 9
   assemblies:
   - HackRFDotnet
@@ -112,11 +112,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingBuilder.cs
+      path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BuildPipeline
-    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/SignalProcessingBuilder.cs
+    path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
     startLine: 14
   assemblies:
   - HackRFDotnet

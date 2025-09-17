@@ -99,11 +99,11 @@ items:
   type: Struct
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: IQ
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 11
   assemblies:
   - HackRFDotnet
@@ -131,11 +131,11 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Zero
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 12
   assemblies:
   - HackRFDotnet
@@ -158,11 +158,11 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: One
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 13
   assemblies:
   - HackRFDotnet
@@ -185,11 +185,11 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ImaginaryOne
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 14
   assemblies:
   - HackRFDotnet
@@ -212,11 +212,11 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: NaN
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 15
   assemblies:
   - HackRFDotnet
@@ -239,11 +239,11 @@ items:
   type: Field
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Infinity
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 16
   assemblies:
   - HackRFDotnet
@@ -266,11 +266,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 34
   assemblies:
   - HackRFDotnet
@@ -300,11 +300,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 39
   assemblies:
   - HackRFDotnet
@@ -332,11 +332,11 @@ items:
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: I
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 47
   assemblies:
   - HackRFDotnet
@@ -363,11 +363,11 @@ items:
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Q
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 52
   assemblies:
   - HackRFDotnet
@@ -394,11 +394,11 @@ items:
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Magnitude
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 54
   assemblies:
   - HackRFDotnet
@@ -423,11 +423,11 @@ items:
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Phase
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 55
   assemblies:
   - HackRFDotnet
@@ -452,11 +452,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromPolarCoordinates
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 57
   assemblies:
   - HackRFDotnet
@@ -488,11 +488,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Negate
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 62
   assemblies:
   - HackRFDotnet
@@ -519,11 +519,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Add
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 66
   assemblies:
   - HackRFDotnet
@@ -552,11 +552,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Add
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 70
   assemblies:
   - HackRFDotnet
@@ -588,11 +588,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Add
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 74
   assemblies:
   - HackRFDotnet
@@ -624,11 +624,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Subtract
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 78
   assemblies:
   - HackRFDotnet
@@ -657,11 +657,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Subtract
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 82
   assemblies:
   - HackRFDotnet
@@ -693,11 +693,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Subtract
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 86
   assemblies:
   - HackRFDotnet
@@ -729,11 +729,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Multiply
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 90
   assemblies:
   - HackRFDotnet
@@ -762,11 +762,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Multiply
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 94
   assemblies:
   - HackRFDotnet
@@ -798,11 +798,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Multiply
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 98
   assemblies:
   - HackRFDotnet
@@ -834,11 +834,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Divide
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 102
   assemblies:
   - HackRFDotnet
@@ -867,11 +867,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Divide
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 106
   assemblies:
   - HackRFDotnet
@@ -903,11 +903,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Divide
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 110
   assemblies:
   - HackRFDotnet
@@ -939,11 +939,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_UnaryNegation
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 114
   assemblies:
   - HackRFDotnet
@@ -973,11 +973,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Addition
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 118
   assemblies:
   - HackRFDotnet
@@ -1009,11 +1009,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Addition
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 122
   assemblies:
   - HackRFDotnet
@@ -1045,11 +1045,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Addition
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 126
   assemblies:
   - HackRFDotnet
@@ -1081,11 +1081,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Subtraction
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 130
   assemblies:
   - HackRFDotnet
@@ -1117,11 +1117,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Subtraction
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 134
   assemblies:
   - HackRFDotnet
@@ -1153,11 +1153,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Subtraction
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 138
   assemblies:
   - HackRFDotnet
@@ -1189,11 +1189,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Multiply
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 142
   assemblies:
   - HackRFDotnet
@@ -1225,11 +1225,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Multiply
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 149
   assemblies:
   - HackRFDotnet
@@ -1261,11 +1261,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Multiply
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 165
   assemblies:
   - HackRFDotnet
@@ -1297,11 +1297,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Division
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 181
   assemblies:
   - HackRFDotnet
@@ -1333,11 +1333,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Division
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 199
   assemblies:
   - HackRFDotnet
@@ -1369,11 +1369,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Division
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 223
   assemblies:
   - HackRFDotnet
@@ -1405,11 +1405,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Abs
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 240
   assemblies:
   - HackRFDotnet
@@ -1436,11 +1436,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Conjugate
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 265
   assemblies:
   - HackRFDotnet
@@ -1467,11 +1467,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Reciprocal
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 270
   assemblies:
   - HackRFDotnet
@@ -1498,11 +1498,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Equality
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 279
   assemblies:
   - HackRFDotnet
@@ -1534,11 +1534,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Inequality
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 283
   assemblies:
   - HackRFDotnet
@@ -1570,11 +1570,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Equals
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 287
   assemblies:
   - HackRFDotnet
@@ -1609,11 +1609,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Equals
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 291
   assemblies:
   - HackRFDotnet
@@ -1645,11 +1645,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: GetHashCode
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 295
   assemblies:
   - HackRFDotnet
@@ -1677,11 +1677,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ToString
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 297
   assemblies:
   - HackRFDotnet
@@ -1709,11 +1709,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ToString
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 299
   assemblies:
   - HackRFDotnet
@@ -1743,11 +1743,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ToString
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 301
   assemblies:
   - HackRFDotnet
@@ -1777,11 +1777,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ToString
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 303
   assemblies:
   - HackRFDotnet
@@ -1824,11 +1824,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Sin
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 314
   assemblies:
   - HackRFDotnet
@@ -1855,11 +1855,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Sinh
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 323
   assemblies:
   - HackRFDotnet
@@ -1886,11 +1886,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Asin
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 329
   assemblies:
   - HackRFDotnet
@@ -1917,11 +1917,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Cos
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 349
   assemblies:
   - HackRFDotnet
@@ -1948,11 +1948,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Cosh
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 354
   assemblies:
   - HackRFDotnet
@@ -1979,11 +1979,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Acos
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 359
   assemblies:
   - HackRFDotnet
@@ -2010,11 +2010,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Tan
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 379
   assemblies:
   - HackRFDotnet
@@ -2041,11 +2041,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Tanh
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 403
   assemblies:
   - HackRFDotnet
@@ -2072,11 +2072,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Atan
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 409
   assemblies:
   - HackRFDotnet
@@ -2103,11 +2103,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: IsFinite
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 519
   assemblies:
   - HackRFDotnet
@@ -2134,11 +2134,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: IsInfinity
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 521
   assemblies:
   - HackRFDotnet
@@ -2165,11 +2165,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: IsNaN
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 523
   assemblies:
   - HackRFDotnet
@@ -2196,11 +2196,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Log
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 525
   assemblies:
   - HackRFDotnet
@@ -2227,11 +2227,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Log
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 529
   assemblies:
   - HackRFDotnet
@@ -2263,11 +2263,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Log10
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 533
   assemblies:
   - HackRFDotnet
@@ -2294,11 +2294,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Exp
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 538
   assemblies:
   - HackRFDotnet
@@ -2325,11 +2325,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Sqrt
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 543
   assemblies:
   - HackRFDotnet
@@ -2356,11 +2356,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Pow
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 636
   assemblies:
   - HackRFDotnet
@@ -2389,11 +2389,11 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Pow
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 659
   assemblies:
   - HackRFDotnet
@@ -2425,11 +2425,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Explicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 673
   assemblies:
   - HackRFDotnet
@@ -2459,11 +2459,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 681
   assemblies:
   - HackRFDotnet
@@ -2493,11 +2493,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 685
   assemblies:
   - HackRFDotnet
@@ -2527,11 +2527,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 689
   assemblies:
   - HackRFDotnet
@@ -2561,11 +2561,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 693
   assemblies:
   - HackRFDotnet
@@ -2595,11 +2595,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 697
   assemblies:
   - HackRFDotnet
@@ -2629,11 +2629,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 701
   assemblies:
   - HackRFDotnet
@@ -2663,11 +2663,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 705
   assemblies:
   - HackRFDotnet
@@ -2697,11 +2697,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 709
   assemblies:
   - HackRFDotnet
@@ -2731,11 +2731,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 713
   assemblies:
   - HackRFDotnet
@@ -2765,11 +2765,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 717
   assemblies:
   - HackRFDotnet
@@ -2799,11 +2799,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 721
   assemblies:
   - HackRFDotnet
@@ -2833,11 +2833,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 725
   assemblies:
   - HackRFDotnet
@@ -2867,11 +2867,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 729
   assemblies:
   - HackRFDotnet
@@ -2901,11 +2901,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 733
   assemblies:
   - HackRFDotnet
@@ -2935,11 +2935,11 @@ items:
   type: Operator
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      path: HackRFDotnet/Api/Streams/IQ.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Implicit
-    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    path: HackRFDotnet/Api/Streams/IQ.cs
     startLine: 737
   assemblies:
   - HackRFDotnet

@@ -9,10 +9,10 @@ items:
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Dispose
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-  - HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  - HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
-  - HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  - HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
   langs:
   - csharp
@@ -23,12 +23,12 @@ items:
   type: Interface
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: IIQStream
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 3
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 1
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -48,12 +48,12 @@ items:
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BufferLength
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 4
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 2
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -77,12 +77,12 @@ items:
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Frequency
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 5
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 3
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -90,7 +90,7 @@ items:
     content: RadioBand Frequency { get; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      type: HackRFDotnet.Api.RadioBand
     content.vb: ReadOnly Property Frequency As RadioBand
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency*
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
@@ -106,12 +106,12 @@ items:
   type: Property
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SampleRate
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 6
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 4
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -119,7 +119,7 @@ items:
     content: SampleRate SampleRate { get; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+      type: HackRFDotnet.Api.SampleRate
     content.vb: ReadOnly Property SampleRate As SampleRate
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate*
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close
@@ -135,12 +135,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Close
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 8
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 6
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -161,12 +161,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 9
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 7
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -174,25 +174,25 @@ items:
     content: void Dispose()
     content.vb: Sub Dispose()
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Dispose*
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
-  commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
-  id: OpenRx(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.SampleRate)
+  id: OpenRx(HackRFDotnet.Api.SampleRate)
   parent: HackRFDotnet.Api.Streams.Interfaces.IIQStream
   langs:
   - csharp
   - vb
   name: OpenRx(SampleRate?)
   nameWithType: IIQStream.OpenRx(SampleRate?)
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate?)
+  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.SampleRate?)
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: OpenRx
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 10
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -200,11 +200,11 @@ items:
     content: void OpenRx(SampleRate? sampleRate = null)
     parameters:
     - id: sampleRate
-      type: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+      type: HackRFDotnet.Api.SampleRate
     content.vb: Sub OpenRx(sampleRate As SampleRate = Nothing)
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx*
   nameWithType.vb: IIQStream.OpenRx(SampleRate)
-  fullName.vb: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  fullName.vb: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.SampleRate)
   name.vb: OpenRx(SampleRate)
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
   commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
@@ -219,12 +219,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ReadBuffer
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 11
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 9
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -240,25 +240,25 @@ items:
   nameWithType.vb: IIQStream.ReadBuffer(Span(Of IQ))
   fullName.vb: HackRFDotnet.Api.Streams.Interfaces.IIQStream.ReadBuffer(System.Span(Of HackRFDotnet.Api.Streams.IQ))
   name.vb: ReadBuffer(Span(Of IQ))
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
-  commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
-  id: SetSampleRate(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.SampleRate)
+  id: SetSampleRate(HackRFDotnet.Api.SampleRate)
   parent: HackRFDotnet.Api.Streams.Interfaces.IIQStream
   langs:
   - csharp
   - vb
   name: SetSampleRate(SampleRate)
   nameWithType: IIQStream.SetSampleRate(SampleRate)
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.Streams.SignalProcessing.SampleRate)
+  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.SampleRate)
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetSampleRate
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 12
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -266,7 +266,7 @@ items:
     content: void SetSampleRate(SampleRate sampleRate)
     parameters:
     - id: sampleRate
-      type: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+      type: HackRFDotnet.Api.SampleRate
     content.vb: Sub SetSampleRate(sampleRate As SampleRate)
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate*
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
@@ -282,12 +282,12 @@ items:
   type: Method
   source:
     remote:
-      path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
       branch: master
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: TxBuffer
-    path: HackRFDotnet/ManagedApi/Streams/Interfaces/IIQStream.cs
-    startLine: 13
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 11
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -372,19 +372,19 @@ references:
   name: Frequency
   nameWithType: IIQStream.Frequency
   fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
+- uid: HackRFDotnet.Api.RadioBand
+  commentId: T:HackRFDotnet.Api.RadioBand
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.RadioBand.html
   name: RadioBand
   nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
-- uid: HackRFDotnet.Api.Streams.SignalProcessing
-  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
+  fullName: HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalProcessing
-  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
   spec.csharp:
   - uid: HackRFDotnet
     name: HackRFDotnet
@@ -393,14 +393,6 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
   spec.vb:
   - uid: HackRFDotnet
     name: HackRFDotnet
@@ -409,27 +401,19 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate*
   commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
   href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_SampleRate
   name: SampleRate
   nameWithType: IIQStream.SampleRate
   fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate.html
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.SampleRate.html
   name: SampleRate
   nameWithType: SampleRate
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+  fullName: HackRFDotnet.Api.SampleRate
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close*
   commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close
   href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_Close
@@ -444,7 +428,7 @@ references:
   fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Dispose
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx*
   commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx
-  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_OpenRx_HackRFDotnet_Api_Streams_SignalProcessing_SampleRate_
+  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_OpenRx_HackRFDotnet_Api_SampleRate_
   name: OpenRx
   nameWithType: IIQStream.OpenRx
   fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx
@@ -517,7 +501,7 @@ references:
   - name: )
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate*
   commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate
-  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_SetSampleRate_HackRFDotnet_Api_Streams_SignalProcessing_SampleRate_
+  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_SetSampleRate_HackRFDotnet_Api_SampleRate_
   name: SetSampleRate
   nameWithType: IIQStream.SetSampleRate
   fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate

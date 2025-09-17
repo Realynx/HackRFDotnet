@@ -2,7 +2,6 @@
 using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Utilities;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams;
 public class SignalStream : IDisposable {

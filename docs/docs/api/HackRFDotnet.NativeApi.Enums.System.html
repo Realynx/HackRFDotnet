@@ -96,7 +96,9 @@ Enums
 </h3>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.html">HackrfBoardId</a></dt>
-      <dd></dd>
+      <dd><p>HACKRF board id enum.</p>
+<p>Returned by <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardId_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__">ReadBoardId(HackRFDevice*, byte*)</a> and can be converted to a human-readable string using <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_BoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfBoardId_">BoardIdName(HackrfBoardId)</a>.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.html">HackrfBoardRev</a></dt>
@@ -104,11 +106,16 @@ Enums
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.NativeApi.Enums.System.HackrfError.html">HackrfError</a></dt>
-      <dd></dd>
+      <dd><p>Error enum, returned by many libhackrf functions.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html">HackrfUsbBoardId</a></dt>
-      <dd></dd>
+      <dd><p>USB board ID (product ID) enum</p>
+<p>Contains USB-IF product id (field <code>idProduct</code> in <code>libusb_device_descriptor</code>). Can be used to identify general type of hardware.
+Only used in <a class="xref" href="HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.html#HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList_usb_board_ids">usb_board_ids</a> field of <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_QueryDeviceList">QueryDeviceList()</a>,
+and can be converted into human-readable string via <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_UsbBoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfUsbBoardId_">UsbBoardIdName(HackrfUsbBoardId)</a>.</p>
+</dd>
     </dl>
 
 
