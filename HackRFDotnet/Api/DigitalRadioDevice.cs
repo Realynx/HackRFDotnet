@@ -6,7 +6,7 @@ using HackRFDotnet.NativeApi.Structs.Devices;
 
 namespace HackRFDotnet.Api {
     public unsafe class DigitalRadioDevice : IDisposable {
-        public RadioBand Frequency { get; set; } = RadioBand.FromHz(0);
+        public Frequency Frequency { get; set; } = Frequency.FromHz(0);
         public Bandwidth Bandwidth { get; set; } = Bandwidth.FromHz(0);
         public SampleRate DeviceSamplingRate { get; set; } = SampleRate.FromMsps(10);
 
@@ -28,16 +28,16 @@ namespace HackRFDotnet.Api {
             HackRfNativeLib.DeviceStreaming.EnableAmp(DevicePtr, (byte)(internalAmp ? 1 : 0));
         }
 
-        public bool SetFrequency(RadioBand radioFrequency) {
+        public bool SetFrequency(Frequency radioFrequency) {
             return SetFrequency(radioFrequency, Bandwidth.FromMHz(200));
         }
 
-        public bool SetFrequency(RadioBand radioFrequency, Bandwidth bandwidth) {
+        public bool SetFrequency(Frequency radioFrequency, Bandwidth bandwidth) {
             Frequency = radioFrequency;
             Bandwidth = bandwidth;
 
             // This shifts the signal to offset the 0 dc spike away from the signal we want.
-            radioFrequency -= new RadioBand(DeviceSamplingRate.NyquistFrequencyBandwidth / 2);
+            radioFrequency -= new Frequency(DeviceSamplingRate.NyquistFrequencyBandwidth / 2);
             return HackRfNativeLib.DeviceStreaming.SetFrequency(DevicePtr, (uint)radioFrequency.Hz) == 0;
         }
 

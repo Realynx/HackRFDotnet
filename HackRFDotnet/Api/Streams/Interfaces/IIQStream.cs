@@ -1,7 +1,7 @@
 ﻿namespace HackRFDotnet.Api.Streams.Interfaces;
 public interface IIQStream {
     int BufferLength { get; }
-    RadioBand Frequency { get; }
+    Frequency Frequency { get; }
     SampleRate SampleRate { get; }
 
     void Close();

@@ -40,12 +40,12 @@ public unsafe class SpectrumDisplayService {
 
     private void SurfChannels(DigitalRadioDevice rfDevice) {
         while (true) {
-            var newFrequency = rfDevice.Frequency + RadioBand.FromKHz(25);
+            var newFrequency = rfDevice.Frequency + Frequency.FromKHz(25);
 
-            newFrequency %= RadioBand.FromMHz(110);
+            newFrequency %= Frequency.FromMHz(110);
 
-            if (newFrequency < RadioBand.FromMHz(80)) {
-                newFrequency = RadioBand.FromMHz(80);
+            if (newFrequency < Frequency.FromMHz(80)) {
+                newFrequency = Frequency.FromMHz(80);
             }
 
             rfDevice.SetFrequency(newFrequency);
@@ -73,7 +73,7 @@ public unsafe class SpectrumDisplayService {
         .AddSignalEffect(new DownSampleEffect(signalStream.SampleRate, spectrumSize.NyquistSampleRate,
             processingSize, out var reducedSampleRate, out var producedChunkSize))
 
-        .AddSignalEffect(new FrequencyCenteringEffect(new RadioBand(spectrumSize), reducedSampleRate))
+        .AddSignalEffect(new FrequencyCenteringEffect(new Frequency(spectrumSize), reducedSampleRate))
         .AddSignalEffect(new FftEffect(true, producedChunkSize))
         .BuildPipeline();
 

@@ -34,7 +34,7 @@ public unsafe class SignalUtilities {
     //    }
     //}
 
-    public static void ApplyFrequencyOffset(Span<IQ> iqFrame, RadioBand freqOffset, SampleRate sampleRate) {
+    public static void ApplyFrequencyOffset(Span<IQ> iqFrame, Frequency freqOffset, SampleRate sampleRate) {
         // Phase increment per sample
         var phaseIncrement = 2.0f * MathF.PI * freqOffset.Hz / sampleRate.Sps;
         double cosInc = MathF.Cos(phaseIncrement);

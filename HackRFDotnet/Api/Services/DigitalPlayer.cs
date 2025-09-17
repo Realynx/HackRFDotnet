@@ -16,7 +16,7 @@ public class DigitalPlayer : IDisposable {
         _waveOut.Dispose();
     }
 
-    public virtual void PlayStreamAsync(RadioBand centerOffset, Bandwidth bandwidth, int audioRate) {
+    public virtual void PlayStreamAsync(Frequency centerOffset, Bandwidth bandwidth, int audioRate) {
         _waveOut = new WaveOutEvent {
             Volume = 0.6f,
         };

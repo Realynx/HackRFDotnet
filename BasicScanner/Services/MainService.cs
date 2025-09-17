@@ -56,13 +56,13 @@ internal class MainService : IHostedService {
     }
 
     private static void HdRadioPlay(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), Bandwidth.FromKHz(200));
+        rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(200));
         var effectsPipeline = new SignalProcessingBuilder()
             .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
                 rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
             .AddSignalEffect(new FftEffect(true, producedChunkSize))
-            .AddSignalEffect(new FrequencyCenteringEffect(RadioBand.FromKHz(-192), reducedSampleRate))
+            .AddSignalEffect(new FrequencyCenteringEffect(Frequency.FromKHz(-192), reducedSampleRate))
             .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, Bandwidth.FromKHz(8)))
             .AddSignalEffect(new FftEffect(false, producedChunkSize))
 
@@ -81,7 +81,7 @@ internal class MainService : IHostedService {
 
     private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
-        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), Bandwidth.FromKHz(200));
+        rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(200));
 
         // We must build an effects pipeline to clean up our received signal from the SDR.
         var effectsPipeline = new SignalProcessingBuilder()
@@ -114,15 +114,15 @@ internal class MainService : IHostedService {
     }
 
     private static void AmplitudeDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), Bandwidth.FromKHz(10));
+        rfDevice.SetFrequency(Frequency.FromMHz(118.4f), Bandwidth.FromKHz(10));
 
         var effectsPipeline = new SignalProcessingBuilder()
             .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
                 rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
-            .AddSignalEffect(new BasicSignalScanningEffect(rfDevice, Bandwidth.FromKHz(10), [RadioBand.FromMHz(118.4f),
-                RadioBand.FromMHz(118.575f), RadioBand.FromMHz(119.250f), RadioBand.FromMHz(119.450f),
-                RadioBand.FromMHz(121.800f),RadioBand.FromMHz(124.05f), RadioBand.FromMHz(125.150f), RadioBand.FromMHz(135f)]))
+            .AddSignalEffect(new BasicSignalScanningEffect(rfDevice, Bandwidth.FromKHz(10), [Frequency.FromMHz(118.4f),
+                Frequency.FromMHz(118.575f), Frequency.FromMHz(119.250f), Frequency.FromMHz(119.450f),
+                Frequency.FromMHz(121.800f),Frequency.FromMHz(124.05f), Frequency.FromMHz(125.150f), Frequency.FromMHz(135f)]))
             .AddSignalEffect(new SquelchEffect(reducedSampleRate))
 
             .AddSignalEffect(new FftEffect(true, producedChunkSize))
@@ -152,7 +152,7 @@ internal class MainService : IHostedService {
             var freq = Console.ReadLine();
 
             if (double.TryParse(freq, out var userFrequency)) {
-                rfDevice.SetFrequency(RadioBand.FromMHz((float)userFrequency));
+                rfDevice.SetFrequency(Frequency.FromMHz((float)userFrequency));
             }
         }
     }

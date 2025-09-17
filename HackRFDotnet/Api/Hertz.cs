@@ -1,15 +1,28 @@
 ﻿namespace HackRFDotnet.Api;
+/// <summary>
+/// Number of oscillations per second.
+/// </summary>
 public class Hertz {
+    /// <summary>
+    /// Number of oscillations per second.
+    /// </summary>
     public long Hz { get; set; }
 
+    /// <summary>
+    /// Number of oscillations per second divided by 1,000,000
+    /// </summary>
     public double Mhz {
         get {
-            return Hz / 1000000f;
+            return Hz / 1_000_000f;
         }
     }
+
+    /// <summary>
+    /// Number of oscillations per second divided by 1,000
+    /// </summary>
     public double Khz {
         get {
-            return Hz / 1000f;
+            return Hz / 1_000f;
         }
     }
 

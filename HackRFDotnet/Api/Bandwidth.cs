@@ -1,10 +1,18 @@
 ﻿namespace HackRFDotnet.Api;
+/// <summary>
+/// Bandwidth of a signal sample.
+/// </summary>
 public class Bandwidth : Hertz {
+    /// <summary>
+    /// https://en.wikipedia.org/wiki/Nyquist_rate
+    /// The smallest sample rate that can be used to represent the bandwidth.
+    /// </summary>
     public SampleRate NyquistSampleRate {
         get {
             return new SampleRate(Hz * 2);
         }
     }
+
     public Bandwidth(long hz) : base(hz) {
     }
 

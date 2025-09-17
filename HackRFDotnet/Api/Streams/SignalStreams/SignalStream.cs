@@ -5,7 +5,7 @@ using HackRFDotnet.Api.Utilities;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams;
 public class SignalStream : IDisposable {
-    public RadioBand Center { get; protected set; } = RadioBand.FromMHz(94.7f);
+    public Frequency Center { get; protected set; } = Frequency.FromMHz(94.7f);
     public Bandwidth Bandwidth { get; protected set; } = Bandwidth.FromKHz(200);
 
     public SampleRate SampleRate {
@@ -46,7 +46,7 @@ public class SignalStream : IDisposable {
             _iQStream.ReadBuffer(convertedPairs);
 
             // This Re-Shifts the signal to the intended center, since we shift it by half the sample size earlier to avoid the HackRFOne's 0 DC spike
-            SignalUtilities.ApplyFrequencyOffset(convertedPairs, -new RadioBand(_iQStream.SampleRate.NyquistFrequencyBandwidth / 2), _iQStream.SampleRate);
+            SignalUtilities.ApplyFrequencyOffset(convertedPairs, -new Frequency(_iQStream.SampleRate.NyquistFrequencyBandwidth / 2), _iQStream.SampleRate);
             var sampleCount = PROCESSING_SIZE;
             if (_processingPipeline != null) {
                 sampleCount = _processingPipeline.ApplyPipeline(convertedPairs.AsSpan());
@@ -61,7 +61,7 @@ public class SignalStream : IDisposable {
     /// </summary>
     /// <param name="center"></param>
     /// <param name="bandwidth"></param>
-    public void SetBand(RadioBand center, Bandwidth bandwidth) {
+    public void SetBand(Frequency center, Bandwidth bandwidth) {
         Center = center;
         Bandwidth = bandwidth;
     }

@@ -1,5 +1,15 @@
 ﻿namespace HackRFDotnet.Api;
 public class SampleRate : Hertz {
+    /// <summary>
+    /// https://en.wikipedia.org/wiki/Nyquist_frequency
+    /// The largest bandwidth this sample rate can represent.
+    /// </summary>
+    public Bandwidth NyquistFrequencyBandwidth {
+        get {
+            return new Bandwidth(Hz / 2);
+        }
+    }
+
     public SampleRate(long sps) : base(sps) {
     }
 
@@ -21,12 +31,6 @@ public class SampleRate : Hertz {
     public double Ksps {
         get {
             return Hz / 1000f;
-        }
-    }
-
-    public Bandwidth NyquistFrequencyBandwidth {
-        get {
-            return new Bandwidth(Hz / 2);
         }
     }
 

@@ -18,7 +18,7 @@ public class IQFileStream : IIQStream, IDisposable {
         }
     }
 
-    public RadioBand Frequency { get; set; }
+    public Frequency Frequency { get; set; }
 
     public SampleRate SampleRate { get; set; }
 

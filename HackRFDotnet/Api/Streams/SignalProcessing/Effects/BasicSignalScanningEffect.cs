@@ -3,13 +3,13 @@ public class BasicSignalScanningEffect : SignalEffect {
     private readonly DigitalRadioDevice _digitalRadioDevice;
     private readonly Bandwidth _bandwidth;
 
-    private readonly RadioBand[] _scanChannels;
+    private readonly Frequency[] _scanChannels;
     private int _scanChannelsIndex;
 
     private DateTime _lastChannelSwicth = DateTime.MinValue;
 
 
-    public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, RadioBand[] scanChannels) {
+    public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, Frequency[] scanChannels) {
         _digitalRadioDevice = digitalRadioDevice;
         _scanChannels = scanChannels;
         _bandwidth = bandwidth;

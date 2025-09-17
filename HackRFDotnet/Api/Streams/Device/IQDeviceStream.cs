@@ -18,7 +18,7 @@ namespace HackRFDotnet.Api.Streams.Device {
             }
         }
 
-        public RadioBand Frequency {
+        public Frequency Frequency {
             get {
                 return _rfDevice.Frequency;
             }
