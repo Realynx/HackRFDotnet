@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi
+  commentId: N:HackRFDotnet.NativeApi
+  id: HackRFDotnet.NativeApi
+  children:
+  - HackRFDotnet.NativeApi.NativeConstants
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.NativeApi
+  nameWithType: HackRFDotnet.NativeApi
+  fullName: HackRFDotnet.NativeApi
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.NativeApi.NativeConstants
+  commentId: T:HackRFDotnet.NativeApi.NativeConstants
+  href: HackRFDotnet.NativeApi.NativeConstants.html
+  name: NativeConstants
+  nameWithType: NativeConstants
+  fullName: HackRFDotnet.NativeApi.NativeConstants

@@ -105,13 +105,6 @@ items:
   - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect
     name: SquelchEffect
     type: Class
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  name: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  type: Namespace
-  items:
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
-    name: ISignalEffect
-    type: Interface
 - uid: HackRFDotnet.Api.Streams.SignalStreams
   name: HackRFDotnet.Api.Streams.SignalStreams
   type: Namespace
@@ -151,6 +144,20 @@ items:
     type: Class
   - uid: HackRFDotnet.Api.Utilities.SignalUtilities
     name: SignalUtilities
+    type: Class
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  type: Namespace
+  items:
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+    name: ISignalEffect
+    type: Interface
+- uid: HackRFDotnet.NativeApi
+  name: HackRFDotnet.NativeApi
+  type: Namespace
+  items:
+  - uid: HackRFDotnet.NativeApi.NativeConstants
+    name: NativeConstants
     type: Class
 - uid: HackRFDotnet.NativeApi.Enums
   name: HackRFDotnet.NativeApi.Enums

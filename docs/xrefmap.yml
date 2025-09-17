@@ -5704,6 +5704,34 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SquelchEffect.AffectSignal
   nameWithType: SquelchEffect.AffectSignal
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  href: docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  name: ISignalEffect
+  href: docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  nameWithType: ISignalEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+  name: AffectSignal(Span<IQ>, int)
+  href: docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Interfaces_ISignalEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
+  commentId: M:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+  name.vb: AffectSignal(Span(Of IQ), Integer)
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span<HackRFDotnet.Api.Streams.IQ>, int)
+  fullName.vb: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span(Of HackRFDotnet.Api.Streams.IQ), Integer)
+  nameWithType: ISignalEffect.AffectSignal(Span<IQ>, int)
+  nameWithType.vb: ISignalEffect.AffectSignal(Span(Of IQ), Integer)
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal*
+  name: AffectSignal
+  href: docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Interfaces_ISignalEffect_AffectSignal_
+  commentId: Overload:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal
+  isSpec: "True"
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal
+  nameWithType: ISignalEffect.AffectSignal
 - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.RadioBand
   name: RadioBand
   href: docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.RadioBand.html
@@ -6973,6 +7001,12 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.ManagedApi.Utilities.SignalUtilities.IQCorrection
   nameWithType: SignalUtilities.IQCorrection
+- uid: HackRFDotnet.NativeApi
+  name: HackRFDotnet.NativeApi
+  href: docs/api/HackRFDotnet.NativeApi.html
+  commentId: N:HackRFDotnet.NativeApi
+  fullName: HackRFDotnet.NativeApi
+  nameWithType: HackRFDotnet.NativeApi
 - uid: HackRFDotnet.NativeApi.Enums
   name: HackRFDotnet.NativeApi.Enums
   href: docs/api/HackRFDotnet.NativeApi.Enums.html
@@ -8470,6 +8504,96 @@ references:
   commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeRanges
   fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeRanges
   nameWithType: HackRfNativeLib.Operacake.SetOperacakeRanges
+- uid: HackRFDotnet.NativeApi.NativeConstants
+  name: NativeConstants
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html
+  commentId: T:HackRFDotnet.NativeApi.NativeConstants
+  fullName: HackRFDotnet.NativeApi.NativeConstants
+  nameWithType: NativeConstants
+- uid: HackRFDotnet.NativeApi.NativeConstants.BOARD_ID_HACKRF_ONE
+  name: BOARD_ID_HACKRF_ONE
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_BOARD_ID_HACKRF_ONE
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.BOARD_ID_HACKRF_ONE
+  fullName: HackRFDotnet.NativeApi.NativeConstants.BOARD_ID_HACKRF_ONE
+  nameWithType: NativeConstants.BOARD_ID_HACKRF_ONE
+- uid: HackRFDotnet.NativeApi.NativeConstants.BOARD_ID_INVALID
+  name: BOARD_ID_INVALID
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_BOARD_ID_INVALID
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.BOARD_ID_INVALID
+  fullName: HackRFDotnet.NativeApi.NativeConstants.BOARD_ID_INVALID
+  nameWithType: NativeConstants.BOARD_ID_INVALID
+- uid: HackRFDotnet.NativeApi.NativeConstants.BYTES_PER_BLOCK
+  name: BYTES_PER_BLOCK
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_BYTES_PER_BLOCK
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.BYTES_PER_BLOCK
+  fullName: HackRFDotnet.NativeApi.NativeConstants.BYTES_PER_BLOCK
+  nameWithType: NativeConstants.BYTES_PER_BLOCK
+- uid: HackRFDotnet.NativeApi.NativeConstants.HACKRF_BOARD_REV_GSG
+  name: HACKRF_BOARD_REV_GSG
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_HACKRF_BOARD_REV_GSG
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.HACKRF_BOARD_REV_GSG
+  fullName: HackRFDotnet.NativeApi.NativeConstants.HACKRF_BOARD_REV_GSG
+  nameWithType: NativeConstants.HACKRF_BOARD_REV_GSG
+- uid: HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_ADDRESS_INVALID
+  name: HACKRF_OPERACAKE_ADDRESS_INVALID
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_HACKRF_OPERACAKE_ADDRESS_INVALID
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_ADDRESS_INVALID
+  fullName: HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_ADDRESS_INVALID
+  nameWithType: NativeConstants.HACKRF_OPERACAKE_ADDRESS_INVALID
+- uid: HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_MAX_BOARDS
+  name: HACKRF_OPERACAKE_MAX_BOARDS
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_HACKRF_OPERACAKE_MAX_BOARDS
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_MAX_BOARDS
+  fullName: HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_MAX_BOARDS
+  nameWithType: NativeConstants.HACKRF_OPERACAKE_MAX_BOARDS
+- uid: HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_MAX_DWELL_TIMES
+  name: HACKRF_OPERACAKE_MAX_DWELL_TIMES
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_HACKRF_OPERACAKE_MAX_DWELL_TIMES
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_MAX_DWELL_TIMES
+  fullName: HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_MAX_DWELL_TIMES
+  nameWithType: NativeConstants.HACKRF_OPERACAKE_MAX_DWELL_TIMES
+- uid: HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_MAX_FREQ_RANGES
+  name: HACKRF_OPERACAKE_MAX_FREQ_RANGES
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_HACKRF_OPERACAKE_MAX_FREQ_RANGES
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_MAX_FREQ_RANGES
+  fullName: HackRFDotnet.NativeApi.NativeConstants.HACKRF_OPERACAKE_MAX_FREQ_RANGES
+  nameWithType: NativeConstants.HACKRF_OPERACAKE_MAX_FREQ_RANGES
+- uid: HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_OG
+  name: HACKRF_PLATFORM_HACKRF1_OG
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_HACKRF_PLATFORM_HACKRF1_OG
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_OG
+  fullName: HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_OG
+  nameWithType: NativeConstants.HACKRF_PLATFORM_HACKRF1_OG
+- uid: HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_R9
+  name: HACKRF_PLATFORM_HACKRF1_R9
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_HACKRF_PLATFORM_HACKRF1_R9
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_R9
+  fullName: HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_R9
+  nameWithType: NativeConstants.HACKRF_PLATFORM_HACKRF1_R9
+- uid: HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_JAWBREAKER
+  name: HACKRF_PLATFORM_JAWBREAKER
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_HACKRF_PLATFORM_JAWBREAKER
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_JAWBREAKER
+  fullName: HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_JAWBREAKER
+  nameWithType: NativeConstants.HACKRF_PLATFORM_JAWBREAKER
+- uid: HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_RAD1O
+  name: HACKRF_PLATFORM_RAD1O
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_HACKRF_PLATFORM_RAD1O
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_RAD1O
+  fullName: HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_RAD1O
+  nameWithType: NativeConstants.HACKRF_PLATFORM_RAD1O
+- uid: HackRFDotnet.NativeApi.NativeConstants.MAX_SWEEP_RANGES
+  name: MAX_SWEEP_RANGES
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_MAX_SWEEP_RANGES
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.MAX_SWEEP_RANGES
+  fullName: HackRFDotnet.NativeApi.NativeConstants.MAX_SWEEP_RANGES
+  nameWithType: NativeConstants.MAX_SWEEP_RANGES
+- uid: HackRFDotnet.NativeApi.NativeConstants.SAMPLES_PER_BLOCK
+  name: SAMPLES_PER_BLOCK
+  href: docs/api/HackRFDotnet.NativeApi.NativeConstants.html#HackRFDotnet_NativeApi_NativeConstants_SAMPLES_PER_BLOCK
+  commentId: F:HackRFDotnet.NativeApi.NativeConstants.SAMPLES_PER_BLOCK
+  fullName: HackRFDotnet.NativeApi.NativeConstants.SAMPLES_PER_BLOCK
+  nameWithType: NativeConstants.SAMPLES_PER_BLOCK
 - uid: HackRFDotnet.NativeApi.Structs
   name: HackRFDotnet.NativeApi.Structs
   href: docs/api/HackRFDotnet.NativeApi.Structs.html

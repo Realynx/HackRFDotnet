@@ -33,7 +33,7 @@ items:
   - System.Object
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
   implements:
-  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
   - System.IDisposable
   inheritedMembers:
   - System.Object.Equals(System.Object)
@@ -210,13 +210,13 @@ references:
   name: SignalEffect
   nameWithType: SignalEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
-  parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.html
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html
   name: ISignalEffect
   nameWithType: ISignalEffect
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
 - uid: System.IDisposable
   commentId: T:System.IDisposable
   parent: System
@@ -451,60 +451,52 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
   href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
   spec.csharp:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams
+  - uid: HackRFDotnet.ManagedApi.Streams
     name: Streams
-    href: HackRFDotnet.Api.Streams.html
+    href: HackRFDotnet.ManagedApi.Streams.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects
-    name: Effects
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.html
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
   spec.vb:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams
+  - uid: HackRFDotnet.ManagedApi.Streams
     name: Streams
-    href: HackRFDotnet.Api.Streams.html
+    href: HackRFDotnet.ManagedApi.Streams.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects
-    name: Effects
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.html
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.#ctor*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.#ctor
   href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_FftEffect__ctor_System_Boolean_System_Int32_

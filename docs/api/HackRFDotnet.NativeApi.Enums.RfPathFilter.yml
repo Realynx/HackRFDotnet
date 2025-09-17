@@ -51,6 +51,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums
+  summary: No filter is selected, **the mixer is bypassed**, \f$f_{center} = f_{IF}\f$
   example: []
   syntax:
     content: RF_PATH_FILTER_BYPASS = 0
@@ -74,10 +75,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: RF_PATH_FILTER_LOW_PASS
     path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums
+  summary: LPF is selected, \f$f_{center} = f_{IF} - f_{LO}\f$
   example: []
   syntax:
     content: RF_PATH_FILTER_LOW_PASS = 1
@@ -101,10 +103,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: RF_PATH_FILTER_HIGH_PASS
     path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums
+  summary: HPF is selected, \f$f_{center} = f_{IF} + f_{LO}\f$
   example: []
   syntax:
     content: RF_PATH_FILTER_HIGH_PASS = 2

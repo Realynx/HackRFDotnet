@@ -37,7 +37,7 @@ items:
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect
   implements:
-  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -81,7 +81,7 @@ items:
     content.vb: Public MustOverride Function AffectSignal(signalTheta As Span(Of IQ), length As Integer) As Integer
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal*
   implements:
-  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   nameWithType.vb: SignalEffect.AffectSignal(Span(Of IQ), Integer)
   fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span(Of HackRFDotnet.Api.Streams.IQ), Integer)
   name.vb: AffectSignal(Span(Of IQ), Integer)
@@ -143,13 +143,13 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
-  parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.html
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html
   name: ISignalEffect
   nameWithType: ISignalEffect
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -376,81 +376,73 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
   href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
   spec.csharp:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams
+  - uid: HackRFDotnet.ManagedApi.Streams
     name: Streams
-    href: HackRFDotnet.Api.Streams.html
+    href: HackRFDotnet.ManagedApi.Streams.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects
-    name: Effects
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.html
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
   spec.vb:
   - uid: HackRFDotnet
     name: HackRFDotnet
     href: HackRFDotnet.html
   - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams
+  - uid: HackRFDotnet.ManagedApi.Streams
     name: Streams
-    href: HackRFDotnet.Api.Streams.html
+    href: HackRFDotnet.ManagedApi.Streams.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
     name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
   - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects
-    name: Effects
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces
     name: Interfaces
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.html
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal
   href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
   name: AffectSignal
   nameWithType: SignalEffect.AffectSignal
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
-  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
-  parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+  commentId: M:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect
   isExternal: true
-  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_Interfaces_ISignalEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Interfaces_ISignalEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
   name: AffectSignal(Span<IQ>, int)
   nameWithType: ISignalEffect.AffectSignal(Span<IQ>, int)
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.AffectSignal(System.Span<HackRFDotnet.Api.Streams.IQ>, int)
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span<HackRFDotnet.Api.Streams.IQ>, int)
   nameWithType.vb: ISignalEffect.AffectSignal(Span(Of IQ), Integer)
-  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.AffectSignal(System.Span(Of HackRFDotnet.Api.Streams.IQ), Integer)
+  fullName.vb: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span(Of HackRFDotnet.Api.Streams.IQ), Integer)
   name.vb: AffectSignal(Span(Of IQ), Integer)
   spec.csharp:
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
     name: AffectSignal
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_Interfaces_ISignalEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Interfaces_ISignalEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
   - name: (
   - uid: System.Span`1
     name: Span
@@ -469,9 +461,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   spec.vb:
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
     name: AffectSignal
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_Interfaces_ISignalEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Interfaces_ISignalEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
   - name: (
   - uid: System.Span`1
     name: Span

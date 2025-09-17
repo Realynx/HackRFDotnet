@@ -118,46 +118,60 @@ Enum HackrfError  <a class="header-action link-secondary" title="View source" hr
   <dl class="parameters">
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_BUSY"><code>HACKRF_ERROR_BUSY = -6</code></dt>
   
-  <dd></dd>
+  <dd><p>Resource is busy, possibly the device is already opened.</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_INVALID_PARAM"><code>HACKRF_ERROR_INVALID_PARAM = -2</code></dt>
   
-  <dd></dd>
+  <dd><p>The function was called with invalid parameters.</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_LIBUSB"><code>HACKRF_ERROR_LIBUSB = -1000</code></dt>
   
-  <dd></dd>
+  <dd><p>LibUSB error, use @ref hackrf_error_name to get a human-readable error string (using <code>libusb_strerror</code>)</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_NOT_FOUND"><code>HACKRF_ERROR_NOT_FOUND = -5</code></dt>
   
-  <dd></dd>
+  <dd><p>USB device not found, returned at opening.</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_NOT_LAST_DEVICE"><code>HACKRF_ERROR_NOT_LAST_DEVICE = -2000</code></dt>
   
-  <dd></dd>
+  <dd><p>Can not exit library as one or more HackRFs still in use</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_NO_MEM"><code>HACKRF_ERROR_NO_MEM = -11</code></dt>
   
-  <dd></dd>
+  <dd><p>Memory allocation (on host side) failed</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_OTHER"><code>HACKRF_ERROR_OTHER = -9999</code></dt>
   
-  <dd></dd>
+  <dd><p>Unspecified error</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_STREAMING_EXIT_CALLED"><code>HACKRF_ERROR_STREAMING_EXIT_CALLED = -1004</code></dt>
   
-  <dd></dd>
+  <dd><p>Streaming thread exited (normally)</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_STREAMING_STOPPED"><code>HACKRF_ERROR_STREAMING_STOPPED = -1003</code></dt>
   
-  <dd></dd>
+  <dd><p>Streaming thread stopped due to an error</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_STREAMING_THREAD_ERR"><code>HACKRF_ERROR_STREAMING_THREAD_ERR = -1002</code></dt>
   
-  <dd></dd>
+  <dd><p>Streaming thread could not start due to an error</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_THREAD"><code>HACKRF_ERROR_THREAD = -1001</code></dt>
   
-  <dd></dd>
+  <dd><p>Error setting up transfer thread (pthread-related error)</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_USB_API_VERSION"><code>HACKRF_ERROR_USB_API_VERSION = -1005</code></dt>
   
-  <dd></dd>
+  <dd><p>The installed firmware does not support this function</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_SUCCESS"><code>HACKRF_SUCCESS = 0</code></dt>
   
-  <dd></dd>
+  <dd><p>no error happened</p>
+</dd>
     <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_TRUE"><code>HACKRF_TRUE = 1</code></dt>
   
-  <dd></dd>
+  <dd><p>TRUE value, returned by some functions that return boolean value. Only a few functions can return this variant, and this fact should be explicitly noted at those functions.</p>
+</dd>
   </dl>
 
 

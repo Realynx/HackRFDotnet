@@ -1083,6 +1083,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.ISignalEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/api/HackRFDotnet.ManagedApi.Streams.SignalProcessing.RadioBand.yml",
       "output": {
         ".html": {
@@ -1629,6 +1657,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.NativeApi.NativeConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.NativeApi.NativeConstants.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.NativeApi.NativeConstants",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.yml",
       "output": {
         ".html": {
@@ -1835,6 +1877,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.NativeApi.Structs",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.NativeApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.NativeApi.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.NativeApi",
       "Summary": null
     },
     {
