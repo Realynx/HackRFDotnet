@@ -10,7 +10,7 @@
           ]
         }
       ],
-      "dest": "_githubPages/api"
+      "dest": "docs/api"
     }
   ],
   "build": {
@@ -20,7 +20,7 @@
           "**/*.{md,yml}"
         ],
         "exclude": [
-          "_site/**"
+          "site/**"
         ]
       }
     ],
@@ -31,7 +31,7 @@
         ]
       }
     ],
-    "output": "_githubPages/_site",
+    "output": "docs/site",
     "template": [
       "default",
       "modern"
