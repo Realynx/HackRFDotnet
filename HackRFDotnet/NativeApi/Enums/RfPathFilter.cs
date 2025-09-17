@@ -1,4 +1,12 @@
 ﻿namespace HackRFDotnet.NativeApi.Enums {
+    /// <summary>
+    /// RF filter path setting enum.
+    ///
+    /// Used only when performing explicit tuning using <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, ulong, ulong, RfPathFilter)"/>,
+    /// or can be converted into a human-readable string using <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.FilterPathName"/>.
+    ///
+    /// This can select the image rejection filter (U3, U8 or none) to use - using switches U5, U6, U9 and U11. When no filter is selected, the mixer itself is bypassed.
+    /// </summary>
     public enum RfPathFilter {
         /// <summary>
         /// No filter is selected, **the mixer is bypassed**, \f$f_{center} = f_{IF}\f$

@@ -1,4 +1,7 @@
 ﻿namespace HackRFDotnet.NativeApi.Enums.System {
+    /// <summary>
+    /// Error enum, returned by many libhackrf functions.
+    /// </summary>
     public enum HackrfError : int {
         ///<summary>
         /// no error happened

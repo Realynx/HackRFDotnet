@@ -10,9 +10,9 @@ namespace HackRFDotnet.NativeApi.Lib;
 public static partial class HackRfNativeLib {
     public unsafe static class DeviceStreaming {
         /// <summary>
-        /// Query device streaming status
+        /// Query device streaming status.
         /// </summary>
-        /// <param name="device">Device to query</param>
+        /// <param name="device">Device to query.</param>
         /// <returns>
         /// <see cref="HackrfError.HACKRF_TRUE"/> If the device is streaming, else one of <see cref="HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR"/>,
         /// <see cref="HackrfError.HACKRF_ERROR_STREAMING_STOPPED"/> or <see cref="HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED"/>.
@@ -28,9 +28,9 @@ public static partial class HackRfNativeLib {
         /// 
         /// Setting the sample rate causes the filter bandwidth to be (re)set to its default \f$ \le 0.75 \cdot F_s \f$ value, so setting sample rate should be done before setting filter bandwidth.
         /// </summary>
-        /// <param name="device">device to configure</param>
-        /// <param name="bandwidth_hz">baseband filter bandwidth in Hz</param>
-        /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant</returns>
+        /// <param name="device">device to configure.</param>
+        /// <param name="bandwidth_hz">baseband filter bandwidth in Hz.</param>
+        /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
         [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_baseband_filter_bandwidth")]
         public static extern HackrfError SetBasebandFilterBandwidth(HackRFDevice* device, uint bandwidth_hz);
 
@@ -49,18 +49,16 @@ public static partial class HackRfNativeLib {
         ///
         /// The result can be used via <see cref="SetBasebandFilterBandwidth"/>.
         /// </summary>
-        /// <param name="bandwidth_hz">Desired filter bandwidth in Hz</param>
-        /// <returns>Nearest valid filter bandwidth in Hz</returns>
+        /// <param name="bandwidth_hz">Desired filter bandwidth in Hz.</param>
+        /// <returns>Nearest valid filter bandwidth in Hz.</returns>
         [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_compute_baseband_filter_bw")]
         public static extern uint ComputeBasebandFilterBandWidth(uint bandwidth_hz);
 
         /// <summary>
-        /// RF filter path setting enum.
-        /// Used only when performing explicit tuning using <see cref="SetFrequency(HackRFDevice*, ulong, ulong, RfPathFilter)"/>, or can be converted into a human readable string using <see cref="FilterPathName"/>.
-        /// This can select the image rejection filter(U3, U8 or none) to use - using switches U5, U6, U9 and U11.When no filter is selected, the mixer itself is bypassed.
+        /// Convert <see cref="RfPathFilter"/> into human-readable string.
         /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
+        /// <param name="path">Enum to convert.</param>
+        /// <returns>Human-readable name of filter path.</returns>
         [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_filter_path_name")]
         public static extern sbyte* FilterPathName(RfPathFilter path);
 
@@ -112,9 +110,9 @@ public static partial class HackRfNativeLib {
         public static extern HackrfError InitSweep(HackRFDevice* device, ushort* frequency_list, int num_ranges, uint num_bytes, uint step_width, uint offset, SweepStyle style);
 
         /// <summary>
-        /// Start RX sweep
+        /// Start RX sweep.
         /// 
-        /// See <see cref="InitSweep"/> for more info
+        /// See <see cref="InitSweep"/> for more info.
         /// 
         /// Requires USB API version 0x0104 or above!
         /// </summary>
@@ -141,9 +139,9 @@ public static partial class HackRfNativeLib {
         public static extern HackrfError StartRx(HackRFDevice* device, HackRFSampleBlockCallback callback, void* rx_ctx);
 
         /// <summary>
-        /// Stop receiving,
+        /// Stop receiving.
         /// </summary>
-        /// <param name="device">device to stop RX on</param>
+        /// <param name="device">device to stop RX on.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
         [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_stop_rx")]
         public static extern HackrfError StopRx(HackRFDevice* device);
@@ -207,7 +205,7 @@ public static partial class HackRfNativeLib {
         public static extern HackrfError StopTx(HackRFDevice* device);
 
         /// <summary>
-        /// Set transmit underrun limit
+        /// Set transmit underrun limit.
         /// 
         /// When this limit is set, after the specified number of samples (bytes, not whole IQ pairs) missing the device will automatically return to IDLE mode,
         /// thus stopping operation. Useful for handling cases like program/computer crashes or other problems. The default value 0 means no limit.
@@ -221,7 +219,7 @@ public static partial class HackRfNativeLib {
         public static extern HackrfError SetTxUnderrunLimit(HackRFDevice* device, uint value);
 
         /// <summary>
-        /// Set receive overrun limit
+        /// Set receive overrun limit.
         /// 
         /// When this limit is set, after the specified number of samples (bytes, not whole IQ pairs) missing the device will automatically return to IDLE mode,
         /// thus stopping operation. Useful for handling cases like program/computer crashes or other problems. The default value 0 means no limit.
@@ -283,7 +281,7 @@ public static partial class HackRfNativeLib {
         /// This function also sets the baseband filter bandwidth to a value \f$ \le 0.75 \cdot F_s \f$, so any calls to <see cref="SetBasebandFilterBandwidth"/> should only be made after this.
         /// </summary>
         /// <param name="device">Device to configure.</param>
-        /// <param name="freq_hz">Sample rate base frequency in Hz</param>
+        /// <param name="freq_hz">Sample rate base frequency in Hz.</param>
         /// <param name="divider">Frequency divider. Must be in the range 1-31.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
         [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_sample_rate_manual")]
@@ -331,10 +329,10 @@ public static partial class HackRfNativeLib {
         ///
         /// mm specifies the bias tee mode:
         /// 
-        /// 00 - do nothing
-        /// 01 - reserved, do not use
-        /// 10 - disable bias tee
-        /// 11 - enable bias tee
+        /// 00 - do nothing.
+        /// 01 - reserved, do not use.
+        /// 10 - disable bias tee.
+        /// 11 - enable bias tee.
         /// </summary>
         /// <param name="device">Device to configure.</param>
         /// <param name="req">Bias tee states, as a bitfield.</param>
