@@ -1,4 +1,6 @@
-﻿namespace HackRFDotnet.NativeApi.Enums.System {
+﻿using HackRFDotnet.NativeApi.Lib;
+
+namespace HackRFDotnet.NativeApi.Enums.System {
     /// <summary>
     /// Error enum, returned by many libhackrf functions.
     /// </summary>
@@ -34,7 +36,7 @@
         HACKRF_ERROR_NO_MEM = -11,
 
         /// <summary>
-        /// LibUSB error, use @ref hackrf_error_name to get a human-readable error string (using `libusb_strerror`).
+        /// LibUSB error, use <see cref="HackRfNativeLib.Debug.GetErrorName"/> to get a human-readable error string (using `libusb_strerror`).
         /// </summary>
         HACKRF_ERROR_LIBUSB = -1000,
 

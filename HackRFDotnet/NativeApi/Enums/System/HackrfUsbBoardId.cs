@@ -1,10 +1,13 @@
-﻿namespace HackRFDotnet.NativeApi.Enums.System {
+﻿using HackRFDotnet.NativeApi.Lib;
+using HackRFDotnet.NativeApi.Structs.Devices;
+
+namespace HackRFDotnet.NativeApi.Enums.System {
     /// <summary>
     /// USB board ID (product ID) enum
     ///
     /// Contains USB-IF product id (field `idProduct` in `libusb_device_descriptor`). Can be used to identify general type of hardware.
-    /// Only used in <see cref="HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids"/> field of <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList"/>,
-    /// and can be converted into human-readable string via <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName"/>.
+    /// Only used in <see cref="HackRFDeviceList.usb_board_ids"/> field of <see cref="HackRfNativeLib.Devices.QueryDeviceList"/>,
+    /// and can be converted into human-readable string via <see cref="HackRfNativeLib.Firmware.UsbBoardIdName"/>.
     /// </summary>
     public enum HackrfUsbBoardId {
         /// <summary>
