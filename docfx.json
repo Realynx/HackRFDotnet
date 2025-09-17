@@ -4,7 +4,7 @@
     {
       "src": [
         {
-          "src": "../.\\HackRFDotnet",
+          "src": "../.\\HackRFDotnet\\HackRFDotnet",
           "files": [
             "**/*.csproj"
           ]
