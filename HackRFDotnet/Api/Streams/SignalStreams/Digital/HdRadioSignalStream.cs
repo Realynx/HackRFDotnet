@@ -15,7 +15,7 @@ public unsafe class HdRadioSignalStream : QpskSignalStream, ISampleProvider {
     private AVFrame* _frame;
 
     public HdRadioSignalStream(IIQStream iQStream, SampleRate sampleRate, bool stereo = true,
-        SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
+        SignalProcessingPipeline<IQ>? processingPipeline = null, bool keepOpen = true)
         : base(iQStream, processingPipeline, keepOpen) {
 
         var rate = sampleRate.Sps;

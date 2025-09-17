@@ -1,6 +1,7 @@
 ﻿using HackRFDotnet.Api;
 using HackRFDotnet.Api.Extensions;
 using HackRFDotnet.Api.Services;
+using HackRFDotnet.Api.Streams;
 using HackRFDotnet.Api.Streams.Device;
 using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
@@ -47,29 +48,46 @@ internal class MainService : IHostedService {
         }
     }
 
-    private static void HdRadioPlay(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(200));
-        var effectsPipeline = new SignalProcessingBuilder()
-            .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
-                rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
+    private static void Test(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+        var pipeline = new SignalProcessingPipeline<IQ>();
 
-            .AddSignalEffect(new FftEffect(true, producedChunkSize))
-            .AddSignalEffect(new FrequencyCenteringEffect(Frequency.FromKHz(-192), reducedSampleRate))
-            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, Bandwidth.FromKHz(8)))
-            .AddSignalEffect(new FftEffect(false, producedChunkSize))
-
-            .BuildPipeline();
-
-        var pskSignalStream = new QpskSignalStream(deviceStream, effectsPipeline, keepOpen: false);
+        pipeline
+            .WithRootEffect(new IQDownSampleEffect(deviceStream.SampleRate, rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
+            .AddChildEffect(new FftEffect(true, producedChunkSize))
+            .AddChildEffect(new FrequencyCenteringEffect(Frequency.FromKHz(-192), reducedSampleRate))
+            .AddChildEffect(new LowPassFilterEffect(reducedSampleRate, Bandwidth.FromKHz(8)))
+            .AddChildEffect(new FftEffect(false, producedChunkSize));
 
 
-        var hdRadioSignalStream = new HdRadioSignalStream(deviceStream, reducedSampleRate, stereo: true,
-            processingPipeline: effectsPipeline, keepOpen: false);
+        //var effectsPipeline = new SignalProcessingBuilder<IQ>()
+        //    .AddSignalEffect(new FMDemodulator(false, producedChunkSize))
 
-        // And AnaloguePlayer let's us resample and pipe an audio out the speakers.
-        var digitalPlayer = new DigitalPlayer(hdRadioSignalStream);
-        digitalPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
+        //    .BuildPipeline();
     }
+
+    //private static void HdRadioPlay(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+    //    rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(200));
+    //    var effectsPipeline = new SignalProcessingBuilder()
+    //        .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
+    //            rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
+
+    //        .AddSignalEffect(new FftEffect(true, producedChunkSize))
+    //        .AddSignalEffect(new FrequencyCenteringEffect(Frequency.FromKHz(-192), reducedSampleRate))
+    //        .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, Bandwidth.FromKHz(8)))
+    //        .AddSignalEffect(new FftEffect(false, producedChunkSize))
+
+    //        .BuildPipeline();
+
+    //    var pskSignalStream = new QpskSignalStream(deviceStream, effectsPipeline, keepOpen: false);
+
+
+    //    var hdRadioSignalStream = new HdRadioSignalStream(deviceStream, reducedSampleRate, stereo: true,
+    //        processingPipeline: effectsPipeline, keepOpen: false);
+
+    //    // And AnaloguePlayer let's us resample and pipe an audio out the speakers.
+    //    var digitalPlayer = new DigitalPlayer(hdRadioSignalStream);
+    //    digitalPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
+    //}
 
     private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));

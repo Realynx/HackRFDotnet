@@ -21,12 +21,12 @@ public class SignalStream : IDisposable {
     // TODO: This will actually need to scale with the IQ's sample rate :c
     internal const int PROCESSING_SIZE = 262144;
     internal RingBuffer<IQ> _filteredBuffer;
-    protected SignalProcessingPipeline? _processingPipeline;
+    protected SignalProcessingPipeline<IQ>? _processingPipeline;
 
     protected readonly IIQStream _iQStream;
     protected readonly bool _keepOpen;
 
-    public SignalStream(IIQStream iQStream, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true) {
+    public SignalStream(IIQStream iQStream, SignalProcessingPipeline<IQ>? processingPipeline = null, bool keepOpen = true) {
         _iQStream = iQStream;
         _processingPipeline = processingPipeline;
         _keepOpen = keepOpen;

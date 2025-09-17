@@ -1,12 +1,11 @@
-﻿using HackRFDotnet.Api.Streams.SignalProcessing.Interfaces;
-using HackRFDotnet.Api.Utilities;
+﻿using HackRFDotnet.Api.Utilities;
 
 namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 /// <summary>
 /// Low Pass Filter Effect to remove unwanted signals from the input signal.
 /// Configured with a bandwidth to limit via the filter.
 /// </summary>
-public class LowPassFilterEffect : SignalEffect, ISignalEffect {
+public class LowPassFilterEffect : SignalEffect<IQ, IQ> {
     private readonly SampleRate _sampleRate;
     private readonly Bandwidth _bandwith;
 
@@ -30,6 +29,7 @@ public class LowPassFilterEffect : SignalEffect, ISignalEffect {
                 signalTheta[x] = IQ.Zero;
             }
         }
-        return length;
+
+        return base.AffectSignal(signalTheta, length);
     }
 }

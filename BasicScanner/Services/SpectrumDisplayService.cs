@@ -69,13 +69,13 @@ public unsafe class SpectrumDisplayService {
         var processingSize = 65536;
         _displayBuffer = new IQ[processingSize];
 
-        var effectsPipeline = new SignalProcessingBuilder()
-        .AddSignalEffect(new DownSampleEffect(signalStream.SampleRate, spectrumSize.NyquistSampleRate,
-            processingSize, out var reducedSampleRate, out var producedChunkSize))
+        var effectsPipeline = new SignalProcessingPipeline<IQ>();
+        effectsPipeline
+            .WithRootEffect(new IQDownSampleEffect(signalStream.SampleRate, spectrumSize.NyquistSampleRate,
+                processingSize, out var reducedSampleRate, out var producedChunkSize))
 
-        .AddSignalEffect(new FrequencyCenteringEffect(new Frequency(spectrumSize), reducedSampleRate))
-        .AddSignalEffect(new FftEffect(true, producedChunkSize))
-        .BuildPipeline();
+            .AddChildEffect(new FrequencyCenteringEffect(new Frequency(spectrumSize), reducedSampleRate))
+            .AddChildEffect(new FftEffect(true, producedChunkSize));
 
         var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, reducedSampleRate);
         var magnitudes = new float[producedChunkSize];

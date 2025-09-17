@@ -2,7 +2,7 @@
 /// <summary>
 /// Squelch Effect to remove noise when there is no detected signal present.
 /// </summary>
-public class SquelchEffect : SignalEffect {
+public class SquelchEffect : SignalEffect<IQ, IQ> {
     private readonly SampleRate _sampleRate;
 
     private readonly uint _sampleLength;
@@ -45,6 +45,6 @@ public class SquelchEffect : SignalEffect {
             }
         }
 
-        return length;
+        return base.AffectSignal(signalTheta, length);
     }
 }

@@ -1,23 +1,21 @@
 ﻿using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+using HackRFDotnet.Api.Streams.SignalProcessing.Interfaces;
 
 namespace HackRFDotnet.Api.Streams.SignalProcessing;
 /// <summary>
 /// Effects chain processor.
 /// </summary>
-public class SignalProcessingPipeline {
-    private readonly SignalEffect[] _signalFxPipe;
+public class SignalProcessingPipeline<TInput> where TInput : struct {
+    private ISignalEffectInput<TInput> _rootEffect;
 
-    public SignalProcessingPipeline(SignalEffect[] signalFxPipe) {
-        _signalFxPipe = signalFxPipe;
+    public SignalEffect<TInput, TOutput> WithRootEffect<TOutput>(SignalEffect<TInput, TOutput> rootEffect) where TOutput : struct {
+        _rootEffect = rootEffect;
+        return rootEffect;
     }
 
-    public int ApplyPipeline(Span<IQ> signalTheta) {
+    public int ApplyPipeline(Span<TInput> signalTheta) {
+        var affectedLength = _rootEffect.AffectSignal(signalTheta, signalTheta.Length);
 
-        var sampleLength = signalTheta.Length;
-        foreach (var signalEffect in _signalFxPipe) {
-            sampleLength = signalEffect.AffectSignal(signalTheta, sampleLength);
-        }
-
-        return sampleLength;
+        return affectedLength;
     }
 }

@@ -11,7 +11,7 @@ namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 /// Must be given a chunk with a size that is a multiple of 2 [Length % 2 == 0]
 /// Must be configured with a chunk size for caching a convert buffer.
 /// </summary>
-public unsafe class FftEffect : SignalEffect, IDisposable {
+public unsafe class FftEffect : SignalEffect<IQ, IQ>, IDisposable {
     private readonly bool _forward;
     private readonly Complex32[] _processingChunk = [];
 
@@ -32,7 +32,7 @@ public unsafe class FftEffect : SignalEffect, IDisposable {
         _fftwPlan.Execute();
         MemoryMarshal.Cast<Complex32, IQ>(_processingChunk).CopyTo(signalTheta);
 
-        return length;
+        return base.AffectSignal(signalTheta, length);
     }
 
     public void Dispose() {

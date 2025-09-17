@@ -13,7 +13,7 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
 
     public WaveFormat? WaveFormat { get; protected set; }
 
-    public WaveSignalStream(IIQStream deviceStream, SignalProcessingPipeline? processingPipeline, SampleRate sampleRate, bool stero = true, bool keepOpen = true)
+    public WaveSignalStream(IIQStream deviceStream, SignalProcessingPipeline<IQ> processingPipeline, SampleRate sampleRate, bool stero = true, bool keepOpen = true)
         : base(deviceStream, processingPipeline, keepOpen) {
 
         var rate = sampleRate.Sps;

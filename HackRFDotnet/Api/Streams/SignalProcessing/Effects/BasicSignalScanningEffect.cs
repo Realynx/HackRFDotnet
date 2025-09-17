@@ -1,50 +1,50 @@
-﻿namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
-public class BasicSignalScanningEffect : SignalEffect {
-    private readonly DigitalRadioDevice _digitalRadioDevice;
-    private readonly Bandwidth _bandwidth;
+﻿//namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+//public class BasicSignalScanningEffect : SignalEffect {
+//    private readonly DigitalRadioDevice _digitalRadioDevice;
+//    private readonly Bandwidth _bandwidth;
 
-    private readonly Frequency[] _scanChannels;
-    private int _scanChannelsIndex;
+//    private readonly Frequency[] _scanChannels;
+//    private int _scanChannelsIndex;
 
-    private DateTime _lastChannelSwicth = DateTime.MinValue;
-
-
-    public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, Frequency[] scanChannels) {
-        _digitalRadioDevice = digitalRadioDevice;
-        _scanChannels = scanChannels;
-        _bandwidth = bandwidth;
-    }
-
-    public override int AffectSignal(Span<IQ> signalTheta, int length) {
-        if (length == 0) {
-            return 0;
-        }
-
-        var basebandNoise = 0d;
-        var channelNoise = 0d;
-        for (var x = length; x < signalTheta.Length; x++) {
-            var i = signalTheta[x].I;
-            var q = signalTheta[x].Q;
-            basebandNoise += (i * i) + (q * q);
-        }
-        var basebandNoiseFloor = basebandNoise / signalTheta.Length;
+//    private DateTime _lastChannelSwicth = DateTime.MinValue;
 
 
-        for (var x = 0; x < length; x++) {
-            var i = signalTheta[x].I;
-            var q = signalTheta[x].Q;
-            channelNoise += (i * i) + (q * q);
-        }
-        var channelNoiseFloor = channelNoise / length;
+//    public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, Frequency[] scanChannels) {
+//        _digitalRadioDevice = digitalRadioDevice;
+//        _scanChannels = scanChannels;
+//        _bandwidth = bandwidth;
+//    }
+
+//    public override int AffectSignal(Span<IQ> signalTheta, int length) {
+//        if (length == 0) {
+//            return 0;
+//        }
+
+//        var basebandNoise = 0d;
+//        var channelNoise = 0d;
+//        for (var x = length; x < signalTheta.Length; x++) {
+//            var i = signalTheta[x].I;
+//            var q = signalTheta[x].Q;
+//            basebandNoise += (i * i) + (q * q);
+//        }
+//        var basebandNoiseFloor = basebandNoise / signalTheta.Length;
 
 
-        if (DateTime.Now - _lastChannelSwicth > TimeSpan.FromSeconds(.2f)
-            && channelNoiseFloor < basebandNoiseFloor * 1.026) {
-            _lastChannelSwicth = DateTime.Now;
-            _digitalRadioDevice.SetFrequency(_scanChannels[_scanChannelsIndex], Bandwidth.FromKHz(8));
-            _scanChannelsIndex = (_scanChannelsIndex + 1) % _scanChannels.Length;
-        }
+//        for (var x = 0; x < length; x++) {
+//            var i = signalTheta[x].I;
+//            var q = signalTheta[x].Q;
+//            channelNoise += (i * i) + (q * q);
+//        }
+//        var channelNoiseFloor = channelNoise / length;
 
-        return length;
-    }
-}
+
+//        if (DateTime.Now - _lastChannelSwicth > TimeSpan.FromSeconds(.2f)
+//            && channelNoiseFloor < basebandNoiseFloor * 1.026) {
+//            _lastChannelSwicth = DateTime.Now;
+//            _digitalRadioDevice.SetFrequency(_scanChannels[_scanChannelsIndex], Bandwidth.FromKHz(8));
+//            _scanChannelsIndex = (_scanChannelsIndex + 1) % _scanChannels.Length;
+//        }
+
+//        return length;
+//    }
+//}

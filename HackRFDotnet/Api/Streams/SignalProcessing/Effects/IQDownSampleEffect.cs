@@ -2,7 +2,6 @@
 
 using FftwF.Dotnet;
 
-using HackRFDotnet.Api.Streams.SignalProcessing.Interfaces;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Utilities;
 
@@ -11,11 +10,11 @@ using MathNet.Numerics;
 namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 
 /// <summary>
-/// <see cref="DownSampleEffect"/> removes extraneous information from your signal using your desired bandwidth.
+/// <see cref="IQDownSampleEffect"/> removes extraneous information from your signal using your desired bandwidth.
 /// Example: an FM radio's band is around 200 kHz; the minimum sample rate required to represent this is 400 kS/s (400,000 samples per second).
 /// It is recommended that you reduce the sample rate of your audio signal this way before further signal processing to save CPU.
 /// </summary>
-public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable {
+public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
     private readonly SampleRate _iqSampleRate;
     private readonly SampleRate _reducedSampledRate;
 
@@ -26,7 +25,14 @@ public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable 
 
     private readonly int _decimationFactor;
 
-    public DownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, out SampleRate newSampleRate, out int producedChunkSize) {
+    /// <summary>
+    /// Configure a signal down sampler. You should do this to reduce cpu time when processing your signal.
+    /// </summary>
+    /// <param name="sampleRate">Sample rate of the incoming signal.</param>
+    /// <param name="reducedSampleRate">Desired reduced sample rate.</param>
+    /// <param name="newSampleRate">The closest possible sample rate achievable.</param>
+    /// <param name="producedChunkSize">The chunk size after down sampling.</param>
+    public IQDownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, out SampleRate newSampleRate, out int producedChunkSize) {
         _iqSampleRate = sampleRate;
         _reducedSampledRate = reducedSampleRate;
 
@@ -44,7 +50,15 @@ public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable 
         _inverseFftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftOutBuffer, _fftInBuffer, false, FftwFlags.Estimate);
     }
 
-    public DownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, int processingSize, out SampleRate newSampleRate, out int producedChunkSize) {
+    /// <summary>
+    /// Configure a signal down sampler. You should do this to reduce cpu time when processing your signal.
+    /// </summary>
+    /// <param name="sampleRate">Sample rate of the incoming signal.</param>
+    /// <param name="reducedSampleRate">Desired reduced sample rate.</param>
+    /// <param name="processingSize">The input chunk size. Used to calculate the nearest achievable sample rate.</param>
+    /// <param name="newSampleRate">The closest possible sample rate achievable.</param>
+    /// <param name="producedChunkSize">The chunk size after down sampling.</param>
+    public IQDownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, int processingSize, out SampleRate newSampleRate, out int producedChunkSize) {
         _iqSampleRate = sampleRate;
         _reducedSampledRate = reducedSampleRate;
 
@@ -99,7 +113,8 @@ public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable 
             signalTheta[x] = signalTheta[x * _decimationFactor];
         }
 
-        return decimatedSize;
+
+        return base.AffectSignal(signalTheta, decimatedSize);
     }
 
     public void Dispose() {

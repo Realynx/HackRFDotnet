@@ -1,12 +1,11 @@
-﻿using HackRFDotnet.Api.Streams.SignalProcessing.Interfaces;
-using HackRFDotnet.Api.Utilities;
+﻿using HackRFDotnet.Api.Utilities;
 
 namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 /// <summary>
 /// Shift the frequency by a <see cref="Frequency"/> offset.
 /// This only works for IQ samples, we can shift frequency without losing information.
 /// </summary>
-public class FrequencyCenteringEffect : SignalEffect, ISignalEffect {
+public class FrequencyCenteringEffect : SignalEffect<IQ, IQ> {
     private readonly Frequency _frequencyOffset;
     private readonly SampleRate _sampleRate;
 
@@ -17,6 +16,7 @@ public class FrequencyCenteringEffect : SignalEffect, ISignalEffect {
 
     public override int AffectSignal(Span<IQ> signalTheta, int length) {
         SignalUtilities.ApplyFrequencyOffset(signalTheta, _frequencyOffset, _sampleRate);
-        return length;
+
+        return base.AffectSignal(signalTheta, length);
     }
 }

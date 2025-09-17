@@ -13,15 +13,17 @@ public class FmSignalStream : WaveSignalStream {
         : base(deviceStream, BuildFxChain(deviceStream, stationBandwidth, out var sampleRate), sampleRate, stereo, false) {
     }
 
-    private static SignalProcessingPipeline BuildFxChain(IIQStream deviceStream, Bandwidth stationBandwidth, out SampleRate reducedRate) {
-        return new SignalProcessingBuilder()
-        .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
+    private static SignalProcessingPipeline<IQ> BuildFxChain(IIQStream deviceStream, Bandwidth stationBandwidth, out SampleRate reducedRate) {
+        var signalPpipeline = new SignalProcessingPipeline<IQ>();
+        signalPpipeline
+        .WithRootEffect(new IQDownSampleEffect(deviceStream.SampleRate,
             stationBandwidth.NyquistSampleRate, out reducedRate, out var producedChunkSize))
 
-        .AddSignalEffect(new FftEffect(true, producedChunkSize))
-        .AddSignalEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
-        .AddSignalEffect(new FftEffect(false, producedChunkSize))
-        .BuildPipeline();
+        .AddChildEffect(new FftEffect(true, producedChunkSize))
+        .AddChildEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
+        .AddChildEffect(new FftEffect(false, producedChunkSize));
+
+        return signalPpipeline;
     }
 
     public override int Read(float[] buffer, int offset, int count) {
