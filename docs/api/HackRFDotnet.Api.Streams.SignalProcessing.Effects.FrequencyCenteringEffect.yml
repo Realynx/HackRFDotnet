@@ -5,7 +5,7 @@ items:
   id: FrequencyCenteringEffect
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects
   children:
-  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   langs:
   - csharp
@@ -21,10 +21,15 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FrequencyCenteringEffect
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: >-
+    Shift the frequency by a <xref href="HackRFDotnet.Api.Frequency" data-throw-if-not-resolved="false"></xref> offset.
+
+    This only works for IQ samples, we can shift frequency without losing information.
+  example: []
   syntax:
     content: 'public class FrequencyCenteringEffect : SignalEffect, ISignalEffect'
     content.vb: Public Class FrequencyCenteringEffect Inherits SignalEffect Implements ISignalEffect
@@ -41,16 +46,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
-  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
-  id: '#ctor(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)'
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+  id: '#ctor(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)'
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
   langs:
   - csharp
   - vb
-  name: FrequencyCenteringEffect(RadioBand, SampleRate)
-  nameWithType: FrequencyCenteringEffect.FrequencyCenteringEffect(RadioBand, SampleRate)
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.FrequencyCenteringEffect(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
+  name: FrequencyCenteringEffect(Frequency, SampleRate)
+  nameWithType: FrequencyCenteringEffect.FrequencyCenteringEffect(Frequency, SampleRate)
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.FrequencyCenteringEffect(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.SampleRate)
   type: Constructor
   source:
     remote:
@@ -59,22 +64,22 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
   syntax:
-    content: public FrequencyCenteringEffect(RadioBand frequencyOffset, SampleRate sampleRate)
+    content: public FrequencyCenteringEffect(Frequency frequencyOffset, SampleRate sampleRate)
     parameters:
     - id: frequencyOffset
-      type: HackRFDotnet.Api.RadioBand
+      type: HackRFDotnet.Api.Frequency
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
-    content.vb: Public Sub New(frequencyOffset As RadioBand, sampleRate As SampleRate)
+    content.vb: Public Sub New(frequencyOffset As Frequency, sampleRate As SampleRate)
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor*
-  nameWithType.vb: FrequencyCenteringEffect.New(RadioBand, SampleRate)
-  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.New(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
-  name.vb: New(RadioBand, SampleRate)
+  nameWithType.vb: FrequencyCenteringEffect.New(Frequency, SampleRate)
+  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.New(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.SampleRate)
+  name.vb: New(Frequency, SampleRate)
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   id: AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
@@ -93,20 +98,23 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AffectSignal
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: Manipulate in-place, the signal provided and return a new length is samples were reduced.
   example: []
   syntax:
     content: public override int AffectSignal(Span<IQ> signalTheta, int length)
     parameters:
     - id: signalTheta
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     - id: length
       type: System.Int32
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Overrides Function AffectSignal(signalTheta As Span(Of IQ), length As Integer) As Integer
   overridden: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.AffectSignal*
@@ -116,6 +124,13 @@ items:
   fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.AffectSignal(System.Span(Of HackRFDotnet.Api.Streams.IQ), Integer)
   name.vb: AffectSignal(Span(Of IQ), Integer)
 references:
+- uid: HackRFDotnet.Api.Frequency
+  commentId: T:HackRFDotnet.Api.Frequency
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency
+  nameWithType: Frequency
+  fullName: HackRFDotnet.Api.Frequency
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects
   commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.Effects
   href: HackRFDotnet.html
@@ -406,6 +421,28 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
 - uid: System
   commentId: N:System
   isExternal: true
@@ -461,20 +498,13 @@ references:
     href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor
-  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect__ctor_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_SampleRate_
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect__ctor_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_SampleRate_
   name: FrequencyCenteringEffect
   nameWithType: FrequencyCenteringEffect.FrequencyCenteringEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.FrequencyCenteringEffect
   nameWithType.vb: FrequencyCenteringEffect.New
   fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.New
   name.vb: New
-- uid: HackRFDotnet.Api.RadioBand
-  commentId: T:HackRFDotnet.Api.RadioBand
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.RadioBand
 - uid: HackRFDotnet.Api.SampleRate
   commentId: T:HackRFDotnet.Api.SampleRate
   parent: HackRFDotnet.Api
@@ -482,28 +512,6 @@ references:
   name: SampleRate
   nameWithType: SampleRate
   fullName: HackRFDotnet.Api.SampleRate
-- uid: HackRFDotnet.Api
-  commentId: N:HackRFDotnet.Api
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api
-  nameWithType: HackRFDotnet.Api
-  fullName: HackRFDotnet.Api
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect

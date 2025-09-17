@@ -151,16 +151,19 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: Manipulate in-place, the signal provided and return a new length is samples were reduced.
   example: []
   syntax:
     content: public override int AffectSignal(Span<IQ> signalTheta, int length)
     parameters:
     - id: signalTheta
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     - id: length
       type: System.Int32
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Overrides Function AffectSignal(signalTheta As Span(Of IQ), length As Integer) As Integer
   overridden: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.DownSampleEffect.AffectSignal*

@@ -5,6 +5,11 @@ using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;
 
 namespace HackRFDotnet.Api.Streams.Device {
+    /// <summary>
+    /// IQ Stream from the Rf Device.
+    /// This stream is the root of all data processed with the library.
+    /// This stream must remain immutable from all other <see cref="SignalStreams.SignalStream"/>.
+    /// </summary>
     public unsafe class IQDeviceStream : IDisposable, IIQStream {
         private readonly DigitalRadioDevice _rfDevice;
         private readonly int _transferBufferSize = 0;

@@ -6,8 +6,8 @@ items:
   children:
   - HackRFDotnet.Api.Bandwidth
   - HackRFDotnet.Api.DigitalRadioDevice
+  - HackRFDotnet.Api.Frequency
   - HackRFDotnet.Api.Hertz
-  - HackRFDotnet.Api.RadioBand
   - HackRFDotnet.Api.SampleRate
   langs:
   - csharp
@@ -33,6 +33,13 @@ references:
   name: DigitalRadioDevice
   nameWithType: DigitalRadioDevice
   fullName: HackRFDotnet.Api.DigitalRadioDevice
+- uid: HackRFDotnet.Api.Frequency
+  commentId: T:HackRFDotnet.Api.Frequency
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency
+  nameWithType: Frequency
+  fullName: HackRFDotnet.Api.Frequency
 - uid: HackRFDotnet.Api.Hertz
   commentId: T:HackRFDotnet.Api.Hertz
   parent: HackRFDotnet.Api
@@ -40,13 +47,6 @@ references:
   name: Hertz
   nameWithType: Hertz
   fullName: HackRFDotnet.Api.Hertz
-- uid: HackRFDotnet.Api.RadioBand
-  commentId: T:HackRFDotnet.Api.RadioBand
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.RadioBand
 - uid: HackRFDotnet.Api.SampleRate
   commentId: T:HackRFDotnet.Api.SampleRate
   parent: HackRFDotnet.Api

@@ -20,10 +20,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ISignalEffect
     path: HackRFDotnet/Api/Streams/SignalProcessing/Interfaces/ISignalEffect.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  summary: Signal Effects are fundamental building blocks for a <xref href="HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public interface ISignalEffect
     content.vb: Public Interface ISignalEffect
@@ -45,25 +47,37 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AffectSignal
     path: HackRFDotnet/Api/Streams/SignalProcessing/Interfaces/ISignalEffect.cs
-    startLine: 5
+    startLine: 12
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  summary: Manipulate in-place, the signal provided and return a new length is samples were reduced.
+  example: []
   syntax:
     content: int AffectSignal(Span<IQ> signalTheta, int lendth)
     parameters:
     - id: signalTheta
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     - id: lendth
       type: System.Int32
+      description: ''
     return:
       type: System.Int32
+      description: ''
     content.vb: Function AffectSignal(signalTheta As Span(Of IQ), lendth As Integer) As Integer
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal*
   nameWithType.vb: ISignalEffect.AffectSignal(Span(Of IQ), Integer)
   fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal(System.Span(Of HackRFDotnet.Api.Streams.IQ), Integer)
   name.vb: AffectSignal(Span(Of IQ), Integer)
 references:
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  parent: HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html
+  name: SignalProcessingPipeline
+  nameWithType: SignalProcessingPipeline
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
   commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
   href: HackRFDotnet.html
@@ -110,6 +124,44 @@ references:
   - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
     name: Interfaces
     href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
+- uid: HackRFDotnet.Api.Streams.SignalProcessing
+  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api.Streams.SignalProcessing
+  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.AffectSignal
   href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Interfaces_ISignalEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_

@@ -2,10 +2,12 @@
 
 using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalProcessing;
-using HackRFDotnet.Api.Utilities;
 
 
 namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
+/// <summary>
+/// Demodulate AM audio from the <see cref="IIQStream"/>.
+/// </summary>
 public class AmSignalStream : WaveSignalStream {
     public AmSignalStream(IIQStream deviceStream, SampleRate sampleRate,
         SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)

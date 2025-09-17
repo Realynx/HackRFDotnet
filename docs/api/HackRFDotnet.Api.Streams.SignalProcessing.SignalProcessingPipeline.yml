@@ -21,10 +21,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SignalProcessingPipeline
     path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs
-    startLine: 3
+    startLine: 6
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing
+  summary: Effects chain processor.
+  example: []
   syntax:
     content: public class SignalProcessingPipeline
     content.vb: Public Class SignalProcessingPipeline
@@ -56,7 +58,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing
@@ -88,7 +90,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ApplyPipeline
     path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing

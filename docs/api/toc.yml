@@ -10,11 +10,11 @@ items:
   - uid: HackRFDotnet.Api.DigitalRadioDevice
     name: DigitalRadioDevice
     type: Class
+  - uid: HackRFDotnet.Api.Frequency
+    name: Frequency
+    type: Class
   - uid: HackRFDotnet.Api.Hertz
     name: Hertz
-    type: Class
-  - uid: HackRFDotnet.Api.RadioBand
-    name: RadioBand
     type: Class
   - uid: HackRFDotnet.Api.SampleRate
     name: SampleRate

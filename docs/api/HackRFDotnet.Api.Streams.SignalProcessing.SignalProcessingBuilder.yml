@@ -22,10 +22,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SignalProcessingBuilder
     path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
-    startLine: 3
+    startLine: 6
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing
+  summary: Builder for <xref href="HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public class SignalProcessingBuilder
     content.vb: Public Class SignalProcessingBuilder
@@ -57,7 +59,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing
@@ -86,7 +88,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AddSignalEffect
     path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing
@@ -117,7 +119,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BuildPipeline
     path: HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingBuilder.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing
@@ -128,6 +130,13 @@ items:
     content.vb: Public Function BuildPipeline() As SignalProcessingPipeline
   overload: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder.BuildPipeline*
 references:
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  parent: HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html
+  name: SignalProcessingPipeline
+  nameWithType: SignalProcessingPipeline
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
 - uid: HackRFDotnet.Api.Streams.SignalProcessing
   commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
   href: HackRFDotnet.html
@@ -484,10 +493,3 @@ references:
   name: BuildPipeline
   nameWithType: SignalProcessingBuilder.BuildPipeline
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder.BuildPipeline
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html
-  name: SignalProcessingPipeline
-  nameWithType: SignalProcessingPipeline
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline

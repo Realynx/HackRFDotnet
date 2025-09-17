@@ -21,10 +21,15 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: LowPassFilterEffect
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs
-    startLine: 9
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: >-
+    Low Pass Filter Effect to remove unwanted signals from the input signal.
+
+    Configured with a bandwidth to limit via the filter.
+  example: []
   syntax:
     content: 'public class LowPassFilterEffect : SignalEffect, ISignalEffect'
     content.vb: Public Class LowPassFilterEffect Inherits SignalEffect Implements ISignalEffect
@@ -59,11 +64,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs
-    startLine: 18
+    startLine: 17
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
-  summary: Apply a low pass filter on the signal. Expects Frequency Domain
+  summary: Apply a low pass filter on the signal. Expects Frequency Domain input.
   example: []
   syntax:
     content: public LowPassFilterEffect(SampleRate sampleRate, Bandwidth bandwith)
@@ -97,20 +102,23 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AffectSignal
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/LowPassFilterEffect.cs
-    startLine: 23
+    startLine: 22
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: Manipulate in-place, the signal provided and return a new length is samples were reduced.
   example: []
   syntax:
     content: public override int AffectSignal(Span<IQ> signalTheta, int length)
     parameters:
     - id: signalTheta
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     - id: length
       type: System.Int32
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Overrides Function AffectSignal(signalTheta As Span(Of IQ), length As Integer) As Integer
   overridden: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.AffectSignal*

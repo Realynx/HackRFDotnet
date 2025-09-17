@@ -104,6 +104,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: The number of bytes available to read in the buffer.
   example: []
   syntax:
     content: public int BufferLength { get; }
@@ -136,13 +137,14 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: The current tuning frequency the device is set to.
   example: []
   syntax:
-    content: public RadioBand Frequency { get; set; }
+    content: public Frequency Frequency { get; set; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.RadioBand
-    content.vb: Public Property Frequency As RadioBand
+      type: HackRFDotnet.Api.Frequency
+    content.vb: Public Property Frequency As Frequency
   overload: HackRFDotnet.Api.Streams.Device.IQFileStream.Frequency*
   implements:
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
@@ -168,6 +170,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: The capture sample rate from the device.
   example: []
   syntax:
     content: public SampleRate SampleRate { get; set; }
@@ -200,6 +203,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Close the stream on the device.
   example: []
   syntax:
     content: public void Close()
@@ -229,6 +233,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Dispose and free resources from the stream and the device.
   example: []
   syntax:
     content: public void Dispose()
@@ -259,12 +264,14 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Open an Rx stream to read IQ samples.
   example: []
   syntax:
     content: public void OpenRx(SampleRate? sampleRate = null)
     parameters:
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
+      description: ''
     content.vb: Public Sub OpenRx(sampleRate As SampleRate = Nothing)
   overload: HackRFDotnet.Api.Streams.Device.IQFileStream.OpenRx*
   implements:
@@ -328,14 +335,17 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Open a Tx stream to write IQ samples.
   example: []
   syntax:
     content: public int TxBuffer(Span<IQ> iqFrame)
     parameters:
     - id: iqFrame
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Function TxBuffer(iqFrame As Span(Of IQ)) As Integer
   overload: HackRFDotnet.Api.Streams.Device.IQFileStream.TxBuffer*
   implements:
@@ -365,6 +375,7 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Fill a span with data from the ring buffer.
   example: []
   syntax:
     content: public int ReadBuffer(Span<IQ> iqFrame)
@@ -373,6 +384,7 @@ items:
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Function ReadBuffer(iqFrame As Span(Of IQ)) As Integer
   overload: HackRFDotnet.Api.Streams.Device.IQFileStream.ReadBuffer*
   implements:
@@ -402,12 +414,14 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Set the capture sample rate of the stream and device.
   example: []
   syntax:
     content: public void SetSampleRate(SampleRate sampleRate)
     parameters:
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
+      description: ''
     content.vb: Public Sub SetSampleRate(sampleRate As SampleRate)
   overload: HackRFDotnet.Api.Streams.Device.IQFileStream.SetSampleRate*
   implements:
@@ -798,13 +812,13 @@ references:
   name: Frequency
   nameWithType: IIQStream.Frequency
   fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-- uid: HackRFDotnet.Api.RadioBand
-  commentId: T:HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.Frequency
+  commentId: T:HackRFDotnet.Api.Frequency
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.RadioBand
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency
+  nameWithType: Frequency
+  fullName: HackRFDotnet.Api.Frequency
 - uid: HackRFDotnet.Api
   commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html

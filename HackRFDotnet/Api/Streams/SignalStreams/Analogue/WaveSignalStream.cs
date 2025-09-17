@@ -6,6 +6,9 @@ using HackRFDotnet.Api.Streams.SignalProcessing;
 using NAudio.Wave;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
+/// <summary>
+/// NAudio <see cref="ISampleProvider"/> base stream implementation, <see cref="AmSignalStream"/> and <see cref="FmSignalStream"/> stream inherit this.
+/// </summary>
 public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
 
     public WaveFormat? WaveFormat { get; protected set; }

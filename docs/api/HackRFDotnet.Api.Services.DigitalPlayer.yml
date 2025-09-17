@@ -7,7 +7,7 @@ items:
   children:
   - HackRFDotnet.Api.Services.DigitalPlayer.#ctor(HackRFDotnet.Api.Streams.SignalStreams.Digital.HdRadioSignalStream)
   - HackRFDotnet.Api.Services.DigitalPlayer.Dispose
-  - HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
+  - HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
   langs:
   - csharp
   - vb
@@ -103,16 +103,16 @@ items:
   overload: HackRFDotnet.Api.Services.DigitalPlayer.Dispose*
   implements:
   - System.IDisposable.Dispose
-- uid: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
-  commentId: M:HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
-  id: PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
+- uid: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
+  commentId: M:HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
+  id: PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
   parent: HackRFDotnet.Api.Services.DigitalPlayer
   langs:
   - csharp
   - vb
-  name: PlayStreamAsync(RadioBand, Bandwidth, int)
-  nameWithType: DigitalPlayer.PlayStreamAsync(RadioBand, Bandwidth, int)
-  fullName: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth, int)
+  name: PlayStreamAsync(Frequency, Bandwidth, int)
+  nameWithType: DigitalPlayer.PlayStreamAsync(Frequency, Bandwidth, int)
+  fullName: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth, int)
   type: Method
   source:
     remote:
@@ -126,19 +126,19 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Services
   syntax:
-    content: public virtual void PlayStreamAsync(RadioBand centerOffset, Bandwidth bandwidth, int audioRate)
+    content: public virtual void PlayStreamAsync(Frequency centerOffset, Bandwidth bandwidth, int audioRate)
     parameters:
     - id: centerOffset
-      type: HackRFDotnet.Api.RadioBand
+      type: HackRFDotnet.Api.Frequency
     - id: bandwidth
       type: HackRFDotnet.Api.Bandwidth
     - id: audioRate
       type: System.Int32
-    content.vb: Public Overridable Sub PlayStreamAsync(centerOffset As RadioBand, bandwidth As Bandwidth, audioRate As Integer)
+    content.vb: Public Overridable Sub PlayStreamAsync(centerOffset As Frequency, bandwidth As Bandwidth, audioRate As Integer)
   overload: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync*
-  nameWithType.vb: DigitalPlayer.PlayStreamAsync(RadioBand, Bandwidth, Integer)
-  fullName.vb: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth, Integer)
-  name.vb: PlayStreamAsync(RadioBand, Bandwidth, Integer)
+  nameWithType.vb: DigitalPlayer.PlayStreamAsync(Frequency, Bandwidth, Integer)
+  fullName.vb: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth, Integer)
+  name.vb: PlayStreamAsync(Frequency, Bandwidth, Integer)
 references:
 - uid: HackRFDotnet.Api.Services
   commentId: N:HackRFDotnet.Api.Services
@@ -507,17 +507,17 @@ references:
   - name: )
 - uid: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync*
   commentId: Overload:HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync
-  href: HackRFDotnet.Api.Services.DigitalPlayer.html#HackRFDotnet_Api_Services_DigitalPlayer_PlayStreamAsync_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_System_Int32_
+  href: HackRFDotnet.Api.Services.DigitalPlayer.html#HackRFDotnet_Api_Services_DigitalPlayer_PlayStreamAsync_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_System_Int32_
   name: PlayStreamAsync
   nameWithType: DigitalPlayer.PlayStreamAsync
   fullName: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync
-- uid: HackRFDotnet.Api.RadioBand
-  commentId: T:HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.Frequency
+  commentId: T:HackRFDotnet.Api.Frequency
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.RadioBand
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency
+  nameWithType: Frequency
+  fullName: HackRFDotnet.Api.Frequency
 - uid: HackRFDotnet.Api.Bandwidth
   commentId: T:HackRFDotnet.Api.Bandwidth
   parent: HackRFDotnet.Api

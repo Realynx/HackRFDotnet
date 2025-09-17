@@ -11,7 +11,7 @@ items:
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span{HackRFDotnet.Api.Streams.IQ})
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
-  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._iQStream
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._keepOpen
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._processingPipeline
@@ -29,10 +29,15 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SignalStream
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 6
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
+  summary: >-
+    A <xref href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream" data-throw-if-not-resolved="false"></xref> allows you to process effects from a pipeline, and read the result like a stream reader.
+
+    Stream must be created from a <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref>
+  example: []
   syntax:
     content: 'public class SignalStream : IDisposable'
     content.vb: Public Class SignalStream Implements IDisposable
@@ -69,16 +74,16 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Center
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
   syntax:
-    content: public RadioBand Center { get; protected set; }
+    content: public Frequency Center { get; protected set; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.RadioBand
-    content.vb: Public Property Center As RadioBand
+      type: HackRFDotnet.Api.Frequency
+    content.vb: Public Property Center As Frequency
   overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center*
 - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth
   commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Bandwidth
@@ -98,7 +103,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Bandwidth
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -127,7 +132,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SampleRate
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -156,7 +161,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: _processingPipeline
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -183,7 +188,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: _iQStream
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 21
+    startLine: 25
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -210,7 +215,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: _keepOpen
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -237,7 +242,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -273,7 +278,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ReadSpan
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 33
+    startLine: 37
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -287,16 +292,16 @@ items:
   nameWithType.vb: SignalStream.ReadSpan(Span(Of IQ))
   fullName.vb: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span(Of HackRFDotnet.Api.Streams.IQ))
   name.vb: ReadSpan(Span(Of IQ))
-- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  id: SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  id: SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
   langs:
   - csharp
   - vb
-  name: SetBand(RadioBand, Bandwidth)
-  nameWithType: SignalStream.SetBand(RadioBand, Bandwidth)
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth)
+  name: SetBand(Frequency, Bandwidth)
+  nameWithType: SignalStream.SetBand(Frequency, Bandwidth)
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth)
   type: Method
   source:
     remote:
@@ -305,22 +310,22 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetBand
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 63
+    startLine: 67
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
   summary: Set the band and bandwidth the filtering engine will use.
   example: []
   syntax:
-    content: public void SetBand(RadioBand center, Bandwidth bandwidth)
+    content: public void SetBand(Frequency center, Bandwidth bandwidth)
     parameters:
     - id: center
-      type: HackRFDotnet.Api.RadioBand
+      type: HackRFDotnet.Api.Frequency
       description: ''
     - id: bandwidth
       type: HackRFDotnet.Api.Bandwidth
       description: ''
-    content.vb: Public Sub SetBand(center As RadioBand, bandwidth As Bandwidth)
+    content.vb: Public Sub SetBand(center As Frequency, bandwidth As Bandwidth)
   overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand*
 - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
   commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
@@ -340,7 +345,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
     path: HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs
-    startLine: 68
+    startLine: 72
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams
@@ -353,6 +358,20 @@ items:
   implements:
   - System.IDisposable.Dispose
 references:
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  parent: HackRFDotnet.Api.Streams.SignalStreams
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html
+  name: SignalStream
+  nameWithType: SignalStream
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream
+  commentId: T:HackRFDotnet.Api.Streams.Interfaces.IIQStream
+  parent: HackRFDotnet.Api.Streams.Interfaces
+  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html
+  name: IIQStream
+  nameWithType: IIQStream
+  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream
 - uid: HackRFDotnet.Api.Streams.SignalStreams
   commentId: N:HackRFDotnet.Api.Streams.SignalStreams
   href: HackRFDotnet.html
@@ -629,6 +648,44 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: HackRFDotnet.Api.Streams.Interfaces
+  commentId: N:HackRFDotnet.Api.Streams.Interfaces
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api.Streams.Interfaces
+  nameWithType: HackRFDotnet.Api.Streams.Interfaces
+  fullName: HackRFDotnet.Api.Streams.Interfaces
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.Api.Streams.Interfaces.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.Api.Streams.Interfaces.html
 - uid: System
   commentId: N:System
   isExternal: true
@@ -642,13 +699,13 @@ references:
   name: Center
   nameWithType: SignalStream.Center
   fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center
-- uid: HackRFDotnet.Api.RadioBand
-  commentId: T:HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.Frequency
+  commentId: T:HackRFDotnet.Api.Frequency
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.RadioBand
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency
+  nameWithType: Frequency
+  fullName: HackRFDotnet.Api.Frequency
 - uid: HackRFDotnet.Api
   commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html
@@ -742,51 +799,6 @@ references:
   - uid: HackRFDotnet.Api.Streams.SignalProcessing
     name: SignalProcessing
     href: HackRFDotnet.Api.Streams.SignalProcessing.html
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream
-  commentId: T:HackRFDotnet.Api.Streams.Interfaces.IIQStream
-  parent: HackRFDotnet.Api.Streams.Interfaces
-  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html
-  name: IIQStream
-  nameWithType: IIQStream
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream
-- uid: HackRFDotnet.Api.Streams.Interfaces
-  commentId: N:HackRFDotnet.Api.Streams.Interfaces
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.Interfaces
-  nameWithType: HackRFDotnet.Api.Streams.Interfaces
-  fullName: HackRFDotnet.Api.Streams.Interfaces
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.Interfaces
-    name: Interfaces
-    href: HackRFDotnet.Api.Streams.Interfaces.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.Interfaces
-    name: Interfaces
-    href: HackRFDotnet.Api.Streams.Interfaces.html
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -876,7 +888,7 @@ references:
   - name: )
 - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand
-  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
   name: SetBand
   nameWithType: SignalStream.SetBand
   fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand

@@ -4,6 +4,10 @@ using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Utilities;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams;
+/// <summary>
+/// A <see cref="SignalStream"/> allows you to process effects from a pipeline, and read the result like a stream reader.
+/// Stream must be created from a <see cref="IIQStream"/>
+/// </summary>
 public class SignalStream : IDisposable {
     public Frequency Center { get; protected set; } = Frequency.FromMHz(94.7f);
     public Bandwidth Bandwidth { get; protected set; } = Bandwidth.FromKHz(200);

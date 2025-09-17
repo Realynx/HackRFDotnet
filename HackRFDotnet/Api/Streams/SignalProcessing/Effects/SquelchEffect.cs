@@ -1,4 +1,7 @@
 ﻿namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+/// <summary>
+/// Squelch Effect to remove noise when there is no detected signal present.
+/// </summary>
 public class SquelchEffect : SignalEffect {
     private readonly SampleRate _sampleRate;
 

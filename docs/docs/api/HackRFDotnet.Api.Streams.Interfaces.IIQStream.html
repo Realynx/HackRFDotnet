@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Interface IIQStream | HackrfDotnet ">
       
-      
+      <meta name="description" content="is an immutable stream that buffers the data directly from the IQ device.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream" class="text-break">
-Interface IIQStream  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L2"><i class="bi bi-code-slash"></i></a>
+Interface IIQStream  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
   <dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p><a class="xref" href="HackRFDotnet.Api.Streams.Interfaces.IIQStream.html">IIQStream</a> is an immutable stream that buffers the data directly from the IQ device.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -124,10 +125,11 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h3 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream_BufferLength" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength">
   BufferLength
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The number of bytes available to read in the buffer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -155,14 +157,15 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h3 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream_Frequency" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency">
   Frequency
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L4"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The current tuning frequency the device is set to.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">RadioBand Frequency { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">Frequency Frequency { get; }</code></pre>
   </div>
 
 
@@ -171,7 +174,7 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.RadioBand.html">RadioBand</a></dt>
+    <dt><a class="xref" href="HackRFDotnet.Api.Frequency.html">Frequency</a></dt>
     <dd></dd>
   </dl>
 
@@ -186,10 +189,11 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h3 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream_SampleRate" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate">
   SampleRate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L5"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The capture sample rate from the device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -221,10 +225,11 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h3 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream_Close" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L24"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Close the stream on the device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -247,10 +252,11 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h3 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream_Dispose" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Dispose and free resources from the stream and the device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -273,10 +279,11 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h3 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream_OpenRx_HackRFDotnet_Api_SampleRate_" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.SampleRate)">
   OpenRx(SampleRate?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Open an Rx stream to read IQ samples.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -304,10 +311,11 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h3 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream_ReadBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})">
   ReadBuffer(Span&lt;IQ&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Fill a span with data from the ring buffer.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -340,10 +348,11 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h3 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream_SetSampleRate_HackRFDotnet_Api_SampleRate_" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.SampleRate)">
   SetSampleRate(SampleRate)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set the capture sample rate of the stream and device.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -371,10 +380,11 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 
   <h3 id="HackRFDotnet_Api_Streams_Interfaces_IIQStream_TxBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__" data-uid="HackRFDotnet.Api.Streams.Interfaces.IIQStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})">
   TxBuffer(Span&lt;IQ&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Open a Tx stream to write IQ samples.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -407,7 +417,7 @@ Interface IIQStream  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L2" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs/#L5" class="edit-link">Edit this page</a>
         </div>
 
 

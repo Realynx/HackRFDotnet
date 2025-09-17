@@ -1,6 +1,9 @@
 ﻿using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 
 namespace HackRFDotnet.Api.Streams.SignalProcessing;
+/// <summary>
+/// Builder for <see cref="SignalProcessingPipeline"/>.
+/// </summary>
 public class SignalProcessingBuilder {
     private readonly Queue<SignalEffect> _signalEffects = new();
     public SignalProcessingBuilder() {

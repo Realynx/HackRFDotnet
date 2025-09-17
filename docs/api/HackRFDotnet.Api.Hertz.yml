@@ -39,10 +39,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Hertz
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 1
+    startLine: 4
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Number of oscillations per second.
+  example: []
   syntax:
     content: public class Hertz
     content.vb: Public Class Hertz
@@ -50,7 +52,7 @@ items:
   - System.Object
   derivedClasses:
   - HackRFDotnet.Api.Bandwidth
-  - HackRFDotnet.Api.RadioBand
+  - HackRFDotnet.Api.Frequency
   - HackRFDotnet.Api.SampleRate
   inheritedMembers:
   - System.Object.Equals(System.Object,System.Object)
@@ -77,10 +79,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Hz
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 2
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Number of oscillations per second.
+  example: []
   syntax:
     content: public long Hz { get; set; }
     parameters: []
@@ -106,10 +110,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Mhz
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 4
+    startLine: 13
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Number of oscillations per second divided by 1,000,000
+  example: []
   syntax:
     content: public double Mhz { get; }
     parameters: []
@@ -135,10 +141,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Khz
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 9
+    startLine: 22
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Number of oscillations per second divided by 1,000
+  example: []
   syntax:
     content: public double Khz { get; }
     parameters: []
@@ -164,7 +172,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 15
+    startLine: 28
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -196,7 +204,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromHz
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 19
+    startLine: 32
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -230,7 +238,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromKHz
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 23
+    startLine: 36
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -264,7 +272,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromMHz
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 27
+    startLine: 40
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -298,7 +306,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromGHz
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 31
+    startLine: 44
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -332,7 +340,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_GreaterThan
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 35
+    startLine: 48
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -368,7 +376,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_LessThan
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 39
+    startLine: 52
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -404,7 +412,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_GreaterThanOrEqual
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 43
+    startLine: 56
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -440,7 +448,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_LessThanOrEqual
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 47
+    startLine: 60
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -476,7 +484,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Equality
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 51
+    startLine: 64
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -512,7 +520,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Inequality
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 55
+    startLine: 68
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -548,7 +556,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Modulus
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 59
+    startLine: 72
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -584,7 +592,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_UnaryNegation
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 63
+    startLine: 76
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -618,7 +626,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Division
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 67
+    startLine: 80
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -654,7 +662,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Subtraction
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 71
+    startLine: 84
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -690,7 +698,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Addition
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 75
+    startLine: 88
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -726,7 +734,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Equals
     path: HackRFDotnet/Api/Hertz.cs
-    startLine: 79
+    startLine: 92
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api

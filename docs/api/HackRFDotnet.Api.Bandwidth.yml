@@ -37,10 +37,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Bandwidth
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 1
+    startLine: 4
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Bandwidth of a signal sample.
+  example: []
   syntax:
     content: 'public class Bandwidth : Hertz'
     content.vb: Public Class Bandwidth Inherits Hertz
@@ -76,10 +78,15 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: NyquistSampleRate
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 2
+    startLine: 9
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: >-
+    https://en.wikipedia.org/wiki/Nyquist_rate
+
+    The smallest sample rate that can be used to represent the bandwidth.
+  example: []
   syntax:
     content: public SampleRate NyquistSampleRate { get; }
     parameters: []
@@ -105,7 +112,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 7
+    startLine: 15
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -137,7 +144,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 10
+    startLine: 18
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -169,7 +176,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromHz
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 13
+    startLine: 21
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -203,7 +210,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromKHz
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 17
+    startLine: 25
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -237,7 +244,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromMHz
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 21
+    startLine: 29
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -271,7 +278,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromGHz
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 25
+    startLine: 33
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -305,7 +312,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_GreaterThan
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 29
+    startLine: 37
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -341,7 +348,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_LessThan
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 33
+    startLine: 41
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -377,7 +384,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_GreaterThanOrEqual
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 37
+    startLine: 45
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -413,7 +420,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_LessThanOrEqual
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 41
+    startLine: 49
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -449,7 +456,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Equality
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 45
+    startLine: 53
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -485,7 +492,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Inequality
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 49
+    startLine: 57
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -521,7 +528,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Modulus
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 53
+    startLine: 61
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -557,7 +564,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_UnaryNegation
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 57
+    startLine: 65
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -591,7 +598,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Division
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 61
+    startLine: 69
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -627,7 +634,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Subtraction
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 65
+    startLine: 73
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -663,7 +670,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Addition
     path: HackRFDotnet/Api/Bandwidth.cs
-    startLine: 69
+    startLine: 77
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api

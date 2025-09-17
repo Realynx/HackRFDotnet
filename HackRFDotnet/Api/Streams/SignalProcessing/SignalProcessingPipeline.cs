@@ -1,6 +1,9 @@
 ﻿using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 
 namespace HackRFDotnet.Api.Streams.SignalProcessing;
+/// <summary>
+/// Effects chain processor.
+/// </summary>
 public class SignalProcessingPipeline {
     private readonly SignalEffect[] _signalFxPipe;
 

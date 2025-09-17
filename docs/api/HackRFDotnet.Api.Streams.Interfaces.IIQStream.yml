@@ -28,42 +28,15 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: IIQStream
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 1
+    startLine: 4
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref> is an immutable stream that buffers the data directly from the IQ device.
+  example: []
   syntax:
     content: public interface IIQStream
     content.vb: Public Interface IIQStream
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
-  commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
-  id: BufferLength
-  parent: HackRFDotnet.Api.Streams.Interfaces.IIQStream
-  langs:
-  - csharp
-  - vb
-  name: BufferLength
-  nameWithType: IIQStream.BufferLength
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
-  type: Property
-  source:
-    remote:
-      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: BufferLength
-    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 2
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api.Streams.Interfaces
-  syntax:
-    content: int BufferLength { get; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: ReadOnly Property BufferLength As Integer
-  overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength*
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
   commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
   id: Frequency
@@ -82,16 +55,18 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Frequency
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 3
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: The current tuning frequency the device is set to.
+  example: []
   syntax:
-    content: RadioBand Frequency { get; }
+    content: Frequency Frequency { get; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.RadioBand
-    content.vb: ReadOnly Property Frequency As RadioBand
+      type: HackRFDotnet.Api.Frequency
+    content.vb: ReadOnly Property Frequency As Frequency
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency*
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
   commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
@@ -111,10 +86,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SampleRate
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 4
+    startLine: 13
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: The capture sample rate from the device.
+  example: []
   syntax:
     content: SampleRate SampleRate { get; }
     parameters: []
@@ -122,6 +99,37 @@ items:
       type: HackRFDotnet.Api.SampleRate
     content.vb: ReadOnly Property SampleRate As SampleRate
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate*
+- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
+  commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
+  id: BufferLength
+  parent: HackRFDotnet.Api.Streams.Interfaces.IIQStream
+  langs:
+  - csharp
+  - vb
+  name: BufferLength
+  nameWithType: IIQStream.BufferLength
+  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BufferLength
+    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
+    startLine: 18
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: The number of bytes available to read in the buffer.
+  example: []
+  syntax:
+    content: int BufferLength { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property BufferLength As Integer
+  overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength*
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close
   commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close
   id: Close
@@ -140,10 +148,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Close
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 6
+    startLine: 23
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: Close the stream on the device.
+  example: []
   syntax:
     content: void Close()
     content.vb: Sub Close()
@@ -166,10 +176,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 7
+    startLine: 28
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: Dispose and free resources from the stream and the device.
+  example: []
   syntax:
     content: void Dispose()
     content.vb: Sub Dispose()
@@ -192,15 +204,18 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: OpenRx
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 8
+    startLine: 34
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: Open an Rx stream to read IQ samples.
+  example: []
   syntax:
     content: void OpenRx(SampleRate? sampleRate = null)
     parameters:
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
+      description: ''
     content.vb: Sub OpenRx(sampleRate As SampleRate = Nothing)
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx*
   nameWithType.vb: IIQStream.OpenRx(SampleRate)
@@ -224,17 +239,21 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ReadBuffer
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 9
+    startLine: 41
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: Fill a span with data from the ring buffer.
+  example: []
   syntax:
     content: int ReadBuffer(Span<IQ> iqBuffer)
     parameters:
     - id: iqBuffer
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     return:
       type: System.Int32
+      description: ''
     content.vb: Function ReadBuffer(iqBuffer As Span(Of IQ)) As Integer
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.ReadBuffer*
   nameWithType.vb: IIQStream.ReadBuffer(Span(Of IQ))
@@ -258,15 +277,18 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetSampleRate
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 10
+    startLine: 47
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: Set the capture sample rate of the stream and device.
+  example: []
   syntax:
     content: void SetSampleRate(SampleRate sampleRate)
     parameters:
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
+      description: ''
     content.vb: Sub SetSampleRate(sampleRate As SampleRate)
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate*
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
@@ -287,23 +309,34 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: TxBuffer
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 11
+    startLine: 54
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
+  summary: Open a Tx stream to write IQ samples.
+  example: []
   syntax:
     content: int TxBuffer(Span<IQ> iqFrame)
     parameters:
     - id: iqFrame
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     return:
       type: System.Int32
+      description: ''
     content.vb: Function TxBuffer(iqFrame As Span(Of IQ)) As Integer
   overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.TxBuffer*
   nameWithType.vb: IIQStream.TxBuffer(Span(Of IQ))
   fullName.vb: HackRFDotnet.Api.Streams.Interfaces.IIQStream.TxBuffer(System.Span(Of HackRFDotnet.Api.Streams.IQ))
   name.vb: TxBuffer(Span(Of IQ))
 references:
+- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream
+  commentId: T:HackRFDotnet.Api.Streams.Interfaces.IIQStream
+  parent: HackRFDotnet.Api.Streams.Interfaces
+  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html
+  name: IIQStream
+  nameWithType: IIQStream
+  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream
 - uid: HackRFDotnet.Api.Streams.Interfaces
   commentId: N:HackRFDotnet.Api.Streams.Interfaces
   href: HackRFDotnet.html
@@ -342,43 +375,19 @@ references:
   - uid: HackRFDotnet.Api.Streams.Interfaces
     name: Interfaces
     href: HackRFDotnet.Api.Streams.Interfaces.html
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength*
-  commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
-  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_BufferLength
-  name: BufferLength
-  nameWithType: IIQStream.BufferLength
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency*
   commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
   href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_Frequency
   name: Frequency
   nameWithType: IIQStream.Frequency
   fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-- uid: HackRFDotnet.Api.RadioBand
-  commentId: T:HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.Frequency
+  commentId: T:HackRFDotnet.Api.Frequency
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.RadioBand
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency
+  nameWithType: Frequency
+  fullName: HackRFDotnet.Api.Frequency
 - uid: HackRFDotnet.Api
   commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html
@@ -414,6 +423,30 @@ references:
   name: SampleRate
   nameWithType: SampleRate
   fullName: HackRFDotnet.Api.SampleRate
+- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength*
+  commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
+  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_BufferLength
+  name: BufferLength
+  nameWithType: IIQStream.BufferLength
+  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close*
   commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close
   href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_Close

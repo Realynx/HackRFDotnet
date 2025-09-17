@@ -22,10 +22,19 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FftEffect
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
-    startLine: 7
+    startLine: 13
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: >-
+    Fast Fourier Transform Effect.
+
+    Can be used for forward and inverse transforms.
+
+    Must be given a chunk with a size that is a multiple of 2 [Length % 2 == 0]
+
+    Must be configured with a chunk size for caching a convert buffer.
+  example: []
   syntax:
     content: 'public class FftEffect : SignalEffect, ISignalEffect, IDisposable'
     content.vb: Public Class FftEffect Inherits SignalEffect Implements ISignalEffect, IDisposable
@@ -61,7 +70,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
-    startLine: 13
+    startLine: 19
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
@@ -95,20 +104,23 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AffectSignal
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
-    startLine: 21
+    startLine: 27
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: Manipulate in-place, the signal provided and return a new length is samples were reduced.
   example: []
   syntax:
     content: public override int AffectSignal(Span<IQ> signalTheta, int length)
     parameters:
     - id: signalTheta
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     - id: length
       type: System.Int32
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Overrides Function AffectSignal(signalTheta As Span(Of IQ), length As Integer) As Integer
   overridden: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.AffectSignal*
@@ -133,7 +145,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs
-    startLine: 31
+    startLine: 37
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects

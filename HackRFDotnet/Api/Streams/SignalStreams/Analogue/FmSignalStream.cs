@@ -4,10 +4,12 @@ using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalProcessing;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
+/// <summary>
+/// Demodulate FM audio from <see cref="IIQStream"/>.
+/// </summary>
 public class FmSignalStream : WaveSignalStream {
     public FmSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stereo = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
         : base(deviceStream, sampleRate, stereo, processingPipeline, keepOpen) {
-
     }
 
     public override int Read(float[] buffer, int offset, int count) {

@@ -23,10 +23,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: WaveSignalStream
     path: HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams.Analogue
+  summary: NAudio <xref href="NAudio.Wave.ISampleProvider" data-throw-if-not-resolved="false"></xref> base stream implementation, <xref href="HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream" data-throw-if-not-resolved="false"></xref> and <xref href="HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream" data-throw-if-not-resolved="false"></xref> stream inherit this.
+  example: []
   syntax:
     content: 'public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable'
     content.vb: Public Class WaveSignalStream Inherits SignalStream Implements ISampleProvider, IDisposable
@@ -47,7 +49,7 @@ items:
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._iQStream
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._keepOpen
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span{HackRFDotnet.Api.Streams.IQ})
-  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -74,7 +76,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: WaveFormat
     path: HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams.Analogue
@@ -108,7 +110,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams.Analogue
@@ -148,7 +150,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Read
     path: HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams.Analogue
@@ -194,7 +196,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: NormalizeRms
     path: HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs
-    startLine: 41
+    startLine: 44
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams.Analogue
@@ -211,6 +213,25 @@ items:
   fullName.vb: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.NormalizeRms(System.Span(Of Single), Single)
   name.vb: NormalizeRms(Span(Of Single), Single)
 references:
+- uid: NAudio.Wave.ISampleProvider
+  commentId: T:NAudio.Wave.ISampleProvider
+  parent: NAudio.Wave
+  isExternal: true
+  name: ISampleProvider
+  nameWithType: ISampleProvider
+  fullName: NAudio.Wave.ISampleProvider
+- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream
+  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream
+  href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.html
+  name: AmSignalStream
+  nameWithType: AmSignalStream
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream
+- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream
+  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream
+  href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream.html
+  name: FmSignalStream
+  nameWithType: FmSignalStream
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream
 - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue
   commentId: N:HackRFDotnet.Api.Streams.SignalStreams.Analogue
   href: HackRFDotnet.html
@@ -275,13 +296,6 @@ references:
   name: SignalStream
   nameWithType: SignalStream
   fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
-- uid: NAudio.Wave.ISampleProvider
-  commentId: T:NAudio.Wave.ISampleProvider
-  parent: NAudio.Wave
-  isExternal: true
-  name: ISampleProvider
-  nameWithType: ISampleProvider
-  fullName: NAudio.Wave.ISampleProvider
 - uid: System.IDisposable
   commentId: T:System.IDisposable
   parent: System
@@ -375,21 +389,21 @@ references:
     href: HackRFDotnet.Api.Streams.IQ.html
   - name: )
   - name: )
-- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
-  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
-  name: SetBand(RadioBand, Bandwidth)
-  nameWithType: SignalStream.SetBand(RadioBand, Bandwidth)
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth)
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
+  name: SetBand(Frequency, Bandwidth)
+  nameWithType: SignalStream.SetBand(Frequency, Bandwidth)
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth)
   spec.csharp:
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
     name: SetBand
-    href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
+    href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
   - name: (
-  - uid: HackRFDotnet.Api.RadioBand
-    name: RadioBand
-    href: HackRFDotnet.Api.RadioBand.html
+  - uid: HackRFDotnet.Api.Frequency
+    name: Frequency
+    href: HackRFDotnet.Api.Frequency.html
   - name: ','
   - name: " "
   - uid: HackRFDotnet.Api.Bandwidth
@@ -397,13 +411,13 @@ references:
     href: HackRFDotnet.Api.Bandwidth.html
   - name: )
   spec.vb:
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
     name: SetBand
-    href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
+    href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
   - name: (
-  - uid: HackRFDotnet.Api.RadioBand
-    name: RadioBand
-    href: HackRFDotnet.Api.RadioBand.html
+  - uid: HackRFDotnet.Api.Frequency
+    name: Frequency
+    href: HackRFDotnet.Api.Frequency.html
   - name: ','
   - name: " "
   - uid: HackRFDotnet.Api.Bandwidth
@@ -648,6 +662,28 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: NAudio.Wave
+  commentId: N:NAudio.Wave
+  isExternal: true
+  name: NAudio.Wave
+  nameWithType: NAudio.Wave
+  fullName: NAudio.Wave
+  spec.csharp:
+  - uid: NAudio
+    name: NAudio
+    isExternal: true
+  - name: .
+  - uid: NAudio.Wave
+    name: Wave
+    isExternal: true
+  spec.vb:
+  - uid: NAudio
+    name: NAudio
+    isExternal: true
+  - name: .
+  - uid: NAudio.Wave
+    name: Wave
+    isExternal: true
 - uid: System
   commentId: N:System
   isExternal: true
@@ -693,28 +729,6 @@ references:
   - uid: HackRFDotnet.Api.Streams.SignalStreams
     name: SignalStreams
     href: HackRFDotnet.Api.Streams.SignalStreams.html
-- uid: NAudio.Wave
-  commentId: N:NAudio.Wave
-  isExternal: true
-  name: NAudio.Wave
-  nameWithType: NAudio.Wave
-  fullName: NAudio.Wave
-  spec.csharp:
-  - uid: NAudio
-    name: NAudio
-    isExternal: true
-  - name: .
-  - uid: NAudio.Wave
-    name: Wave
-    isExternal: true
-  spec.vb:
-  - uid: NAudio
-    name: NAudio
-    isExternal: true
-  - name: .
-  - uid: NAudio.Wave
-    name: Wave
-    isExternal: true
 - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.WaveFormat*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.WaveFormat
   href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream_WaveFormat

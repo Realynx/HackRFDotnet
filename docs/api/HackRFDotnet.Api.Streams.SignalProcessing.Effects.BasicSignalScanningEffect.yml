@@ -5,7 +5,7 @@ items:
   id: BasicSignalScanningEffect
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects
   children:
-  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])
+  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Frequency[])
   - HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   langs:
   - csharp
@@ -41,16 +41,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])
-  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])
-  id: '#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])'
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Frequency[])
+  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Frequency[])
+  id: '#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Frequency[])'
   parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
   langs:
   - csharp
   - vb
-  name: BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, RadioBand[])
-  nameWithType: BasicSignalScanningEffect.BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, RadioBand[])
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.BasicSignalScanningEffect(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.RadioBand[])
+  name: BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, Frequency[])
+  nameWithType: BasicSignalScanningEffect.BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, Frequency[])
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.BasicSignalScanningEffect(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.Frequency[])
   type: Constructor
   source:
     remote:
@@ -64,19 +64,19 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
   syntax:
-    content: public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, RadioBand[] scanChannels)
+    content: public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, Frequency[] scanChannels)
     parameters:
     - id: digitalRadioDevice
       type: HackRFDotnet.Api.DigitalRadioDevice
     - id: bandwidth
       type: HackRFDotnet.Api.Bandwidth
     - id: scanChannels
-      type: HackRFDotnet.Api.RadioBand[]
-    content.vb: Public Sub New(digitalRadioDevice As DigitalRadioDevice, bandwidth As Bandwidth, scanChannels As RadioBand())
+      type: HackRFDotnet.Api.Frequency[]
+    content.vb: Public Sub New(digitalRadioDevice As DigitalRadioDevice, bandwidth As Bandwidth, scanChannels As Frequency())
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor*
-  nameWithType.vb: BasicSignalScanningEffect.New(DigitalRadioDevice, Bandwidth, RadioBand())
-  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.New(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.RadioBand())
-  name.vb: New(DigitalRadioDevice, Bandwidth, RadioBand())
+  nameWithType.vb: BasicSignalScanningEffect.New(DigitalRadioDevice, Bandwidth, Frequency())
+  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.New(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.Frequency())
+  name.vb: New(DigitalRadioDevice, Bandwidth, Frequency())
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   id: AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
@@ -99,16 +99,19 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: Manipulate in-place, the signal provided and return a new length is samples were reduced.
   example: []
   syntax:
     content: public override int AffectSignal(Span<IQ> signalTheta, int length)
     parameters:
     - id: signalTheta
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     - id: length
       type: System.Int32
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Overrides Function AffectSignal(signalTheta As Span(Of IQ), length As Integer) As Integer
   overridden: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.AffectSignal*
@@ -461,7 +464,7 @@ references:
     href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor
-  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_HackRFDotnet_Api_DigitalRadioDevice_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_RadioBand___
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_HackRFDotnet_Api_DigitalRadioDevice_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Frequency___
   name: BasicSignalScanningEffect
   nameWithType: BasicSignalScanningEffect.BasicSignalScanningEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.BasicSignalScanningEffect
@@ -482,25 +485,25 @@ references:
   name: Bandwidth
   nameWithType: Bandwidth
   fullName: HackRFDotnet.Api.Bandwidth
-- uid: HackRFDotnet.Api.RadioBand[]
+- uid: HackRFDotnet.Api.Frequency[]
   isExternal: true
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand[]
-  nameWithType: RadioBand[]
-  fullName: HackRFDotnet.Api.RadioBand[]
-  nameWithType.vb: RadioBand()
-  fullName.vb: HackRFDotnet.Api.RadioBand()
-  name.vb: RadioBand()
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency[]
+  nameWithType: Frequency[]
+  fullName: HackRFDotnet.Api.Frequency[]
+  nameWithType.vb: Frequency()
+  fullName.vb: HackRFDotnet.Api.Frequency()
+  name.vb: Frequency()
   spec.csharp:
-  - uid: HackRFDotnet.Api.RadioBand
-    name: RadioBand
-    href: HackRFDotnet.Api.RadioBand.html
+  - uid: HackRFDotnet.Api.Frequency
+    name: Frequency
+    href: HackRFDotnet.Api.Frequency.html
   - name: '['
   - name: ']'
   spec.vb:
-  - uid: HackRFDotnet.Api.RadioBand
-    name: RadioBand
-    href: HackRFDotnet.Api.RadioBand.html
+  - uid: HackRFDotnet.Api.Frequency
+    name: Frequency
+    href: HackRFDotnet.Api.Frequency.html
   - name: (
   - name: )
 - uid: HackRFDotnet.Api

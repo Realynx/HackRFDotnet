@@ -22,10 +22,15 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: InterleavedSample
     path: HackRFDotnet/Api/Streams/InterleavedSample.cs
-    startLine: 1
+    startLine: 5
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams
+  summary: >-
+    <xref href="HackRFDotnet.Api.Streams.InterleavedSample" data-throw-if-not-resolved="false"></xref> comes directly from the HackRF device in transfer chunks.
+
+    Memory alignment allows us to ready and copy them into objects very quickly.
+  example: []
   syntax:
     content: public struct InterleavedSample
     content.vb: Public Structure InterleavedSample
@@ -54,7 +59,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: I
     path: HackRFDotnet/Api/Streams/InterleavedSample.cs
-    startLine: 2
+    startLine: 6
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams
@@ -81,7 +86,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Q
     path: HackRFDotnet/Api/Streams/InterleavedSample.cs
-    startLine: 3
+    startLine: 7
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams
@@ -108,7 +113,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Clone
     path: HackRFDotnet/Api/Streams/InterleavedSample.cs
-    startLine: 5
+    startLine: 9
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams
@@ -119,6 +124,13 @@ items:
     content.vb: Public Function Clone() As InterleavedSample
   overload: HackRFDotnet.Api.Streams.InterleavedSample.Clone*
 references:
+- uid: HackRFDotnet.Api.Streams.InterleavedSample
+  commentId: T:HackRFDotnet.Api.Streams.InterleavedSample
+  parent: HackRFDotnet.Api.Streams
+  href: HackRFDotnet.Api.Streams.InterleavedSample.html
+  name: InterleavedSample
+  nameWithType: InterleavedSample
+  fullName: HackRFDotnet.Api.Streams.InterleavedSample
 - uid: HackRFDotnet.Api.Streams
   commentId: N:HackRFDotnet.Api.Streams
   href: HackRFDotnet.html
@@ -383,10 +395,3 @@ references:
   name: Clone
   nameWithType: InterleavedSample.Clone
   fullName: HackRFDotnet.Api.Streams.InterleavedSample.Clone
-- uid: HackRFDotnet.Api.Streams.InterleavedSample
-  commentId: T:HackRFDotnet.Api.Streams.InterleavedSample
-  parent: HackRFDotnet.Api.Streams
-  href: HackRFDotnet.Api.Streams.InterleavedSample.html
-  name: InterleavedSample
-  nameWithType: InterleavedSample
-  fullName: HackRFDotnet.Api.Streams.InterleavedSample

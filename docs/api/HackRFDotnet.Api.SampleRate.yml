@@ -64,6 +64,40 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+  commentId: P:HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+  id: NyquistFrequencyBandwidth
+  parent: HackRFDotnet.Api.SampleRate
+  langs:
+  - csharp
+  - vb
+  name: NyquistFrequencyBandwidth
+  nameWithType: SampleRate.NyquistFrequencyBandwidth
+  fullName: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/Api/SampleRate.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: NyquistFrequencyBandwidth
+    path: HackRFDotnet/Api/SampleRate.cs
+    startLine: 6
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  summary: >-
+    https://en.wikipedia.org/wiki/Nyquist_frequency
+
+    The largest bandwidth this sample rate can represent.
+  example: []
+  syntax:
+    content: public Bandwidth NyquistFrequencyBandwidth { get; }
+    parameters: []
+    return:
+      type: HackRFDotnet.Api.Bandwidth
+    content.vb: Public ReadOnly Property NyquistFrequencyBandwidth As Bandwidth
+  overload: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth*
 - uid: HackRFDotnet.Api.SampleRate.#ctor(System.Int64)
   commentId: M:HackRFDotnet.Api.SampleRate.#ctor(System.Int64)
   id: '#ctor(System.Int64)'
@@ -82,7 +116,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 2
+    startLine: 12
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -114,7 +148,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 5
+    startLine: 15
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -146,7 +180,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Sps
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 8
+    startLine: 18
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -175,7 +209,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Msps
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 14
+    startLine: 24
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -204,7 +238,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Ksps
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 20
+    startLine: 30
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -215,35 +249,6 @@ items:
       type: System.Double
     content.vb: Public ReadOnly Property Ksps As Double
   overload: HackRFDotnet.Api.SampleRate.Ksps*
-- uid: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
-  commentId: P:HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
-  id: NyquistFrequencyBandwidth
-  parent: HackRFDotnet.Api.SampleRate
-  langs:
-  - csharp
-  - vb
-  name: NyquistFrequencyBandwidth
-  nameWithType: SampleRate.NyquistFrequencyBandwidth
-  fullName: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
-  type: Property
-  source:
-    remote:
-      path: HackRFDotnet/Api/SampleRate.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: NyquistFrequencyBandwidth
-    path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 26
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public Bandwidth NyquistFrequencyBandwidth { get; }
-    parameters: []
-    return:
-      type: HackRFDotnet.Api.Bandwidth
-    content.vb: Public ReadOnly Property NyquistFrequencyBandwidth As Bandwidth
-  overload: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth*
 - uid: HackRFDotnet.Api.SampleRate.FromKsps(System.Double)
   commentId: M:HackRFDotnet.Api.SampleRate.FromKsps(System.Double)
   id: FromKsps(System.Double)
@@ -262,7 +267,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromKsps
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 32
+    startLine: 36
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -296,7 +301,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromMsps
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 36
+    startLine: 40
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -330,7 +335,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: FromGsps
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 40
+    startLine: 44
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -364,7 +369,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_GreaterThan
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 44
+    startLine: 48
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -400,7 +405,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_LessThan
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 48
+    startLine: 52
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -436,7 +441,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_GreaterThanOrEqual
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 52
+    startLine: 56
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -472,7 +477,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_LessThanOrEqual
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 56
+    startLine: 60
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -508,7 +513,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Equality
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 60
+    startLine: 64
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -544,7 +549,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Inequality
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 64
+    startLine: 68
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -580,7 +585,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Modulus
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 68
+    startLine: 72
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -616,7 +621,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_UnaryNegation
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 72
+    startLine: 76
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -650,7 +655,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Division
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 76
+    startLine: 80
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -686,7 +691,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Subtraction
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 80
+    startLine: 84
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -722,7 +727,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: op_Addition
     path: HackRFDotnet/Api/SampleRate.cs
-    startLine: 84
+    startLine: 88
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
@@ -1150,6 +1155,19 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth*
+  commentId: Overload:HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_NyquistFrequencyBandwidth
+  name: NyquistFrequencyBandwidth
+  nameWithType: SampleRate.NyquistFrequencyBandwidth
+  fullName: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
+- uid: HackRFDotnet.Api.Bandwidth
+  commentId: T:HackRFDotnet.Api.Bandwidth
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.Bandwidth.html
+  name: Bandwidth
+  nameWithType: Bandwidth
+  fullName: HackRFDotnet.Api.Bandwidth
 - uid: HackRFDotnet.Api.SampleRate.#ctor*
   commentId: Overload:HackRFDotnet.Api.SampleRate.#ctor
   href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate__ctor_System_Int64_
@@ -1199,19 +1217,6 @@ references:
   name: Ksps
   nameWithType: SampleRate.Ksps
   fullName: HackRFDotnet.Api.SampleRate.Ksps
-- uid: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth*
-  commentId: Overload:HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
-  href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_NyquistFrequencyBandwidth
-  name: NyquistFrequencyBandwidth
-  nameWithType: SampleRate.NyquistFrequencyBandwidth
-  fullName: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
-- uid: HackRFDotnet.Api.Bandwidth
-  commentId: T:HackRFDotnet.Api.Bandwidth
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.Bandwidth.html
-  name: Bandwidth
-  nameWithType: Bandwidth
-  fullName: HackRFDotnet.Api.Bandwidth
 - uid: HackRFDotnet.Api.SampleRate.FromKsps*
   commentId: Overload:HackRFDotnet.Api.SampleRate.FromKsps
   href: HackRFDotnet.Api.SampleRate.html#HackRFDotnet_Api_SampleRate_FromKsps_System_Double_

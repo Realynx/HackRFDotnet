@@ -29,10 +29,17 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: IQDeviceStream
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 7
+    startLine: 12
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: >-
+    IQ Stream from the Rf Device.
+
+    This stream is the root of all data processed with the library.
+
+    This stream must remain immutable from all other <xref href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: 'public class IQDeviceStream : IDisposable, IIQStream'
     content.vb: Public Class IQDeviceStream Implements IDisposable, IIQStream
@@ -67,10 +74,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SampleRate
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 14
+    startLine: 19
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: The capture sample rate from the device.
   example: []
   syntax:
     content: public SampleRate SampleRate { get; }
@@ -99,17 +107,18 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Frequency
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 20
+    startLine: 25
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: The current tuning frequency the device is set to.
   example: []
   syntax:
-    content: public RadioBand Frequency { get; }
+    content: public Frequency Frequency { get; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.RadioBand
-    content.vb: Public ReadOnly Property Frequency As RadioBand
+      type: HackRFDotnet.Api.Frequency
+    content.vb: Public ReadOnly Property Frequency As Frequency
   overload: HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency*
   implements:
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
@@ -131,10 +140,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BufferLength
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 26
+    startLine: 31
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: The number of bytes available to read in the buffer.
   example: []
   syntax:
     content: public int BufferLength { get; }
@@ -163,7 +173,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 32
+    startLine: 37
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -195,16 +205,18 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: OpenRx
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 38
+    startLine: 43
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Open an Rx stream to read IQ samples.
   example: []
   syntax:
     content: public void OpenRx(SampleRate? sampleRate = null)
     parameters:
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
+      description: ''
     content.vb: Public Sub OpenRx(sampleRate As SampleRate = Nothing)
   overload: HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx*
   implements:
@@ -230,10 +242,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Close
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 47
+    startLine: 52
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Close the stream on the device.
   example: []
   syntax:
     content: public void Close()
@@ -259,16 +272,18 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetSampleRate
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 51
+    startLine: 56
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Set the capture sample rate of the stream and device.
   example: []
   syntax:
     content: public void SetSampleRate(SampleRate sampleRate)
     parameters:
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
+      description: ''
     content.vb: Public Sub SetSampleRate(sampleRate As SampleRate)
   overload: HackRFDotnet.Api.Streams.Device.IQDeviceStream.SetSampleRate*
   implements:
@@ -291,18 +306,21 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: TxBuffer
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 62
+    startLine: 67
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Open a Tx stream to write IQ samples.
   example: []
   syntax:
     content: public int TxBuffer(Span<IQ> iqFrame)
     parameters:
     - id: iqFrame
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Function TxBuffer(iqFrame As Span(Of IQ)) As Integer
   overload: HackRFDotnet.Api.Streams.Device.IQDeviceStream.TxBuffer*
   implements:
@@ -328,18 +346,21 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ReadBuffer
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 66
+    startLine: 71
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
+  summary: Fill a span with data from the ring buffer.
   example: []
   syntax:
     content: public int ReadBuffer(Span<IQ> iqBuffer)
     parameters:
     - id: iqBuffer
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Function ReadBuffer(iqBuffer As Span(Of IQ)) As Integer
   overload: HackRFDotnet.Api.Streams.Device.IQDeviceStream.ReadBuffer*
   implements:
@@ -365,7 +386,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 103
+    startLine: 108
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -379,6 +400,13 @@ items:
   - System.IDisposable.Dispose
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Dispose
 references:
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  parent: HackRFDotnet.Api.Streams.SignalStreams
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html
+  name: SignalStream
+  nameWithType: SignalStream
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
 - uid: HackRFDotnet.Api.Streams.Device
   commentId: N:HackRFDotnet.Api.Streams.Device
   href: HackRFDotnet.html
@@ -662,6 +690,44 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: HackRFDotnet.Api.Streams.SignalStreams
+  commentId: N:HackRFDotnet.Api.Streams.SignalStreams
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api.Streams.SignalStreams
+  nameWithType: HackRFDotnet.Api.Streams.SignalStreams
+  fullName: HackRFDotnet.Api.Streams.SignalStreams
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalStreams
+    name: SignalStreams
+    href: HackRFDotnet.Api.Streams.SignalStreams.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalStreams
+    name: SignalStreams
+    href: HackRFDotnet.Api.Streams.SignalStreams.html
 - uid: System
   commentId: N:System
   isExternal: true
@@ -762,13 +828,13 @@ references:
   name: Frequency
   nameWithType: IIQStream.Frequency
   fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-- uid: HackRFDotnet.Api.RadioBand
-  commentId: T:HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.Frequency
+  commentId: T:HackRFDotnet.Api.Frequency
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.RadioBand
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency
+  nameWithType: Frequency
+  fullName: HackRFDotnet.Api.Frequency
 - uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength*
   commentId: Overload:HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength
   href: HackRFDotnet.Api.Streams.Device.IQDeviceStream.html#HackRFDotnet_Api_Streams_Device_IQDeviceStream_BufferLength

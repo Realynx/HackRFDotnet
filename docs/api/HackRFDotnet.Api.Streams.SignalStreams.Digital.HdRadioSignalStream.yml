@@ -45,7 +45,7 @@ items:
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._iQStream
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._keepOpen
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span{HackRFDotnet.Api.Streams.IQ})
-  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -403,21 +403,21 @@ references:
     href: HackRFDotnet.Api.Streams.IQ.html
   - name: )
   - name: )
-- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
-  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
-  name: SetBand(RadioBand, Bandwidth)
-  nameWithType: SignalStream.SetBand(RadioBand, Bandwidth)
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth)
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
+  name: SetBand(Frequency, Bandwidth)
+  nameWithType: SignalStream.SetBand(Frequency, Bandwidth)
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth)
   spec.csharp:
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
     name: SetBand
-    href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
+    href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
   - name: (
-  - uid: HackRFDotnet.Api.RadioBand
-    name: RadioBand
-    href: HackRFDotnet.Api.RadioBand.html
+  - uid: HackRFDotnet.Api.Frequency
+    name: Frequency
+    href: HackRFDotnet.Api.Frequency.html
   - name: ','
   - name: " "
   - uid: HackRFDotnet.Api.Bandwidth
@@ -425,13 +425,13 @@ references:
     href: HackRFDotnet.Api.Bandwidth.html
   - name: )
   spec.vb:
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
     name: SetBand
-    href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
+    href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
   - name: (
-  - uid: HackRFDotnet.Api.RadioBand
-    name: RadioBand
-    href: HackRFDotnet.Api.RadioBand.html
+  - uid: HackRFDotnet.Api.Frequency
+    name: Frequency
+    href: HackRFDotnet.Api.Frequency.html
   - name: ','
   - name: " "
   - uid: HackRFDotnet.Api.Bandwidth

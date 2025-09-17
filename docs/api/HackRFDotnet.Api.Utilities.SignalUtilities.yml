@@ -5,7 +5,7 @@ items:
   id: SignalUtilities
   parent: HackRFDotnet.Api.Utilities
   children:
-  - HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
+  - HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.Utilities.SignalUtilities.CalculateRmsDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})
   - HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})
   - HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)
@@ -73,16 +73,16 @@ items:
   nameWithType.vb: SignalUtilities.IQCorrection(Span(Of IQ))
   fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.IQCorrection(System.Span(Of HackRFDotnet.Api.Streams.IQ))
   name.vb: IQCorrection(Span(Of IQ))
-- uid: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
-  commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
-  id: ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
+- uid: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+  id: ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
   parent: HackRFDotnet.Api.Utilities.SignalUtilities
   langs:
   - csharp
   - vb
-  name: ApplyFrequencyOffset(Span<IQ>, RadioBand, SampleRate)
-  nameWithType: SignalUtilities.ApplyFrequencyOffset(Span<IQ>, RadioBand, SampleRate)
-  fullName: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span<HackRFDotnet.Api.Streams.IQ>, HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
+  name: ApplyFrequencyOffset(Span<IQ>, Frequency, SampleRate)
+  nameWithType: SignalUtilities.ApplyFrequencyOffset(Span<IQ>, Frequency, SampleRate)
+  fullName: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span<HackRFDotnet.Api.Streams.IQ>, HackRFDotnet.Api.Frequency, HackRFDotnet.Api.SampleRate)
   type: Method
   source:
     remote:
@@ -96,19 +96,19 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Utilities
   syntax:
-    content: public static void ApplyFrequencyOffset(Span<IQ> iqFrame, RadioBand freqOffset, SampleRate sampleRate)
+    content: public static void ApplyFrequencyOffset(Span<IQ> iqFrame, Frequency freqOffset, SampleRate sampleRate)
     parameters:
     - id: iqFrame
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
     - id: freqOffset
-      type: HackRFDotnet.Api.RadioBand
+      type: HackRFDotnet.Api.Frequency
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
-    content.vb: Public Shared Sub ApplyFrequencyOffset(iqFrame As Span(Of IQ), freqOffset As RadioBand, sampleRate As SampleRate)
+    content.vb: Public Shared Sub ApplyFrequencyOffset(iqFrame As Span(Of IQ), freqOffset As Frequency, sampleRate As SampleRate)
   overload: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset*
-  nameWithType.vb: SignalUtilities.ApplyFrequencyOffset(Span(Of IQ), RadioBand, SampleRate)
-  fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span(Of HackRFDotnet.Api.Streams.IQ), HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
-  name.vb: ApplyFrequencyOffset(Span(Of IQ), RadioBand, SampleRate)
+  nameWithType.vb: SignalUtilities.ApplyFrequencyOffset(Span(Of IQ), Frequency, SampleRate)
+  fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span(Of HackRFDotnet.Api.Streams.IQ), HackRFDotnet.Api.Frequency, HackRFDotnet.Api.SampleRate)
+  name.vb: ApplyFrequencyOffset(Span(Of IQ), Frequency, SampleRate)
 - uid: HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)
   commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)
   id: FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)
@@ -552,17 +552,17 @@ references:
   - name: )
 - uid: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset*
   commentId: Overload:HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset
-  href: HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_System_Span_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_SampleRate_
+  href: HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_System_Span_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_Frequency_HackRFDotnet_Api_SampleRate_
   name: ApplyFrequencyOffset
   nameWithType: SignalUtilities.ApplyFrequencyOffset
   fullName: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset
-- uid: HackRFDotnet.Api.RadioBand
-  commentId: T:HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.Frequency
+  commentId: T:HackRFDotnet.Api.Frequency
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.RadioBand
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency
+  nameWithType: Frequency
+  fullName: HackRFDotnet.Api.Frequency
 - uid: HackRFDotnet.Api.SampleRate
   commentId: T:HackRFDotnet.Api.SampleRate
   parent: HackRFDotnet.Api

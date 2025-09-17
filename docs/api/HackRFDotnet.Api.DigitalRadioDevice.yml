@@ -12,8 +12,8 @@ items:
   - HackRFDotnet.Api.DigitalRadioDevice.Frequency
   - HackRFDotnet.Api.DigitalRadioDevice.IsConnected
   - HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
-  - HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand)
-  - HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+  - HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
+  - HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   - HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
   - HackRFDotnet.Api.DigitalRadioDevice.StopRx
@@ -75,11 +75,11 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
   syntax:
-    content: public RadioBand Frequency { get; set; }
+    content: public Frequency Frequency { get; set; }
     parameters: []
     return:
-      type: HackRFDotnet.Api.RadioBand
-    content.vb: Public Property Frequency As RadioBand
+      type: HackRFDotnet.Api.Frequency
+    content.vb: Public Property Frequency As Frequency
   overload: HackRFDotnet.Api.DigitalRadioDevice.Frequency*
 - uid: HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
   commentId: P:HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
@@ -231,16 +231,16 @@ items:
   nameWithType.vb: DigitalRadioDevice.SetAmplifications(UInteger, UInteger, Boolean)
   fullName.vb: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(UInteger, UInteger, Boolean)
   name.vb: SetAmplifications(UInteger, UInteger, Boolean)
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand)
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand)
-  id: SetFrequency(HackRFDotnet.Api.RadioBand)
+- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
+  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
+  id: SetFrequency(HackRFDotnet.Api.Frequency)
   parent: HackRFDotnet.Api.DigitalRadioDevice
   langs:
   - csharp
   - vb
-  name: SetFrequency(RadioBand)
-  nameWithType: DigitalRadioDevice.SetFrequency(RadioBand)
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand)
+  name: SetFrequency(Frequency)
+  nameWithType: DigitalRadioDevice.SetFrequency(Frequency)
+  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
   type: Method
   source:
     remote:
@@ -254,24 +254,24 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
   syntax:
-    content: public bool SetFrequency(RadioBand radioFrequency)
+    content: public bool SetFrequency(Frequency radioFrequency)
     parameters:
     - id: radioFrequency
-      type: HackRFDotnet.Api.RadioBand
+      type: HackRFDotnet.Api.Frequency
     return:
       type: System.Boolean
-    content.vb: Public Function SetFrequency(radioFrequency As RadioBand) As Boolean
+    content.vb: Public Function SetFrequency(radioFrequency As Frequency) As Boolean
   overload: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  id: SetFrequency(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
+- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  id: SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   parent: HackRFDotnet.Api.DigitalRadioDevice
   langs:
   - csharp
   - vb
-  name: SetFrequency(RadioBand, Bandwidth)
-  nameWithType: DigitalRadioDevice.SetFrequency(RadioBand, Bandwidth)
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth)
+  name: SetFrequency(Frequency, Bandwidth)
+  nameWithType: DigitalRadioDevice.SetFrequency(Frequency, Bandwidth)
+  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth)
   type: Method
   source:
     remote:
@@ -285,15 +285,15 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
   syntax:
-    content: public bool SetFrequency(RadioBand radioFrequency, Bandwidth bandwidth)
+    content: public bool SetFrequency(Frequency radioFrequency, Bandwidth bandwidth)
     parameters:
     - id: radioFrequency
-      type: HackRFDotnet.Api.RadioBand
+      type: HackRFDotnet.Api.Frequency
     - id: bandwidth
       type: HackRFDotnet.Api.Bandwidth
     return:
       type: System.Boolean
-    content.vb: Public Function SetFrequency(radioFrequency As RadioBand, bandwidth As Bandwidth) As Boolean
+    content.vb: Public Function SetFrequency(radioFrequency As Frequency, bandwidth As Bandwidth) As Boolean
   overload: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency*
 - uid: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
   commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
@@ -774,13 +774,13 @@ references:
   name: Frequency
   nameWithType: DigitalRadioDevice.Frequency
   fullName: HackRFDotnet.Api.DigitalRadioDevice.Frequency
-- uid: HackRFDotnet.Api.RadioBand
-  commentId: T:HackRFDotnet.Api.RadioBand
+- uid: HackRFDotnet.Api.Frequency
+  commentId: T:HackRFDotnet.Api.Frequency
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.RadioBand.html
-  name: RadioBand
-  nameWithType: RadioBand
-  fullName: HackRFDotnet.Api.RadioBand
+  href: HackRFDotnet.Api.Frequency.html
+  name: Frequency
+  nameWithType: Frequency
+  fullName: HackRFDotnet.Api.Frequency
 - uid: HackRFDotnet.Api.DigitalRadioDevice.Bandwidth*
   commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
   href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_Bandwidth
@@ -859,7 +859,7 @@ references:
   name.vb: UInteger
 - uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency*
   commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_RadioBand_
+  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_
   name: SetFrequency
   nameWithType: DigitalRadioDevice.SetFrequency
   fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency

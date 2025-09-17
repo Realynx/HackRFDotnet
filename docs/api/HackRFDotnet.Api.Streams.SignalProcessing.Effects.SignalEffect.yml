@@ -20,10 +20,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SignalEffect
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SignalEffect.cs
-    startLine: 3
+    startLine: 6
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: Signal effect base class.
+  example: []
   syntax:
     content: 'public abstract class SignalEffect : ISignalEffect'
     content.vb: Public MustInherit Class SignalEffect Implements ISignalEffect
@@ -64,20 +66,23 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AffectSignal
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SignalEffect.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: Manipulate in-place, the signal provided and return a new length is samples were reduced.
   example: []
   syntax:
     content: public abstract int AffectSignal(Span<IQ> signalTheta, int length)
     parameters:
     - id: signalTheta
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     - id: length
       type: System.Int32
     return:
       type: System.Int32
+      description: ''
     content.vb: Public MustOverride Function AffectSignal(signalTheta As Span(Of IQ), length As Integer) As Integer
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal*
   implements:

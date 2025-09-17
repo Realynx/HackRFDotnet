@@ -107,23 +107,33 @@ It is recommended that you reduce the sample rate of your audio signal this way 
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.html">FftEffect</a></dt>
-      <dd></dd>
+      <dd><p>Fast Fourier Transform Effect.
+Can be used for forward and inverse transforms.
+Must be given a chunk with a size that is a multiple of 2 [Length % 2 == 0]
+Must be configured with a chunk size for caching a convert buffer.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html">FrequencyCenteringEffect</a></dt>
-      <dd></dd>
+      <dd><p>Shift the frequency by a <a class="xref" href="HackRFDotnet.Api.Frequency.html">Frequency</a> offset.
+This only works for IQ samples, we can shift frequency without losing information.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.html">LowPassFilterEffect</a></dt>
-      <dd></dd>
+      <dd><p>Low Pass Filter Effect to remove unwanted signals from the input signal.
+Configured with a bandwidth to limit via the filter.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.html">SignalEffect</a></dt>
-      <dd></dd>
+      <dd><p>Signal effect base class.</p>
+</dd>
     </dl>
     <dl class="jumplist">
       <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.html">SquelchEffect</a></dt>
-      <dd></dd>
+      <dd><p>Squelch Effect to remove noise when there is no detected signal present.</p>
+</dd>
     </dl>
 
 

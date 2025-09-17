@@ -85,7 +85,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Bandwidth",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Bandwidth.yml\" sourcestartlinenumber=\"1\">Bandwidth of a signal sample.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -131,6 +131,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Frequency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Frequency.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "HackRFDotnet.Api.Frequency",
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Frequency.yml\" sourcestartlinenumber=\"1\">Frequency of a signal.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Hertz.yml",
       "output": {
         ".html": {
@@ -141,7 +155,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Hertz",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Hertz.yml\" sourcestartlinenumber=\"1\">Number of oscillations per second.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -239,7 +253,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.Device.IQDeviceStream",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.Device.IQDeviceStream.yml\" sourcestartlinenumber=\"1\">IQ Stream from the Rf Device.\nThis stream is the root of all data processed with the library.\nThis stream must remain immutable from all other <xref href=\"HackRFDotnet.Api.Streams.SignalStreams.SignalStream\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -309,7 +323,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.IQ",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.IQ.yml\" sourcestartlinenumber=\"1\">This represents a 32bit complex number.\nThe real represents the InPhase Sin of real voltage measurement in time.\nThe imaginary represents the Quadrature of the real voltage measurement in time.\nThe relationship between the I and Q allow us to represent the signal in lower sample rate than it was captured.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -323,7 +337,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.Interfaces.IIQStream",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.Interfaces.IIQStream.yml\" sourcestartlinenumber=\"1\"><xref href=\"HackRFDotnet.Api.Streams.Interfaces.IIQStream\" data-throw-if-not-resolved=\"false\"></xref> is an immutable stream that buffers the data directly from the IQ device.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -351,7 +365,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.InterleavedSample",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.InterleavedSample.yml\" sourcestartlinenumber=\"1\"><xref href=\"HackRFDotnet.Api.Streams.InterleavedSample\" data-throw-if-not-resolved=\"false\"></xref> comes directly from the HackRF device in transfer chunks.\nMemory alignment allows us to ready and copy them into objects very quickly.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -393,7 +407,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.yml\" sourcestartlinenumber=\"1\">Fast Fourier Transform Effect.\nCan be used for forward and inverse transforms.\nMust be given a chunk with a size that is a multiple of 2 [Length % 2 == 0]\nMust be configured with a chunk size for caching a convert buffer.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -407,7 +421,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.yml\" sourcestartlinenumber=\"1\">Shift the frequency by a <xref href=\"HackRFDotnet.Api.Frequency\" data-throw-if-not-resolved=\"false\"></xref> offset.\nThis only works for IQ samples, we can shift frequency without losing information.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -449,7 +463,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.yml\" sourcestartlinenumber=\"1\">Low Pass Filter Effect to remove unwanted signals from the input signal.\nConfigured with a bandwidth to limit via the filter.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -463,7 +477,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.yml\" sourcestartlinenumber=\"1\">Signal effect base class.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -477,7 +491,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.yml\" sourcestartlinenumber=\"1\">Squelch Effect to remove noise when there is no detected signal present.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -505,7 +519,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.yml\" sourcestartlinenumber=\"1\">Signal Effects are fundamental building blocks for a <xref href=\"HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -561,7 +575,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder.yml\" sourcestartlinenumber=\"1\">Builder for <xref href=\"HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -575,7 +589,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.yml\" sourcestartlinenumber=\"1\">Effects chain processor.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -603,7 +617,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.yml\" sourcestartlinenumber=\"1\">Demodulate AM audio from the <xref href=\"HackRFDotnet.Api.Streams.Interfaces.IIQStream\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -617,7 +631,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream.yml\" sourcestartlinenumber=\"1\">Demodulate FM audio from <xref href=\"HackRFDotnet.Api.Streams.Interfaces.IIQStream\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -631,7 +645,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.yml\" sourcestartlinenumber=\"1\">NAudio <xref href=\"NAudio.Wave.ISampleProvider\" data-throw-if-not-resolved=\"false\"></xref> base stream implementation, <xref href=\"HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream\" data-throw-if-not-resolved=\"false\"></xref> stream inherit this.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -701,7 +715,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.Streams.SignalStreams.SignalStream",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalStreams.SignalStream.yml\" sourcestartlinenumber=\"1\">A <xref href=\"HackRFDotnet.Api.Streams.SignalStreams.SignalStream\" data-throw-if-not-resolved=\"false\"></xref> allows you to process effects from a pipeline, and read the result like a stream reader.\nStream must be created from a <xref href=\"HackRFDotnet.Api.Streams.Interfaces.IIQStream\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
       "type": "ManagedReference",

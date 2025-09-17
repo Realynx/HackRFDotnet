@@ -161,8 +161,8 @@ Class BasicSignalScanningEffect  <a class="header-action link-secondary" title="
 
   <a id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_HackRFDotnet_Api_DigitalRadioDevice_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_RadioBand___" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])">
-  BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, RadioBand[])
+  <h3 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_HackRFDotnet_Api_DigitalRadioDevice_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Frequency___" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Frequency[])">
+  BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, Frequency[])
   <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -170,7 +170,7 @@ Class BasicSignalScanningEffect  <a class="header-action link-secondary" title="
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, RadioBand[] scanChannels)</code></pre>
+    <pre><code class="lang-csharp hljs">public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, Frequency[] scanChannels)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -179,7 +179,7 @@ Class BasicSignalScanningEffect  <a class="header-action link-secondary" title="
     <dd></dd>
     <dt><code>bandwidth</code> <a class="xref" href="HackRFDotnet.Api.Bandwidth.html">Bandwidth</a></dt>
     <dd></dd>
-    <dt><code>scanChannels</code> <a class="xref" href="HackRFDotnet.Api.RadioBand.html">RadioBand</a>[]</dt>
+    <dt><code>scanChannels</code> <a class="xref" href="HackRFDotnet.Api.Frequency.html">Frequency</a>[]</dt>
     <dd></dd>
   </dl>
 
@@ -205,7 +205,8 @@ Class BasicSignalScanningEffect  <a class="header-action link-secondary" title="
   <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/BasicSignalScanningEffect.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Manipulate in-place, the signal provided and return a new length is samples were reduced.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">

@@ -21,10 +21,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SquelchEffect
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SquelchEffect.cs
-    startLine: 1
+    startLine: 4
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: Squelch Effect to remove noise when there is no detected signal present.
+  example: []
   syntax:
     content: 'public class SquelchEffect : SignalEffect, ISignalEffect'
     content.vb: Public Class SquelchEffect Inherits SignalEffect Implements ISignalEffect
@@ -59,7 +61,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SquelchEffect.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
@@ -91,20 +93,23 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: AffectSignal
     path: HackRFDotnet/Api/Streams/SignalProcessing/Effects/SquelchEffect.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  summary: Manipulate in-place, the signal provided and return a new length is samples were reduced.
   example: []
   syntax:
     content: public override int AffectSignal(Span<IQ> signalTheta, int length)
     parameters:
     - id: signalTheta
       type: System.Span{HackRFDotnet.Api.Streams.IQ}
+      description: ''
     - id: length
       type: System.Int32
     return:
       type: System.Int32
+      description: ''
     content.vb: Public Overrides Function AffectSignal(signalTheta As Span(Of IQ), length As Integer) As Integer
   overridden: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
   overload: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.AffectSignal*

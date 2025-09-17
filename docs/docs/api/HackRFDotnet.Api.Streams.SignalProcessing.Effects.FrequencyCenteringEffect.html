@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class FrequencyCenteringEffect | HackrfDotnet ">
       
-      
+      <meta name="description" content="Shift the frequency by a  offset. This only works for IQ samples, we can shift frequency without losing information.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect" class="text-break">
-Class FrequencyCenteringEffect  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class FrequencyCenteringEffect  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,9 @@ Class FrequencyCenteringEffect  <a class="header-action link-secondary" title="V
   <dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Shift the frequency by a <a class="xref" href="HackRFDotnet.Api.Frequency.html">Frequency</a> offset.
+This only works for IQ samples, we can shift frequency without losing information.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -161,21 +163,21 @@ Class FrequencyCenteringEffect  <a class="header-action link-secondary" title="V
 
   <a id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect__ctor_" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect__ctor_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_SampleRate_" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)">
-  FrequencyCenteringEffect(RadioBand, SampleRate)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <h3 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect__ctor_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_SampleRate_" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)">
+  FrequencyCenteringEffect(Frequency, SampleRate)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FrequencyCenteringEffect(RadioBand frequencyOffset, SampleRate sampleRate)</code></pre>
+    <pre><code class="lang-csharp hljs">public FrequencyCenteringEffect(Frequency frequencyOffset, SampleRate sampleRate)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>frequencyOffset</code> <a class="xref" href="HackRFDotnet.Api.RadioBand.html">RadioBand</a></dt>
+    <dt><code>frequencyOffset</code> <a class="xref" href="HackRFDotnet.Api.Frequency.html">Frequency</a></dt>
     <dd></dd>
     <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
     <dd></dd>
@@ -200,10 +202,11 @@ Class FrequencyCenteringEffect  <a class="header-action link-secondary" title="V
 
   <h3 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)">
   AffectSignal(Span&lt;IQ&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Manipulate in-place, the signal provided and return a new length is samples were reduced.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -238,7 +241,7 @@ Class FrequencyCenteringEffect  <a class="header-action link-secondary" title="V
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs/#L5" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

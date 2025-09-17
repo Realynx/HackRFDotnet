@@ -420,18 +420,18 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications
   nameWithType: DigitalRadioDevice.SetAmplifications
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand)
-  name: SetFrequency(RadioBand)
-  href: docs/api/HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_RadioBand_
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand)
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand)
-  nameWithType: DigitalRadioDevice.SetFrequency(RadioBand)
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  name: SetFrequency(RadioBand, Bandwidth)
-  href: docs/api/HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth)
-  nameWithType: DigitalRadioDevice.SetFrequency(RadioBand, Bandwidth)
+- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
+  name: SetFrequency(Frequency)
+  href: docs/api/HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
+  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
+  nameWithType: DigitalRadioDevice.SetFrequency(Frequency)
+- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  name: SetFrequency(Frequency, Bandwidth)
+  href: docs/api/HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
+  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth)
+  nameWithType: DigitalRadioDevice.SetFrequency(Frequency, Bandwidth)
 - uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency*
   name: SetFrequency
   href: docs/api/HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_
@@ -503,6 +503,313 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification
   nameWithType: RfDeviceExtensions.AttenuateAmplification
+- uid: HackRFDotnet.Api.Frequency
+  name: Frequency
+  href: docs/api/HackRFDotnet.Api.Frequency.html
+  commentId: T:HackRFDotnet.Api.Frequency
+  fullName: HackRFDotnet.Api.Frequency
+  nameWithType: Frequency
+- uid: HackRFDotnet.Api.Frequency.#ctor(HackRFDotnet.Api.Hertz)
+  name: Frequency(Hertz)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency__ctor_HackRFDotnet_Api_Hertz_
+  commentId: M:HackRFDotnet.Api.Frequency.#ctor(HackRFDotnet.Api.Hertz)
+  name.vb: New(Hertz)
+  fullName: HackRFDotnet.Api.Frequency.Frequency(HackRFDotnet.Api.Hertz)
+  fullName.vb: HackRFDotnet.Api.Frequency.New(HackRFDotnet.Api.Hertz)
+  nameWithType: Frequency.Frequency(Hertz)
+  nameWithType.vb: Frequency.New(Hertz)
+- uid: HackRFDotnet.Api.Frequency.#ctor(System.Int64)
+  name: Frequency(long)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency__ctor_System_Int64_
+  commentId: M:HackRFDotnet.Api.Frequency.#ctor(System.Int64)
+  name.vb: New(Long)
+  fullName: HackRFDotnet.Api.Frequency.Frequency(long)
+  fullName.vb: HackRFDotnet.Api.Frequency.New(Long)
+  nameWithType: Frequency.Frequency(long)
+  nameWithType.vb: Frequency.New(Long)
+- uid: HackRFDotnet.Api.Frequency.#ctor*
+  name: Frequency
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency__ctor_
+  commentId: Overload:HackRFDotnet.Api.Frequency.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: HackRFDotnet.Api.Frequency.Frequency
+  fullName.vb: HackRFDotnet.Api.Frequency.New
+  nameWithType: Frequency.Frequency
+  nameWithType.vb: Frequency.New
+- uid: HackRFDotnet.Api.Frequency.FromGHz(System.Double)
+  name: FromGHz(double)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromGHz_System_Double_
+  commentId: M:HackRFDotnet.Api.Frequency.FromGHz(System.Double)
+  name.vb: FromGHz(Double)
+  fullName: HackRFDotnet.Api.Frequency.FromGHz(double)
+  fullName.vb: HackRFDotnet.Api.Frequency.FromGHz(Double)
+  nameWithType: Frequency.FromGHz(double)
+  nameWithType.vb: Frequency.FromGHz(Double)
+- uid: HackRFDotnet.Api.Frequency.FromGHz*
+  name: FromGHz
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromGHz_
+  commentId: Overload:HackRFDotnet.Api.Frequency.FromGHz
+  isSpec: "True"
+  fullName: HackRFDotnet.Api.Frequency.FromGHz
+  nameWithType: Frequency.FromGHz
+- uid: HackRFDotnet.Api.Frequency.FromHz(System.Int64)
+  name: FromHz(long)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromHz_System_Int64_
+  commentId: M:HackRFDotnet.Api.Frequency.FromHz(System.Int64)
+  name.vb: FromHz(Long)
+  fullName: HackRFDotnet.Api.Frequency.FromHz(long)
+  fullName.vb: HackRFDotnet.Api.Frequency.FromHz(Long)
+  nameWithType: Frequency.FromHz(long)
+  nameWithType.vb: Frequency.FromHz(Long)
+- uid: HackRFDotnet.Api.Frequency.FromHz*
+  name: FromHz
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromHz_
+  commentId: Overload:HackRFDotnet.Api.Frequency.FromHz
+  isSpec: "True"
+  fullName: HackRFDotnet.Api.Frequency.FromHz
+  nameWithType: Frequency.FromHz
+- uid: HackRFDotnet.Api.Frequency.FromKHz(System.Double)
+  name: FromKHz(double)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromKHz_System_Double_
+  commentId: M:HackRFDotnet.Api.Frequency.FromKHz(System.Double)
+  name.vb: FromKHz(Double)
+  fullName: HackRFDotnet.Api.Frequency.FromKHz(double)
+  fullName.vb: HackRFDotnet.Api.Frequency.FromKHz(Double)
+  nameWithType: Frequency.FromKHz(double)
+  nameWithType.vb: Frequency.FromKHz(Double)
+- uid: HackRFDotnet.Api.Frequency.FromKHz*
+  name: FromKHz
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromKHz_
+  commentId: Overload:HackRFDotnet.Api.Frequency.FromKHz
+  isSpec: "True"
+  fullName: HackRFDotnet.Api.Frequency.FromKHz
+  nameWithType: Frequency.FromKHz
+- uid: HackRFDotnet.Api.Frequency.FromMHz(System.Double)
+  name: FromMHz(double)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromMHz_System_Double_
+  commentId: M:HackRFDotnet.Api.Frequency.FromMHz(System.Double)
+  name.vb: FromMHz(Double)
+  fullName: HackRFDotnet.Api.Frequency.FromMHz(double)
+  fullName.vb: HackRFDotnet.Api.Frequency.FromMHz(Double)
+  nameWithType: Frequency.FromMHz(double)
+  nameWithType.vb: Frequency.FromMHz(Double)
+- uid: HackRFDotnet.Api.Frequency.FromMHz*
+  name: FromMHz
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromMHz_
+  commentId: Overload:HackRFDotnet.Api.Frequency.FromMHz
+  isSpec: "True"
+  fullName: HackRFDotnet.Api.Frequency.FromMHz
+  nameWithType: Frequency.FromMHz
+- uid: HackRFDotnet.Api.Frequency.op_Addition(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name: operator +(Frequency, Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Addition_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_Addition(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name.vb: +(Frequency, Frequency)
+  fullName: HackRFDotnet.Api.Frequency.operator +(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.+(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator +(Frequency, Frequency)
+  nameWithType.vb: Frequency.+(Frequency, Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_Addition*
+  name: operator +
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Addition_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_Addition
+  isSpec: "True"
+  name.vb: +
+  fullName: HackRFDotnet.Api.Frequency.operator +
+  fullName.vb: HackRFDotnet.Api.Frequency.+
+  nameWithType: Frequency.operator +
+  nameWithType.vb: Frequency.+
+- uid: HackRFDotnet.Api.Frequency.op_Division(HackRFDotnet.Api.Frequency,System.Int32)
+  name: operator /(Frequency, int)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Division_HackRFDotnet_Api_Frequency_System_Int32_
+  commentId: M:HackRFDotnet.Api.Frequency.op_Division(HackRFDotnet.Api.Frequency,System.Int32)
+  name.vb: /(Frequency, Integer)
+  fullName: HackRFDotnet.Api.Frequency.operator /(HackRFDotnet.Api.Frequency, int)
+  fullName.vb: HackRFDotnet.Api.Frequency./(HackRFDotnet.Api.Frequency, Integer)
+  nameWithType: Frequency.operator /(Frequency, int)
+  nameWithType.vb: Frequency./(Frequency, Integer)
+- uid: HackRFDotnet.Api.Frequency.op_Division*
+  name: operator /
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Division_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_Division
+  isSpec: "True"
+  name.vb: /
+  fullName: HackRFDotnet.Api.Frequency.operator /
+  fullName.vb: HackRFDotnet.Api.Frequency./
+  nameWithType: Frequency.operator /
+  nameWithType.vb: Frequency./
+- uid: HackRFDotnet.Api.Frequency.op_Equality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name: operator ==(Frequency, Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Equality_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_Equality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name.vb: =(Frequency, Frequency)
+  fullName: HackRFDotnet.Api.Frequency.operator ==(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator ==(Frequency, Frequency)
+  nameWithType.vb: Frequency.=(Frequency, Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_Equality*
+  name: operator ==
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Equality_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_Equality
+  isSpec: "True"
+  name.vb: =
+  fullName: HackRFDotnet.Api.Frequency.operator ==
+  fullName.vb: HackRFDotnet.Api.Frequency.=
+  nameWithType: Frequency.operator ==
+  nameWithType.vb: Frequency.=
+- uid: HackRFDotnet.Api.Frequency.op_GreaterThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name: operator >(Frequency, Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_GreaterThan_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_GreaterThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name.vb: '>(Frequency, Frequency)'
+  fullName: HackRFDotnet.Api.Frequency.operator >(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.>(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator >(Frequency, Frequency)
+  nameWithType.vb: Frequency.>(Frequency, Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_GreaterThan*
+  name: operator >
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_GreaterThan_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_GreaterThan
+  isSpec: "True"
+  name.vb: '>'
+  fullName: HackRFDotnet.Api.Frequency.operator >
+  fullName.vb: HackRFDotnet.Api.Frequency.>
+  nameWithType: Frequency.operator >
+  nameWithType.vb: Frequency.>
+- uid: HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name: operator >=(Frequency, Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_GreaterThanOrEqual_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name.vb: '>=(Frequency, Frequency)'
+  fullName: HackRFDotnet.Api.Frequency.operator >=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.>=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator >=(Frequency, Frequency)
+  nameWithType.vb: Frequency.>=(Frequency, Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual*
+  name: operator >=
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_GreaterThanOrEqual_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual
+  isSpec: "True"
+  name.vb: '>='
+  fullName: HackRFDotnet.Api.Frequency.operator >=
+  fullName.vb: HackRFDotnet.Api.Frequency.>=
+  nameWithType: Frequency.operator >=
+  nameWithType.vb: Frequency.>=
+- uid: HackRFDotnet.Api.Frequency.op_Inequality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name: operator !=(Frequency, Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Inequality_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_Inequality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name.vb: <>(Frequency, Frequency)
+  fullName: HackRFDotnet.Api.Frequency.operator !=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.<>(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator !=(Frequency, Frequency)
+  nameWithType.vb: Frequency.<>(Frequency, Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_Inequality*
+  name: operator !=
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Inequality_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_Inequality
+  isSpec: "True"
+  name.vb: <>
+  fullName: HackRFDotnet.Api.Frequency.operator !=
+  fullName.vb: HackRFDotnet.Api.Frequency.<>
+  nameWithType: Frequency.operator !=
+  nameWithType.vb: Frequency.<>
+- uid: HackRFDotnet.Api.Frequency.op_LessThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name: operator <(Frequency, Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_LessThan_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_LessThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name.vb: <(Frequency, Frequency)
+  fullName: HackRFDotnet.Api.Frequency.operator <(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.<(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator <(Frequency, Frequency)
+  nameWithType.vb: Frequency.<(Frequency, Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_LessThan*
+  name: operator <
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_LessThan_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_LessThan
+  isSpec: "True"
+  name.vb: <
+  fullName: HackRFDotnet.Api.Frequency.operator <
+  fullName.vb: HackRFDotnet.Api.Frequency.<
+  nameWithType: Frequency.operator <
+  nameWithType.vb: Frequency.<
+- uid: HackRFDotnet.Api.Frequency.op_LessThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name: operator <=(Frequency, Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_LessThanOrEqual_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_LessThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name.vb: <=(Frequency, Frequency)
+  fullName: HackRFDotnet.Api.Frequency.operator <=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.<=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator <=(Frequency, Frequency)
+  nameWithType.vb: Frequency.<=(Frequency, Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_LessThanOrEqual*
+  name: operator <=
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_LessThanOrEqual_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_LessThanOrEqual
+  isSpec: "True"
+  name.vb: <=
+  fullName: HackRFDotnet.Api.Frequency.operator <=
+  fullName.vb: HackRFDotnet.Api.Frequency.<=
+  nameWithType: Frequency.operator <=
+  nameWithType.vb: Frequency.<=
+- uid: HackRFDotnet.Api.Frequency.op_Modulus(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name: operator %(Frequency, Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Modulus_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_Modulus(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name.vb: Mod(Frequency, Frequency)
+  fullName: HackRFDotnet.Api.Frequency.operator %(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.Mod(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator %(Frequency, Frequency)
+  nameWithType.vb: Frequency.Mod(Frequency, Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_Modulus*
+  name: operator %
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Modulus_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_Modulus
+  isSpec: "True"
+  name.vb: Mod
+  fullName: HackRFDotnet.Api.Frequency.operator %
+  fullName.vb: HackRFDotnet.Api.Frequency.Mod
+  nameWithType: Frequency.operator %
+  nameWithType.vb: Frequency.Mod
+- uid: HackRFDotnet.Api.Frequency.op_Subtraction(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name: operator -(Frequency, Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Subtraction_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_Subtraction(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+  name.vb: -(Frequency, Frequency)
+  fullName: HackRFDotnet.Api.Frequency.operator -(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.-(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator -(Frequency, Frequency)
+  nameWithType.vb: Frequency.-(Frequency, Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_Subtraction*
+  name: operator -
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Subtraction_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_Subtraction
+  isSpec: "True"
+  name.vb: '-'
+  fullName: HackRFDotnet.Api.Frequency.operator -
+  fullName.vb: HackRFDotnet.Api.Frequency.-
+  nameWithType: Frequency.operator -
+  nameWithType.vb: Frequency.-
+- uid: HackRFDotnet.Api.Frequency.op_UnaryNegation(HackRFDotnet.Api.Frequency)
+  name: operator -(Frequency)
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_UnaryNegation_HackRFDotnet_Api_Frequency_
+  commentId: M:HackRFDotnet.Api.Frequency.op_UnaryNegation(HackRFDotnet.Api.Frequency)
+  name.vb: -(Frequency)
+  fullName: HackRFDotnet.Api.Frequency.operator -(HackRFDotnet.Api.Frequency)
+  fullName.vb: HackRFDotnet.Api.Frequency.-(HackRFDotnet.Api.Frequency)
+  nameWithType: Frequency.operator -(Frequency)
+  nameWithType.vb: Frequency.-(Frequency)
+- uid: HackRFDotnet.Api.Frequency.op_UnaryNegation*
+  name: operator -
+  href: docs/api/HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_UnaryNegation_
+  commentId: Overload:HackRFDotnet.Api.Frequency.op_UnaryNegation
+  isSpec: "True"
+  name.vb: '-'
+  fullName: HackRFDotnet.Api.Frequency.operator -
+  fullName.vb: HackRFDotnet.Api.Frequency.-
+  nameWithType: Frequency.operator -
+  nameWithType.vb: Frequency.-
 - uid: HackRFDotnet.Api.Hertz
   name: Hertz
   href: docs/api/HackRFDotnet.Api.Hertz.html
@@ -1550,15 +1857,15 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Services.AnaloguePlayer.Dispose
   nameWithType: AnaloguePlayer.Dispose
-- uid: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
-  name: PlayStreamAsync(RadioBand, Bandwidth, int)
-  href: docs/api/HackRFDotnet.Api.Services.AnaloguePlayer.html#HackRFDotnet_Api_Services_AnaloguePlayer_PlayStreamAsync_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_System_Int32_
-  commentId: M:HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
-  name.vb: PlayStreamAsync(RadioBand, Bandwidth, Integer)
-  fullName: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth, int)
-  fullName.vb: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth, Integer)
-  nameWithType: AnaloguePlayer.PlayStreamAsync(RadioBand, Bandwidth, int)
-  nameWithType.vb: AnaloguePlayer.PlayStreamAsync(RadioBand, Bandwidth, Integer)
+- uid: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
+  name: PlayStreamAsync(Frequency, Bandwidth, int)
+  href: docs/api/HackRFDotnet.Api.Services.AnaloguePlayer.html#HackRFDotnet_Api_Services_AnaloguePlayer_PlayStreamAsync_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_System_Int32_
+  commentId: M:HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
+  name.vb: PlayStreamAsync(Frequency, Bandwidth, Integer)
+  fullName: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth, int)
+  fullName.vb: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth, Integer)
+  nameWithType: AnaloguePlayer.PlayStreamAsync(Frequency, Bandwidth, int)
+  nameWithType.vb: AnaloguePlayer.PlayStreamAsync(Frequency, Bandwidth, Integer)
 - uid: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync*
   name: PlayStreamAsync
   href: docs/api/HackRFDotnet.Api.Services.AnaloguePlayer.html#HackRFDotnet_Api_Services_AnaloguePlayer_PlayStreamAsync_
@@ -1604,15 +1911,15 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Services.DigitalPlayer.Dispose
   nameWithType: DigitalPlayer.Dispose
-- uid: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
-  name: PlayStreamAsync(RadioBand, Bandwidth, int)
-  href: docs/api/HackRFDotnet.Api.Services.DigitalPlayer.html#HackRFDotnet_Api_Services_DigitalPlayer_PlayStreamAsync_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_System_Int32_
-  commentId: M:HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth,System.Int32)
-  name.vb: PlayStreamAsync(RadioBand, Bandwidth, Integer)
-  fullName: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth, int)
-  fullName.vb: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth, Integer)
-  nameWithType: DigitalPlayer.PlayStreamAsync(RadioBand, Bandwidth, int)
-  nameWithType.vb: DigitalPlayer.PlayStreamAsync(RadioBand, Bandwidth, Integer)
+- uid: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
+  name: PlayStreamAsync(Frequency, Bandwidth, int)
+  href: docs/api/HackRFDotnet.Api.Services.DigitalPlayer.html#HackRFDotnet_Api_Services_DigitalPlayer_PlayStreamAsync_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_System_Int32_
+  commentId: M:HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
+  name.vb: PlayStreamAsync(Frequency, Bandwidth, Integer)
+  fullName: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth, int)
+  fullName.vb: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth, Integer)
+  nameWithType: DigitalPlayer.PlayStreamAsync(Frequency, Bandwidth, int)
+  nameWithType.vb: DigitalPlayer.PlayStreamAsync(Frequency, Bandwidth, Integer)
 - uid: HackRFDotnet.Api.Services.DigitalPlayer.PlayStreamAsync*
   name: PlayStreamAsync
   href: docs/api/HackRFDotnet.Api.Services.DigitalPlayer.html#HackRFDotnet_Api_Services_DigitalPlayer_PlayStreamAsync_
@@ -2085,19 +2392,6 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Streams.IQ.Abs
   nameWithType: IQ.Abs
-- uid: HackRFDotnet.Api.Streams.IQ.Acos(HackRFDotnet.Api.Streams.IQ)
-  name: Acos(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Acos_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Acos(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.Acos(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.Acos(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.Acos*
-  name: Acos
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Acos_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Acos
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.Acos
-  nameWithType: IQ.Acos
 - uid: HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
   name: Add(IQ, IQ)
   href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Add_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
@@ -2129,32 +2423,6 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Streams.IQ.Add
   nameWithType: IQ.Add
-- uid: HackRFDotnet.Api.Streams.IQ.Asin(HackRFDotnet.Api.Streams.IQ)
-  name: Asin(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Asin_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Asin(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.Asin(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.Asin(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.Asin*
-  name: Asin
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Asin_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Asin
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.Asin
-  nameWithType: IQ.Asin
-- uid: HackRFDotnet.Api.Streams.IQ.Atan(HackRFDotnet.Api.Streams.IQ)
-  name: Atan(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Atan_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Atan(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.Atan(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.Atan(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.Atan*
-  name: Atan
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Atan_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Atan
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.Atan
-  nameWithType: IQ.Atan
 - uid: HackRFDotnet.Api.Streams.IQ.Conjugate(HackRFDotnet.Api.Streams.IQ)
   name: Conjugate(IQ)
   href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Conjugate_HackRFDotnet_Api_Streams_IQ_
@@ -2247,35 +2515,6 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Streams.IQ.Equals
   nameWithType: IQ.Equals
-- uid: HackRFDotnet.Api.Streams.IQ.Exp(HackRFDotnet.Api.Streams.IQ)
-  name: Exp(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Exp_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Exp(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.Exp(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.Exp(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.Exp*
-  name: Exp
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Exp_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Exp
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.Exp
-  nameWithType: IQ.Exp
-- uid: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates(System.Single,System.Single)
-  name: FromPolarCoordinates(float, float)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_FromPolarCoordinates_System_Single_System_Single_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates(System.Single,System.Single)
-  name.vb: FromPolarCoordinates(Single, Single)
-  fullName: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates(float, float)
-  fullName.vb: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates(Single, Single)
-  nameWithType: IQ.FromPolarCoordinates(float, float)
-  nameWithType.vb: IQ.FromPolarCoordinates(Single, Single)
-- uid: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates*
-  name: FromPolarCoordinates
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_FromPolarCoordinates_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates
-  nameWithType: IQ.FromPolarCoordinates
 - uid: HackRFDotnet.Api.Streams.IQ.GetHashCode
   name: GetHashCode()
   href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_GetHashCode
@@ -2314,80 +2553,6 @@ references:
   commentId: F:HackRFDotnet.Api.Streams.IQ.Infinity
   fullName: HackRFDotnet.Api.Streams.IQ.Infinity
   nameWithType: IQ.Infinity
-- uid: HackRFDotnet.Api.Streams.IQ.IsFinite(HackRFDotnet.Api.Streams.IQ)
-  name: IsFinite(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_IsFinite_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.IsFinite(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.IsFinite(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.IsFinite(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.IsFinite*
-  name: IsFinite
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_IsFinite_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.IsFinite
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.IsFinite
-  nameWithType: IQ.IsFinite
-- uid: HackRFDotnet.Api.Streams.IQ.IsInfinity(HackRFDotnet.Api.Streams.IQ)
-  name: IsInfinity(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_IsInfinity_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.IsInfinity(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.IsInfinity(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.IsInfinity(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.IsInfinity*
-  name: IsInfinity
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_IsInfinity_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.IsInfinity
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.IsInfinity
-  nameWithType: IQ.IsInfinity
-- uid: HackRFDotnet.Api.Streams.IQ.IsNaN(HackRFDotnet.Api.Streams.IQ)
-  name: IsNaN(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_IsNaN_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.IsNaN(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.IsNaN(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.IsNaN(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.IsNaN*
-  name: IsNaN
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_IsNaN_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.IsNaN
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.IsNaN
-  nameWithType: IQ.IsNaN
-- uid: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ)
-  name: Log(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Log_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.Log(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ,System.Single)
-  name: Log(IQ, float)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Log_HackRFDotnet_Api_Streams_IQ_System_Single_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ,System.Single)
-  name.vb: Log(IQ, Single)
-  fullName: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ, float)
-  fullName.vb: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ, Single)
-  nameWithType: IQ.Log(IQ, float)
-  nameWithType.vb: IQ.Log(IQ, Single)
-- uid: HackRFDotnet.Api.Streams.IQ.Log*
-  name: Log
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Log_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Log
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.Log
-  nameWithType: IQ.Log
-- uid: HackRFDotnet.Api.Streams.IQ.Log10(HackRFDotnet.Api.Streams.IQ)
-  name: Log10(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Log10_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Log10(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.Log10(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.Log10(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.Log10*
-  name: Log10
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Log10_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Log10
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.Log10
-  nameWithType: IQ.Log10
 - uid: HackRFDotnet.Api.Streams.IQ.Magnitude
   name: Magnitude
   href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Magnitude
@@ -2470,28 +2635,6 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Streams.IQ.Phase
   nameWithType: IQ.Phase
-- uid: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
-  name: Pow(IQ, IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Pow_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.Pow(IQ, IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,System.Single)
-  name: Pow(IQ, float)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Pow_HackRFDotnet_Api_Streams_IQ_System_Single_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,System.Single)
-  name.vb: Pow(IQ, Single)
-  fullName: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ, float)
-  fullName.vb: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ, Single)
-  nameWithType: IQ.Pow(IQ, float)
-  nameWithType.vb: IQ.Pow(IQ, Single)
-- uid: HackRFDotnet.Api.Streams.IQ.Pow*
-  name: Pow
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Pow_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Pow
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.Pow
-  nameWithType: IQ.Pow
 - uid: HackRFDotnet.Api.Streams.IQ.Q
   name: Q
   href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Q
@@ -2544,19 +2687,6 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Streams.IQ.Sinh
   nameWithType: IQ.Sinh
-- uid: HackRFDotnet.Api.Streams.IQ.Sqrt(HackRFDotnet.Api.Streams.IQ)
-  name: Sqrt(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Sqrt_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Sqrt(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.Sqrt(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.Sqrt(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.Sqrt*
-  name: Sqrt
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Sqrt_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Sqrt
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.Sqrt
-  nameWithType: IQ.Sqrt
 - uid: HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
   name: Subtract(IQ, IQ)
   href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Subtract_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
@@ -2601,19 +2731,6 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Streams.IQ.Tan
   nameWithType: IQ.Tan
-- uid: HackRFDotnet.Api.Streams.IQ.Tanh(HackRFDotnet.Api.Streams.IQ)
-  name: Tanh(IQ)
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Tanh_HackRFDotnet_Api_Streams_IQ_
-  commentId: M:HackRFDotnet.Api.Streams.IQ.Tanh(HackRFDotnet.Api.Streams.IQ)
-  fullName: HackRFDotnet.Api.Streams.IQ.Tanh(HackRFDotnet.Api.Streams.IQ)
-  nameWithType: IQ.Tanh(IQ)
-- uid: HackRFDotnet.Api.Streams.IQ.Tanh*
-  name: Tanh
-  href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Tanh_
-  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Tanh
-  isSpec: "True"
-  fullName: HackRFDotnet.Api.Streams.IQ.Tanh
-  nameWithType: IQ.Tanh
 - uid: HackRFDotnet.Api.Streams.IQ.ToString
   name: ToString()
   href: docs/api/HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_ToString
@@ -3216,15 +3333,15 @@ references:
   commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
   nameWithType: BasicSignalScanningEffect
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])
-  name: BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, RadioBand[])
-  href: docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_HackRFDotnet_Api_DigitalRadioDevice_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_RadioBand___
-  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.RadioBand[])
-  name.vb: New(DigitalRadioDevice, Bandwidth, RadioBand())
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.BasicSignalScanningEffect(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.RadioBand[])
-  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.New(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.RadioBand())
-  nameWithType: BasicSignalScanningEffect.BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, RadioBand[])
-  nameWithType.vb: BasicSignalScanningEffect.New(DigitalRadioDevice, Bandwidth, RadioBand())
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Frequency[])
+  name: BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, Frequency[])
+  href: docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_HackRFDotnet_Api_DigitalRadioDevice_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Frequency___
+  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor(HackRFDotnet.Api.DigitalRadioDevice,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Frequency[])
+  name.vb: New(DigitalRadioDevice, Bandwidth, Frequency())
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.BasicSignalScanningEffect(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.Frequency[])
+  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.New(HackRFDotnet.Api.DigitalRadioDevice, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.Frequency())
+  nameWithType: BasicSignalScanningEffect.BasicSignalScanningEffect(DigitalRadioDevice, Bandwidth, Frequency[])
+  nameWithType.vb: BasicSignalScanningEffect.New(DigitalRadioDevice, Bandwidth, Frequency())
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.#ctor*
   name: BasicSignalScanningEffect
   href: docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_BasicSignalScanningEffect__ctor_
@@ -3374,15 +3491,15 @@ references:
   commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
   fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
   nameWithType: FrequencyCenteringEffect
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
-  name: FrequencyCenteringEffect(RadioBand, SampleRate)
-  href: docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect__ctor_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_SampleRate_
-  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
-  name.vb: New(RadioBand, SampleRate)
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.FrequencyCenteringEffect(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
-  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.New(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
-  nameWithType: FrequencyCenteringEffect.FrequencyCenteringEffect(RadioBand, SampleRate)
-  nameWithType.vb: FrequencyCenteringEffect.New(RadioBand, SampleRate)
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+  name: FrequencyCenteringEffect(Frequency, SampleRate)
+  href: docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect__ctor_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_SampleRate_
+  commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+  name.vb: New(Frequency, SampleRate)
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.FrequencyCenteringEffect(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.SampleRate)
+  fullName.vb: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.New(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.SampleRate)
+  nameWithType: FrequencyCenteringEffect.FrequencyCenteringEffect(Frequency, SampleRate)
+  nameWithType.vb: FrequencyCenteringEffect.New(Frequency, SampleRate)
 - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor*
   name: FrequencyCenteringEffect
   href: docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect__ctor_
@@ -4668,12 +4785,12 @@ references:
   isSpec: "True"
   fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
   nameWithType: SignalStream.SampleRate
-- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  name: SetBand(RadioBand, Bandwidth)
-  href: docs/api/HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_Bandwidth_
-  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.Bandwidth)
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.Bandwidth)
-  nameWithType: SignalStream.SetBand(RadioBand, Bandwidth)
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  name: SetBand(Frequency, Bandwidth)
+  href: docs/api/HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth)
+  nameWithType: SignalStream.SetBand(Frequency, Bandwidth)
 - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand*
   name: SetBand
   href: docs/api/HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_
@@ -4758,15 +4875,15 @@ references:
   commentId: T:HackRFDotnet.Api.Utilities.SignalUtilities
   fullName: HackRFDotnet.Api.Utilities.SignalUtilities
   nameWithType: SignalUtilities
-- uid: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
-  name: ApplyFrequencyOffset(Span<IQ>, RadioBand, SampleRate)
-  href: docs/api/HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_System_Span_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_RadioBand_HackRFDotnet_Api_SampleRate_
-  commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.RadioBand,HackRFDotnet.Api.SampleRate)
-  name.vb: ApplyFrequencyOffset(Span(Of IQ), RadioBand, SampleRate)
-  fullName: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span<HackRFDotnet.Api.Streams.IQ>, HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
-  fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span(Of HackRFDotnet.Api.Streams.IQ), HackRFDotnet.Api.RadioBand, HackRFDotnet.Api.SampleRate)
-  nameWithType: SignalUtilities.ApplyFrequencyOffset(Span<IQ>, RadioBand, SampleRate)
-  nameWithType.vb: SignalUtilities.ApplyFrequencyOffset(Span(Of IQ), RadioBand, SampleRate)
+- uid: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+  name: ApplyFrequencyOffset(Span<IQ>, Frequency, SampleRate)
+  href: docs/api/HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_System_Span_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_Frequency_HackRFDotnet_Api_SampleRate_
+  commentId: M:HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+  name.vb: ApplyFrequencyOffset(Span(Of IQ), Frequency, SampleRate)
+  fullName: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span<HackRFDotnet.Api.Streams.IQ>, HackRFDotnet.Api.Frequency, HackRFDotnet.Api.SampleRate)
+  fullName.vb: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span(Of HackRFDotnet.Api.Streams.IQ), HackRFDotnet.Api.Frequency, HackRFDotnet.Api.SampleRate)
+  nameWithType: SignalUtilities.ApplyFrequencyOffset(Span<IQ>, Frequency, SampleRate)
+  nameWithType.vb: SignalUtilities.ApplyFrequencyOffset(Span(Of IQ), Frequency, SampleRate)
 - uid: HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset*
   name: ApplyFrequencyOffset
   href: docs/api/HackRFDotnet.Api.Utilities.SignalUtilities.html#HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_

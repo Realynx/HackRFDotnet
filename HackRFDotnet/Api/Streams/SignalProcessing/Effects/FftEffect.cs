@@ -5,6 +5,12 @@ using FftwF.Dotnet;
 using MathNet.Numerics;
 
 namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+/// <summary>
+/// Fast Fourier Transform Effect.
+/// Can be used for forward and inverse transforms.
+/// Must be given a chunk with a size that is a multiple of 2 [Length % 2 == 0]
+/// Must be configured with a chunk size for caching a convert buffer.
+/// </summary>
 public unsafe class FftEffect : SignalEffect, IDisposable {
     private readonly bool _forward;
     private readonly Complex32[] _processingChunk = [];
