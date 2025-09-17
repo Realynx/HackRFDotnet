@@ -1,8 +1,8 @@
 ﻿
 using System.Numerics;
 
-using HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces;
 using HackRFDotnet.Api.Utilities;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Interfaces;
 
 using MathNet.Numerics;
 
