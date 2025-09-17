@@ -1,8 +1,10 @@
-﻿namespace HackRFDotnet.NativeApi.Enums.System {
+﻿using HackRFDotnet.NativeApi.Lib;
+
+namespace HackRFDotnet.NativeApi.Enums.System {
     /// <summary>
     /// HACKRF board id enum.
     ///
-    /// Returned by <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId"/> and can be converted to a human-readable string using <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName"/>.
+    /// Returned by <see cref="HackRfNativeLib.Firmware.ReadBoardId"/> and can be converted to a human-readable string using <see cref="HackRfNativeLib.Firmware.BoardIdName"/>.
     /// </summary>
     public enum HackrfBoardId {
         /// <summary>

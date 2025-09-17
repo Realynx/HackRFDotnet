@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
+using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs.Devices;
 
 namespace HackRFDotnet.NativeApi.Structs {
@@ -30,13 +31,13 @@ namespace HackRFDotnet.NativeApi.Structs {
         public int valid_length;
 
         /// <summary>
-        /// User provided RX context. Not used by the library, but available to transfer callbacks for use. Set along with the transfer callback using <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx"/>
-        /// or <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep"/>.
+        /// User provided RX context. Not used by the library, but available to transfer callbacks for use. Set along with the transfer callback using <see cref="HackRfNativeLib.DeviceStreaming.StartRx"/>
+        /// or <see cref="HackRfNativeLib.DeviceStreaming.StartRxSweep"/>.
         /// </summary>
         public void* rx_ctx;
 
         /// <summary>
-        /// User provided TX context. Not used by the library, but available to transfer callbacks for use. Set along with the transfer callback using <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx"/>.
+        /// User provided TX context. Not used by the library, but available to transfer callbacks for use. Set along with the transfer callback using <see cref="HackRfNativeLib.DeviceStreaming.StartRx"/>.
         /// </summary>
         public void* tx_ctx;
     }
