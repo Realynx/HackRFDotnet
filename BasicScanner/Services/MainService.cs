@@ -74,7 +74,6 @@ internal class MainService : IHostedService {
     private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
         rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(200));
-
         var fmSignalStream = new FmSignalStream(deviceStream, Bandwidth.FromKHz(200), stereo: true);
 
         var fmPlayer = new AnaloguePlayer(fmSignalStream);
@@ -83,7 +82,6 @@ internal class MainService : IHostedService {
 
     private static void AmplitudeDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         rfDevice.SetFrequency(Frequency.FromMHz(118.4f), Bandwidth.FromKHz(10));
-
         var amSignalStream = new AmSignalStream(deviceStream, Bandwidth.FromKHz(10));
 
         var amPlayer = new AnaloguePlayer(amSignalStream);

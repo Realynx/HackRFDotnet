@@ -25,7 +25,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HackrfTransfer
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
@@ -64,7 +64,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: device
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
@@ -93,7 +93,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: buffer
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
@@ -122,7 +122,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: buffer_length
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
@@ -151,7 +151,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: valid_length
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
@@ -180,7 +180,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: rx_ctx
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs
@@ -212,7 +212,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: tx_ctx
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs

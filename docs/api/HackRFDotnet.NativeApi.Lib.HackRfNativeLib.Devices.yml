@@ -28,7 +28,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Devices
     path: HackRFDotnet/NativeApi/Lib/Devices.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
@@ -59,18 +59,21 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
-  summary: Open first available HackRF device
+  summary: Open first available HackRF device.
   example: []
   syntax:
-    content: public static extern int OpenDevice(HackRFDevice** device)
+    content: public static extern HackrfError OpenDevice(HackRFDevice** device)
     parameters:
     - id: device
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**
-      description: ''
+      description: Device handle.
     return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function OpenDevice(device As HackRFDevice**) As Integer
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+      description: >-
+        <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success, <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM" data-throw-if-not-resolved="false"></xref> if <code class="paramref">device</code> is NULL,
+
+        <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND" data-throw-if-not-resolved="false"></xref> if no HackRF devices are found or other <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+    content.vb: Public Shared Function OpenDevice(device As HackRFDevice**) As HackrfError
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDevice*
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList
   commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList
@@ -86,13 +89,13 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
-  summary: List connected HackRF devices
+  summary: List connected HackRF devices.
   example: []
   syntax:
     content: public static extern HackRFDeviceList* QueryDeviceList()
     return:
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*
-      description: ''
+      description: List of connected devices. The list should be freed with <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListFree(HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*)" data-throw-if-not-resolved="false"></xref>.
     content.vb: Public Shared Function QueryDeviceList() As HackRFDeviceList*
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList*
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListOpen(HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*,System.Int32,HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**)
@@ -109,24 +112,24 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
-  summary: Open a @ref hackrf_device from a device list
+  summary: Open a <xref href="HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice" data-throw-if-not-resolved="false"></xref> from a device list.
   example: []
   syntax:
-    content: public static extern int DeviceListOpen(HackRFDeviceList* list, int idx, HackRFDevice** device)
+    content: public static extern HackrfError DeviceListOpen(HackRFDeviceList* list, int idx, HackRFDevice** device)
     parameters:
     - id: list
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*
-      description: ''
+      description: Device list to open device from.
     - id: idx
       type: System.Int32
-      description: ''
+      description: Index of the device to open.
     - id: device
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**
-      description: ''
+      description: Device handle to open.
     return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function DeviceListOpen(list As HackRFDeviceList*, idx As Integer, device As HackRFDevice**) As Integer
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+      description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success, <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM" data-throw-if-not-resolved="false"></xref> on invalid parameters or other <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+    content.vb: Public Shared Function DeviceListOpen(list As HackRFDeviceList*, idx As Integer, device As HackRFDevice**) As HackrfError
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListOpen*
   nameWithType.vb: HackRfNativeLib.Devices.DeviceListOpen(HackRFDeviceList*, Integer, HackRFDevice**)
   fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListOpen(HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*, Integer, HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**)
@@ -145,21 +148,21 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
-  summary: Open HackRF device by serial number
+  summary: Open HackRF device by serial number.
   example: []
   syntax:
-    content: public static extern int OpenDeviceBySerial(string desired_serial_number, HackRFDevice** device)
+    content: public static extern HackrfError OpenDeviceBySerial(string desired_serial_number, HackRFDevice** device)
     parameters:
     - id: desired_serial_number
       type: System.String
-      description: ''
+      description: Serial number of device to open. If NULL then default to first device found.
     - id: device
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**
-      description: ''
+      description: Device handle.
     return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function OpenDeviceBySerial(desired_serial_number As String, device As HackRFDevice**) As Integer
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+      description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success, <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM" data-throw-if-not-resolved="false"></xref> on invalid parameters or other <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+    content.vb: Public Shared Function OpenDeviceBySerial(desired_serial_number As String, device As HackRFDevice**) As HackrfError
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial*
   nameWithType.vb: HackRfNativeLib.Devices.OpenDeviceBySerial(String, HackRFDevice**)
   fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial(String, HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**)
@@ -178,14 +181,14 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
-  summary: Free a previously allocated @ref hackrf_device_list list.
+  summary: Free a previously allocated <xref href="HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice" data-throw-if-not-resolved="false"></xref> list.
   example: []
   syntax:
     content: public static extern void DeviceListFree(HackRFDeviceList* list)
     parameters:
     - id: list
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*
-      description: ''
+      description: List to free.
     content.vb: Public Shared Sub DeviceListFree(list As HackRFDeviceList*)
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListFree*
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.CloseDevice(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
@@ -202,18 +205,18 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
-  summary: Close a previously opened device
+  summary: Close a previously opened device.
   example: []
   syntax:
-    content: public static extern int CloseDevice(HackRFDevice* device)
+    content: public static extern HackrfError CloseDevice(HackRFDevice* device)
     parameters:
     - id: device
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
+      description: Device to close.
     return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function CloseDevice(device As HackRFDevice*) As Integer
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+      description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or variant of <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function CloseDevice(device As HackRFDevice*) As HackrfError
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.CloseDevice*
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.ResetDevice(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
   commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.ResetDevice(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
@@ -229,18 +232,22 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
-  summary: Reset HackRF device
+  summary: >-
+    Reset HackRF device.
+
+
+    Requires USB API version 0x0102 or above!
   example: []
   syntax:
-    content: public static extern int ResetDevice(HackRFDevice* device)
+    content: public static extern HackrfError ResetDevice(HackRFDevice* device)
     parameters:
     - id: device
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
+      description: Device to reset.
     return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ResetDevice(device As HackRFDevice*) As Integer
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+      description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+    content.vb: Public Shared Function ResetDevice(device As HackRFDevice*) As HackrfError
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.ResetDevice*
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.SetDeviceLeds(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
   commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.SetDeviceLeds(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
@@ -257,7 +264,7 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
   summary: >-
-    Turn on or off (override) the LEDs of the HackRF device
+    Turn on or off (override) the LEDs of the HackRF device.
 
     This function can turn on or off the LEDs of the device. There are 3 controllable LEDs on the HackRF one:
 
@@ -271,18 +278,18 @@ items:
     For example, binary value 0bxxxxx101 turns on the USB and TX LEDs on the HackRF One.
   example: []
   syntax:
-    content: public static extern int SetDeviceLeds(HackRFDevice* device, byte state)
+    content: public static extern HackrfError SetDeviceLeds(HackRFDevice* device, byte state)
     parameters:
     - id: device
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
+      description: Device to query.
     - id: state
       type: System.Byte
-      description: ''
+      description: LED states as a bitfield.
     return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function SetDeviceLeds(device As HackRFDevice*, state As Byte) As Integer
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+      description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+    content.vb: Public Shared Function SetDeviceLeds(device As HackRFDevice*, state As Byte) As HackrfError
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.SetDeviceLeds*
   nameWithType.vb: HackRfNativeLib.Devices.SetDeviceLeds(HackRFDevice*, Byte)
   fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.SetDeviceLeds(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte)
@@ -302,22 +309,25 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
   summary: >-
-    Enable / disable UI display (RAD1O, PortaPack, etc.)
+    Enable / disable UI display (RAD1O, PortaPack, etc.).
 
-    Enable or disable the display on display-enabled devices (Rad1o, PortaPack)
+    Enable or disable the display on display-enabled devices (Rad1o, PortaPack).
+
+
+    Requires USB API version 0x0104 or above!
   example: []
   syntax:
     content: public static extern int SetDeviceUiEnabled(HackRFDevice* device, byte value)
     parameters:
     - id: device
       type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
+      description: device to enable/disable UI on.
     - id: value
       type: System.Byte
-      description: ''
+      description: Enable UI. Must be 1 or 0.
     return:
       type: System.Int32
-      description: ''
+      description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB" data-throw-if-not-resolved="false"></xref> on usb error.
     content.vb: Public Shared Function SetDeviceUiEnabled(device As HackRFDevice*, value As Byte) As Integer
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.SetDeviceUiEnabled*
   nameWithType.vb: HackRfNativeLib.Devices.SetDeviceUiEnabled(HackRFDevice*, Byte)
@@ -591,6 +601,31 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html#HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_SUCCESS
+  name: HACKRF_SUCCESS
+  nameWithType: HackrfError.HACKRF_SUCCESS
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html#HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_INVALID_PARAM
+  name: HACKRF_ERROR_INVALID_PARAM
+  nameWithType: HackrfError.HACKRF_ERROR_INVALID_PARAM
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html#HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_NOT_FOUND
+  name: HACKRF_ERROR_NOT_FOUND
+  nameWithType: HackrfError.HACKRF_ERROR_NOT_FOUND
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfError
+  parent: HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+  name: HackrfError
+  nameWithType: HackrfError
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDevice*
   commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDevice
   isExternal: true
@@ -616,17 +651,73 @@ references:
     href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
   - name: '*'
   - name: '*'
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
+- uid: HackRFDotnet.NativeApi.Enums.System
+  commentId: N:HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Enums.System
+  nameWithType: HackRFDotnet.NativeApi.Enums.System
+  fullName: HackRFDotnet.NativeApi.Enums.System
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListFree(HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListFree(HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*)
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_DeviceListFree_HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList__
+  name: DeviceListFree(HackRFDeviceList*)
+  nameWithType: HackRfNativeLib.Devices.DeviceListFree(HackRFDeviceList*)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListFree(HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListFree(HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*)
+    name: DeviceListFree
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_DeviceListFree_HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
+    name: HackRFDeviceList
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.html
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListFree(HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList*)
+    name: DeviceListFree
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_DeviceListFree_HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
+    name: HackRFDeviceList
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.html
+  - name: '*'
+  - name: )
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList*
   commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList
   isExternal: true
@@ -650,6 +741,12 @@ references:
     name: HackRFDeviceList
     href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.html
   - name: '*'
+- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+  commentId: T:HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  name: HackRFDevice
+  nameWithType: HackRFDevice
+  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListOpen*
   commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListOpen
   isExternal: true
@@ -657,6 +754,17 @@ references:
   name: DeviceListOpen
   nameWithType: HackRfNativeLib.Devices.DeviceListOpen
   fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.DeviceListOpen
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial*
   commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial
   isExternal: true
@@ -730,6 +838,12 @@ references:
   nameWithType.vb: Byte
   fullName.vb: Byte
   name.vb: Byte
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html#HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_LIBUSB
+  name: HACKRF_ERROR_LIBUSB
+  nameWithType: HackrfError.HACKRF_ERROR_LIBUSB
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
 - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.SetDeviceUiEnabled*
   commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.SetDeviceUiEnabled
   isExternal: true

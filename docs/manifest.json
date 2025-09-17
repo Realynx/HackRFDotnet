@@ -99,7 +99,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "HackRFDotnet.Api.DigitalRadioDevice",
-      "Summary": null
+      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.DigitalRadioDevice.yml\" sourcestartlinenumber=\"1\">Radio Device to receive IQ Samples with.</p>\n"
     },
     {
       "type": "ManagedReference",

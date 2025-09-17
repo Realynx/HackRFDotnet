@@ -27,4 +27,9 @@
       <ProjectReference Include="..\FftwF.Dotnet\FftwF.Dotnet.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Api\Streams\SignalProcessing\FormatConverters\" />
+      <Folder Include="Api\Streams\SignalProcessing\CodecConverters\" />
+    </ItemGroup>
+
 </Project>

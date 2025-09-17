@@ -26,7 +26,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HackrfBoardId
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -57,7 +57,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_ID_JELLYBEAN
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -85,7 +85,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_ID_JAWBREAKER
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -113,7 +113,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_ID_HACKRF1_OG
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -141,7 +141,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_ID_RAD1O
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -167,7 +167,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_ID_HACKRF1_R9
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 30
+    startLine: 32
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -193,7 +193,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_ID_UNRECOGNIZED
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 35
+    startLine: 37
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -221,7 +221,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_ID_UNDETECTED
     path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 40
+    startLine: 42
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System

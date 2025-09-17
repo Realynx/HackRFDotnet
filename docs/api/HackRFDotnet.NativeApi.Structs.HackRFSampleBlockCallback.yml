@@ -19,7 +19,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HackRFSampleBlockCallback
     path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 45
+    startLine: 46
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Structs

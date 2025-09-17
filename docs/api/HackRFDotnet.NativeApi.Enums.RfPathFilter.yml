@@ -22,7 +22,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: RfPathFilter
     path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums
@@ -58,7 +58,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: RF_PATH_FILTER_BYPASS
     path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums
@@ -86,7 +86,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: RF_PATH_FILTER_LOW_PASS
     path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums
@@ -114,7 +114,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: RF_PATH_FILTER_HIGH_PASS
     path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums

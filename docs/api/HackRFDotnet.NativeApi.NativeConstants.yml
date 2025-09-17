@@ -33,7 +33,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: NativeConstants
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 3
+    startLine: 4
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
@@ -68,11 +68,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SAMPLES_PER_BLOCK
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: Number of samples per tuning when sweeping
+  summary: Number of samples per tuning when sweeping.
   example: []
   syntax:
     content: public const uint SAMPLES_PER_BLOCK = 8192
@@ -97,11 +97,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BYTES_PER_BLOCK
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: Number of bytes per tuning for sweeping
+  summary: Number of bytes per tuning for sweeping.
   example: []
   syntax:
     content: public const uint BYTES_PER_BLOCK = 16384
@@ -126,11 +126,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: MAX_SWEEP_RANGES
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: Maximum number of sweep ranges to be specified for @ref hackrf_init_sweep
+  summary: Maximum number of sweep ranges to be specified for <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.InitSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.UInt16*%2cSystem.Int32%2cSystem.UInt32%2cSystem.UInt32%2cSystem.UInt32%2cHackRFDotnet.NativeApi.Enums.SweepStyle)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public const uint MAX_SWEEP_RANGES = 10
@@ -155,11 +155,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_OPERACAKE_ADDRESS_INVALID
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: Invalid Opera Cake add-on board address, placeholder in @ref hackrf_get_operacake_boards
+  summary: Invalid Opera Cake add-on board address, placeholder in <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeBoards(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte*)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public const uint HACKRF_OPERACAKE_ADDRESS_INVALID = 255
@@ -184,11 +184,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_OPERACAKE_MAX_BOARDS
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: Maximum number of connected Opera Cake add-on boards
+  summary: Maximum number of connected Opera Cake add-on boards.
   example: []
   syntax:
     content: public const uint HACKRF_OPERACAKE_MAX_BOARDS = 8
@@ -213,11 +213,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_OPERACAKE_MAX_DWELL_TIMES
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: Maximum number of specifiable dwell times for Opera Cake add-on boards
+  summary: Maximum number of specifiable dwell times for Opera Cake add-on boards.
   example: []
   syntax:
     content: public const uint HACKRF_OPERACAKE_MAX_DWELL_TIMES = 16
@@ -242,11 +242,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_OPERACAKE_MAX_FREQ_RANGES
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: Maximum number of specifiable frequency ranges for Opera Cake add-on boards
+  summary: Maximum number of specifiable frequency ranges for Opera Cake add-on boards.
   example: []
   syntax:
     content: public const uint HACKRF_OPERACAKE_MAX_FREQ_RANGES = 8
@@ -271,11 +271,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_BOARD_REV_GSG
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: Made by GSG bit in @ref hackrf_board_rev enum and in platform ID
+  summary: Made by GSG bit in @ref hackrf_board_rev enum and in platform ID.
   example: []
   syntax:
     content: public const uint HACKRF_BOARD_REV_GSG = 128
@@ -300,11 +300,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_PLATFORM_JAWBREAKER
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 49
+    startLine: 50
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: JAWBREAKER platform bit in result of @ref hackrf_supported_platform_read
+  summary: JAWBREAKER platform bit in result of <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.UInt32*)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public const uint HACKRF_PLATFORM_JAWBREAKER = 1
@@ -329,11 +329,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_PLATFORM_HACKRF1_OG
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 54
+    startLine: 55
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: HACKRF ONE (pre r9) platform bit in result of @ref hackrf_supported_platform_read
+  summary: HACKRF ONE (pre r9) platform bit in result of <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.UInt32*)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public const uint HACKRF_PLATFORM_HACKRF1_OG = 2
@@ -358,11 +358,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_PLATFORM_RAD1O
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: RAD1O platform bit in result of @ref hackrf_supported_platform_read
+  summary: RAD1O platform bit in result of <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.UInt32*)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public const uint HACKRF_PLATFORM_RAD1O = 4
@@ -387,11 +387,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_PLATFORM_HACKRF1_R9
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
-  summary: HACKRF ONE (r9 or later) platform bit in result of @ref hackrf_supported_platform_read
+  summary: HACKRF ONE (r9 or later) platform bit in result of <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.UInt32*)" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public const uint HACKRF_PLATFORM_HACKRF1_R9 = 8
@@ -416,7 +416,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_ID_HACKRF_ONE
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 69
+    startLine: 70
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
@@ -445,7 +445,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BOARD_ID_INVALID
     path: HackRFDotnet/NativeApi/NativeConstants.cs
-    startLine: 74
+    startLine: 75
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi
@@ -727,6 +727,202 @@ references:
   nameWithType.vb: UInteger
   fullName.vb: UInteger
   name.vb: UInteger
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.InitSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*,System.Int32,System.UInt32,System.UInt32,System.UInt32,HackRFDotnet.NativeApi.Enums.SweepStyle)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.InitSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*,System.Int32,System.UInt32,System.UInt32,System.UInt32,HackRFDotnet.NativeApi.Enums.SweepStyle)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_InitSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16__System_Int32_System_UInt32_System_UInt32_System_UInt32_HackRFDotnet_NativeApi_Enums_SweepStyle_
+  name: InitSweep(HackRFDevice*, ushort*, int, uint, uint, uint, SweepStyle)
+  nameWithType: HackRfNativeLib.DeviceStreaming.InitSweep(HackRFDevice*, ushort*, int, uint, uint, uint, SweepStyle)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.InitSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, ushort*, int, uint, uint, uint, HackRFDotnet.NativeApi.Enums.SweepStyle)
+  nameWithType.vb: HackRfNativeLib.DeviceStreaming.InitSweep(HackRFDevice*, UShort*, Integer, UInteger, UInteger, UInteger, SweepStyle)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.InitSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, UShort*, Integer, UInteger, UInteger, UInteger, HackRFDotnet.NativeApi.Enums.SweepStyle)
+  name.vb: InitSweep(HackRFDevice*, UShort*, Integer, UInteger, UInteger, UInteger, SweepStyle)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.InitSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*,System.Int32,System.UInt32,System.UInt32,System.UInt32,HackRFDotnet.NativeApi.Enums.SweepStyle)
+    name: InitSweep
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_InitSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16__System_Int32_System_UInt32_System_UInt32_System_UInt32_HackRFDotnet_NativeApi_Enums_SweepStyle_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UInt16
+    name: ushort
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint16
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Enums.SweepStyle
+    name: SweepStyle
+    href: HackRFDotnet.NativeApi.Enums.SweepStyle.html
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.InitSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*,System.Int32,System.UInt32,System.UInt32,System.UInt32,HackRFDotnet.NativeApi.Enums.SweepStyle)
+    name: InitSweep
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_InitSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16__System_Int32_System_UInt32_System_UInt32_System_UInt32_HackRFDotnet_NativeApi_Enums_SweepStyle_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UInt16
+    name: UShort
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint16
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: ','
+  - name: " "
+  - uid: HackRFDotnet.NativeApi.Enums.SweepStyle
+    name: SweepStyle
+    href: HackRFDotnet.NativeApi.Enums.SweepStyle.html
+  - name: )
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeBoards(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeBoards(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_GetOperacakeBoards_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
+  name: GetOperacakeBoards(HackRFDevice*, byte*)
+  nameWithType: HackRfNativeLib.Operacake.GetOperacakeBoards(HackRFDevice*, byte*)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeBoards(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte*)
+  nameWithType.vb: HackRfNativeLib.Operacake.GetOperacakeBoards(HackRFDevice*, Byte*)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeBoards(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte*)
+  name.vb: GetOperacakeBoards(HackRFDevice*, Byte*)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeBoards(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+    name: GetOperacakeBoards
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_GetOperacakeBoards_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeBoards(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+    name: GetOperacakeBoards
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake_GetOperacakeBoards_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  - name: )
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadSupportedPlatform_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt32__
+  name: ReadSupportedPlatform(HackRFDevice*, uint*)
+  nameWithType: HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDevice*, uint*)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, uint*)
+  nameWithType.vb: HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDevice*, UInteger*)
+  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, UInteger*)
+  name.vb: ReadSupportedPlatform(HackRFDevice*, UInteger*)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
+    name: ReadSupportedPlatform
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadSupportedPlatform_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt32__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '*'
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
+    name: ReadSupportedPlatform
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadSupportedPlatform_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt32__
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '*'
+  - name: )
 - uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
   commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
   parent: HackRFDotnet.NativeApi.Enums.System

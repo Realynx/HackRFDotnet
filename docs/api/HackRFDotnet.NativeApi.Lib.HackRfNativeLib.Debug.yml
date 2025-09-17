@@ -51,17 +51,17 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Lib
-  summary: Convert @ref hackrf_error into human-readable string
+  summary: Convert <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> into human-readable string.
   example: []
   syntax:
     content: public static extern sbyte* GetErrorName(HackrfError errcode)
     parameters:
     - id: errcode
       type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-      description: ''
+      description: Enum to convert.
     return:
       type: System.SByte*
-      description: ''
+      description: Human-readable name of error.
     content.vb: Public Shared Function GetErrorName(errcode As HackrfError) As SByte*
   overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName*
 references:
@@ -332,13 +332,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug_GetErrorName_HackRFDotnet_NativeApi_Enums_System_HackrfError_
-  name: GetErrorName
-  nameWithType: HackRfNativeLib.Debug.GetErrorName
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName
 - uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
   commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfError
   parent: HackRFDotnet.NativeApi.Enums.System
@@ -346,6 +339,13 @@ references:
   name: HackrfError
   nameWithType: HackrfError
   fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName*
+  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug_GetErrorName_HackRFDotnet_NativeApi_Enums_System_HackrfError_
+  name: GetErrorName
+  nameWithType: HackRfNativeLib.Debug.GetErrorName
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName
 - uid: System.SByte*
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/system.sbyte

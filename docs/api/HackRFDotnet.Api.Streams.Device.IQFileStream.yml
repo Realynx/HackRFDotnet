@@ -137,8 +137,6 @@ items:
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
-  summary: The current tuning frequency the device is set to.
-  example: []
   syntax:
     content: public Frequency Frequency { get; set; }
     parameters: []
@@ -146,8 +144,6 @@ items:
       type: HackRFDotnet.Api.Frequency
     content.vb: Public Property Frequency As Frequency
   overload: HackRFDotnet.Api.Streams.Device.IQFileStream.Frequency*
-  implements:
-  - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
 - uid: HackRFDotnet.Api.Streams.Device.IQFileStream.SampleRate
   commentId: P:HackRFDotnet.Api.Streams.Device.IQFileStream.SampleRate
   id: SampleRate
@@ -805,13 +801,6 @@ references:
   name: Frequency
   nameWithType: IQFileStream.Frequency
   fullName: HackRFDotnet.Api.Streams.Device.IQFileStream.Frequency
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-  commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-  parent: HackRFDotnet.Api.Streams.Interfaces.IIQStream
-  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_Frequency
-  name: Frequency
-  nameWithType: IIQStream.Frequency
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
 - uid: HackRFDotnet.Api.Frequency
   commentId: T:HackRFDotnet.Api.Frequency
   parent: HackRFDotnet.Api

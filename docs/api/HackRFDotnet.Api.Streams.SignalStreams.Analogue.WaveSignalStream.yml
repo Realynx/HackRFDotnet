@@ -5,7 +5,7 @@ items:
   id: WaveSignalStream
   parent: HackRFDotnet.Api.Streams.SignalStreams.Analogue
   children:
-  - HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SampleRate,System.Boolean,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)
+  - HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,HackRFDotnet.Api.SampleRate,System.Boolean,System.Boolean)
   - HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.NormalizeRms(System.Span{System.Single},System.Single)
   - HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.Read(System.Single[],System.Int32,System.Int32)
   - HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.WaveFormat
@@ -92,16 +92,16 @@ items:
   overload: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.WaveFormat*
   implements:
   - NAudio.Wave.ISampleProvider.WaveFormat
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SampleRate,System.Boolean,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)
-  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SampleRate,System.Boolean,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)
-  id: '#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SampleRate,System.Boolean,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)'
+- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,HackRFDotnet.Api.SampleRate,System.Boolean,System.Boolean)
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,HackRFDotnet.Api.SampleRate,System.Boolean,System.Boolean)
+  id: '#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,HackRFDotnet.Api.SampleRate,System.Boolean,System.Boolean)'
   parent: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream
   langs:
   - csharp
   - vb
-  name: WaveSignalStream(IIQStream, SampleRate, bool, SignalProcessingPipeline?, bool)
-  nameWithType: WaveSignalStream.WaveSignalStream(IIQStream, SampleRate, bool, SignalProcessingPipeline?, bool)
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.WaveSignalStream(HackRFDotnet.Api.Streams.Interfaces.IIQStream, HackRFDotnet.Api.SampleRate, bool, HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline?, bool)
+  name: WaveSignalStream(IIQStream, SignalProcessingPipeline?, SampleRate, bool, bool)
+  nameWithType: WaveSignalStream.WaveSignalStream(IIQStream, SignalProcessingPipeline?, SampleRate, bool, bool)
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.WaveSignalStream(HackRFDotnet.Api.Streams.Interfaces.IIQStream, HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline?, HackRFDotnet.Api.SampleRate, bool, bool)
   type: Constructor
   source:
     remote:
@@ -115,23 +115,23 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.SignalStreams.Analogue
   syntax:
-    content: public WaveSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stero = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
+    content: public WaveSignalStream(IIQStream deviceStream, SignalProcessingPipeline? processingPipeline, SampleRate sampleRate, bool stero = true, bool keepOpen = true)
     parameters:
     - id: deviceStream
       type: HackRFDotnet.Api.Streams.Interfaces.IIQStream
+    - id: processingPipeline
+      type: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
     - id: stero
       type: System.Boolean
-    - id: processingPipeline
-      type: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
     - id: keepOpen
       type: System.Boolean
-    content.vb: Public Sub New(deviceStream As IIQStream, sampleRate As SampleRate, stero As Boolean = True, processingPipeline As SignalProcessingPipeline = Nothing, keepOpen As Boolean = True)
+    content.vb: Public Sub New(deviceStream As IIQStream, processingPipeline As SignalProcessingPipeline, sampleRate As SampleRate, stero As Boolean = True, keepOpen As Boolean = True)
   overload: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor*
-  nameWithType.vb: WaveSignalStream.New(IIQStream, SampleRate, Boolean, SignalProcessingPipeline, Boolean)
-  fullName.vb: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.New(HackRFDotnet.Api.Streams.Interfaces.IIQStream, HackRFDotnet.Api.SampleRate, Boolean, HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline, Boolean)
-  name.vb: New(IIQStream, SampleRate, Boolean, SignalProcessingPipeline, Boolean)
+  nameWithType.vb: WaveSignalStream.New(IIQStream, SignalProcessingPipeline, SampleRate, Boolean, Boolean)
+  fullName.vb: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.New(HackRFDotnet.Api.Streams.Interfaces.IIQStream, HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline, HackRFDotnet.Api.SampleRate, Boolean, Boolean)
+  name.vb: New(IIQStream, SignalProcessingPipeline, SampleRate, Boolean, Boolean)
 - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.Read(System.Single[],System.Int32,System.Int32)
   commentId: M:HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.Read(System.Single[],System.Int32,System.Int32)
   id: Read(System.Single[],System.Int32,System.Int32)
@@ -751,7 +751,7 @@ references:
   fullName: NAudio.Wave.WaveFormat
 - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor
-  href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_SampleRate_System_Boolean_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_System_Boolean_
+  href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_HackRFDotnet_Api_SampleRate_System_Boolean_System_Boolean_
   name: WaveSignalStream
   nameWithType: WaveSignalStream.WaveSignalStream
   fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.WaveSignalStream
@@ -765,6 +765,13 @@ references:
   name: IIQStream
   nameWithType: IIQStream
   fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  parent: HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html
+  name: SignalProcessingPipeline
+  nameWithType: SignalProcessingPipeline
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
 - uid: HackRFDotnet.Api.SampleRate
   commentId: T:HackRFDotnet.Api.SampleRate
   parent: HackRFDotnet.Api
@@ -783,13 +790,6 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html
-  name: SignalProcessingPipeline
-  nameWithType: SignalProcessingPipeline
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
 - uid: HackRFDotnet.Api.Streams.Interfaces
   commentId: N:HackRFDotnet.Api.Streams.Interfaces
   href: HackRFDotnet.html
@@ -828,28 +828,6 @@ references:
   - uid: HackRFDotnet.Api.Streams.Interfaces
     name: Interfaces
     href: HackRFDotnet.Api.Streams.Interfaces.html
-- uid: HackRFDotnet.Api
-  commentId: N:HackRFDotnet.Api
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api
-  nameWithType: HackRFDotnet.Api
-  fullName: HackRFDotnet.Api
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
 - uid: HackRFDotnet.Api.Streams.SignalProcessing
   commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
   href: HackRFDotnet.html
@@ -888,6 +866,28 @@ references:
   - uid: HackRFDotnet.Api.Streams.SignalProcessing
     name: SignalProcessing
     href: HackRFDotnet.Api.Streams.SignalProcessing.html
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
 - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.Read*
   commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.Read
   href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream_Read_System_Single___System_Int32_System_Int32_

@@ -33,7 +33,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HackrfError
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -60,7 +60,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_SUCCESS
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -88,7 +88,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_TRUE
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -116,7 +116,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_INVALID_PARAM
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -144,7 +144,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_NOT_FOUND
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -172,7 +172,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_BUSY
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -200,7 +200,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_NO_MEM
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 33
+    startLine: 35
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -228,11 +228,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_LIBUSB
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 38
+    startLine: 40
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: LibUSB error, use @ref hackrf_error_name to get a human-readable error string (using `libusb_strerror`).
+  summary: LibUSB error, use <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)" data-throw-if-not-resolved="false"></xref> to get a human-readable error string (using `libusb_strerror`).
   example: []
   syntax:
     content: HACKRF_ERROR_LIBUSB = -1000
@@ -256,7 +256,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_THREAD
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 43
+    startLine: 45
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -284,7 +284,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_STREAMING_THREAD_ERR
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 48
+    startLine: 50
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -312,7 +312,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_STREAMING_STOPPED
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 53
+    startLine: 55
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -340,7 +340,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_STREAMING_EXIT_CALLED
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 58
+    startLine: 60
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -368,7 +368,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_USB_API_VERSION
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 63
+    startLine: 65
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -396,7 +396,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_NOT_LAST_DEVICE
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 68
+    startLine: 70
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -424,7 +424,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: HACKRF_ERROR_OTHER
     path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 73
+    startLine: 75
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.NativeApi.Enums.System
@@ -480,3 +480,30 @@ references:
   name: HackrfError
   nameWithType: HackrfError
   fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
+  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug_GetErrorName_HackRFDotnet_NativeApi_Enums_System_HackrfError_
+  name: GetErrorName(HackrfError)
+  nameWithType: HackRfNativeLib.Debug.GetErrorName(HackrfError)
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
+    name: GetErrorName
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug_GetErrorName_HackRFDotnet_NativeApi_Enums_System_HackrfError_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
+    name: HackrfError
+    href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
+    name: GetErrorName
+    isExternal: true
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug_GetErrorName_HackRFDotnet_NativeApi_Enums_System_HackrfError_
+  - name: (
+  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
+    name: HackrfError
+    href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+  - name: )

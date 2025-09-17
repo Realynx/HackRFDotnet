@@ -166,7 +166,7 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
 
   <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream__ctor_HackRFDotnet_Api_DigitalRadioDevice_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.#ctor(HackRFDotnet.Api.DigitalRadioDevice)">
   IQDeviceStream(DigitalRadioDevice)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -193,6 +193,40 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_RfDevice" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.RfDevice">
+  RfDevice
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly DigitalRadioDevice RfDevice</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="HackRFDotnet.Api.DigitalRadioDevice.html">DigitalRadioDevice</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -201,7 +235,7 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
 
   <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_BufferLength" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength">
   BufferLength
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The number of bytes available to read in the buffer.</p>
@@ -219,38 +253,6 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
   <h4 class="section">Property Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_Frequency_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_Frequency" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency">
-  Frequency
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L26"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The current tuning frequency the device is set to.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Frequency Frequency { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Frequency.html">Frequency</a></dt>
     <dd></dd>
   </dl>
 
@@ -301,7 +303,7 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
 
   <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_Close" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Close the stream on the device.</p>
@@ -328,7 +330,7 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
 
   <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_Dispose" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.Dispose">
   Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
@@ -355,7 +357,7 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
 
   <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_OpenRx_HackRFDotnet_Api_SampleRate_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx(HackRFDotnet.Api.SampleRate)">
   OpenRx(SampleRate?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Open an Rx stream to read IQ samples.</p>
@@ -387,7 +389,7 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
 
   <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_ReadBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})">
   ReadBuffer(Span&lt;IQ&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fill a span with data from the ring buffer.</p>
@@ -424,7 +426,7 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
 
   <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_SetSampleRate_HackRFDotnet_Api_SampleRate_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.SetSampleRate(HackRFDotnet.Api.SampleRate)">
   SetSampleRate(SampleRate)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set the capture sample rate of the stream and device.</p>
@@ -456,7 +458,7 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
 
   <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_TxBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})">
   TxBuffer(Span&lt;IQ&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Open a Tx stream to write IQ samples.</p>

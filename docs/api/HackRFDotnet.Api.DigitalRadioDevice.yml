@@ -12,7 +12,6 @@ items:
   - HackRFDotnet.Api.DigitalRadioDevice.Frequency
   - HackRFDotnet.Api.DigitalRadioDevice.IsConnected
   - HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
-  - HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
   - HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   - HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
@@ -31,10 +30,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: DigitalRadioDevice
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Radio Device to receive IQ Samples with.
+  example: []
   syntax:
     content: 'public class DigitalRadioDevice : IDisposable'
     content.vb: Public Class DigitalRadioDevice Implements IDisposable
@@ -70,10 +71,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Frequency
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 8
+    startLine: 14
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Current frequency tuned to.
+  example: []
   syntax:
     content: public Frequency Frequency { get; set; }
     parameters: []
@@ -99,10 +102,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Bandwidth
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 9
+    startLine: 19
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Current capture bandwidth.
+  example: []
   syntax:
     content: public Bandwidth Bandwidth { get; set; }
     parameters: []
@@ -128,10 +133,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: DeviceSamplingRate
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 10
+    startLine: 24
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Current capture sample rate.
+  example: []
   syntax:
     content: public SampleRate DeviceSamplingRate { get; set; }
     parameters: []
@@ -139,33 +146,6 @@ items:
       type: HackRFDotnet.Api.SampleRate
     content.vb: Public Property DeviceSamplingRate As SampleRate
   overload: HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
-  commentId: F:HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
-  id: DevicePtr
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: DevicePtr
-  nameWithType: DigitalRadioDevice.DevicePtr
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: DevicePtr
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 12
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public readonly HackRFDevice* DevicePtr
-    return:
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-    content.vb: Public ReadOnly DevicePtr As HackRFDevice*
 - uid: HackRFDotnet.Api.DigitalRadioDevice.IsConnected
   commentId: P:HackRFDotnet.Api.DigitalRadioDevice.IsConnected
   id: IsConnected
@@ -184,10 +164,12 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: IsConnected
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 14
+    startLine: 29
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Is the device connected to the usb host in the native library?
+  example: []
   syntax:
     content: public bool IsConnected { get; }
     parameters: []
@@ -195,6 +177,33 @@ items:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsConnected As Boolean
   overload: HackRFDotnet.Api.DigitalRadioDevice.IsConnected*
+- uid: HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
+  commentId: F:HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
+  id: DevicePtr
+  parent: HackRFDotnet.Api.DigitalRadioDevice
+  langs:
+  - csharp
+  - vb
+  name: DevicePtr
+  nameWithType: DigitalRadioDevice.DevicePtr
+  fullName: HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/Api/DigitalRadioDevice.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: DevicePtr
+    path: HackRFDotnet/Api/DigitalRadioDevice.cs
+    startLine: 35
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api
+  syntax:
+    content: public readonly HackRFDevice* DevicePtr
+    return:
+      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
+    content.vb: Public ReadOnly DevicePtr As HackRFDevice*
 - uid: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
   commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
   id: SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
@@ -213,55 +222,29 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetAmplifications
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 24
+    startLine: 48
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Set the Lna, Vga, and Internal amp settings for the Rf Device.
+  example: []
   syntax:
     content: public void SetAmplifications(uint lna, uint vga, bool internalAmp)
     parameters:
     - id: lna
       type: System.UInt32
+      description: ''
     - id: vga
       type: System.UInt32
+      description: ''
     - id: internalAmp
       type: System.Boolean
+      description: ''
     content.vb: Public Sub SetAmplifications(lna As UInteger, vga As UInteger, internalAmp As Boolean)
   overload: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications*
   nameWithType.vb: DigitalRadioDevice.SetAmplifications(UInteger, UInteger, Boolean)
   fullName.vb: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(UInteger, UInteger, Boolean)
   name.vb: SetAmplifications(UInteger, UInteger, Boolean)
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
-  id: SetFrequency(HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: SetFrequency(Frequency)
-  nameWithType: DigitalRadioDevice.SetFrequency(Frequency)
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency)
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: SetFrequency
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 30
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public bool SetFrequency(Frequency radioFrequency)
-    parameters:
-    - id: radioFrequency
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: System.Boolean
-    content.vb: Public Function SetFrequency(radioFrequency As Frequency) As Boolean
-  overload: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency*
 - uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
   id: SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
@@ -280,19 +263,24 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetFrequency
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 34
+    startLine: 60
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Set the tuning frequency and bandwidth for the Rf Device.
+  example: []
   syntax:
     content: public bool SetFrequency(Frequency radioFrequency, Bandwidth bandwidth)
     parameters:
     - id: radioFrequency
       type: HackRFDotnet.Api.Frequency
+      description: ''
     - id: bandwidth
       type: HackRFDotnet.Api.Bandwidth
+      description: ''
     return:
       type: System.Boolean
+      description: ''
     content.vb: Public Function SetFrequency(radioFrequency As Frequency, bandwidth As Bandwidth) As Boolean
   overload: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency*
 - uid: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
@@ -313,15 +301,23 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetSampleRate
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 43
+    startLine: 75
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: >-
+    Set the sample rate for the radio device to capture data at.
+
+    This will also set the baseband filter the smallest filter 
+
+    that fits the sample rate's Nyquist frequency cutoff.
+  example: []
   syntax:
     content: public void SetSampleRate(SampleRate sampleRate)
     parameters:
     - id: sampleRate
       type: HackRFDotnet.Api.SampleRate
+      description: ''
     content.vb: Public Sub SetSampleRate(sampleRate As SampleRate)
   overload: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate*
 - uid: HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
@@ -342,19 +338,27 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: StartRx
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 51
+    startLine: 91
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Start receiving data from the RfDevice.
+  example: []
   syntax:
     content: public bool StartRx(HackRFSampleBlockCallback rxCallback)
     parameters:
     - id: rxCallback
       type: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
+      description: ''
     return:
       type: System.Boolean
+      description: ''
     content.vb: Public Function StartRx(rxCallback As HackRFSampleBlockCallback) As Boolean
   overload: HackRFDotnet.Api.DigitalRadioDevice.StartRx*
+  exceptions:
+  - type: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
+    commentId: T:HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
+    description: ''
 - uid: HackRFDotnet.Api.DigitalRadioDevice.StopRx
   commentId: M:HackRFDotnet.Api.DigitalRadioDevice.StopRx
   id: StopRx
@@ -373,14 +377,17 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: StopRx
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 67
+    startLine: 111
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
+  summary: Stop receiving data from the Rf Device.
+  example: []
   syntax:
     content: public bool StopRx()
     return:
       type: System.Boolean
+      description: ''
     content.vb: Public Function StopRx() As Boolean
   overload: HackRFDotnet.Api.DigitalRadioDevice.StopRx*
 - uid: HackRFDotnet.Api.DigitalRadioDevice.Dispose
@@ -401,11 +408,11 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
     path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 72
+    startLine: 119
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api
-  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  summary: Dispose the Rf Device from the library.
   example: []
   syntax:
     content: public void Dispose()
@@ -807,22 +814,6 @@ references:
   name: SampleRate
   nameWithType: SampleRate
   fullName: HackRFDotnet.Api.SampleRate
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  name: HackRFDevice*
-  nameWithType: HackRFDevice*
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
 - uid: HackRFDotnet.Api.DigitalRadioDevice.IsConnected*
   commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.IsConnected
   href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_IsConnected
@@ -840,6 +831,22 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  name: HackRFDevice*
+  nameWithType: HackRFDevice*
+  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
+    name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - name: '*'
 - uid: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications*
   commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications
   href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetAmplifications_System_UInt32_System_UInt32_System_Boolean_
@@ -859,7 +866,7 @@ references:
   name.vb: UInteger
 - uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency*
   commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_
+  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
   name: SetFrequency
   nameWithType: DigitalRadioDevice.SetFrequency
   fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency
@@ -869,6 +876,12 @@ references:
   name: SetSampleRate
   nameWithType: DigitalRadioDevice.SetSampleRate
   fullName: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate
+- uid: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
+  commentId: T:HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
+  href: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException.html
+  name: NullCallbackException
+  nameWithType: NullCallbackException
+  fullName: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
 - uid: HackRFDotnet.Api.DigitalRadioDevice.StartRx*
   commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.StartRx
   href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_StartRx_HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_

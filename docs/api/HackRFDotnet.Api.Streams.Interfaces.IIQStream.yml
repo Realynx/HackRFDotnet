@@ -8,7 +8,6 @@ items:
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Dispose
-  - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
@@ -37,37 +36,6 @@ items:
   syntax:
     content: public interface IIQStream
     content.vb: Public Interface IIQStream
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-  commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-  id: Frequency
-  parent: HackRFDotnet.Api.Streams.Interfaces.IIQStream
-  langs:
-  - csharp
-  - vb
-  name: Frequency
-  nameWithType: IIQStream.Frequency
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-  type: Property
-  source:
-    remote:
-      path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: Frequency
-    path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 8
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api.Streams.Interfaces
-  summary: The current tuning frequency the device is set to.
-  example: []
-  syntax:
-    content: Frequency Frequency { get; }
-    parameters: []
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: ReadOnly Property Frequency As Frequency
-  overload: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency*
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
   commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
   id: SampleRate
@@ -86,7 +54,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SampleRate
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 13
+    startLine: 8
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -117,7 +85,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BufferLength
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 18
+    startLine: 13
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -148,7 +116,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Close
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 23
+    startLine: 18
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -176,7 +144,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 28
+    startLine: 23
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -204,7 +172,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: OpenRx
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 34
+    startLine: 29
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -239,7 +207,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ReadBuffer
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 41
+    startLine: 36
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -277,7 +245,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetSampleRate
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 47
+    startLine: 42
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -309,7 +277,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: TxBuffer
     path: HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs
-    startLine: 54
+    startLine: 49
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Interfaces
@@ -375,19 +343,19 @@ references:
   - uid: HackRFDotnet.Api.Streams.Interfaces
     name: Interfaces
     href: HackRFDotnet.Api.Streams.Interfaces.html
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency*
-  commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_Frequency
-  name: Frequency
-  nameWithType: IIQStream.Frequency
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-- uid: HackRFDotnet.Api.Frequency
-  commentId: T:HackRFDotnet.Api.Frequency
+- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate*
+  commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
+  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_SampleRate
+  name: SampleRate
+  nameWithType: IIQStream.SampleRate
+  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.Frequency.html
-  name: Frequency
-  nameWithType: Frequency
-  fullName: HackRFDotnet.Api.Frequency
+  href: HackRFDotnet.Api.SampleRate.html
+  name: SampleRate
+  nameWithType: SampleRate
+  fullName: HackRFDotnet.Api.SampleRate
 - uid: HackRFDotnet.Api
   commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html
@@ -410,19 +378,6 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate*
-  commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
-  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_SampleRate
-  name: SampleRate
-  nameWithType: IIQStream.SampleRate
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
-- uid: HackRFDotnet.Api.SampleRate
-  commentId: T:HackRFDotnet.Api.SampleRate
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.SampleRate.html
-  name: SampleRate
-  nameWithType: SampleRate
-  fullName: HackRFDotnet.Api.SampleRate
 - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength*
   commentId: Overload:HackRFDotnet.Api.Streams.Interfaces.IIQStream.BufferLength
   href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_BufferLength

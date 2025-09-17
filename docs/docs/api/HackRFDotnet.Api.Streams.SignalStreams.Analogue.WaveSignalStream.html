@@ -197,8 +197,8 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
 
   <a id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_SampleRate_System_Boolean_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_System_Boolean_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SampleRate,System.Boolean,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)">
-  WaveSignalStream(IIQStream, SampleRate, bool, SignalProcessingPipeline?, bool)
+  <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_HackRFDotnet_Api_SampleRate_System_Boolean_System_Boolean_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,HackRFDotnet.Api.SampleRate,System.Boolean,System.Boolean)">
+  WaveSignalStream(IIQStream, SignalProcessingPipeline?, SampleRate, bool, bool)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -206,18 +206,18 @@ Class WaveSignalStream  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WaveSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stero = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public WaveSignalStream(IIQStream deviceStream, SignalProcessingPipeline? processingPipeline, SampleRate sampleRate, bool stero = true, bool keepOpen = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>deviceStream</code> <a class="xref" href="HackRFDotnet.Api.Streams.Interfaces.IIQStream.html">IIQStream</a></dt>
     <dd></dd>
+    <dt><code>processingPipeline</code> <a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html">SignalProcessingPipeline</a></dt>
+    <dd></dd>
     <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
     <dd></dd>
     <dt><code>stero</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-    <dt><code>processingPipeline</code> <a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html">SignalProcessingPipeline</a></dt>
     <dd></dd>
     <dt><code>keepOpen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>

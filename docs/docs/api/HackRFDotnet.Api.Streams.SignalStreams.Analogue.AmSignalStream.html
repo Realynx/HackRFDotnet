@@ -89,7 +89,7 @@
 
 
   <h1 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_AmSignalStream" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream" class="text-break">
-Class AmSignalStream  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/AmSignalStream.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class AmSignalStream  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/AmSignalStream.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -197,25 +197,23 @@ Class AmSignalStream  <a class="header-action link-secondary" title="View source
 
   <a id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_AmSignalStream__ctor_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.#ctor*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_AmSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_System_Boolean_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)">
-  AmSignalStream(IIQStream, SampleRate, SignalProcessingPipeline?, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/AmSignalStream.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_AmSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_Bandwidth_System_Boolean_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Bandwidth,System.Boolean)">
+  AmSignalStream(IIQStream, Bandwidth, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/AmSignalStream.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AmSignalStream(IIQStream deviceStream, SampleRate sampleRate, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public AmSignalStream(IIQStream deviceStream, Bandwidth stationBandwidth, bool keepOpen = true)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>deviceStream</code> <a class="xref" href="HackRFDotnet.Api.Streams.Interfaces.IIQStream.html">IIQStream</a></dt>
     <dd></dd>
-    <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
-    <dd></dd>
-    <dt><code>processingPipeline</code> <a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html">SignalProcessingPipeline</a></dt>
+    <dt><code>stationBandwidth</code> <a class="xref" href="HackRFDotnet.Api.Bandwidth.html">Bandwidth</a></dt>
     <dd></dd>
     <dt><code>keepOpen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
@@ -240,7 +238,7 @@ Class AmSignalStream  <a class="header-action link-secondary" title="View source
 
   <h3 id="HackRFDotnet_Api_Streams_SignalStreams_Analogue_AmSignalStream_Read_System_Single___System_Int32_System_Int32_" data-uid="HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.Read(System.Single[],System.Int32,System.Int32)">
   Read(float[], int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/AmSignalStream.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/AmSignalStream.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Fill the specified buffer with 32 bit floating point samples</p>
@@ -285,7 +283,7 @@ Class AmSignalStream  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/AmSignalStream.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/AmSignalStream.cs/#L12" class="edit-link">Edit this page</a>
         </div>
 
 

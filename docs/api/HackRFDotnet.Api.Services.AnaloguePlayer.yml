@@ -7,7 +7,7 @@ items:
   children:
   - HackRFDotnet.Api.Services.AnaloguePlayer.#ctor(HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream)
   - HackRFDotnet.Api.Services.AnaloguePlayer.Dispose
-  - HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
+  - HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.SampleRate)
   langs:
   - csharp
   - vb
@@ -103,16 +103,16 @@ items:
   overload: HackRFDotnet.Api.Services.AnaloguePlayer.Dispose*
   implements:
   - System.IDisposable.Dispose
-- uid: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
-  commentId: M:HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
-  id: PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,System.Int32)
+- uid: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.SampleRate)
+  commentId: M:HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.SampleRate)
+  id: PlayStreamAsync(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.SampleRate)
   parent: HackRFDotnet.Api.Services.AnaloguePlayer
   langs:
   - csharp
   - vb
-  name: PlayStreamAsync(Frequency, Bandwidth, int)
-  nameWithType: AnaloguePlayer.PlayStreamAsync(Frequency, Bandwidth, int)
-  fullName: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth, int)
+  name: PlayStreamAsync(Frequency, Bandwidth, SampleRate)
+  nameWithType: AnaloguePlayer.PlayStreamAsync(Frequency, Bandwidth, SampleRate)
+  fullName: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth, HackRFDotnet.Api.SampleRate)
   type: Method
   source:
     remote:
@@ -126,19 +126,16 @@ items:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Services
   syntax:
-    content: public virtual void PlayStreamAsync(Frequency centerOffset, Bandwidth bandwidth, int audioRate)
+    content: public virtual void PlayStreamAsync(Frequency centerOffset, Bandwidth bandwidth, SampleRate audioRate)
     parameters:
     - id: centerOffset
       type: HackRFDotnet.Api.Frequency
     - id: bandwidth
       type: HackRFDotnet.Api.Bandwidth
     - id: audioRate
-      type: System.Int32
-    content.vb: Public Overridable Sub PlayStreamAsync(centerOffset As Frequency, bandwidth As Bandwidth, audioRate As Integer)
+      type: HackRFDotnet.Api.SampleRate
+    content.vb: Public Overridable Sub PlayStreamAsync(centerOffset As Frequency, bandwidth As Bandwidth, audioRate As SampleRate)
   overload: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync*
-  nameWithType.vb: AnaloguePlayer.PlayStreamAsync(Frequency, Bandwidth, Integer)
-  fullName.vb: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth, Integer)
-  name.vb: PlayStreamAsync(Frequency, Bandwidth, Integer)
 references:
 - uid: HackRFDotnet.Api.Services
   commentId: N:HackRFDotnet.Api.Services
@@ -507,7 +504,7 @@ references:
   - name: )
 - uid: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync*
   commentId: Overload:HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync
-  href: HackRFDotnet.Api.Services.AnaloguePlayer.html#HackRFDotnet_Api_Services_AnaloguePlayer_PlayStreamAsync_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_System_Int32_
+  href: HackRFDotnet.Api.Services.AnaloguePlayer.html#HackRFDotnet_Api_Services_AnaloguePlayer_PlayStreamAsync_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_SampleRate_
   name: PlayStreamAsync
   nameWithType: AnaloguePlayer.PlayStreamAsync
   fullName: HackRFDotnet.Api.Services.AnaloguePlayer.PlayStreamAsync
@@ -525,17 +522,13 @@ references:
   name: Bandwidth
   nameWithType: Bandwidth
   fullName: HackRFDotnet.Api.Bandwidth
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.SampleRate.html
+  name: SampleRate
+  nameWithType: SampleRate
+  fullName: HackRFDotnet.Api.SampleRate
 - uid: HackRFDotnet.Api
   commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html

@@ -9,9 +9,9 @@ items:
   - HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength
   - HackRFDotnet.Api.Streams.Device.IQDeviceStream.Close
   - HackRFDotnet.Api.Streams.Device.IQDeviceStream.Dispose
-  - HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency
   - HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx(HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.Streams.Device.IQDeviceStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
+  - HackRFDotnet.Api.Streams.Device.IQDeviceStream.RfDevice
   - HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate
   - HackRFDotnet.Api.Streams.Device.IQDeviceStream.SetSampleRate(HackRFDotnet.Api.SampleRate)
   - HackRFDotnet.Api.Streams.Device.IQDeviceStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
@@ -56,6 +56,33 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.RfDevice
+  commentId: F:HackRFDotnet.Api.Streams.Device.IQDeviceStream.RfDevice
+  id: RfDevice
+  parent: HackRFDotnet.Api.Streams.Device.IQDeviceStream
+  langs:
+  - csharp
+  - vb
+  name: RfDevice
+  nameWithType: IQDeviceStream.RfDevice
+  fullName: HackRFDotnet.Api.Streams.Device.IQDeviceStream.RfDevice
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: RfDevice
+    path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
+    startLine: 13
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.Device
+  syntax:
+    content: public readonly DigitalRadioDevice RfDevice
+    return:
+      type: HackRFDotnet.Api.DigitalRadioDevice
+    content.vb: Public ReadOnly RfDevice As DigitalRadioDevice
 - uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate
   commentId: P:HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate
   id: SampleRate
@@ -89,39 +116,6 @@ items:
   overload: HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate*
   implements:
   - HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
-- uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency
-  commentId: P:HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency
-  id: Frequency
-  parent: HackRFDotnet.Api.Streams.Device.IQDeviceStream
-  langs:
-  - csharp
-  - vb
-  name: Frequency
-  nameWithType: IQDeviceStream.Frequency
-  fullName: HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency
-  type: Property
-  source:
-    remote:
-      path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: Frequency
-    path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 25
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api.Streams.Device
-  summary: The current tuning frequency the device is set to.
-  example: []
-  syntax:
-    content: public Frequency Frequency { get; }
-    parameters: []
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public ReadOnly Property Frequency As Frequency
-  overload: HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency*
-  implements:
-  - HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
 - uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength
   commentId: P:HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength
   id: BufferLength
@@ -140,7 +134,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: BufferLength
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 31
+    startLine: 25
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -173,7 +167,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: .ctor
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 37
+    startLine: 31
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -205,7 +199,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: OpenRx
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 43
+    startLine: 37
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -242,7 +236,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Close
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 52
+    startLine: 46
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -272,7 +266,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: SetSampleRate
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 56
+    startLine: 50
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -306,7 +300,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: TxBuffer
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 67
+    startLine: 61
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -346,7 +340,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: ReadBuffer
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 71
+    startLine: 65
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -386,7 +380,7 @@ items:
       repo: https://github.com/Realynx/HackRFDotnet.git
     id: Dispose
     path: HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs
-    startLine: 108
+    startLine: 102
   assemblies:
   - HackRFDotnet
   namespace: HackRFDotnet.Api.Streams.Device
@@ -773,26 +767,13 @@ references:
   - uid: HackRFDotnet.Api.Streams.Interfaces
     name: Interfaces
     href: HackRFDotnet.Api.Streams.Interfaces.html
-- uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate*
-  commentId: Overload:HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate
-  href: HackRFDotnet.Api.Streams.Device.IQDeviceStream.html#HackRFDotnet_Api_Streams_Device_IQDeviceStream_SampleRate
-  name: SampleRate
-  nameWithType: IQDeviceStream.SampleRate
-  fullName: HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
-  commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
-  parent: HackRFDotnet.Api.Streams.Interfaces.IIQStream
-  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_SampleRate
-  name: SampleRate
-  nameWithType: IIQStream.SampleRate
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
-- uid: HackRFDotnet.Api.SampleRate
-  commentId: T:HackRFDotnet.Api.SampleRate
+- uid: HackRFDotnet.Api.DigitalRadioDevice
+  commentId: T:HackRFDotnet.Api.DigitalRadioDevice
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.SampleRate.html
-  name: SampleRate
-  nameWithType: SampleRate
-  fullName: HackRFDotnet.Api.SampleRate
+  href: HackRFDotnet.Api.DigitalRadioDevice.html
+  name: DigitalRadioDevice
+  nameWithType: DigitalRadioDevice
+  fullName: HackRFDotnet.Api.DigitalRadioDevice
 - uid: HackRFDotnet.Api
   commentId: N:HackRFDotnet.Api
   href: HackRFDotnet.html
@@ -815,26 +796,26 @@ references:
   - uid: HackRFDotnet.Api
     name: Api
     href: HackRFDotnet.Api.html
-- uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency*
-  commentId: Overload:HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency
-  href: HackRFDotnet.Api.Streams.Device.IQDeviceStream.html#HackRFDotnet_Api_Streams_Device_IQDeviceStream_Frequency
-  name: Frequency
-  nameWithType: IQDeviceStream.Frequency
-  fullName: HackRFDotnet.Api.Streams.Device.IQDeviceStream.Frequency
-- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-  commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
+- uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate*
+  commentId: Overload:HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate
+  href: HackRFDotnet.Api.Streams.Device.IQDeviceStream.html#HackRFDotnet_Api_Streams_Device_IQDeviceStream_SampleRate
+  name: SampleRate
+  nameWithType: IQDeviceStream.SampleRate
+  fullName: HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate
+- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
+  commentId: P:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
   parent: HackRFDotnet.Api.Streams.Interfaces.IIQStream
-  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_Frequency
-  name: Frequency
-  nameWithType: IIQStream.Frequency
-  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Frequency
-- uid: HackRFDotnet.Api.Frequency
-  commentId: T:HackRFDotnet.Api.Frequency
+  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html#HackRFDotnet_Api_Streams_Interfaces_IIQStream_SampleRate
+  name: SampleRate
+  nameWithType: IIQStream.SampleRate
+  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SampleRate
+- uid: HackRFDotnet.Api.SampleRate
+  commentId: T:HackRFDotnet.Api.SampleRate
   parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.Frequency.html
-  name: Frequency
-  nameWithType: Frequency
-  fullName: HackRFDotnet.Api.Frequency
+  href: HackRFDotnet.Api.SampleRate.html
+  name: SampleRate
+  nameWithType: SampleRate
+  fullName: HackRFDotnet.Api.SampleRate
 - uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength*
   commentId: Overload:HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength
   href: HackRFDotnet.Api.Streams.Device.IQDeviceStream.html#HackRFDotnet_Api_Streams_Device_IQDeviceStream_BufferLength
@@ -868,13 +849,6 @@ references:
   nameWithType.vb: IQDeviceStream.New
   fullName.vb: HackRFDotnet.Api.Streams.Device.IQDeviceStream.New
   name.vb: New
-- uid: HackRFDotnet.Api.DigitalRadioDevice
-  commentId: T:HackRFDotnet.Api.DigitalRadioDevice
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.DigitalRadioDevice.html
-  name: DigitalRadioDevice
-  nameWithType: DigitalRadioDevice
-  fullName: HackRFDotnet.Api.DigitalRadioDevice
 - uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx*
   commentId: Overload:HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx
   href: HackRFDotnet.Api.Streams.Device.IQDeviceStream.html#HackRFDotnet_Api_Streams_Device_IQDeviceStream_OpenRx_HackRFDotnet_Api_SampleRate_
