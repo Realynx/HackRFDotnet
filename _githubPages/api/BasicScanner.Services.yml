@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: BasicScanner.Services
+  commentId: N:BasicScanner.Services
+  id: BasicScanner.Services
+  children:
+  - BasicScanner.Services.SpectrumDisplayService
+  langs:
+  - csharp
+  - vb
+  name: BasicScanner.Services
+  nameWithType: BasicScanner.Services
+  fullName: BasicScanner.Services
+  type: Namespace
+  assemblies:
+  - BasicScanner
+references:
+- uid: BasicScanner.Services.SpectrumDisplayService
+  commentId: T:BasicScanner.Services.SpectrumDisplayService
+  href: BasicScanner.Services.SpectrumDisplayService.html
+  name: SpectrumDisplayService
+  nameWithType: SpectrumDisplayService
+  fullName: BasicScanner.Services.SpectrumDisplayService

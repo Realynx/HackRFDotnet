@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | HackrfDotnet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | HackrfDotnet ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="HackrfDotnet">
+            HackrfDotnet
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>This repository contains host software (Linux/Windows) for HackRF, a project to
+produce a low cost, open source software radio platform.</p>
+<h2 id="how-to-build-the-host-software-on-linux">How to build the host software on Linux:</h2>
+<h3 id="prerequisites-for-linux-debianubuntu">Prerequisites for Linux (Debian/Ubuntu):</h3>
+<p><code>sudo apt-get install build-essential cmake libusb-1.0-0-dev pkg-config libfftw3-dev</code></p>
+<h3 id="build-host-software-on-linux">Build host software on Linux:</h3>
+<pre><code>mkdir host/build
+cd host/build
+cmake ..
+make
+sudo make install
+sudo ldconfig
+</code></pre>
+<p>By default this will attempt to install an udev rule to <code>/etc/udev/rules.d</code> to
+provide the <code>usb</code> or <code>plugdev</code> group access to HackRF. If your setup requires
+the udev rule to be installed elsewhere you can modify the path with
+<code>-DUDEV_RULES_PATH=/path/to/udev</code>.</p>
+<p>Note: The udev rule is not installed by default for PyBOMBS installs as
+they do not ususally get installed with root privileges.</p>
+<h2 id="clean-cmake-temporary-filesdirs">Clean CMake temporary files/dirs:</h2>
+<pre><code>cd host/build
+rm -rf *
+</code></pre>
+<h2 id="how-to-build-host-software-on-windows">How to build host software on Windows:</h2>
+<h3 id="prerequisites-for-cygwin-mingw-or-visual-studio">Prerequisites for Cygwin, MinGW, or Visual Studio:</h3>
+<ul>
+<li>cmake-2.8.12.1 or later from <a href="http://www.cmake.org/cmake/resources/software.html">http://www.cmake.org/cmake/resources/software.html</a></li>
+<li>libusbx-1.0.18 or later from <a href="http://sourceforge.net/projects/libusbx/files/latest/download?source=files">http://sourceforge.net/projects/libusbx/files/latest/download?source=files</a></li>
+<li>fftw-3.3.5 or later from <a href="http://www.fftw.org/install/windows.html">http://www.fftw.org/install/windows.html</a></li>
+<li>Install Windows driver for HackRF hardware or use Zadig see <a href="http://sourceforge.net/projects/libwdi/files/zadig">http://sourceforge.net/projects/libwdi/files/zadig</a>
+<ul>
+<li>If you want to use Zadig select HackRF USB device and just install/replace it with WinUSB driver.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note for Windows build:</strong>
+You shall always execute hackrf-tools from Windows command shell and not from Cygwin or MinGW shell because on Cygwin/MinGW
+Ctrl C is not managed correctly and especially for hackrf_transfer the Ctrl C(abort) will not stop correctly and will corrupt the file.</p>
+</blockquote>
+<h3 id="for-cygwin">For Cygwin:</h3>
+<pre><code>mkdir host/build
+cd host/build
+cmake ../ -G &quot;Unix Makefiles&quot; -DCMAKE_LEGACY_CYGWIN_WIN32=1 -DLIBUSB_INCLUDE_DIR=/usr/local/include/libusb-1.0/
+make
+make install
+</code></pre>
+<h3 id="for-mingw">For MinGW:</h3>
+<pre><code>mkdir host/build
+cd host/build
+cmake ../ -G &quot;MSYS Makefiles&quot; -DLIBUSB_INCLUDE_DIR=/usr/local/include/libusb-1.0/
+make
+make install
+</code></pre>
+<h3 id="for-visual-studio-2015-x64">For Visual Studio 2015 x64</h3>
+<p>Create library definition for MSVC to link to
+<code>C:\fftw-3.3.5-dll64&gt; lib /machine:x64 /def:libfftw3f-3.def</code></p>
+<pre><code>c:\hackrf\host\build&gt; cmake ../ -G &quot;Visual Studio 14 2015 Win64&quot; \
+-DLIBUSB_INCLUDE_DIR=c:\libusb-1.0.21\libusb \
+-DLIBUSB_LIBRARIES=c:\libusb-1.0.21\MS64\dll\lib\libusb-1.0.lib \
+-DTHREADS_PTHREADS_INCLUDE_DIR=c:\pthreads-w32-2-9-1-release\Pre-built.2\include \
+-DTHREADS_PTHREADS_WIN32_LIBRARY=c:\pthreads-w32-2-9-1-release\Pre-built.2\lib\x64\pthreadVC2.lib \
+-DFFTW_INCLUDES=C:\fftw-3.3.5-dll64 \
+-DFFTW_LIBRARIES=C:\fftw-3.3.5-dll64\libfftw3f-3.lib
+</code></pre>
+<p>CMake will produce a solution file named <code>HackRF.sln</code> and a series of
+project files which can be built with msbuild as follows:
+<code>c:\hackrf\host\build&gt; msbuild HackRF.sln</code></p>
+<h2 id="how-to-build-host-the-software-on-freebsd">How to build host the software on FreeBSD</h2>
+<p>You can use the binary package:
+<code># pkg install hackrf</code></p>
+<p>You can build and install from ports:</p>
+<pre><code># cd /usr/ports/comms/hackrf
+# make install
+</code></pre>
+<h2 id="how-to-build-the-host-software-on-macos">How to build the host software on macOS:</h2>
+<h3 id="install-dependencies">Install dependencies</h3>
+<p>Homebrew: <code>brew install cmake libusb pkg-config</code></p>
+<p>Install FFTW from <a href="https://www.fftw.org/install/mac.html">this guide</a></p>
+<h3 id="build-it">Build it</h3>
+<pre><code class="lang-sh">mkdir host/build
+cd host/build
+cmake ..
+make
+sudo make install
+sudo update_dyld_shared_cache # equivalent to ldconfig in linux
+</code></pre>
+<h2 id="credits">Credits</h2>
+<p>principal author: Michael Ossmann <a href="mailto:mike@ossmann.com">mike@ossmann.com</a></p>
+<p><a href="http://greatscottgadgets.com/hackrf/">http://greatscottgadgets.com/hackrf/</a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

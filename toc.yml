@@ -1,0 +1,4 @@
+- name: Docs
+  href: .\HackRFDotnetDocs/
+- name: API
+  href: _githubPages/api/

@@ -1,0 +1,150 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
+  commentId: T:HackRFDotnet.NativeApi.Enums.RfPathFilter
+  id: RfPathFilter
+  parent: HackRFDotnet.NativeApi.Enums
+  children:
+  - HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_BYPASS
+  - HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_HIGH_PASS
+  - HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_LOW_PASS
+  langs:
+  - csharp
+  - vb
+  name: RfPathFilter
+  nameWithType: RfPathFilter
+  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter
+  type: Enum
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: RfPathFilter
+    path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
+    startLine: 1
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums
+  syntax:
+    content: public enum RfPathFilter
+    content.vb: Public Enum RfPathFilter
+- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_BYPASS
+  commentId: F:HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_BYPASS
+  id: RF_PATH_FILTER_BYPASS
+  parent: HackRFDotnet.NativeApi.Enums.RfPathFilter
+  langs:
+  - csharp
+  - vb
+  name: RF_PATH_FILTER_BYPASS
+  nameWithType: RfPathFilter.RF_PATH_FILTER_BYPASS
+  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_BYPASS
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: RF_PATH_FILTER_BYPASS
+    path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
+    startLine: 5
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums
+  example: []
+  syntax:
+    content: RF_PATH_FILTER_BYPASS = 0
+    return:
+      type: HackRFDotnet.NativeApi.Enums.RfPathFilter
+- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_LOW_PASS
+  commentId: F:HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_LOW_PASS
+  id: RF_PATH_FILTER_LOW_PASS
+  parent: HackRFDotnet.NativeApi.Enums.RfPathFilter
+  langs:
+  - csharp
+  - vb
+  name: RF_PATH_FILTER_LOW_PASS
+  nameWithType: RfPathFilter.RF_PATH_FILTER_LOW_PASS
+  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_LOW_PASS
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: RF_PATH_FILTER_LOW_PASS
+    path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
+    startLine: 9
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums
+  example: []
+  syntax:
+    content: RF_PATH_FILTER_LOW_PASS = 1
+    return:
+      type: HackRFDotnet.NativeApi.Enums.RfPathFilter
+- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_HIGH_PASS
+  commentId: F:HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_HIGH_PASS
+  id: RF_PATH_FILTER_HIGH_PASS
+  parent: HackRFDotnet.NativeApi.Enums.RfPathFilter
+  langs:
+  - csharp
+  - vb
+  name: RF_PATH_FILTER_HIGH_PASS
+  nameWithType: RfPathFilter.RF_PATH_FILTER_HIGH_PASS
+  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_HIGH_PASS
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: RF_PATH_FILTER_HIGH_PASS
+    path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
+    startLine: 13
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums
+  example: []
+  syntax:
+    content: RF_PATH_FILTER_HIGH_PASS = 2
+    return:
+      type: HackRFDotnet.NativeApi.Enums.RfPathFilter
+references:
+- uid: HackRFDotnet.NativeApi.Enums
+  commentId: N:HackRFDotnet.NativeApi.Enums
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Enums
+  nameWithType: HackRFDotnet.NativeApi.Enums
+  fullName: HackRFDotnet.NativeApi.Enums
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
+  commentId: T:HackRFDotnet.NativeApi.Enums.RfPathFilter
+  parent: HackRFDotnet.NativeApi.Enums
+  href: HackRFDotnet.NativeApi.Enums.RfPathFilter.html
+  name: RfPathFilter
+  nameWithType: RfPathFilter
+  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter

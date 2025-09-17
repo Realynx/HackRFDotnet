@@ -35,8 +35,6 @@ public unsafe class SpectrumDisplayService {
         '█',   // full block
     };
 
-
-
     public SpectrumDisplayService() {
     }
 
@@ -82,8 +80,6 @@ public unsafe class SpectrumDisplayService {
         var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, reducedSampleRate);
         var magnitudes = new float[producedChunkSize];
         float? average = null;
-
-
 
 
         var consoleHandle = kernel32Methods.GetStdHandle(kernel32Methods.STD_OUTPUT_HANDLE);

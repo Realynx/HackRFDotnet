@@ -9,6 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="FFmpeg.AutoGen" Version="7.1.1" />
         <PackageReference Include="ILGPU" Version="1.5.3" />
         <PackageReference Include="MathNet.Filtering" Version="0.7.0" />
         <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
@@ -20,10 +21,6 @@
         <None Update="hackrf.dll">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
-    </ItemGroup>
-
-    <ItemGroup>
-        <Folder Include="ManagedApi\Streams\SignalStreams\Digital\" />
     </ItemGroup>
 
     <ItemGroup>

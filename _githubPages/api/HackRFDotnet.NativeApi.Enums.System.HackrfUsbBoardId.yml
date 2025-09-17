@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  id: HackrfUsbBoardId
+  parent: HackRFDotnet.NativeApi.Enums.System
+  children:
+  - HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
+  - HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_INVALID
+  - HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
+  - HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_RAD1O
+  langs:
+  - csharp
+  - vb
+  name: HackrfUsbBoardId
+  nameWithType: HackrfUsbBoardId
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  type: Enum
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HackrfUsbBoardId
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+    startLine: 1
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  syntax:
+    content: public enum HackrfUsbBoardId
+    content.vb: Public Enum HackrfUsbBoardId
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
+  id: USB_BOARD_ID_JAWBREAKER
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  langs:
+  - csharp
+  - vb
+  name: USB_BOARD_ID_JAWBREAKER
+  nameWithType: HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: USB_BOARD_ID_JAWBREAKER
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+    startLine: 5
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: USB_BOARD_ID_JAWBREAKER = 24651
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
+  id: USB_BOARD_ID_HACKRF_ONE
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  langs:
+  - csharp
+  - vb
+  name: USB_BOARD_ID_HACKRF_ONE
+  nameWithType: HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: USB_BOARD_ID_HACKRF_ONE
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+    startLine: 9
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: USB_BOARD_ID_HACKRF_ONE = 24713
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_RAD1O
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_RAD1O
+  id: USB_BOARD_ID_RAD1O
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  langs:
+  - csharp
+  - vb
+  name: USB_BOARD_ID_RAD1O
+  nameWithType: HackrfUsbBoardId.USB_BOARD_ID_RAD1O
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_RAD1O
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: USB_BOARD_ID_RAD1O
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+    startLine: 13
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: USB_BOARD_ID_RAD1O = 52245
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_INVALID
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_INVALID
+  id: USB_BOARD_ID_INVALID
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  langs:
+  - csharp
+  - vb
+  name: USB_BOARD_ID_INVALID
+  nameWithType: HackrfUsbBoardId.USB_BOARD_ID_INVALID
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_INVALID
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: USB_BOARD_ID_INVALID
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
+    startLine: 17
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: USB_BOARD_ID_INVALID = 65535
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+references:
+- uid: HackRFDotnet.NativeApi.Enums.System
+  commentId: N:HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Enums.System
+  nameWithType: HackRFDotnet.NativeApi.Enums.System
+  fullName: HackRFDotnet.NativeApi.Enums.System
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  parent: HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
+  name: HackrfUsbBoardId
+  nameWithType: HackrfUsbBoardId
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId

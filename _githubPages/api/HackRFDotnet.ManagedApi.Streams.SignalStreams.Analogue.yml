@@ -1,0 +1,84 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  id: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  children:
+  - HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.AmSignalStream
+  - HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.FmSignalStream
+  - HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.WaveSignalStream
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.AmSignalStream
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.AmSignalStream
+  href: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.AmSignalStream.html
+  name: AmSignalStream
+  nameWithType: AmSignalStream
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.AmSignalStream
+- uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.FmSignalStream
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.FmSignalStream
+  href: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.FmSignalStream.html
+  name: FmSignalStream
+  nameWithType: FmSignalStream
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.FmSignalStream
+- uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.WaveSignalStream
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.WaveSignalStream
+  parent: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  href: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.WaveSignalStream.html
+  name: WaveSignalStream
+  nameWithType: WaveSignalStream
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.WaveSignalStream
+- uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  href: HackRFDotnet.html
+  name: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams
+    name: SignalStreams
+    href: HackRFDotnet.ManagedApi.Streams.SignalStreams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+    name: Analogue
+    href: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams
+    name: SignalStreams
+    href: HackRFDotnet.ManagedApi.Streams.SignalStreams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+    name: Analogue
+    href: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.html

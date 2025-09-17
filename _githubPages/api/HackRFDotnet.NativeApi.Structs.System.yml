@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Structs.System
+  commentId: N:HackRFDotnet.NativeApi.Structs.System
+  id: HackRFDotnet.NativeApi.Structs.System
+  children:
+  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State
+  - HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.NativeApi.Structs.System
+  nameWithType: HackRFDotnet.NativeApi.Structs.System
+  fullName: HackRFDotnet.NativeApi.Structs.System
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
+  commentId: T:HackRFDotnet.NativeApi.Structs.System.HackRFM0State
+  href: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.html
+  name: HackRFM0State
+  nameWithType: HackRFM0State
+  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
+- uid: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
+  commentId: T:HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
+  href: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.html
+  name: ReadPartidSerialNo
+  nameWithType: ReadPartidSerialNo
+  fullName: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo

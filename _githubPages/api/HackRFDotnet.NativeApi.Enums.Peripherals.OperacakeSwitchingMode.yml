@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+  commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+  id: OperacakeSwitchingMode
+  parent: HackRFDotnet.NativeApi.Enums.Peripherals
+  children:
+  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_FREQUENCY
+  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_MANUAL
+  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_TIME
+  langs:
+  - csharp
+  - vb
+  name: OperacakeSwitchingMode
+  nameWithType: OperacakeSwitchingMode
+  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+  type: Enum
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: OperacakeSwitchingMode
+    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
+    startLine: 1
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
+  syntax:
+    content: public enum OperacakeSwitchingMode
+    content.vb: Public Enum OperacakeSwitchingMode
+- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_MANUAL
+  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_MANUAL
+  id: OPERACAKE_MODE_MANUAL
+  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+  langs:
+  - csharp
+  - vb
+  name: OPERACAKE_MODE_MANUAL
+  nameWithType: OperacakeSwitchingMode.OPERACAKE_MODE_MANUAL
+  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_MANUAL
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: OPERACAKE_MODE_MANUAL
+    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
+    startLine: 5
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
+  example: []
+  syntax:
+    content: OPERACAKE_MODE_MANUAL = 0
+    return:
+      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_FREQUENCY
+  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_FREQUENCY
+  id: OPERACAKE_MODE_FREQUENCY
+  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+  langs:
+  - csharp
+  - vb
+  name: OPERACAKE_MODE_FREQUENCY
+  nameWithType: OperacakeSwitchingMode.OPERACAKE_MODE_FREQUENCY
+  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_FREQUENCY
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: OPERACAKE_MODE_FREQUENCY
+    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
+    startLine: 9
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
+  example: []
+  syntax:
+    content: OPERACAKE_MODE_FREQUENCY = 1
+    return:
+      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_TIME
+  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_TIME
+  id: OPERACAKE_MODE_TIME
+  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+  langs:
+  - csharp
+  - vb
+  name: OPERACAKE_MODE_TIME
+  nameWithType: OperacakeSwitchingMode.OPERACAKE_MODE_TIME
+  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.OPERACAKE_MODE_TIME
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: OPERACAKE_MODE_TIME
+    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakeSwitchingMode.cs
+    startLine: 13
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
+  example: []
+  syntax:
+    content: OPERACAKE_MODE_TIME = 2
+    return:
+      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+references:
+- uid: HackRFDotnet.NativeApi.Enums.Peripherals
+  commentId: N:HackRFDotnet.NativeApi.Enums.Peripherals
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Enums.Peripherals
+  nameWithType: HackRFDotnet.NativeApi.Enums.Peripherals
+  fullName: HackRFDotnet.NativeApi.Enums.Peripherals
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.Peripherals
+    name: Peripherals
+    href: HackRFDotnet.NativeApi.Enums.Peripherals.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.Peripherals
+    name: Peripherals
+    href: HackRFDotnet.NativeApi.Enums.Peripherals.html
+- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+  commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
+  parent: HackRFDotnet.NativeApi.Enums.Peripherals
+  href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.html
+  name: OperacakeSwitchingMode
+  nameWithType: OperacakeSwitchingMode
+  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode

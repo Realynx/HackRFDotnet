@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.ManagedApi.Services
+  commentId: N:HackRFDotnet.ManagedApi.Services
+  id: HackRFDotnet.ManagedApi.Services
+  children:
+  - HackRFDotnet.ManagedApi.Services.AnaloguePlayer
+  - HackRFDotnet.ManagedApi.Services.DigitalPlayer
+  - HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.ManagedApi.Services
+  nameWithType: HackRFDotnet.ManagedApi.Services
+  fullName: HackRFDotnet.ManagedApi.Services
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.ManagedApi.Services.AnaloguePlayer
+  commentId: T:HackRFDotnet.ManagedApi.Services.AnaloguePlayer
+  href: HackRFDotnet.ManagedApi.Services.AnaloguePlayer.html
+  name: AnaloguePlayer
+  nameWithType: AnaloguePlayer
+  fullName: HackRFDotnet.ManagedApi.Services.AnaloguePlayer
+- uid: HackRFDotnet.ManagedApi.Services.DigitalPlayer
+  commentId: T:HackRFDotnet.ManagedApi.Services.DigitalPlayer
+  href: HackRFDotnet.ManagedApi.Services.DigitalPlayer.html
+  name: DigitalPlayer
+  nameWithType: DigitalPlayer
+  fullName: HackRFDotnet.ManagedApi.Services.DigitalPlayer
+- uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  commentId: T:HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  href: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.html
+  name: RfDeviceControllerService
+  nameWithType: RfDeviceControllerService
+  fullName: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService

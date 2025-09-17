@@ -1,0 +1,688 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  id: FftEffect
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  children:
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.#ctor(System.Boolean,System.Int32)
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.AffectSignal(System.Span{HackRFDotnet.ManagedApi.Streams.IQ},System.Int32)
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.Dispose
+  langs:
+  - csharp
+  - vb
+  name: FftEffect
+  nameWithType: FftEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  type: Class
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: FftEffect
+    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+    startLine: 7
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  syntax:
+    content: 'public class FftEffect : SignalEffect, ISignalEffect, IDisposable'
+    content.vb: Public Class FftEffect Inherits SignalEffect Implements ISignalEffect, IDisposable
+  inheritance:
+  - System.Object
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+  implements:
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.#ctor(System.Boolean,System.Int32)
+  commentId: M:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.#ctor(System.Boolean,System.Int32)
+  id: '#ctor(System.Boolean,System.Int32)'
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  langs:
+  - csharp
+  - vb
+  name: FftEffect(bool, int)
+  nameWithType: FftEffect.FftEffect(bool, int)
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.FftEffect(bool, int)
+  type: Constructor
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: .ctor
+    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+    startLine: 13
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  syntax:
+    content: public FftEffect(bool forward, int chunkSize)
+    parameters:
+    - id: forward
+      type: System.Boolean
+    - id: chunkSize
+      type: System.Int32
+    content.vb: Public Sub New(forward As Boolean, chunkSize As Integer)
+  overload: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.#ctor*
+  nameWithType.vb: FftEffect.New(Boolean, Integer)
+  fullName.vb: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.New(Boolean, Integer)
+  name.vb: New(Boolean, Integer)
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.AffectSignal(System.Span{HackRFDotnet.ManagedApi.Streams.IQ},System.Int32)
+  commentId: M:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.AffectSignal(System.Span{HackRFDotnet.ManagedApi.Streams.IQ},System.Int32)
+  id: AffectSignal(System.Span{HackRFDotnet.ManagedApi.Streams.IQ},System.Int32)
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  langs:
+  - csharp
+  - vb
+  name: AffectSignal(Span<IQ>, int)
+  nameWithType: FftEffect.AffectSignal(Span<IQ>, int)
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.AffectSignal(System.Span<HackRFDotnet.ManagedApi.Streams.IQ>, int)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: AffectSignal
+    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+    startLine: 21
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  example: []
+  syntax:
+    content: public override int AffectSignal(Span<IQ> signalTheta, int length)
+    parameters:
+    - id: signalTheta
+      type: System.Span{HackRFDotnet.ManagedApi.Streams.IQ}
+    - id: length
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function AffectSignal(signalTheta As Span(Of IQ), length As Integer) As Integer
+  overridden: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.ManagedApi.Streams.IQ},System.Int32)
+  overload: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.AffectSignal*
+  nameWithType.vb: FftEffect.AffectSignal(Span(Of IQ), Integer)
+  fullName.vb: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.AffectSignal(System.Span(Of HackRFDotnet.ManagedApi.Streams.IQ), Integer)
+  name.vb: AffectSignal(Span(Of IQ), Integer)
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.Dispose
+  commentId: M:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.Dispose
+  id: Dispose
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: FftEffect.Dispose()
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.Dispose()
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Dispose
+    path: HackRFDotnet/ManagedApi/Streams/SignalProcessing/Effects/FftEffect.cs
+    startLine: 31
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  href: HackRFDotnet.html
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+    name: Effects
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+    name: Effects
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.html
+  name: SignalEffect
+  nameWithType: SignalEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.html
+  name: ISignalEffect
+  nameWithType: ISignalEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
+  href: HackRFDotnet.html
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+    name: Effects
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+    name: Effects
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces.html
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.#ctor*
+  commentId: Overload:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.#ctor
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Effects_FftEffect__ctor_System_Boolean_System_Int32_
+  name: FftEffect
+  nameWithType: FftEffect.FftEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.FftEffect
+  nameWithType.vb: FftEffect.New
+  fullName.vb: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.New
+  name.vb: New
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.ManagedApi.Streams.IQ},System.Int32)
+  commentId: M:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.ManagedApi.Streams.IQ},System.Int32)
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+  isExternal: true
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Effects_SignalEffect_AffectSignal_System_Span_HackRFDotnet_ManagedApi_Streams_IQ__System_Int32_
+  name: AffectSignal(Span<IQ>, int)
+  nameWithType: SignalEffect.AffectSignal(Span<IQ>, int)
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span<HackRFDotnet.ManagedApi.Streams.IQ>, int)
+  nameWithType.vb: SignalEffect.AffectSignal(Span(Of IQ), Integer)
+  fullName.vb: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span(Of HackRFDotnet.ManagedApi.Streams.IQ), Integer)
+  name.vb: AffectSignal(Span(Of IQ), Integer)
+  spec.csharp:
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.ManagedApi.Streams.IQ},System.Int32)
+    name: AffectSignal
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Effects_SignalEffect_AffectSignal_System_Span_HackRFDotnet_ManagedApi_Streams_IQ__System_Int32_
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: HackRFDotnet.ManagedApi.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.ManagedApi.Streams.IQ.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.AffectSignal(System.Span{HackRFDotnet.ManagedApi.Streams.IQ},System.Int32)
+    name: AffectSignal
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Effects_SignalEffect_AffectSignal_System_Span_HackRFDotnet_ManagedApi_Streams_IQ__System_Int32_
+  - name: (
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: HackRFDotnet.ManagedApi.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.ManagedApi.Streams.IQ.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.AffectSignal*
+  commentId: Overload:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.AffectSignal
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Effects_FftEffect_AffectSignal_System_Span_HackRFDotnet_ManagedApi_Streams_IQ__System_Int32_
+  name: AffectSignal
+  nameWithType: FftEffect.AffectSignal
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.AffectSignal
+- uid: System.Span{HackRFDotnet.ManagedApi.Streams.IQ}
+  commentId: T:System.Span{HackRFDotnet.ManagedApi.Streams.IQ}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<IQ>
+  nameWithType: Span<IQ>
+  fullName: System.Span<HackRFDotnet.ManagedApi.Streams.IQ>
+  nameWithType.vb: Span(Of IQ)
+  fullName.vb: System.Span(Of HackRFDotnet.ManagedApi.Streams.IQ)
+  name.vb: Span(Of IQ)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: HackRFDotnet.ManagedApi.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.ManagedApi.Streams.IQ.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: HackRFDotnet.ManagedApi.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.ManagedApi.Streams.IQ.html
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.Dispose*
+  commentId: Overload:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.Dispose
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.html#HackRFDotnet_ManagedApi_Streams_SignalProcessing_Effects_FftEffect_Dispose
+  name: Dispose
+  nameWithType: FftEffect.Dispose
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

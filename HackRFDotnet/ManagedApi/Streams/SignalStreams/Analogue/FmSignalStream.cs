@@ -7,6 +7,7 @@ namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
 public class FmSignalStream : WaveSignalStream {
     public FmSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stereo = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
         : base(deviceStream, sampleRate, stereo, processingPipeline, keepOpen) {
+
     }
 
     public override int Read(float[] buffer, int offset, int count) {
@@ -15,12 +16,13 @@ public class FmSignalStream : WaveSignalStream {
             ReadSpan(iqBuffer.AsSpan(0, count));
 
             for (var x = 1; x < count; x++) {
-                // Conjugate of a Complex number: the conjugate of x+i*y is x-i*y
                 var delta = iqBuffer[x] * IQ.Conjugate(iqBuffer[x - 1]);
                 buffer[x - 1] = delta.Phase;
             }
+            buffer[count - 1] = buffer[count - 2];
 
-            NormalizeRms(buffer);
+
+            // NormalizeRms(buffer);
         }
         finally {
             ArrayPool<IQ>.Shared.Return(iqBuffer);

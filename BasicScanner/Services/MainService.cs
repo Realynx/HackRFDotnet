@@ -6,6 +6,7 @@ using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
 using HackRFDotnet.ManagedApi.Streams.SignalStreams;
 using HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
+using HackRFDotnet.ManagedApi.Streams.SignalStreams.Digital;
 
 using Microsoft.Extensions.Hosting;
 
@@ -41,8 +42,9 @@ internal class MainService : IHostedService {
         using var deviceStream = new IQDeviceStream(rfDevice);
         deviceStream.OpenRx(new SampleRate(20_000_000));
 
-        //FrequencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
-        AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        FrequencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        //HdRadioPlay(rfDevice, deviceStream);
 
         DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
@@ -53,11 +55,35 @@ internal class MainService : IHostedService {
         //ControlChannel(rfDevice);
     }
 
+    private static void HdRadioPlay(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), RadioBand.FromKHz(200));
+        var effectsPipeline = new SignalProcessingBuilder()
+            .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
+                rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
+
+            .AddSignalEffect(new FftEffect(true, producedChunkSize))
+            .AddSignalEffect(new FrequencyCenteringEffect(RadioBand.FromKHz(-192), reducedSampleRate))
+            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(8)))
+            .AddSignalEffect(new FftEffect(false, producedChunkSize))
+
+            .BuildPipeline();
+
+        var pskSignalStream = new QpskSignalStream(deviceStream, effectsPipeline, keepOpen: false);
+
+
+        var hdRadioSignalStream = new HdRadioSignalStream(deviceStream, reducedSampleRate, stereo: true,
+            processingPipeline: effectsPipeline, keepOpen: false);
+
+        // And AnaloguePlayer let's us resample and pipe an audio out the speakers.
+        var digitalPlayer = new DigitalPlayer(hdRadioSignalStream);
+        digitalPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
+    }
+
     private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
         rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), RadioBand.FromKHz(200));
 
-        // We must build an effects pipeline to clean up our recived signal from the SDR.
+        // We must build an effects pipeline to clean up our received signal from the SDR.
         var effectsPipeline = new SignalProcessingBuilder()
             // Reducer decimates your signal down to it's bandwidth. Since our signal has been frequency shifted by the SDR mixer
             // our target frequency has been shifted to Direct Current (DC).
@@ -65,9 +91,7 @@ internal class MainService : IHostedService {
             // so we "Reduce" it's extraneous information
             .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
                 rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
-            .AddSignalEffect(new SquelchEffect(reducedSampleRate))
 
-            .AddSignalEffect(new SquelchEffect(reducedSampleRate))
             // Fast Fourier Transform from the Time domain signal to the Frequency domain
             .AddSignalEffect(new FftEffect(true, producedChunkSize))
 

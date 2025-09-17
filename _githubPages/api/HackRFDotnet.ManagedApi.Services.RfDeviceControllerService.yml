@@ -1,0 +1,615 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  commentId: T:HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  id: RfDeviceControllerService
+  parent: HackRFDotnet.ManagedApi.Services
+  children:
+  - HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.#ctor
+  - HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.ConnectToFirstDevice
+  - HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.FindDevices
+  - HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.RfDevices
+  langs:
+  - csharp
+  - vb
+  name: RfDeviceControllerService
+  nameWithType: RfDeviceControllerService
+  fullName: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  type: Class
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: RfDeviceControllerService
+    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    startLine: 4
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.ManagedApi.Services
+  syntax:
+    content: public class RfDeviceControllerService
+    content.vb: Public Class RfDeviceControllerService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.RfDevices
+  commentId: F:HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.RfDevices
+  id: RfDevices
+  parent: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  langs:
+  - csharp
+  - vb
+  name: RfDevices
+  nameWithType: RfDeviceControllerService.RfDevices
+  fullName: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.RfDevices
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: RfDevices
+    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    startLine: 5
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.ManagedApi.Services
+  syntax:
+    content: public readonly List<DigitalRadioDevice> RfDevices
+    return:
+      type: System.Collections.Generic.List{HackRFDotnet.ManagedApi.DigitalRadioDevice}
+    content.vb: Public ReadOnly RfDevices As List(Of DigitalRadioDevice)
+- uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.#ctor
+  commentId: M:HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.#ctor
+  id: '#ctor'
+  parent: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  langs:
+  - csharp
+  - vb
+  name: RfDeviceControllerService()
+  nameWithType: RfDeviceControllerService.RfDeviceControllerService()
+  fullName: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.RfDeviceControllerService()
+  type: Constructor
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: .ctor
+    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    startLine: 7
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.ManagedApi.Services
+  syntax:
+    content: public RfDeviceControllerService()
+    content.vb: Public Sub New()
+  overload: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.#ctor*
+  nameWithType.vb: RfDeviceControllerService.New()
+  fullName.vb: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.New()
+  name.vb: New()
+- uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.FindDevices
+  commentId: M:HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.FindDevices
+  id: FindDevices
+  parent: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  langs:
+  - csharp
+  - vb
+  name: FindDevices()
+  nameWithType: RfDeviceControllerService.FindDevices()
+  fullName: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.FindDevices()
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: FindDevices
+    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    startLine: 11
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.ManagedApi.Services
+  syntax:
+    content: public HackRFDeviceList FindDevices()
+    return:
+      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
+    content.vb: Public Function FindDevices() As HackRFDeviceList
+  overload: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.FindDevices*
+- uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.ConnectToFirstDevice
+  commentId: M:HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.ConnectToFirstDevice
+  id: ConnectToFirstDevice
+  parent: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  langs:
+  - csharp
+  - vb
+  name: ConnectToFirstDevice()
+  nameWithType: RfDeviceControllerService.ConnectToFirstDevice()
+  fullName: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.ConnectToFirstDevice()
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: ConnectToFirstDevice
+    path: HackRFDotnet/ManagedApi/Services/RfDeviceControllerService.cs
+    startLine: 21
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.ManagedApi.Services
+  syntax:
+    content: public DigitalRadioDevice? ConnectToFirstDevice()
+    return:
+      type: HackRFDotnet.ManagedApi.DigitalRadioDevice
+    content.vb: Public Function ConnectToFirstDevice() As DigitalRadioDevice
+  overload: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.ConnectToFirstDevice*
+references:
+- uid: HackRFDotnet.ManagedApi.Services
+  commentId: N:HackRFDotnet.ManagedApi.Services
+  href: HackRFDotnet.html
+  name: HackRFDotnet.ManagedApi.Services
+  nameWithType: HackRFDotnet.ManagedApi.Services
+  fullName: HackRFDotnet.ManagedApi.Services
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Services
+    name: Services
+    href: HackRFDotnet.ManagedApi.Services.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Services
+    name: Services
+    href: HackRFDotnet.ManagedApi.Services.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{HackRFDotnet.ManagedApi.DigitalRadioDevice}
+  commentId: T:System.Collections.Generic.List{HackRFDotnet.ManagedApi.DigitalRadioDevice}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<DigitalRadioDevice>
+  nameWithType: List<DigitalRadioDevice>
+  fullName: System.Collections.Generic.List<HackRFDotnet.ManagedApi.DigitalRadioDevice>
+  nameWithType.vb: List(Of DigitalRadioDevice)
+  fullName.vb: System.Collections.Generic.List(Of HackRFDotnet.ManagedApi.DigitalRadioDevice)
+  name.vb: List(Of DigitalRadioDevice)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: HackRFDotnet.ManagedApi.DigitalRadioDevice
+    name: DigitalRadioDevice
+    href: HackRFDotnet.ManagedApi.DigitalRadioDevice.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: HackRFDotnet.ManagedApi.DigitalRadioDevice
+    name: DigitalRadioDevice
+    href: HackRFDotnet.ManagedApi.DigitalRadioDevice.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.#ctor*
+  commentId: Overload:HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.#ctor
+  href: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.html#HackRFDotnet_ManagedApi_Services_RfDeviceControllerService__ctor
+  name: RfDeviceControllerService
+  nameWithType: RfDeviceControllerService.RfDeviceControllerService
+  fullName: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.RfDeviceControllerService
+  nameWithType.vb: RfDeviceControllerService.New
+  fullName.vb: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.New
+  name.vb: New
+- uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.FindDevices*
+  commentId: Overload:HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.FindDevices
+  href: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.html#HackRFDotnet_ManagedApi_Services_RfDeviceControllerService_FindDevices
+  name: FindDevices
+  nameWithType: RfDeviceControllerService.FindDevices
+  fullName: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.FindDevices
+- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
+  commentId: T:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
+  parent: HackRFDotnet.NativeApi.Structs.Devices
+  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.html
+  name: HackRFDeviceList
+  nameWithType: HackRFDeviceList
+  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
+- uid: HackRFDotnet.NativeApi.Structs.Devices
+  commentId: N:HackRFDotnet.NativeApi.Structs.Devices
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Structs.Devices
+  nameWithType: HackRFDotnet.NativeApi.Structs.Devices
+  fullName: HackRFDotnet.NativeApi.Structs.Devices
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs
+    name: Structs
+    href: HackRFDotnet.NativeApi.Structs.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs.Devices
+    name: Devices
+    href: HackRFDotnet.NativeApi.Structs.Devices.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs
+    name: Structs
+    href: HackRFDotnet.NativeApi.Structs.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs.Devices
+    name: Devices
+    href: HackRFDotnet.NativeApi.Structs.Devices.html
+- uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.ConnectToFirstDevice*
+  commentId: Overload:HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.ConnectToFirstDevice
+  href: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.html#HackRFDotnet_ManagedApi_Services_RfDeviceControllerService_ConnectToFirstDevice
+  name: ConnectToFirstDevice
+  nameWithType: RfDeviceControllerService.ConnectToFirstDevice
+  fullName: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService.ConnectToFirstDevice
+- uid: HackRFDotnet.ManagedApi.DigitalRadioDevice
+  commentId: T:HackRFDotnet.ManagedApi.DigitalRadioDevice
+  parent: HackRFDotnet.ManagedApi
+  href: HackRFDotnet.ManagedApi.DigitalRadioDevice.html
+  name: DigitalRadioDevice
+  nameWithType: DigitalRadioDevice
+  fullName: HackRFDotnet.ManagedApi.DigitalRadioDevice
+- uid: HackRFDotnet.ManagedApi
+  commentId: N:HackRFDotnet.ManagedApi
+  href: HackRFDotnet.html
+  name: HackRFDotnet.ManagedApi
+  nameWithType: HackRFDotnet.ManagedApi
+  fullName: HackRFDotnet.ManagedApi
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html

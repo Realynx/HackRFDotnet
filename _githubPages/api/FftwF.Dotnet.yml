@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: FftwF.Dotnet
+  commentId: N:FftwF.Dotnet
+  id: FftwF.Dotnet
+  children:
+  - FftwF.Dotnet.Direction
+  - FftwF.Dotnet.FftwFlags
+  - FftwF.Dotnet.FftwPlan
+  - FftwF.Dotnet.Limits
+  langs:
+  - csharp
+  - vb
+  name: FftwF.Dotnet
+  nameWithType: FftwF.Dotnet
+  fullName: FftwF.Dotnet
+  type: Namespace
+  assemblies:
+  - FftwF.Dotnet
+references:
+- uid: FftwF.Dotnet.FftwFlags
+  commentId: T:FftwF.Dotnet.FftwFlags
+  parent: FftwF.Dotnet
+  href: FftwF.Dotnet.FftwFlags.html
+  name: FftwFlags
+  nameWithType: FftwFlags
+  fullName: FftwF.Dotnet.FftwFlags
+- uid: FftwF.Dotnet.Direction
+  commentId: T:FftwF.Dotnet.Direction
+  href: FftwF.Dotnet.Direction.html
+  name: Direction
+  nameWithType: Direction
+  fullName: FftwF.Dotnet.Direction
+- uid: FftwF.Dotnet.Limits
+  commentId: T:FftwF.Dotnet.Limits
+  href: FftwF.Dotnet.Limits.html
+  name: Limits
+  nameWithType: Limits
+  fullName: FftwF.Dotnet.Limits
+- uid: FftwF.Dotnet.FftwPlan
+  commentId: T:FftwF.Dotnet.FftwPlan
+  href: FftwF.Dotnet.FftwPlan.html
+  name: FftwPlan
+  nameWithType: FftwPlan
+  fullName: FftwF.Dotnet.FftwPlan
+- uid: FftwF.Dotnet
+  commentId: N:FftwF.Dotnet
+  href: FftwF.html
+  name: FftwF.Dotnet
+  nameWithType: FftwF.Dotnet
+  fullName: FftwF.Dotnet
+  spec.csharp:
+  - uid: FftwF
+    name: FftwF
+    href: FftwF.html
+  - name: .
+  - uid: FftwF.Dotnet
+    name: Dotnet
+    href: FftwF.Dotnet.html
+  spec.vb:
+  - uid: FftwF
+    name: FftwF
+    href: FftwF.html
+  - name: .
+  - uid: FftwF.Dotnet
+    name: Dotnet
+    href: FftwF.Dotnet.html

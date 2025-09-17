@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  id: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  children:
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.DownSampleEffect
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.LowPassFilterEffect
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SquelchEffect
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.html
+  name: BasicSignalScanningEffect
+  nameWithType: BasicSignalScanningEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.DownSampleEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.DownSampleEffect
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.DownSampleEffect.html
+  name: DownSampleEffect
+  nameWithType: DownSampleEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.DownSampleEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect.html
+  name: FftEffect
+  nameWithType: FftEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html
+  name: FrequencyCenteringEffect
+  nameWithType: FrequencyCenteringEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.LowPassFilterEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.LowPassFilterEffect
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.LowPassFilterEffect.html
+  name: LowPassFilterEffect
+  nameWithType: LowPassFilterEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.LowPassFilterEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect.html
+  name: SignalEffect
+  nameWithType: SignalEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SquelchEffect
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SquelchEffect
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SquelchEffect.html
+  name: SquelchEffect
+  nameWithType: SquelchEffect
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SquelchEffect
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  href: HackRFDotnet.html
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+    name: Effects
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+    name: Effects
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.html

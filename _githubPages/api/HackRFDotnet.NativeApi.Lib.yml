@@ -1,0 +1,138 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Lib
+  commentId: N:HackRFDotnet.NativeApi.Lib
+  id: HackRFDotnet.NativeApi.Lib
+  children:
+  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug
+  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming
+  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices
+  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
+  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.NativeApi.Lib
+  nameWithType: HackRFDotnet.NativeApi.Lib
+  fullName: HackRFDotnet.NativeApi.Lib
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+  commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  name: HackRfNativeLib
+  nameWithType: HackRfNativeLib
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug
+  commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  name: HackRfNativeLib.Debug
+  nameWithType: HackRfNativeLib.Debug
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug
+    name: Debug
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug
+    name: Debug
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices
+  commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  name: HackRfNativeLib.Devices
+  nameWithType: HackRfNativeLib.Devices
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices
+    name: Devices
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices
+    name: Devices
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming
+  commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  name: HackRfNativeLib.DeviceStreaming
+  nameWithType: HackRfNativeLib.DeviceStreaming
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming
+    name: DeviceStreaming
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming
+    name: DeviceStreaming
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
+  commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  name: HackRfNativeLib.Firmware
+  nameWithType: HackRfNativeLib.Firmware
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
+    name: Firmware
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
+    name: Firmware
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html
+- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake
+  commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake
+  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  name: HackRfNativeLib.Operacake
+  nameWithType: HackRfNativeLib.Operacake
+  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake
+    name: Operacake
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
+    name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake
+    name: Operacake
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html

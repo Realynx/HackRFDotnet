@@ -1,0 +1,374 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
+  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
+  id: HackRFBiasTUserSettingReq
+  parent: HackRFDotnet.NativeApi.Structs
+  children:
+  - HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.off
+  - HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.rx
+  - HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.tx
+  langs:
+  - csharp
+  - vb
+  name: HackRFBiasTUserSettingReq
+  nameWithType: HackRFBiasTUserSettingReq
+  fullName: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
+  type: Struct
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HackRFBiasTUserSettingReq
+    path: HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs
+    startLine: 3
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Structs
+  syntax:
+    content: public struct HackRFBiasTUserSettingReq
+    content.vb: Public Structure HackRFBiasTUserSettingReq
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.tx
+  commentId: F:HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.tx
+  id: tx
+  parent: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
+  langs:
+  - csharp
+  - vb
+  name: tx
+  nameWithType: HackRFBiasTUserSettingReq.tx
+  fullName: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.tx
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: tx
+    path: HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs
+    startLine: 5
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Structs
+  syntax:
+    content: public HackRFBoolUserSetting tx
+    return:
+      type: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
+    content.vb: Public tx As HackRFBoolUserSetting
+- uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.rx
+  commentId: F:HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.rx
+  id: rx
+  parent: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
+  langs:
+  - csharp
+  - vb
+  name: rx
+  nameWithType: HackRFBiasTUserSettingReq.rx
+  fullName: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.rx
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: rx
+    path: HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs
+    startLine: 6
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Structs
+  syntax:
+    content: public HackRFBoolUserSetting rx
+    return:
+      type: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
+    content.vb: Public rx As HackRFBoolUserSetting
+- uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.off
+  commentId: F:HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.off
+  id: off
+  parent: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
+  langs:
+  - csharp
+  - vb
+  name: off
+  nameWithType: HackRFBiasTUserSettingReq.off
+  fullName: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.off
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: off
+    path: HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs
+    startLine: 7
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Structs
+  syntax:
+    content: public HackRFBoolUserSetting off
+    return:
+      type: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
+    content.vb: Public off As HackRFBoolUserSetting
+references:
+- uid: HackRFDotnet.NativeApi.Structs
+  commentId: N:HackRFDotnet.NativeApi.Structs
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Structs
+  nameWithType: HackRFDotnet.NativeApi.Structs
+  fullName: HackRFDotnet.NativeApi.Structs
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs
+    name: Structs
+    href: HackRFDotnet.NativeApi.Structs.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs
+    name: Structs
+    href: HackRFDotnet.NativeApi.Structs.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
+  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
+  parent: HackRFDotnet.NativeApi.Structs
+  href: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.html
+  name: HackRFBoolUserSetting
+  nameWithType: HackRFBoolUserSetting
+  fullName: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting

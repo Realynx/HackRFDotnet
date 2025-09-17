@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  id: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  children:
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.RadioBand
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.SampleRate
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingBuilder
+  - HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingPipeline
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.RadioBand
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.RadioBand
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.RadioBand.html
+  name: RadioBand
+  nameWithType: RadioBand
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.RadioBand
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SampleRate
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.SampleRate
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SampleRate.html
+  name: SampleRate
+  nameWithType: SampleRate
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SampleRate
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingBuilder
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingBuilder
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingBuilder.html
+  name: SignalProcessingBuilder
+  nameWithType: SignalProcessingBuilder
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingBuilder
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingPipeline
+  commentId: T:HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingPipeline
+  parent: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingPipeline.html
+  name: SignalProcessingPipeline
+  nameWithType: SignalProcessingPipeline
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingPipeline
+- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  commentId: N:HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  href: HackRFDotnet.html
+  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  nameWithType: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  fullName: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.ManagedApi.Streams.SignalProcessing.html

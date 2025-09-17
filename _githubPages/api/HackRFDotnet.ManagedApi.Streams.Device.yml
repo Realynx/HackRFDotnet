@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.ManagedApi.Streams.Device
+  commentId: N:HackRFDotnet.ManagedApi.Streams.Device
+  id: HackRFDotnet.ManagedApi.Streams.Device
+  children:
+  - HackRFDotnet.ManagedApi.Streams.Device.IQDeviceStream
+  - HackRFDotnet.ManagedApi.Streams.Device.IQFileStream
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.ManagedApi.Streams.Device
+  nameWithType: HackRFDotnet.ManagedApi.Streams.Device
+  fullName: HackRFDotnet.ManagedApi.Streams.Device
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.ManagedApi.Streams.Device.IQDeviceStream
+  commentId: T:HackRFDotnet.ManagedApi.Streams.Device.IQDeviceStream
+  href: HackRFDotnet.ManagedApi.Streams.Device.IQDeviceStream.html
+  name: IQDeviceStream
+  nameWithType: IQDeviceStream
+  fullName: HackRFDotnet.ManagedApi.Streams.Device.IQDeviceStream
+- uid: HackRFDotnet.ManagedApi.Streams.Device.IQFileStream
+  commentId: T:HackRFDotnet.ManagedApi.Streams.Device.IQFileStream
+  href: HackRFDotnet.ManagedApi.Streams.Device.IQFileStream.html
+  name: IQFileStream
+  nameWithType: IQFileStream
+  fullName: HackRFDotnet.ManagedApi.Streams.Device.IQFileStream

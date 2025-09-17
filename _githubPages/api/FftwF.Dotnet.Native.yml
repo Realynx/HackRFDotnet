@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: FftwF.Dotnet.Native
+  commentId: N:FftwF.Dotnet.Native
+  id: FftwF.Dotnet.Native
+  children:
+  - FftwF.Dotnet.Native.NativeMethods
+  langs:
+  - csharp
+  - vb
+  name: FftwF.Dotnet.Native
+  nameWithType: FftwF.Dotnet.Native
+  fullName: FftwF.Dotnet.Native
+  type: Namespace
+  assemblies:
+  - FftwF.Dotnet
+references:
+- uid: FftwF.Dotnet.Native.NativeMethods
+  commentId: T:FftwF.Dotnet.Native.NativeMethods
+  href: FftwF.Dotnet.Native.NativeMethods.html
+  name: NativeMethods
+  nameWithType: NativeMethods
+  fullName: FftwF.Dotnet.Native.NativeMethods

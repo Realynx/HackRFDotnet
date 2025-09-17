@@ -1,0 +1,466 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfError
+  id: HackrfError
+  parent: HackRFDotnet.NativeApi.Enums.System
+  children:
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_BUSY
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NO_MEM
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_OTHER
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_STOPPED
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_THREAD
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_USB_API_VERSION
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_TRUE
+  langs:
+  - csharp
+  - vb
+  name: HackrfError
+  nameWithType: HackrfError
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  type: Enum
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HackrfError
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 1
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  syntax:
+    content: public enum HackrfError
+    content.vb: Public Enum HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
+  id: HACKRF_SUCCESS
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_SUCCESS
+  nameWithType: HackrfError.HACKRF_SUCCESS
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_SUCCESS
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 5
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_SUCCESS = 0
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_TRUE
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_TRUE
+  id: HACKRF_TRUE
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_TRUE
+  nameWithType: HackrfError.HACKRF_TRUE
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_TRUE
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_TRUE
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 9
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_TRUE = 1
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
+  id: HACKRF_ERROR_INVALID_PARAM
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_INVALID_PARAM
+  nameWithType: HackrfError.HACKRF_ERROR_INVALID_PARAM
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_INVALID_PARAM
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 13
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_INVALID_PARAM = -2
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
+  id: HACKRF_ERROR_NOT_FOUND
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_NOT_FOUND
+  nameWithType: HackrfError.HACKRF_ERROR_NOT_FOUND
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_NOT_FOUND
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 17
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_NOT_FOUND = -5
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_BUSY
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_BUSY
+  id: HACKRF_ERROR_BUSY
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_BUSY
+  nameWithType: HackrfError.HACKRF_ERROR_BUSY
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_BUSY
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_BUSY
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 21
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_BUSY = -6
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NO_MEM
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NO_MEM
+  id: HACKRF_ERROR_NO_MEM
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_NO_MEM
+  nameWithType: HackrfError.HACKRF_ERROR_NO_MEM
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NO_MEM
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_NO_MEM
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 25
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_NO_MEM = -11
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
+  id: HACKRF_ERROR_LIBUSB
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_LIBUSB
+  nameWithType: HackrfError.HACKRF_ERROR_LIBUSB
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_LIBUSB
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 29
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_LIBUSB = -1000
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_THREAD
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_THREAD
+  id: HACKRF_ERROR_THREAD
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_THREAD
+  nameWithType: HackrfError.HACKRF_ERROR_THREAD
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_THREAD
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_THREAD
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 33
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_THREAD = -1001
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
+  id: HACKRF_ERROR_STREAMING_THREAD_ERR
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_STREAMING_THREAD_ERR
+  nameWithType: HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_STREAMING_THREAD_ERR
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 37
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_STREAMING_THREAD_ERR = -1002
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_STOPPED
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_STOPPED
+  id: HACKRF_ERROR_STREAMING_STOPPED
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_STREAMING_STOPPED
+  nameWithType: HackrfError.HACKRF_ERROR_STREAMING_STOPPED
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_STOPPED
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_STREAMING_STOPPED
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 41
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_STREAMING_STOPPED = -1003
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
+  id: HACKRF_ERROR_STREAMING_EXIT_CALLED
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_STREAMING_EXIT_CALLED
+  nameWithType: HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_STREAMING_EXIT_CALLED
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 45
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_STREAMING_EXIT_CALLED = -1004
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_USB_API_VERSION
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_USB_API_VERSION
+  id: HACKRF_ERROR_USB_API_VERSION
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_USB_API_VERSION
+  nameWithType: HackrfError.HACKRF_ERROR_USB_API_VERSION
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_USB_API_VERSION
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_USB_API_VERSION
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 49
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_USB_API_VERSION = -1005
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
+  id: HACKRF_ERROR_NOT_LAST_DEVICE
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_NOT_LAST_DEVICE
+  nameWithType: HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_NOT_LAST_DEVICE
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 53
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_NOT_LAST_DEVICE = -2000
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_OTHER
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_OTHER
+  id: HACKRF_ERROR_OTHER
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  langs:
+  - csharp
+  - vb
+  name: HACKRF_ERROR_OTHER
+  nameWithType: HackrfError.HACKRF_ERROR_OTHER
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_OTHER
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HACKRF_ERROR_OTHER
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
+    startLine: 57
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: HACKRF_ERROR_OTHER = -9999
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
+references:
+- uid: HackRFDotnet.NativeApi.Enums.System
+  commentId: N:HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Enums.System
+  nameWithType: HackRFDotnet.NativeApi.Enums.System
+  fullName: HackRFDotnet.NativeApi.Enums.System
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfError
+  parent: HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+  name: HackrfError
+  nameWithType: HackrfError
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError

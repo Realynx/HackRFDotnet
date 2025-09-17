@@ -1,0 +1,519 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks
+  commentId: T:HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks
+  id: IQConvertBytesBenchmarks
+  parent: HackRFDotnet.Benchmarks
+  children:
+  - HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess
+  - HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess
+  - HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IqBytesLength
+  - HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.Setup
+  langs:
+  - csharp
+  - vb
+  name: IQConvertBytesBenchmarks
+  nameWithType: IQConvertBytesBenchmarks
+  fullName: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks
+  type: Class
+  source:
+    remote:
+      path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: IQConvertBytesBenchmarks
+    path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+    startLine: 8
+  assemblies:
+  - HackRFDotnet.Benchmarks
+  namespace: HackRFDotnet.Benchmarks
+  syntax:
+    content: public class IQConvertBytesBenchmarks
+    content.vb: Public Class IQConvertBytesBenchmarks
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IqBytesLength
+  commentId: P:HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IqBytesLength
+  id: IqBytesLength
+  parent: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: IqBytesLength
+  nameWithType: IQConvertBytesBenchmarks.IqBytesLength
+  fullName: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IqBytesLength
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: IqBytesLength
+    path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+    startLine: 11
+  assemblies:
+  - HackRFDotnet.Benchmarks
+  namespace: HackRFDotnet.Benchmarks
+  syntax:
+    content: >-
+      [Params(new object?[] { 262144 })]
+
+      public int IqBytesLength { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Params(New Object() { 262144 })>
+
+      Public Property IqBytesLength As Integer
+  overload: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IqBytesLength*
+- uid: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.Setup
+  commentId: M:HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.Setup
+  id: Setup
+  parent: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: IQConvertBytesBenchmarks.Setup()
+  fullName: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.Setup()
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Setup
+    path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+    startLine: 16
+  assemblies:
+  - HackRFDotnet.Benchmarks
+  namespace: HackRFDotnet.Benchmarks
+  syntax:
+    content: >-
+      [GlobalSetup]
+
+      public void Setup()
+    content.vb: >-
+      <GlobalSetup>
+
+      Public Sub Setup()
+  overload: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.Setup*
+  attributes:
+  - type: BenchmarkDotNet.Attributes.GlobalSetupAttribute
+    ctor: BenchmarkDotNet.Attributes.GlobalSetupAttribute.#ctor
+    arguments: []
+- uid: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess
+  commentId: M:HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess
+  id: IQConvertBytes_QuadAccess
+  parent: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: IQConvertBytes_QuadAccess()
+  nameWithType: IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess()
+  fullName: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess()
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: IQConvertBytes_QuadAccess
+    path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+    startLine: 25
+  assemblies:
+  - HackRFDotnet.Benchmarks
+  namespace: HackRFDotnet.Benchmarks
+  syntax:
+    content: >-
+      [Benchmark(26, "C:\\Users\\poofi\\source\\repos\\HackRFDotnet\\HackRFDotnet.Benchmarks\\IQConvertBytesBenchmarks.cs")]
+
+      public Complex[] IQConvertBytes_QuadAccess()
+    return:
+      type: System.Numerics.Complex[]
+    content.vb: >-
+      <Benchmark(26, "C:\Users\poofi\source\repos\HackRFDotnet\HackRFDotnet.Benchmarks\IQConvertBytesBenchmarks.cs")>
+
+      Public Function IQConvertBytes_QuadAccess() As Complex()
+  overload: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess*
+  attributes:
+  - type: BenchmarkDotNet.Attributes.BenchmarkAttribute
+    ctor: BenchmarkDotNet.Attributes.BenchmarkAttribute.#ctor(System.Int32,System.String)
+    arguments:
+    - type: System.Int32
+      value: 26
+    - type: System.String
+      value: C:\Users\poofi\source\repos\HackRFDotnet\HackRFDotnet.Benchmarks\IQConvertBytesBenchmarks.cs
+- uid: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess
+  commentId: M:HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess
+  id: IQConvertBytes_SingleAccess
+  parent: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: IQConvertBytes_SingleAccess()
+  nameWithType: IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess()
+  fullName: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess()
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: IQConvertBytes_SingleAccess
+    path: HackRFDotnet.Benchmarks/IQConvertBytesBenchmarks.cs
+    startLine: 57
+  assemblies:
+  - HackRFDotnet.Benchmarks
+  namespace: HackRFDotnet.Benchmarks
+  syntax:
+    content: >-
+      [Benchmark(58, "C:\\Users\\poofi\\source\\repos\\HackRFDotnet\\HackRFDotnet.Benchmarks\\IQConvertBytesBenchmarks.cs", Baseline = true)]
+
+      public Complex[] IQConvertBytes_SingleAccess()
+    return:
+      type: System.Numerics.Complex[]
+    content.vb: >-
+      <Benchmark(58, "C:\Users\poofi\source\repos\HackRFDotnet\HackRFDotnet.Benchmarks\IQConvertBytesBenchmarks.cs", Baseline:=True)>
+
+      Public Function IQConvertBytes_SingleAccess() As Complex()
+  overload: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess*
+  attributes:
+  - type: BenchmarkDotNet.Attributes.BenchmarkAttribute
+    ctor: BenchmarkDotNet.Attributes.BenchmarkAttribute.#ctor(System.Int32,System.String)
+    arguments:
+    - type: System.Int32
+      value: 58
+    - type: System.String
+      value: C:\Users\poofi\source\repos\HackRFDotnet\HackRFDotnet.Benchmarks\IQConvertBytesBenchmarks.cs
+    namedArguments:
+    - name: Baseline
+      type: System.Boolean
+      value: true
+references:
+- uid: HackRFDotnet.Benchmarks
+  commentId: N:HackRFDotnet.Benchmarks
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Benchmarks
+  nameWithType: HackRFDotnet.Benchmarks
+  fullName: HackRFDotnet.Benchmarks
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Benchmarks
+    name: Benchmarks
+    href: HackRFDotnet.Benchmarks.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Benchmarks
+    name: Benchmarks
+    href: HackRFDotnet.Benchmarks.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IqBytesLength*
+  commentId: Overload:HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IqBytesLength
+  href: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.html#HackRFDotnet_Benchmarks_IQConvertBytesBenchmarks_IqBytesLength
+  name: IqBytesLength
+  nameWithType: IQConvertBytesBenchmarks.IqBytesLength
+  fullName: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IqBytesLength
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.Setup*
+  commentId: Overload:HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.Setup
+  href: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.html#HackRFDotnet_Benchmarks_IQConvertBytesBenchmarks_Setup
+  name: Setup
+  nameWithType: IQConvertBytesBenchmarks.Setup
+  fullName: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.Setup
+- uid: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess*
+  commentId: Overload:HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess
+  href: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.html#HackRFDotnet_Benchmarks_IQConvertBytesBenchmarks_IQConvertBytes_QuadAccess
+  name: IQConvertBytes_QuadAccess
+  nameWithType: IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess
+  fullName: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_QuadAccess
+- uid: System.Numerics.Complex[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  name: Complex[]
+  nameWithType: Complex[]
+  fullName: System.Numerics.Complex[]
+  nameWithType.vb: Complex()
+  fullName.vb: System.Numerics.Complex()
+  name.vb: Complex()
+  spec.csharp:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Numerics.Complex
+    name: Complex
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  - name: (
+  - name: )
+- uid: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess*
+  commentId: Overload:HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess
+  href: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.html#HackRFDotnet_Benchmarks_IQConvertBytesBenchmarks_IQConvertBytes_SingleAccess
+  name: IQConvertBytes_SingleAccess
+  nameWithType: IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess
+  fullName: HackRFDotnet.Benchmarks.IQConvertBytesBenchmarks.IQConvertBytes_SingleAccess

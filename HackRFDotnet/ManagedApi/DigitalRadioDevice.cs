@@ -40,15 +40,15 @@ namespace HackRFDotnet.ManagedApi {
             // This shifts the signal to offset the 0 dc spike away from the signal we want.
             radioFrequency -= DeviceSamplingRate.NyquistFrequencyRange / 2;
 
-            //var baseBandFilter = HackRfNativeLib.DeviceStreaming.ComputeBasebandFilterBandWith((uint)radioFrequency.Hz);
-            //var setFilter = HackRfNativeLib.DeviceStreaming.SetBasebandFilterBandith(DevicePtr, baseBandFilter) != 0;
-
             return HackRfNativeLib.DeviceStreaming.SetFrequency(DevicePtr, (uint)radioFrequency.Hz) == 0;
         }
 
         public void SetSampleRate(SampleRate sampleRate) {
             DeviceSamplingRate = sampleRate;
             HackRfNativeLib.DeviceStreaming.SetSampleRate(DevicePtr, sampleRate.Sps);
+
+            var baseBandFilter = HackRfNativeLib.DeviceStreaming.ComputeBasebandFilterBandWidth((uint)sampleRate.NyquistFrequencyRange.Hz);
+            var setFilter = HackRfNativeLib.DeviceStreaming.SetBasebandFilterBandwidth(DevicePtr, baseBandFilter) != 0;
         }
 
         public bool StartRx(HackRFSampleBlockCallback rxCallback) {

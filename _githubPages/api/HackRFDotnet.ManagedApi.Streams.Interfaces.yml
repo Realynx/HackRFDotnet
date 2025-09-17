@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.ManagedApi.Streams.Interfaces
+  commentId: N:HackRFDotnet.ManagedApi.Streams.Interfaces
+  id: HackRFDotnet.ManagedApi.Streams.Interfaces
+  children:
+  - HackRFDotnet.ManagedApi.Streams.Interfaces.IIQStream
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.ManagedApi.Streams.Interfaces
+  nameWithType: HackRFDotnet.ManagedApi.Streams.Interfaces
+  fullName: HackRFDotnet.ManagedApi.Streams.Interfaces
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.ManagedApi.Streams.Interfaces.IIQStream
+  commentId: T:HackRFDotnet.ManagedApi.Streams.Interfaces.IIQStream
+  parent: HackRFDotnet.ManagedApi.Streams.Interfaces
+  href: HackRFDotnet.ManagedApi.Streams.Interfaces.IIQStream.html
+  name: IIQStream
+  nameWithType: IIQStream
+  fullName: HackRFDotnet.ManagedApi.Streams.Interfaces.IIQStream
+- uid: HackRFDotnet.ManagedApi.Streams.Interfaces
+  commentId: N:HackRFDotnet.ManagedApi.Streams.Interfaces
+  href: HackRFDotnet.html
+  name: HackRFDotnet.ManagedApi.Streams.Interfaces
+  nameWithType: HackRFDotnet.ManagedApi.Streams.Interfaces
+  fullName: HackRFDotnet.ManagedApi.Streams.Interfaces
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.ManagedApi.Streams.Interfaces.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi
+    name: ManagedApi
+    href: HackRFDotnet.ManagedApi.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams
+    name: Streams
+    href: HackRFDotnet.ManagedApi.Streams.html
+  - name: .
+  - uid: HackRFDotnet.ManagedApi.Streams.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.ManagedApi.Streams.Interfaces.html

@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback
+  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback
+  id: HackRFTxBlockCompleteCallback
+  parent: HackRFDotnet.NativeApi.Structs
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: HackRFTxBlockCompleteCallback
+  nameWithType: HackRFTxBlockCompleteCallback
+  fullName: HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback
+  type: Delegate
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HackRFTxBlockCompleteCallback
+    path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
+    startLine: 31
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Structs
+  syntax:
+    content: public delegate void HackRFTxBlockCompleteCallback(HackrfTransfer* transfer, int status)
+    parameters:
+    - id: transfer
+      type: HackRFDotnet.NativeApi.Structs.HackrfTransfer*
+    - id: status
+      type: System.Int32
+    content.vb: Public Delegate Sub HackRFTxBlockCompleteCallback(transfer As HackrfTransfer*, status As Integer)
+references:
+- uid: HackRFDotnet.NativeApi.Structs
+  commentId: N:HackRFDotnet.NativeApi.Structs
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Structs
+  nameWithType: HackRFDotnet.NativeApi.Structs
+  fullName: HackRFDotnet.NativeApi.Structs
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs
+    name: Structs
+    href: HackRFDotnet.NativeApi.Structs.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs
+    name: Structs
+    href: HackRFDotnet.NativeApi.Structs.html
+- uid: HackRFDotnet.NativeApi.Structs.HackrfTransfer*
+  isExternal: true
+  href: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html
+  name: HackrfTransfer*
+  nameWithType: HackrfTransfer*
+  fullName: HackRFDotnet.NativeApi.Structs.HackrfTransfer*
+  spec.csharp:
+  - uid: HackRFDotnet.NativeApi.Structs.HackrfTransfer
+    name: HackrfTransfer
+    href: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html
+  - name: '*'
+  spec.vb:
+  - uid: HackRFDotnet.NativeApi.Structs.HackrfTransfer
+    name: HackrfTransfer
+    href: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html
+  - name: '*'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

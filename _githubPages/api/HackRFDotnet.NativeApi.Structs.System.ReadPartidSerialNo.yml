@@ -1,0 +1,368 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
+  commentId: T:HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
+  id: ReadPartidSerialNo
+  parent: HackRFDotnet.NativeApi.Structs.System
+  children:
+  - HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.part_id
+  - HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.serial_no
+  langs:
+  - csharp
+  - vb
+  name: ReadPartidSerialNo
+  nameWithType: ReadPartidSerialNo
+  fullName: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
+  type: Struct
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Structs/System/ReadPartidSerialNo.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: ReadPartidSerialNo
+    path: HackRFDotnet/NativeApi/Structs/System/ReadPartidSerialNo.cs
+    startLine: 3
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Structs.System
+  syntax:
+    content: public struct ReadPartidSerialNo
+    content.vb: Public Structure ReadPartidSerialNo
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.part_id
+  commentId: F:HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.part_id
+  id: part_id
+  parent: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
+  langs:
+  - csharp
+  - vb
+  name: part_id
+  nameWithType: ReadPartidSerialNo.part_id
+  fullName: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.part_id
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Structs/System/ReadPartidSerialNo.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: part_id
+    path: HackRFDotnet/NativeApi/Structs/System/ReadPartidSerialNo.cs
+    startLine: 6
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Structs.System
+  syntax:
+    content: public uint* part_id
+    return:
+      type: System.UInt32*
+    content.vb: Public part_id As UInteger*
+- uid: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.serial_no
+  commentId: F:HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.serial_no
+  id: serial_no
+  parent: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
+  langs:
+  - csharp
+  - vb
+  name: serial_no
+  nameWithType: ReadPartidSerialNo.serial_no
+  fullName: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.serial_no
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Structs/System/ReadPartidSerialNo.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: serial_no
+    path: HackRFDotnet/NativeApi/Structs/System/ReadPartidSerialNo.cs
+    startLine: 9
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Structs.System
+  syntax:
+    content: public uint* serial_no
+    return:
+      type: System.UInt32*
+    content.vb: Public serial_no As UInteger*
+references:
+- uid: HackRFDotnet.NativeApi.Structs.System
+  commentId: N:HackRFDotnet.NativeApi.Structs.System
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Structs.System
+  nameWithType: HackRFDotnet.NativeApi.Structs.System
+  fullName: HackRFDotnet.NativeApi.Structs.System
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs
+    name: Structs
+    href: HackRFDotnet.NativeApi.Structs.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs.System
+    name: System
+    href: HackRFDotnet.NativeApi.Structs.System.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs
+    name: Structs
+    href: HackRFDotnet.NativeApi.Structs.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Structs.System
+    name: System
+    href: HackRFDotnet.NativeApi.Structs.System.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt32*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint*
+  nameWithType: uint*
+  fullName: uint*
+  nameWithType.vb: UInteger*
+  fullName.vb: UInteger*
+  name.vb: UInteger*
+  spec.csharp:
+  - uid: System.UInt32
+    name: uint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '*'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInteger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: '*'

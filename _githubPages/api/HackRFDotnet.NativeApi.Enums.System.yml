@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Enums.System
+  commentId: N:HackRFDotnet.NativeApi.Enums.System
+  id: HackRFDotnet.NativeApi.Enums.System
+  children:
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  - HackRFDotnet.NativeApi.Enums.System.HackrfError
+  - HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.NativeApi.Enums.System
+  nameWithType: HackRFDotnet.NativeApi.Enums.System
+  fullName: HackRFDotnet.NativeApi.Enums.System
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
+  parent: HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.html
+  name: HackrfBoardId
+  nameWithType: HackrfBoardId
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  parent: HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.html
+  name: HackrfBoardRev
+  nameWithType: HackrfBoardRev
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfError
+  parent: HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+  name: HackrfError
+  nameWithType: HackrfError
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+  parent: HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
+  name: HackrfUsbBoardId
+  nameWithType: HackrfUsbBoardId
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+- uid: HackRFDotnet.NativeApi.Enums.System
+  commentId: N:HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Enums.System
+  nameWithType: HackRFDotnet.NativeApi.Enums.System
+  fullName: HackRFDotnet.NativeApi.Enums.System
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html

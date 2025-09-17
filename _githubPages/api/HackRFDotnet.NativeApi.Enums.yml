@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Enums
+  commentId: N:HackRFDotnet.NativeApi.Enums
+  id: HackRFDotnet.NativeApi.Enums
+  children:
+  - HackRFDotnet.NativeApi.Enums.RfPathFilter
+  - HackRFDotnet.NativeApi.Enums.SweepStyle
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.NativeApi.Enums
+  nameWithType: HackRFDotnet.NativeApi.Enums
+  fullName: HackRFDotnet.NativeApi.Enums
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
+  commentId: T:HackRFDotnet.NativeApi.Enums.RfPathFilter
+  parent: HackRFDotnet.NativeApi.Enums
+  href: HackRFDotnet.NativeApi.Enums.RfPathFilter.html
+  name: RfPathFilter
+  nameWithType: RfPathFilter
+  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter
+- uid: HackRFDotnet.NativeApi.Enums.SweepStyle
+  commentId: T:HackRFDotnet.NativeApi.Enums.SweepStyle
+  parent: HackRFDotnet.NativeApi.Enums
+  href: HackRFDotnet.NativeApi.Enums.SweepStyle.html
+  name: SweepStyle
+  nameWithType: SweepStyle
+  fullName: HackRFDotnet.NativeApi.Enums.SweepStyle
+- uid: HackRFDotnet.NativeApi.Enums
+  commentId: N:HackRFDotnet.NativeApi.Enums
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Enums
+  nameWithType: HackRFDotnet.NativeApi.Enums
+  fullName: HackRFDotnet.NativeApi.Enums
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html

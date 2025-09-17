@@ -1,0 +1,465 @@
+### YamlMime:ManagedReference
+items:
+- uid: BasicScanner.NativeMethods.kernel32Methods
+  commentId: T:BasicScanner.NativeMethods.kernel32Methods
+  id: kernel32Methods
+  parent: BasicScanner.NativeMethods
+  children:
+  - BasicScanner.NativeMethods.kernel32Methods.GetStdHandle(System.Int32)
+  - BasicScanner.NativeMethods.kernel32Methods.STD_OUTPUT_HANDLE
+  - BasicScanner.NativeMethods.kernel32Methods.WriteConsoleOutputW(System.IntPtr,BasicScanner.NativeMethods.CHAR_INFO*,BasicScanner.NativeMethods.COORD,BasicScanner.NativeMethods.COORD,BasicScanner.NativeMethods.SMALL_RECT@)
+  langs:
+  - csharp
+  - vb
+  name: kernel32Methods
+  nameWithType: kernel32Methods
+  fullName: BasicScanner.NativeMethods.kernel32Methods
+  type: Class
+  source:
+    remote:
+      path: BasicScanner/NativeMethods/kernel32Methods.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: kernel32Methods
+    path: BasicScanner/NativeMethods/kernel32Methods.cs
+    startLine: 26
+  assemblies:
+  - BasicScanner
+  namespace: BasicScanner.NativeMethods
+  syntax:
+    content: public static class kernel32Methods
+    content.vb: Public Module kernel32Methods
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: BasicScanner.NativeMethods.kernel32Methods.GetStdHandle(System.Int32)
+  commentId: M:BasicScanner.NativeMethods.kernel32Methods.GetStdHandle(System.Int32)
+  id: GetStdHandle(System.Int32)
+  parent: BasicScanner.NativeMethods.kernel32Methods
+  langs:
+  - csharp
+  - vb
+  name: GetStdHandle(int)
+  nameWithType: kernel32Methods.GetStdHandle(int)
+  fullName: BasicScanner.NativeMethods.kernel32Methods.GetStdHandle(int)
+  type: Method
+  assemblies:
+  - BasicScanner
+  namespace: BasicScanner.NativeMethods
+  syntax:
+    content: public static extern nint GetStdHandle(int nStdHandle)
+    parameters:
+    - id: nStdHandle
+      type: System.Int32
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function GetStdHandle(nStdHandle As Integer) As IntPtr
+  overload: BasicScanner.NativeMethods.kernel32Methods.GetStdHandle*
+  nameWithType.vb: kernel32Methods.GetStdHandle(Integer)
+  fullName.vb: BasicScanner.NativeMethods.kernel32Methods.GetStdHandle(Integer)
+  name.vb: GetStdHandle(Integer)
+- uid: BasicScanner.NativeMethods.kernel32Methods.WriteConsoleOutputW(System.IntPtr,BasicScanner.NativeMethods.CHAR_INFO*,BasicScanner.NativeMethods.COORD,BasicScanner.NativeMethods.COORD,BasicScanner.NativeMethods.SMALL_RECT@)
+  commentId: M:BasicScanner.NativeMethods.kernel32Methods.WriteConsoleOutputW(System.IntPtr,BasicScanner.NativeMethods.CHAR_INFO*,BasicScanner.NativeMethods.COORD,BasicScanner.NativeMethods.COORD,BasicScanner.NativeMethods.SMALL_RECT@)
+  id: WriteConsoleOutputW(System.IntPtr,BasicScanner.NativeMethods.CHAR_INFO*,BasicScanner.NativeMethods.COORD,BasicScanner.NativeMethods.COORD,BasicScanner.NativeMethods.SMALL_RECT@)
+  parent: BasicScanner.NativeMethods.kernel32Methods
+  langs:
+  - csharp
+  - vb
+  name: WriteConsoleOutputW(nint, CHAR_INFO*, COORD, COORD, ref SMALL_RECT)
+  nameWithType: kernel32Methods.WriteConsoleOutputW(nint, CHAR_INFO*, COORD, COORD, ref SMALL_RECT)
+  fullName: BasicScanner.NativeMethods.kernel32Methods.WriteConsoleOutputW(nint, BasicScanner.NativeMethods.CHAR_INFO*, BasicScanner.NativeMethods.COORD, BasicScanner.NativeMethods.COORD, ref BasicScanner.NativeMethods.SMALL_RECT)
+  type: Method
+  assemblies:
+  - BasicScanner
+  namespace: BasicScanner.NativeMethods
+  syntax:
+    content: public static extern bool WriteConsoleOutputW(nint hConsoleOutput, CHAR_INFO* lpBuffer, COORD dwBufferSize, COORD dwBufferCoord, ref SMALL_RECT lpWriteRegion)
+    parameters:
+    - id: hConsoleOutput
+      type: System.IntPtr
+    - id: lpBuffer
+      type: BasicScanner.NativeMethods.CHAR_INFO*
+    - id: dwBufferSize
+      type: BasicScanner.NativeMethods.COORD
+    - id: dwBufferCoord
+      type: BasicScanner.NativeMethods.COORD
+    - id: lpWriteRegion
+      type: BasicScanner.NativeMethods.SMALL_RECT
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function WriteConsoleOutputW(hConsoleOutput As IntPtr, lpBuffer As CHAR_INFO*, dwBufferSize As COORD, dwBufferCoord As COORD, lpWriteRegion As SMALL_RECT) As Boolean
+  overload: BasicScanner.NativeMethods.kernel32Methods.WriteConsoleOutputW*
+  nameWithType.vb: kernel32Methods.WriteConsoleOutputW(IntPtr, CHAR_INFO*, COORD, COORD, SMALL_RECT)
+  fullName.vb: BasicScanner.NativeMethods.kernel32Methods.WriteConsoleOutputW(System.IntPtr, BasicScanner.NativeMethods.CHAR_INFO*, BasicScanner.NativeMethods.COORD, BasicScanner.NativeMethods.COORD, BasicScanner.NativeMethods.SMALL_RECT)
+  name.vb: WriteConsoleOutputW(IntPtr, CHAR_INFO*, COORD, COORD, SMALL_RECT)
+- uid: BasicScanner.NativeMethods.kernel32Methods.STD_OUTPUT_HANDLE
+  commentId: F:BasicScanner.NativeMethods.kernel32Methods.STD_OUTPUT_HANDLE
+  id: STD_OUTPUT_HANDLE
+  parent: BasicScanner.NativeMethods.kernel32Methods
+  langs:
+  - csharp
+  - vb
+  name: STD_OUTPUT_HANDLE
+  nameWithType: kernel32Methods.STD_OUTPUT_HANDLE
+  fullName: BasicScanner.NativeMethods.kernel32Methods.STD_OUTPUT_HANDLE
+  type: Field
+  source:
+    remote:
+      path: BasicScanner/NativeMethods/kernel32Methods.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: STD_OUTPUT_HANDLE
+    path: BasicScanner/NativeMethods/kernel32Methods.cs
+    startLine: 39
+  assemblies:
+  - BasicScanner
+  namespace: BasicScanner.NativeMethods
+  syntax:
+    content: public const int STD_OUTPUT_HANDLE = -11
+    return:
+      type: System.Int32
+    content.vb: Public Const STD_OUTPUT_HANDLE As Integer = -11
+references:
+- uid: BasicScanner.NativeMethods
+  commentId: N:BasicScanner.NativeMethods
+  href: BasicScanner.html
+  name: BasicScanner.NativeMethods
+  nameWithType: BasicScanner.NativeMethods
+  fullName: BasicScanner.NativeMethods
+  spec.csharp:
+  - uid: BasicScanner
+    name: BasicScanner
+    href: BasicScanner.html
+  - name: .
+  - uid: BasicScanner.NativeMethods
+    name: NativeMethods
+    href: BasicScanner.NativeMethods.html
+  spec.vb:
+  - uid: BasicScanner
+    name: BasicScanner
+    href: BasicScanner.html
+  - name: .
+  - uid: BasicScanner.NativeMethods
+    name: NativeMethods
+    href: BasicScanner.NativeMethods.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BasicScanner.NativeMethods.kernel32Methods.GetStdHandle*
+  commentId: Overload:BasicScanner.NativeMethods.kernel32Methods.GetStdHandle
+  isExternal: true
+  href: BasicScanner.NativeMethods.kernel32Methods.html#BasicScanner_NativeMethods_kernel32Methods_GetStdHandle_System_Int32_
+  name: GetStdHandle
+  nameWithType: kernel32Methods.GetStdHandle
+  fullName: BasicScanner.NativeMethods.kernel32Methods.GetStdHandle
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: BasicScanner.NativeMethods.kernel32Methods.WriteConsoleOutputW*
+  commentId: Overload:BasicScanner.NativeMethods.kernel32Methods.WriteConsoleOutputW
+  isExternal: true
+  href: BasicScanner.NativeMethods.kernel32Methods.html#BasicScanner_NativeMethods_kernel32Methods_WriteConsoleOutputW_System_IntPtr_BasicScanner_NativeMethods_CHAR_INFO__BasicScanner_NativeMethods_COORD_BasicScanner_NativeMethods_COORD_BasicScanner_NativeMethods_SMALL_RECT__
+  name: WriteConsoleOutputW
+  nameWithType: kernel32Methods.WriteConsoleOutputW
+  fullName: BasicScanner.NativeMethods.kernel32Methods.WriteConsoleOutputW
+- uid: BasicScanner.NativeMethods.CHAR_INFO*
+  isExternal: true
+  href: BasicScanner.NativeMethods.CHAR_INFO.html
+  name: CHAR_INFO*
+  nameWithType: CHAR_INFO*
+  fullName: BasicScanner.NativeMethods.CHAR_INFO*
+  spec.csharp:
+  - uid: BasicScanner.NativeMethods.CHAR_INFO
+    name: CHAR_INFO
+    href: BasicScanner.NativeMethods.CHAR_INFO.html
+  - name: '*'
+  spec.vb:
+  - uid: BasicScanner.NativeMethods.CHAR_INFO
+    name: CHAR_INFO
+    href: BasicScanner.NativeMethods.CHAR_INFO.html
+  - name: '*'
+- uid: BasicScanner.NativeMethods.COORD
+  commentId: T:BasicScanner.NativeMethods.COORD
+  parent: BasicScanner.NativeMethods
+  href: BasicScanner.NativeMethods.COORD.html
+  name: COORD
+  nameWithType: COORD
+  fullName: BasicScanner.NativeMethods.COORD
+- uid: BasicScanner.NativeMethods.SMALL_RECT
+  commentId: T:BasicScanner.NativeMethods.SMALL_RECT
+  parent: BasicScanner.NativeMethods
+  href: BasicScanner.NativeMethods.SMALL_RECT.html
+  name: SMALL_RECT
+  nameWithType: SMALL_RECT
+  fullName: BasicScanner.NativeMethods.SMALL_RECT
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

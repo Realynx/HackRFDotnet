@@ -1,0 +1,438 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  id: HackrfBoardRev
+  parent: HackRFDotnet.NativeApi.Enums.System
+  children:
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R10
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R6
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R7
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R8
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R9
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_OLD
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R10
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R6
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R7
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R8
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R9
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_UNDETECTED
+  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_UNRECOGNIZED
+  langs:
+  - csharp
+  - vb
+  name: HackrfBoardRev
+  nameWithType: HackrfBoardRev
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  type: Enum
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: HackrfBoardRev
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 1
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  syntax:
+    content: public enum HackrfBoardRev
+    content.vb: Public Enum HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_OLD
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_OLD
+  id: BOARD_REV_HACKRF1_OLD
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_HACKRF1_OLD
+  nameWithType: HackrfBoardRev.BOARD_REV_HACKRF1_OLD
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_OLD
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_HACKRF1_OLD
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 5
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_HACKRF1_OLD = 0
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R6
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R6
+  id: BOARD_REV_HACKRF1_R6
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_HACKRF1_R6
+  nameWithType: HackrfBoardRev.BOARD_REV_HACKRF1_R6
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R6
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_HACKRF1_R6
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 9
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_HACKRF1_R6 = 1
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R7
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R7
+  id: BOARD_REV_HACKRF1_R7
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_HACKRF1_R7
+  nameWithType: HackrfBoardRev.BOARD_REV_HACKRF1_R7
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R7
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_HACKRF1_R7
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 13
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_HACKRF1_R7 = 2
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R8
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R8
+  id: BOARD_REV_HACKRF1_R8
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_HACKRF1_R8
+  nameWithType: HackrfBoardRev.BOARD_REV_HACKRF1_R8
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R8
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_HACKRF1_R8
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 17
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_HACKRF1_R8 = 3
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R9
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R9
+  id: BOARD_REV_HACKRF1_R9
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_HACKRF1_R9
+  nameWithType: HackrfBoardRev.BOARD_REV_HACKRF1_R9
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R9
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_HACKRF1_R9
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 21
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_HACKRF1_R9 = 4
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R10
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R10
+  id: BOARD_REV_HACKRF1_R10
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_HACKRF1_R10
+  nameWithType: HackrfBoardRev.BOARD_REV_HACKRF1_R10
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_HACKRF1_R10
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_HACKRF1_R10
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 25
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_HACKRF1_R10 = 5
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R6
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R6
+  id: BOARD_REV_GSG_HACKRF1_R6
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_GSG_HACKRF1_R6
+  nameWithType: HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R6
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R6
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_GSG_HACKRF1_R6
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 30
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_GSG_HACKRF1_R6 = 129
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R7
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R7
+  id: BOARD_REV_GSG_HACKRF1_R7
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_GSG_HACKRF1_R7
+  nameWithType: HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R7
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R7
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_GSG_HACKRF1_R7
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 34
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_GSG_HACKRF1_R7 = 130
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R8
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R8
+  id: BOARD_REV_GSG_HACKRF1_R8
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_GSG_HACKRF1_R8
+  nameWithType: HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R8
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R8
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_GSG_HACKRF1_R8
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 38
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_GSG_HACKRF1_R8 = 131
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R9
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R9
+  id: BOARD_REV_GSG_HACKRF1_R9
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_GSG_HACKRF1_R9
+  nameWithType: HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R9
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R9
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_GSG_HACKRF1_R9
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 42
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_GSG_HACKRF1_R9 = 132
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R10
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R10
+  id: BOARD_REV_GSG_HACKRF1_R10
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_GSG_HACKRF1_R10
+  nameWithType: HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R10
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_GSG_HACKRF1_R10
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_GSG_HACKRF1_R10
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 46
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_GSG_HACKRF1_R10 = 133
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_UNRECOGNIZED
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_UNRECOGNIZED
+  id: BOARD_REV_UNRECOGNIZED
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_UNRECOGNIZED
+  nameWithType: HackrfBoardRev.BOARD_REV_UNRECOGNIZED
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_UNRECOGNIZED
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_UNRECOGNIZED
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 51
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_UNRECOGNIZED = 254
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_UNDETECTED
+  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_UNDETECTED
+  id: BOARD_REV_UNDETECTED
+  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  langs:
+  - csharp
+  - vb
+  name: BOARD_REV_UNDETECTED
+  nameWithType: HackrfBoardRev.BOARD_REV_UNDETECTED
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_UNDETECTED
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BOARD_REV_UNDETECTED
+    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardRev.cs
+    startLine: 55
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.NativeApi.Enums.System
+  example: []
+  syntax:
+    content: BOARD_REV_UNDETECTED = 255
+    return:
+      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+references:
+- uid: HackRFDotnet.NativeApi.Enums.System
+  commentId: N:HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.html
+  name: HackRFDotnet.NativeApi.Enums.System
+  nameWithType: HackRFDotnet.NativeApi.Enums.System
+  fullName: HackRFDotnet.NativeApi.Enums.System
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi
+    name: NativeApi
+    href: HackRFDotnet.NativeApi.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums
+    name: Enums
+    href: HackRFDotnet.NativeApi.Enums.html
+  - name: .
+  - uid: HackRFDotnet.NativeApi.Enums.System
+    name: System
+    href: HackRFDotnet.NativeApi.Enums.System.html
+- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
+  parent: HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.html
+  name: HackrfBoardRev
+  nameWithType: HackrfBoardRev
+  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev

@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: BasicScanner.NativeMethods
+  commentId: N:BasicScanner.NativeMethods
+  id: BasicScanner.NativeMethods
+  children:
+  - BasicScanner.NativeMethods.CHAR_INFO
+  - BasicScanner.NativeMethods.COORD
+  - BasicScanner.NativeMethods.SMALL_RECT
+  - BasicScanner.NativeMethods.kernel32Methods
+  langs:
+  - csharp
+  - vb
+  name: BasicScanner.NativeMethods
+  nameWithType: BasicScanner.NativeMethods
+  fullName: BasicScanner.NativeMethods
+  type: Namespace
+  assemblies:
+  - BasicScanner
+references:
+- uid: BasicScanner.NativeMethods.COORD
+  commentId: T:BasicScanner.NativeMethods.COORD
+  parent: BasicScanner.NativeMethods
+  href: BasicScanner.NativeMethods.COORD.html
+  name: COORD
+  nameWithType: COORD
+  fullName: BasicScanner.NativeMethods.COORD
+- uid: BasicScanner.NativeMethods.SMALL_RECT
+  commentId: T:BasicScanner.NativeMethods.SMALL_RECT
+  parent: BasicScanner.NativeMethods
+  href: BasicScanner.NativeMethods.SMALL_RECT.html
+  name: SMALL_RECT
+  nameWithType: SMALL_RECT
+  fullName: BasicScanner.NativeMethods.SMALL_RECT
+- uid: BasicScanner.NativeMethods.CHAR_INFO
+  commentId: T:BasicScanner.NativeMethods.CHAR_INFO
+  href: BasicScanner.NativeMethods.CHAR_INFO.html
+  name: CHAR_INFO
+  nameWithType: CHAR_INFO
+  fullName: BasicScanner.NativeMethods.CHAR_INFO
+- uid: BasicScanner.NativeMethods.kernel32Methods
+  commentId: T:BasicScanner.NativeMethods.kernel32Methods
+  href: BasicScanner.NativeMethods.kernel32Methods.html
+  name: kernel32Methods
+  nameWithType: kernel32Methods
+  fullName: BasicScanner.NativeMethods.kernel32Methods
+- uid: BasicScanner.NativeMethods
+  commentId: N:BasicScanner.NativeMethods
+  href: BasicScanner.html
+  name: BasicScanner.NativeMethods
+  nameWithType: BasicScanner.NativeMethods
+  fullName: BasicScanner.NativeMethods
+  spec.csharp:
+  - uid: BasicScanner
+    name: BasicScanner
+    href: BasicScanner.html
+  - name: .
+  - uid: BasicScanner.NativeMethods
+    name: NativeMethods
+    href: BasicScanner.NativeMethods.html
+  spec.vb:
+  - uid: BasicScanner
+    name: BasicScanner
+    href: BasicScanner.html
+  - name: .
+  - uid: BasicScanner.NativeMethods
+    name: NativeMethods
+    href: BasicScanner.NativeMethods.html
