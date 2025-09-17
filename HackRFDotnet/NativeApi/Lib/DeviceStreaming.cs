@@ -233,7 +233,7 @@ public static partial class HackRfNativeLib {
         public static extern HackrfError SetRxOverrunLimit(HackRFDevice* device, uint value);
 
         /// <summary>
-        /// Enable/disable 14dB RF amplifier.
+        /// Enable / disable 14dB RF amplifier.
         /// 
         /// Enable / disable the ~11dB RF RX/TX amplifiers U13/U25 via controlling switches U9 and U14.
         /// </summary>
