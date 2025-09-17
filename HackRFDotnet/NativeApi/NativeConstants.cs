@@ -1,7 +1,7 @@
 ﻿using HackRFDotnet.NativeApi.Enums.System;
 
 namespace HackRFDotnet.NativeApi {
-    internal class NativeConstants {
+    public class NativeConstants {
         internal const string HACK_RF_DLL = "hackrf.dll";
 
         /// <summary>
