@@ -1,6 +1,6 @@
 ﻿using BasicScanner.Services;
 
-using HackRFDotnet.ManagedApi.Services;
+using HackRFDotnet.Api.Services;
 
 using Microsoft.Extensions.DependencyInjection;
 

@@ -1,10 +1,10 @@
-﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-using HackRFDotnet.ManagedApi.Streams.SignalStreams.Digital;
+﻿using HackRFDotnet.Api.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.SignalStreams.Digital;
 
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 
-namespace HackRFDotnet.ManagedApi.Services;
+namespace HackRFDotnet.Api.Services;
 public class DigitalPlayer : IDisposable {
     private readonly HdRadioSignalStream _sampleDeModulator;
     private WaveOutEvent _waveOut;

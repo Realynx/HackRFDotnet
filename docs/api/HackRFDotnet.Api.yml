@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
+  id: HackRFDotnet.Api
+  children:
+  - HackRFDotnet.Api.DigitalRadioDevice
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.Api.DigitalRadioDevice
+  commentId: T:HackRFDotnet.Api.DigitalRadioDevice
+  parent: HackRFDotnet.Api
+  href: HackRFDotnet.Api.DigitalRadioDevice.html
+  name: DigitalRadioDevice
+  nameWithType: DigitalRadioDevice
+  fullName: HackRFDotnet.Api.DigitalRadioDevice
+- uid: HackRFDotnet.Api
+  commentId: N:HackRFDotnet.Api
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api
+  nameWithType: HackRFDotnet.Api
+  fullName: HackRFDotnet.Api
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html

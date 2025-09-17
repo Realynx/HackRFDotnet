@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  id: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  children:
+  - HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  parent: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect.html
+  name: ISignalEffect
+  nameWithType: ISignalEffect
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+    name: Effects
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+    name: Effects
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.html

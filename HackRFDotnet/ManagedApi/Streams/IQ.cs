@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
-namespace HackRFDotnet.ManagedApi.Streams;
+namespace HackRFDotnet.Api.Streams;
 // TODO: Just make functions that call Complex32 functions and only store the 2 float values for simplicity, we don't need all this dupe code
 public struct IQ : IEquatable<IQ>, IFormattable {
     public static readonly IQ Zero = new IQ(0.0f, 0.00f);

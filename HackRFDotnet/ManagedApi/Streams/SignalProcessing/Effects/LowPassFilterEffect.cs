@@ -1,12 +1,12 @@
 ﻿
 using System.Numerics;
 
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
-using HackRFDotnet.ManagedApi.Utilities;
+using HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces;
+using HackRFDotnet.Api.Utilities;
 
 using MathNet.Numerics;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
+namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 public class LowPassFilterEffect : SignalEffect, ISignalEffect {
     private readonly SampleRate _sampleRate;
     private readonly RadioBand _bandwith;

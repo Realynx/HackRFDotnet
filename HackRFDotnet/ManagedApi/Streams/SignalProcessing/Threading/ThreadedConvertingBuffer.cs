@@ -1,6 +1,6 @@
-﻿using HackRFDotnet.ManagedApi.Streams.Buffers;
+﻿using HackRFDotnet.Api.Streams.Buffers;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Threading;
+namespace HackRFDotnet.Api.Streams.SignalProcessing.Threading;
 internal class ThreadedConvertingBuffer<T> : IDisposable {
     private readonly RingBuffer<T> _ringBuffer;
 

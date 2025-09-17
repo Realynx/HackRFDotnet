@@ -1,10 +1,10 @@
 ﻿using System.Buffers;
 
-using HackRFDotnet.ManagedApi.Streams.Exceptions;
-using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.Exceptions;
+using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalProcessing;
 
-namespace HackRFDotnet.ManagedApi.Streams.Device;
+namespace HackRFDotnet.Api.Streams.Device;
 public class IQFileStream : IIQStream, IDisposable {
     private readonly string _fileName;
     private FileStream? _stream = null;

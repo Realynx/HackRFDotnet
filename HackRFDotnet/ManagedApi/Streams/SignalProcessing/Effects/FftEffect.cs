@@ -4,7 +4,7 @@ using FftwF.Dotnet;
 
 using MathNet.Numerics;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
+namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 public unsafe class FftEffect : SignalEffect, IDisposable {
     private readonly bool _forward;
     private readonly Complex32[] _processingChunk = [];

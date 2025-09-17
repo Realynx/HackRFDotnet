@@ -2,13 +2,13 @@
 
 using FftwF.Dotnet;
 
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
-using HackRFDotnet.ManagedApi.Streams.SignalStreams;
-using HackRFDotnet.ManagedApi.Utilities;
+using HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces;
+using HackRFDotnet.Api.Streams.SignalStreams;
+using HackRFDotnet.Api.Utilities;
 
 using MathNet.Numerics;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
+namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 
 /// <summary>
 /// <see cref="DownSampleEffect"/> removes extraneous information from your signal using your desired bandwidth.

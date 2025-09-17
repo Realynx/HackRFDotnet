@@ -1,11 +1,11 @@
 ﻿using FFmpeg.AutoGen;
 
-using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalProcessing;
 
 using NAudio.Wave;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Digital;
+namespace HackRFDotnet.Api.Streams.SignalStreams.Digital;
 public unsafe class HdRadioSignalStream : QpskSignalStream, ISampleProvider {
     public WaveFormat? WaveFormat { get; protected set; }
 

@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
+﻿namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 public class SquelchEffect : SignalEffect {
     private readonly SampleRate _sampleRate;
 

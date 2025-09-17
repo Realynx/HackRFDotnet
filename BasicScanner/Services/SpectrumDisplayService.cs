@@ -1,11 +1,11 @@
 ﻿using BasicScanner.NativeMethods;
 
-using HackRFDotnet.ManagedApi;
-using HackRFDotnet.ManagedApi.Streams;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
-using HackRFDotnet.ManagedApi.Streams.SignalStreams;
-using HackRFDotnet.ManagedApi.Utilities;
+using HackRFDotnet.Api;
+using HackRFDotnet.Api.Streams;
+using HackRFDotnet.Api.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+using HackRFDotnet.Api.Streams.SignalStreams;
+using HackRFDotnet.Api.Utilities;
 
 namespace BasicScanner.Services;
 public unsafe class SpectrumDisplayService {

@@ -1,11 +1,11 @@
 ﻿using System.Buffers;
 
-using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-using HackRFDotnet.ManagedApi.Utilities;
+using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalProcessing;
+using HackRFDotnet.Api.Utilities;
 
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
+namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 public class AmSignalStream : WaveSignalStream {
     public AmSignalStream(IIQStream deviceStream, SampleRate sampleRate,
         SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)

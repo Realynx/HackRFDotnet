@@ -1,10 +1,10 @@
-﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-using HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
+﻿using HackRFDotnet.Api.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
 
-namespace HackRFDotnet.ManagedApi.Services {
+namespace HackRFDotnet.Api.Services {
     public class AnaloguePlayer : IDisposable {
         private readonly WaveSignalStream _sampleDeModulator;
         private WaveOutEvent _waveOut;

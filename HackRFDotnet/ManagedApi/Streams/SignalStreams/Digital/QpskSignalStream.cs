@@ -1,9 +1,9 @@
 ﻿using System.Buffers;
 
-using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalProcessing;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Digital;
+namespace HackRFDotnet.Api.Streams.SignalStreams.Digital;
 public class QpskSignalStream : SignalStream {
     public QpskSignalStream(IIQStream iQStream, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
         : base(iQStream, processingPipeline, keepOpen) {

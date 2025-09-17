@@ -1,9 +1,9 @@
 ﻿using System.Buffers;
 
-using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalProcessing;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
+namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 public class FmSignalStream : WaveSignalStream {
     public FmSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stereo = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
         : base(deviceStream, sampleRate, stereo, processingPipeline, keepOpen) {

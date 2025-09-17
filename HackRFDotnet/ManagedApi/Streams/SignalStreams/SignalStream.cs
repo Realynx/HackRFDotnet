@@ -1,9 +1,9 @@
-﻿using HackRFDotnet.ManagedApi.Streams.Buffers;
-using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-using HackRFDotnet.ManagedApi.Utilities;
+﻿using HackRFDotnet.Api.Streams.Buffers;
+using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalProcessing;
+using HackRFDotnet.Api.Utilities;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalStreams;
+namespace HackRFDotnet.Api.Streams.SignalStreams;
 public class SignalStream : IDisposable {
     public RadioBand Center { get; protected set; } = RadioBand.FromMHz(94.7f);
     public RadioBand BandWidth { get; protected set; } = RadioBand.FromKHz(200);

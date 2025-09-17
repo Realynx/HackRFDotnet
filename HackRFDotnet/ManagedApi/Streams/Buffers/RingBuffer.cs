@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.ManagedApi.Streams.Buffers;
+﻿namespace HackRFDotnet.Api.Streams.Buffers;
 
 internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
     private int _writeStart;

@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.ManagedApi.Utilities;
+﻿namespace HackRFDotnet.Api.Utilities;
 public static class BinaryUtilities {
     public static int NextPowerOfTwo(int n) {
         if (n < 1) {

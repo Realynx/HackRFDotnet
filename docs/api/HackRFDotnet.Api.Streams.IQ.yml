@@ -1,0 +1,3941 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.Api.Streams.IQ
+  commentId: T:HackRFDotnet.Api.Streams.IQ
+  id: IQ
+  parent: HackRFDotnet.Api.Streams
+  children:
+  - HackRFDotnet.Api.Streams.IQ.#ctor(HackRFDotnet.Api.Streams.InterleavedSample)
+  - HackRFDotnet.Api.Streams.IQ.#ctor(System.Single,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.Abs(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Acos(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.Add(System.Single,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Asin(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Atan(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Conjugate(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Cos(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Cosh(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.Divide(System.Single,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Equals(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Equals(System.Object)
+  - HackRFDotnet.Api.Streams.IQ.Exp(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates(System.Single,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.GetHashCode
+  - HackRFDotnet.Api.Streams.IQ.I
+  - HackRFDotnet.Api.Streams.IQ.ImaginaryOne
+  - HackRFDotnet.Api.Streams.IQ.Infinity
+  - HackRFDotnet.Api.Streams.IQ.IsFinite(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.IsInfinity(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.IsNaN(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.Log10(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Magnitude
+  - HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.NaN
+  - HackRFDotnet.Api.Streams.IQ.Negate(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.One
+  - HackRFDotnet.Api.Streams.IQ.Phase
+  - HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.Q
+  - HackRFDotnet.Api.Streams.IQ.Reciprocal(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Sin(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Sinh(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Sqrt(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.Subtract(System.Single,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Tan(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.Tanh(HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.ToString
+  - HackRFDotnet.Api.Streams.IQ.ToString(System.IFormatProvider)
+  - HackRFDotnet.Api.Streams.IQ.ToString(System.String)
+  - HackRFDotnet.Api.Streams.IQ.ToString(System.String,System.IFormatProvider)
+  - HackRFDotnet.Api.Streams.IQ.Zero
+  - HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.op_Addition(System.Single,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.op_Division(System.Single,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_Equality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_Explicit(System.Decimal)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(HackRFDotnet.Api.Streams.IQ)~System.Numerics.Complex
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Byte)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Char)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Half)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int16)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int32)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int64)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.IntPtr)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Numerics.Complex)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.SByte)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Single)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt16)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt32)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt64)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UIntPtr)~HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.IQ.op_Inequality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.op_Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,System.Single)
+  - HackRFDotnet.Api.Streams.IQ.op_Subtraction(System.Single,HackRFDotnet.Api.Streams.IQ)
+  - HackRFDotnet.Api.Streams.IQ.op_UnaryNegation(HackRFDotnet.Api.Streams.IQ)
+  langs:
+  - csharp
+  - vb
+  name: IQ
+  nameWithType: IQ
+  fullName: HackRFDotnet.Api.Streams.IQ
+  type: Struct
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: IQ
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 11
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: 'public struct IQ : IEquatable<IQ>, IFormattable'
+    content.vb: Public Structure IQ Implements IEquatable(Of IQ), IFormattable
+  implements:
+  - System.IEquatable{HackRFDotnet.Api.Streams.IQ}
+  - System.IFormattable
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: HackRFDotnet.Api.Streams.IQ.Zero
+  commentId: F:HackRFDotnet.Api.Streams.IQ.Zero
+  id: Zero
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Zero
+  nameWithType: IQ.Zero
+  fullName: HackRFDotnet.Api.Streams.IQ.Zero
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Zero
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 12
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static readonly IQ Zero
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared ReadOnly Zero As IQ
+- uid: HackRFDotnet.Api.Streams.IQ.One
+  commentId: F:HackRFDotnet.Api.Streams.IQ.One
+  id: One
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: One
+  nameWithType: IQ.One
+  fullName: HackRFDotnet.Api.Streams.IQ.One
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: One
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 13
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static readonly IQ One
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared ReadOnly One As IQ
+- uid: HackRFDotnet.Api.Streams.IQ.ImaginaryOne
+  commentId: F:HackRFDotnet.Api.Streams.IQ.ImaginaryOne
+  id: ImaginaryOne
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: ImaginaryOne
+  nameWithType: IQ.ImaginaryOne
+  fullName: HackRFDotnet.Api.Streams.IQ.ImaginaryOne
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: ImaginaryOne
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 14
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static readonly IQ ImaginaryOne
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared ReadOnly ImaginaryOne As IQ
+- uid: HackRFDotnet.Api.Streams.IQ.NaN
+  commentId: F:HackRFDotnet.Api.Streams.IQ.NaN
+  id: NaN
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: NaN
+  nameWithType: IQ.NaN
+  fullName: HackRFDotnet.Api.Streams.IQ.NaN
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: NaN
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 15
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static readonly IQ NaN
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared ReadOnly NaN As IQ
+- uid: HackRFDotnet.Api.Streams.IQ.Infinity
+  commentId: F:HackRFDotnet.Api.Streams.IQ.Infinity
+  id: Infinity
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Infinity
+  nameWithType: IQ.Infinity
+  fullName: HackRFDotnet.Api.Streams.IQ.Infinity
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Infinity
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 16
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static readonly IQ Infinity
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared ReadOnly Infinity As IQ
+- uid: HackRFDotnet.Api.Streams.IQ.#ctor(System.Single,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.#ctor(System.Single,System.Single)
+  id: '#ctor(System.Single,System.Single)'
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: IQ(float, float)
+  nameWithType: IQ.IQ(float, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.IQ(float, float)
+  type: Constructor
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: .ctor
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 34
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public IQ(float real, float imaginary)
+    parameters:
+    - id: real
+      type: System.Single
+    - id: imaginary
+      type: System.Single
+    content.vb: Public Sub New(real As Single, imaginary As Single)
+  overload: HackRFDotnet.Api.Streams.IQ.#ctor*
+  nameWithType.vb: IQ.New(Single, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.New(Single, Single)
+  name.vb: New(Single, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.#ctor(HackRFDotnet.Api.Streams.InterleavedSample)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.#ctor(HackRFDotnet.Api.Streams.InterleavedSample)
+  id: '#ctor(HackRFDotnet.Api.Streams.InterleavedSample)'
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: IQ(InterleavedSample)
+  nameWithType: IQ.IQ(InterleavedSample)
+  fullName: HackRFDotnet.Api.Streams.IQ.IQ(HackRFDotnet.Api.Streams.InterleavedSample)
+  type: Constructor
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: .ctor
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 39
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public IQ(InterleavedSample interleavedSample)
+    parameters:
+    - id: interleavedSample
+      type: HackRFDotnet.Api.Streams.InterleavedSample
+    content.vb: Public Sub New(interleavedSample As InterleavedSample)
+  overload: HackRFDotnet.Api.Streams.IQ.#ctor*
+  nameWithType.vb: IQ.New(InterleavedSample)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.New(HackRFDotnet.Api.Streams.InterleavedSample)
+  name.vb: New(InterleavedSample)
+- uid: HackRFDotnet.Api.Streams.IQ.I
+  commentId: P:HackRFDotnet.Api.Streams.IQ.I
+  id: I
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: I
+  nameWithType: IQ.I
+  fullName: HackRFDotnet.Api.Streams.IQ.I
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: I
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 47
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  summary: Real
+  example: []
+  syntax:
+    content: public float I { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property I As Single
+  overload: HackRFDotnet.Api.Streams.IQ.I*
+- uid: HackRFDotnet.Api.Streams.IQ.Q
+  commentId: P:HackRFDotnet.Api.Streams.IQ.Q
+  id: Q
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Q
+  nameWithType: IQ.Q
+  fullName: HackRFDotnet.Api.Streams.IQ.Q
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Q
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 52
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  summary: Imaginary
+  example: []
+  syntax:
+    content: public float Q { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Q As Single
+  overload: HackRFDotnet.Api.Streams.IQ.Q*
+- uid: HackRFDotnet.Api.Streams.IQ.Magnitude
+  commentId: P:HackRFDotnet.Api.Streams.IQ.Magnitude
+  id: Magnitude
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Magnitude
+  nameWithType: IQ.Magnitude
+  fullName: HackRFDotnet.Api.Streams.IQ.Magnitude
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Magnitude
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 54
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public float Magnitude { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Magnitude As Single
+  overload: HackRFDotnet.Api.Streams.IQ.Magnitude*
+- uid: HackRFDotnet.Api.Streams.IQ.Phase
+  commentId: P:HackRFDotnet.Api.Streams.IQ.Phase
+  id: Phase
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Phase
+  nameWithType: IQ.Phase
+  fullName: HackRFDotnet.Api.Streams.IQ.Phase
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Phase
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 55
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public float Phase { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public ReadOnly Property Phase As Single
+  overload: HackRFDotnet.Api.Streams.IQ.Phase*
+- uid: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates(System.Single,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates(System.Single,System.Single)
+  id: FromPolarCoordinates(System.Single,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: FromPolarCoordinates(float, float)
+  nameWithType: IQ.FromPolarCoordinates(float, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates(float, float)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: FromPolarCoordinates
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 57
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ FromPolarCoordinates(float magnitude, float phase)
+    parameters:
+    - id: magnitude
+      type: System.Single
+    - id: phase
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function FromPolarCoordinates(magnitude As Single, phase As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates*
+  nameWithType.vb: IQ.FromPolarCoordinates(Single, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates(Single, Single)
+  name.vb: FromPolarCoordinates(Single, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.Negate(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Negate(HackRFDotnet.Api.Streams.IQ)
+  id: Negate(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Negate(IQ)
+  nameWithType: IQ.Negate(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Negate(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Negate
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 62
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Negate(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Negate(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Negate*
+- uid: HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: Add(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Add(IQ, IQ)
+  nameWithType: IQ.Add(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Add
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 66
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Add(IQ left, IQ right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Add(left As IQ, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Add*
+- uid: HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: Add(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Add(IQ, float)
+  nameWithType: IQ.Add(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ, float)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Add
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 70
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Add(IQ left, float right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Add(left As IQ, right As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Add*
+  nameWithType.vb: IQ.Add(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: Add(IQ, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.Add(System.Single,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Add(System.Single,HackRFDotnet.Api.Streams.IQ)
+  id: Add(System.Single,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Add(float, IQ)
+  nameWithType: IQ.Add(float, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Add(float, HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Add
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 74
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Add(float left, IQ right)
+    parameters:
+    - id: left
+      type: System.Single
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Add(left As Single, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Add*
+  nameWithType.vb: IQ.Add(Single, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Add(Single, HackRFDotnet.Api.Streams.IQ)
+  name.vb: Add(Single, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: Subtract(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Subtract(IQ, IQ)
+  nameWithType: IQ.Subtract(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Subtract
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 78
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Subtract(IQ left, IQ right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Subtract(left As IQ, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Subtract*
+- uid: HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: Subtract(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Subtract(IQ, float)
+  nameWithType: IQ.Subtract(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ, float)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Subtract
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 82
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Subtract(IQ left, float right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Subtract(left As IQ, right As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Subtract*
+  nameWithType.vb: IQ.Subtract(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: Subtract(IQ, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.Subtract(System.Single,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Subtract(System.Single,HackRFDotnet.Api.Streams.IQ)
+  id: Subtract(System.Single,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Subtract(float, IQ)
+  nameWithType: IQ.Subtract(float, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Subtract(float, HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Subtract
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 86
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Subtract(float left, IQ right)
+    parameters:
+    - id: left
+      type: System.Single
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Subtract(left As Single, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Subtract*
+  nameWithType.vb: IQ.Subtract(Single, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Subtract(Single, HackRFDotnet.Api.Streams.IQ)
+  name.vb: Subtract(Single, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Multiply(IQ, IQ)
+  nameWithType: IQ.Multiply(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Multiply
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 90
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Multiply(IQ left, IQ right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Multiply(left As IQ, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Multiply*
+- uid: HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Multiply(IQ, float)
+  nameWithType: IQ.Multiply(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ, float)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Multiply
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 94
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Multiply(IQ left, float right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Multiply(left As IQ, right As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Multiply*
+  nameWithType.vb: IQ.Multiply(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: Multiply(IQ, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)
+  id: Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Multiply(float, IQ)
+  nameWithType: IQ.Multiply(float, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Multiply(float, HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Multiply
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 98
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Multiply(float left, IQ right)
+    parameters:
+    - id: left
+      type: System.Single
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Multiply(left As Single, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Multiply*
+  nameWithType.vb: IQ.Multiply(Single, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Multiply(Single, HackRFDotnet.Api.Streams.IQ)
+  name.vb: Multiply(Single, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: Divide(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Divide(IQ, IQ)
+  nameWithType: IQ.Divide(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Divide
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 102
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Divide(IQ dividend, IQ divisor)
+    parameters:
+    - id: dividend
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: divisor
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Divide(dividend As IQ, divisor As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Divide*
+- uid: HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: Divide(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Divide(IQ, float)
+  nameWithType: IQ.Divide(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ, float)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Divide
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 106
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Divide(IQ dividend, float divisor)
+    parameters:
+    - id: dividend
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: divisor
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Divide(dividend As IQ, divisor As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Divide*
+  nameWithType.vb: IQ.Divide(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: Divide(IQ, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.Divide(System.Single,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Divide(System.Single,HackRFDotnet.Api.Streams.IQ)
+  id: Divide(System.Single,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Divide(float, IQ)
+  nameWithType: IQ.Divide(float, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Divide(float, HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Divide
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 110
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Divide(float dividend, IQ divisor)
+    parameters:
+    - id: dividend
+      type: System.Single
+    - id: divisor
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Divide(dividend As Single, divisor As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Divide*
+  nameWithType.vb: IQ.Divide(Single, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Divide(Single, HackRFDotnet.Api.Streams.IQ)
+  name.vb: Divide(Single, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.op_UnaryNegation(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_UnaryNegation(HackRFDotnet.Api.Streams.IQ)
+  id: op_UnaryNegation(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator -(IQ)
+  nameWithType: IQ.operator -(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator -(HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_UnaryNegation
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 114
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator -(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator -(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_UnaryNegation*
+  nameWithType.vb: IQ.-(IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.-(HackRFDotnet.Api.Streams.IQ)
+  name.vb: -(IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: op_Addition(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator +(IQ, IQ)
+  nameWithType: IQ.operator +(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator +(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Addition
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 118
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator +(IQ left, IQ right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator +(left As IQ, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Addition*
+  nameWithType.vb: IQ.+(IQ, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.+(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  name.vb: +(IQ, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: op_Addition(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator +(IQ, float)
+  nameWithType: IQ.operator +(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator +(HackRFDotnet.Api.Streams.IQ, float)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Addition
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 122
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator +(IQ left, float right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator +(left As IQ, right As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Addition*
+  nameWithType.vb: IQ.+(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.+(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: +(IQ, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Addition(System.Single,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Addition(System.Single,HackRFDotnet.Api.Streams.IQ)
+  id: op_Addition(System.Single,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator +(float, IQ)
+  nameWithType: IQ.operator +(float, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator +(float, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Addition
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 126
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator +(float left, IQ right)
+    parameters:
+    - id: left
+      type: System.Single
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator +(left As Single, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Addition*
+  nameWithType.vb: IQ.+(Single, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.+(Single, HackRFDotnet.Api.Streams.IQ)
+  name.vb: +(Single, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: op_Subtraction(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator -(IQ, IQ)
+  nameWithType: IQ.operator -(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator -(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Subtraction
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 130
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator -(IQ left, IQ right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator -(left As IQ, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Subtraction*
+  nameWithType.vb: IQ.-(IQ, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.-(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  name.vb: -(IQ, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: op_Subtraction(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator -(IQ, float)
+  nameWithType: IQ.operator -(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator -(HackRFDotnet.Api.Streams.IQ, float)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Subtraction
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 134
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator -(IQ left, float right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator -(left As IQ, right As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Subtraction*
+  nameWithType.vb: IQ.-(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.-(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: -(IQ, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Subtraction(System.Single,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Subtraction(System.Single,HackRFDotnet.Api.Streams.IQ)
+  id: op_Subtraction(System.Single,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator -(float, IQ)
+  nameWithType: IQ.operator -(float, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator -(float, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Subtraction
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 138
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator -(float left, IQ right)
+    parameters:
+    - id: left
+      type: System.Single
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator -(left As Single, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Subtraction*
+  nameWithType.vb: IQ.-(Single, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.-(Single, HackRFDotnet.Api.Streams.IQ)
+  name.vb: -(Single, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: op_Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator *(IQ, IQ)
+  nameWithType: IQ.operator *(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator *(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Multiply
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 142
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator *(IQ left, IQ right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator *(left As IQ, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Multiply*
+  nameWithType.vb: IQ.*(IQ, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.*(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  name.vb: '*(IQ, IQ)'
+- uid: HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: op_Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator *(IQ, float)
+  nameWithType: IQ.operator *(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator *(HackRFDotnet.Api.Streams.IQ, float)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Multiply
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 149
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator *(IQ left, float right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator *(left As IQ, right As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Multiply*
+  nameWithType.vb: IQ.*(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.*(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: '*(IQ, Single)'
+- uid: HackRFDotnet.Api.Streams.IQ.op_Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)
+  id: op_Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator *(float, IQ)
+  nameWithType: IQ.operator *(float, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator *(float, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Multiply
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 165
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator *(float left, IQ right)
+    parameters:
+    - id: left
+      type: System.Single
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator *(left As Single, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Multiply*
+  nameWithType.vb: IQ.*(Single, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.*(Single, HackRFDotnet.Api.Streams.IQ)
+  name.vb: '*(Single, IQ)'
+- uid: HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: op_Division(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator /(IQ, IQ)
+  nameWithType: IQ.operator /(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator /(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Division
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 181
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator /(IQ left, IQ right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator /(left As IQ, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Division*
+  nameWithType.vb: IQ./(IQ, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ./(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  name.vb: /(IQ, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: op_Division(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator /(IQ, float)
+  nameWithType: IQ.operator /(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator /(HackRFDotnet.Api.Streams.IQ, float)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Division
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 199
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator /(IQ left, float right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator /(left As IQ, right As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Division*
+  nameWithType.vb: IQ./(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ./(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: /(IQ, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Division(System.Single,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Division(System.Single,HackRFDotnet.Api.Streams.IQ)
+  id: op_Division(System.Single,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator /(float, IQ)
+  nameWithType: IQ.operator /(float, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator /(float, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Division
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 223
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ operator /(float left, IQ right)
+    parameters:
+    - id: left
+      type: System.Single
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Operator /(left As Single, right As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Division*
+  nameWithType.vb: IQ./(Single, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ./(Single, HackRFDotnet.Api.Streams.IQ)
+  name.vb: /(Single, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.Abs(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Abs(HackRFDotnet.Api.Streams.IQ)
+  id: Abs(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Abs(IQ)
+  nameWithType: IQ.Abs(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Abs(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Abs
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 240
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static float Abs(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: System.Single
+    content.vb: Public Shared Function Abs(value As IQ) As Single
+  overload: HackRFDotnet.Api.Streams.IQ.Abs*
+- uid: HackRFDotnet.Api.Streams.IQ.Conjugate(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Conjugate(HackRFDotnet.Api.Streams.IQ)
+  id: Conjugate(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Conjugate(IQ)
+  nameWithType: IQ.Conjugate(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Conjugate(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Conjugate
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 265
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Conjugate(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Conjugate(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Conjugate*
+- uid: HackRFDotnet.Api.Streams.IQ.Reciprocal(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Reciprocal(HackRFDotnet.Api.Streams.IQ)
+  id: Reciprocal(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Reciprocal(IQ)
+  nameWithType: IQ.Reciprocal(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Reciprocal(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Reciprocal
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 270
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Reciprocal(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Reciprocal(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Reciprocal*
+- uid: HackRFDotnet.Api.Streams.IQ.op_Equality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Equality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: op_Equality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator ==(IQ, IQ)
+  nameWithType: IQ.operator ==(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator ==(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Equality
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 279
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static bool operator ==(IQ left, IQ right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As IQ, right As IQ) As Boolean
+  overload: HackRFDotnet.Api.Streams.IQ.op_Equality*
+  nameWithType.vb: IQ.=(IQ, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.=(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  name.vb: =(IQ, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Inequality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Inequality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: op_Inequality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: operator !=(IQ, IQ)
+  nameWithType: IQ.operator !=(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.operator !=(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Inequality
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 283
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static bool operator !=(IQ left, IQ right)
+    parameters:
+    - id: left
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: right
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As IQ, right As IQ) As Boolean
+  overload: HackRFDotnet.Api.Streams.IQ.op_Inequality*
+  nameWithType.vb: IQ.<>(IQ, IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.<>(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  name.vb: <>(IQ, IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.Equals(System.Object)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: IQ.Equals(object?)
+  fullName: HackRFDotnet.Api.Streams.IQ.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Equals
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 287
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  summary: Indicates whether this instance and a specified object are equal.
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current instance.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: HackRFDotnet.Api.Streams.IQ.Equals*
+  nameWithType.vb: IQ.Equals(Object)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Equals(Object)
+  name.vb: Equals(Object)
+- uid: HackRFDotnet.Api.Streams.IQ.Equals(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Equals(HackRFDotnet.Api.Streams.IQ)
+  id: Equals(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Equals(IQ)
+  nameWithType: IQ.Equals(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Equals(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Equals
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 291
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  summary: Indicates whether the current object is equal to another object of the same type.
+  example: []
+  syntax:
+    content: public bool Equals(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function Equals(value As IQ) As Boolean
+  overload: HackRFDotnet.Api.Streams.IQ.Equals*
+  implements:
+  - System.IEquatable{HackRFDotnet.Api.Streams.IQ}.Equals(HackRFDotnet.Api.Streams.IQ)
+- uid: HackRFDotnet.Api.Streams.IQ.GetHashCode
+  commentId: M:HackRFDotnet.Api.Streams.IQ.GetHashCode
+  id: GetHashCode
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: IQ.GetHashCode()
+  fullName: HackRFDotnet.Api.Streams.IQ.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: GetHashCode
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 295
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  summary: Returns the hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer that is the hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: HackRFDotnet.Api.Streams.IQ.GetHashCode*
+- uid: HackRFDotnet.Api.Streams.IQ.ToString
+  commentId: M:HackRFDotnet.Api.Streams.IQ.ToString
+  id: ToString
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: IQ.ToString()
+  fullName: HackRFDotnet.Api.Streams.IQ.ToString()
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: ToString
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 297
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  summary: Returns the fully qualified type name of this instance.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The fully qualified type name.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: HackRFDotnet.Api.Streams.IQ.ToString*
+- uid: HackRFDotnet.Api.Streams.IQ.ToString(System.String)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.ToString(System.String)
+  id: ToString(System.String)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: ToString(string?)
+  nameWithType: IQ.ToString(string?)
+  fullName: HackRFDotnet.Api.Streams.IQ.ToString(string?)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: ToString
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 299
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public string ToString(string? format)
+    parameters:
+    - id: format
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function ToString(format As String) As String
+  overload: HackRFDotnet.Api.Streams.IQ.ToString*
+  nameWithType.vb: IQ.ToString(String)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.ToString(String)
+  name.vb: ToString(String)
+- uid: HackRFDotnet.Api.Streams.IQ.ToString(System.IFormatProvider)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.ToString(System.IFormatProvider)
+  id: ToString(System.IFormatProvider)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: ToString(IFormatProvider?)
+  nameWithType: IQ.ToString(IFormatProvider?)
+  fullName: HackRFDotnet.Api.Streams.IQ.ToString(System.IFormatProvider?)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: ToString
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 301
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public string ToString(IFormatProvider? provider)
+    parameters:
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.String
+    content.vb: Public Function ToString(provider As IFormatProvider) As String
+  overload: HackRFDotnet.Api.Streams.IQ.ToString*
+  nameWithType.vb: IQ.ToString(IFormatProvider)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.ToString(System.IFormatProvider)
+  name.vb: ToString(IFormatProvider)
+- uid: HackRFDotnet.Api.Streams.IQ.ToString(System.String,System.IFormatProvider)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.ToString(System.String,System.IFormatProvider)
+  id: ToString(System.String,System.IFormatProvider)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: ToString(string?, IFormatProvider?)
+  nameWithType: IQ.ToString(string?, IFormatProvider?)
+  fullName: HackRFDotnet.Api.Streams.IQ.ToString(string?, System.IFormatProvider?)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: ToString
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 303
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  summary: Formats the value of the current instance using the specified format.
+  example: []
+  syntax:
+    content: public string ToString(string? format, IFormatProvider? provider)
+    parameters:
+    - id: format
+      type: System.String
+      description: >-
+        The format to use.  
+
+         -or-  
+
+         A null reference (<code>Nothing</code> in Visual Basic) to use the default format defined for the type of the <xref href="System.IFormattable" data-throw-if-not-resolved="false"></xref> implementation.
+    - id: provider
+      type: System.IFormatProvider
+    return:
+      type: System.String
+      description: The value of the current instance in the specified format.
+    content.vb: Public Function ToString(format As String, provider As IFormatProvider) As String
+  overload: HackRFDotnet.Api.Streams.IQ.ToString*
+  implements:
+  - System.IFormattable.ToString(System.String,System.IFormatProvider)
+  nameWithType.vb: IQ.ToString(String, IFormatProvider)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+- uid: HackRFDotnet.Api.Streams.IQ.Sin(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Sin(HackRFDotnet.Api.Streams.IQ)
+  id: Sin(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Sin(IQ)
+  nameWithType: IQ.Sin(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Sin(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Sin
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 314
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Sin(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Sin(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Sin*
+- uid: HackRFDotnet.Api.Streams.IQ.Sinh(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Sinh(HackRFDotnet.Api.Streams.IQ)
+  id: Sinh(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Sinh(IQ)
+  nameWithType: IQ.Sinh(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Sinh(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Sinh
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 323
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Sinh(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Sinh(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Sinh*
+- uid: HackRFDotnet.Api.Streams.IQ.Asin(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Asin(HackRFDotnet.Api.Streams.IQ)
+  id: Asin(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Asin(IQ)
+  nameWithType: IQ.Asin(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Asin(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Asin
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 329
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Asin(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Asin(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Asin*
+- uid: HackRFDotnet.Api.Streams.IQ.Cos(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Cos(HackRFDotnet.Api.Streams.IQ)
+  id: Cos(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Cos(IQ)
+  nameWithType: IQ.Cos(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Cos(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Cos
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 349
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Cos(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Cos(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Cos*
+- uid: HackRFDotnet.Api.Streams.IQ.Cosh(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Cosh(HackRFDotnet.Api.Streams.IQ)
+  id: Cosh(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Cosh(IQ)
+  nameWithType: IQ.Cosh(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Cosh(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Cosh
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 354
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Cosh(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Cosh(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Cosh*
+- uid: HackRFDotnet.Api.Streams.IQ.Acos(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Acos(HackRFDotnet.Api.Streams.IQ)
+  id: Acos(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Acos(IQ)
+  nameWithType: IQ.Acos(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Acos(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Acos
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 359
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Acos(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Acos(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Acos*
+- uid: HackRFDotnet.Api.Streams.IQ.Tan(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Tan(HackRFDotnet.Api.Streams.IQ)
+  id: Tan(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Tan(IQ)
+  nameWithType: IQ.Tan(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Tan(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Tan
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 379
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Tan(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Tan(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Tan*
+- uid: HackRFDotnet.Api.Streams.IQ.Tanh(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Tanh(HackRFDotnet.Api.Streams.IQ)
+  id: Tanh(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Tanh(IQ)
+  nameWithType: IQ.Tanh(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Tanh(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Tanh
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 403
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Tanh(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Tanh(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Tanh*
+- uid: HackRFDotnet.Api.Streams.IQ.Atan(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Atan(HackRFDotnet.Api.Streams.IQ)
+  id: Atan(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Atan(IQ)
+  nameWithType: IQ.Atan(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Atan(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Atan
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 409
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Atan(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Atan(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Atan*
+- uid: HackRFDotnet.Api.Streams.IQ.IsFinite(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.IsFinite(HackRFDotnet.Api.Streams.IQ)
+  id: IsFinite(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: IsFinite(IQ)
+  nameWithType: IQ.IsFinite(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.IsFinite(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: IsFinite
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 519
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static bool IsFinite(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsFinite(value As IQ) As Boolean
+  overload: HackRFDotnet.Api.Streams.IQ.IsFinite*
+- uid: HackRFDotnet.Api.Streams.IQ.IsInfinity(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.IsInfinity(HackRFDotnet.Api.Streams.IQ)
+  id: IsInfinity(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: IsInfinity(IQ)
+  nameWithType: IQ.IsInfinity(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.IsInfinity(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: IsInfinity
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 521
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static bool IsInfinity(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsInfinity(value As IQ) As Boolean
+  overload: HackRFDotnet.Api.Streams.IQ.IsInfinity*
+- uid: HackRFDotnet.Api.Streams.IQ.IsNaN(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.IsNaN(HackRFDotnet.Api.Streams.IQ)
+  id: IsNaN(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: IsNaN(IQ)
+  nameWithType: IQ.IsNaN(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.IsNaN(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: IsNaN
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 523
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static bool IsNaN(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsNaN(value As IQ) As Boolean
+  overload: HackRFDotnet.Api.Streams.IQ.IsNaN*
+- uid: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ)
+  id: Log(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Log(IQ)
+  nameWithType: IQ.Log(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Log
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 525
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Log(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Log(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Log*
+- uid: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: Log(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Log(IQ, float)
+  nameWithType: IQ.Log(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ, float)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Log
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 529
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Log(IQ value, float baseValue)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: baseValue
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Log(value As IQ, baseValue As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Log*
+  nameWithType.vb: IQ.Log(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Log(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: Log(IQ, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.Log10(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Log10(HackRFDotnet.Api.Streams.IQ)
+  id: Log10(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Log10(IQ)
+  nameWithType: IQ.Log10(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Log10(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Log10
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 533
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Log10(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Log10(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Log10*
+- uid: HackRFDotnet.Api.Streams.IQ.Exp(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Exp(HackRFDotnet.Api.Streams.IQ)
+  id: Exp(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Exp(IQ)
+  nameWithType: IQ.Exp(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Exp(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Exp
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 538
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Exp(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Exp(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Exp*
+- uid: HackRFDotnet.Api.Streams.IQ.Sqrt(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Sqrt(HackRFDotnet.Api.Streams.IQ)
+  id: Sqrt(HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Sqrt(IQ)
+  nameWithType: IQ.Sqrt(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Sqrt(HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Sqrt
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 543
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Sqrt(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Sqrt(value As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Sqrt*
+- uid: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  id: Pow(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Pow(IQ, IQ)
+  nameWithType: IQ.Pow(IQ, IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ, HackRFDotnet.Api.Streams.IQ)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Pow
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 636
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Pow(IQ value, IQ power)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: power
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Pow(value As IQ, power As IQ) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Pow*
+- uid: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,System.Single)
+  commentId: M:HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ,System.Single)
+  id: Pow(HackRFDotnet.Api.Streams.IQ,System.Single)
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: Pow(IQ, float)
+  nameWithType: IQ.Pow(IQ, float)
+  fullName: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ, float)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Pow
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 659
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static IQ Pow(IQ value, float power)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    - id: power
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Function Pow(value As IQ, power As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.Pow*
+  nameWithType.vb: IQ.Pow(IQ, Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.Pow(HackRFDotnet.Api.Streams.IQ, Single)
+  name.vb: Pow(IQ, Single)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Explicit(System.Decimal)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Explicit(System.Decimal)~HackRFDotnet.Api.Streams.IQ
+  id: op_Explicit(System.Decimal)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: explicit operator IQ(decimal)
+  nameWithType: IQ.explicit operator IQ(decimal)
+  fullName: HackRFDotnet.Api.Streams.IQ.explicit operator HackRFDotnet.Api.Streams.IQ(decimal)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Explicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 673
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static explicit operator IQ(decimal value)
+    parameters:
+    - id: value
+      type: System.Decimal
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Narrowing Operator CType(value As Decimal) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Explicit*
+  nameWithType.vb: IQ.CType(Decimal)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(Decimal)
+  name.vb: CType(Decimal)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Byte)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Byte)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.Byte)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(byte)
+  nameWithType: IQ.implicit operator IQ(byte)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(byte)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 681
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(byte value)
+    parameters:
+    - id: value
+      type: System.Byte
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As Byte) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(Byte)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(Byte)
+  name.vb: CType(Byte)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Char)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Char)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.Char)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(char)
+  nameWithType: IQ.implicit operator IQ(char)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(char)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 685
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(char value)
+    parameters:
+    - id: value
+      type: System.Char
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As Char) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(Char)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(Char)
+  name.vb: CType(Char)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Single)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Single)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.Single)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(float)
+  nameWithType: IQ.implicit operator IQ(float)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(float)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 689
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(float value)
+    parameters:
+    - id: value
+      type: System.Single
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As Single) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(Single)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(Single)
+  name.vb: CType(Single)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Half)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Half)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.Half)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(Half)
+  nameWithType: IQ.implicit operator IQ(Half)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(System.Half)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 693
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(Half value)
+    parameters:
+    - id: value
+      type: System.Half
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As Half) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(Half)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(System.Half)
+  name.vb: CType(Half)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int16)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int16)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.Int16)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(short)
+  nameWithType: IQ.implicit operator IQ(short)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(short)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 697
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(short value)
+    parameters:
+    - id: value
+      type: System.Int16
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As Short) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(Short)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(Short)
+  name.vb: CType(Short)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int32)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int32)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.Int32)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(int)
+  nameWithType: IQ.implicit operator IQ(int)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(int)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 701
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As Integer) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(Integer)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(Integer)
+  name.vb: CType(Integer)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int64)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int64)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.Int64)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(long)
+  nameWithType: IQ.implicit operator IQ(long)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(long)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 705
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(long value)
+    parameters:
+    - id: value
+      type: System.Int64
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As Long) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(Long)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(Long)
+  name.vb: CType(Long)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.IntPtr)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.IntPtr)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.IntPtr)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(nint)
+  nameWithType: IQ.implicit operator IQ(nint)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(nint)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 709
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(nint value)
+    parameters:
+    - id: value
+      type: System.IntPtr
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As IntPtr) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(IntPtr)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(System.IntPtr)
+  name.vb: CType(IntPtr)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.SByte)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.SByte)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.SByte)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(sbyte)
+  nameWithType: IQ.implicit operator IQ(sbyte)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(sbyte)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 713
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(sbyte value)
+    parameters:
+    - id: value
+      type: System.SByte
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As SByte) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(SByte)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(SByte)
+  name.vb: CType(SByte)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt16)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt16)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.UInt16)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(ushort)
+  nameWithType: IQ.implicit operator IQ(ushort)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(ushort)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 717
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(ushort value)
+    parameters:
+    - id: value
+      type: System.UInt16
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As UShort) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(UShort)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(UShort)
+  name.vb: CType(UShort)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt32)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt32)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.UInt32)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(uint)
+  nameWithType: IQ.implicit operator IQ(uint)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(uint)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 721
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(uint value)
+    parameters:
+    - id: value
+      type: System.UInt32
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As UInteger) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(UInteger)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(UInteger)
+  name.vb: CType(UInteger)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt64)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt64)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.UInt64)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(ulong)
+  nameWithType: IQ.implicit operator IQ(ulong)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(ulong)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 725
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(ulong value)
+    parameters:
+    - id: value
+      type: System.UInt64
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As ULong) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(ULong)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(ULong)
+  name.vb: CType(ULong)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UIntPtr)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UIntPtr)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.UIntPtr)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(nuint)
+  nameWithType: IQ.implicit operator IQ(nuint)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(nuint)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 729
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(nuint value)
+    parameters:
+    - id: value
+      type: System.UIntPtr
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As UIntPtr) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(UIntPtr)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(System.UIntPtr)
+  name.vb: CType(UIntPtr)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Numerics.Complex)~HackRFDotnet.Api.Streams.IQ
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Numerics.Complex)~HackRFDotnet.Api.Streams.IQ
+  id: op_Implicit(System.Numerics.Complex)~HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator IQ(Complex)
+  nameWithType: IQ.implicit operator IQ(Complex)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator HackRFDotnet.Api.Streams.IQ(System.Numerics.Complex)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 733
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator IQ(Complex value)
+    parameters:
+    - id: value
+      type: System.Numerics.Complex
+    return:
+      type: HackRFDotnet.Api.Streams.IQ
+    content.vb: Public Shared Widening Operator CType(value As Complex) As IQ
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(Complex)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(System.Numerics.Complex)
+  name.vb: CType(Complex)
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit(HackRFDotnet.Api.Streams.IQ)~System.Numerics.Complex
+  commentId: M:HackRFDotnet.Api.Streams.IQ.op_Implicit(HackRFDotnet.Api.Streams.IQ)~System.Numerics.Complex
+  id: op_Implicit(HackRFDotnet.Api.Streams.IQ)~System.Numerics.Complex
+  parent: HackRFDotnet.Api.Streams.IQ
+  langs:
+  - csharp
+  - vb
+  name: implicit operator Complex(IQ)
+  nameWithType: IQ.implicit operator Complex(IQ)
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator System.Numerics.Complex(HackRFDotnet.Api.Streams.IQ)
+  type: Operator
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: op_Implicit
+    path: HackRFDotnet/ManagedApi/Streams/IQ.cs
+    startLine: 737
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams
+  syntax:
+    content: public static implicit operator Complex(IQ value)
+    parameters:
+    - id: value
+      type: HackRFDotnet.Api.Streams.IQ
+    return:
+      type: System.Numerics.Complex
+    content.vb: Public Shared Widening Operator CType(value As IQ) As Complex
+  overload: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  nameWithType.vb: IQ.CType(IQ)
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType(HackRFDotnet.Api.Streams.IQ)
+  name.vb: CType(IQ)
+references:
+- uid: HackRFDotnet.Api.Streams
+  commentId: N:HackRFDotnet.Api.Streams
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api.Streams
+  nameWithType: HackRFDotnet.Api.Streams
+  fullName: HackRFDotnet.Api.Streams
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+- uid: System.IEquatable{HackRFDotnet.Api.Streams.IQ}
+  commentId: T:System.IEquatable{HackRFDotnet.Api.Streams.IQ}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<IQ>
+  nameWithType: IEquatable<IQ>
+  fullName: System.IEquatable<HackRFDotnet.Api.Streams.IQ>
+  nameWithType.vb: IEquatable(Of IQ)
+  fullName.vb: System.IEquatable(Of HackRFDotnet.Api.Streams.IQ)
+  name.vb: IEquatable(Of IQ)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: HackRFDotnet.Api.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.Api.Streams.IQ.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: HackRFDotnet.Api.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.Api.Streams.IQ.html
+  - name: )
+- uid: System.IFormattable
+  commentId: T:System.IFormattable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  name: IFormattable
+  nameWithType: IFormattable
+  fullName: System.IFormattable
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: HackRFDotnet.Api.Streams.IQ
+  commentId: T:HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams
+  href: HackRFDotnet.Api.Streams.IQ.html
+  name: IQ
+  nameWithType: IQ
+  fullName: HackRFDotnet.Api.Streams.IQ
+- uid: HackRFDotnet.Api.Streams.IQ.#ctor*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.#ctor
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ__ctor_System_Single_System_Single_
+  name: IQ
+  nameWithType: IQ.IQ
+  fullName: HackRFDotnet.Api.Streams.IQ.IQ
+  nameWithType.vb: IQ.New
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.New
+  name.vb: New
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: HackRFDotnet.Api.Streams.InterleavedSample
+  commentId: T:HackRFDotnet.Api.Streams.InterleavedSample
+  parent: HackRFDotnet.Api.Streams
+  href: HackRFDotnet.Api.Streams.InterleavedSample.html
+  name: InterleavedSample
+  nameWithType: InterleavedSample
+  fullName: HackRFDotnet.Api.Streams.InterleavedSample
+- uid: HackRFDotnet.Api.Streams.IQ.I*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.I
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_I
+  name: I
+  nameWithType: IQ.I
+  fullName: HackRFDotnet.Api.Streams.IQ.I
+- uid: HackRFDotnet.Api.Streams.IQ.Q*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Q
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Q
+  name: Q
+  nameWithType: IQ.Q
+  fullName: HackRFDotnet.Api.Streams.IQ.Q
+- uid: HackRFDotnet.Api.Streams.IQ.Magnitude*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Magnitude
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Magnitude
+  name: Magnitude
+  nameWithType: IQ.Magnitude
+  fullName: HackRFDotnet.Api.Streams.IQ.Magnitude
+- uid: HackRFDotnet.Api.Streams.IQ.Phase*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Phase
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Phase
+  name: Phase
+  nameWithType: IQ.Phase
+  fullName: HackRFDotnet.Api.Streams.IQ.Phase
+- uid: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_FromPolarCoordinates_System_Single_System_Single_
+  name: FromPolarCoordinates
+  nameWithType: IQ.FromPolarCoordinates
+  fullName: HackRFDotnet.Api.Streams.IQ.FromPolarCoordinates
+- uid: HackRFDotnet.Api.Streams.IQ.Negate*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Negate
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Negate_HackRFDotnet_Api_Streams_IQ_
+  name: Negate
+  nameWithType: IQ.Negate
+  fullName: HackRFDotnet.Api.Streams.IQ.Negate
+- uid: HackRFDotnet.Api.Streams.IQ.Add*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Add
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Add_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: Add
+  nameWithType: IQ.Add
+  fullName: HackRFDotnet.Api.Streams.IQ.Add
+- uid: HackRFDotnet.Api.Streams.IQ.Subtract*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Subtract
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Subtract_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: Subtract
+  nameWithType: IQ.Subtract
+  fullName: HackRFDotnet.Api.Streams.IQ.Subtract
+- uid: HackRFDotnet.Api.Streams.IQ.Multiply*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Multiply
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Multiply_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: Multiply
+  nameWithType: IQ.Multiply
+  fullName: HackRFDotnet.Api.Streams.IQ.Multiply
+- uid: HackRFDotnet.Api.Streams.IQ.Divide*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Divide
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Divide_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: Divide
+  nameWithType: IQ.Divide
+  fullName: HackRFDotnet.Api.Streams.IQ.Divide
+- uid: HackRFDotnet.Api.Streams.IQ.op_UnaryNegation*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.op_UnaryNegation
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_UnaryNegation_HackRFDotnet_Api_Streams_IQ_
+  name: operator -
+  nameWithType: IQ.operator -
+  fullName: HackRFDotnet.Api.Streams.IQ.operator -
+  nameWithType.vb: IQ.-
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.Streams.IQ.op_UnaryNegation*
+    name: '-'
+    href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_UnaryNegation_HackRFDotnet_Api_Streams_IQ_
+- uid: HackRFDotnet.Api.Streams.IQ.op_Addition*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.op_Addition
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Addition_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: operator +
+  nameWithType: IQ.operator +
+  fullName: HackRFDotnet.Api.Streams.IQ.operator +
+  nameWithType.vb: IQ.+
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.+
+  name.vb: +
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.Streams.IQ.op_Addition*
+    name: +
+    href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Addition_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+- uid: HackRFDotnet.Api.Streams.IQ.op_Subtraction*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.op_Subtraction
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Subtraction_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: operator -
+  nameWithType: IQ.operator -
+  fullName: HackRFDotnet.Api.Streams.IQ.operator -
+  nameWithType.vb: IQ.-
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.-
+  name.vb: '-'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.Streams.IQ.op_Subtraction*
+    name: '-'
+    href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Subtraction_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+- uid: HackRFDotnet.Api.Streams.IQ.op_Multiply*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.op_Multiply
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Multiply_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: operator *
+  nameWithType: IQ.operator *
+  fullName: HackRFDotnet.Api.Streams.IQ.operator *
+  nameWithType.vb: IQ.*
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.*
+  name.vb: '*'
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.Streams.IQ.op_Multiply*
+    name: '*'
+    href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Multiply_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+- uid: HackRFDotnet.Api.Streams.IQ.op_Division*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.op_Division
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Division_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: operator /
+  nameWithType: IQ.operator /
+  fullName: HackRFDotnet.Api.Streams.IQ.operator /
+  nameWithType.vb: IQ./
+  fullName.vb: HackRFDotnet.Api.Streams.IQ./
+  name.vb: /
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.Streams.IQ.op_Division*
+    name: /
+    href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Division_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+- uid: HackRFDotnet.Api.Streams.IQ.Abs*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Abs
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Abs_HackRFDotnet_Api_Streams_IQ_
+  name: Abs
+  nameWithType: IQ.Abs
+  fullName: HackRFDotnet.Api.Streams.IQ.Abs
+- uid: HackRFDotnet.Api.Streams.IQ.Conjugate*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Conjugate
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Conjugate_HackRFDotnet_Api_Streams_IQ_
+  name: Conjugate
+  nameWithType: IQ.Conjugate
+  fullName: HackRFDotnet.Api.Streams.IQ.Conjugate
+- uid: HackRFDotnet.Api.Streams.IQ.Reciprocal*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Reciprocal
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Reciprocal_HackRFDotnet_Api_Streams_IQ_
+  name: Reciprocal
+  nameWithType: IQ.Reciprocal
+  fullName: HackRFDotnet.Api.Streams.IQ.Reciprocal
+- uid: HackRFDotnet.Api.Streams.IQ.op_Equality*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.op_Equality
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Equality_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: operator ==
+  nameWithType: IQ.operator ==
+  fullName: HackRFDotnet.Api.Streams.IQ.operator ==
+  nameWithType.vb: IQ.=
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.Streams.IQ.op_Equality*
+    name: ==
+    href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Equality_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: HackRFDotnet.Api.Streams.IQ.op_Inequality*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.op_Inequality
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Inequality_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: operator !=
+  nameWithType: IQ.operator !=
+  fullName: HackRFDotnet.Api.Streams.IQ.operator !=
+  nameWithType.vb: IQ.<>
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: HackRFDotnet.Api.Streams.IQ.op_Inequality*
+    name: '!='
+    href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_op_Inequality_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: HackRFDotnet.Api.Streams.IQ.Equals*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Equals
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Equals_System_Object_
+  name: Equals
+  nameWithType: IQ.Equals
+  fullName: HackRFDotnet.Api.Streams.IQ.Equals
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.IEquatable{HackRFDotnet.Api.Streams.IQ}.Equals(HackRFDotnet.Api.Streams.IQ)
+  commentId: M:System.IEquatable{HackRFDotnet.Api.Streams.IQ}.Equals(HackRFDotnet.Api.Streams.IQ)
+  parent: System.IEquatable{HackRFDotnet.Api.Streams.IQ}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(IQ)
+  nameWithType: IEquatable<IQ>.Equals(IQ)
+  fullName: System.IEquatable<HackRFDotnet.Api.Streams.IQ>.Equals(HackRFDotnet.Api.Streams.IQ)
+  nameWithType.vb: IEquatable(Of IQ).Equals(IQ)
+  fullName.vb: System.IEquatable(Of HackRFDotnet.Api.Streams.IQ).Equals(HackRFDotnet.Api.Streams.IQ)
+  spec.csharp:
+  - uid: System.IEquatable{HackRFDotnet.Api.Streams.IQ}.Equals(HackRFDotnet.Api.Streams.IQ)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: HackRFDotnet.Api.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.Api.Streams.IQ.html
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{HackRFDotnet.Api.Streams.IQ}.Equals(HackRFDotnet.Api.Streams.IQ)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: HackRFDotnet.Api.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.Api.Streams.IQ.html
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: HackRFDotnet.Api.Streams.IQ.GetHashCode*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.GetHashCode
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_GetHashCode
+  name: GetHashCode
+  nameWithType: IQ.GetHashCode
+  fullName: HackRFDotnet.Api.Streams.IQ.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: HackRFDotnet.Api.Streams.IQ.ToString*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.ToString
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_ToString
+  name: ToString
+  nameWithType: IQ.ToString
+  fullName: HackRFDotnet.Api.Streams.IQ.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  name: IFormatProvider
+  nameWithType: IFormatProvider
+  fullName: System.IFormatProvider
+- uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+  commentId: M:System.IFormattable.ToString(System.String,System.IFormatProvider)
+  parent: System.IFormattable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  name: ToString(string, IFormatProvider)
+  nameWithType: IFormattable.ToString(string, IFormatProvider)
+  fullName: System.IFormattable.ToString(string, System.IFormatProvider)
+  nameWithType.vb: IFormattable.ToString(String, IFormatProvider)
+  fullName.vb: System.IFormattable.ToString(String, System.IFormatProvider)
+  name.vb: ToString(String, IFormatProvider)
+  spec.csharp:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: System.IFormattable.ToString(System.String,System.IFormatProvider)
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable.tostring
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: HackRFDotnet.Api.Streams.IQ.Sin*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Sin
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Sin_HackRFDotnet_Api_Streams_IQ_
+  name: Sin
+  nameWithType: IQ.Sin
+  fullName: HackRFDotnet.Api.Streams.IQ.Sin
+- uid: HackRFDotnet.Api.Streams.IQ.Sinh*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Sinh
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Sinh_HackRFDotnet_Api_Streams_IQ_
+  name: Sinh
+  nameWithType: IQ.Sinh
+  fullName: HackRFDotnet.Api.Streams.IQ.Sinh
+- uid: HackRFDotnet.Api.Streams.IQ.Asin*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Asin
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Asin_HackRFDotnet_Api_Streams_IQ_
+  name: Asin
+  nameWithType: IQ.Asin
+  fullName: HackRFDotnet.Api.Streams.IQ.Asin
+- uid: HackRFDotnet.Api.Streams.IQ.Cos*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Cos
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Cos_HackRFDotnet_Api_Streams_IQ_
+  name: Cos
+  nameWithType: IQ.Cos
+  fullName: HackRFDotnet.Api.Streams.IQ.Cos
+- uid: HackRFDotnet.Api.Streams.IQ.Cosh*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Cosh
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Cosh_HackRFDotnet_Api_Streams_IQ_
+  name: Cosh
+  nameWithType: IQ.Cosh
+  fullName: HackRFDotnet.Api.Streams.IQ.Cosh
+- uid: HackRFDotnet.Api.Streams.IQ.Acos*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Acos
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Acos_HackRFDotnet_Api_Streams_IQ_
+  name: Acos
+  nameWithType: IQ.Acos
+  fullName: HackRFDotnet.Api.Streams.IQ.Acos
+- uid: HackRFDotnet.Api.Streams.IQ.Tan*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Tan
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Tan_HackRFDotnet_Api_Streams_IQ_
+  name: Tan
+  nameWithType: IQ.Tan
+  fullName: HackRFDotnet.Api.Streams.IQ.Tan
+- uid: HackRFDotnet.Api.Streams.IQ.Tanh*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Tanh
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Tanh_HackRFDotnet_Api_Streams_IQ_
+  name: Tanh
+  nameWithType: IQ.Tanh
+  fullName: HackRFDotnet.Api.Streams.IQ.Tanh
+- uid: HackRFDotnet.Api.Streams.IQ.Atan*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Atan
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Atan_HackRFDotnet_Api_Streams_IQ_
+  name: Atan
+  nameWithType: IQ.Atan
+  fullName: HackRFDotnet.Api.Streams.IQ.Atan
+- uid: HackRFDotnet.Api.Streams.IQ.IsFinite*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.IsFinite
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_IsFinite_HackRFDotnet_Api_Streams_IQ_
+  name: IsFinite
+  nameWithType: IQ.IsFinite
+  fullName: HackRFDotnet.Api.Streams.IQ.IsFinite
+- uid: HackRFDotnet.Api.Streams.IQ.IsInfinity*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.IsInfinity
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_IsInfinity_HackRFDotnet_Api_Streams_IQ_
+  name: IsInfinity
+  nameWithType: IQ.IsInfinity
+  fullName: HackRFDotnet.Api.Streams.IQ.IsInfinity
+- uid: HackRFDotnet.Api.Streams.IQ.IsNaN*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.IsNaN
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_IsNaN_HackRFDotnet_Api_Streams_IQ_
+  name: IsNaN
+  nameWithType: IQ.IsNaN
+  fullName: HackRFDotnet.Api.Streams.IQ.IsNaN
+- uid: HackRFDotnet.Api.Streams.IQ.Log*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Log
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Log_HackRFDotnet_Api_Streams_IQ_
+  name: Log
+  nameWithType: IQ.Log
+  fullName: HackRFDotnet.Api.Streams.IQ.Log
+- uid: HackRFDotnet.Api.Streams.IQ.Log10*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Log10
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Log10_HackRFDotnet_Api_Streams_IQ_
+  name: Log10
+  nameWithType: IQ.Log10
+  fullName: HackRFDotnet.Api.Streams.IQ.Log10
+- uid: HackRFDotnet.Api.Streams.IQ.Exp*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Exp
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Exp_HackRFDotnet_Api_Streams_IQ_
+  name: Exp
+  nameWithType: IQ.Exp
+  fullName: HackRFDotnet.Api.Streams.IQ.Exp
+- uid: HackRFDotnet.Api.Streams.IQ.Sqrt*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Sqrt
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Sqrt_HackRFDotnet_Api_Streams_IQ_
+  name: Sqrt
+  nameWithType: IQ.Sqrt
+  fullName: HackRFDotnet.Api.Streams.IQ.Sqrt
+- uid: HackRFDotnet.Api.Streams.IQ.Pow*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.Pow
+  href: HackRFDotnet.Api.Streams.IQ.html#HackRFDotnet_Api_Streams_IQ_Pow_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_
+  name: Pow
+  nameWithType: IQ.Pow
+  fullName: HackRFDotnet.Api.Streams.IQ.Pow
+- uid: HackRFDotnet.Api.Streams.IQ.op_Explicit*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.op_Explicit
+  name: explicit operator
+  nameWithType: IQ.explicit operator
+  fullName: HackRFDotnet.Api.Streams.IQ.explicit operator
+  nameWithType.vb: IQ.CType
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType
+  name.vb: CType
+  spec.csharp:
+  - name: explicit
+  - name: " "
+  - name: operator
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: HackRFDotnet.Api.Streams.IQ.op_Implicit*
+  commentId: Overload:HackRFDotnet.Api.Streams.IQ.op_Implicit
+  name: implicit operator
+  nameWithType: IQ.implicit operator
+  fullName: HackRFDotnet.Api.Streams.IQ.implicit operator
+  nameWithType.vb: IQ.CType
+  fullName.vb: HackRFDotnet.Api.Streams.IQ.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: System.Half
+  commentId: T:System.Half
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.half
+  name: Half
+  nameWithType: Half
+  fullName: System.Half
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.intptr
+  name: nint
+  nameWithType: nint
+  fullName: nint
+  nameWithType.vb: IntPtr
+  fullName.vb: System.IntPtr
+  name.vb: IntPtr
+- uid: System.SByte
+  commentId: T:System.SByte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  name: sbyte
+  nameWithType: sbyte
+  fullName: sbyte
+  nameWithType.vb: SByte
+  fullName.vb: SByte
+  name.vb: SByte
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.UIntPtr
+  commentId: T:System.UIntPtr
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uintptr
+  name: nuint
+  nameWithType: nuint
+  fullName: nuint
+  nameWithType.vb: UIntPtr
+  fullName.vb: System.UIntPtr
+  name.vb: UIntPtr
+- uid: System.Numerics.Complex
+  commentId: T:System.Numerics.Complex
+  parent: System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.complex
+  name: Complex
+  nameWithType: Complex
+  fullName: System.Numerics.Complex
+- uid: System.Numerics
+  commentId: N:System.Numerics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Numerics
+  nameWithType: System.Numerics
+  fullName: System.Numerics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Numerics
+    name: Numerics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics

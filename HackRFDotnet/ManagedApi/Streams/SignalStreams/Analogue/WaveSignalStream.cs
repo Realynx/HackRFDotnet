@@ -1,11 +1,11 @@
 ﻿using System.Buffers;
 
-using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalProcessing;
 
 using NAudio.Wave;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
+namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
 
     public WaveFormat? WaveFormat { get; protected set; }

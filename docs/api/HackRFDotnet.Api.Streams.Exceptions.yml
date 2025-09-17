@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.Api.Streams.Exceptions
+  commentId: N:HackRFDotnet.Api.Streams.Exceptions
+  id: HackRFDotnet.Api.Streams.Exceptions
+  children:
+  - HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.Api.Streams.Exceptions
+  nameWithType: HackRFDotnet.Api.Streams.Exceptions
+  fullName: HackRFDotnet.Api.Streams.Exceptions
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
+  commentId: T:HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
+  href: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException.html
+  name: NullCallbackException
+  nameWithType: NullCallbackException
+  fullName: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException

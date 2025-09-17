@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace HackRFDotnet.ManagedApi.Streams.Buffers;
+namespace HackRFDotnet.Api.Streams.Buffers;
 /// <summary>
 /// <see cref="UnsafeRingBuffer{T}"/> does not store any pointers to offset read or write.
 /// You are meant to track your own pointers when using <see cref="UnsafeRingBuffer{T}"/>

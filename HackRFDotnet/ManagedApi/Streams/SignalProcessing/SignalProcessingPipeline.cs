@@ -1,6 +1,6 @@
-﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
+﻿using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+namespace HackRFDotnet.Api.Streams.SignalProcessing;
 public class SignalProcessingPipeline {
     private readonly SignalEffect[] _signalFxPipe;
 

@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
+﻿namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 public class BasicSignalScanningEffect : SignalEffect {
     private readonly DigitalRadioDevice _digitalRadioDevice;
     private readonly RadioBand _bandwidth;

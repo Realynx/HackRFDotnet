@@ -1,6 +1,6 @@
-﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
+﻿using HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
+namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 public abstract class SignalEffect : ISignalEffect {
     public abstract int AffectSignal(Span<IQ> signalTheta, int length);
 }

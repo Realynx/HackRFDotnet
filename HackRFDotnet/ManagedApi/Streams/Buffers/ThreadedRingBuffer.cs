@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace HackRFDotnet.ManagedApi.Streams.Buffers;
+namespace HackRFDotnet.Api.Streams.Buffers;
 internal struct ThreadPointer {
     public int readStart;
     public bool empty = true;

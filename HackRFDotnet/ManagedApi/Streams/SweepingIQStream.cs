@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.ManagedApi.Streams {
+﻿namespace HackRFDotnet.Api.Streams {
     public class SweepingIQStream {
         public SweepingIQStream() {
 

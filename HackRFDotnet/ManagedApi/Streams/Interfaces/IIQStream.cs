@@ -1,6 +1,6 @@
-﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+﻿using HackRFDotnet.Api.Streams.SignalProcessing;
 
-namespace HackRFDotnet.ManagedApi.Streams.Interfaces;
+namespace HackRFDotnet.Api.Streams.Interfaces;
 public interface IIQStream {
     int BufferLength { get; }
     RadioBand Frequency { get; }

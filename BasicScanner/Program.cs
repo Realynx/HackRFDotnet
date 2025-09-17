@@ -1,8 +1,8 @@
-﻿using HackRFDotnet.ManagedApi.Services;
-using HackRFDotnet.ManagedApi.Streams.Device;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
-using HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue;
+﻿using HackRFDotnet.Api.Services;
+using HackRFDotnet.Api.Streams.Device;
+using HackRFDotnet.Api.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 
 using Microsoft.Extensions.Hosting;
 

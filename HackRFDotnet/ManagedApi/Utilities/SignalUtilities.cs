@@ -1,7 +1,7 @@
-﻿using HackRFDotnet.ManagedApi.Streams;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+﻿using HackRFDotnet.Api.Streams;
+using HackRFDotnet.Api.Streams.SignalProcessing;
 
-namespace HackRFDotnet.ManagedApi.Utilities;
+namespace HackRFDotnet.Api.Utilities;
 
 public unsafe class SignalUtilities {
     public static void IQCorrection(Span<IQ> iqFrame) {

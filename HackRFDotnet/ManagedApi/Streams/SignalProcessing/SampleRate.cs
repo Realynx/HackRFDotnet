@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+﻿namespace HackRFDotnet.Api.Streams.SignalProcessing;
 public class SampleRate {
     private readonly int _sps;
 

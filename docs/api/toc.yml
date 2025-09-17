@@ -1,155 +1,155 @@
 ### YamlMime:TableOfContent
 items:
-- uid: HackRFDotnet.ManagedApi
-  name: HackRFDotnet.ManagedApi
+- uid: HackRFDotnet.Api
+  name: HackRFDotnet.Api
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.DigitalRadioDevice
+  - uid: HackRFDotnet.Api.DigitalRadioDevice
     name: DigitalRadioDevice
     type: Class
-- uid: HackRFDotnet.ManagedApi.Extensions
-  name: HackRFDotnet.ManagedApi.Extensions
+- uid: HackRFDotnet.Api.Extensions
+  name: HackRFDotnet.Api.Extensions
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Extensions.RfDeviceExtensions
+  - uid: HackRFDotnet.Api.Extensions.RfDeviceExtensions
     name: RfDeviceExtensions
     type: Class
-- uid: HackRFDotnet.ManagedApi.Services
-  name: HackRFDotnet.ManagedApi.Services
+- uid: HackRFDotnet.Api.Services
+  name: HackRFDotnet.Api.Services
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Services.AnaloguePlayer
+  - uid: HackRFDotnet.Api.Services.AnaloguePlayer
     name: AnaloguePlayer
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Services.DigitalPlayer
+  - uid: HackRFDotnet.Api.Services.DigitalPlayer
     name: DigitalPlayer
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Services.RfDeviceControllerService
+  - uid: HackRFDotnet.Api.Services.RfDeviceControllerService
     name: RfDeviceControllerService
     type: Class
-- uid: HackRFDotnet.ManagedApi.Streams
-  name: HackRFDotnet.ManagedApi.Streams
+- uid: HackRFDotnet.Api.Streams
+  name: HackRFDotnet.Api.Streams
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.IQ
+  - uid: HackRFDotnet.Api.Streams.IQ
     name: IQ
     type: Struct
-  - uid: HackRFDotnet.ManagedApi.Streams.InterleavedSample
+  - uid: HackRFDotnet.Api.Streams.InterleavedSample
     name: InterleavedSample
     type: Struct
-  - uid: HackRFDotnet.ManagedApi.Streams.SweepingIQStream
+  - uid: HackRFDotnet.Api.Streams.SweepingIQStream
     name: SweepingIQStream
     type: Class
-- uid: HackRFDotnet.ManagedApi.Streams.Device
-  name: HackRFDotnet.ManagedApi.Streams.Device
+- uid: HackRFDotnet.Api.Streams.Device
+  name: HackRFDotnet.Api.Streams.Device
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.Device.IQDeviceStream
+  - uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream
     name: IQDeviceStream
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.Device.IQFileStream
+  - uid: HackRFDotnet.Api.Streams.Device.IQFileStream
     name: IQFileStream
     type: Class
-- uid: HackRFDotnet.ManagedApi.Streams.Exceptions
-  name: HackRFDotnet.ManagedApi.Streams.Exceptions
+- uid: HackRFDotnet.Api.Streams.Exceptions
+  name: HackRFDotnet.Api.Streams.Exceptions
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.Exceptions.NullCallbackException
+  - uid: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
     name: NullCallbackException
     type: Class
-- uid: HackRFDotnet.ManagedApi.Streams.Interfaces
-  name: HackRFDotnet.ManagedApi.Streams.Interfaces
+- uid: HackRFDotnet.Api.Streams.Interfaces
+  name: HackRFDotnet.Api.Streams.Interfaces
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.Interfaces.IIQStream
+  - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream
     name: IIQStream
     type: Interface
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing
-  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing
+- uid: HackRFDotnet.Api.Streams.SignalProcessing
+  name: HackRFDotnet.Api.Streams.SignalProcessing
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.RadioBand
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
     name: RadioBand
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SampleRate
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
     name: SampleRate
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingBuilder
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
     name: SignalProcessingBuilder
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.SignalProcessingPipeline
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
     name: SignalProcessingPipeline
     type: Class
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
-  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  name: HackRFDotnet.Api.Streams.SignalProcessing.Effects
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
     name: BasicSignalScanningEffect
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.DownSampleEffect
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.DownSampleEffect
     name: DownSampleEffect
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FftEffect
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect
     name: FftEffect
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
     name: FrequencyCenteringEffect
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.LowPassFilterEffect
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect
     name: LowPassFilterEffect
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SignalEffect
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
     name: SignalEffect
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.SquelchEffect
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect
     name: SquelchEffect
     type: Class
-- uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
-  name: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
+  name: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces.ISignalEffect
     name: ISignalEffect
     type: Interface
-- uid: HackRFDotnet.ManagedApi.Streams.SignalStreams
-  name: HackRFDotnet.ManagedApi.Streams.SignalStreams
+- uid: HackRFDotnet.Api.Streams.SignalStreams
+  name: HackRFDotnet.Api.Streams.SignalStreams
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.SignalStream
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
     name: SignalStream
     type: Class
-- uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
-  name: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue
+- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue
+  name: HackRFDotnet.Api.Streams.SignalStreams.Analogue
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.AmSignalStream
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream
     name: AmSignalStream
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.FmSignalStream
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream
     name: FmSignalStream
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Analogue.WaveSignalStream
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream
     name: WaveSignalStream
     type: Class
-- uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Digital
-  name: HackRFDotnet.ManagedApi.Streams.SignalStreams.Digital
+- uid: HackRFDotnet.Api.Streams.SignalStreams.Digital
+  name: HackRFDotnet.Api.Streams.SignalStreams.Digital
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Digital.HdRadioSignalStream
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.Digital.HdRadioSignalStream
     name: HdRadioSignalStream
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Streams.SignalStreams.Digital.QpskSignalStream
+  - uid: HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream
     name: QpskSignalStream
     type: Class
-- uid: HackRFDotnet.ManagedApi.Utilities
-  name: HackRFDotnet.ManagedApi.Utilities
+- uid: HackRFDotnet.Api.Utilities
+  name: HackRFDotnet.Api.Utilities
   type: Namespace
   items:
-  - uid: HackRFDotnet.ManagedApi.Utilities.BinaryUtilities
+  - uid: HackRFDotnet.Api.Utilities.BinaryUtilities
     name: BinaryUtilities
     type: Class
-  - uid: HackRFDotnet.ManagedApi.Utilities.SignalUtilities
+  - uid: HackRFDotnet.Api.Utilities.SignalUtilities
     name: SignalUtilities
     type: Class
 - uid: HackRFDotnet.NativeApi.Enums

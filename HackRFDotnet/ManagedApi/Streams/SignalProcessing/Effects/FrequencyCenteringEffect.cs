@@ -1,7 +1,7 @@
-﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects.Interfaces;
-using HackRFDotnet.ManagedApi.Utilities;
+﻿using HackRFDotnet.Api.Streams.SignalProcessing.Effects.Interfaces;
+using HackRFDotnet.Api.Utilities;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing.Effects;
+namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 public class FrequencyCenteringEffect : SignalEffect, ISignalEffect {
     private readonly RadioBand _frequencyOffset;
     private readonly SampleRate _sampleRate;

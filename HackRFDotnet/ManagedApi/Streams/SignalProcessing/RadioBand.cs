@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace HackRFDotnet.ManagedApi.Streams.SignalProcessing {
+namespace HackRFDotnet.Api.Streams.SignalProcessing {
     public class RadioBand {
 
         private readonly int _hz;

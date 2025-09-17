@@ -1,0 +1,881 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  id: SignalStream
+  parent: HackRFDotnet.Api.Streams.SignalStreams
+  children:
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span{HackRFDotnet.Api.Streams.IQ})
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._iQStream
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._keepOpen
+  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream._processingPipeline
+  langs:
+  - csharp
+  - vb
+  name: SignalStream
+  nameWithType: SignalStream
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  type: Class
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: SignalStream
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 6
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  syntax:
+    content: 'public class SignalStream : IDisposable'
+    content.vb: Public Class SignalStream Implements IDisposable
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream
+  - HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center
+  commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center
+  id: Center
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: Center
+  nameWithType: SignalStream.Center
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Center
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 7
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  syntax:
+    content: public RadioBand Center { get; protected set; }
+    parameters: []
+    return:
+      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+    content.vb: Public Property Center As RadioBand
+  overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center*
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
+  commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
+  id: BandWidth
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: BandWidth
+  nameWithType: SignalStream.BandWidth
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: BandWidth
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 8
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  syntax:
+    content: public RadioBand BandWidth { get; protected set; }
+    parameters: []
+    return:
+      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+    content.vb: Public Property BandWidth As RadioBand
+  overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth*
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
+  commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
+  id: SampleRate
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: SampleRate
+  nameWithType: SignalStream.SampleRate
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
+  type: Property
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: SampleRate
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 9
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  syntax:
+    content: public SampleRate SampleRate { get; }
+    parameters: []
+    return:
+      type: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+    content.vb: Public ReadOnly Property SampleRate As SampleRate
+  overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate*
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream._processingPipeline
+  commentId: F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream._processingPipeline
+  id: _processingPipeline
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: _processingPipeline
+  nameWithType: SignalStream._processingPipeline
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream._processingPipeline
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: _processingPipeline
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 18
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  syntax:
+    content: protected SignalProcessingPipeline? _processingPipeline
+    return:
+      type: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+    content.vb: Protected _processingPipeline As SignalProcessingPipeline
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream._iQStream
+  commentId: F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream._iQStream
+  id: _iQStream
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: _iQStream
+  nameWithType: SignalStream._iQStream
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream._iQStream
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: _iQStream
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 20
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  syntax:
+    content: protected readonly IIQStream _iQStream
+    return:
+      type: HackRFDotnet.Api.Streams.Interfaces.IIQStream
+    content.vb: Protected ReadOnly _iQStream As IIQStream
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream._keepOpen
+  commentId: F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream._keepOpen
+  id: _keepOpen
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: _keepOpen
+  nameWithType: SignalStream._keepOpen
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream._keepOpen
+  type: Field
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: _keepOpen
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 21
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  syntax:
+    content: protected readonly bool _keepOpen
+    return:
+      type: System.Boolean
+    content.vb: Protected ReadOnly _keepOpen As Boolean
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)
+  id: '#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline,System.Boolean)'
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: SignalStream(IIQStream, SignalProcessingPipeline?, bool)
+  nameWithType: SignalStream.SignalStream(IIQStream, SignalProcessingPipeline?, bool)
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SignalStream(HackRFDotnet.Api.Streams.Interfaces.IIQStream, HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline?, bool)
+  type: Constructor
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: .ctor
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 23
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  syntax:
+    content: public SignalStream(IIQStream iQStream, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
+    parameters:
+    - id: iQStream
+      type: HackRFDotnet.Api.Streams.Interfaces.IIQStream
+    - id: processingPipeline
+      type: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+    - id: keepOpen
+      type: System.Boolean
+    content.vb: Public Sub New(iQStream As IIQStream, processingPipeline As SignalProcessingPipeline = Nothing, keepOpen As Boolean = True)
+  overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.#ctor*
+  nameWithType.vb: SignalStream.New(IIQStream, SignalProcessingPipeline, Boolean)
+  fullName.vb: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.New(HackRFDotnet.Api.Streams.Interfaces.IIQStream, HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline, Boolean)
+  name.vb: New(IIQStream, SignalProcessingPipeline, Boolean)
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span{HackRFDotnet.Api.Streams.IQ})
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span{HackRFDotnet.Api.Streams.IQ})
+  id: ReadSpan(System.Span{HackRFDotnet.Api.Streams.IQ})
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: ReadSpan(Span<IQ>)
+  nameWithType: SignalStream.ReadSpan(Span<IQ>)
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span<HackRFDotnet.Api.Streams.IQ>)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: ReadSpan
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 32
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  syntax:
+    content: public void ReadSpan(Span<IQ> iqPairs)
+    parameters:
+    - id: iqPairs
+      type: System.Span{HackRFDotnet.Api.Streams.IQ}
+    content.vb: Public Sub ReadSpan(iqPairs As Span(Of IQ))
+  overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan*
+  nameWithType.vb: SignalStream.ReadSpan(Span(Of IQ))
+  fullName.vb: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan(System.Span(Of HackRFDotnet.Api.Streams.IQ))
+  name.vb: ReadSpan(Span(Of IQ))
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
+  id: SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand,HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: SetBand(RadioBand, RadioBand)
+  nameWithType: SignalStream.SetBand(RadioBand, RadioBand)
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand(HackRFDotnet.Api.Streams.SignalProcessing.RadioBand, HackRFDotnet.Api.Streams.SignalProcessing.RadioBand)
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: SetBand
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 62
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  summary: Set the band and bandwidth the filtering engine will use.
+  example: []
+  syntax:
+    content: public void SetBand(RadioBand center, RadioBand bandwidth)
+    parameters:
+    - id: center
+      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      description: ''
+    - id: bandwidth
+      type: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+      description: ''
+    content.vb: Public Sub SetBand(center As RadioBand, bandwidth As RadioBand)
+  overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand*
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
+  commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
+  id: Dispose
+  parent: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: SignalStream.Dispose()
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose()
+  type: Method
+  source:
+    remote:
+      path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+      branch: master
+      repo: https://github.com/Realynx/HackRFDotnet.git
+    id: Dispose
+    path: HackRFDotnet/ManagedApi/Streams/SignalStreams/SignalStream.cs
+    startLine: 67
+  assemblies:
+  - HackRFDotnet
+  namespace: HackRFDotnet.Api.Streams.SignalStreams
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: HackRFDotnet.Api.Streams.SignalStreams
+  commentId: N:HackRFDotnet.Api.Streams.SignalStreams
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api.Streams.SignalStreams
+  nameWithType: HackRFDotnet.Api.Streams.SignalStreams
+  fullName: HackRFDotnet.Api.Streams.SignalStreams
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalStreams
+    name: SignalStreams
+    href: HackRFDotnet.Api.Streams.SignalStreams.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalStreams
+    name: SignalStreams
+    href: HackRFDotnet.Api.Streams.SignalStreams.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center*
+  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_Center
+  name: Center
+  nameWithType: SignalStream.Center
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Center
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+  parent: HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand.html
+  name: RadioBand
+  nameWithType: RadioBand
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.RadioBand
+- uid: HackRFDotnet.Api.Streams.SignalProcessing
+  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api.Streams.SignalProcessing
+  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.SignalProcessing
+    name: SignalProcessing
+    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth*
+  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_BandWidth
+  name: BandWidth
+  nameWithType: SignalStream.BandWidth
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.BandWidth
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate*
+  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SampleRate
+  name: SampleRate
+  nameWithType: SignalStream.SampleRate
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SampleRate
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+  parent: HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate.html
+  name: SampleRate
+  nameWithType: SampleRate
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SampleRate
+- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+  parent: HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html
+  name: SignalProcessingPipeline
+  nameWithType: SignalProcessingPipeline
+  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
+- uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream
+  commentId: T:HackRFDotnet.Api.Streams.Interfaces.IIQStream
+  parent: HackRFDotnet.Api.Streams.Interfaces
+  href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html
+  name: IIQStream
+  nameWithType: IIQStream
+  fullName: HackRFDotnet.Api.Streams.Interfaces.IIQStream
+- uid: HackRFDotnet.Api.Streams.Interfaces
+  commentId: N:HackRFDotnet.Api.Streams.Interfaces
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api.Streams.Interfaces
+  nameWithType: HackRFDotnet.Api.Streams.Interfaces
+  fullName: HackRFDotnet.Api.Streams.Interfaces
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.Api.Streams.Interfaces.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams.Interfaces
+    name: Interfaces
+    href: HackRFDotnet.Api.Streams.Interfaces.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.#ctor*
+  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.#ctor
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_System_Boolean_
+  name: SignalStream
+  nameWithType: SignalStream.SignalStream
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SignalStream
+  nameWithType.vb: SignalStream.New
+  fullName.vb: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.New
+  name.vb: New
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan*
+  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_ReadSpan_System_Span_HackRFDotnet_Api_Streams_IQ__
+  name: ReadSpan
+  nameWithType: SignalStream.ReadSpan
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.ReadSpan
+- uid: System.Span{HackRFDotnet.Api.Streams.IQ}
+  commentId: T:System.Span{HackRFDotnet.Api.Streams.IQ}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<IQ>
+  nameWithType: Span<IQ>
+  fullName: System.Span<HackRFDotnet.Api.Streams.IQ>
+  nameWithType.vb: Span(Of IQ)
+  fullName.vb: System.Span(Of HackRFDotnet.Api.Streams.IQ)
+  name.vb: Span(Of IQ)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: HackRFDotnet.Api.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.Api.Streams.IQ.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: HackRFDotnet.Api.Streams.IQ
+    name: IQ
+    href: HackRFDotnet.Api.Streams.IQ.html
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand*
+  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_SetBand_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_HackRFDotnet_Api_Streams_SignalProcessing_RadioBand_
+  name: SetBand
+  nameWithType: SignalStream.SetBand
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.SetBand
+- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose*
+  commentId: Overload:HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
+  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_Dispose
+  name: Dispose
+  nameWithType: SignalStream.Dispose
+  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

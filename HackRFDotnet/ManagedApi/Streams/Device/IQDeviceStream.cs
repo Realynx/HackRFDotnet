@@ -1,11 +1,11 @@
-﻿using HackRFDotnet.ManagedApi.Streams.Buffers;
-using HackRFDotnet.ManagedApi.Streams.Exceptions;
-using HackRFDotnet.ManagedApi.Streams.Interfaces;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+﻿using HackRFDotnet.Api.Streams.Buffers;
+using HackRFDotnet.Api.Streams.Exceptions;
+using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;
 
-namespace HackRFDotnet.ManagedApi.Streams.Device {
+namespace HackRFDotnet.Api.Streams.Device {
     public unsafe class IQDeviceStream : IDisposable, IIQStream {
         private readonly DigitalRadioDevice _rfDevice;
         private readonly int _transferBufferSize = 0;

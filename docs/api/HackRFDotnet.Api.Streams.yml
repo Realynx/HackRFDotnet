@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: HackRFDotnet.Api.Streams
+  commentId: N:HackRFDotnet.Api.Streams
+  id: HackRFDotnet.Api.Streams
+  children:
+  - HackRFDotnet.Api.Streams.IQ
+  - HackRFDotnet.Api.Streams.InterleavedSample
+  - HackRFDotnet.Api.Streams.SweepingIQStream
+  langs:
+  - csharp
+  - vb
+  name: HackRFDotnet.Api.Streams
+  nameWithType: HackRFDotnet.Api.Streams
+  fullName: HackRFDotnet.Api.Streams
+  type: Namespace
+  assemblies:
+  - HackRFDotnet
+references:
+- uid: HackRFDotnet.Api.Streams.InterleavedSample
+  commentId: T:HackRFDotnet.Api.Streams.InterleavedSample
+  parent: HackRFDotnet.Api.Streams
+  href: HackRFDotnet.Api.Streams.InterleavedSample.html
+  name: InterleavedSample
+  nameWithType: InterleavedSample
+  fullName: HackRFDotnet.Api.Streams.InterleavedSample
+- uid: HackRFDotnet.Api.Streams.IQ
+  commentId: T:HackRFDotnet.Api.Streams.IQ
+  parent: HackRFDotnet.Api.Streams
+  href: HackRFDotnet.Api.Streams.IQ.html
+  name: IQ
+  nameWithType: IQ
+  fullName: HackRFDotnet.Api.Streams.IQ
+- uid: HackRFDotnet.Api.Streams.SweepingIQStream
+  commentId: T:HackRFDotnet.Api.Streams.SweepingIQStream
+  href: HackRFDotnet.Api.Streams.SweepingIQStream.html
+  name: SweepingIQStream
+  nameWithType: SweepingIQStream
+  fullName: HackRFDotnet.Api.Streams.SweepingIQStream
+- uid: HackRFDotnet.Api.Streams
+  commentId: N:HackRFDotnet.Api.Streams
+  href: HackRFDotnet.html
+  name: HackRFDotnet.Api.Streams
+  nameWithType: HackRFDotnet.Api.Streams
+  fullName: HackRFDotnet.Api.Streams
+  spec.csharp:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html
+  spec.vb:
+  - uid: HackRFDotnet
+    name: HackRFDotnet
+    href: HackRFDotnet.html
+  - name: .
+  - uid: HackRFDotnet.Api
+    name: Api
+    href: HackRFDotnet.Api.html
+  - name: .
+  - uid: HackRFDotnet.Api.Streams
+    name: Streams
+    href: HackRFDotnet.Api.Streams.html

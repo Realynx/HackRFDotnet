@@ -1,11 +1,11 @@
-﻿using HackRFDotnet.ManagedApi.Streams.Exceptions;
-using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+﻿using HackRFDotnet.Api.Streams.Exceptions;
+using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.NativeApi.Enums.Peripherals;
 using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;
 using HackRFDotnet.NativeApi.Structs.Devices;
 
-namespace HackRFDotnet.ManagedApi {
+namespace HackRFDotnet.Api {
     public unsafe class DigitalRadioDevice : IDisposable {
         public RadioBand Frequency { get; set; } = RadioBand.FromHz(0);
         public RadioBand Bandwidth { get; set; } = RadioBand.FromHz(0);
