@@ -1,5 +1,6 @@
-#HackRF Dotnet
+# HackRF Dotnet
 A complete hackrf library in C# dotnet with perormance in mind.
-Very light weight.
-
 Cross platform, Windows or Linux.
+
+Please read our documentatio at
+https://realynx.github.io/HackRFDotnet/
