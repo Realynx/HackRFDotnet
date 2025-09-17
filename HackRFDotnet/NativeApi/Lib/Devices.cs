@@ -20,9 +20,7 @@ public static partial class HackRfNativeLib {
         [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_device_list")]
         public static extern HackRFDeviceList* QueryDeviceList();
 
-        /// <summary>
-        /// Open a <see cref="HackRFDevice"/> from a device list.
-        /// </summary>
+        /// <summary>Open a <see cref="HackRFDevice"/> from a device list.</summary>
         /// <param name="list">Device list to open device from.</param>
         /// <param name="idx">Index of the device to open.</param>
         /// <param name="device">Device handle to open.</param>
@@ -63,7 +61,7 @@ public static partial class HackRfNativeLib {
         /// This function can turn on or off the LEDs of the device. There are 3 controllable LEDs on the HackRF one:
         /// USB, RX and TX. On the Rad1o, there are 4 LEDs. Each LED can be set individually, but the setting might get overridden by other functions.
         /// 
-        /// The LEDs can be set via specifying them as bits of a 8 bit number @p state, bit 0 representing the first (USB on the HackRF One)
+        /// The LEDs can be set via specifying them as bits of a 8 bit number <paramref name="state"/>, bit 0 representing the first (USB on the HackRF One)
         /// and bit 3 or 4 representing the last LED. The upper 4 or 5 bits are unused.
         /// For example, binary value 0bxxxxx101 turns on the USB and TX LEDs on the HackRF One. 
         /// </summary>

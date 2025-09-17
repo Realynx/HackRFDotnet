@@ -1,5 +1,5 @@
 ﻿namespace HackRFDotnet.NativeApi.Enums.System {
-    public enum HackrfBoardRev {
+    public enum HackrfBoardRev : byte {
         /// <summary>
         /// Older than rev6
         /// </summary>
