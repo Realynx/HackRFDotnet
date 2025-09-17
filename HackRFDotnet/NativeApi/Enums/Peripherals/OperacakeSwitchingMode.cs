@@ -1,16 +1,23 @@
 ﻿namespace HackRFDotnet.NativeApi.Enums.Peripherals {
+    /// <summary>
+    /// Opera Cake port switching mode. Set via <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode"/> and queried via <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode"/>.
+    /// </summary>
     public enum OperacakeSwitchingMode {
-        /**
-         * Port connections are set manually using @ref hackrf_set_operacake_ports. Both ports can be specified, but not on the same side.
-         */
+        /// <summary>
+        /// Port connections are set manually using <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakePorts"/>. Both ports can be specified, but not on the same side.
+        /// </summary>
         OPERACAKE_MODE_MANUAL,
-        /**
-         * Port connections are switched automatically when the frequency is changed. Frequency ranges can be set using @ref hackrf_set_operacake_freq_ranges. In this mode, B0 mirrors A0
-         */
+
+        /// <summary>
+        /// Port connections are switched automatically when the frequency is changed. Frequency ranges can be set using <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeFrequencyRanges"/>.
+        /// In this mode, B0 mirrors A0.
+        /// </summary>
         OPERACAKE_MODE_FREQUENCY,
-        /**
-         * Port connections are switched automatically over time. dwell times can be set with @ref hackrf_set_operacake_dwell_times. In this mode, B0 mirrors A0
-         */
+
+        /// <summary>
+        /// Port connections are switched automatically over time. dwell times can be set with <see cref="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeDwellTimes"/>.
+        /// In this mode, B0 mirrors A0.
+        /// </summary>
         OPERACAKE_MODE_TIME,
     }
 }
