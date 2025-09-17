@@ -5,9 +5,9 @@ using HackRFDotnet.Api.Streams;
 using HackRFDotnet.Api.Streams.Device;
 using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
-using HackRFDotnet.Api.Streams.SignalStreams.Digital;
 
 using Microsoft.Extensions.Hosting;
 
@@ -56,7 +56,8 @@ internal class MainService : IHostedService {
             .AddChildEffect(new FftEffect(true, producedChunkSize))
             .AddChildEffect(new FrequencyCenteringEffect(Frequency.FromKHz(-192), reducedSampleRate))
             .AddChildEffect(new LowPassFilterEffect(reducedSampleRate, Bandwidth.FromKHz(8)))
-            .AddChildEffect(new FftEffect(false, producedChunkSize));
+            .AddChildEffect(new FftEffect(false, producedChunkSize))
+            .AddChildEffect(new FmDecoder());
 
 
         //var effectsPipeline = new SignalProcessingBuilder<IQ>()
@@ -108,7 +109,7 @@ internal class MainService : IHostedService {
 
     private void DisplaySpectrumCliBasic(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         var _thread = new Thread(async () => {
-            var signalStream = new SignalStream(deviceStream);
+            var signalStream = new SignalStream<IQ>(deviceStream);
             await _spectrumDisplayService.StartAsync(rfDevice, signalStream, new CancellationTokenSource().Token);
         });
 

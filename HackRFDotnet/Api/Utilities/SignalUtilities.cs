@@ -101,4 +101,27 @@ public unsafe class SignalUtilities {
         var rms = Math.Sqrt(sumSq / iqFrame.Length);
         return 20f * MathF.Log10((float)rms + 1e-12f);
     }
+
+    public static void NormalizeRms(Span<float> buffer, float targetRms = 0.04f) {
+        if (buffer == null || buffer.Length == 0) {
+            return;
+        }
+
+        var sumSq = 0f;
+        for (var x = 0; x < buffer.Length; x++) {
+            var v = buffer[x];
+            sumSq += v * v;
+        }
+
+        var rms = MathF.Sqrt(sumSq / buffer.Length);
+        if (rms <= 0.0) {
+            return;
+        }
+
+        var gain = (float)(targetRms / rms);
+
+        for (var x = 0; x < buffer.Length; x++) {
+            buffer[x] *= gain;
+        }
+    }
 }

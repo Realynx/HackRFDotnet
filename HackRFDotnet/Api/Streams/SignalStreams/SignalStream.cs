@@ -1,4 +1,6 @@
-﻿using HackRFDotnet.Api.Streams.Buffers;
+﻿using System.Runtime.InteropServices;
+
+using HackRFDotnet.Api.Streams.Buffers;
 using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Utilities;
@@ -8,7 +10,7 @@ namespace HackRFDotnet.Api.Streams.SignalStreams;
 /// A <see cref="SignalStream"/> allows you to process effects from a pipeline, and read the result like a stream reader.
 /// Stream must be created from a <see cref="IIQStream"/>
 /// </summary>
-public class SignalStream : IDisposable {
+public class SignalStream<TOutput> : IDisposable where TOutput : struct {
     public Frequency Center { get; protected set; } = Frequency.FromMHz(94.7f);
     public Bandwidth Bandwidth { get; protected set; } = Bandwidth.FromKHz(200);
 
@@ -20,7 +22,7 @@ public class SignalStream : IDisposable {
 
     // TODO: This will actually need to scale with the IQ's sample rate :c
     internal const int PROCESSING_SIZE = 262144;
-    internal RingBuffer<IQ> _filteredBuffer;
+    internal RingBuffer<TOutput> _filteredBuffer;
     protected SignalProcessingPipeline<IQ>? _processingPipeline;
 
     protected readonly IIQStream _iQStream;
@@ -31,16 +33,16 @@ public class SignalStream : IDisposable {
         _processingPipeline = processingPipeline;
         _keepOpen = keepOpen;
 
-        _filteredBuffer = new RingBuffer<IQ>((int)(TimeSpan.FromMilliseconds(25).TotalSeconds * _iQStream.SampleRate.Sps));
+        _filteredBuffer = new RingBuffer<TOutput>((int)(TimeSpan.FromMilliseconds(25).TotalSeconds * _iQStream.SampleRate.Sps));
         new Thread(BufferKeeping).Start();
     }
 
-    public void ReadSpan(Span<IQ> iqPairs) {
-        while (_filteredBuffer.AvailableBytes < iqPairs.Length) {
+    public void ReadSpan(Span<TOutput> dataBuffer) {
+        while (_filteredBuffer.AvailableBytes < dataBuffer.Length) {
             Thread.Sleep(1);
         }
 
-        _filteredBuffer.Read(iqPairs);
+        _filteredBuffer.Read(dataBuffer);
     }
 
     private void BufferKeeping() {
@@ -56,7 +58,8 @@ public class SignalStream : IDisposable {
                 sampleCount = _processingPipeline.ApplyPipeline(convertedPairs.AsSpan());
             }
 
-            _filteredBuffer.Write(convertedPairs.AsSpan(0, sampleCount));
+            var convertedData = MemoryMarshal.Cast<IQ, TOutput>(convertedPairs);
+            _filteredBuffer.Write(convertedData.Slice(0, sampleCount));
         }
     }
 

@@ -28,7 +28,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Api\Streams\SignalProcessing\FormatConverters\" />
       <Folder Include="Api\Streams\SignalProcessing\CodecConverters\" />
     </ItemGroup>
 

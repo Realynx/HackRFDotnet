@@ -3,6 +3,7 @@
 using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
 
 
 namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
@@ -27,25 +28,26 @@ public class AmSignalStream : WaveSignalStream {
             .AddChildEffect(new SquelchEffect(reducedRate))
             .AddChildEffect(new FftEffect(true, producedChunkSize))
             .AddChildEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
-            .AddChildEffect(new FftEffect(false, producedChunkSize));
+            .AddChildEffect(new FftEffect(false, producedChunkSize))
+            .AddChildEffect(new AmDecoder());
 
         return signalPipeline;
     }
 
-    public override int Read(float[] buffer, int offset, int count) {
-        var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
-        try {
-            ReadSpan(iqBuffer.AsSpan(0, count));
+    //public override int Read(float[] buffer, int offset, int count) {
+    //    var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
+    //    try {
+    //        ReadSpan(iqBuffer.AsSpan(0, count));
 
-            for (var i = 0; i < count; i++) {
-                buffer[i] = iqBuffer[i].Magnitude - 1.0f;
-            }
+    //        for (var i = 0; i < count; i++) {
+    //            buffer[i] = iqBuffer[i].Magnitude - 1.0f;
+    //        }
 
-            NormalizeRms(buffer);
-            return count;
-        }
-        finally {
-            ArrayPool<IQ>.Shared.Return(iqBuffer);
-        }
-    }
+    //        NormalizeRms(buffer);
+    //        return count;
+    //    }
+    //    finally {
+    //        ArrayPool<IQ>.Shared.Return(iqBuffer);
+    //    }
+    //}
 }

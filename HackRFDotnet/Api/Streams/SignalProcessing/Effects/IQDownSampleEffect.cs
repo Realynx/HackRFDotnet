@@ -37,17 +37,17 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
         _reducedSampledRate = reducedSampleRate;
 
         var desiredDecFactor = (int)(sampleRate.Sps / reducedSampleRate.Sps);
-        var realDeltaC = SignalStream.PROCESSING_SIZE / desiredDecFactor;
+        var realDeltaC = SignalStream<IQ>.PROCESSING_SIZE / desiredDecFactor;
         producedChunkSize = BinaryUtilities.NextPowerOfTwo(realDeltaC);
 
-        _decimationFactor = SignalStream.PROCESSING_SIZE / producedChunkSize;
+        _decimationFactor = SignalStream<IQ>.PROCESSING_SIZE / producedChunkSize;
         newSampleRate = new SampleRate(sampleRate.Sps / _decimationFactor);
 
-        _fftInBuffer = new Complex32[SignalStream.PROCESSING_SIZE];
-        _fftOutBuffer = new Complex32[SignalStream.PROCESSING_SIZE];
+        _fftInBuffer = new Complex32[SignalStream<IQ>.PROCESSING_SIZE];
+        _fftOutBuffer = new Complex32[SignalStream<IQ>.PROCESSING_SIZE];
 
-        _fftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftInBuffer, _fftOutBuffer, true, FftwFlags.Estimate);
-        _inverseFftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftOutBuffer, _fftInBuffer, false, FftwFlags.Estimate);
+        _fftwPlan = new FftwPlan(SignalStream<IQ>.PROCESSING_SIZE, _fftInBuffer, _fftOutBuffer, true, FftwFlags.Estimate);
+        _inverseFftwPlan = new FftwPlan(SignalStream<IQ>.PROCESSING_SIZE, _fftOutBuffer, _fftInBuffer, false, FftwFlags.Estimate);
     }
 
     /// <summary>

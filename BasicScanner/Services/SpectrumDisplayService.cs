@@ -53,7 +53,7 @@ public unsafe class SpectrumDisplayService {
         }
     }
 
-    public async Task StartAsync(DigitalRadioDevice rfDevice, SignalStream signalStream, CancellationToken cancellationToken) {
+    public async Task StartAsync(DigitalRadioDevice rfDevice, SignalStream<IQ> signalStream, CancellationToken cancellationToken) {
         //new Thread(() => {
         //    SurfChannels(rfDevice);
         //}).Start();
