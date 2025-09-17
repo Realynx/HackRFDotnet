@@ -1,5 +1,5 @@
 ﻿using HackRFDotnet.Api.Streams.Exceptions;
-using HackRFDotnet.Api.Streams.SignalProcessing;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 using HackRFDotnet.NativeApi.Enums.Peripherals;
 using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;
@@ -8,8 +8,8 @@ using HackRFDotnet.NativeApi.Structs.Devices;
 namespace HackRFDotnet.Api {
     public unsafe class DigitalRadioDevice : IDisposable {
         public RadioBand Frequency { get; set; } = RadioBand.FromHz(0);
-        public RadioBand Bandwidth { get; set; } = RadioBand.FromHz(0);
-        public SampleRate DeviceSamplingRate { get; set; } = SampleRate.FromMSps(10);
+        public Bandwidth Bandwidth { get; set; } = Bandwidth.FromHz(0);
+        public SampleRate DeviceSamplingRate { get; set; } = SampleRate.FromMsps(10);
 
         public readonly HackRFDevice* DevicePtr;
         private HackRFSampleBlockCallback _rxCallback;
@@ -30,16 +30,15 @@ namespace HackRFDotnet.Api {
         }
 
         public bool SetFrequency(RadioBand radioFrequency) {
-            return SetFrequency(radioFrequency, RadioBand.FromMHz(200));
+            return SetFrequency(radioFrequency, Bandwidth.FromMHz(200));
         }
 
-        public bool SetFrequency(RadioBand radioFrequency, RadioBand bandwidth) {
+        public bool SetFrequency(RadioBand radioFrequency, Bandwidth bandwidth) {
             Frequency = radioFrequency;
             Bandwidth = bandwidth;
 
             // This shifts the signal to offset the 0 dc spike away from the signal we want.
-            radioFrequency -= DeviceSamplingRate.NyquistFrequencyRange / 2;
-
+            radioFrequency -= new RadioBand(DeviceSamplingRate.NyquistFrequencyBandwidth / 2);
             return HackRfNativeLib.DeviceStreaming.SetFrequency(DevicePtr, (uint)radioFrequency.Hz) == 0;
         }
 
@@ -47,7 +46,7 @@ namespace HackRFDotnet.Api {
             DeviceSamplingRate = sampleRate;
             HackRfNativeLib.DeviceStreaming.SetSampleRate(DevicePtr, sampleRate.Sps);
 
-            var baseBandFilter = HackRfNativeLib.DeviceStreaming.ComputeBasebandFilterBandWidth((uint)sampleRate.NyquistFrequencyRange.Hz);
+            var baseBandFilter = HackRfNativeLib.DeviceStreaming.ComputeBasebandFilterBandWidth((uint)sampleRate.NyquistFrequencyBandwidth.Hz);
             var setFilter = HackRfNativeLib.DeviceStreaming.SetBasebandFilterBandwidth(DevicePtr, baseBandFilter) != 0;
         }
 

@@ -1,5 +1,5 @@
-﻿using HackRFDotnet.Api.Streams.SignalProcessing;
-using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
+﻿using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
@@ -17,7 +17,7 @@ namespace HackRFDotnet.Api.Services {
             _waveOut.Dispose();
         }
 
-        public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwidth, int audioRate) {
+        public virtual void PlayStreamAsync(RadioBand centerOffset, Bandwidth bandwidth, int audioRate) {
             _waveOut = new WaveOutEvent {
                 Volume = 0.1f,
             };

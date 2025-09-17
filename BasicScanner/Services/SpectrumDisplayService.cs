@@ -6,6 +6,7 @@ using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Utilities;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 namespace BasicScanner.Services;
 public unsafe class SpectrumDisplayService {
@@ -65,7 +66,7 @@ public unsafe class SpectrumDisplayService {
         var buffer = new CHAR_INFO[maxWidth * maxHeight];
 
 
-        var spectrumSize = RadioBand.FromKHz(maxWidth);
+        var spectrumSize = Bandwidth.FromKHz(maxWidth);
         var processingSize = 65536;
         _displayBuffer = new IQ[processingSize];
 
@@ -73,7 +74,7 @@ public unsafe class SpectrumDisplayService {
         .AddSignalEffect(new DownSampleEffect(signalStream.SampleRate, spectrumSize.NyquistSampleRate,
             processingSize, out var reducedSampleRate, out var producedChunkSize))
 
-        .AddSignalEffect(new FrequencyCenteringEffect((spectrumSize), reducedSampleRate))
+        .AddSignalEffect(new FrequencyCenteringEffect(new RadioBand(spectrumSize), reducedSampleRate))
         .AddSignalEffect(new FftEffect(true, producedChunkSize))
         .BuildPipeline();
 

@@ -1,7 +1,9 @@
-﻿namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+﻿using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
+
+namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 public class BasicSignalScanningEffect : SignalEffect {
     private readonly DigitalRadioDevice _digitalRadioDevice;
-    private readonly RadioBand _bandwidth;
+    private readonly Bandwidth _bandwidth;
 
     private readonly RadioBand[] _scanChannels;
     private int _scanChannelsIndex;
@@ -9,7 +11,7 @@ public class BasicSignalScanningEffect : SignalEffect {
     private DateTime _lastChannelSwicth = DateTime.MinValue;
 
 
-    public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, RadioBand bandwidth, RadioBand[] scanChannels) {
+    public BasicSignalScanningEffect(DigitalRadioDevice digitalRadioDevice, Bandwidth bandwidth, RadioBand[] scanChannels) {
         _digitalRadioDevice = digitalRadioDevice;
         _scanChannels = scanChannels;
         _bandwidth = bandwidth;

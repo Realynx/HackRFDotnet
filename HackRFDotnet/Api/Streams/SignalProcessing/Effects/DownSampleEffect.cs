@@ -30,7 +30,7 @@ public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable 
         _iqSampleRate = sampleRate;
         _reducedSampledRate = reducedSampleRate;
 
-        var desiredDecFactor = sampleRate.Sps / reducedSampleRate.Sps;
+        var desiredDecFactor = (int)(sampleRate.Sps / reducedSampleRate.Sps);
         var realDeltaC = SignalStream.PROCESSING_SIZE / desiredDecFactor;
         producedChunkSize = BinaryUtilities.NextPowerOfTwo(realDeltaC);
 
@@ -41,14 +41,14 @@ public unsafe class DownSampleEffect : SignalEffect, ISignalEffect, IDisposable 
         _fftOutBuffer = new Complex32[SignalStream.PROCESSING_SIZE];
 
         _fftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftInBuffer, _fftOutBuffer, true, FftwFlags.Estimate);
-        _inverseFftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftOutBuffer, _fftInBuffer, false, FftwFlags.Estimate); 
+        _inverseFftwPlan = new FftwPlan(SignalStream.PROCESSING_SIZE, _fftOutBuffer, _fftInBuffer, false, FftwFlags.Estimate);
     }
 
     public DownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, int processingSize, out SampleRate newSampleRate, out int producedChunkSize) {
         _iqSampleRate = sampleRate;
         _reducedSampledRate = reducedSampleRate;
 
-        var desiredDecFactor = sampleRate.Sps / reducedSampleRate.Sps;
+        var desiredDecFactor = (int)(sampleRate.Sps / reducedSampleRate.Sps);
         var realDeltaC = processingSize / desiredDecFactor;
         producedChunkSize = BinaryUtilities.NextPowerOfTwo(realDeltaC);
 

@@ -7,6 +7,7 @@ using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 using HackRFDotnet.Api.Streams.SignalStreams.Digital;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 using Microsoft.Extensions.Hosting;
 
@@ -56,14 +57,14 @@ internal class MainService : IHostedService {
     }
 
     private static void HdRadioPlay(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), RadioBand.FromKHz(200));
+        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), Bandwidth.FromKHz(200));
         var effectsPipeline = new SignalProcessingBuilder()
             .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
                 rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
             .AddSignalEffect(new FftEffect(true, producedChunkSize))
             .AddSignalEffect(new FrequencyCenteringEffect(RadioBand.FromKHz(-192), reducedSampleRate))
-            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, RadioBand.FromKHz(8)))
+            .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, Bandwidth.FromKHz(8)))
             .AddSignalEffect(new FftEffect(false, producedChunkSize))
 
             .BuildPipeline();
@@ -81,7 +82,7 @@ internal class MainService : IHostedService {
 
     private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
-        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), RadioBand.FromKHz(200));
+        rfDevice.SetFrequency(RadioBand.FromMHz(98.7f), Bandwidth.FromKHz(200));
 
         // We must build an effects pipeline to clean up our received signal from the SDR.
         var effectsPipeline = new SignalProcessingBuilder()
@@ -114,13 +115,13 @@ internal class MainService : IHostedService {
     }
 
     private static void AmplitudeDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), RadioBand.FromKHz(10));
+        rfDevice.SetFrequency(RadioBand.FromMHz(118.4f), Bandwidth.FromKHz(10));
 
         var effectsPipeline = new SignalProcessingBuilder()
             .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
                 rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
 
-            .AddSignalEffect(new BasicSignalScanningEffect(rfDevice, RadioBand.FromKHz(10), [RadioBand.FromMHz(118.4f),
+            .AddSignalEffect(new BasicSignalScanningEffect(rfDevice, Bandwidth.FromKHz(10), [RadioBand.FromMHz(118.4f),
                 RadioBand.FromMHz(118.575f), RadioBand.FromMHz(119.250f), RadioBand.FromMHz(119.450f),
                 RadioBand.FromMHz(121.800f),RadioBand.FromMHz(124.05f), RadioBand.FromMHz(125.150f), RadioBand.FromMHz(135f)]))
             .AddSignalEffect(new SquelchEffect(reducedSampleRate))

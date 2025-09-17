@@ -1,5 +1,5 @@
-﻿using HackRFDotnet.Api.Streams.SignalProcessing;
-using HackRFDotnet.Api.Streams.SignalStreams.Digital;
+﻿using HackRFDotnet.Api.Streams.SignalStreams.Digital;
+using HackRFDotnet.ManagedApi.Streams.SignalProcessing;
 
 using NAudio.Wave;
 using NAudio.Wave.SampleProviders;
@@ -17,7 +17,7 @@ public class DigitalPlayer : IDisposable {
         _waveOut.Dispose();
     }
 
-    public virtual void PlayStreamAsync(RadioBand centerOffset, RadioBand bandwidth, int audioRate) {
+    public virtual void PlayStreamAsync(RadioBand centerOffset, Bandwidth bandwidth, int audioRate) {
         _waveOut = new WaveOutEvent {
             Volume = 0.6f,
         };

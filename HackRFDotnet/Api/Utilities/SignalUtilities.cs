@@ -1,5 +1,4 @@
 ﻿using HackRFDotnet.Api.Streams;
-using HackRFDotnet.Api.Streams.SignalProcessing;
 
 namespace HackRFDotnet.Api.Utilities;
 
@@ -67,7 +66,7 @@ public unsafe class SignalUtilities {
         }
     }
 
-    public static int FrequencyResolution(int length, SampleRate sampleRate, bool positiveOnly = true) {
+    public static long FrequencyResolution(int length, SampleRate sampleRate, bool positiveOnly = true) {
         return positiveOnly
             ? sampleRate.Sps / (length - 1) / 2
             : sampleRate.Sps / length;

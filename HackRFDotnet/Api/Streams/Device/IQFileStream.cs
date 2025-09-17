@@ -2,7 +2,6 @@
 
 using HackRFDotnet.Api.Streams.Exceptions;
 using HackRFDotnet.Api.Streams.Interfaces;
-using HackRFDotnet.Api.Streams.SignalProcessing;
 
 namespace HackRFDotnet.Api.Streams.Device;
 public class IQFileStream : IIQStream, IDisposable {

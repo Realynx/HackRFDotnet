@@ -23,7 +23,7 @@ public unsafe class HdRadioSignalStream : QpskSignalStream, ISampleProvider {
             rate /= 2;
         }
 
-        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat(rate, stereo ? 2 : 1);
+        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat((int)rate, stereo ? 2 : 1);
     }
 
     public int Read(float[] buffer, int offset, int count) {

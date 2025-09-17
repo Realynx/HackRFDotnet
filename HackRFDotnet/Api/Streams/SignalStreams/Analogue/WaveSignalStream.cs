@@ -18,7 +18,7 @@ public class WaveSignalStream : SignalStream, ISampleProvider, IDisposable {
             rate /= 2;
         }
 
-        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat(rate, stero ? 2 : 1);
+        WaveFormat = WaveFormat.CreateIeeeFloatWaveFormat((int)rate, stero ? 2 : 1);
     }
 
     public virtual int Read(float[] buffer, int offset, int count) {
