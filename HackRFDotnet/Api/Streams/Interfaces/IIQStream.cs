@@ -4,11 +4,6 @@
 /// </summary>
 public interface IIQStream {
     /// <summary>
-    /// The current tuning frequency the device is set to.
-    /// </summary>
-    Frequency Frequency { get; }
-
-    /// <summary>
     /// The capture sample rate from the device.
     /// </summary>
     SampleRate SampleRate { get; }

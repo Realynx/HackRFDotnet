@@ -16,16 +16,15 @@ namespace HackRFDotnet.Api.Services {
             _waveOut.Dispose();
         }
 
-        public virtual void PlayStreamAsync(Frequency centerOffset, Bandwidth bandwidth, int audioRate) {
+        public virtual void PlayStreamAsync(Frequency centerOffset, Bandwidth bandwidth, SampleRate audioRate) {
             _waveOut = new WaveOutEvent {
                 Volume = 0.5f,
             };
 
             _sampleDeModulator.SetBand(centerOffset, bandwidth);
 
-            var resampler = new WdlResamplingSampleProvider(_sampleDeModulator, audioRate);
+            var resampler = new WdlResamplingSampleProvider(_sampleDeModulator, (int)audioRate.Sps);
             var waveProvider = resampler.ToWaveProvider();
-
             _waveOut.Init(waveProvider);
             _waveOut.Play();
         }

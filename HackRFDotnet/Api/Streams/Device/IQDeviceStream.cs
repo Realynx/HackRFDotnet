@@ -11,21 +11,15 @@ namespace HackRFDotnet.Api.Streams.Device {
     /// This stream must remain immutable from all other <see cref="SignalStreams.SignalStream"/>.
     /// </summary>
     public unsafe class IQDeviceStream : IDisposable, IIQStream {
-        private readonly DigitalRadioDevice _rfDevice;
-        private readonly int _transferBufferSize = 0;
+        public readonly DigitalRadioDevice RfDevice;
 
         private ThreadedRingBuffer<IQ>? _iqBuffer = null;
         private IQ[] _sampleConvertBuffer = [];
+        private readonly int _transferBufferSize = 0;
 
         public SampleRate SampleRate {
             get {
-                return _rfDevice.DeviceSamplingRate;
-            }
-        }
-
-        public Frequency Frequency {
-            get {
-                return _rfDevice.Frequency;
+                return RfDevice.DeviceSamplingRate;
             }
         }
 
@@ -36,7 +30,7 @@ namespace HackRFDotnet.Api.Streams.Device {
         }
 
         public IQDeviceStream(DigitalRadioDevice rfDevice) {
-            _rfDevice = rfDevice;
+            RfDevice = rfDevice;
 
             _transferBufferSize = (int)HackRfNativeLib.DeviceStreaming.GetTransferBufferSize(rfDevice.DevicePtr);
         }
@@ -47,21 +41,21 @@ namespace HackRFDotnet.Api.Streams.Device {
             }
 
             SetSampleRate(sampleRate ?? throw new ZeroSampleRateException("Cannot have a 0 sample rate"));
-            _rfDevice.StartRx(BufferTransferChunk);
+            RfDevice.StartRx(BufferTransferChunk);
         }
 
         public void Close() {
-            _rfDevice.StopRx();
+            RfDevice.StopRx();
         }
 
         public void SetSampleRate(SampleRate sampleRate) {
             var bufferSize = (int)(TimeSpan.FromMilliseconds(64).TotalSeconds * SampleRate.Sps);
-            _rfDevice.SetSampleRate(sampleRate);
+            RfDevice.SetSampleRate(sampleRate);
 
             // TODO: Fix thread multiwrite (because hack rf seems to use multiple threads sometimes)
             _iqBuffer = new ThreadedRingBuffer<IQ>(bufferSize, true);
 
-            var transferSize = HackRfNativeLib.DeviceStreaming.GetTransferBufferSize(_rfDevice.DevicePtr) / 2;
+            var transferSize = HackRfNativeLib.DeviceStreaming.GetTransferBufferSize(RfDevice.DevicePtr) / 2;
             _sampleConvertBuffer = new IQ[transferSize];
         }
 

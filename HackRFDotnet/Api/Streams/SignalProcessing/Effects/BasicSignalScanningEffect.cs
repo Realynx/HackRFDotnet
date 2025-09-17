@@ -41,7 +41,7 @@ public class BasicSignalScanningEffect : SignalEffect {
         if (DateTime.Now - _lastChannelSwicth > TimeSpan.FromSeconds(.2f)
             && channelNoiseFloor < basebandNoiseFloor * 1.026) {
             _lastChannelSwicth = DateTime.Now;
-            _digitalRadioDevice.SetFrequency(_scanChannels[_scanChannelsIndex]);
+            _digitalRadioDevice.SetFrequency(_scanChannels[_scanChannelsIndex], Bandwidth.FromKHz(8));
             _scanChannelsIndex = (_scanChannelsIndex + 1) % _scanChannels.Length;
         }
 

@@ -48,7 +48,7 @@ public unsafe class SpectrumDisplayService {
                 newFrequency = Frequency.FromMHz(80);
             }
 
-            rfDevice.SetFrequency(newFrequency);
+            rfDevice.SetFrequency(newFrequency, Bandwidth.FromKHz(200));
             Thread.Sleep(20);
         }
     }

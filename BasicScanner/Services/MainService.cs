@@ -32,15 +32,9 @@ internal class MainService : IHostedService {
             return;
         }
 
-        //rfDevice.SetFrequency(RadioBand.FromMHz(94.7f), RadioBand.FromKHz(200));
-        //rfDevice.StartRecordingToFile("Recording.bin");
-
-        //var rfFileStream = new RfFileStream("Recording.bin");
-        //rfFileStream.Open(20_000_000);
-
         rfDevice.AttenuateAmplification();
         using var deviceStream = new IQDeviceStream(rfDevice);
-        deviceStream.OpenRx(new SampleRate(20_000_000));
+        deviceStream.OpenRx(SampleRate.FromMsps(20));
 
         FrequencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
         //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
@@ -84,7 +78,7 @@ internal class MainService : IHostedService {
         var fmSignalStream = new FmSignalStream(deviceStream, Bandwidth.FromKHz(200), stereo: true);
 
         var fmPlayer = new AnaloguePlayer(fmSignalStream);
-        fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
+        fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, SampleRate.FromKsps(48));
     }
 
     private static void AmplitudeDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
@@ -93,7 +87,7 @@ internal class MainService : IHostedService {
         var amSignalStream = new AmSignalStream(deviceStream, Bandwidth.FromKHz(10));
 
         var amPlayer = new AnaloguePlayer(amSignalStream);
-        amPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
+        amPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, SampleRate.FromKsps(48));
     }
 
     private void DisplaySpectrumCliBasic(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
