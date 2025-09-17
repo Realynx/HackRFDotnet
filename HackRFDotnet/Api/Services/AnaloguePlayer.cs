@@ -18,7 +18,7 @@ namespace HackRFDotnet.Api.Services {
 
         public virtual void PlayStreamAsync(Frequency centerOffset, Bandwidth bandwidth, int audioRate) {
             _waveOut = new WaveOutEvent {
-                Volume = 0.1f,
+                Volume = 0.5f,
             };
 
             _sampleDeModulator.SetBand(centerOffset, bandwidth);

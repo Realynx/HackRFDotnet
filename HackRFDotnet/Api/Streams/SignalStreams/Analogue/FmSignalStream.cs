@@ -2,14 +2,26 @@
 
 using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 /// <summary>
 /// Demodulate FM audio from <see cref="IIQStream"/>.
 /// </summary>
 public class FmSignalStream : WaveSignalStream {
-    public FmSignalStream(IIQStream deviceStream, SampleRate sampleRate, bool stereo = true, SignalProcessingPipeline? processingPipeline = null, bool keepOpen = true)
-        : base(deviceStream, sampleRate, stereo, processingPipeline, keepOpen) {
+    public FmSignalStream(IIQStream deviceStream, Bandwidth stationBandwidth, bool stereo = true)
+        : base(deviceStream, BuildFxChain(deviceStream, stationBandwidth, out var sampleRate), sampleRate, stereo, false) {
+    }
+
+    private static SignalProcessingPipeline BuildFxChain(IIQStream deviceStream, Bandwidth stationBandwidth, out SampleRate reducedRate) {
+        return new SignalProcessingBuilder()
+        .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
+            stationBandwidth.NyquistSampleRate, out reducedRate, out var producedChunkSize))
+
+        .AddSignalEffect(new FftEffect(true, producedChunkSize))
+        .AddSignalEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
+        .AddSignalEffect(new FftEffect(false, producedChunkSize))
+        .BuildPipeline();
     }
 
     public override int Read(float[] buffer, int offset, int count) {
@@ -24,7 +36,7 @@ public class FmSignalStream : WaveSignalStream {
             buffer[count - 1] = buffer[count - 2];
 
 
-            // NormalizeRms(buffer);
+            NormalizeRms(buffer);
         }
         finally {
             ArrayPool<IQ>.Shared.Return(iqBuffer);
