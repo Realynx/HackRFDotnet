@@ -18,8 +18,9 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
     private readonly SampleRate _iqSampleRate;
     private readonly SampleRate _reducedSampledRate;
 
-    private readonly Complex32[] _fftInBuffer = [];
-    private readonly Complex32[] _fftOutBuffer = [];
+    private readonly int _fftBufferSize;
+    private readonly Complex32* _fftInBuffer;
+    private readonly Complex32* _fftOutBuffer;
     private readonly FftwPlan _fftwPlan;
     private readonly FftwPlan _inverseFftwPlan;
 
@@ -43,8 +44,9 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
         _decimationFactor = SignalStream<IQ>.PROCESSING_SIZE / producedChunkSize;
         newSampleRate = new SampleRate(sampleRate.Sps / _decimationFactor);
 
-        _fftInBuffer = new Complex32[SignalStream<IQ>.PROCESSING_SIZE];
-        _fftOutBuffer = new Complex32[SignalStream<IQ>.PROCESSING_SIZE];
+        _fftBufferSize = SignalStream<IQ>.PROCESSING_SIZE;
+        _fftInBuffer = (Complex32*)Marshal.AllocHGlobal(_fftBufferSize * sizeof(Complex32));
+        _fftOutBuffer = (Complex32*)Marshal.AllocHGlobal(_fftBufferSize * sizeof(Complex32));
 
         _fftwPlan = new FftwPlan(SignalStream<IQ>.PROCESSING_SIZE, _fftInBuffer, _fftOutBuffer, true, FftwFlags.Estimate);
         _inverseFftwPlan = new FftwPlan(SignalStream<IQ>.PROCESSING_SIZE, _fftOutBuffer, _fftInBuffer, false, FftwFlags.Estimate);
@@ -69,8 +71,9 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
         _decimationFactor = processingSize / producedChunkSize;
         newSampleRate = new SampleRate(sampleRate.Sps / _decimationFactor);
 
-        _fftInBuffer = new Complex32[processingSize];
-        _fftOutBuffer = new Complex32[processingSize];
+        _fftBufferSize = processingSize;
+        _fftInBuffer = (Complex32*)Marshal.AllocHGlobal(_fftBufferSize * sizeof(Complex32));
+        _fftOutBuffer = (Complex32*)Marshal.AllocHGlobal(_fftBufferSize * sizeof(Complex32));
 
         _fftwPlan = new FftwPlan(processingSize, _fftInBuffer, _fftOutBuffer, true, FftwFlags.Estimate);
         _inverseFftwPlan = new FftwPlan(processingSize, _fftOutBuffer, _fftInBuffer, false, FftwFlags.Estimate);
@@ -92,7 +95,7 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
             throw new Exception("Can not process this chunk size");
         }
 
-        MemoryMarshal.Cast<IQ, Complex32>(signalTheta.Slice(0, length)).CopyTo(_fftInBuffer);
+        MemoryMarshal.Cast<IQ, Complex32>(signalTheta.Slice(0, length)).CopyTo(new Span<Complex32>(_fftInBuffer, _fftBufferSize));
         _fftwPlan.Execute();
 
         var resolution = SignalUtilities.FrequencyResolution(length, _iqSampleRate, true);
@@ -106,7 +109,7 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
         }
 
         _inverseFftwPlan.Execute();
-        MemoryMarshal.Cast<Complex32, IQ>(_fftInBuffer).CopyTo(signalTheta.Slice(0, length));
+        MemoryMarshal.Cast<Complex32, IQ>(new Span<Complex32>(_fftInBuffer, _fftBufferSize)).CopyTo(signalTheta.Slice(0, length));
 
         var decimatedSize = length / _decimationFactor;
         for (var x = 0; x < decimatedSize; x++) {
@@ -120,5 +123,7 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
     public void Dispose() {
         _fftwPlan.Dispose();
         _inverseFftwPlan.Dispose();
+        Marshal.FreeHGlobal((nint)_fftInBuffer);
+        Marshal.FreeHGlobal((nint)_fftOutBuffer);
     }
 }
