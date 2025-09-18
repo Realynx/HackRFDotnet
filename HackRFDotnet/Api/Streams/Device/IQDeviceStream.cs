@@ -3,6 +3,7 @@
 using HackRFDotnet.Api.Streams.Buffers;
 using HackRFDotnet.Api.Streams.Exceptions;
 using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;
 
@@ -10,9 +11,9 @@ namespace HackRFDotnet.Api.Streams.Device {
     /// <summary>
     /// IQ Stream from the Rf Device.
     /// This stream is the root of all data processed with the library.
-    /// This stream must remain immutable from all other <see cref="SignalStreams.SignalStream"/>.
+    /// This stream must remain immutable from all other <see cref="SignalStream{T}"/>.
     /// </summary>
-    public unsafe class IQDeviceStream : IDisposable, IIQStream {
+    public unsafe class IQDeviceStream : IIQStream {
         public readonly DigitalRadioDevice RfDevice;
 
         private ThreadedRingBuffer<IQ>? _iqBuffer = null;

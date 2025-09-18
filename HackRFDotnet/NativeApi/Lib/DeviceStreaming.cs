@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 using HackRFDotnet.NativeApi.Enums;
 using HackRFDotnet.NativeApi.Enums.System;
@@ -8,7 +9,7 @@ using HackRFDotnet.NativeApi.Structs.Devices;
 namespace HackRFDotnet.NativeApi.Lib;
 
 public static partial class HackRfNativeLib {
-    public unsafe static class DeviceStreaming {
+    public unsafe static partial class DeviceStreaming {
         /// <summary>
         /// Query device streaming status.
         /// </summary>
@@ -17,8 +18,9 @@ public static partial class HackRfNativeLib {
         /// <see cref="HackrfError.HACKRF_TRUE"/> If the device is streaming, else one of <see cref="HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR"/>,
         /// <see cref="HackrfError.HACKRF_ERROR_STREAMING_STOPPED"/> or <see cref="HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED"/>.
         /// </returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_is_streaming")]
-        public static extern HackrfError IsStreaming(HackRFDevice* device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_is_streaming")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError IsStreaming(HackRFDevice* device);
 
         /// <summary>
         /// Set baseband filter bandwidth.
@@ -31,8 +33,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">device to configure.</param>
         /// <param name="bandwidth_hz">baseband filter bandwidth in Hz.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_baseband_filter_bandwidth")]
-        public static extern HackrfError SetBasebandFilterBandwidth(HackRFDevice* device, uint bandwidth_hz);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_baseband_filter_bandwidth")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetBasebandFilterBandwidth(HackRFDevice* device, uint bandwidth_hz);
 
         /// <summary>
         /// Compute nearest valid baseband filter bandwidth lower than a specified value.
@@ -41,8 +44,9 @@ public static partial class HackRfNativeLib {
         /// </summary>
         /// <param name="bandwidth_hz">Desired filter bandwidth in Hz.</param>
         /// <returns>The highest valid filter bandwidth lower than <paramref name="bandwidth_hz"/> in Hz.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_compute_baseband_filter_bw_round_down_lt")]
-        public static extern uint ComputeBasebandFilterBandWidth_round_down_lt(uint bandwidth_hz);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_compute_baseband_filter_bw_round_down_lt")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial uint ComputeBasebandFilterBandWidth_round_down_lt(uint bandwidth_hz);
 
         /// <summary>
         /// Compute nearest valid baseband filter bandwidth to specified value.
@@ -51,16 +55,18 @@ public static partial class HackRfNativeLib {
         /// </summary>
         /// <param name="bandwidth_hz">Desired filter bandwidth in Hz.</param>
         /// <returns>Nearest valid filter bandwidth in Hz.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_compute_baseband_filter_bw")]
-        public static extern uint ComputeBasebandFilterBandWidth(uint bandwidth_hz);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_compute_baseband_filter_bw")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial uint ComputeBasebandFilterBandWidth(uint bandwidth_hz);
 
         /// <summary>
         /// Convert <see cref="RfPathFilter"/> into human-readable string.
         /// </summary>
         /// <param name="path">Enum to convert.</param>
         /// <returns>Human-readable name of filter path.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_filter_path_name")]
-        public static extern sbyte* FilterPathName(RfPathFilter path);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_filter_path_name")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial sbyte* FilterPathName(RfPathFilter path);
 
         /// <summary>
         /// Set the center frequency.
@@ -72,8 +78,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to tune.</param>
         /// <param name="freq_hz">freq_hz center frequency in Hz.Defaults to 900MHz. Should be in range 1-6000MHz, but 0-7250MHz is possible. The resolution is ~50Hz, I could not find the exact number.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_freq")]
-        public static extern HackrfError SetFrequency(HackRFDevice* device, ulong freq_hz);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_freq")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetFrequency(HackRFDevice* device, ulong freq_hz);
 
         /// <summary>
         /// Set the center frequency via explicit tuning.
@@ -86,8 +93,9 @@ public static partial class HackRfNativeLib {
         /// <param name="lo_freq_hz">Tuning frequency of the RFFC5072 mixer/synthesizer IC in Hz. Must be in the range 84.375-5400MHz, defaults to 1000MHz. No effect if <paramref name="path"/> is set to <see cref="RfPathFilter.RF_PATH_FILTER_BYPASS"/>.</param>
         /// <param name="path">Filter path for mixer. See the documentation for <see cref="RfPathFilter"/> for details.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_freq_explicit")]
-        public static extern HackrfError SetFrequency(HackRFDevice* device, ulong if_freq_hz, ulong lo_freq_hz, RfPathFilter path);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_freq_explicit")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetFrequency(HackRFDevice* device, ulong if_freq_hz, ulong lo_freq_hz, RfPathFilter path);
 
         /// <summary>
         /// Initialize sweep mode.
@@ -106,8 +114,9 @@ public static partial class HackRfNativeLib {
         /// <param name="offset">Frequency offset added to tuned frequencies.sample_rate / 2 is a good value.</param>
         /// <param name="style">Sweep style.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_init_sweep")]
-        public static extern HackrfError InitSweep(HackRFDevice* device, ushort* frequency_list, int num_ranges, uint num_bytes, uint step_width, uint offset, SweepStyle style);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_init_sweep")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError InitSweep(HackRFDevice* device, ushort* frequency_list, int num_ranges, uint num_bytes, uint step_width, uint offset, SweepStyle style);
 
         /// <summary>
         /// Start RX sweep.
@@ -120,8 +129,9 @@ public static partial class HackRfNativeLib {
         /// <param name="callback">Rx callback processing the received data.</param>
         /// <param name="rx_ctx">User provided RX context.Not used by the library, but available to <paramref name="callback"/> as <see cref="HackrfTransfer.rx_ctx"/>.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_start_rx_sweep")]
-        public static extern HackrfError StartRxSweep(HackRFDevice* device, HackRFSampleBlockCallback callback, void* rx_ctx);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_start_rx_sweep")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError StartRxSweep(HackRFDevice* device, HackRFSampleBlockCallback callback, void* rx_ctx);
 
         /// <summary>
         /// Start receiving.
@@ -135,16 +145,18 @@ public static partial class HackRfNativeLib {
         /// <param name="callback">Rx_callback.</param>
         /// <param name="rx_ctx">User provided RX context. Not used by the library, but available to <paramref name="callback"/> as <see cref="HackrfTransfer.rx_ctx"/>.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_start_rx")]
-        public static extern HackrfError StartRx(HackRFDevice* device, HackRFSampleBlockCallback callback, void* rx_ctx);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_start_rx")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError StartRx(HackRFDevice* device, HackRFSampleBlockCallback callback, void* rx_ctx);
 
         /// <summary>
         /// Stop receiving.
         /// </summary>
         /// <param name="device">device to stop RX on.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_stop_rx")]
-        public static extern HackrfError StopRx(HackRFDevice* device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_stop_rx")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError StopRx(HackRFDevice* device);
 
         /// <summary>
         /// Enable / disable bias-tee (antenna port power).
@@ -157,8 +169,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="value">Enable (1) or disable (0) bias-tee.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_antenna_enable")]
-        public static extern HackrfError EnableAntenna(HackRFDevice* device, byte value);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_antenna_enable")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError EnableAntenna(HackRFDevice* device, byte value);
 
         /// <summary>
         /// Start transmitting (TX).
@@ -170,8 +183,9 @@ public static partial class HackRfNativeLib {
         /// <param name="callback">Tx_callback.</param>
         /// <param name="tx_ctx">User provided TX context. Not used by the library, but available to <paramref name="callback"/> as <see cref="HackrfTransfer.tx_ctx"/>.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_start_tx")]
-        public static extern HackrfError StartTx(HackRFDevice* device, HackRFSampleBlockCallback callback, void* tx_ctx);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_start_tx")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError StartTx(HackRFDevice* device, HackRFSampleBlockCallback callback, void* tx_ctx);
 
         /// <summary>
         /// Setup callback to be called when an USB transfer is completed.
@@ -181,8 +195,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="callback">Callback to call when a transfer is completed.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_tx_block_complete_callback")]
-        public static extern HackrfError SetTxBlockCompleteCallback(HackRFDevice* device, HackRFTxBlockCompleteCallback callback);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_tx_block_complete_callback")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetTxBlockCompleteCallback(HackRFDevice* device, HackRFTxBlockCompleteCallback callback);
 
         /// <summary>
         /// Setup flush (end-of-transmission) callback.
@@ -193,16 +208,18 @@ public static partial class HackRfNativeLib {
         /// <param name="callback">callback to call when all transfers were completed.</param>
         /// <param name="flush_ctx">context (1st parameter of callback).</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_enable_tx_flush")]
-        public static extern HackrfError EnableTxFlush(HackRFDevice* device, HackRFFlushCallback callback, void* flush_ctx);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_enable_tx_flush")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError EnableTxFlush(HackRFDevice* device, HackRFFlushCallback callback, void* flush_ctx);
 
         /// <summary>
         /// Stop transmission.
         /// </summary>
         /// <param name="device">Device to stop TX on.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_stop_tx")]
-        public static extern HackrfError StopTx(HackRFDevice* device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_stop_tx")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError StopTx(HackRFDevice* device);
 
         /// <summary>
         /// Set transmit underrun limit.
@@ -215,8 +232,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="value">Number of samples to wait before auto-stopping.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_tx_underrun_limit")]
-        public static extern HackrfError SetTxUnderrunLimit(HackRFDevice* device, uint value);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_tx_underrun_limit")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetTxUnderrunLimit(HackRFDevice* device, uint value);
 
         /// <summary>
         /// Set receive overrun limit.
@@ -229,8 +247,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="value">Number of samples to wait before auto-stopping.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_rx_overrun_limit")]
-        public static extern HackrfError SetRxOverrunLimit(HackRFDevice* device, uint value);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_rx_overrun_limit")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetRxOverrunLimit(HackRFDevice* device, uint value);
 
         /// <summary>
         /// Enable / disable 14dB RF amplifier.
@@ -240,8 +259,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="value">Enable (1) or disable (0) amplifier.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_amp_enable")]
-        public static extern HackrfError EnableAmp(HackRFDevice* device, byte value);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_amp_enable")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError EnableAmp(HackRFDevice* device, byte value);
 
         /// <summary>
         /// Set LNA gain.
@@ -251,8 +271,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="value">RX IF gain value in dB.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_lna_gain")]
-        public static extern HackrfError SetLnaGain(HackRFDevice* device, uint value);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_lna_gain")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetLnaGain(HackRFDevice* device, uint value);
 
         /// <summary>
         /// Set baseband RX gain of the MAX2837 transceiver IC ("BB" or "VGA" gain setting) in decibels. Must be in range 0-62dB with 2dB steps.
@@ -260,8 +281,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="value">RX BB gain value in dB.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_vga_gain")]
-        public static extern HackrfError SetVgaGain(HackRFDevice* device, uint value);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_vga_gain")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetVgaGain(HackRFDevice* device, uint value);
 
         /// <summary>
         /// Set RF TX gain of the MAX2837 transceiver IC ("IF" or "VGA" gain setting) in decibels. Must be in range 0-47dB in 1dB steps.
@@ -269,8 +291,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="value">TX IF gain value in dB.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_txvga_gain")]
-        public static extern HackrfError SetTxVgaGain(HackRFDevice* device, uint value);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_txvga_gain")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetTxVgaGain(HackRFDevice* device, uint value);
 
         /// <summary>
         /// Set sample rate explicitly.
@@ -284,8 +307,9 @@ public static partial class HackRfNativeLib {
         /// <param name="freq_hz">Sample rate base frequency in Hz.</param>
         /// <param name="divider">Frequency divider. Must be in the range 1-31.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_sample_rate_manual")]
-        public static extern HackrfError SetClockSampleRate(HackRFDevice* device, uint freq_hz, uint divider);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_sample_rate_manual")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetClockSampleRate(HackRFDevice* device, uint freq_hz, uint divider);
 
         /// <summary>
         /// Set sample rate.
@@ -297,24 +321,27 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="freq_hz">Sample rate base frequency in Hz.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_sample_rate")]
-        public static extern HackrfError SetSampleRate(HackRFDevice* device, double freq_hz);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_sample_rate")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetSampleRate(HackRFDevice* device, double freq_hz);
 
         /// <summary>
         /// Get USB transfer buffer size.
         /// </summary>
         /// <param name="device">Unused.</param>
         /// <returns>Size in bytes.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_get_transfer_buffer_size")]
-        public static extern nuint GetTransferBufferSize(HackRFDevice* device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_get_transfer_buffer_size")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial nuint GetTransferBufferSize(HackRFDevice* device);
 
         /// <summary>
         /// Get the total number of USB transfer buffers.
         /// </summary>
         /// <param name="device">Unused.</param>
         /// <returns>Number of buffers.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_get_transfer_queue_depth")]
-        public static extern uint GetTransferQueueDepth(HackRFDevice* device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_get_transfer_queue_depth")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial uint GetTransferQueueDepth(HackRFDevice* device);
 
         /// <summary>
         /// Configure bias tee behavior of the HackRF device when changing RF states.
@@ -337,7 +364,8 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to configure.</param>
         /// <param name="req">Bias tee states, as a bitfield.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_user_bias_t_opts")]
-        public static extern HackrfError SetBiasTOptions(HackRFDevice* device, HackRFBiasTUserSettingReq* req);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_user_bias_t_opts")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetBiasTOptions(HackRFDevice* device, HackRFBiasTUserSettingReq* req);
     }
 }

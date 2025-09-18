@@ -2,7 +2,7 @@
 /// <summary>
 /// <see cref="IIQStream"/> is an immutable stream that buffers the data directly from the IQ device.
 /// </summary>
-public interface IIQStream {
+public interface IIQStream : IDisposable {
     /// <summary>
     /// The capture sample rate from the device.
     /// </summary>
@@ -17,11 +17,6 @@ public interface IIQStream {
     /// Close the stream on the device.
     /// </summary>
     void Close();
-
-    /// <summary>
-    /// Dispose and free resources from the stream and the device.
-    /// </summary>
-    void Dispose();
 
     /// <summary>
     /// Open an Rx stream to read IQ samples.

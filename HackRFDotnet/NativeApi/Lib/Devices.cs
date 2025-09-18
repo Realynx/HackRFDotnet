@@ -1,50 +1,57 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 using HackRFDotnet.NativeApi.Enums.System;
 using HackRFDotnet.NativeApi.Structs.Devices;
 
 namespace HackRFDotnet.NativeApi.Lib;
 public static partial class HackRfNativeLib {
-    public static unsafe class Devices {
+    public static unsafe partial class Devices {
         /// <summary>Open first available HackRF device.</summary>
         /// <param name="device">Device handle.</param>
         /// <returns>
         /// <see cref="HackrfError.HACKRF_SUCCESS"/> on success, <see cref="HackrfError.HACKRF_ERROR_INVALID_PARAM"/> if <paramref name="device"/> is NULL,
         /// <see cref="HackrfError.HACKRF_ERROR_NOT_FOUND"/> if no HackRF devices are found or other <see cref="HackrfError"/> variant.
         /// </returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_open")]
-        public static extern HackrfError OpenDevice(HackRFDevice** device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_open")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError OpenDevice(HackRFDevice** device);
 
         /// <summary>List connected HackRF devices.</summary>
         /// <returns>List of connected devices. The list should be freed with <see cref="DeviceListFree"/>.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_device_list")]
-        public static extern HackRFDeviceList* QueryDeviceList();
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_device_list")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackRFDeviceList* QueryDeviceList();
 
         /// <summary>Open a <see cref="HackRFDevice"/> from a device list.</summary>
         /// <param name="list">Device list to open device from.</param>
         /// <param name="idx">Index of the device to open.</param>
         /// <param name="device">Device handle to open.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success, <see cref="HackrfError.HACKRF_ERROR_INVALID_PARAM"/> on invalid parameters or other <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_device_list_open")]
-        public static extern HackrfError DeviceListOpen(HackRFDeviceList* list, int idx, HackRFDevice** device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_device_list_open")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError DeviceListOpen(HackRFDeviceList* list, int idx, HackRFDevice** device);
 
         /// <summary>Open HackRF device by serial number.</summary>
         /// <param name="desired_serial_number">Serial number of device to open. If NULL then default to first device found.</param>
         /// <param name="device">Device handle.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success, <see cref="HackrfError.HACKRF_ERROR_INVALID_PARAM"/> on invalid parameters or other <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_open_by_serial")]
-        public static extern HackrfError OpenDeviceBySerial([MarshalAs(UnmanagedType.LPStr)] string desired_serial_number, HackRFDevice** device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_open_by_serial")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError OpenDeviceBySerial([MarshalAs(UnmanagedType.LPStr)] string desired_serial_number, HackRFDevice** device);
 
         /// <summary>Free a previously allocated <see cref="HackRFDevice"/> list.</summary>
         /// <param name="list">List to free.</param>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_device_list_free")]
-        public static extern void DeviceListFree(HackRFDeviceList* list);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_device_list_free")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial void DeviceListFree(HackRFDeviceList* list);
 
         /// <summary>Close a previously opened device.</summary>
         /// <param name="device">Device to close.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or variant of <see cref="HackrfError"/>.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_close")]
-        public static extern HackrfError CloseDevice(HackRFDevice* device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_close")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError CloseDevice(HackRFDevice* device);
 
         /// <summary>
         /// Reset HackRF device.
@@ -53,8 +60,9 @@ public static partial class HackRfNativeLib {
         /// </summary>
         /// <param name="device">Device to reset.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_reset")]
-        public static extern HackrfError ResetDevice(HackRFDevice* device);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_reset")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError ResetDevice(HackRFDevice* device);
 
         /// <summary>
         /// Turn on or off (override) the LEDs of the HackRF device.
@@ -68,8 +76,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device">Device to query.</param>
         /// <param name="state">LED states as a bitfield.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_leds")]
-        public static extern HackrfError SetDeviceLeds(HackRFDevice* device, byte state);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_leds")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetDeviceLeds(HackRFDevice* device, byte state);
 
         /// <summary>
         /// Enable / disable UI display (RAD1O, PortaPack, etc.).
@@ -80,7 +89,8 @@ public static partial class HackRfNativeLib {
         /// <param name="device">device to enable/disable UI on.</param>
         /// <param name="value">Enable UI. Must be 1 or 0.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError.HACKRF_ERROR_LIBUSB"/> on usb error.</returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_ui_enable")]
-        public static extern HackrfError SetDeviceUiEnabled(HackRFDevice* device, byte value);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_ui_enable")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial HackrfError SetDeviceUiEnabled(HackRFDevice* device, byte value);
     }
 }

@@ -1,11 +1,12 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 using HackRFDotnet.NativeApi.Enums.Peripherals;
 using HackRFDotnet.NativeApi.Structs.Devices;
 
 namespace HackRFDotnet.NativeApi.Lib;
 public static partial class HackRfNativeLib {
-    public static unsafe class Operacake {
+    public static unsafe partial class Operacake {
         /// <summary>
         /// Query connected Opera Cake boards
         /// Returns a @ref HACKRF_OPERACAKE_MAX_BOARDS size array of addresses, with @ref HACKRF_OPERACAKE_ADDRESS_INVALID as a placeholder
@@ -13,8 +14,9 @@ public static partial class HackRfNativeLib {
         /// <param name="device"></param>
         /// <param name="boards"></param>
         /// <returns></returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_get_operacake_boards")]
-        public static extern int GetOperacakeBoards(HackRFDevice* device, byte* boards);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_get_operacake_boards")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial int GetOperacakeBoards(HackRFDevice* device, byte* boards);
 
         /// <summary>
         /// Setup Opera Cake operation mode
@@ -23,8 +25,9 @@ public static partial class HackRfNativeLib {
         /// <param name="address"></param>
         /// <param name="mode"></param>
         /// <returns></returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_operacake_mode")]
-        public static extern int SetOperacakeMode(HackRFDevice* device, byte address, OperacakeSwitchingMode mode);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_operacake_mode")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial int SetOperacakeMode(HackRFDevice* device, byte address, OperacakeSwitchingMode mode);
 
         /// <summary>
         /// Query Opera Cake mode
@@ -33,8 +36,9 @@ public static partial class HackRfNativeLib {
         /// <param name="address"></param>
         /// <param name="mode"></param>
         /// <returns></returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_get_operacake_mode")]
-        public static extern int GetOperacakeMode(HackRFDevice* device, byte address, OperacakeSwitchingMode* mode);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_get_operacake_mode")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial int GetOperacakeMode(HackRFDevice* device, byte address, OperacakeSwitchingMode* mode);
 
         /// <summary>
         /// Setup Opera Cake ports in @ref OPERACAKE_MODE_MANUAL mode operation
@@ -46,8 +50,9 @@ public static partial class HackRfNativeLib {
         /// <param name="port_a"></param>
         /// <param name="port_b"></param>
         /// <returns></returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_operacake_ports")]
-        public static extern int SetOperacakePorts(HackRFDevice* device, byte address, byte port_a, byte port_b);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_operacake_ports")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial int SetOperacakePorts(HackRFDevice* device, byte address, byte port_a, byte port_b);
 
         /// <summary>
         /// Setup Opera Cake dwell times in @ref OPERACAKE_MODE_TIME mode operation
@@ -58,8 +63,9 @@ public static partial class HackRfNativeLib {
         /// <param name="dwell_times"></param>
         /// <param name="count"></param>
         /// <returns></returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_operacake_dwell_times")]
-        public static extern int SetOperacakeDwellTimes(HackRFDevice* device, HackRFOperacakeDwellTime* dwell_times, byte count);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_operacake_dwell_times")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial int SetOperacakeDwellTimes(HackRFDevice* device, HackRFOperacakeDwellTime* dwell_times, byte count);
 
         /// <summary>
         /// Setup Opera Cake frequency ranges in @ref OPERACAKE_MODE_FREQUENCY mode operation
@@ -70,8 +76,9 @@ public static partial class HackRfNativeLib {
         /// <param name="freq_ranges"></param>
         /// <param name="count"></param>
         /// <returns></returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_operacake_freq_ranges")]
-        public static extern int SetOperacakeFrequencyRanges(HackRFDevice* device, HackRFOperacakeFreqRange* freq_ranges, byte count);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_operacake_freq_ranges")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial int SetOperacakeFrequencyRanges(HackRFDevice* device, HackRFOperacakeFreqRange* freq_ranges, byte count);
 
         /// <summary>
         /// Setup Opera Cake frequency ranges in @ref OPERACAKE_MODE_FREQUENCY mode operation
@@ -83,8 +90,9 @@ public static partial class HackRfNativeLib {
         /// <param name="num_ranges"></param>
         /// <returns></returns>
         [Obsolete("Use hackrf_set_operacake_freq_ranges instead.")]
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_operacake_ranges")]
-        public static extern int SetOperacakeRanges(HackRFDevice* device, byte* ranges, byte num_ranges);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_set_operacake_ranges")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial int SetOperacakeRanges(HackRFDevice* device, byte* ranges, byte num_ranges);
 
         /// <summary>
         /// Perform GPIO test on an Opera Cake addon board
@@ -97,7 +105,8 @@ public static partial class HackRfNativeLib {
         /// <param name="address"></param>
         /// <param name="test_result"></param>
         /// <returns></returns>
-        [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_operacake_gpio_test")]
-        public static extern int OperacakeGpioTest(HackRFDevice* device, byte address, ushort* test_result);
+        [LibraryImport(NativeConstants.HACK_RF_DLL, EntryPoint = "hackrf_operacake_gpio_test")]
+        [UnmanagedCallConv(CallConvs = [typeof(CallConvCdecl)])]
+        public static partial int OperacakeGpioTest(HackRFDevice* device, byte address, ushort* test_result);
     }
 }
