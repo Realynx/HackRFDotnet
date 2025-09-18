@@ -1,4 +1,6 @@
-﻿using BasicScanner.NativeMethods;
+﻿using System.Runtime.InteropServices;
+
+using BasicScanner.NativeMethods;
 
 using HackRFDotnet.Api;
 using HackRFDotnet.Api.Streams;
@@ -64,23 +66,19 @@ public unsafe class SpectrumDisplayService {
         var spectrumMatrix = new char[maxWidth, maxHeight];
         var buffer = new CHAR_INFO[maxWidth * maxHeight];
 
-
         var spectrumSize = Bandwidth.FromKHz(maxWidth);
-        var processingSize = 65536;
-        _displayBuffer = new IQ[processingSize];
+        const int PROCESSING_SIZE = 65536;
+        _displayBuffer = new IQ[PROCESSING_SIZE];
 
         var effectsPipeline = new SignalProcessingPipeline<IQ>();
         effectsPipeline
             .WithRootEffect(new IQDownSampleEffect(signalStream.SampleRate, spectrumSize.NyquistSampleRate,
-                processingSize, out var reducedSampleRate, out var producedChunkSize))
+                PROCESSING_SIZE, out var reducedSampleRate, out var producedChunkSize))
 
             .AddChildEffect(new FrequencyCenteringEffect(spectrumSize, reducedSampleRate))
             .AddChildEffect(new FftEffect(true, producedChunkSize));
 
         var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, reducedSampleRate);
-        var magnitudes = new float[producedChunkSize];
-        float? average = null;
-
 
         var consoleHandle = kernel32Methods.GetStdHandle(kernel32Methods.STD_OUTPUT_HANDLE);
         var bufferSize = new COORD((short)maxWidth, (short)maxHeight);
@@ -101,24 +99,23 @@ public unsafe class SpectrumDisplayService {
             Thread.Sleep(1000 / 120);
 
             signalStream.ReadSpan(_displayBuffer.AsSpan());
-            var chunk = effectsPipeline.ApplyPipeline(_displayBuffer.AsSpan());
+            _ = effectsPipeline.ApplyPipeline(_displayBuffer.AsSpan());
 
-            average = _displayBuffer.Average(i => i.Magnitude) / 5;
+            ref var spectrumPtr = ref MemoryMarshal.GetArrayDataReference(spectrumMatrix);
+            var spectrumSpan = MemoryMarshal.Cast<byte, char>(MemoryMarshal.CreateSpan(ref spectrumPtr, spectrumMatrix.Length * spectrumMatrix.Rank * sizeof(char)));
+            spectrumSpan.Fill(empty);
 
+            var average = _displayBuffer.Average(i => i.Magnitude) / 5;
             for (var x = 0; x < maxWidth; x++) {
                 var binIndex = (int)((long)x * producedChunkSize / maxWidth);
 
                 var magSafe = Math.Max(_displayBuffer[binIndex].Magnitude, 1e-9f);
-                var db = 10f * MathF.Log10(magSafe / average ?? 1f);
+                var db = 10f * MathF.Log10(magSafe / average);
                 var power = (int)Math.Clamp(db, 0, maxHeight);
 
                 for (var i = 0; i < power; i++) {
                     var level = (int)(i / (float)power * (_intensityChars.Length - 1));
                     spectrumMatrix[x, i] = _intensityChars[level];
-                }
-
-                for (var i = power; i < maxHeight; i++) {
-                    spectrumMatrix[x, i] = empty;
                 }
             }
 
