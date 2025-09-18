@@ -7,8 +7,8 @@ public unsafe class RfDeviceControllerService {
 
     public RfDeviceControllerService() {
         HackRfNativeLib.Init();
-
     }
+
     public HackRFDeviceList FindDevices() {
         var deviceList = HackRfNativeLib.Devices.QueryDeviceList();
 

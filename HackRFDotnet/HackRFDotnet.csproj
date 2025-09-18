@@ -21,6 +21,12 @@
         <None Update="hackrf.dll">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </None>
+        <None Update="libusb-1.0.dll">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Update="pthreadVC2.dll">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
