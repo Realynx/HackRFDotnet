@@ -8,12 +8,12 @@ public class AmDecoder : SignalEffect<IQ, float> {
 
     }
 
-    public override int AffectSignal(Span<IQ> signalTheta, int length) {
+    public override int TransformSignal(Span<IQ> signalTheta, int length) {
         var convertedBuffer = MemoryMarshal.Cast<IQ, float>(signalTheta);
         for (var i = 0; i < length; i++) {
             convertedBuffer[i] = signalTheta[i].Magnitude - 1.0f;
         }
 
-        return base.AffectSignal(signalTheta, length);
+        return base.TransformSignal(signalTheta, length);
     }
 }

@@ -8,7 +8,7 @@ public class QpskDecoder : SignalEffect<IQ, byte> {
 
     }
 
-    public override int AffectSignal(Span<IQ> signalTheta, int length) {
+    public override int TransformSignal(Span<IQ> signalTheta, int length) {
         var convertionBuffer = MemoryMarshal.Cast<IQ, byte>(signalTheta);
 
         var bitIndex = 0;
@@ -41,6 +41,6 @@ public class QpskDecoder : SignalEffect<IQ, byte> {
             }
         }
 
-        return base.AffectSignal(signalTheta, outIndex);
+        return base.TransformSignal(signalTheta, outIndex);
     }
 }

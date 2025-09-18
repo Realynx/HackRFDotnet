@@ -9,7 +9,7 @@ public class FmDecoder : SignalEffect<IQ, float> {
 
     }
 
-    public override int AffectSignal(Span<IQ> signalTheta, int length) {
+    public override int TransformSignal(Span<IQ> signalTheta, int length) {
         var convertedBuffer = MemoryMarshal.Cast<IQ, float>(signalTheta);
 
         for (var x = 1; x < length; x++) {
@@ -19,6 +19,6 @@ public class FmDecoder : SignalEffect<IQ, float> {
         convertedBuffer[length - 1] = convertedBuffer[length - 2];
 
         SignalUtilities.NormalizeRms(convertedBuffer.Slice(0, length));
-        return base.AffectSignal(signalTheta, length);
+        return base.TransformSignal(signalTheta, length);
     }
 }

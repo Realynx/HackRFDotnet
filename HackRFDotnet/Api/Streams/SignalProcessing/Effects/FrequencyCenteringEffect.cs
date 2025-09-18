@@ -14,9 +14,9 @@ public class FrequencyCenteringEffect : SignalEffect<IQ, IQ> {
         _sampleRate = sampleRate;
     }
 
-    public override int AffectSignal(Span<IQ> signalTheta, int length) {
+    public override int TransformSignal(Span<IQ> signalTheta, int length) {
         SignalUtilities.ApplyFrequencyOffset(signalTheta, _frequencyOffset, _sampleRate);
 
-        return base.AffectSignal(signalTheta, length);
+        return base.TransformSignal(signalTheta, length);
     }
 }

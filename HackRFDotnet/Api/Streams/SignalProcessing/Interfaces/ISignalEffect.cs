@@ -7,5 +7,5 @@ public interface ISignalEffectInput<TInput> {
     /// <param name="signalTheta"></param>
     /// <param name="length"></param>
     /// <returns></returns>
-    int AffectSignal(Span<TInput> signalTheta, int length);
+    int TransformSignal(Span<TInput> signalTheta, int length);
 }

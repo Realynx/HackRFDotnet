@@ -87,7 +87,7 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
     * frequency shift -> 0
     */
 
-    public unsafe override int AffectSignal(Span<IQ> signalTheta, int length) {
+    public unsafe override int TransformSignal(Span<IQ> signalTheta, int length) {
         if (length % 2 != 0) {
             throw new Exception("Can not process this chunk size");
         }
@@ -114,7 +114,7 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
         }
 
 
-        return base.AffectSignal(signalTheta, decimatedSize);
+        return base.TransformSignal(signalTheta, decimatedSize);
     }
 
     public void Dispose() {

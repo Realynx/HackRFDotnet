@@ -14,7 +14,7 @@ public class SignalProcessingPipeline<TInput> where TInput : struct {
     }
 
     public int ApplyPipeline(Span<TInput> signalTheta) {
-        var affectedLength = _rootEffect.AffectSignal(signalTheta, signalTheta.Length);
+        var affectedLength = _rootEffect.TransformSignal(signalTheta, signalTheta.Length);
 
         return affectedLength;
     }

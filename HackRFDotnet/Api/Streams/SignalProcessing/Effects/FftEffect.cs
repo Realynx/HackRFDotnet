@@ -25,14 +25,14 @@ public unsafe class FftEffect : SignalEffect<IQ, IQ>, IDisposable {
             _forward, FftwFlags.Estimate);
     }
 
-    public override int AffectSignal(Span<IQ> signalTheta, int length) {
+    public override int TransformSignal(Span<IQ> signalTheta, int length) {
         var complexFrame = signalTheta.Slice(0, length);
 
         MemoryMarshal.Cast<IQ, Complex32>(complexFrame).CopyTo(_processingChunk);
         _fftwPlan.Execute();
         MemoryMarshal.Cast<Complex32, IQ>(_processingChunk).CopyTo(signalTheta);
 
-        return base.AffectSignal(signalTheta, length);
+        return base.TransformSignal(signalTheta, length);
     }
 
     public void Dispose() {

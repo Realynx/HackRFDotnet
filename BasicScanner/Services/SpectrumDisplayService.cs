@@ -80,7 +80,7 @@ public unsafe class SpectrumDisplayService {
 
         var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, reducedSampleRate);
 
-        var consoleHandle = kernel32Methods.GetStdHandle(kernel32Methods.STD_OUTPUT_HANDLE);
+        var consoleHandle = Kernel32Methods.GetStdHandle(Kernel32Methods.STD_OUTPUT_HANDLE);
         var bufferSize = new COORD((short)maxWidth, (short)maxHeight);
         var bufferCoord = new COORD(0, 0);
         var writeRegion = new SMALL_RECT {
@@ -131,7 +131,7 @@ public unsafe class SpectrumDisplayService {
             }
 
             fixed (CHAR_INFO* pBuffer = buffer) {
-                kernel32Methods.WriteConsoleOutputW(consoleHandle, pBuffer, bufferSize, bufferCoord, ref writeRegion);
+                Kernel32Methods.WriteConsoleOutputW(consoleHandle, pBuffer, bufferSize, bufferCoord, ref writeRegion);
             }
         }
     }

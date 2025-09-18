@@ -19,7 +19,7 @@ public class LowPassFilterEffect : SignalEffect<IQ, IQ> {
         _bandwith = bandwith;
     }
 
-    public override int AffectSignal(Span<IQ> signalTheta, int length) {
+    public override int TransformSignal(Span<IQ> signalTheta, int length) {
         var resolution = SignalUtilities.FrequencyResolution(length, _sampleRate, false);
 
         for (var x = 0; x < length; x++) {
@@ -30,6 +30,6 @@ public class LowPassFilterEffect : SignalEffect<IQ, IQ> {
             }
         }
 
-        return base.AffectSignal(signalTheta, length);
+        return base.TransformSignal(signalTheta, length);
     }
 }

@@ -20,7 +20,7 @@ public class SquelchEffect : SignalEffect<IQ, IQ> {
         _mod = (uint)(_sampleLength / _previousSamples.Length);
     }
 
-    public override int AffectSignal(Span<IQ> signalTheta, int length) {
+    public override int TransformSignal(Span<IQ> signalTheta, int length) {
         var basebandNoise = 0d;
         var channelNoise = 0d;
         for (var x = length; x < signalTheta.Length; x++) {
@@ -45,6 +45,6 @@ public class SquelchEffect : SignalEffect<IQ, IQ> {
             }
         }
 
-        return base.AffectSignal(signalTheta, length);
+        return base.TransformSignal(signalTheta, length);
     }
 }
