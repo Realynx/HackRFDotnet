@@ -111,7 +111,7 @@ body:
   metadata:
     uid: HackRFDotnet.Api.Streams.Device.IQFileStream.Dispose
     commentId: M:HackRFDotnet.Api.Streams.Device.IQFileStream.Dispose
-- markdown: Dispose and free resources from the stream and the device.
+- markdown: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
 - code: public void Dispose()
 - api3: OpenRx(SampleRate?)
   id: HackRFDotnet_Api_Streams_Device_IQFileStream_OpenRx_System_Nullable_HackRFDotnet_Api_SampleRate__

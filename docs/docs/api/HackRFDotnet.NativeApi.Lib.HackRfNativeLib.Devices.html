@@ -85,7 +85,7 @@
         </div>
 
         <article data-uid="">
-<h1 class='section api' data-uid='HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices' data-commentid='T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices' id='HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices'>Class HackRfNativeLib.Devices    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/Devices.cs#L8'><i class='bi bi-code-slash'></i></a></h1>
+<h1 class='section api' data-uid='HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices' data-commentid='T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices' id='HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices'>Class HackRfNativeLib.Devices   </h1>
  <div class="facts text-secondary">
 <dl><dt>Namespace</dt><dd><a href='HackRFDotnet.NativeApi.Lib.html'>HackRFDotnet.NativeApi.Lib</a></dd></dl><dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
 </div><pre><code class='lang-csharp'>public static class HackRfNativeLib.Devices</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
@@ -182,9 +182,9 @@
 <p><span class="xref">HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS</span> on success, <span class="xref">HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM</span> if <code class="paramref">device</code> is NULL,
 <span class="xref">HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND</span> if no HackRF devices are found or other <span class="xref">HackRFDotnet.NativeApi.Enums.System.HackrfError</span> variant.</p>
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial(System.String,HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**)' data-commentid='M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial(System.String,HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**)' id='HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_OpenDeviceBySerial_System_String_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice___'>OpenDeviceBySerial(string, HackRFDevice**)   </h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial(System.String,HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**)' data-commentid='M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial(System.String,HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**)' id='HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_OpenDeviceBySerial_System_String_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice___'>OpenDeviceBySerial(string, HackRFDevice**)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/Devices.cs#L39'><i class='bi bi-code-slash'></i></a></h3>
  <p>Open HackRF device by serial number.</p>
-<pre><code class='lang-csharp'>public static extern HackrfError OpenDeviceBySerial(string desired_serial_number, HackRFDevice** device)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>desired_serial_number</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<pre><code class='lang-csharp'>public static HackrfError OpenDeviceBySerial(string desired_serial_number, HackRFDevice** device)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>desired_serial_number</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
 <dd>
 
 

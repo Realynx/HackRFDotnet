@@ -3,7 +3,6 @@ title: Class HackRfNativeLib.Debug
 body:
 - api1: Class HackRfNativeLib.Debug
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/Debug.cs#L7
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug
     commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug

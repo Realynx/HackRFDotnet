@@ -108,40 +108,32 @@ using var deviceStream = new IQDeviceStream(rfDevice);
 deviceStream.OpenRx(SampleRate.FromMsps(20));
 </code></pre>
 <h3 id="to-play-an-fm-stream-you-would-use-the-following-block-of-code">To play an FM stream you would use the following block of code.</h3>
-<pre><code class="lang-cs">// Set the frequency tuning on the SDR device.
+<pre><code class="lang-cs">// Tune the SDR to the target frequency and bandwidth
 rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(200));
 
-// Make a SignalStream of type FM
+// Create a SignalStream configured for FM decoding
 var fmSignalStream = new FmSignalStream(deviceStream, Bandwidth.FromKHz(200), stereo: true);
 
-// Make an AnaloguePlayer and play the FMSignalStream as an audio stream.
+// Create an AnaloguePlayer to play the FM audio stream
 var fmPlayer = new AnaloguePlayer(fmSignalStream);
 fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, SampleRate.FromKsps(48));
 </code></pre>
 <h3 id="to-play-an-am-stream-you-would-use-the-following-block-of-code">To play an AM stream you would use the following block of code.</h3>
-<pre><code class="lang-cs">// Set the frequency tuning on the SDR device.
+<pre><code class="lang-cs">// Tune the SDR to the target frequency and bandwidth
 rfDevice.SetFrequency(Frequency.FromMHz(118.4f), Bandwidth.FromKHz(10));
 
-// Make a SignalStream of type AM
+// Create a SignalStream configured for AM decoding
 var amSignalStream = new AmSignalStream(deviceStream, Bandwidth.FromKHz(10));
 
-// Make an AnaloguePlayer and play the AMSignalStream as an audio stream.
+// Create an AnaloguePlayer to play the AM audio stream
 var amPlayer = new AnaloguePlayer(amSignalStream);
 amPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, SampleRate.FromKsps(48));
 </code></pre>
-<p>FmSignalStream and AmSignalStream, are both encapsulations of a pre-programmed SignalProcessingPipeline.
-This processing pipeline downsamples, filters, and converts the tuned frequency in the Inphase &amp; Quadrature
-stream into an analogue audio signal. This analogue audio signal is then read by NAudio, and re-sampled to the
-configured playback samplerate, which is usually 48Khz.</p>
+<p>FmSignalStream and AmSignalStream are encapsulations of preconfigured SignalProcessingPipelines. These pipelines downsample, filter, and demodulate the tuned frequency from the Inphase &amp; Quadrature stream into an analog audio signal. The resulting audio is then passed to NAudio, which resamples it to the configured playback rate—typically 48 kHz.</p>
 <h1 id="signal-processing-pipelines">Signal Processing Pipelines</h1>
-<p>A Signal Processing Pipeline, is a method of applying a chain of effects onto a signal from the SignalStream.
-A SignalStream is created constructed with a SignalProcessingPipeline. The SignalStream will then use this configured SignalProcessingPipeline to convert the signal before calling Read on the SignalStream. Calling Read will returned already processed data.</p>
-<p>A SignalStream is a stream piped from the IQDeviceStream, the IQDeviceStream is the root immutable IQ stream.
-Without a Signal Processing Pipeline you will get the full capture data as seen from the IQDeviceStream.</p>
-<p>The example project creates a Digital Signal Processing work flow similar to the following.
-IQDeviceStream maintains a ring buffer with a background worker.
-Every SignalStream created from IQDeviceStream, also runs a background task to execute the Signal Processing Pipeline. This background thread ensures the ring bigger in your signal stream always has data to be read.</p>
-<p>A Signal processing chain or pipeline may convert or change the format of the data throughout the process. In example, the FMDecoder effect expects an input of IQ samples and makes an output of float samples. Effects have expected inputs and outputs to operate within a signal chain.</p>
+<p>A Signal Processing Pipeline is a chain of effects applied to a signal from a SignalStream. Each SignalStream is constructed with a configured pipeline, which processes the incoming data before it is returned through Read. Without a pipeline, the SignalStream simply exposes raw capture data from the immutable IQDeviceStream, which serves as the root source of IQ samples.</p>
+<p>The example project demonstrates a typical digital signal processing workflow. The IQDeviceStream maintains a ring buffer filled by a background worker. Every SignalStream created from it also runs its own background task to execute the Signal Processing Pipeline, ensuring the stream’s buffer remains populated and ready to read.</p>
+<p>A pipeline can alter both the format and representation of the signal. For instance, an FMDecoder effect consumes IQ samples as input and outputs float samples. Each effect defines its expected input and output types, ensuring compatibility within the chain.</p>
 <pre><code class="lang-mermaid">flowchart TD
 
 subgraph b[Signal Processing Pipeline]
@@ -158,7 +150,7 @@ subgraph b[Signal Processing Pipeline]
     --&gt;|Time Domain| lowpass
     --&gt;|IQ| inverseFft
     --&gt;|Frequency Domain| fmDecoder
-    --&gt; |float| wave(WaveOut)
+    --&gt;|float| wave(WaveOut)
 
 end
 

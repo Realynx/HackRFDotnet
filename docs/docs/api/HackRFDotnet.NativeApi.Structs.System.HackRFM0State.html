@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct HackRFM0State | HackrfDotnet ">
       
-      
+      <meta name="description" content="State of the SGPIO loop running on the M0 core.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -85,10 +85,11 @@
         </div>
 
         <article data-uid="">
-<h1 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State' data-commentid='T:HackRFDotnet.NativeApi.Structs.System.HackRFM0State' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State'>Struct HackRFM0State    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L4'><i class='bi bi-code-slash'></i></a></h1>
+<h1 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State' data-commentid='T:HackRFDotnet.NativeApi.Structs.System.HackRFM0State' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State'>Struct HackRFM0State    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L7'><i class='bi bi-code-slash'></i></a></h1>
  <div class="facts text-secondary">
 <dl><dt>Namespace</dt><dd><a href='HackRFDotnet.NativeApi.Structs.System.html'>HackRFDotnet.NativeApi.Structs.System</a></dd></dl><dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
-</div><pre><code class='lang-csharp'>public struct HackRFM0State</code></pre><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
+</div><p>State of the SGPIO loop running on the M0 core.</p>
+<pre><code class='lang-csharp'>public struct HackRFM0State</code></pre><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
 <div>
 <a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
 </div>
@@ -108,78 +109,78 @@
 <a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
 </div>
 
-</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_active_mode'>active_mode    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L21'><i class='bi bi-code-slash'></i></a></h3>
- <p>Active mode. Same values as requested_mode</p>
+</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_active_mode'>active_mode    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L24'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Active mode. Same values as requested_mode. Possible values are the same as in <span class="xref">HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode</span>.</p>
 <pre><code class='lang-csharp'>public uint active_mode</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_error'>error    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L61'><i class='bi bi-code-slash'></i></a></h3>
- <p>Error that caused M0 to revert to IDLE. 0(NONE), 1(RX_TIMEOUT), 2(TX_TIMEOUT), 3(MISSED_DEADLINE)</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_error'>error    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L64'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Error that caused M0 to revert to IDLE. 0 (NONE), 1 (RX_TIMEOUT), 2 (TX_TIMEOUT), 3 (MISSED_DEADLINE).</p>
 <pre><code class='lang-csharp'>public uint error</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_longest_shortfall'>longest_shortfall    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L41'><i class='bi bi-code-slash'></i></a></h3>
- <p>Longest shortfall in bytes</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_longest_shortfall'>longest_shortfall    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L44'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Longest shortfall in bytes.</p>
 <pre><code class='lang-csharp'>public uint longest_shortfall</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_m0_count'>m0_count    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L26'><i class='bi bi-code-slash'></i></a></h3>
- <p>Number of bytes transferred by the M0</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_m0_count'>m0_count    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L29'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Number of bytes transferred by the M0.</p>
 <pre><code class='lang-csharp'>public uint m0_count</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_m4_count'>m4_count    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L31'><i class='bi bi-code-slash'></i></a></h3>
- <p>Number of bytes transferred by the M4</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_m4_count'>m4_count    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L34'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Number of bytes transferred by the M4.</p>
 <pre><code class='lang-csharp'>public uint m4_count</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_next_mode'>next_mode    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L56'><i class='bi bi-code-slash'></i></a></h3>
- <p>Mode which will be switched to when threshold is reached</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_next_mode'>next_mode    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L59'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Mode which will be switched to when threshold is reached. Possible values are the same as in <span class="xref">HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode</span>.</p>
 <pre><code class='lang-csharp'>public uint next_mode</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_num_shortfalls'>num_shortfalls    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L36'><i class='bi bi-code-slash'></i></a></h3>
- <p>Number of shortfalls</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_num_shortfalls'>num_shortfalls    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L39'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Number of shortfalls.</p>
 <pre><code class='lang-csharp'>public uint num_shortfalls</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_request_flag'>request_flag    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L14'><i class='bi bi-code-slash'></i></a></h3>
- <p>Request flag. 0 = completed, others = pending</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_request_flag'>request_flag    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L17'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Request flag, 0 means request is completed, any other value means request is pending.</p>
 <pre><code class='lang-csharp'>public ushort request_flag</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint16'>ushort</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_requested_mode'>requested_mode    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L9'><i class='bi bi-code-slash'></i></a></h3>
- <p>Requested mode. Possible values: 0(IDLE), 1(WAIT), 2(RX), 3(TX_START), 4(TX_RUN)</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_requested_mode'>requested_mode    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L12'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Requested mode. Possible values: 0 (IDLE), 1 (WAIT), 2 (RX), 3 (TX_START), 4 (TX_RUN).</p>
 <pre><code class='lang-csharp'>public ushort requested_mode</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint16'>ushort</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_shortfall_limit'>shortfall_limit    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L46'><i class='bi bi-code-slash'></i></a></h3>
- <p>Shortfall limit in bytes</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_shortfall_limit'>shortfall_limit    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L49'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Shortfall limit in bytes.</p>
 <pre><code class='lang-csharp'>public uint shortfall_limit</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_threshold'>threshold    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L51'><i class='bi bi-code-slash'></i></a></h3>
- <p>Threshold m0_count value (in bytes) for next mode change</p>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold' data-commentid='F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold' id='HackRFDotnet_NativeApi_Structs_System_HackRFM0State_threshold'>threshold    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L54'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Threshold <span class="xref">HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count</span> value (in bytes) for next mode change.</p>
 <pre><code class='lang-csharp'>public uint threshold</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
 

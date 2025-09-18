@@ -106,7 +106,7 @@
 
 </dd></dl><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
 <div>
-<a href='HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AffectSignal_System_Span__0__System_Int32_'>SignalEffect&lt;IQ, byte&gt;.AffectSignal(Span&lt;IQ&gt;, int)</a>
+<a href='HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_TransformSignal_System_Span__0__System_Int32_'>SignalEffect&lt;IQ, byte&gt;.TransformSignal(Span&lt;IQ&gt;, int)</a>
 </div>
 <div>
 <a href='HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AddChildEffect__1_HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect__1___0__'>SignalEffect&lt;IQ, byte&gt;.AddChildEffect&lt;TFormat&gt;(SignalEffect&lt;byte, TFormat&gt;)</a>
@@ -134,9 +134,9 @@
 </div>
 
 </dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.#ctor' data-commentid='M:HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.#ctor' id='HackRFDotnet_Api_Streams_SignalProcessing_FormatConverters_QpskDecoder__ctor'>QpskDecoder()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/FormatConverters/QpskDecoder.cs#L7'><i class='bi bi-code-slash'></i></a></h3>
- <pre><code class='lang-csharp'>public QpskDecoder()</code></pre><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)' data-commentid='M:HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)' id='HackRFDotnet_Api_Streams_SignalProcessing_FormatConverters_QpskDecoder_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_'>AffectSignal(Span&lt;IQ&gt;, int)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/FormatConverters/QpskDecoder.cs#L11'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public QpskDecoder()</code></pre><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)' data-commentid='M:HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)' id='HackRFDotnet_Api_Streams_SignalProcessing_FormatConverters_QpskDecoder_TransformSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_'>TransformSignal(Span&lt;IQ&gt;, int)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/FormatConverters/QpskDecoder.cs#L11'><i class='bi bi-code-slash'></i></a></h3>
  <p>Manipulate in-place, the signal provided and return a new length is samples were reduced.</p>
-<pre><code class='lang-csharp'>public override int AffectSignal(Span&lt;IQ&gt; signalTheta, int length)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>signalTheta</code> <a href='https://learn.microsoft.com/dotnet/api/system.span-1'>Span</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;  </dt>
+<pre><code class='lang-csharp'>public override int TransformSignal(Span&lt;IQ&gt; signalTheta, int length)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>signalTheta</code> <a href='https://learn.microsoft.com/dotnet/api/system.span-1'>Span</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;  </dt>
 <dd>
 
 

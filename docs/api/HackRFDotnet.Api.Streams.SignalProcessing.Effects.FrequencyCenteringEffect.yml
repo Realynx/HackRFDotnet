@@ -33,8 +33,8 @@ body:
     url: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput-1.html
 - h4: Inherited Members
 - list:
-  - text: SignalEffect<IQ, IQ>.AffectSignal(Span<IQ>, int)
-    url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AffectSignal_System_Span__0__System_Int32_
+  - text: SignalEffect<IQ, IQ>.TransformSignal(Span<IQ>, int)
+    url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_TransformSignal_System_Span__0__System_Int32_
   - text: SignalEffect<IQ, IQ>.AddChildEffect<TFormat>(SignalEffect<IQ, TFormat>)
     url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AddChildEffect__1_HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect__1___0__
   - text: object.Equals(object?)
@@ -70,14 +70,14 @@ body:
     - text: SampleRate
       url: HackRFDotnet.Api.SampleRate.html
 - h2: Methods
-- api3: AffectSignal(Span<IQ>, int)
-  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
+- api3: TransformSignal(Span<IQ>, int)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_FrequencyCenteringEffect_TransformSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
   src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FrequencyCenteringEffect.cs#L17
   metadata:
-    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
-    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
 - markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
-- code: public override int AffectSignal(Span<IQ> signalTheta, int length)
+- code: public override int TransformSignal(Span<IQ> signalTheta, int length)
 - h4: Parameters
 - parameters:
   - name: signalTheta

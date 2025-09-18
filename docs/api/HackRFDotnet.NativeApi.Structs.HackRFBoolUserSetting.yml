@@ -3,7 +3,7 @@ title: Struct HackRFBoolUserSetting
 body:
 - api1: Struct HackRFBoolUserSetting
   id: HackRFDotnet_NativeApi_Structs_HackRFBoolUserSetting
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBoolUserSetting.cs#L4
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBoolUserSetting.cs#L8
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
     commentId: T:HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
@@ -14,6 +14,10 @@ body:
       url: HackRFDotnet.NativeApi.Structs.html
   - name: Assembly
     value: HackRFDotnet.dll
+- markdown: >-
+    Helper struct for <xref href="HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq" data-throw-if-not-resolved="false"></xref>. If <xref href="HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.do_update" data-throw-if-not-resolved="false"></xref> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, then the values of <xref href="HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.change_on_mode_entry" data-throw-if-not-resolved="false"></xref> and <xref href="HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.enabled" data-throw-if-not-resolved="false"></xref> will be used as the new default.
+
+    If <xref href="HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.do_update" data-throw-if-not-resolved="false"></xref> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, the current default will not change.
 - code: public struct HackRFBoolUserSetting
 - h4: Inherited Members
 - list:
@@ -32,11 +36,11 @@ body:
 - h2: Fields
 - api3: change_on_mode_entry
   id: HackRFDotnet_NativeApi_Structs_HackRFBoolUserSetting_change_on_mode_entry
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBoolUserSetting.cs#L16
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBoolUserSetting.cs#L20
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.change_on_mode_entry
     commentId: F:HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.change_on_mode_entry
-- markdown: Change value on mode entry
+- markdown: Change value on mode entry.
 - code: public bool change_on_mode_entry
 - h4: Field Value
 - parameters:
@@ -45,11 +49,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: do_update
   id: HackRFDotnet_NativeApi_Structs_HackRFBoolUserSetting_do_update
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBoolUserSetting.cs#L10
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBoolUserSetting.cs#L14
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.do_update
     commentId: F:HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.do_update
-- markdown: If true, update default values
+- markdown: If true, update default values.
 - code: public bool do_update
 - h4: Field Value
 - parameters:
@@ -58,11 +62,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: enabled
   id: HackRFDotnet_NativeApi_Structs_HackRFBoolUserSetting_enabled
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBoolUserSetting.cs#L22
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBoolUserSetting.cs#L26
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.enabled
     commentId: F:HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.enabled
-- markdown: Enabled
+- markdown: Enabled.
 - code: public bool enabled
 - h4: Field Value
 - parameters:
@@ -70,3 +74,8 @@ body:
     - text: bool
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 languageId: csharp
+metadata:
+  description: >-
+    Helper struct for . If  is true, then the values of  and  will be used as the new default.
+
+    If  is false, the current default will not change.

@@ -19,14 +19,14 @@ body:
 - parameters:
   - name: TInput
 - h2: Methods
-- api3: AffectSignal(Span<TInput>, int)
-  id: HackRFDotnet_Api_Streams_SignalProcessing_Interfaces_ISignalEffectInput_1_AffectSignal_System_Span__0__System_Int32_
+- api3: TransformSignal(Span<TInput>, int)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Interfaces_ISignalEffectInput_1_TransformSignal_System_Span__0__System_Int32_
   src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Interfaces/ISignalEffect.cs#L10
   metadata:
-    uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput`1.AffectSignal(System.Span{`0},System.Int32)
-    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput`1.AffectSignal(System.Span{`0},System.Int32)
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput`1.TransformSignal(System.Span{`0},System.Int32)
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput`1.TransformSignal(System.Span{`0},System.Int32)
 - markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
-- code: int AffectSignal(Span<TInput> signalTheta, int length)
+- code: int TransformSignal(Span<TInput> signalTheta, int length)
 - h4: Parameters
 - parameters:
   - name: signalTheta

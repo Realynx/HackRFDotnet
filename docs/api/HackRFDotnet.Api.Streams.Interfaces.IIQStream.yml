@@ -15,7 +15,11 @@ body:
   - name: Assembly
     value: HackRFDotnet.dll
 - markdown: <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref> is an immutable stream that buffers the data directly from the IQ device.
-- code: public interface IIQStream
+- code: 'public interface IIQStream : IDisposable'
+- h4: Implements
+- list:
+  - text: IDisposable
+    url: https://learn.microsoft.com/dotnet/api/system.idisposable
 - h2: Properties
 - api3: BufferLength
   id: HackRFDotnet_Api_Streams_Interfaces_IIQStream_BufferLength
@@ -52,17 +56,9 @@ body:
     commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Close
 - markdown: Close the stream on the device.
 - code: void Close()
-- api3: Dispose()
-  id: HackRFDotnet_Api_Streams_Interfaces_IIQStream_Dispose
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs#L24
-  metadata:
-    uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.Dispose
-    commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.Dispose
-- markdown: Dispose and free resources from the stream and the device.
-- code: void Dispose()
 - api3: OpenRx(SampleRate?)
   id: HackRFDotnet_Api_Streams_Interfaces_IIQStream_OpenRx_System_Nullable_HackRFDotnet_Api_SampleRate__
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs#L30
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs#L25
   metadata:
     uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(System.Nullable{HackRFDotnet.Api.SampleRate})
     commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.OpenRx(System.Nullable{HackRFDotnet.Api.SampleRate})
@@ -79,7 +75,7 @@ body:
     optional: true
 - api3: ReadBuffer(Span<IQ>)
   id: HackRFDotnet_Api_Streams_Interfaces_IIQStream_ReadBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs#L37
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs#L32
   metadata:
     uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
     commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
@@ -104,7 +100,7 @@ body:
     description: ''
 - api3: SetSampleRate(SampleRate)
   id: HackRFDotnet_Api_Streams_Interfaces_IIQStream_SetSampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs#L43
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs#L38
   metadata:
     uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.SetSampleRate(HackRFDotnet.Api.SampleRate)
@@ -119,7 +115,7 @@ body:
     description: ''
 - api3: TxBuffer(Span<IQ>)
   id: HackRFDotnet_Api_Streams_Interfaces_IIQStream_TxBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs#L50
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Interfaces/IIQStream.cs#L45
   metadata:
     uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
     commentId: M:HackRFDotnet.Api.Streams.Interfaces.IIQStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})

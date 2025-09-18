@@ -19,9 +19,14 @@ body:
   - type:
       text: HackRFBiasTUserSettingReq
       url: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.html
+    description: User settings for user-supplied bias tee defaults.
   - type:
       text: HackRFBoolUserSetting
       url: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.html
+    description: >-
+      Helper struct for <xref href="HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq" data-throw-if-not-resolved="false"></xref>. If <xref href="HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.do_update" data-throw-if-not-resolved="false"></xref> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, then the values of <xref href="HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.change_on_mode_entry" data-throw-if-not-resolved="false"></xref> and <xref href="HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.enabled" data-throw-if-not-resolved="false"></xref> will be used as the new default.
+
+      If <xref href="HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.do_update" data-throw-if-not-resolved="false"></xref> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>, the current default will not change.
   - type:
       text: HackrfTransfer
       url: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html

@@ -3,7 +3,6 @@ title: Class HackRfNativeLib.Firmware
 body:
 - api1: Class HackRfNativeLib.Firmware
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/Firmware.cs#L9
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
     commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware

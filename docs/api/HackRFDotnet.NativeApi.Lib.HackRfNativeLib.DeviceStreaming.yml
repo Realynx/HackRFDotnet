@@ -3,7 +3,6 @@ title: Class HackRfNativeLib.DeviceStreaming
 body:
 - api1: Class HackRfNativeLib.DeviceStreaming
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/DeviceStreaming.cs#L11
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming
     commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming
@@ -153,6 +152,7 @@ body:
     description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
 - api3: EnableTxFlush(HackRFDevice*, HackRFFlushCallback, void*)
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_EnableTxFlush_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFFlushCallback_System_Void__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/DeviceStreaming.cs#L211
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.EnableTxFlush(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFFlushCallback,System.Void*)
     commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.EnableTxFlush(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFFlushCallback,System.Void*)
@@ -161,7 +161,7 @@ body:
 
 
     This callback will be called when all the data was transmitted and all data transfers were completed. First parameter is supplied context, second parameter is success flag.
-- code: public static extern HackrfError EnableTxFlush(HackRFDevice* device, HackRFFlushCallback callback, void* flush_ctx)
+- code: public static HackrfError EnableTxFlush(HackRFDevice* device, HackRFFlushCallback callback, void* flush_ctx)
 - h4: Parameters
 - parameters:
   - name: device
@@ -615,6 +615,7 @@ body:
       url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
 - api3: SetTxBlockCompleteCallback(HackRFDevice*, HackRFTxBlockCompleteCallback)
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_SetTxBlockCompleteCallback_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFTxBlockCompleteCallback_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/DeviceStreaming.cs#L198
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetTxBlockCompleteCallback(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback)
     commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetTxBlockCompleteCallback(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback)
@@ -623,7 +624,7 @@ body:
 
 
     This callback will be called whenever an USB transfer to the device is completed, regardless if it was successful or not (indicated by the second parameter).
-- code: public static extern HackrfError SetTxBlockCompleteCallback(HackRFDevice* device, HackRFTxBlockCompleteCallback callback)
+- code: public static HackrfError SetTxBlockCompleteCallback(HackRFDevice* device, HackRFTxBlockCompleteCallback callback)
 - h4: Parameters
 - parameters:
   - name: device
@@ -732,6 +733,7 @@ body:
     description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
 - api3: StartRx(HackRFDevice*, HackRFSampleBlockCallback, void*)
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRx_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/DeviceStreaming.cs#L148
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
     commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
@@ -745,7 +747,7 @@ body:
     The callback is called with a <xref href="HackRFDotnet.NativeApi.Structs.HackrfTransfer" data-throw-if-not-resolved="false"></xref> object whenever the buffer is full. The callback is called in an async context so no libhackrf functions should be called from it.
 
     The callback should treat its argument as read-only.
-- code: public static extern HackrfError StartRx(HackRFDevice* device, HackRFSampleBlockCallback callback, void* rx_ctx)
+- code: public static HackrfError StartRx(HackRFDevice* device, HackRFSampleBlockCallback callback, void* rx_ctx)
 - h4: Parameters
 - parameters:
   - name: device
@@ -773,6 +775,7 @@ body:
     description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
 - api3: StartRxSweep(HackRFDevice*, HackRFSampleBlockCallback, void*)
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartRxSweep_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/DeviceStreaming.cs#L132
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
     commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartRxSweep(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
@@ -784,7 +787,7 @@ body:
 
 
     Requires USB API version 0x0104 or above!
-- code: public static extern HackrfError StartRxSweep(HackRFDevice* device, HackRFSampleBlockCallback callback, void* rx_ctx)
+- code: public static HackrfError StartRxSweep(HackRFDevice* device, HackRFSampleBlockCallback callback, void* rx_ctx)
 - h4: Parameters
 - parameters:
   - name: device
@@ -812,6 +815,7 @@ body:
     description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
 - api3: StartTx(HackRFDevice*, HackRFSampleBlockCallback, void*)
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_StartTx_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_System_Void__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/DeviceStreaming.cs#L186
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartTx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
     commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.StartTx(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback,System.Void*)
@@ -822,7 +826,7 @@ body:
     ⚠️ Warning: Transmitting radio signals may be subject to national and international regulations. Use of this function without the appropriate license or authorization may violate FCC
 
     regulations (or equivalent regulatory authorities in your region) and could result in legal penalties.
-- code: public static extern HackrfError StartTx(HackRFDevice* device, HackRFSampleBlockCallback callback, void* tx_ctx)
+- code: public static HackrfError StartTx(HackRFDevice* device, HackRFSampleBlockCallback callback, void* tx_ctx)
 - h4: Parameters
 - parameters:
   - name: device

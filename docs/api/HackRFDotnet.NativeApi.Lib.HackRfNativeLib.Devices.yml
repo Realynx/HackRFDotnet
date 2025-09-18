@@ -3,7 +3,6 @@ title: Class HackRfNativeLib.Devices
 body:
 - api1: Class HackRfNativeLib.Devices
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/Devices.cs#L8
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices
     commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices
@@ -134,11 +133,12 @@ body:
       <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND" data-throw-if-not-resolved="false"></xref> if no HackRF devices are found or other <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
 - api3: OpenDeviceBySerial(string, HackRFDevice**)
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_OpenDeviceBySerial_System_String_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice___
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/Devices.cs#L39
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial(System.String,HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**)
     commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.OpenDeviceBySerial(System.String,HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice**)
 - markdown: Open HackRF device by serial number.
-- code: public static extern HackrfError OpenDeviceBySerial(string desired_serial_number, HackRFDevice** device)
+- code: public static HackrfError OpenDeviceBySerial(string desired_serial_number, HackRFDevice** device)
 - h4: Parameters
 - parameters:
   - name: desired_serial_number

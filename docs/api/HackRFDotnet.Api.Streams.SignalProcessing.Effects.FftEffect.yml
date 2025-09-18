@@ -39,8 +39,8 @@ body:
     url: https://learn.microsoft.com/dotnet/api/system.idisposable
 - h4: Inherited Members
 - list:
-  - text: SignalEffect<IQ, IQ>.AffectSignal(Span<IQ>, int)
-    url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AffectSignal_System_Span__0__System_Int32_
+  - text: SignalEffect<IQ, IQ>.TransformSignal(Span<IQ>, int)
+    url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_TransformSignal_System_Span__0__System_Int32_
   - text: SignalEffect<IQ, IQ>.AddChildEffect<TFormat>(SignalEffect<IQ, TFormat>)
     url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AddChildEffect__1_HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect__1___0__
   - text: object.Equals(object?)
@@ -60,7 +60,7 @@ body:
 - h2: Constructors
 - api3: FftEffect(bool, int)
   id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_FftEffect__ctor_System_Boolean_System_Int32_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs#L20
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs#L21
   metadata:
     uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.#ctor(System.Boolean,System.Int32)
     commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.#ctor(System.Boolean,System.Int32)
@@ -76,14 +76,22 @@ body:
     - text: int
       url: https://learn.microsoft.com/dotnet/api/system.int32
 - h2: Methods
-- api3: AffectSignal(Span<IQ>, int)
-  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_FftEffect_AffectSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs#L28
+- api3: Dispose()
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_FftEffect_Dispose
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs#L41
   metadata:
-    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
-    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.AffectSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.Dispose
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.Dispose
+- markdown: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+- code: public void Dispose()
+- api3: TransformSignal(Span<IQ>, int)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_FftEffect_TransformSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs#L30
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
 - markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
-- code: public override int AffectSignal(Span<IQ> signalTheta, int length)
+- code: public override int TransformSignal(Span<IQ> signalTheta, int length)
 - h4: Parameters
 - parameters:
   - name: signalTheta
@@ -106,14 +114,6 @@ body:
     - text: int
       url: https://learn.microsoft.com/dotnet/api/system.int32
     description: ''
-- api3: Dispose()
-  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_FftEffect_Dispose
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/FftEffect.cs#L38
-  metadata:
-    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.Dispose
-    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.Dispose
-- markdown: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-- code: public void Dispose()
 languageId: csharp
 metadata:
   description: >-

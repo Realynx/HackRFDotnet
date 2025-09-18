@@ -49,7 +49,7 @@ body:
 - h2: Methods
 - api3: AddChildEffect<TFormat>(SignalEffect<TOutput, TFormat>)
   id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AddChildEffect__1_HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect__1___0__
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/SignalEffect.cs#L22
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/SignalEffect.cs#L24
   metadata:
     uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.AddChildEffect``1(HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect{`1,``0})
     commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.AddChildEffect``1(HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect{`1,``0})
@@ -80,14 +80,14 @@ body:
 - h4: Type Parameters
 - parameters:
   - name: TFormat
-- api3: AffectSignal(Span<TInput>, int)
-  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AffectSignal_System_Span__0__System_Int32_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/SignalEffect.cs#L13
+- api3: TransformSignal(Span<TInput>, int)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_TransformSignal_System_Span__0__System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/SignalEffect.cs#L15
   metadata:
-    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.AffectSignal(System.Span{`0},System.Int32)
-    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.AffectSignal(System.Span{`0},System.Int32)
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.TransformSignal(System.Span{`0},System.Int32)
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.TransformSignal(System.Span{`0},System.Int32)
 - markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
-- code: public virtual int AffectSignal(Span<TInput> signalTheta, int length)
+- code: public virtual int TransformSignal(Span<TInput> signalTheta, int length)
 - h4: Parameters
 - parameters:
   - name: signalTheta

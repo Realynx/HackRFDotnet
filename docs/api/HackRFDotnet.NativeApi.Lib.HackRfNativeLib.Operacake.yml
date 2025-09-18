@@ -3,7 +3,6 @@ title: Class HackRfNativeLib.Operacake
 body:
 - api1: Class HackRfNativeLib.Operacake
   id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Operacake
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/Operacake.cs#L8
   metadata:
     uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake
     commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake

@@ -3,7 +3,7 @@ title: Struct HackRFM0State
 body:
 - api1: Struct HackRFM0State
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L4
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L7
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
     commentId: T:HackRFDotnet.NativeApi.Structs.System.HackRFM0State
@@ -14,6 +14,7 @@ body:
       url: HackRFDotnet.NativeApi.Structs.System.html
   - name: Assembly
     value: HackRFDotnet.dll
+- markdown: State of the SGPIO loop running on the M0 core.
 - code: public struct HackRFM0State
 - h4: Inherited Members
 - list:
@@ -32,11 +33,11 @@ body:
 - h2: Fields
 - api3: active_mode
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_active_mode
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L21
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L24
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode
-- markdown: Active mode. Same values as requested_mode
+- markdown: Active mode. Same values as requested_mode. Possible values are the same as in <xref href="HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode" data-throw-if-not-resolved="false"></xref>.
 - code: public uint active_mode
 - h4: Field Value
 - parameters:
@@ -45,11 +46,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint32
 - api3: error
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_error
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L61
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L64
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error
-- markdown: Error that caused M0 to revert to IDLE. 0(NONE), 1(RX_TIMEOUT), 2(TX_TIMEOUT), 3(MISSED_DEADLINE)
+- markdown: Error that caused M0 to revert to IDLE. 0 (NONE), 1 (RX_TIMEOUT), 2 (TX_TIMEOUT), 3 (MISSED_DEADLINE).
 - code: public uint error
 - h4: Field Value
 - parameters:
@@ -58,11 +59,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint32
 - api3: longest_shortfall
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_longest_shortfall
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L41
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L44
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall
-- markdown: Longest shortfall in bytes
+- markdown: Longest shortfall in bytes.
 - code: public uint longest_shortfall
 - h4: Field Value
 - parameters:
@@ -71,11 +72,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint32
 - api3: m0_count
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_m0_count
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L26
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L29
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count
-- markdown: Number of bytes transferred by the M0
+- markdown: Number of bytes transferred by the M0.
 - code: public uint m0_count
 - h4: Field Value
 - parameters:
@@ -84,11 +85,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint32
 - api3: m4_count
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_m4_count
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L31
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L34
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count
-- markdown: Number of bytes transferred by the M4
+- markdown: Number of bytes transferred by the M4.
 - code: public uint m4_count
 - h4: Field Value
 - parameters:
@@ -97,11 +98,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint32
 - api3: next_mode
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_next_mode
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L56
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L59
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode
-- markdown: Mode which will be switched to when threshold is reached
+- markdown: Mode which will be switched to when threshold is reached. Possible values are the same as in <xref href="HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode" data-throw-if-not-resolved="false"></xref>.
 - code: public uint next_mode
 - h4: Field Value
 - parameters:
@@ -110,11 +111,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint32
 - api3: num_shortfalls
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_num_shortfalls
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L36
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L39
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls
-- markdown: Number of shortfalls
+- markdown: Number of shortfalls.
 - code: public uint num_shortfalls
 - h4: Field Value
 - parameters:
@@ -123,11 +124,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint32
 - api3: request_flag
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_request_flag
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L14
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L17
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag
-- markdown: Request flag. 0 = completed, others = pending
+- markdown: Request flag, 0 means request is completed, any other value means request is pending.
 - code: public ushort request_flag
 - h4: Field Value
 - parameters:
@@ -136,11 +137,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint16
 - api3: requested_mode
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_requested_mode
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L9
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L12
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode
-- markdown: 'Requested mode. Possible values: 0(IDLE), 1(WAIT), 2(RX), 3(TX_START), 4(TX_RUN)'
+- markdown: 'Requested mode. Possible values: 0 (IDLE), 1 (WAIT), 2 (RX), 3 (TX_START), 4 (TX_RUN).'
 - code: public ushort requested_mode
 - h4: Field Value
 - parameters:
@@ -149,11 +150,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint16
 - api3: shortfall_limit
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_shortfall_limit
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L46
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L49
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit
-- markdown: Shortfall limit in bytes
+- markdown: Shortfall limit in bytes.
 - code: public uint shortfall_limit
 - h4: Field Value
 - parameters:
@@ -162,11 +163,11 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.uint32
 - api3: threshold
   id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_threshold
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L51
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L54
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold
     commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold
-- markdown: Threshold m0_count value (in bytes) for next mode change
+- markdown: Threshold <xref href="HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count" data-throw-if-not-resolved="false"></xref> value (in bytes) for next mode change.
 - code: public uint threshold
 - h4: Field Value
 - parameters:
@@ -174,3 +175,5 @@ body:
     - text: uint
       url: https://learn.microsoft.com/dotnet/api/system.uint32
 languageId: csharp
+metadata:
+  description: State of the SGPIO loop running on the M0 core.

@@ -3,7 +3,7 @@ title: Struct HackRFBiasTUserSettingReq
 body:
 - api1: Struct HackRFBiasTUserSettingReq
   id: HackRFDotnet_NativeApi_Structs_HackRFBiasTUserSettingReq
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs#L4
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs#L7
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
     commentId: T:HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
@@ -14,6 +14,7 @@ body:
       url: HackRFDotnet.NativeApi.Structs.html
   - name: Assembly
     value: HackRFDotnet.dll
+- markdown: User settings for user-supplied bias tee defaults.
 - code: public struct HackRFBiasTUserSettingReq
 - h4: Inherited Members
 - list:
@@ -32,7 +33,7 @@ body:
 - h2: Fields
 - api3: off
   id: HackRFDotnet_NativeApi_Structs_HackRFBiasTUserSettingReq_off
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs#L8
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs#L11
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.off
     commentId: F:HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.off
@@ -44,7 +45,7 @@ body:
       url: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.html
 - api3: rx
   id: HackRFDotnet_NativeApi_Structs_HackRFBiasTUserSettingReq_rx
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs#L7
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs#L10
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.rx
     commentId: F:HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.rx
@@ -56,7 +57,7 @@ body:
       url: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.html
 - api3: tx
   id: HackRFDotnet_NativeApi_Structs_HackRFBiasTUserSettingReq_tx
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs#L6
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackRFBiasTUserSettingReq.cs#L9
   metadata:
     uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.tx
     commentId: F:HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.tx
@@ -67,3 +68,5 @@ body:
     - text: HackRFBoolUserSetting
       url: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.html
 languageId: csharp
+metadata:
+  description: User settings for user-supplied bias tee defaults.

@@ -15,9 +15,9 @@ body:
   - name: Assembly
     value: HackRFDotnet.dll
 - markdown: >-
-    A SignalStream allows you to process effects from a pipeline, and read the result like a stream reader.
+    A <xref href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream%601" data-throw-if-not-resolved="false"></xref> allows you to process effects from a pipeline, and read the result like a stream reader.
 
-    Stream must be created from a <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref>
+    Stream must be created from a <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref>.
 - code: 'public class SignalStream<TOutput> : IDisposable where TOutput : struct'
 - h4: Type Parameters
 - parameters:
@@ -203,4 +203,7 @@ body:
     description: ''
 languageId: csharp
 metadata:
-  description: "A SignalStream allows you to process effects from a pipeline, and read the result like a stream reader.\r\nStream must be created from a "
+  description: >-
+    A  allows you to process effects from a pipeline, and read the result like a stream reader.
+
+    Stream must be created from a .

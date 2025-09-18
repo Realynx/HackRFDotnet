@@ -16,7 +16,7 @@ body:
 
       This stream is the root of all data processed with the library.
 
-      This stream must remain immutable from all other SignalStreams.SignalStream.
+      This stream must remain immutable from all other <xref href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream%601" data-throw-if-not-resolved="false"></xref>.
   - type:
       text: IQFileStream
       url: HackRFDotnet.Api.Streams.Device.IQFileStream.html

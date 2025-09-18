@@ -20,7 +20,7 @@ body:
       text: SignalStream<TOutput>
       url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html
     description: >-
-      A SignalStream allows you to process effects from a pipeline, and read the result like a stream reader.
+      A <xref href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream%601" data-throw-if-not-resolved="false"></xref> allows you to process effects from a pipeline, and read the result like a stream reader.
 
-      Stream must be created from a <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref>
+      Stream must be created from a <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref>.
 languageId: csharp
