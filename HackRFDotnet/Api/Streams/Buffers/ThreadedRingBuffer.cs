@@ -32,7 +32,7 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
         ref var state = ref CollectionsMarshal.GetValueRefOrAddDefault(_threadIdPointers, threadId, out _);
 
         if (state.Full) {
-            return Length;
+            return Capacity;
         }
 
         if (state.Empty) {
@@ -40,7 +40,7 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
         }
 
         var difference = _writerStart - state.ReadStart;
-        return difference < 0 ? Length + difference : difference;
+        return difference < 0 ? Capacity + difference : difference;
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -53,9 +53,9 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
         ref var state = ref CollectionsMarshal.GetValueRefOrAddDefault(_threadIdPointers, threadId, out _);
 
         var readBytes = ReadSpan(emptyMemory, state.ReadStart, count);
-        var newReadPoint = (state.ReadStart + readBytes) % Length;
+        var newReadPoint = (state.ReadStart + readBytes) % Capacity;
 
-        var looped = (state.ReadStart + readBytes) >= Length;
+        var looped = (state.ReadStart + readBytes) >= Capacity;
         if ((looped && _writerStart > state.ReadStart) || (newReadPoint > _writerStart && state.ReadStart < _writerStart)) {
             state.ReadStart = _writerStart;
             state.Empty = true;
@@ -85,8 +85,8 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
     public void WriteSpan(Span<T> inputData, int count) {
         Write(inputData, _writerStart, count);
 
-        var newWritePoint = (_writerStart + count) % Length;
-        var looped = (_writerStart + count) >= Length;
+        var newWritePoint = (_writerStart + count) % Capacity;
+        var looped = (_writerStart + count) >= Capacity;
 
         lock (_writeLock) {
             foreach (var thread in _threadIdPointers) {

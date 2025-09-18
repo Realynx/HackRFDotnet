@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 using HackRFDotnet.Api.Streams.Buffers;
 using HackRFDotnet.Api.Streams.Interfaces;
@@ -38,6 +39,9 @@ public class SignalStream<TOutput> : IDisposable where TOutput : struct {
     }
 
     public void ReadSpan(Span<TOutput> dataBuffer) {
+        Debug.Assert(_filteredBuffer.Capacity >= dataBuffer.Length);
+
+        // Stop CPU pinning
         while (_filteredBuffer.AvailableBytes < dataBuffer.Length) {
             Thread.Sleep(1);
         }

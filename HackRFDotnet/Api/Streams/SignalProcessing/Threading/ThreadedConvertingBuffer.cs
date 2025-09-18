@@ -11,8 +11,6 @@ internal class ThreadedConvertingBuffer<T> : IDisposable {
     /// <summary>
     /// Convert items in the background in a cycle to keep the buffer topped off.
     /// </summary>
-    /// <param name="ringBuffer"></param>
-    /// <param name="bufferMaintainer"></param>
     public ThreadedConvertingBuffer(RingBuffer<T> ringBuffer, Action<RingBuffer<T>> bufferMaintainer) {
         _ringBuffer = ringBuffer;
         _bufferMaintainer = bufferMaintainer;
@@ -24,6 +22,7 @@ internal class ThreadedConvertingBuffer<T> : IDisposable {
 
     public void Dispose() {
         _cancelMaintainer.Cancel();
+        _cancelMaintainer.Dispose();
     }
 
     public void Write(ReadOnlySpan<T> interleavedSamples) {

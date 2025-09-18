@@ -9,7 +9,7 @@ internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
     public int AvailableBytes {
         get {
             if (_full) {
-                return Length;
+                return Capacity;
             }
 
             if (_empty) {
@@ -17,7 +17,7 @@ internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
             }
 
             var difference = _writeStart - _readStart;
-            return difference < 0 ? Length + difference : difference;
+            return difference < 0 ? Capacity + difference : difference;
         }
     }
 
@@ -36,9 +36,9 @@ internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
     /// </summary>
     public void Write(ReadOnlySpan<T> buffer, int count) {
         Write(buffer, _writeStart, count);
-        var newWritePoint = (_writeStart + count) % Length;
+        var newWritePoint = (_writeStart + count) % Capacity;
 
-        var looped = (_writeStart + count) >= Length;
+        var looped = (_writeStart + count) >= Capacity;
         if (newWritePoint == _readStart ||
             (looped && _readStart > _writeStart)
             || (newWritePoint > _readStart && _writeStart < _readStart)) {
@@ -78,9 +78,9 @@ internal sealed class RingBuffer<T> : UnsafeRingBuffer<T> {
     public int Read(Span<T> buffer, int count) {
         var bytesRead = Peek(buffer, count);
 
-        var newReadPoint = (_readStart + bytesRead) % Length;
+        var newReadPoint = (_readStart + bytesRead) % Capacity;
 
-        var looped = (_readStart + count) >= Length;
+        var looped = (_readStart + count) >= Capacity;
         if (newReadPoint == _writeStart ||
             (looped && _writeStart > _readStart)
             || (newReadPoint > _writeStart && _readStart < _writeStart)) {

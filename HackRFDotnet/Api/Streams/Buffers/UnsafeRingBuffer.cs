@@ -6,11 +6,11 @@ namespace HackRFDotnet.Api.Streams.Buffers;
 /// You are meant to track your own pointers when using <see cref="UnsafeRingBuffer{T}"/>.
 /// </summary>
 internal class UnsafeRingBuffer<T> {
-    public int Length { get; init; }
+    public int Capacity { get; init; }
     private readonly T[] _array;
 
     public UnsafeRingBuffer(int capacity) {
-        Length = capacity;
+        Capacity = capacity;
         _array = new T[capacity];
     }
 
@@ -20,7 +20,7 @@ internal class UnsafeRingBuffer<T> {
     /// </summary>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Write(ReadOnlySpan<T> bufferData, int offset, int count) {
-        if (count == 0 || count > Length) {
+        if (count == 0 || count > Capacity) {
             return;
         }
 

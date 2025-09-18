@@ -1,4 +1,6 @@
-﻿using HackRFDotnet.Api.Streams.Buffers;
+﻿using System.Diagnostics;
+
+using HackRFDotnet.Api.Streams.Buffers;
 using HackRFDotnet.Api.Streams.Exceptions;
 using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.NativeApi.Lib;
@@ -64,6 +66,9 @@ namespace HackRFDotnet.Api.Streams.Device {
         }
 
         public int ReadBuffer(Span<IQ> iqBuffer) {
+            Debug.Assert(_iqBuffer is null || _iqBuffer.Capacity >= iqBuffer.Length);
+
+            // Stop CPU pinning
             while (iqBuffer.Length > _iqBuffer?.BytesAvailable()) {
                 Thread.Sleep(1);
             }
