@@ -1,15 +1,10 @@
 ﻿namespace HackRFDotnet.Api;
+
 /// <summary>
 /// Bandwidth of a signal sample.
 /// </summary>
 public readonly record struct Bandwidth {
     private readonly Hertz _hertz;
-
-    public long Hz {
-        get {
-            return _hertz.Hz;
-        }
-    }
 
     /// <summary>
     /// https://en.wikipedia.org/wiki/Nyquist_rate
@@ -25,6 +20,16 @@ public readonly record struct Bandwidth {
 
     public Bandwidth(Hertz hertz) {
         _hertz = hertz;
+    }
+
+    public long Hz {
+        get {
+            return _hertz.Hz;
+        }
+    }
+
+    public static Bandwidth FromHz(Hertz hz) {
+        return new Bandwidth(hz);
     }
 
     public static Bandwidth FromHz(long hz) {
@@ -71,6 +76,10 @@ public readonly record struct Bandwidth {
         return new Bandwidth(a._hertz / b);
     }
 
+    public static Bandwidth operator /(Bandwidth a, double b) {
+        return new Bandwidth(a._hertz / b);
+    }
+
     public static Bandwidth operator -(Bandwidth a, Bandwidth b) {
         return new Bandwidth(a._hertz - b._hertz);
     }
@@ -89,5 +98,9 @@ public readonly record struct Bandwidth {
 
     public static implicit operator Frequency(Bandwidth b) {
         return new Frequency(b._hertz);
+    }
+
+    public static implicit operator Hertz(Bandwidth b) {
+        return b._hertz;
     }
 }

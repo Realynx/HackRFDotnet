@@ -1,11 +1,12 @@
 ﻿namespace HackRFDotnet.Api;
+
 public record struct SampleRate {
     private readonly Hertz _hertz;
 
-    public long Hz {
-        get {
-            return _hertz.Hz;
-        }
+    public SampleRate(long sps) : this(new Hertz(sps)) { }
+
+    public SampleRate(Hertz hertz) {
+        _hertz = hertz;
     }
 
     /// <summary>
@@ -16,12 +17,6 @@ public record struct SampleRate {
         get {
             return new Bandwidth(_hertz / 2);
         }
-    }
-
-    public SampleRate(long sps) : this(new Hertz(sps)) { }
-
-    public SampleRate(Hertz hertz) {
-        _hertz = hertz;
     }
 
     public long Sps {
@@ -40,6 +35,10 @@ public record struct SampleRate {
         get {
             return _hertz.Khz;
         }
+    }
+
+    public static SampleRate FromSps(long hz) {
+        return new SampleRate(Hertz.FromHz(hz));
     }
 
     public static SampleRate FromKsps(double khz) {
@@ -82,6 +81,10 @@ public record struct SampleRate {
         return new SampleRate(a._hertz / b);
     }
 
+    public static SampleRate operator /(SampleRate a, double b) {
+        return new SampleRate(a._hertz / b);
+    }
+
     public static SampleRate operator -(SampleRate a, SampleRate b) {
         return new SampleRate(a._hertz - b._hertz);
     }
@@ -96,5 +99,9 @@ public record struct SampleRate {
 
     public static SampleRate operator *(SampleRate a, double b) {
         return new SampleRate(a._hertz * b);
+    }
+
+    public static implicit operator Hertz(SampleRate s) {
+        return s._hertz;
     }
 }

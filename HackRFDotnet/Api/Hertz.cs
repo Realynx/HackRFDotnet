@@ -1,4 +1,5 @@
 ﻿namespace HackRFDotnet.Api;
+
 /// <summary>
 /// Number of oscillations per second.
 /// </summary>
@@ -7,6 +8,10 @@ public readonly record struct Hertz {
     /// Number of oscillations per second.
     /// </summary>
     public readonly long Hz;
+
+    public Hertz(long hz) {
+        Hz = hz;
+    }
 
     /// <summary>
     /// Number of oscillations per second divided by 1,000,000
@@ -24,10 +29,6 @@ public readonly record struct Hertz {
         get {
             return Hz / 1_000d;
         }
-    }
-
-    public Hertz(long hz) {
-        Hz = hz;
     }
 
     public static Hertz FromHz(long hz) {
@@ -72,6 +73,10 @@ public readonly record struct Hertz {
 
     public static Hertz operator /(Hertz a, int b) {
         return new Hertz(a.Hz / b);
+    }
+
+    public static Hertz operator /(Hertz a, double b) {
+        return new Hertz((long)(a.Hz / b));
     }
 
     public static Hertz operator -(Hertz a, Hertz b) {
