@@ -1,565 +1,117 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  commentId: T:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  id: HackRFDeviceList
-  parent: HackRFDotnet.NativeApi.Structs.Devices
-  children:
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.devicecount
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.serial_numbers
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_device_index
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devicecount
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devices
-  langs:
-  - csharp
-  - vb
-  name: HackRFDeviceList
-  nameWithType: HackRFDeviceList
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  type: Struct
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HackRFDeviceList
-    path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-    startLine: 5
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.Devices
-  syntax:
-    content: public struct HackRFDeviceList
-    content.vb: Public Structure HackRFDeviceList
-  inheritedMembers:
-  - System.ValueType.Equals(System.Object)
-  - System.ValueType.GetHashCode
-  - System.ValueType.ToString
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.serial_numbers
-  commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.serial_numbers
-  id: serial_numbers
-  parent: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  langs:
-  - csharp
-  - vb
-  name: serial_numbers
-  nameWithType: HackRFDeviceList.serial_numbers
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.serial_numbers
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: serial_numbers
-    path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-    startLine: 10
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: Array of human-readable serial numbers. Each entry can be NULL.
-  example: []
-  syntax:
-    content: public char** serial_numbers
-    return:
-      type: System.Char**
-    content.vb: Public serial_numbers As Char**
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids
-  commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids
-  id: usb_board_ids
-  parent: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  langs:
-  - csharp
-  - vb
-  name: usb_board_ids
-  nameWithType: HackRFDeviceList.usb_board_ids
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: usb_board_ids
-    path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-    startLine: 15
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: ID of each board, based on USB product ID.
-  example: []
-  syntax:
-    content: public HackrfUsbBoardId* usb_board_ids
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId*
-    content.vb: Public usb_board_ids As HackrfUsbBoardId*
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_device_index
-  commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_device_index
-  id: usb_device_index
-  parent: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  langs:
-  - csharp
-  - vb
-  name: usb_device_index
-  nameWithType: HackRFDeviceList.usb_device_index
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_device_index
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: usb_device_index
-    path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-    startLine: 20
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: USB device index for each HW entry.
-  example: []
-  syntax:
-    content: public int* usb_device_index
-    return:
-      type: System.Int32*
-    content.vb: Public usb_device_index As Integer*
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.devicecount
-  commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.devicecount
-  id: devicecount
-  parent: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  langs:
-  - csharp
-  - vb
-  name: devicecount
-  nameWithType: HackRFDeviceList.devicecount
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.devicecount
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: devicecount
-    path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-    startLine: 25
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: Number of connected HackRF devices.
-  example: []
-  syntax:
-    content: public int devicecount
-    return:
-      type: System.Int32
-    content.vb: Public devicecount As Integer
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devices
-  commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devices
-  id: usb_devices
-  parent: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  langs:
-  - csharp
-  - vb
-  name: usb_devices
-  nameWithType: HackRFDeviceList.usb_devices
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devices
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: usb_devices
-    path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-    startLine: 30
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: All USB devices (as libusb_device** array).
-  example: []
-  syntax:
-    content: public void** usb_devices
-    return:
-      type: System.Void**
-    content.vb: Public usb_devices As Void**
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devicecount
-  commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devicecount
-  id: usb_devicecount
-  parent: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  langs:
-  - csharp
-  - vb
-  name: usb_devicecount
-  nameWithType: HackRFDeviceList.usb_devicecount
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devicecount
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: usb_devicecount
-    path: HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs
-    startLine: 35
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.Devices
-  summary: Number of all queried USB devices.
-  example: []
-  syntax:
-    content: public int usb_devicecount
-    return:
-      type: System.Int32
-    content.vb: Public usb_devicecount As Integer
-references:
-- uid: HackRFDotnet.NativeApi.Structs.Devices
-  commentId: N:HackRFDotnet.NativeApi.Structs.Devices
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Structs.Devices
-  nameWithType: HackRFDotnet.NativeApi.Structs.Devices
-  fullName: HackRFDotnet.NativeApi.Structs.Devices
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs.Devices
-    name: Devices
-    href: HackRFDotnet.NativeApi.Structs.Devices.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs.Devices
-    name: Devices
-    href: HackRFDotnet.NativeApi.Structs.Devices.html
-- uid: System.ValueType.Equals(System.Object)
-  commentId: M:System.ValueType.Equals(System.Object)
-  parent: System.ValueType
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  name: Equals(object)
-  nameWithType: ValueType.Equals(object)
-  fullName: System.ValueType.Equals(object)
-  nameWithType.vb: ValueType.Equals(Object)
-  fullName.vb: System.ValueType.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.ValueType.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.ValueType.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.ValueType.GetHashCode
-  commentId: M:System.ValueType.GetHashCode
-  parent: System.ValueType
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
-  name: GetHashCode()
-  nameWithType: ValueType.GetHashCode()
-  fullName: System.ValueType.GetHashCode()
-  spec.csharp:
-  - uid: System.ValueType.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.ValueType.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
-  - name: (
-  - name: )
-- uid: System.ValueType.ToString
-  commentId: M:System.ValueType.ToString
-  parent: System.ValueType
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
-  name: ToString()
-  nameWithType: ValueType.ToString()
-  fullName: System.ValueType.ToString()
-  spec.csharp:
-  - uid: System.ValueType.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.ValueType.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
-  - name: (
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.ValueType
-  commentId: T:System.ValueType
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype
-  name: ValueType
-  nameWithType: ValueType
-  fullName: System.ValueType
-- uid: System.Object
-  commentId: T:System.Object
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: System.Char**
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.char
-  name: char**
-  nameWithType: char**
-  fullName: char**
-  nameWithType.vb: Char**
-  fullName.vb: Char**
-  name.vb: Char**
-  spec.csharp:
-  - uid: System.Char
-    name: char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '*'
-  - name: '*'
-  spec.vb:
-  - uid: System.Char
-    name: Char
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.char
-  - name: '*'
-  - name: '*'
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId*
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
-  name: HackrfUsbBoardId*
-  nameWithType: HackrfUsbBoardId*
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId*
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-    name: HackrfUsbBoardId
-    href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
-  - name: '*'
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-    name: HackrfUsbBoardId
-    href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
-  - name: '*'
-- uid: System.Int32*
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int*
-  nameWithType: int*
-  fullName: int*
-  nameWithType.vb: Integer*
-  fullName.vb: Integer*
-  name.vb: Integer*
-  spec.csharp:
-  - uid: System.Int32
-    name: int
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '*'
-  spec.vb:
-  - uid: System.Int32
-    name: Integer
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: '*'
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: System.Void**
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.void
-  name: void**
-  nameWithType: void**
-  fullName: void**
-  nameWithType.vb: Void**
-  fullName.vb: Void**
-  name.vb: Void**
-  spec.csharp:
-  - uid: System.Void
-    name: void
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.void
-  - name: '*'
-  - name: '*'
-  spec.vb:
-  - uid: System.Void
-    name: Void
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.void
-  - name: '*'
-  - name: '*'
+### YamlMime:ApiPage
+title: Struct HackRFDeviceList
+body:
+- api1: Struct HackRFDeviceList
+  id: HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs#L6
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
+    commentId: T:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Structs.Devices
+      url: HackRFDotnet.NativeApi.Structs.Devices.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public struct HackRFDeviceList
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Fields
+- api3: devicecount
+  id: HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList_devicecount
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs#L26
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.devicecount
+    commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.devicecount
+- markdown: Number of connected HackRF devices.
+- code: public int devicecount
+- h4: Field Value
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+- api3: serial_numbers
+  id: HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList_serial_numbers
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs#L11
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.serial_numbers
+    commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.serial_numbers
+- markdown: Array of human-readable serial numbers. Each entry can be NULL.
+- code: public char** serial_numbers
+- h4: Field Value
+- parameters:
+  - type:
+    - text: char
+      url: https://learn.microsoft.com/dotnet/api/system.char
+    - '*'
+    - '*'
+- api3: usb_board_ids
+  id: HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList_usb_board_ids
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs#L16
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids
+    commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids
+- markdown: ID of each board, based on USB product ID.
+- code: public HackrfUsbBoardId* usb_board_ids
+- h4: Field Value
+- parameters:
+  - type:
+    - text: HackrfUsbBoardId
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
+    - '*'
+- api3: usb_device_index
+  id: HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList_usb_device_index
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs#L21
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_device_index
+    commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_device_index
+- markdown: USB device index for each HW entry.
+- code: public int* usb_device_index
+- h4: Field Value
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    - '*'
+- api3: usb_devicecount
+  id: HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList_usb_devicecount
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs#L36
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devicecount
+    commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devicecount
+- markdown: Number of all queried USB devices.
+- code: public int usb_devicecount
+- h4: Field Value
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+- api3: usb_devices
+  id: HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList_usb_devices
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/Devices/HackRFDeviceList.cs#L31
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devices
+    commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_devices
+- markdown: All USB devices (as libusb_device** array).
+- code: public void** usb_devices
+- h4: Field Value
+- parameters:
+  - type:
+    - text: void
+      url: https://learn.microsoft.com/dotnet/api/system.void
+    - '*'
+    - '*'
+languageId: csharp

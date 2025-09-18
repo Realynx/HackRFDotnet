@@ -1,98 +1,30 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-  id: HackRFSampleBlockCallback
-  parent: HackRFDotnet.NativeApi.Structs
-  children: []
-  langs:
-  - csharp
-  - vb
-  name: HackRFSampleBlockCallback
-  nameWithType: HackRFSampleBlockCallback
-  fullName: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-  type: Delegate
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HackRFSampleBlockCallback
-    path: HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs
-    startLine: 46
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs
-  syntax:
-    content: public delegate int HackRFSampleBlockCallback(HackrfTransfer* transfer)
-    parameters:
-    - id: transfer
-      type: HackRFDotnet.NativeApi.Structs.HackrfTransfer*
-    return:
-      type: System.Int32
-    content.vb: Public Delegate Function HackRFSampleBlockCallback(transfer As HackrfTransfer*) As Integer
-references:
-- uid: HackRFDotnet.NativeApi.Structs
-  commentId: N:HackRFDotnet.NativeApi.Structs
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Structs
-  nameWithType: HackRFDotnet.NativeApi.Structs
-  fullName: HackRFDotnet.NativeApi.Structs
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-- uid: HackRFDotnet.NativeApi.Structs.HackrfTransfer*
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html
-  name: HackrfTransfer*
-  nameWithType: HackrfTransfer*
-  fullName: HackRFDotnet.NativeApi.Structs.HackrfTransfer*
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Structs.HackrfTransfer
-    name: HackrfTransfer
-    href: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html
-  - name: '*'
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Structs.HackrfTransfer
-    name: HackrfTransfer
-    href: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html
-  - name: '*'
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
+### YamlMime:ApiPage
+title: Delegate HackRFSampleBlockCallback
+body:
+- api1: Delegate HackRFSampleBlockCallback
+  id: HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/HackrfTransfer.cs#L47
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
+    commentId: T:HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Structs
+      url: HackRFDotnet.NativeApi.Structs.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public delegate int HackRFSampleBlockCallback(HackrfTransfer* transfer)
+- h4: Parameters
+- parameters:
+  - name: transfer
+    type:
+    - text: HackrfTransfer
+      url: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html
+    - '*'
+- h4: Returns
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+languageId: csharp

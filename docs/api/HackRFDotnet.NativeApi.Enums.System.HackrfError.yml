@@ -1,509 +1,93 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfError
-  id: HackrfError
-  parent: HackRFDotnet.NativeApi.Enums.System
-  children:
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_BUSY
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NO_MEM
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_OTHER
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_STOPPED
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_THREAD
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_USB_API_VERSION
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
-  - HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_TRUE
-  langs:
-  - csharp
-  - vb
-  name: HackrfError
-  nameWithType: HackrfError
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  type: Enum
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HackrfError
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 6
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Error enum, returned by many libhackrf functions.
-  example: []
-  syntax:
-    content: public enum HackrfError
-    content.vb: Public Enum HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
-  id: HACKRF_SUCCESS
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_SUCCESS
-  nameWithType: HackrfError.HACKRF_SUCCESS
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_SUCCESS
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 10
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: No error happened.
-  example: []
-  syntax:
-    content: HACKRF_SUCCESS = 0
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_TRUE
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_TRUE
-  id: HACKRF_TRUE
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_TRUE
-  nameWithType: HackrfError.HACKRF_TRUE
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_TRUE
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_TRUE
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 15
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: TRUE value, returned by some functions that return boolean value. Only a few functions can return this variant, and this fact should be explicitly noted at those functions.
-  example: []
-  syntax:
-    content: HACKRF_TRUE = 1
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
-  id: HACKRF_ERROR_INVALID_PARAM
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_INVALID_PARAM
-  nameWithType: HackrfError.HACKRF_ERROR_INVALID_PARAM
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_INVALID_PARAM
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_INVALID_PARAM
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 20
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: The function was called with invalid parameters.
-  example: []
-  syntax:
-    content: HACKRF_ERROR_INVALID_PARAM = -2
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
-  id: HACKRF_ERROR_NOT_FOUND
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_NOT_FOUND
-  nameWithType: HackrfError.HACKRF_ERROR_NOT_FOUND
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_FOUND
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_NOT_FOUND
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 25
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: USB device not found, returned at opening.
-  example: []
-  syntax:
-    content: HACKRF_ERROR_NOT_FOUND = -5
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_BUSY
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_BUSY
-  id: HACKRF_ERROR_BUSY
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_BUSY
-  nameWithType: HackrfError.HACKRF_ERROR_BUSY
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_BUSY
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_BUSY
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 30
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Resource is busy, possibly the device is already opened.
-  example: []
-  syntax:
-    content: HACKRF_ERROR_BUSY = -6
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NO_MEM
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NO_MEM
-  id: HACKRF_ERROR_NO_MEM
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_NO_MEM
-  nameWithType: HackrfError.HACKRF_ERROR_NO_MEM
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NO_MEM
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_NO_MEM
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 35
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Memory allocation (on host side) failed.
-  example: []
-  syntax:
-    content: HACKRF_ERROR_NO_MEM = -11
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
-  id: HACKRF_ERROR_LIBUSB
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_LIBUSB
-  nameWithType: HackrfError.HACKRF_ERROR_LIBUSB
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_LIBUSB
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 40
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: LibUSB error, use <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)" data-throw-if-not-resolved="false"></xref> to get a human-readable error string (using `libusb_strerror`).
-  example: []
-  syntax:
-    content: HACKRF_ERROR_LIBUSB = -1000
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_THREAD
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_THREAD
-  id: HACKRF_ERROR_THREAD
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_THREAD
-  nameWithType: HackrfError.HACKRF_ERROR_THREAD
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_THREAD
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_THREAD
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 45
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Error setting up transfer thread (pthread-related error).
-  example: []
-  syntax:
-    content: HACKRF_ERROR_THREAD = -1001
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
-  id: HACKRF_ERROR_STREAMING_THREAD_ERR
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_STREAMING_THREAD_ERR
-  nameWithType: HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_THREAD_ERR
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_STREAMING_THREAD_ERR
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 50
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Streaming thread could not start due to an error.
-  example: []
-  syntax:
-    content: HACKRF_ERROR_STREAMING_THREAD_ERR = -1002
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_STOPPED
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_STOPPED
-  id: HACKRF_ERROR_STREAMING_STOPPED
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_STREAMING_STOPPED
-  nameWithType: HackrfError.HACKRF_ERROR_STREAMING_STOPPED
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_STOPPED
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_STREAMING_STOPPED
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 55
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Streaming thread stopped due to an error.
-  example: []
-  syntax:
-    content: HACKRF_ERROR_STREAMING_STOPPED = -1003
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
-  id: HACKRF_ERROR_STREAMING_EXIT_CALLED
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_STREAMING_EXIT_CALLED
-  nameWithType: HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_STREAMING_EXIT_CALLED
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_STREAMING_EXIT_CALLED
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 60
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Streaming thread exited (normally).
-  example: []
-  syntax:
-    content: HACKRF_ERROR_STREAMING_EXIT_CALLED = -1004
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_USB_API_VERSION
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_USB_API_VERSION
-  id: HACKRF_ERROR_USB_API_VERSION
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_USB_API_VERSION
-  nameWithType: HackrfError.HACKRF_ERROR_USB_API_VERSION
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_USB_API_VERSION
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_USB_API_VERSION
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 65
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: The installed firmware does not support this function.
-  example: []
-  syntax:
-    content: HACKRF_ERROR_USB_API_VERSION = -1005
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
-  id: HACKRF_ERROR_NOT_LAST_DEVICE
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_NOT_LAST_DEVICE
-  nameWithType: HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_NOT_LAST_DEVICE
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_NOT_LAST_DEVICE
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 70
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Can not exit library as one or more HackRFs still in use.
-  example: []
-  syntax:
-    content: HACKRF_ERROR_NOT_LAST_DEVICE = -2000
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_OTHER
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_OTHER
-  id: HACKRF_ERROR_OTHER
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  langs:
-  - csharp
-  - vb
-  name: HACKRF_ERROR_OTHER
-  nameWithType: HackrfError.HACKRF_ERROR_OTHER
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_OTHER
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HACKRF_ERROR_OTHER
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfError.cs
-    startLine: 75
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Unspecified error.
-  example: []
-  syntax:
-    content: HACKRF_ERROR_OTHER = -9999
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfError
-references:
-- uid: HackRFDotnet.NativeApi.Enums.System
-  commentId: N:HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Enums.System
-  nameWithType: HackRFDotnet.NativeApi.Enums.System
-  fullName: HackRFDotnet.NativeApi.Enums.System
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.System
-    name: System
-    href: HackRFDotnet.NativeApi.Enums.System.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.System
-    name: System
-    href: HackRFDotnet.NativeApi.Enums.System.html
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
-  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfError
-  parent: HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
-  name: HackrfError
-  nameWithType: HackrfError
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfError
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug_GetErrorName_HackRFDotnet_NativeApi_Enums_System_HackrfError_
-  name: GetErrorName(HackrfError)
-  nameWithType: HackRfNativeLib.Debug.GetErrorName(HackrfError)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
-    name: GetErrorName
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug_GetErrorName_HackRFDotnet_NativeApi_Enums_System_HackrfError_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
-    name: HackrfError
-    href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)
-    name: GetErrorName
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug_GetErrorName_HackRFDotnet_NativeApi_Enums_System_HackrfError_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
-    name: HackrfError
-    href: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
-  - name: )
+### YamlMime:ApiPage
+title: Enum HackrfError
+body:
+- api1: Enum HackrfError
+  id: HackRFDotnet_NativeApi_Enums_System_HackrfError
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/System/HackrfError.cs#L7
+  metadata:
+    uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
+    commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfError
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Enums.System
+      url: HackRFDotnet.NativeApi.Enums.System.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: Error enum, returned by many libhackrf functions.
+- code: public enum HackrfError
+- h2: Fields
+- parameters:
+  - name: HACKRF_ERROR_BUSY
+    default: "-6"
+    description: >+
+      Resource is busy, possibly the device is already opened.
+
+  - name: HACKRF_ERROR_INVALID_PARAM
+    default: "-2"
+    description: >+
+      The function was called with invalid parameters.
+
+  - name: HACKRF_ERROR_LIBUSB
+    default: "-1000"
+    description: >+
+      LibUSB error, use <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)" data-throw-if-not-resolved="false"></xref> to get a human-readable error string (using `libusb_strerror`).
+
+  - name: HACKRF_ERROR_NOT_FOUND
+    default: "-5"
+    description: >+
+      USB device not found, returned at opening.
+
+  - name: HACKRF_ERROR_NOT_LAST_DEVICE
+    default: "-2000"
+    description: >+
+      Can not exit library as one or more HackRFs still in use.
+
+  - name: HACKRF_ERROR_NO_MEM
+    default: "-11"
+    description: >+
+      Memory allocation (on host side) failed.
+
+  - name: HACKRF_ERROR_OTHER
+    default: "-9999"
+    description: >+
+      Unspecified error.
+
+  - name: HACKRF_ERROR_STREAMING_EXIT_CALLED
+    default: "-1004"
+    description: >+
+      Streaming thread exited (normally).
+
+  - name: HACKRF_ERROR_STREAMING_STOPPED
+    default: "-1003"
+    description: >+
+      Streaming thread stopped due to an error.
+
+  - name: HACKRF_ERROR_STREAMING_THREAD_ERR
+    default: "-1002"
+    description: >+
+      Streaming thread could not start due to an error.
+
+  - name: HACKRF_ERROR_THREAD
+    default: "-1001"
+    description: >+
+      Error setting up transfer thread (pthread-related error).
+
+  - name: HACKRF_ERROR_USB_API_VERSION
+    default: "-1005"
+    description: >+
+      The installed firmware does not support this function.
+
+  - name: HACKRF_SUCCESS
+    default: "0"
+    description: >+
+      No error happened.
+
+  - name: HACKRF_TRUE
+    default: "1"
+    description: >+
+      TRUE value, returned by some functions that return boolean value. Only a few functions can return this variant, and this fact should be explicitly noted at those functions.
+
+languageId: csharp
+metadata:
+  description: Error enum, returned by many libhackrf functions.

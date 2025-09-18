@@ -1,30 +1,17 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.Api.Utilities
-  commentId: N:HackRFDotnet.Api.Utilities
-  id: HackRFDotnet.Api.Utilities
-  children:
-  - HackRFDotnet.Api.Utilities.BinaryUtilities
-  - HackRFDotnet.Api.Utilities.SignalUtilities
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.Api.Utilities
-  nameWithType: HackRFDotnet.Api.Utilities
-  fullName: HackRFDotnet.Api.Utilities
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.Api.Utilities.BinaryUtilities
-  commentId: T:HackRFDotnet.Api.Utilities.BinaryUtilities
-  href: HackRFDotnet.Api.Utilities.BinaryUtilities.html
-  name: BinaryUtilities
-  nameWithType: BinaryUtilities
-  fullName: HackRFDotnet.Api.Utilities.BinaryUtilities
-- uid: HackRFDotnet.Api.Utilities.SignalUtilities
-  commentId: T:HackRFDotnet.Api.Utilities.SignalUtilities
-  href: HackRFDotnet.Api.Utilities.SignalUtilities.html
-  name: SignalUtilities
-  nameWithType: SignalUtilities
-  fullName: HackRFDotnet.Api.Utilities.SignalUtilities
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.Utilities
+body:
+- api1: Namespace HackRFDotnet.Api.Utilities
+  id: HackRFDotnet_Api_Utilities
+  metadata:
+    uid: HackRFDotnet.Api.Utilities
+    commentId: N:HackRFDotnet.Api.Utilities
+- h3: Classes
+- parameters:
+  - type:
+      text: BinaryUtilities
+      url: HackRFDotnet.Api.Utilities.BinaryUtilities.html
+  - type:
+      text: SignalUtilities
+      url: HackRFDotnet.Api.Utilities.SignalUtilities.html
+languageId: csharp

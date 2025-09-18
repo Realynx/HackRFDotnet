@@ -6,7 +6,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct IQ | HackrfDotnet ">
       
-      <meta name="description" content="This represents a 32bit complex number. The real represents the InPhase Sin of real voltage measurement in time. The imaginary represents the Quadrature of the real voltage measurement in time. The relationship between the I and Q allow us to represent the signal in lower sample rate than it was captured.">
+      <meta name="description" content="This represents a 32bit complex number.
+The real represents the InPhase Sin of real voltage measurement in time.
+The imaginary represents the Quadrature of the real voltage measurement in time.
+The relationship between the I and Q allow us to represent the signal in lower sample rate than it was captured.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -16,7 +19,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Realynx/HackRFDotnet/new/master/apiSpec/new?filename=HackRFDotnet_Api_Streams_IQ.md&amp;value=---%0Auid%3A%20HackRFDotnet.Api.Streams.IQ%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +42,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,2595 +87,892 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="HackRFDotnet.Api.Streams.IQ">
-
-
-
-  <h1 id="HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ" class="text-break">
-Struct IQ  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L16"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="HackRFDotnet.html">HackRFDotnet</a>.<a class="xref" href="HackRFDotnet.Api.html">Api</a>.<a class="xref" href="HackRFDotnet.Api.Streams.html">Streams</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>This represents a 32bit complex number.
+        <article data-uid="">
+<h1 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ' data-commentid='T:HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ'>Struct IQ    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L16'><i class='bi bi-code-slash'></i></a></h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='HackRFDotnet.Api.Streams.html'>HackRFDotnet.Api.Streams</a></dd></dl><dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
+</div><p>This represents a 32bit complex number.
 The real represents the InPhase Sin of real voltage measurement in time.
 The imaginary represents the Quadrature of the real voltage measurement in time.
 The relationship between the I and Q allow us to represent the signal in lower sample rate than it was captured.</p>
+<pre><code class='lang-csharp'>public struct IQ</code></pre><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
 </div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct IQ</code></pre>
-  </div>
-
-
-
-
-
-
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ__ctor_" data-uid="HackRFDotnet.Api.Streams.IQ.#ctor*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ__ctor_HackRFDotnet_Api_Streams_InterleavedSample_" data-uid="HackRFDotnet.Api.Streams.IQ.#ctor(HackRFDotnet.Api.Streams.InterleavedSample)">
-  IQ(InterleavedSample)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L33"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IQ(InterleavedSample interleavedSample)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>interleavedSample</code> <a class="xref" href="HackRFDotnet.Api.Streams.InterleavedSample.html">InterleavedSample</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ__ctor_" data-uid="HackRFDotnet.Api.Streams.IQ.#ctor*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ__ctor_System_Single_System_Single_" data-uid="HackRFDotnet.Api.Streams.IQ.#ctor(System.Single,System.Single)">
-  IQ(float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L28"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IQ(float real, float imaginary)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>real</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>imaginary</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_ImaginaryOne" data-uid="HackRFDotnet.Api.Streams.IQ.ImaginaryOne">
-  ImaginaryOne
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L19"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly IQ ImaginaryOne</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Infinity" data-uid="HackRFDotnet.Api.Streams.IQ.Infinity">
-  Infinity
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L21"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly IQ Infinity</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_NaN" data-uid="HackRFDotnet.Api.Streams.IQ.NaN">
-  NaN
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L20"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly IQ NaN</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_One" data-uid="HackRFDotnet.Api.Streams.IQ.One">
-  One
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L18"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly IQ One</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Zero" data-uid="HackRFDotnet.Api.Streams.IQ.Zero">
-  Zero
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L17"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly IQ Zero</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_I_" data-uid="HackRFDotnet.Api.Streams.IQ.I*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_I" data-uid="HackRFDotnet.Api.Streams.IQ.I">
-  I
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L41"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Real</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)'>object.Equals(object?, object?)</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float I { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Magnitude_" data-uid="HackRFDotnet.Api.Streams.IQ.Magnitude*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Magnitude" data-uid="HackRFDotnet.Api.Streams.IQ.Magnitude">
-  Magnitude
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L48"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Magnitude { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Phase_" data-uid="HackRFDotnet.Api.Streams.IQ.Phase*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Phase" data-uid="HackRFDotnet.Api.Streams.IQ.Phase">
-  Phase
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L49"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Phase { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Q_" data-uid="HackRFDotnet.Api.Streams.IQ.Q*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Q" data-uid="HackRFDotnet.Api.Streams.IQ.Q">
-  Q
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L46"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Imaginary</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gethashcode'>object.GetHashCode()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Q { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Abs_" data-uid="HackRFDotnet.Api.Streams.IQ.Abs*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Abs_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Abs(HackRFDotnet.Api.Streams.IQ)">
-  Abs(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L229"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float Abs(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Add_" data-uid="HackRFDotnet.Api.Streams.IQ.Add*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Add_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  Add(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L55"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Add(IQ left, IQ right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Add_" data-uid="HackRFDotnet.Api.Streams.IQ.Add*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Add_HackRFDotnet_Api_Streams_IQ_System_Single_" data-uid="HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,System.Single)">
-  Add(IQ, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L59"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Add(IQ left, float right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Add_" data-uid="HackRFDotnet.Api.Streams.IQ.Add*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Add_System_Single_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Add(System.Single,HackRFDotnet.Api.Streams.IQ)">
-  Add(float, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L63"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Add(float left, IQ right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Conjugate_" data-uid="HackRFDotnet.Api.Streams.IQ.Conjugate*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Conjugate_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Conjugate(HackRFDotnet.Api.Streams.IQ)">
-  Conjugate(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L233"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Conjugate(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Cos_" data-uid="HackRFDotnet.Api.Streams.IQ.Cos*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Cos_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Cos(HackRFDotnet.Api.Streams.IQ)">
-  Cos(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L291"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Cos(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Cosh_" data-uid="HackRFDotnet.Api.Streams.IQ.Cosh*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Cosh_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Cosh(HackRFDotnet.Api.Streams.IQ)">
-  Cosh(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L296"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Cosh(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Divide_" data-uid="HackRFDotnet.Api.Streams.IQ.Divide*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Divide_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  Divide(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L91"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Divide(IQ dividend, IQ divisor)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>dividend</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>divisor</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Divide_" data-uid="HackRFDotnet.Api.Streams.IQ.Divide*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Divide_HackRFDotnet_Api_Streams_IQ_System_Single_" data-uid="HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,System.Single)">
-  Divide(IQ, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L95"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Divide(IQ dividend, float divisor)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>dividend</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>divisor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Divide_" data-uid="HackRFDotnet.Api.Streams.IQ.Divide*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Divide_System_Single_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Divide(System.Single,HackRFDotnet.Api.Streams.IQ)">
-  Divide(float, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L99"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Divide(float dividend, IQ divisor)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>dividend</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>divisor</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Equals_" data-uid="HackRFDotnet.Api.Streams.IQ.Equals*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Equals_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Equals(HackRFDotnet.Api.Streams.IQ)">
-  Equals(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L259"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Equals_" data-uid="HackRFDotnet.Api.Streams.IQ.Equals*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Equals_System_Object_" data-uid="HackRFDotnet.Api.Streams.IQ.Equals(System.Object)">
-  Equals(object?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L255"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gettype'>object.GetType()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd><p>The object to compare with the current instance.</p>
-</dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_GetHashCode_" data-uid="HackRFDotnet.Api.Streams.IQ.GetHashCode*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_GetHashCode" data-uid="HackRFDotnet.Api.Streams.IQ.GetHashCode">
-  GetHashCode()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L263"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.referenceequals'>object.ReferenceEquals(object?, object?)</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-  </div>
-
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Multiply_" data-uid="HackRFDotnet.Api.Streams.IQ.Multiply*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Multiply_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  Multiply(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L79"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Multiply(IQ left, IQ right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Multiply_" data-uid="HackRFDotnet.Api.Streams.IQ.Multiply*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Multiply_HackRFDotnet_Api_Streams_IQ_System_Single_" data-uid="HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)">
-  Multiply(IQ, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L83"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Multiply(IQ left, float right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Multiply_" data-uid="HackRFDotnet.Api.Streams.IQ.Multiply*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Multiply_System_Single_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)">
-  Multiply(float, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L87"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Multiply(float left, IQ right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Negate_" data-uid="HackRFDotnet.Api.Streams.IQ.Negate*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Negate_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Negate(HackRFDotnet.Api.Streams.IQ)">
-  Negate(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L51"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Negate(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Reciprocal_" data-uid="HackRFDotnet.Api.Streams.IQ.Reciprocal*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Reciprocal_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Reciprocal(HackRFDotnet.Api.Streams.IQ)">
-  Reciprocal(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L238"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Reciprocal(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Sin_" data-uid="HackRFDotnet.Api.Streams.IQ.Sin*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Sin_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Sin(HackRFDotnet.Api.Streams.IQ)">
-  Sin(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L281"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Sin(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Sinh_" data-uid="HackRFDotnet.Api.Streams.IQ.Sinh*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Sinh_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Sinh(HackRFDotnet.Api.Streams.IQ)">
-  Sinh(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L286"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Sinh(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Subtract_" data-uid="HackRFDotnet.Api.Streams.IQ.Subtract*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Subtract_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  Subtract(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L67"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Subtract(IQ left, IQ right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Subtract_" data-uid="HackRFDotnet.Api.Streams.IQ.Subtract*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Subtract_HackRFDotnet_Api_Streams_IQ_System_Single_" data-uid="HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,System.Single)">
-  Subtract(IQ, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L71"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Subtract(IQ left, float right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Subtract_" data-uid="HackRFDotnet.Api.Streams.IQ.Subtract*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Subtract_System_Single_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Subtract(System.Single,HackRFDotnet.Api.Streams.IQ)">
-  Subtract(float, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L75"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Subtract(float left, IQ right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_Tan_" data-uid="HackRFDotnet.Api.Streams.IQ.Tan*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_Tan_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.Tan(HackRFDotnet.Api.Streams.IQ)">
-  Tan(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L300"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ Tan(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_ToString_" data-uid="HackRFDotnet.Api.Streams.IQ.ToString*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_ToString" data-uid="HackRFDotnet.Api.Streams.IQ.ToString">
-  ToString()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L265"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
+</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.#ctor(System.Single,System.Single)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.#ctor(System.Single,System.Single)' id='HackRFDotnet_Api_Streams_IQ__ctor_System_Single_System_Single_'>IQ(float, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L28'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public IQ(float real, float imaginary)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>real</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The fully qualified type name.</p>
-</dd>
-  </dl>
 
+</dd><dt><code>imaginary</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.#ctor(HackRFDotnet.Api.Streams.InterleavedSample)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.#ctor(HackRFDotnet.Api.Streams.InterleavedSample)' id='HackRFDotnet_Api_Streams_IQ__ctor_HackRFDotnet_Api_Streams_InterleavedSample_'>IQ(InterleavedSample)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L33'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public IQ(InterleavedSample interleavedSample)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>interleavedSample</code> <a href='HackRFDotnet.Api.Streams.InterleavedSample.html'>InterleavedSample</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.ImaginaryOne' data-commentid='F:HackRFDotnet.Api.Streams.IQ.ImaginaryOne' id='HackRFDotnet_Api_Streams_IQ_ImaginaryOne'>ImaginaryOne    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L19'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static readonly IQ ImaginaryOne</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Infinity' data-commentid='F:HackRFDotnet.Api.Streams.IQ.Infinity' id='HackRFDotnet_Api_Streams_IQ_Infinity'>Infinity    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L21'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static readonly IQ Infinity</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_ToString_" data-uid="HackRFDotnet.Api.Streams.IQ.ToString*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_ToString_System_IFormatProvider_" data-uid="HackRFDotnet.Api.Streams.IQ.ToString(System.IFormatProvider)">
-  ToString(IFormatProvider?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L269"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.NaN' data-commentid='F:HackRFDotnet.Api.Streams.IQ.NaN' id='HackRFDotnet_Api_Streams_IQ_NaN'>NaN    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L20'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static readonly IQ NaN</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ToString(IFormatProvider? provider)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.One' data-commentid='F:HackRFDotnet.Api.Streams.IQ.One' id='HackRFDotnet_Api_Streams_IQ_One'>One    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L18'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static readonly IQ One</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Zero' data-commentid='F:HackRFDotnet.Api.Streams.IQ.Zero' id='HackRFDotnet_Api_Streams_IQ_Zero'>Zero    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L17'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static readonly IQ Zero</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.I' data-commentid='P:HackRFDotnet.Api.Streams.IQ.I' id='HackRFDotnet_Api_Streams_IQ_I'>I    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L41'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Real</p>
+<pre><code class='lang-csharp'>public float I { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Magnitude' data-commentid='P:HackRFDotnet.Api.Streams.IQ.Magnitude' id='HackRFDotnet_Api_Streams_IQ_Magnitude'>Magnitude    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L48'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public float Magnitude { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_ToString_" data-uid="HackRFDotnet.Api.Streams.IQ.ToString*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_ToString_System_String_" data-uid="HackRFDotnet.Api.Streams.IQ.ToString(System.String)">
-  ToString(string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L267"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Phase' data-commentid='P:HackRFDotnet.Api.Streams.IQ.Phase' id='HackRFDotnet_Api_Streams_IQ_Phase'>Phase    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L49'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public float Phase { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ToString(string? format)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Q' data-commentid='P:HackRFDotnet.Api.Streams.IQ.Q' id='HackRFDotnet_Api_Streams_IQ_Q'>Q    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L46'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Imaginary</p>
+<pre><code class='lang-csharp'>public float Q { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
 
 
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Abs(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Abs(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Abs_HackRFDotnet_Api_Streams_IQ_'>Abs(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L229'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static float Abs(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Add_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>Add(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L55'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Add(IQ left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_ToString_" data-uid="HackRFDotnet.Api.Streams.IQ.ToString*"></a>
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_ToString_System_String_System_IFormatProvider_" data-uid="HackRFDotnet.Api.Streams.IQ.ToString(System.String,System.IFormatProvider)">
-  ToString(string?, IFormatProvider?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L271"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ToString(string? format, IFormatProvider? provider)</code></pre>
-  </div>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,System.Single)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Add(HackRFDotnet.Api.Streams.IQ,System.Single)' id='HackRFDotnet_Api_Streams_IQ_Add_HackRFDotnet_Api_Streams_IQ_System_Single_'>Add(IQ, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L59'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Add(IQ left, float right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Add(System.Single,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Add(System.Single,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Add_System_Single_HackRFDotnet_Api_Streams_IQ_'>Add(float, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L63'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Add(float left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <h2 class="section" id="operators">Operators
-</h2>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Addition_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Addition*"></a>
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Addition_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  operator +(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L107"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator +(IQ left, IQ right)</code></pre>
-  </div>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Conjugate(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Conjugate(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Conjugate_HackRFDotnet_Api_Streams_IQ_'>Conjugate(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L233'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Conjugate(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Cos(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Cos(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Cos_HackRFDotnet_Api_Streams_IQ_'>Cos(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L291'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Cos(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Addition_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Addition*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Addition_HackRFDotnet_Api_Streams_IQ_System_Single_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,System.Single)">
-  operator +(IQ, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L111"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Cosh(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Cosh(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Cosh_HackRFDotnet_Api_Streams_IQ_'>Cosh(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L296'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Cosh(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator +(IQ left, float right)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Divide_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>Divide(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L91'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Divide(IQ dividend, IQ divisor)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dividend</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>divisor</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Addition_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Addition*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Addition_System_Single_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Addition(System.Single,HackRFDotnet.Api.Streams.IQ)">
-  operator +(float, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L115"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,System.Single)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Divide(HackRFDotnet.Api.Streams.IQ,System.Single)' id='HackRFDotnet_Api_Streams_IQ_Divide_HackRFDotnet_Api_Streams_IQ_System_Single_'>Divide(IQ, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L95'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Divide(IQ dividend, float divisor)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dividend</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator +(float left, IQ right)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd><dt><code>divisor</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Divide(System.Single,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Divide(System.Single,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Divide_System_Single_HackRFDotnet_Api_Streams_IQ_'>Divide(float, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L99'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Divide(float dividend, IQ divisor)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dividend</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>divisor</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Division_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Division*"></a>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Division_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  operator /(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L170"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator /(IQ left, IQ right)</code></pre>
-  </div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Equals(System.Object)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Equals(System.Object)' id='HackRFDotnet_Api_Streams_IQ_Equals_System_Object_'>Equals(object?)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L255'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Indicates whether this instance and a specified object are equal.</p>
+<pre><code class='lang-csharp'>public override bool Equals(object? obj)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>obj</code> <a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>?  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+<p>The object to compare with the current instance.</p>
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
+<p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Equals(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Equals(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Equals_HackRFDotnet_Api_Streams_IQ_'>Equals(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L259'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public bool Equals(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.GetHashCode' data-commentid='M:HackRFDotnet.Api.Streams.IQ.GetHashCode' id='HackRFDotnet_Api_Streams_IQ_GetHashCode'>GetHashCode()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L263'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Returns the hash code for this instance.</p>
+<pre><code class='lang-csharp'>public override int GetHashCode()</code></pre><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Division_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Division*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Division_HackRFDotnet_Api_Streams_IQ_System_Single_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,System.Single)">
-  operator /(IQ, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L188"><i class="bi bi-code-slash"></i></a>
-  </h3>
+<p>A 32-bit signed integer that is the hash code for this instance.</p>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Multiply_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>Multiply(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L79'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Multiply(IQ left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator /(IQ left, float right)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)' id='HackRFDotnet_Api_Streams_IQ_Multiply_HackRFDotnet_Api_Streams_IQ_System_Single_'>Multiply(IQ, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L83'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Multiply(IQ left, float right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Division_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Division*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Division_System_Single_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Division(System.Single,HackRFDotnet.Api.Streams.IQ)">
-  operator /(float, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L212"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator /(float left, IQ right)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Multiply_System_Single_HackRFDotnet_Api_Streams_IQ_'>Multiply(float, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L87'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Multiply(float left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
 
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Negate(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Negate(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Negate_HackRFDotnet_Api_Streams_IQ_'>Negate(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L51'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Negate(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Equality_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Equality*"></a>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Equality_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Equality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  operator ==(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L247"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(IQ left, IQ right)</code></pre>
-  </div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Reciprocal(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Reciprocal(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Reciprocal_HackRFDotnet_Api_Streams_IQ_'>Reciprocal(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L238'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Reciprocal(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Sin(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Sin(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Sin_HackRFDotnet_Api_Streams_IQ_'>Sin(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L281'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Sin(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Sinh(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Sinh(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Sinh_HackRFDotnet_Api_Streams_IQ_'>Sinh(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L286'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Sinh(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Explicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Explicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Explicit_System_Decimal__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Explicit(System.Decimal)~HackRFDotnet.Api.Streams.IQ">
-  explicit operator IQ(decimal)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L320"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static explicit operator IQ(decimal value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Subtract_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>Subtract(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L67'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Subtract(IQ left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,System.Single)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Subtract(HackRFDotnet.Api.Streams.IQ,System.Single)' id='HackRFDotnet_Api_Streams_IQ_Subtract_HackRFDotnet_Api_Streams_IQ_System_Single_'>Subtract(IQ, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L71'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Subtract(IQ left, float right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_HackRFDotnet_Api_Streams_IQ__System_Numerics_Complex" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(HackRFDotnet.Api.Streams.IQ)~System.Numerics.Complex">
-  implicit operator Complex(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L384"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd><dt><code>right</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Complex(IQ value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.complex">Complex</a></dt>
-    <dd></dd>
-  </dl>
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Subtract(System.Single,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Subtract(System.Single,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Subtract_System_Single_HackRFDotnet_Api_Streams_IQ_'>Subtract(float, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L75'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Subtract(float left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.Tan(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.Tan(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_Tan_HackRFDotnet_Api_Streams_IQ_'>Tan(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L300'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ Tan(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Byte__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Byte)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(byte)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L328"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(byte value)</code></pre>
-  </div>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.ToString' data-commentid='M:HackRFDotnet.Api.Streams.IQ.ToString' id='HackRFDotnet_Api_Streams_IQ_ToString'>ToString()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L265'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Returns the fully qualified type name of this instance.</p>
+<pre><code class='lang-csharp'>public override string ToString()</code></pre><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
 
 
+<p>The fully qualified type name.</p>
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.ToString(System.String)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.ToString(System.String)' id='HackRFDotnet_Api_Streams_IQ_ToString_System_String_'>ToString(string?)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L267'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public string ToString(string? format)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>format</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>?  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.ToString(System.IFormatProvider)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.ToString(System.IFormatProvider)' id='HackRFDotnet_Api_Streams_IQ_ToString_System_IFormatProvider_'>ToString(IFormatProvider?)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L269'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public string ToString(IFormatProvider? provider)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>provider</code> <a href='https://learn.microsoft.com/dotnet/api/system.iformatprovider'>IFormatProvider</a>?  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Char__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Char)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(char)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L332"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(char value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.ToString(System.String,System.IFormatProvider)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.ToString(System.String,System.IFormatProvider)' id='HackRFDotnet_Api_Streams_IQ_ToString_System_String_System_IFormatProvider_'>ToString(string?, IFormatProvider?)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L271'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public string ToString(string? format, IFormatProvider? provider)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>format</code> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>?  </dt>
+<dd>
 
 
 
+</dd><dt><code>provider</code> <a href='https://learn.microsoft.com/dotnet/api/system.iformatprovider'>IFormatProvider</a>?  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.string'>string</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h2 class='section'>Operators</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Addition_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>operator +(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L107'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator +(IQ left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Half__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Half)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(Half)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L340"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(Half value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,System.Single)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Addition(HackRFDotnet.Api.Streams.IQ,System.Single)' id='HackRFDotnet_Api_Streams_IQ_op_Addition_HackRFDotnet_Api_Streams_IQ_System_Single_'>operator +(IQ, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L111'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator +(IQ left, float right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Addition(System.Single,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Addition(System.Single,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Addition_System_Single_HackRFDotnet_Api_Streams_IQ_'>operator +(float, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L115'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator +(float left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Int16__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int16)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(short)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L344"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(short value)</code></pre>
-  </div>
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Division_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>operator /(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L170'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator /(IQ left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Int32__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int32)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L348"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,System.Single)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Division(HackRFDotnet.Api.Streams.IQ,System.Single)' id='HackRFDotnet_Api_Streams_IQ_op_Division_HackRFDotnet_Api_Streams_IQ_System_Single_'>operator /(IQ, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L188'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator /(IQ left, float right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(int value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd><dt><code>right</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Division(System.Single,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Division(System.Single,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Division_System_Single_HackRFDotnet_Api_Streams_IQ_'>operator /(float, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L212'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator /(float left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Int64__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int64)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L352"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(long value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Equality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Equality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Equality_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>operator ==(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L247'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static bool operator ==(IQ left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
 
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Explicit(System.Decimal)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Explicit(System.Decimal)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Explicit_System_Decimal__HackRFDotnet_Api_Streams_IQ'>explicit operator IQ(decimal)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L320'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static explicit operator IQ(decimal value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.decimal'>decimal</a>  </dt>
+<dd>
 
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_IntPtr__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.IntPtr)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(nint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L356"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(nint value)</code></pre>
-  </div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Byte)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Byte)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Byte__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(byte)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L328'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(byte value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.byte'>byte</a>  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Char)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Char)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Char__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(char)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L332'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(char value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.char'>char</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Single)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Single)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Single__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L336'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(float value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Numerics_Complex__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Numerics.Complex)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(Complex)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L380"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(Complex value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.complex">Complex</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Half)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Half)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Half__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(Half)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L340'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(Half value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.half'>Half</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int16)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int16)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Int16__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(short)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L344'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(short value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.int16'>short</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_SByte__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.SByte)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(sbyte)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L360"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int32)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int32)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Int32__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(int)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L348'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(int value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(sbyte value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int64)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Int64)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Int64__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(long)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L352'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(long value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.int64'>long</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.IntPtr)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.IntPtr)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_IntPtr__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(nint)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L356'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(nint value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.intptr'>nint</a>  </dt>
+<dd>
 
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Single__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Single)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L336"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(float value)</code></pre>
-  </div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.SByte)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.SByte)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_SByte__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(sbyte)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L360'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(sbyte value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.sbyte'>sbyte</a>  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt16)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt16)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_UInt16__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(ushort)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L364'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(ushort value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.uint16'>ushort</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt32)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt32)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_UInt32__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(uint)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L368'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(uint value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_UInt16__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt16)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(ushort)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L364"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(ushort value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt64)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt64)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_UInt64__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(ulong)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L372'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(ulong value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.uint64'>ulong</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UIntPtr)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UIntPtr)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_UIntPtr__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(nuint)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L376'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(nuint value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.uintptr'>nuint</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_UInt32__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt32)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L368"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Numerics.Complex)~HackRFDotnet.Api.Streams.IQ' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(System.Numerics.Complex)~HackRFDotnet.Api.Streams.IQ' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_System_Numerics_Complex__HackRFDotnet_Api_Streams_IQ'>implicit operator IQ(Complex)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L380'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator IQ(Complex value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='https://learn.microsoft.com/dotnet/api/system.numerics.complex'>Complex</a>  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(uint value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Implicit(HackRFDotnet.Api.Streams.IQ)~System.Numerics.Complex' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Implicit(HackRFDotnet.Api.Streams.IQ)~System.Numerics.Complex' id='HackRFDotnet_Api_Streams_IQ_op_Implicit_HackRFDotnet_Api_Streams_IQ__System_Numerics_Complex'>implicit operator Complex(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L384'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static implicit operator Complex(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.numerics.complex'>Complex</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Inequality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Inequality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Inequality_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>operator !=(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L251'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static bool operator !=(IQ left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_UInt64__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UInt64)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L372"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(ulong value)</code></pre>
-  </div>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Multiply_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>operator *(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L131'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator *(IQ left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)' id='HackRFDotnet_Api_Streams_IQ_op_Multiply_HackRFDotnet_Api_Streams_IQ_System_Single_'>operator *(IQ, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L138'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator *(IQ left, float right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Implicit_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Implicit_System_UIntPtr__HackRFDotnet_Api_Streams_IQ" data-uid="HackRFDotnet.Api.Streams.IQ.op_Implicit(System.UIntPtr)~HackRFDotnet.Api.Streams.IQ">
-  implicit operator IQ(nuint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L376"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd><dt><code>right</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator IQ(nuint value)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Multiply_System_Single_HackRFDotnet_Api_Streams_IQ_'>operator *(float, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L154'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator *(float left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Inequality_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Inequality*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Inequality_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Inequality(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  operator !=(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L251"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Subtraction_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_'>operator -(IQ, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L119'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator -(IQ left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(IQ left, IQ right)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,System.Single)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,System.Single)' id='HackRFDotnet_Api_Streams_IQ_op_Subtraction_HackRFDotnet_Api_Streams_IQ_System_Single_'>operator -(IQ, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L123'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator -(IQ left, float right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>right</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Multiply_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Multiply*"></a>
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Multiply_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  operator *(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L131"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator *(IQ left, IQ right)</code></pre>
-  </div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_Subtraction(System.Single,HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_Subtraction(System.Single,HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_Subtraction_System_Single_HackRFDotnet_Api_Streams_IQ_'>operator -(float, IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L127'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator -(float left, IQ right)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>left</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd><dt><code>right</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.IQ.op_UnaryNegation(HackRFDotnet.Api.Streams.IQ)' data-commentid='M:HackRFDotnet.Api.Streams.IQ.op_UnaryNegation(HackRFDotnet.Api.Streams.IQ)' id='HackRFDotnet_Api_Streams_IQ_op_UnaryNegation_HackRFDotnet_Api_Streams_IQ_'>operator -(IQ)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs#L103'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static IQ operator -(IQ value)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>value</code> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Multiply_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Multiply*"></a>
 
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Multiply_HackRFDotnet_Api_Streams_IQ_System_Single_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Multiply(HackRFDotnet.Api.Streams.IQ,System.Single)">
-  operator *(IQ, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L138"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator *(IQ left, float right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Multiply_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Multiply*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Multiply_System_Single_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Multiply(System.Single,HackRFDotnet.Api.Streams.IQ)">
-  operator *(float, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L154"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator *(float left, IQ right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Subtraction_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Subtraction*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Subtraction_HackRFDotnet_Api_Streams_IQ_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,HackRFDotnet.Api.Streams.IQ)">
-  operator -(IQ, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L119"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator -(IQ left, IQ right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Subtraction_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Subtraction*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Subtraction_HackRFDotnet_Api_Streams_IQ_System_Single_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Subtraction(HackRFDotnet.Api.Streams.IQ,System.Single)">
-  operator -(IQ, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L123"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator -(IQ left, float right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_op_Subtraction_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Subtraction*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_Subtraction_System_Single_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_Subtraction(System.Single,HackRFDotnet.Api.Streams.IQ)">
-  operator -(float, IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L127"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator -(float left, IQ right)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>right</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_IQ_op_UnaryNegation_" data-uid="HackRFDotnet.Api.Streams.IQ.op_UnaryNegation*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_IQ_op_UnaryNegation_HackRFDotnet_Api_Streams_IQ_" data-uid="HackRFDotnet.Api.Streams.IQ.op_UnaryNegation(HackRFDotnet.Api.Streams.IQ)">
-  operator -(IQ)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L103"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IQ operator -(IQ value)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>value</code> <a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
+</dd></dl>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/IQ.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -2688,7 +988,7 @@ The relationship between the I and Q allow us to represent the signal in lower s
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <span>Github <a href="https://github.com/Realynx/HackRFDotnet">HackRfDotnet</a>.</span>
         </div>
       </div>
     </footer>

@@ -1,83 +1,23 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Structs.Devices
-  commentId: N:HackRFDotnet.NativeApi.Structs.Devices
-  id: HackRFDotnet.NativeApi.Structs.Devices
-  children:
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime
-  - HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.NativeApi.Structs.Devices
-  nameWithType: HackRFDotnet.NativeApi.Structs.Devices
-  fullName: HackRFDotnet.NativeApi.Structs.Devices
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-  commentId: T:HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  name: HackRFDevice
-  nameWithType: HackRFDevice
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  commentId: T:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-  parent: HackRFDotnet.NativeApi.Structs.Devices
-  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.html
-  name: HackRFDeviceList
-  nameWithType: HackRFDeviceList
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime
-  commentId: T:HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime
-  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime.html
-  name: HackRFOperacakeDwellTime
-  nameWithType: HackRFOperacakeDwellTime
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange
-  commentId: T:HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange
-  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange.html
-  name: HackRFOperacakeFreqRange
-  nameWithType: HackRFOperacakeFreqRange
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange
-- uid: HackRFDotnet.NativeApi.Structs.Devices
-  commentId: N:HackRFDotnet.NativeApi.Structs.Devices
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Structs.Devices
-  nameWithType: HackRFDotnet.NativeApi.Structs.Devices
-  fullName: HackRFDotnet.NativeApi.Structs.Devices
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs.Devices
-    name: Devices
-    href: HackRFDotnet.NativeApi.Structs.Devices.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs.Devices
-    name: Devices
-    href: HackRFDotnet.NativeApi.Structs.Devices.html
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.NativeApi.Structs.Devices
+body:
+- api1: Namespace HackRFDotnet.NativeApi.Structs.Devices
+  id: HackRFDotnet_NativeApi_Structs_Devices
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.Devices
+    commentId: N:HackRFDotnet.NativeApi.Structs.Devices
+- h3: Structs
+- parameters:
+  - type:
+      text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+  - type:
+      text: HackRFDeviceList
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.html
+  - type:
+      text: HackRFOperacakeDwellTime
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime.html
+  - type:
+      text: HackRFOperacakeFreqRange
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange.html
+languageId: csharp

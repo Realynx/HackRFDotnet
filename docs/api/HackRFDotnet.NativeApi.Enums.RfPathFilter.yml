@@ -1,32 +1,20 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
-  commentId: T:HackRFDotnet.NativeApi.Enums.RfPathFilter
-  id: RfPathFilter
-  parent: HackRFDotnet.NativeApi.Enums
-  children:
-  - HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_BYPASS
-  - HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_HIGH_PASS
-  - HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_LOW_PASS
-  langs:
-  - csharp
-  - vb
-  name: RfPathFilter
-  nameWithType: RfPathFilter
-  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter
-  type: Enum
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: RfPathFilter
-    path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 11
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums
-  summary: >-
+### YamlMime:ApiPage
+title: Enum RfPathFilter
+body:
+- api1: Enum RfPathFilter
+  id: HackRFDotnet_NativeApi_Enums_RfPathFilter
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/RfPathFilter.cs#L12
+  metadata:
+    uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
+    commentId: T:HackRFDotnet.NativeApi.Enums.RfPathFilter
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Enums
+      url: HackRFDotnet.NativeApi.Enums.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: >-
     RF filter path setting enum.
 
 
@@ -36,222 +24,33 @@ items:
 
 
     This can select the image rejection filter (U3, U8 or none) to use - using switches U5, U6, U9 and U11. When no filter is selected, the mixer itself is bypassed.
-  example: []
-  syntax:
-    content: public enum RfPathFilter
-    content.vb: Public Enum RfPathFilter
-- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_BYPASS
-  commentId: F:HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_BYPASS
-  id: RF_PATH_FILTER_BYPASS
-  parent: HackRFDotnet.NativeApi.Enums.RfPathFilter
-  langs:
-  - csharp
-  - vb
-  name: RF_PATH_FILTER_BYPASS
-  nameWithType: RfPathFilter.RF_PATH_FILTER_BYPASS
-  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_BYPASS
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: RF_PATH_FILTER_BYPASS
-    path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 15
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums
-  summary: No filter is selected, **the mixer is bypassed**, \f$f_{center} = f_{IF}\f$
-  example: []
-  syntax:
-    content: RF_PATH_FILTER_BYPASS = 0
-    return:
-      type: HackRFDotnet.NativeApi.Enums.RfPathFilter
-- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_LOW_PASS
-  commentId: F:HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_LOW_PASS
-  id: RF_PATH_FILTER_LOW_PASS
-  parent: HackRFDotnet.NativeApi.Enums.RfPathFilter
-  langs:
-  - csharp
-  - vb
-  name: RF_PATH_FILTER_LOW_PASS
-  nameWithType: RfPathFilter.RF_PATH_FILTER_LOW_PASS
-  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_LOW_PASS
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: RF_PATH_FILTER_LOW_PASS
-    path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 20
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums
-  summary: LPF is selected, \f$f_{center} = f_{IF} - f_{LO}\f$
-  example: []
-  syntax:
-    content: RF_PATH_FILTER_LOW_PASS = 1
-    return:
-      type: HackRFDotnet.NativeApi.Enums.RfPathFilter
-- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_HIGH_PASS
-  commentId: F:HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_HIGH_PASS
-  id: RF_PATH_FILTER_HIGH_PASS
-  parent: HackRFDotnet.NativeApi.Enums.RfPathFilter
-  langs:
-  - csharp
-  - vb
-  name: RF_PATH_FILTER_HIGH_PASS
-  nameWithType: RfPathFilter.RF_PATH_FILTER_HIGH_PASS
-  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter.RF_PATH_FILTER_HIGH_PASS
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: RF_PATH_FILTER_HIGH_PASS
-    path: HackRFDotnet/NativeApi/Enums/RfPathFilter.cs
-    startLine: 25
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums
-  summary: HPF is selected, \f$f_{center} = f_{IF} + f_{LO}\f$
-  example: []
-  syntax:
-    content: RF_PATH_FILTER_HIGH_PASS = 2
-    return:
-      type: HackRFDotnet.NativeApi.Enums.RfPathFilter
-references:
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt64,System.UInt64,HackRFDotnet.NativeApi.Enums.RfPathFilter)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt64,System.UInt64,HackRFDotnet.NativeApi.Enums.RfPathFilter)
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_SetFrequency_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt64_System_UInt64_HackRFDotnet_NativeApi_Enums_RfPathFilter_
-  name: SetFrequency(HackRFDevice*, ulong, ulong, RfPathFilter)
-  nameWithType: HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDevice*, ulong, ulong, RfPathFilter)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, ulong, ulong, HackRFDotnet.NativeApi.Enums.RfPathFilter)
-  nameWithType.vb: HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDevice*, ULong, ULong, RfPathFilter)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, ULong, ULong, HackRFDotnet.NativeApi.Enums.RfPathFilter)
-  name.vb: SetFrequency(HackRFDevice*, ULong, ULong, RfPathFilter)
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt64,System.UInt64,HackRFDotnet.NativeApi.Enums.RfPathFilter)
-    name: SetFrequency
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_SetFrequency_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt64_System_UInt64_HackRFDotnet_NativeApi_Enums_RfPathFilter_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
-  - name: ','
-  - name: " "
-  - uid: System.UInt64
-    name: ulong
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint64
-  - name: ','
-  - name: " "
-  - uid: System.UInt64
-    name: ulong
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint64
-  - name: ','
-  - name: " "
-  - uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
-    name: RfPathFilter
-    href: HackRFDotnet.NativeApi.Enums.RfPathFilter.html
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt64,System.UInt64,HackRFDotnet.NativeApi.Enums.RfPathFilter)
-    name: SetFrequency
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_SetFrequency_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt64_System_UInt64_HackRFDotnet_NativeApi_Enums_RfPathFilter_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
-  - name: ','
-  - name: " "
-  - uid: System.UInt64
-    name: ULong
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint64
-  - name: ','
-  - name: " "
-  - uid: System.UInt64
-    name: ULong
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint64
-  - name: ','
-  - name: " "
-  - uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
-    name: RfPathFilter
-    href: HackRFDotnet.NativeApi.Enums.RfPathFilter.html
-  - name: )
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.FilterPathName(HackRFDotnet.NativeApi.Enums.RfPathFilter)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.FilterPathName(HackRFDotnet.NativeApi.Enums.RfPathFilter)
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_FilterPathName_HackRFDotnet_NativeApi_Enums_RfPathFilter_
-  name: FilterPathName(RfPathFilter)
-  nameWithType: HackRfNativeLib.DeviceStreaming.FilterPathName(RfPathFilter)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.FilterPathName(HackRFDotnet.NativeApi.Enums.RfPathFilter)
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.FilterPathName(HackRFDotnet.NativeApi.Enums.RfPathFilter)
-    name: FilterPathName
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_FilterPathName_HackRFDotnet_NativeApi_Enums_RfPathFilter_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
-    name: RfPathFilter
-    href: HackRFDotnet.NativeApi.Enums.RfPathFilter.html
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.FilterPathName(HackRFDotnet.NativeApi.Enums.RfPathFilter)
-    name: FilterPathName
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_DeviceStreaming_FilterPathName_HackRFDotnet_NativeApi_Enums_RfPathFilter_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
-    name: RfPathFilter
-    href: HackRFDotnet.NativeApi.Enums.RfPathFilter.html
-  - name: )
-- uid: HackRFDotnet.NativeApi.Enums
-  commentId: N:HackRFDotnet.NativeApi.Enums
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Enums
-  nameWithType: HackRFDotnet.NativeApi.Enums
-  fullName: HackRFDotnet.NativeApi.Enums
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-- uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
-  commentId: T:HackRFDotnet.NativeApi.Enums.RfPathFilter
-  parent: HackRFDotnet.NativeApi.Enums
-  href: HackRFDotnet.NativeApi.Enums.RfPathFilter.html
-  name: RfPathFilter
-  nameWithType: RfPathFilter
-  fullName: HackRFDotnet.NativeApi.Enums.RfPathFilter
+- code: public enum RfPathFilter
+- h2: Fields
+- parameters:
+  - name: RF_PATH_FILTER_BYPASS
+    default: "0"
+    description: >+
+      No filter is selected, **the mixer is bypassed**, \f$f_{center} = f_{IF}\f$
+
+  - name: RF_PATH_FILTER_HIGH_PASS
+    default: "2"
+    description: >+
+      HPF is selected, \f$f_{center} = f_{IF} + f_{LO}\f$
+
+  - name: RF_PATH_FILTER_LOW_PASS
+    default: "1"
+    description: >+
+      LPF is selected, \f$f_{center} = f_{IF} - f_{LO}\f$
+
+languageId: csharp
+metadata:
+  description: >-
+    RF filter path setting enum.
+
+
+    Used only when performing explicit tuning using ,
+
+    or can be converted into a human-readable string using .
+
+
+    This can select the image rejection filter (U3, U8 or none) to use - using switches U5, U6, U9 and U11. When no filter is selected, the mixer itself is bypassed.

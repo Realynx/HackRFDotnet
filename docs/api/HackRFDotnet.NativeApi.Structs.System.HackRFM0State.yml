@@ -1,643 +1,176 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  commentId: T:HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  id: HackRFM0State
-  parent: HackRFDotnet.NativeApi.Structs.System
-  children:
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold
-  langs:
-  - csharp
-  - vb
-  name: HackRFM0State
-  nameWithType: HackRFM0State
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  type: Struct
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HackRFM0State
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 3
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  syntax:
-    content: public struct HackRFM0State
-    content.vb: Public Structure HackRFM0State
-  inheritedMembers:
-  - System.ValueType.Equals(System.Object)
-  - System.ValueType.GetHashCode
-  - System.ValueType.ToString
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetType
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode
-  id: requested_mode
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: requested_mode
-  nameWithType: HackRFM0State.requested_mode
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: requested_mode
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 8
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: 'Requested mode. Possible values: 0(IDLE), 1(WAIT), 2(RX), 3(TX_START), 4(TX_RUN)'
-  example: []
-  syntax:
-    content: public ushort requested_mode
-    return:
-      type: System.UInt16
-    content.vb: Public requested_mode As UShort
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag
-  id: request_flag
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: request_flag
-  nameWithType: HackRFM0State.request_flag
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: request_flag
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 13
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Request flag. 0 = completed, others = pending
-  example: []
-  syntax:
-    content: public ushort request_flag
-    return:
-      type: System.UInt16
-    content.vb: Public request_flag As UShort
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode
-  id: active_mode
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: active_mode
-  nameWithType: HackRFM0State.active_mode
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: active_mode
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 20
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Active mode. Same values as requested_mode
-  example: []
-  syntax:
-    content: public uint active_mode
-    return:
-      type: System.UInt32
-    content.vb: Public active_mode As UInteger
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count
-  id: m0_count
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: m0_count
-  nameWithType: HackRFM0State.m0_count
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: m0_count
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 25
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Number of bytes transferred by the M0
-  example: []
-  syntax:
-    content: public uint m0_count
-    return:
-      type: System.UInt32
-    content.vb: Public m0_count As UInteger
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count
-  id: m4_count
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: m4_count
-  nameWithType: HackRFM0State.m4_count
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: m4_count
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 30
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Number of bytes transferred by the M4
-  example: []
-  syntax:
-    content: public uint m4_count
-    return:
-      type: System.UInt32
-    content.vb: Public m4_count As UInteger
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls
-  id: num_shortfalls
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: num_shortfalls
-  nameWithType: HackRFM0State.num_shortfalls
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: num_shortfalls
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 35
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Number of shortfalls
-  example: []
-  syntax:
-    content: public uint num_shortfalls
-    return:
-      type: System.UInt32
-    content.vb: Public num_shortfalls As UInteger
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall
-  id: longest_shortfall
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: longest_shortfall
-  nameWithType: HackRFM0State.longest_shortfall
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: longest_shortfall
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 40
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Longest shortfall in bytes
-  example: []
-  syntax:
-    content: public uint longest_shortfall
-    return:
-      type: System.UInt32
-    content.vb: Public longest_shortfall As UInteger
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit
-  id: shortfall_limit
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: shortfall_limit
-  nameWithType: HackRFM0State.shortfall_limit
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: shortfall_limit
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 45
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Shortfall limit in bytes
-  example: []
-  syntax:
-    content: public uint shortfall_limit
-    return:
-      type: System.UInt32
-    content.vb: Public shortfall_limit As UInteger
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold
-  id: threshold
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: threshold
-  nameWithType: HackRFM0State.threshold
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: threshold
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 50
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Threshold m0_count value (in bytes) for next mode change
-  example: []
-  syntax:
-    content: public uint threshold
-    return:
-      type: System.UInt32
-    content.vb: Public threshold As UInteger
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode
-  id: next_mode
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: next_mode
-  nameWithType: HackRFM0State.next_mode
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: next_mode
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 55
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Mode which will be switched to when threshold is reached
-  example: []
-  syntax:
-    content: public uint next_mode
-    return:
-      type: System.UInt32
-    content.vb: Public next_mode As UInteger
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error
-  commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error
-  id: error
-  parent: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  langs:
-  - csharp
-  - vb
-  name: error
-  nameWithType: HackRFM0State.error
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: error
-    path: HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs
-    startLine: 60
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Structs.System
-  summary: Error that caused M0 to revert to IDLE. 0(NONE), 1(RX_TIMEOUT), 2(TX_TIMEOUT), 3(MISSED_DEADLINE)
-  example: []
-  syntax:
-    content: public uint error
-    return:
-      type: System.UInt32
-    content.vb: Public [error] As UInteger
-references:
-- uid: HackRFDotnet.NativeApi.Structs.System
-  commentId: N:HackRFDotnet.NativeApi.Structs.System
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Structs.System
-  nameWithType: HackRFDotnet.NativeApi.Structs.System
-  fullName: HackRFDotnet.NativeApi.Structs.System
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs.System
-    name: System
-    href: HackRFDotnet.NativeApi.Structs.System.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs.System
-    name: System
-    href: HackRFDotnet.NativeApi.Structs.System.html
-- uid: System.ValueType.Equals(System.Object)
-  commentId: M:System.ValueType.Equals(System.Object)
-  parent: System.ValueType
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  name: Equals(object)
-  nameWithType: ValueType.Equals(object)
-  fullName: System.ValueType.Equals(object)
-  nameWithType.vb: ValueType.Equals(Object)
-  fullName.vb: System.ValueType.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.ValueType.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.ValueType.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.ValueType.GetHashCode
-  commentId: M:System.ValueType.GetHashCode
-  parent: System.ValueType
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
-  name: GetHashCode()
-  nameWithType: ValueType.GetHashCode()
-  fullName: System.ValueType.GetHashCode()
-  spec.csharp:
-  - uid: System.ValueType.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.ValueType.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
-  - name: (
-  - name: )
-- uid: System.ValueType.ToString
-  commentId: M:System.ValueType.ToString
-  parent: System.ValueType
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
-  name: ToString()
-  nameWithType: ValueType.ToString()
-  fullName: System.ValueType.ToString()
-  spec.csharp:
-  - uid: System.ValueType.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.ValueType.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
-  - name: (
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.ValueType
-  commentId: T:System.ValueType
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.valuetype
-  name: ValueType
-  nameWithType: ValueType
-  fullName: System.ValueType
-- uid: System.Object
-  commentId: T:System.Object
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: System.UInt16
-  commentId: T:System.UInt16
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uint16
-  name: ushort
-  nameWithType: ushort
-  fullName: ushort
-  nameWithType.vb: UShort
-  fullName.vb: UShort
-  name.vb: UShort
-- uid: System.UInt32
-  commentId: T:System.UInt32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uint32
-  name: uint
-  nameWithType: uint
-  fullName: uint
-  nameWithType.vb: UInteger
-  fullName.vb: UInteger
-  name.vb: UInteger
+### YamlMime:ApiPage
+title: Struct HackRFM0State
+body:
+- api1: Struct HackRFM0State
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L4
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
+    commentId: T:HackRFDotnet.NativeApi.Structs.System.HackRFM0State
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Structs.System
+      url: HackRFDotnet.NativeApi.Structs.System.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public struct HackRFM0State
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Fields
+- api3: active_mode
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_active_mode
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L21
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.active_mode
+- markdown: Active mode. Same values as requested_mode
+- code: public uint active_mode
+- h4: Field Value
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+- api3: error
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_error
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L61
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.error
+- markdown: Error that caused M0 to revert to IDLE. 0(NONE), 1(RX_TIMEOUT), 2(TX_TIMEOUT), 3(MISSED_DEADLINE)
+- code: public uint error
+- h4: Field Value
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+- api3: longest_shortfall
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_longest_shortfall
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L41
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.longest_shortfall
+- markdown: Longest shortfall in bytes
+- code: public uint longest_shortfall
+- h4: Field Value
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+- api3: m0_count
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_m0_count
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L26
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m0_count
+- markdown: Number of bytes transferred by the M0
+- code: public uint m0_count
+- h4: Field Value
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+- api3: m4_count
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_m4_count
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L31
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.m4_count
+- markdown: Number of bytes transferred by the M4
+- code: public uint m4_count
+- h4: Field Value
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+- api3: next_mode
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_next_mode
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L56
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.next_mode
+- markdown: Mode which will be switched to when threshold is reached
+- code: public uint next_mode
+- h4: Field Value
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+- api3: num_shortfalls
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_num_shortfalls
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L36
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.num_shortfalls
+- markdown: Number of shortfalls
+- code: public uint num_shortfalls
+- h4: Field Value
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+- api3: request_flag
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_request_flag
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L14
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.request_flag
+- markdown: Request flag. 0 = completed, others = pending
+- code: public ushort request_flag
+- h4: Field Value
+- parameters:
+  - type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+- api3: requested_mode
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_requested_mode
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L9
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.requested_mode
+- markdown: 'Requested mode. Possible values: 0(IDLE), 1(WAIT), 2(RX), 3(TX_START), 4(TX_RUN)'
+- code: public ushort requested_mode
+- h4: Field Value
+- parameters:
+  - type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+- api3: shortfall_limit
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_shortfall_limit
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L46
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.shortfall_limit
+- markdown: Shortfall limit in bytes
+- code: public uint shortfall_limit
+- h4: Field Value
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+- api3: threshold
+  id: HackRFDotnet_NativeApi_Structs_System_HackRFM0State_threshold
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Structs/System/HackRFM0State.cs#L51
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold
+    commentId: F:HackRFDotnet.NativeApi.Structs.System.HackRFM0State.threshold
+- markdown: Threshold m0_count value (in bytes) for next mode change
+- code: public uint threshold
+- h4: Field Value
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+languageId: csharp

@@ -14,14 +14,15 @@ public class FmSignalStream : WaveSignalStream {
 
     private static SignalProcessingPipeline<IQ> BuildFxChain(IIQStream deviceStream, Bandwidth stationBandwidth, out SampleRate reducedRate) {
         var signalPipeline = new SignalProcessingPipeline<IQ>();
-        signalPipeline
-        .WithRootEffect(new IQDownSampleEffect(deviceStream.SampleRate,
-            stationBandwidth.NyquistSampleRate, out reducedRate, out var producedChunkSize))
 
-        .AddChildEffect(new FftEffect(true, producedChunkSize))
-        .AddChildEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
-        .AddChildEffect(new FftEffect(false, producedChunkSize))
-        .AddChildEffect(new FmDecoder());
+        signalPipeline
+            .WithRootEffect(new IQDownSampleEffect(deviceStream.SampleRate,
+                stationBandwidth.NyquistSampleRate, out reducedRate, out var producedChunkSize))
+
+            .AddChildEffect(new FftEffect(true, producedChunkSize))
+            .AddChildEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
+            .AddChildEffect(new FftEffect(false, producedChunkSize))
+            .AddChildEffect(new FmDecoder());
 
         return signalPipeline;
     }

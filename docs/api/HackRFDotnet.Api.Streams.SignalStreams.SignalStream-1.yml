@@ -1,0 +1,206 @@
+### YamlMime:ApiPage
+title: Class SignalStream<TOutput>
+body:
+- api1: Class SignalStream<TOutput>
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L14
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1
+    commentId: T:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Streams.SignalStreams
+      url: HackRFDotnet.Api.Streams.SignalStreams.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: >-
+    A SignalStream allows you to process effects from a pipeline, and read the result like a stream reader.
+
+    Stream must be created from a <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref>
+- code: 'public class SignalStream<TOutput> : IDisposable where TOutput : struct'
+- h4: Type Parameters
+- parameters:
+  - name: TOutput
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: SignalStream<TOutput>
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html
+- h4: Implements
+- list:
+  - text: IDisposable
+    url: https://learn.microsoft.com/dotnet/api/system.idisposable
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Constructors
+- api3: SignalStream(IIQStream, SignalProcessingPipeline<IQ>?, bool)
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_HackRFDotnet_Api_Streams_IQ__System_Boolean_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L32
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},System.Boolean)
+    commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},System.Boolean)
+- code: public SignalStream(IIQStream iQStream, SignalProcessingPipeline<IQ>? processingPipeline = null, bool keepOpen = true)
+- h4: Parameters
+- parameters:
+  - name: iQStream
+    type:
+    - text: IIQStream
+      url: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html
+  - name: processingPipeline
+    type:
+    - text: SignalProcessingPipeline
+      url: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.html
+    - <
+    - text: IQ
+      url: HackRFDotnet.Api.Streams.IQ.html
+    - '>'
+    - '?'
+    optional: true
+  - name: keepOpen
+    type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+    optional: true
+- h2: Fields
+- api3: _iQStream
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__iQStream
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L29
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._iQStream
+    commentId: F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._iQStream
+- code: protected readonly IIQStream _iQStream
+- h4: Field Value
+- parameters:
+  - type:
+    - text: IIQStream
+      url: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html
+- api3: _keepOpen
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__keepOpen
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L30
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._keepOpen
+    commentId: F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._keepOpen
+- code: protected readonly bool _keepOpen
+- h4: Field Value
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- api3: _processingPipeline
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__processingPipeline
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L27
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._processingPipeline
+    commentId: F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._processingPipeline
+- code: protected SignalProcessingPipeline<IQ>? _processingPipeline
+- h4: Field Value
+- parameters:
+  - type:
+    - text: SignalProcessingPipeline
+      url: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.html
+    - <
+    - text: IQ
+      url: HackRFDotnet.Api.Streams.IQ.html
+    - '>'
+    - '?'
+- h2: Properties
+- api3: Bandwidth
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Bandwidth
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L16
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Bandwidth
+    commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Bandwidth
+- code: public Bandwidth Bandwidth { get; protected set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+- api3: Center
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Center
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L15
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Center
+    commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Center
+- code: public Frequency Center { get; protected set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: SampleRate
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_SampleRate
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L18
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SampleRate
+    commentId: P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SampleRate
+- code: public SampleRate SampleRate { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+- h2: Methods
+- api3: Dispose()
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Dispose
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L80
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Dispose
+    commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Dispose
+- markdown: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+- code: public void Dispose()
+- api3: ReadSpan(Span<TOutput>)
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_ReadSpan_System_Span__0__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L41
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.ReadSpan(System.Span{`0})
+    commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.ReadSpan(System.Span{`0})
+- code: public void ReadSpan(Span<TOutput> dataBuffer)
+- h4: Parameters
+- parameters:
+  - name: dataBuffer
+    type:
+    - text: Span
+      url: https://learn.microsoft.com/dotnet/api/system.span-1
+    - <
+    - TOutput
+    - '>'
+- api3: SetBand(Frequency, Bandwidth)
+  id: HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L75
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+    commentId: M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+- markdown: Set the band and bandwidth the filtering engine will use.
+- code: public void SetBand(Frequency center, Bandwidth bandwidth)
+- h4: Parameters
+- parameters:
+  - name: center
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+    description: ''
+  - name: bandwidth
+    type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+    description: ''
+languageId: csharp
+metadata:
+  description: "A SignalStream allows you to process effects from a pipeline, and read the result like a stream reader.\r\nStream must be created from a "

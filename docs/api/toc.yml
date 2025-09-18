@@ -1,277 +1,220 @@
 ### YamlMime:TableOfContent
-items:
-- uid: HackRFDotnet.Api
-  name: HackRFDotnet.Api
-  type: Namespace
+- name: HackRFDotnet.Api
+  href: HackRFDotnet.Api.yml
   items:
-  - uid: HackRFDotnet.Api.Bandwidth
-    name: Bandwidth
-    type: Class
-  - uid: HackRFDotnet.Api.DigitalRadioDevice
-    name: DigitalRadioDevice
-    type: Class
-  - uid: HackRFDotnet.Api.Frequency
-    name: Frequency
-    type: Class
-  - uid: HackRFDotnet.Api.Hertz
-    name: Hertz
-    type: Class
-  - uid: HackRFDotnet.Api.SampleRate
-    name: SampleRate
-    type: Class
-- uid: HackRFDotnet.Api.Extensions
-  name: HackRFDotnet.Api.Extensions
-  type: Namespace
+  - name: Classes
+  - name: DigitalRadioDevice
+    href: HackRFDotnet.Api.DigitalRadioDevice.yml
+  - name: Structs
+  - name: Bandwidth
+    href: HackRFDotnet.Api.Bandwidth.yml
+  - name: Frequency
+    href: HackRFDotnet.Api.Frequency.yml
+  - name: Hertz
+    href: HackRFDotnet.Api.Hertz.yml
+  - name: SampleRate
+    href: HackRFDotnet.Api.SampleRate.yml
+- name: HackRFDotnet.Api.Extensions
+  href: HackRFDotnet.Api.Extensions.yml
   items:
-  - uid: HackRFDotnet.Api.Extensions.RfDeviceExtensions
-    name: RfDeviceExtensions
-    type: Class
-- uid: HackRFDotnet.Api.Services
-  name: HackRFDotnet.Api.Services
-  type: Namespace
+  - name: Classes
+  - name: RfDeviceExtensions
+    href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.yml
+- name: HackRFDotnet.Api.Services
+  href: HackRFDotnet.Api.Services.yml
   items:
-  - uid: HackRFDotnet.Api.Services.AnaloguePlayer
-    name: AnaloguePlayer
-    type: Class
-  - uid: HackRFDotnet.Api.Services.DigitalPlayer
-    name: DigitalPlayer
-    type: Class
-  - uid: HackRFDotnet.Api.Services.RfDeviceControllerService
-    name: RfDeviceControllerService
-    type: Class
-- uid: HackRFDotnet.Api.Streams
-  name: HackRFDotnet.Api.Streams
-  type: Namespace
+  - name: Classes
+  - name: AnaloguePlayer
+    href: HackRFDotnet.Api.Services.AnaloguePlayer.yml
+  - name: RfDeviceControllerService
+    href: HackRFDotnet.Api.Services.RfDeviceControllerService.yml
+- name: HackRFDotnet.Api.Streams
+  href: HackRFDotnet.Api.Streams.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.IQ
-    name: IQ
-    type: Struct
-  - uid: HackRFDotnet.Api.Streams.InterleavedSample
-    name: InterleavedSample
-    type: Struct
-  - uid: HackRFDotnet.Api.Streams.SweepingIQStream
-    name: SweepingIQStream
-    type: Class
-- uid: HackRFDotnet.Api.Streams.Device
-  name: HackRFDotnet.Api.Streams.Device
-  type: Namespace
+  - name: Classes
+  - name: SweepingIQStream
+    href: HackRFDotnet.Api.Streams.SweepingIQStream.yml
+  - name: Structs
+  - name: IQ
+    href: HackRFDotnet.Api.Streams.IQ.yml
+  - name: InterleavedSample
+    href: HackRFDotnet.Api.Streams.InterleavedSample.yml
+- name: HackRFDotnet.Api.Streams.Device
+  href: HackRFDotnet.Api.Streams.Device.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream
-    name: IQDeviceStream
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.Device.IQFileStream
-    name: IQFileStream
-    type: Class
-- uid: HackRFDotnet.Api.Streams.Exceptions
-  name: HackRFDotnet.Api.Streams.Exceptions
-  type: Namespace
+  - name: Classes
+  - name: IQDeviceStream
+    href: HackRFDotnet.Api.Streams.Device.IQDeviceStream.yml
+  - name: IQFileStream
+    href: HackRFDotnet.Api.Streams.Device.IQFileStream.yml
+- name: HackRFDotnet.Api.Streams.Exceptions
+  href: HackRFDotnet.Api.Streams.Exceptions.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
-    name: NullCallbackException
-    type: Class
-- uid: HackRFDotnet.Api.Streams.Interfaces
-  name: HackRFDotnet.Api.Streams.Interfaces
-  type: Namespace
+  - name: Classes
+  - name: NullCallbackException
+    href: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException.yml
+- name: HackRFDotnet.Api.Streams.Interfaces
+  href: HackRFDotnet.Api.Streams.Interfaces.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.Interfaces.IIQStream
-    name: IIQStream
-    type: Interface
-- uid: HackRFDotnet.Api.Streams.SignalProcessing
-  name: HackRFDotnet.Api.Streams.SignalProcessing
-  type: Namespace
+  - name: Interfaces
+  - name: IIQStream
+    href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.yml
+- name: HackRFDotnet.Api.Streams.SignalProcessing
+  href: HackRFDotnet.Api.Streams.SignalProcessing.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
-    name: SignalProcessingBuilder
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-    name: SignalProcessingPipeline
-    type: Class
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects
-  name: HackRFDotnet.Api.Streams.SignalProcessing.Effects
-  type: Namespace
+  - name: Classes
+  - name: SignalProcessingPipeline<TInput>
+    href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.yml
+- name: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect
-    name: BasicSignalScanningEffect
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.DownSampleEffect
-    name: DownSampleEffect
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect
-    name: FftEffect
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect
-    name: FrequencyCenteringEffect
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect
-    name: LowPassFilterEffect
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect
-    name: SignalEffect
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect
-    name: SquelchEffect
-    type: Class
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
-  name: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
-  type: Namespace
+  - name: Classes
+  - name: FftEffect
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.yml
+  - name: FrequencyCenteringEffect
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.yml
+  - name: IQDownSampleEffect
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.yml
+  - name: LowPassFilterEffect
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.yml
+  - name: SignalEffect<TInput, TOutput>
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.yml
+  - name: SquelchEffect
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.yml
+- name: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
+  href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect
-    name: ISignalEffect
-    type: Interface
-- uid: HackRFDotnet.Api.Streams.SignalStreams
-  name: HackRFDotnet.Api.Streams.SignalStreams
-  type: Namespace
+  - name: Classes
+  - name: AmDecoder
+    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.AmDecoder.yml
+  - name: BpskDecoder
+    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.BpskDecoder.yml
+  - name: FmDecoder
+    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.FmDecoder.yml
+  - name: QpskDecoder
+    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.yml
+- name: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+  href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
-    name: SignalStream
-    type: Class
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  name: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  type: Namespace
+  - name: Interfaces
+  - name: ISignalEffectInput<TInput>
+    href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput-1.yml
+- name: HackRFDotnet.Api.Streams.SignalStreams
+  href: HackRFDotnet.Api.Streams.SignalStreams.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream
-    name: AmSignalStream
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream
-    name: FmSignalStream
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream
-    name: WaveSignalStream
-    type: Class
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  name: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  type: Namespace
+  - name: Classes
+  - name: SignalStream<TOutput>
+    href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.yml
+- name: HackRFDotnet.Api.Streams.SignalStreams.Analogue
+  href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.yml
   items:
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.Digital.HdRadioSignalStream
-    name: HdRadioSignalStream
-    type: Class
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream
-    name: QpskSignalStream
-    type: Class
-- uid: HackRFDotnet.Api.Utilities
-  name: HackRFDotnet.Api.Utilities
-  type: Namespace
+  - name: Classes
+  - name: AmSignalStream
+    href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.yml
+  - name: FmSignalStream
+    href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream.yml
+  - name: WaveSignalStream
+    href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.yml
+- name: HackRFDotnet.Api.Streams.SignalStreams.Digital
+  href: HackRFDotnet.Api.Streams.SignalStreams.Digital.yml
   items:
-  - uid: HackRFDotnet.Api.Utilities.BinaryUtilities
-    name: BinaryUtilities
-    type: Class
-  - uid: HackRFDotnet.Api.Utilities.SignalUtilities
-    name: SignalUtilities
-    type: Class
-- uid: HackRFDotnet.NativeApi
-  name: HackRFDotnet.NativeApi
-  type: Namespace
+  - name: Classes
+  - name: QpskSignalStream
+    href: HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream.yml
+- name: HackRFDotnet.Api.Utilities
+  href: HackRFDotnet.Api.Utilities.yml
   items:
-  - uid: HackRFDotnet.NativeApi.NativeConstants
-    name: NativeConstants
-    type: Class
-- uid: HackRFDotnet.NativeApi.Enums
-  name: HackRFDotnet.NativeApi.Enums
-  type: Namespace
+  - name: Classes
+  - name: BinaryUtilities
+    href: HackRFDotnet.Api.Utilities.BinaryUtilities.yml
+  - name: SignalUtilities
+    href: HackRFDotnet.Api.Utilities.SignalUtilities.yml
+- name: HackRFDotnet.NativeApi
+  href: HackRFDotnet.NativeApi.yml
   items:
-  - uid: HackRFDotnet.NativeApi.Enums.RfPathFilter
-    name: RfPathFilter
-    type: Enum
-  - uid: HackRFDotnet.NativeApi.Enums.SweepStyle
-    name: SweepStyle
-    type: Enum
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals
-  name: HackRFDotnet.NativeApi.Enums.Peripherals
-  type: Namespace
+  - name: Classes
+  - name: NativeConstants
+    href: HackRFDotnet.NativeApi.NativeConstants.yml
+- name: HackRFDotnet.NativeApi.Enums
+  href: HackRFDotnet.NativeApi.Enums.yml
   items:
-  - uid: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-    name: LedState
-    type: Enum
-  - uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-    name: OperacakePorts
-    type: Enum
-  - uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
-    name: OperacakeSwitchingMode
-    type: Enum
-- uid: HackRFDotnet.NativeApi.Enums.System
-  name: HackRFDotnet.NativeApi.Enums.System
-  type: Namespace
+  - name: Enums
+  - name: RfPathFilter
+    href: HackRFDotnet.NativeApi.Enums.RfPathFilter.yml
+  - name: SweepStyle
+    href: HackRFDotnet.NativeApi.Enums.SweepStyle.yml
+- name: HackRFDotnet.NativeApi.Enums.Peripherals
+  href: HackRFDotnet.NativeApi.Enums.Peripherals.yml
   items:
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-    name: HackrfBoardId
-    type: Enum
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
-    name: HackrfBoardRev
-    type: Enum
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfError
-    name: HackrfError
-    type: Enum
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-    name: HackrfUsbBoardId
-    type: Enum
-- uid: HackRFDotnet.NativeApi.Lib
-  name: HackRFDotnet.NativeApi.Lib
-  type: Namespace
+  - name: Enums
+  - name: LedState
+    href: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.yml
+  - name: OperacakePorts
+    href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.yml
+  - name: OperacakeSwitchingMode
+    href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.yml
+- name: HackRFDotnet.NativeApi.Enums.System
+  href: HackRFDotnet.NativeApi.Enums.System.yml
   items:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib
-    name: HackRfNativeLib
-    type: Class
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug
-    name: HackRfNativeLib.Debug
-    type: Class
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming
-    name: HackRfNativeLib.DeviceStreaming
-    type: Class
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices
-    name: HackRfNativeLib.Devices
-    type: Class
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-    name: HackRfNativeLib.Firmware
-    type: Class
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake
-    name: HackRfNativeLib.Operacake
-    type: Class
-- uid: HackRFDotnet.NativeApi.Structs
-  name: HackRFDotnet.NativeApi.Structs
-  type: Namespace
+  - name: Enums
+  - name: HackrfBoardId
+    href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.yml
+  - name: HackrfBoardRev
+    href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.yml
+  - name: HackrfError
+    href: HackRFDotnet.NativeApi.Enums.System.HackrfError.yml
+  - name: HackrfUsbBoardId
+    href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml
+- name: HackRFDotnet.NativeApi.Lib
+  href: HackRFDotnet.NativeApi.Lib.yml
   items:
-  - uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
-    name: HackRFBiasTUserSettingReq
-    type: Struct
-  - uid: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
-    name: HackRFBoolUserSetting
-    type: Struct
-  - uid: HackRFDotnet.NativeApi.Structs.HackRFFlushCallback
-    name: HackRFFlushCallback
-    type: Delegate
-  - uid: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-    name: HackRFSampleBlockCallback
-    type: Delegate
-  - uid: HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback
-    name: HackRFTxBlockCompleteCallback
-    type: Delegate
-  - uid: HackRFDotnet.NativeApi.Structs.HackrfTransfer
-    name: HackrfTransfer
-    type: Struct
-- uid: HackRFDotnet.NativeApi.Structs.Devices
-  name: HackRFDotnet.NativeApi.Structs.Devices
-  type: Namespace
+  - name: Classes
+  - name: HackRfNativeLib
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.yml
+  - name: HackRfNativeLib.Debug
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.yml
+  - name: HackRfNativeLib.DeviceStreaming
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.yml
+  - name: HackRfNativeLib.Devices
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.yml
+  - name: HackRfNativeLib.Firmware
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.yml
+  - name: HackRfNativeLib.Operacake
+    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.yml
+- name: HackRFDotnet.NativeApi.Structs
+  href: HackRFDotnet.NativeApi.Structs.yml
   items:
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    type: Struct
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList
-    name: HackRFDeviceList
-    type: Struct
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime
-    name: HackRFOperacakeDwellTime
-    type: Struct
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange
-    name: HackRFOperacakeFreqRange
-    type: Struct
-- uid: HackRFDotnet.NativeApi.Structs.System
-  name: HackRFDotnet.NativeApi.Structs.System
-  type: Namespace
+  - name: Structs
+  - name: HackRFBiasTUserSettingReq
+    href: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.yml
+  - name: HackRFBoolUserSetting
+    href: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.yml
+  - name: HackrfTransfer
+    href: HackRFDotnet.NativeApi.Structs.HackrfTransfer.yml
+  - name: Delegates
+  - name: HackRFFlushCallback
+    href: HackRFDotnet.NativeApi.Structs.HackRFFlushCallback.yml
+  - name: HackRFSampleBlockCallback
+    href: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.yml
+  - name: HackRFTxBlockCompleteCallback
+    href: HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback.yml
+- name: HackRFDotnet.NativeApi.Structs.Devices
+  href: HackRFDotnet.NativeApi.Structs.Devices.yml
   items:
-  - uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-    name: HackRFM0State
-    type: Struct
-  - uid: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
-    name: ReadPartidSerialNo
-    type: Struct
-memberLayout: SamePage
+  - name: Structs
+  - name: HackRFDevice
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.yml
+  - name: HackRFDeviceList
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.yml
+  - name: HackRFOperacakeDwellTime
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime.yml
+  - name: HackRFOperacakeFreqRange
+    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange.yml
+- name: HackRFDotnet.NativeApi.Structs.System
+  href: HackRFDotnet.NativeApi.Structs.System.yml
+  items:
+  - name: Structs
+  - name: HackRFM0State
+    href: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.yml
+  - name: ReadPartidSerialNo
+    href: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.yml

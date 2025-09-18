@@ -1,92 +1,45 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Structs
-  commentId: N:HackRFDotnet.NativeApi.Structs
-  id: HackRFDotnet.NativeApi.Structs
-  children:
-  - HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
-  - HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
-  - HackRFDotnet.NativeApi.Structs.HackRFFlushCallback
-  - HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-  - HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback
-  - HackRFDotnet.NativeApi.Structs.HackrfTransfer
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.NativeApi.Structs
-  nameWithType: HackRFDotnet.NativeApi.Structs
-  fullName: HackRFDotnet.NativeApi.Structs
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
-  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
-  href: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.html
-  name: HackRFBiasTUserSettingReq
-  nameWithType: HackRFBiasTUserSettingReq
-  fullName: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq
-- uid: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
-  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
-  parent: HackRFDotnet.NativeApi.Structs
-  href: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.html
-  name: HackRFBoolUserSetting
-  nameWithType: HackRFBoolUserSetting
-  fullName: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting
-- uid: HackRFDotnet.NativeApi.Structs.HackrfTransfer
-  commentId: T:HackRFDotnet.NativeApi.Structs.HackrfTransfer
-  href: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html
-  name: HackrfTransfer
-  nameWithType: HackrfTransfer
-  fullName: HackRFDotnet.NativeApi.Structs.HackrfTransfer
-- uid: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-  parent: HackRFDotnet.NativeApi.Structs
-  href: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html
-  name: HackRFSampleBlockCallback
-  nameWithType: HackRFSampleBlockCallback
-  fullName: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-- uid: HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback
-  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback
-  parent: HackRFDotnet.NativeApi.Structs
-  href: HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback.html
-  name: HackRFTxBlockCompleteCallback
-  nameWithType: HackRFTxBlockCompleteCallback
-  fullName: HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback
-- uid: HackRFDotnet.NativeApi.Structs.HackRFFlushCallback
-  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFFlushCallback
-  parent: HackRFDotnet.NativeApi.Structs
-  href: HackRFDotnet.NativeApi.Structs.HackRFFlushCallback.html
-  name: HackRFFlushCallback
-  nameWithType: HackRFFlushCallback
-  fullName: HackRFDotnet.NativeApi.Structs.HackRFFlushCallback
-- uid: HackRFDotnet.NativeApi.Structs
-  commentId: N:HackRFDotnet.NativeApi.Structs
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Structs
-  nameWithType: HackRFDotnet.NativeApi.Structs
-  fullName: HackRFDotnet.NativeApi.Structs
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.NativeApi.Structs
+body:
+- api1: Namespace HackRFDotnet.NativeApi.Structs
+  id: HackRFDotnet_NativeApi_Structs
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs
+    commentId: N:HackRFDotnet.NativeApi.Structs
+- h3: Namespaces
+- parameters:
+  - type:
+      text: HackRFDotnet.NativeApi.Structs.Devices
+      url: HackRFDotnet.NativeApi.Structs.Devices.html
+  - type:
+      text: HackRFDotnet.NativeApi.Structs.System
+      url: HackRFDotnet.NativeApi.Structs.System.html
+- h3: Structs
+- parameters:
+  - type:
+      text: HackRFBiasTUserSettingReq
+      url: HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.html
+  - type:
+      text: HackRFBoolUserSetting
+      url: HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.html
+  - type:
+      text: HackrfTransfer
+      url: HackRFDotnet.NativeApi.Structs.HackrfTransfer.html
+    description: >-
+      USB transfer information passed to RX or TX callback.
+
+      A callback should treat all these fields as read-only except that a TX callback should write to the data buffer and may write to <xref href="HackRFDotnet.NativeApi.Structs.HackrfTransfer.valid_length" data-throw-if-not-resolved="false"></xref>
+
+      to indicate that a smaller number of bytes is to be transmitted.
+- h3: Delegates
+- parameters:
+  - type:
+      text: HackRFFlushCallback
+      url: HackRFDotnet.NativeApi.Structs.HackRFFlushCallback.html
+  - type:
+      text: HackRFSampleBlockCallback
+      url: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html
+  - type:
+      text: HackRFTxBlockCompleteCallback
+      url: HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback.html
+languageId: csharp

@@ -1,0 +1,51 @@
+### YamlMime:ApiPage
+title: Interface ISignalEffectInput<TInput>
+body:
+- api1: Interface ISignalEffectInput<TInput>
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Interfaces_ISignalEffectInput_1
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Interfaces/ISignalEffect.cs#L3
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput`1
+    commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput`1
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+      url: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public interface ISignalEffectInput<TInput>
+- h4: Type Parameters
+- parameters:
+  - name: TInput
+- h2: Methods
+- api3: AffectSignal(Span<TInput>, int)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Interfaces_ISignalEffectInput_1_AffectSignal_System_Span__0__System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Interfaces/ISignalEffect.cs#L10
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput`1.AffectSignal(System.Span{`0},System.Int32)
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput`1.AffectSignal(System.Span{`0},System.Int32)
+- markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
+- code: int AffectSignal(Span<TInput> signalTheta, int length)
+- h4: Parameters
+- parameters:
+  - name: signalTheta
+    type:
+    - text: Span
+      url: https://learn.microsoft.com/dotnet/api/system.span-1
+    - <
+    - TInput
+    - '>'
+    description: ''
+  - name: length
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+languageId: csharp

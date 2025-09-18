@@ -1,155 +1,26 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  id: LedState
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals
-  children:
-  - HackRFDotnet.NativeApi.Enums.Peripherals.LedState.RxLight
-  - HackRFDotnet.NativeApi.Enums.Peripherals.LedState.TxLight
-  - HackRFDotnet.NativeApi.Enums.Peripherals.LedState.UsbLight
-  langs:
-  - csharp
-  - vb
-  name: LedState
-  nameWithType: LedState
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  type: Enum
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/LedState.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: LedState
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/LedState.cs
-    startLine: 1
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: 'public enum LedState : byte'
-    content.vb: Public Enum LedState As Byte
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.UsbLight
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.LedState.UsbLight
-  id: UsbLight
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  langs:
-  - csharp
-  - vb
-  name: UsbLight
-  nameWithType: LedState.UsbLight
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.UsbLight
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/LedState.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: UsbLight
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/LedState.cs
-    startLine: 2
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: UsbLight = 0
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.RxLight
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.LedState.RxLight
-  id: RxLight
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  langs:
-  - csharp
-  - vb
-  name: RxLight
-  nameWithType: LedState.RxLight
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.RxLight
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/LedState.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: RxLight
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/LedState.cs
-    startLine: 3
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: RxLight = 2
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.TxLight
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.LedState.TxLight
-  id: TxLight
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  langs:
-  - csharp
-  - vb
-  name: TxLight
-  nameWithType: LedState.TxLight
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.TxLight
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/LedState.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: TxLight
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/LedState.cs
-    startLine: 4
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: TxLight = 4
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-references:
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals
-  commentId: N:HackRFDotnet.NativeApi.Enums.Peripherals
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Enums.Peripherals
-  nameWithType: HackRFDotnet.NativeApi.Enums.Peripherals
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.Peripherals
-    name: Peripherals
-    href: HackRFDotnet.NativeApi.Enums.Peripherals.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.Peripherals
-    name: Peripherals
-    href: HackRFDotnet.NativeApi.Enums.Peripherals.html
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals
-  href: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.html
-  name: LedState
-  nameWithType: LedState
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
+### YamlMime:ApiPage
+title: Enum LedState
+body:
+- api1: Enum LedState
+  id: HackRFDotnet_NativeApi_Enums_Peripherals_LedState
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/Peripherals/LedState.cs#L2
+  metadata:
+    uid: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
+    commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.LedState
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Enums.Peripherals
+      url: HackRFDotnet.NativeApi.Enums.Peripherals.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: 'public enum LedState : byte'
+- h2: Fields
+- parameters:
+  - name: RxLight
+    default: "2"
+  - name: TxLight
+    default: "4"
+  - name: UsbLight
+    default: "0"
+languageId: csharp

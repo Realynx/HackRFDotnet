@@ -32,6 +32,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "HackRFDotnetDocs/Effects/IQDownSampleEffect.md",
+      "output": {
+        ".html": {
+          "relative_path": "HackRFDotnetDocs/Effects/IQDownSampleEffect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "HackRFDotnetDocs/getting-started.md",
       "output": {
         ".html": {
@@ -74,88 +84,64 @@
       "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Bandwidth.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Bandwidth.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Bandwidth",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Bandwidth.yml\" sourcestartlinenumber=\"1\">Bandwidth of a signal sample.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.DigitalRadioDevice.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.DigitalRadioDevice.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.DigitalRadioDevice",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.DigitalRadioDevice.yml\" sourcestartlinenumber=\"1\">Radio Device to receive IQ Samples with.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Extensions.RfDeviceExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Extensions.RfDeviceExtensions.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Extensions.RfDeviceExtensions",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Extensions.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Extensions.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Extensions",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Frequency.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Frequency.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Frequency",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Frequency.yml\" sourcestartlinenumber=\"1\">Frequency of a signal.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Hertz.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Hertz.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Hertz",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Hertz.yml\" sourcestartlinenumber=\"1\">Number of oscillations per second.</p>\n"
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -172,32 +158,24 @@
       "Summary": null
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.SampleRate.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.SampleRate.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.SampleRate",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Services.AnaloguePlayer.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Services.AnaloguePlayer.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Services.AnaloguePlayer",
-      "Summary": null
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -214,158 +192,114 @@
       "Summary": null
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Services.RfDeviceControllerService.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Services.RfDeviceControllerService.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Services.RfDeviceControllerService",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Services.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Services.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Services",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.Device.IQDeviceStream.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.Device.IQDeviceStream.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.Device.IQDeviceStream",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.Device.IQDeviceStream.yml\" sourcestartlinenumber=\"1\">IQ Stream from the Rf Device.\nThis stream is the root of all data processed with the library.\nThis stream must remain immutable from all other <xref href=\"HackRFDotnet.Api.Streams.SignalStreams.SignalStream\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.Device.IQFileStream.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.Device.IQFileStream.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.Device.IQFileStream",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.Device.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.Device.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.Device",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.Exceptions.NullCallbackException.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.Exceptions.NullCallbackException.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.Exceptions.NullCallbackException",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.Exceptions.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.Exceptions.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.Exceptions",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.IQ.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.IQ.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.IQ",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.IQ.yml\" sourcestartlinenumber=\"1\">This represents a 32bit complex number.\nThe real represents the InPhase Sin of real voltage measurement in time.\nThe imaginary represents the Quadrature of the real voltage measurement in time.\nThe relationship between the I and Q allow us to represent the signal in lower sample rate than it was captured.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.Interfaces.IIQStream.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.Interfaces.IIQStream.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.Interfaces.IIQStream",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.Interfaces.IIQStream.yml\" sourcestartlinenumber=\"1\"><xref href=\"HackRFDotnet.Api.Streams.Interfaces.IIQStream\" data-throw-if-not-resolved=\"false\"></xref> is an immutable stream that buffers the data directly from the IQ device.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.Interfaces.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.Interfaces.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.Interfaces",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.InterleavedSample.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.InterleavedSample.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.InterleavedSample",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.InterleavedSample.yml\" sourcestartlinenumber=\"1\"><xref href=\"HackRFDotnet.Api.Streams.InterleavedSample\" data-throw-if-not-resolved=\"false\"></xref> comes directly from the HackRF device in transfer chunks.\nMemory alignment allows us to ready and copy them into objects very quickly.</p>\n"
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -396,32 +330,34 @@
       "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.DownSampleEffect.yml\" sourcestartlinenumber=\"1\"><xref href=\"HackRFDotnet.Api.Streams.SignalProcessing.Effects.DownSampleEffect\" data-throw-if-not-resolved=\"false\"></xref> removes extraneous information from your signal using your desired bandwidth.\nExample: an FM radio's band is around 200 kHz; the minimum sample rate required to represent this is 400 kS/s (400,000 samples per second).\nIt is recommended that you reduce the sample rate of your audio signal this way before further signal processing to save CPU.</p>\n"
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.yml\" sourcestartlinenumber=\"1\">Fast Fourier Transform Effect.\nCan be used for forward and inverse transforms.\nMust be given a chunk with a size that is a multiple of 2 [Length % 2 == 0]\nMust be configured with a chunk size for caching a convert buffer.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.yml\" sourcestartlinenumber=\"1\">Shift the frequency by a <xref href=\"HackRFDotnet.Api.Frequency\" data-throw-if-not-resolved=\"false\"></xref> offset.\nThis only works for IQ samples, we can shift frequency without losing information.</p>\n"
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.html"
+        }
+      },
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -452,18 +388,24 @@
       "Summary": null
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.yml\" sourcestartlinenumber=\"1\">Low Pass Filter Effect to remove unwanted signals from the input signal.\nConfigured with a bandwidth to limit via the filter.</p>\n"
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html"
+        }
+      },
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -480,32 +422,74 @@
       "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.yml\" sourcestartlinenumber=\"1\">Signal effect base class.</p>\n"
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.yml\" sourcestartlinenumber=\"1\">Squelch Effect to remove noise when there is no detected signal present.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Effects.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Effects",
-      "Summary": null
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.AmDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.AmDecoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.BpskDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.BpskDecoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.FmDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.FmDecoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.html"
+        }
+      },
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -522,18 +506,24 @@
       "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffect.yml\" sourcestartlinenumber=\"1\">Signal Effects are fundamental building blocks for a <xref href=\"HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalProcessing.Interfaces",
-      "Summary": null
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -578,6 +568,16 @@
       "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder.yml\" sourcestartlinenumber=\"1\">Builder for <xref href=\"HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.yml",
       "output": {
@@ -592,74 +592,54 @@
       "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.yml\" sourcestartlinenumber=\"1\">Effects chain processor.</p>\n"
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalProcessing.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalProcessing",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.yml\" sourcestartlinenumber=\"1\">Demodulate AM audio from the <xref href=\"HackRFDotnet.Api.Streams.Interfaces.IIQStream\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream.yml\" sourcestartlinenumber=\"1\">Demodulate FM audio from <xref href=\"HackRFDotnet.Api.Streams.Interfaces.IIQStream\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.yml\" sourcestartlinenumber=\"1\">NAudio <xref href=\"NAudio.Wave.ISampleProvider\" data-throw-if-not-resolved=\"false\"></xref> base stream implementation, <xref href=\"HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream\" data-throw-if-not-resolved=\"false\"></xref> stream inherit this.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Analogue.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalStreams.Analogue",
-      "Summary": null
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -676,32 +656,34 @@
       "Summary": null
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Digital.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.Digital.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalStreams.Digital",
-      "Summary": null
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html"
+        }
+      },
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -718,102 +700,74 @@
       "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.Api.Streams.SignalStreams.SignalStream.yml\" sourcestartlinenumber=\"1\">A <xref href=\"HackRFDotnet.Api.Streams.SignalStreams.SignalStream\" data-throw-if-not-resolved=\"false\"></xref> allows you to process effects from a pipeline, and read the result like a stream reader.\nStream must be created from a <xref href=\"HackRFDotnet.Api.Streams.Interfaces.IIQStream\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SignalStreams.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SignalStreams",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.SweepingIQStream.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.SweepingIQStream.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams.SweepingIQStream",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Streams.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Streams.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Streams",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Utilities.BinaryUtilities.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Utilities.BinaryUtilities.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Utilities.BinaryUtilities",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Utilities.SignalUtilities.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Utilities.SignalUtilities.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Utilities.SignalUtilities",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Utilities.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Utilities.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api.Utilities",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.Api",
-      "Summary": null
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -1488,508 +1442,364 @@
       "Summary": null
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.LedState.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.LedState.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.Peripherals.LedState",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.yml\" sourcestartlinenumber=\"1\">Opera Cake port switching mode. Set via <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte%2cHackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)\" data-throw-if-not-resolved=\"false\"></xref> and queried via <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte%2cHackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.Peripherals.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.Peripherals",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.RfPathFilter.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.RfPathFilter.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.RfPathFilter",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.RfPathFilter.yml\" sourcestartlinenumber=\"1\">RF filter path setting enum.</p>\n<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.RfPathFilter.yml\" sourcestartlinenumber=\"3\">Used only when performing explicit tuning using <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.SetFrequency(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.UInt64%2cSystem.UInt64%2cHackRFDotnet.NativeApi.Enums.RfPathFilter)\" data-throw-if-not-resolved=\"false\"></xref>,\nor can be converted into a human-readable string using <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.FilterPathName(HackRFDotnet.NativeApi.Enums.RfPathFilter)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.RfPathFilter.yml\" sourcestartlinenumber=\"6\">This can select the image rejection filter (U3, U8 or none) to use - using switches U5, U6, U9 and U11. When no filter is selected, the mixer itself is bypassed.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.SweepStyle.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.SweepStyle.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.SweepStyle",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.System.HackrfBoardId",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.yml\" sourcestartlinenumber=\"1\">HACKRF board id enum.</p>\n<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.yml\" sourcestartlinenumber=\"3\">Returned by <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte*)\" data-throw-if-not-resolved=\"false\"></xref> and can be converted to a human-readable string using <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfError.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfError.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.System.HackrfError",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfError.yml\" sourcestartlinenumber=\"1\">Error enum, returned by many libhackrf functions.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml\" sourcestartlinenumber=\"1\">USB board ID (product ID) enum</p>\n<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml\" sourcestartlinenumber=\"3\">Contains USB-IF product id (field <code sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml\" sourcestartlinenumber=\"3\">idProduct</code> in <code sourcefile=\"docs/api/HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.yml\" sourcestartlinenumber=\"3\">libusb_device_descriptor</code>). Can be used to identify general type of hardware.\nOnly used in <xref href=\"HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids\" data-throw-if-not-resolved=\"false\"></xref> field of <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList\" data-throw-if-not-resolved=\"false\"></xref>,\nand can be converted into human-readable string via <xref href=\"HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.System.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums.System",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Enums.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Enums",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Lib.HackRfNativeLib.DeviceStreaming",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.HackRfNativeLib.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Lib.HackRfNativeLib",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Lib.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Lib",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.NativeConstants.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.NativeConstants.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.NativeConstants",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeDwellTime",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.Devices.HackRFOperacakeFreqRange",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.Devices.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.Devices",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.HackRFBiasTUserSettingReq",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.HackRFBoolUserSetting",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFFlushCallback.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFFlushCallback.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.HackRFFlushCallback",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.HackRFTxBlockCompleteCallback",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackrfTransfer.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.HackrfTransfer.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.HackrfTransfer",
-      "Summary": "<p sourcefile=\"docs/api/HackRFDotnet.NativeApi.Structs.HackrfTransfer.yml\" sourcestartlinenumber=\"1\">USB transfer information passed to RX or TX callback.\nA callback should treat all these fields as read-only except that a TX callback should write to the data buffer and may write to <xref href=\"HackRFDotnet.NativeApi.Structs.HackrfTransfer.valid_length\" data-throw-if-not-resolved=\"false\"></xref>\nto indicate that a smaller number of bytes is to be transmitted.</p>\n"
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.System.HackRFM0State.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.System.HackRFM0State.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.System.HackRFM0State",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.System.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.System.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs.System",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.Structs.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi.Structs",
-      "Summary": null
+      "version": ""
     },
     {
-      "type": "ManagedReference",
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.NativeApi.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.NativeApi.html"
         }
       },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "HackRFDotnet.NativeApi",
-      "Summary": null
+      "version": ""
     },
     {
       "type": "Toc",

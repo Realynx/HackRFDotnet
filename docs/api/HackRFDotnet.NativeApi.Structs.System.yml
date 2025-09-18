@@ -1,30 +1,17 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Structs.System
-  commentId: N:HackRFDotnet.NativeApi.Structs.System
-  id: HackRFDotnet.NativeApi.Structs.System
-  children:
-  - HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  - HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.NativeApi.Structs.System
-  nameWithType: HackRFDotnet.NativeApi.Structs.System
-  fullName: HackRFDotnet.NativeApi.Structs.System
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  commentId: T:HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-  href: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.html
-  name: HackRFM0State
-  nameWithType: HackRFM0State
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-- uid: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
-  commentId: T:HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
-  href: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.html
-  name: ReadPartidSerialNo
-  nameWithType: ReadPartidSerialNo
-  fullName: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.NativeApi.Structs.System
+body:
+- api1: Namespace HackRFDotnet.NativeApi.Structs.System
+  id: HackRFDotnet_NativeApi_Structs_System
+  metadata:
+    uid: HackRFDotnet.NativeApi.Structs.System
+    commentId: N:HackRFDotnet.NativeApi.Structs.System
+- h3: Structs
+- parameters:
+  - type:
+      text: HackRFM0State
+      url: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.html
+  - type:
+      text: ReadPartidSerialNo
+      url: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.html
+languageId: csharp

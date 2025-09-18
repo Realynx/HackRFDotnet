@@ -1,0 +1,114 @@
+### YamlMime:ApiPage
+title: Class SignalEffect<TInput, TOutput>
+body:
+- api1: Class SignalEffect<TInput, TOutput>
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/SignalEffect.cs#L9
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2
+    commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+      url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: Signal effect base class.
+- code: 'public abstract class SignalEffect<TInput, TOutput> : ISignalEffectInput<TInput> where TInput : struct where TOutput : struct'
+- h4: Type Parameters
+- parameters:
+  - name: TInput
+  - name: TOutput
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: SignalEffect<TInput, TOutput>
+    url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html
+- h4: Implements
+- list:
+  - text: ISignalEffectInput<TInput>
+    url: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput-1.html
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Methods
+- api3: AddChildEffect<TFormat>(SignalEffect<TOutput, TFormat>)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AddChildEffect__1_HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect__1___0__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/SignalEffect.cs#L22
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.AddChildEffect``1(HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect{`1,``0})
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.AddChildEffect``1(HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect{`1,``0})
+- code: 'public SignalEffect<TOutput, TFormat> AddChildEffect<TFormat>(SignalEffect<TOutput, TFormat> childEffect) where TFormat : struct'
+- h4: Parameters
+- parameters:
+  - name: childEffect
+    type:
+    - text: SignalEffect
+      url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html
+    - <
+    - TOutput
+    - ','
+    - " "
+    - TFormat
+    - '>'
+- h4: Returns
+- parameters:
+  - type:
+    - text: SignalEffect
+      url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html
+    - <
+    - TOutput
+    - ','
+    - " "
+    - TFormat
+    - '>'
+- h4: Type Parameters
+- parameters:
+  - name: TFormat
+- api3: AffectSignal(Span<TInput>, int)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AffectSignal_System_Span__0__System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/SignalEffect.cs#L13
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.AffectSignal(System.Span{`0},System.Int32)
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect`2.AffectSignal(System.Span{`0},System.Int32)
+- markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
+- code: public virtual int AffectSignal(Span<TInput> signalTheta, int length)
+- h4: Parameters
+- parameters:
+  - name: signalTheta
+    type:
+    - text: Span
+      url: https://learn.microsoft.com/dotnet/api/system.span-1
+    - <
+    - TInput
+    - '>'
+    description: ''
+  - name: length
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+languageId: csharp
+metadata:
+  description: Signal effect base class.

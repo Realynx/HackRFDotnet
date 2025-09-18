@@ -1,6 +1,4 @@
-﻿using System.Buffers;
-
-using HackRFDotnet.Api.Streams.Interfaces;
+﻿using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
@@ -33,21 +31,4 @@ public class AmSignalStream : WaveSignalStream {
 
         return signalPipeline;
     }
-
-    //public override int Read(float[] buffer, int offset, int count) {
-    //    var iqBuffer = ArrayPool<IQ>.Shared.Rent(count);
-    //    try {
-    //        ReadSpan(iqBuffer.AsSpan(0, count));
-
-    //        for (var i = 0; i < count; i++) {
-    //            buffer[i] = iqBuffer[i].Magnitude - 1.0f;
-    //        }
-
-    //        NormalizeRms(buffer);
-    //        return count;
-    //    }
-    //    finally {
-    //        ArrayPool<IQ>.Shared.Return(iqBuffer);
-    //    }
-    //}
 }

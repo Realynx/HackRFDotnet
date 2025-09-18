@@ -1,352 +1,60 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  id: HackrfBoardId
-  parent: HackRFDotnet.NativeApi.Enums.System
-  children:
-  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_HACKRF1_OG
-  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_HACKRF1_R9
-  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_JAWBREAKER
-  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_JELLYBEAN
-  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_RAD1O
-  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_UNDETECTED
-  - HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_UNRECOGNIZED
-  langs:
-  - csharp
-  - vb
-  name: HackrfBoardId
-  nameWithType: HackrfBoardId
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  type: Enum
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HackrfBoardId
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 8
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: >-
+### YamlMime:ApiPage
+title: Enum HackrfBoardId
+body:
+- api1: Enum HackrfBoardId
+  id: HackRFDotnet_NativeApi_Enums_System_HackrfBoardId
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs#L9
+  metadata:
+    uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
+    commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Enums.System
+      url: HackRFDotnet.NativeApi.Enums.System.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: >-
     HACKRF board id enum.
 
 
     Returned by <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte*)" data-throw-if-not-resolved="false"></xref> and can be converted to a human-readable string using <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)" data-throw-if-not-resolved="false"></xref>.
-  example: []
-  syntax:
-    content: public enum HackrfBoardId
-    content.vb: Public Enum HackrfBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_JELLYBEAN
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_JELLYBEAN
-  id: BOARD_ID_JELLYBEAN
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  langs:
-  - csharp
-  - vb
-  name: BOARD_ID_JELLYBEAN
-  nameWithType: HackrfBoardId.BOARD_ID_JELLYBEAN
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_JELLYBEAN
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: BOARD_ID_JELLYBEAN
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 12
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Jellybean (pre-production revision, not supported).
-  example: []
-  syntax:
-    content: BOARD_ID_JELLYBEAN = 0
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_JAWBREAKER
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_JAWBREAKER
-  id: BOARD_ID_JAWBREAKER
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  langs:
-  - csharp
-  - vb
-  name: BOARD_ID_JAWBREAKER
-  nameWithType: HackrfBoardId.BOARD_ID_JAWBREAKER
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_JAWBREAKER
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: BOARD_ID_JAWBREAKER
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 17
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Jawbreaker (beta platform, 10-6000MHz, no bias-tee).
-  example: []
-  syntax:
-    content: BOARD_ID_JAWBREAKER = 1
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_HACKRF1_OG
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_HACKRF1_OG
-  id: BOARD_ID_HACKRF1_OG
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  langs:
-  - csharp
-  - vb
-  name: BOARD_ID_HACKRF1_OG
-  nameWithType: HackrfBoardId.BOARD_ID_HACKRF1_OG
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_HACKRF1_OG
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: BOARD_ID_HACKRF1_OG
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 22
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: 'HackRF One (prior to rev 9, same limits: 1-6000MHz, 20MSPS, bias-tee).'
-  example: []
-  syntax:
-    content: BOARD_ID_HACKRF1_OG = 2
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_RAD1O
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_RAD1O
-  id: BOARD_ID_RAD1O
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  langs:
-  - csharp
-  - vb
-  name: BOARD_ID_RAD1O
-  nameWithType: HackrfBoardId.BOARD_ID_RAD1O
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_RAD1O
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: BOARD_ID_RAD1O
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 27
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  syntax:
-    content: BOARD_ID_RAD1O = 3
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_HACKRF1_R9
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_HACKRF1_R9
-  id: BOARD_ID_HACKRF1_R9
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  langs:
-  - csharp
-  - vb
-  name: BOARD_ID_HACKRF1_R9
-  nameWithType: HackrfBoardId.BOARD_ID_HACKRF1_R9
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_HACKRF1_R9
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: BOARD_ID_HACKRF1_R9
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 32
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  syntax:
-    content: BOARD_ID_HACKRF1_R9 = 4
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_UNRECOGNIZED
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_UNRECOGNIZED
-  id: BOARD_ID_UNRECOGNIZED
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  langs:
-  - csharp
-  - vb
-  name: BOARD_ID_UNRECOGNIZED
-  nameWithType: HackrfBoardId.BOARD_ID_UNRECOGNIZED
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_UNRECOGNIZED
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: BOARD_ID_UNRECOGNIZED
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 37
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Unknown board (failed detection).
-  example: []
-  syntax:
-    content: BOARD_ID_UNRECOGNIZED = 254
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_UNDETECTED
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_UNDETECTED
-  id: BOARD_ID_UNDETECTED
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  langs:
-  - csharp
-  - vb
-  name: BOARD_ID_UNDETECTED
-  nameWithType: HackrfBoardId.BOARD_ID_UNDETECTED
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.BOARD_ID_UNDETECTED
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: BOARD_ID_UNDETECTED
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfBoardId.cs
-    startLine: 42
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Unknown board (detection not yet attempted, should be default value).
-  example: []
-  syntax:
-    content: BOARD_ID_UNDETECTED = 255
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-references:
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardId_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
-  name: ReadBoardId(HackRFDevice*, byte*)
-  nameWithType: HackRfNativeLib.Firmware.ReadBoardId(HackRFDevice*, byte*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte*)
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadBoardId(HackRFDevice*, Byte*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte*)
-  name.vb: ReadBoardId(HackRFDevice*, Byte*)
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-    name: ReadBoardId
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardId_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
-  - name: ','
-  - name: " "
-  - uid: System.Byte
-    name: byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '*'
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-    name: ReadBoardId
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardId_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
-  - name: ','
-  - name: " "
-  - uid: System.Byte
-    name: Byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '*'
-  - name: )
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_BoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfBoardId_
-  name: BoardIdName(HackrfBoardId)
-  nameWithType: HackRfNativeLib.Firmware.BoardIdName(HackrfBoardId)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-    name: BoardIdName
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_BoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfBoardId_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-    name: HackrfBoardId
-    href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.html
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-    name: BoardIdName
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_BoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfBoardId_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-    name: HackrfBoardId
-    href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.html
-  - name: )
-- uid: HackRFDotnet.NativeApi.Enums.System
-  commentId: N:HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Enums.System
-  nameWithType: HackRFDotnet.NativeApi.Enums.System
-  fullName: HackRFDotnet.NativeApi.Enums.System
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.System
-    name: System
-    href: HackRFDotnet.NativeApi.Enums.System.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.System
-    name: System
-    href: HackRFDotnet.NativeApi.Enums.System.html
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  parent: HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.html
-  name: HackrfBoardId
-  nameWithType: HackrfBoardId
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
+- code: public enum HackrfBoardId
+- h2: Fields
+- parameters:
+  - name: BOARD_ID_HACKRF1_OG
+    default: "2"
+    description: >+
+      HackRF One (prior to rev 9, same limits: 1-6000MHz, 20MSPS, bias-tee).
+
+  - name: BOARD_ID_HACKRF1_R9
+    default: "4"
+  - name: BOARD_ID_JAWBREAKER
+    default: "1"
+    description: >+
+      Jawbreaker (beta platform, 10-6000MHz, no bias-tee).
+
+  - name: BOARD_ID_JELLYBEAN
+    default: "0"
+    description: >+
+      Jellybean (pre-production revision, not supported).
+
+  - name: BOARD_ID_RAD1O
+    default: "3"
+  - name: BOARD_ID_UNDETECTED
+    default: "255"
+    description: >+
+      Unknown board (detection not yet attempted, should be default value).
+
+  - name: BOARD_ID_UNRECOGNIZED
+    default: "254"
+    description: >+
+      Unknown board (failed detection).
+
+languageId: csharp
+metadata:
+  description: >-
+    HACKRF board id enum.
+
+
+    Returned by  and can be converted to a human-readable string using .

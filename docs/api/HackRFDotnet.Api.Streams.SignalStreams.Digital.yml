@@ -1,78 +1,14 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  commentId: N:HackRFDotnet.Api.Streams.SignalStreams.Digital
-  id: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  children:
-  - HackRFDotnet.Api.Streams.SignalStreams.Digital.HdRadioSignalStream
-  - HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  nameWithType: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Digital.HdRadioSignalStream
-  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.Digital.HdRadioSignalStream
-  parent: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  href: HackRFDotnet.Api.Streams.SignalStreams.Digital.HdRadioSignalStream.html
-  name: HdRadioSignalStream
-  nameWithType: HdRadioSignalStream
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Digital.HdRadioSignalStream
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream
-  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream
-  parent: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  href: HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream.html
-  name: QpskSignalStream
-  nameWithType: QpskSignalStream
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  commentId: N:HackRFDotnet.Api.Streams.SignalStreams.Digital
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  nameWithType: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Digital
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams
-    name: SignalStreams
-    href: HackRFDotnet.Api.Streams.SignalStreams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.Digital
-    name: Digital
-    href: HackRFDotnet.Api.Streams.SignalStreams.Digital.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams
-    name: SignalStreams
-    href: HackRFDotnet.Api.Streams.SignalStreams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.Digital
-    name: Digital
-    href: HackRFDotnet.Api.Streams.SignalStreams.Digital.html
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.Streams.SignalStreams.Digital
+body:
+- api1: Namespace HackRFDotnet.Api.Streams.SignalStreams.Digital
+  id: HackRFDotnet_Api_Streams_SignalStreams_Digital
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.Digital
+    commentId: N:HackRFDotnet.Api.Streams.SignalStreams.Digital
+- h3: Classes
+- parameters:
+  - type:
+      text: QpskSignalStream
+      url: HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream.html
+languageId: csharp

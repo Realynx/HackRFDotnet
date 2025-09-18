@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Realynx/HackRFDotnet/new/master/apiSpec/new?filename=HackRFDotnet_NativeApi_Enums_System_HackrfError.md&amp;value=---%0Auid%3A%20HackRFDotnet.NativeApi.Enums.System.HackrfError%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +39,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,103 +84,99 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="HackRFDotnet.NativeApi.Enums.System.HackrfError">
+        <article data-uid="">
+<h1 class='section api' data-uid='HackRFDotnet.NativeApi.Enums.System.HackrfError' data-commentid='T:HackRFDotnet.NativeApi.Enums.System.HackrfError' id='HackRFDotnet_NativeApi_Enums_System_HackrfError'>Enum HackrfError    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/System/HackrfError.cs#L7'><i class='bi bi-code-slash'></i></a></h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='HackRFDotnet.NativeApi.Enums.System.html'>HackRFDotnet.NativeApi.Enums.System</a></dd></dl><dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
+</div><p>Error enum, returned by many libhackrf functions.</p>
+<pre><code class='lang-csharp'>public enum HackrfError</code></pre><h2 class='section'>Fields</h2><dl class='parameters'><dt><code>HACKRF_ERROR_BUSY = -6</code>   </dt>
+<dd>
 
 
+<p>Resource is busy, possibly the device is already opened.</p>
+
+</dd><dt><code>HACKRF_ERROR_INVALID_PARAM = -2</code>   </dt>
+<dd>
 
 
-  <h1 id="HackRFDotnet_NativeApi_Enums_System_HackrfError" data-uid="HackRFDotnet.NativeApi.Enums.System.HackrfError" class="text-break">
-Enum HackrfError  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/System/HackrfError.cs/#L7"><i class="bi bi-code-slash"></i></a>
-  </h1>
+<p>The function was called with invalid parameters.</p>
 
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="HackRFDotnet.html">HackRFDotnet</a>.<a class="xref" href="HackRFDotnet.NativeApi.html">NativeApi</a>.<a class="xref" href="HackRFDotnet.NativeApi.Enums.html">Enums</a>.<a class="xref" href="HackRFDotnet.NativeApi.Enums.System.html">System</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>Error enum, returned by many libhackrf functions.</p>
-</div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum HackrfError</code></pre>
-  </div>
+</dd><dt><code>HACKRF_ERROR_LIBUSB = -1000</code>   </dt>
+<dd>
 
 
+<p>LibUSB error, use <span class="xref">HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.GetErrorName(HackRFDotnet.NativeApi.Enums.System.HackrfError)</span> to get a human-readable error string (using <code>libusb_strerror</code>).</p>
+
+</dd><dt><code>HACKRF_ERROR_NOT_FOUND = -5</code>   </dt>
+<dd>
 
 
+<p>USB device not found, returned at opening.</p>
+
+</dd><dt><code>HACKRF_ERROR_NOT_LAST_DEVICE = -2000</code>   </dt>
+<dd>
 
 
+<p>Can not exit library as one or more HackRFs still in use.</p>
+
+</dd><dt><code>HACKRF_ERROR_NO_MEM = -11</code>   </dt>
+<dd>
 
 
+<p>Memory allocation (on host side) failed.</p>
 
-  <h2 id="fields">Fields
-</h2>
-  <dl class="parameters">
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_BUSY"><code>HACKRF_ERROR_BUSY = -6</code></dt>
-  
-  <dd><p>Resource is busy, possibly the device is already opened.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_INVALID_PARAM"><code>HACKRF_ERROR_INVALID_PARAM = -2</code></dt>
-  
-  <dd><p>The function was called with invalid parameters.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_LIBUSB"><code>HACKRF_ERROR_LIBUSB = -1000</code></dt>
-  
-  <dd><p>LibUSB error, use <a class="xref" href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Debug.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Debug_GetErrorName_HackRFDotnet_NativeApi_Enums_System_HackrfError_">GetErrorName(HackrfError)</a> to get a human-readable error string (using <code>libusb_strerror</code>).</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_NOT_FOUND"><code>HACKRF_ERROR_NOT_FOUND = -5</code></dt>
-  
-  <dd><p>USB device not found, returned at opening.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_NOT_LAST_DEVICE"><code>HACKRF_ERROR_NOT_LAST_DEVICE = -2000</code></dt>
-  
-  <dd><p>Can not exit library as one or more HackRFs still in use.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_NO_MEM"><code>HACKRF_ERROR_NO_MEM = -11</code></dt>
-  
-  <dd><p>Memory allocation (on host side) failed.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_OTHER"><code>HACKRF_ERROR_OTHER = -9999</code></dt>
-  
-  <dd><p>Unspecified error.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_STREAMING_EXIT_CALLED"><code>HACKRF_ERROR_STREAMING_EXIT_CALLED = -1004</code></dt>
-  
-  <dd><p>Streaming thread exited (normally).</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_STREAMING_STOPPED"><code>HACKRF_ERROR_STREAMING_STOPPED = -1003</code></dt>
-  
-  <dd><p>Streaming thread stopped due to an error.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_STREAMING_THREAD_ERR"><code>HACKRF_ERROR_STREAMING_THREAD_ERR = -1002</code></dt>
-  
-  <dd><p>Streaming thread could not start due to an error.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_THREAD"><code>HACKRF_ERROR_THREAD = -1001</code></dt>
-  
-  <dd><p>Error setting up transfer thread (pthread-related error).</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_ERROR_USB_API_VERSION"><code>HACKRF_ERROR_USB_API_VERSION = -1005</code></dt>
-  
-  <dd><p>The installed firmware does not support this function.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_SUCCESS"><code>HACKRF_SUCCESS = 0</code></dt>
-  
-  <dd><p>No error happened.</p>
-</dd>
-    <dt id="HackRFDotnet_NativeApi_Enums_System_HackrfError_HACKRF_TRUE"><code>HACKRF_TRUE = 1</code></dt>
-  
-  <dd><p>TRUE value, returned by some functions that return boolean value. Only a few functions can return this variant, and this fact should be explicitly noted at those functions.</p>
-</dd>
-  </dl>
+</dd><dt><code>HACKRF_ERROR_OTHER = -9999</code>   </dt>
+<dd>
 
 
+<p>Unspecified error.</p>
 
+</dd><dt><code>HACKRF_ERROR_STREAMING_EXIT_CALLED = -1004</code>   </dt>
+<dd>
+
+
+<p>Streaming thread exited (normally).</p>
+
+</dd><dt><code>HACKRF_ERROR_STREAMING_STOPPED = -1003</code>   </dt>
+<dd>
+
+
+<p>Streaming thread stopped due to an error.</p>
+
+</dd><dt><code>HACKRF_ERROR_STREAMING_THREAD_ERR = -1002</code>   </dt>
+<dd>
+
+
+<p>Streaming thread could not start due to an error.</p>
+
+</dd><dt><code>HACKRF_ERROR_THREAD = -1001</code>   </dt>
+<dd>
+
+
+<p>Error setting up transfer thread (pthread-related error).</p>
+
+</dd><dt><code>HACKRF_ERROR_USB_API_VERSION = -1005</code>   </dt>
+<dd>
+
+
+<p>The installed firmware does not support this function.</p>
+
+</dd><dt><code>HACKRF_SUCCESS = 0</code>   </dt>
+<dd>
+
+
+<p>No error happened.</p>
+
+</dd><dt><code>HACKRF_TRUE = 1</code>   </dt>
+<dd>
+
+
+<p>TRUE value, returned by some functions that return boolean value. Only a few functions can return this variant, and this fact should be explicitly noted at those functions.</p>
+
+</dd></dl>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/System/HackrfError.cs/#L7" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -196,7 +192,7 @@ Enum HackrfError  <a class="header-action link-secondary" title="View source" hr
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <span>Github <a href="https://github.com/Realynx/HackRFDotnet">HackRfDotnet</a>.</span>
         </div>
       </div>
     </footer>

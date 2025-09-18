@@ -3,9 +3,6 @@ using HackRFDotnet.Api.Extensions;
 using HackRFDotnet.Api.Services;
 using HackRFDotnet.Api.Streams;
 using HackRFDotnet.Api.Streams.Device;
-using HackRFDotnet.Api.Streams.SignalProcessing;
-using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
-using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 
@@ -21,6 +18,12 @@ internal class MainService : IHostedService {
         _spectrumDisplayService = spectrumDisplayService;
     }
 
+    /// <summary>
+    /// There was a bug when running from a thread/task without a reference.
+    /// It would cause audio stuttering after about 10 mins of running.
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     public async Task StartAsync(CancellationToken cancellationToken) {
         Console.WriteLine("looking for HackRf Device...");
 
@@ -44,26 +47,8 @@ internal class MainService : IHostedService {
         DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
         for (; ; ) {
-            Thread.Sleep(TimeSpan.FromSeconds(10));
+            await Task.Delay(TimeSpan.FromSeconds(10));
         }
-    }
-
-    private static void Test(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-        var pipeline = new SignalProcessingPipeline<IQ>();
-
-        pipeline
-            .WithRootEffect(new IQDownSampleEffect(deviceStream.SampleRate, rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
-            .AddChildEffect(new FftEffect(true, producedChunkSize))
-            .AddChildEffect(new FrequencyCenteringEffect(Frequency.FromKHz(-192), reducedSampleRate))
-            .AddChildEffect(new LowPassFilterEffect(reducedSampleRate, Bandwidth.FromKHz(8)))
-            .AddChildEffect(new FftEffect(false, producedChunkSize))
-            .AddChildEffect(new FmDecoder());
-
-
-        //var effectsPipeline = new SignalProcessingBuilder<IQ>()
-        //    .AddSignalEffect(new FMDemodulator(false, producedChunkSize))
-
-        //    .BuildPipeline();
     }
 
     //private static void HdRadioPlay(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {

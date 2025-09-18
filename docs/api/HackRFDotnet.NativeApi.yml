@@ -1,23 +1,25 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi
-  commentId: N:HackRFDotnet.NativeApi
-  id: HackRFDotnet.NativeApi
-  children:
-  - HackRFDotnet.NativeApi.NativeConstants
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.NativeApi
-  nameWithType: HackRFDotnet.NativeApi
-  fullName: HackRFDotnet.NativeApi
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.NativeApi.NativeConstants
-  commentId: T:HackRFDotnet.NativeApi.NativeConstants
-  href: HackRFDotnet.NativeApi.NativeConstants.html
-  name: NativeConstants
-  nameWithType: NativeConstants
-  fullName: HackRFDotnet.NativeApi.NativeConstants
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.NativeApi
+body:
+- api1: Namespace HackRFDotnet.NativeApi
+  id: HackRFDotnet_NativeApi
+  metadata:
+    uid: HackRFDotnet.NativeApi
+    commentId: N:HackRFDotnet.NativeApi
+- h3: Namespaces
+- parameters:
+  - type:
+      text: HackRFDotnet.NativeApi.Enums
+      url: HackRFDotnet.NativeApi.Enums.html
+  - type:
+      text: HackRFDotnet.NativeApi.Lib
+      url: HackRFDotnet.NativeApi.Lib.html
+  - type:
+      text: HackRFDotnet.NativeApi.Structs
+      url: HackRFDotnet.NativeApi.Structs.html
+- h3: Classes
+- parameters:
+  - type:
+      text: NativeConstants
+      url: HackRFDotnet.NativeApi.NativeConstants.html
+languageId: csharp

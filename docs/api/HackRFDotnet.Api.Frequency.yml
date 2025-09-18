@@ -1,1190 +1,467 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.Api.Frequency
-  commentId: T:HackRFDotnet.Api.Frequency
-  id: Frequency
-  parent: HackRFDotnet.Api
-  children:
-  - HackRFDotnet.Api.Frequency.#ctor(HackRFDotnet.Api.Hertz)
-  - HackRFDotnet.Api.Frequency.#ctor(System.Int64)
-  - HackRFDotnet.Api.Frequency.FromGHz(System.Double)
-  - HackRFDotnet.Api.Frequency.FromHz(System.Int64)
-  - HackRFDotnet.Api.Frequency.FromKHz(System.Double)
-  - HackRFDotnet.Api.Frequency.FromMHz(System.Double)
-  - HackRFDotnet.Api.Frequency.op_Addition(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  - HackRFDotnet.Api.Frequency.op_Division(HackRFDotnet.Api.Frequency,System.Int32)
-  - HackRFDotnet.Api.Frequency.op_Equality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  - HackRFDotnet.Api.Frequency.op_GreaterThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  - HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  - HackRFDotnet.Api.Frequency.op_Inequality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  - HackRFDotnet.Api.Frequency.op_LessThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  - HackRFDotnet.Api.Frequency.op_LessThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  - HackRFDotnet.Api.Frequency.op_Modulus(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  - HackRFDotnet.Api.Frequency.op_Subtraction(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  - HackRFDotnet.Api.Frequency.op_UnaryNegation(HackRFDotnet.Api.Frequency)
-  langs:
-  - csharp
-  - vb
-  name: Frequency
-  nameWithType: Frequency
-  fullName: HackRFDotnet.Api.Frequency
-  type: Class
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: Frequency
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 4
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Frequency of a signal.
-  example: []
-  syntax:
-    content: 'public class Frequency : Hertz'
-    content.vb: Public Class Frequency Inherits Hertz
-  inheritance:
-  - System.Object
-  - HackRFDotnet.Api.Hertz
-  inheritedMembers:
-  - HackRFDotnet.Api.Hertz.Hz
-  - HackRFDotnet.Api.Hertz.Mhz
-  - HackRFDotnet.Api.Hertz.Khz
-  - HackRFDotnet.Api.Hertz.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
-- uid: HackRFDotnet.Api.Frequency.#ctor(System.Int64)
-  commentId: M:HackRFDotnet.Api.Frequency.#ctor(System.Int64)
-  id: '#ctor(System.Int64)'
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: Frequency(long)
-  nameWithType: Frequency.Frequency(long)
-  fullName: HackRFDotnet.Api.Frequency.Frequency(long)
-  type: Constructor
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: .ctor
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 5
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public Frequency(long hz)
-    parameters:
-    - id: hz
-      type: System.Int64
-    content.vb: Public Sub New(hz As Long)
-  overload: HackRFDotnet.Api.Frequency.#ctor*
-  nameWithType.vb: Frequency.New(Long)
-  fullName.vb: HackRFDotnet.Api.Frequency.New(Long)
-  name.vb: New(Long)
-- uid: HackRFDotnet.Api.Frequency.#ctor(HackRFDotnet.Api.Hertz)
-  commentId: M:HackRFDotnet.Api.Frequency.#ctor(HackRFDotnet.Api.Hertz)
-  id: '#ctor(HackRFDotnet.Api.Hertz)'
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: Frequency(Hertz)
-  nameWithType: Frequency.Frequency(Hertz)
-  fullName: HackRFDotnet.Api.Frequency.Frequency(HackRFDotnet.Api.Hertz)
-  type: Constructor
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: .ctor
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 8
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public Frequency(Hertz hz)
-    parameters:
-    - id: hz
-      type: HackRFDotnet.Api.Hertz
-    content.vb: Public Sub New(hz As Hertz)
-  overload: HackRFDotnet.Api.Frequency.#ctor*
-  nameWithType.vb: Frequency.New(Hertz)
-  fullName.vb: HackRFDotnet.Api.Frequency.New(HackRFDotnet.Api.Hertz)
-  name.vb: New(Hertz)
-- uid: HackRFDotnet.Api.Frequency.FromHz(System.Int64)
-  commentId: M:HackRFDotnet.Api.Frequency.FromHz(System.Int64)
-  id: FromHz(System.Int64)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: FromHz(long)
-  nameWithType: Frequency.FromHz(long)
-  fullName: HackRFDotnet.Api.Frequency.FromHz(long)
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: FromHz
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 11
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static Frequency FromHz(long hz)
-    parameters:
-    - id: hz
-      type: System.Int64
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Shared Function FromHz(hz As Long) As Frequency
-  overload: HackRFDotnet.Api.Frequency.FromHz*
-  nameWithType.vb: Frequency.FromHz(Long)
-  fullName.vb: HackRFDotnet.Api.Frequency.FromHz(Long)
-  name.vb: FromHz(Long)
-- uid: HackRFDotnet.Api.Frequency.FromKHz(System.Double)
-  commentId: M:HackRFDotnet.Api.Frequency.FromKHz(System.Double)
-  id: FromKHz(System.Double)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: FromKHz(double)
-  nameWithType: Frequency.FromKHz(double)
-  fullName: HackRFDotnet.Api.Frequency.FromKHz(double)
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: FromKHz
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 15
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static Frequency FromKHz(double khz)
-    parameters:
-    - id: khz
-      type: System.Double
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Shared Function FromKHz(khz As Double) As Frequency
-  overload: HackRFDotnet.Api.Frequency.FromKHz*
-  nameWithType.vb: Frequency.FromKHz(Double)
-  fullName.vb: HackRFDotnet.Api.Frequency.FromKHz(Double)
-  name.vb: FromKHz(Double)
-- uid: HackRFDotnet.Api.Frequency.FromMHz(System.Double)
-  commentId: M:HackRFDotnet.Api.Frequency.FromMHz(System.Double)
-  id: FromMHz(System.Double)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: FromMHz(double)
-  nameWithType: Frequency.FromMHz(double)
-  fullName: HackRFDotnet.Api.Frequency.FromMHz(double)
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: FromMHz
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 19
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static Frequency FromMHz(double mhz)
-    parameters:
-    - id: mhz
-      type: System.Double
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Shared Function FromMHz(mhz As Double) As Frequency
-  overload: HackRFDotnet.Api.Frequency.FromMHz*
-  nameWithType.vb: Frequency.FromMHz(Double)
-  fullName.vb: HackRFDotnet.Api.Frequency.FromMHz(Double)
-  name.vb: FromMHz(Double)
-- uid: HackRFDotnet.Api.Frequency.FromGHz(System.Double)
-  commentId: M:HackRFDotnet.Api.Frequency.FromGHz(System.Double)
-  id: FromGHz(System.Double)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: FromGHz(double)
-  nameWithType: Frequency.FromGHz(double)
-  fullName: HackRFDotnet.Api.Frequency.FromGHz(double)
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: FromGHz
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 23
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static Frequency FromGHz(double ghz)
-    parameters:
-    - id: ghz
-      type: System.Double
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Shared Function FromGHz(ghz As Double) As Frequency
-  overload: HackRFDotnet.Api.Frequency.FromGHz*
-  nameWithType.vb: Frequency.FromGHz(Double)
-  fullName.vb: HackRFDotnet.Api.Frequency.FromGHz(Double)
-  name.vb: FromGHz(Double)
-- uid: HackRFDotnet.Api.Frequency.op_GreaterThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_GreaterThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  id: op_GreaterThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator >(Frequency, Frequency)
-  nameWithType: Frequency.operator >(Frequency, Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator >(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_GreaterThan
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 27
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static bool operator >(Frequency a, Frequency b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Operator >(a As Frequency, b As Frequency) As Boolean
-  overload: HackRFDotnet.Api.Frequency.op_GreaterThan*
-  nameWithType.vb: Frequency.>(Frequency, Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.>(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  name.vb: '>(Frequency, Frequency)'
-- uid: HackRFDotnet.Api.Frequency.op_LessThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_LessThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  id: op_LessThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator <(Frequency, Frequency)
-  nameWithType: Frequency.operator <(Frequency, Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator <(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_LessThan
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 31
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static bool operator <(Frequency a, Frequency b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Operator <(a As Frequency, b As Frequency) As Boolean
-  overload: HackRFDotnet.Api.Frequency.op_LessThan*
-  nameWithType.vb: Frequency.<(Frequency, Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.<(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  name.vb: <(Frequency, Frequency)
-- uid: HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  id: op_GreaterThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator >=(Frequency, Frequency)
-  nameWithType: Frequency.operator >=(Frequency, Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator >=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_GreaterThanOrEqual
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 35
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static bool operator >=(Frequency a, Frequency b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Operator >=(a As Frequency, b As Frequency) As Boolean
-  overload: HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual*
-  nameWithType.vb: Frequency.>=(Frequency, Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.>=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  name.vb: '>=(Frequency, Frequency)'
-- uid: HackRFDotnet.Api.Frequency.op_LessThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_LessThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  id: op_LessThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator <=(Frequency, Frequency)
-  nameWithType: Frequency.operator <=(Frequency, Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator <=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_LessThanOrEqual
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 39
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static bool operator <=(Frequency a, Frequency b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Operator <=(a As Frequency, b As Frequency) As Boolean
-  overload: HackRFDotnet.Api.Frequency.op_LessThanOrEqual*
-  nameWithType.vb: Frequency.<=(Frequency, Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.<=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  name.vb: <=(Frequency, Frequency)
-- uid: HackRFDotnet.Api.Frequency.op_Equality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_Equality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  id: op_Equality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator ==(Frequency, Frequency)
-  nameWithType: Frequency.operator ==(Frequency, Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator ==(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_Equality
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 43
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static bool operator ==(Frequency a, Frequency b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Operator =(a As Frequency, b As Frequency) As Boolean
-  overload: HackRFDotnet.Api.Frequency.op_Equality*
-  nameWithType.vb: Frequency.=(Frequency, Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  name.vb: =(Frequency, Frequency)
-- uid: HackRFDotnet.Api.Frequency.op_Inequality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_Inequality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  id: op_Inequality(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator !=(Frequency, Frequency)
-  nameWithType: Frequency.operator !=(Frequency, Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator !=(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_Inequality
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 47
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static bool operator !=(Frequency a, Frequency b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: System.Boolean
-    content.vb: Public Shared Operator <>(a As Frequency, b As Frequency) As Boolean
-  overload: HackRFDotnet.Api.Frequency.op_Inequality*
-  nameWithType.vb: Frequency.<>(Frequency, Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.<>(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  name.vb: <>(Frequency, Frequency)
-- uid: HackRFDotnet.Api.Frequency.op_Modulus(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_Modulus(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  id: op_Modulus(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator %(Frequency, Frequency)
-  nameWithType: Frequency.operator %(Frequency, Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator %(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_Modulus
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 51
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static Frequency operator %(Frequency a, Frequency b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Shared Operator Mod(a As Frequency, b As Frequency) As Frequency
-  overload: HackRFDotnet.Api.Frequency.op_Modulus*
-  nameWithType.vb: Frequency.Mod(Frequency, Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.Mod(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  name.vb: Mod(Frequency, Frequency)
-- uid: HackRFDotnet.Api.Frequency.op_UnaryNegation(HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_UnaryNegation(HackRFDotnet.Api.Frequency)
-  id: op_UnaryNegation(HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator -(Frequency)
-  nameWithType: Frequency.operator -(Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator -(HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_UnaryNegation
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 55
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static Frequency operator -(Frequency a)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Shared Operator -(a As Frequency) As Frequency
-  overload: HackRFDotnet.Api.Frequency.op_UnaryNegation*
-  nameWithType.vb: Frequency.-(Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.-(HackRFDotnet.Api.Frequency)
-  name.vb: -(Frequency)
-- uid: HackRFDotnet.Api.Frequency.op_Division(HackRFDotnet.Api.Frequency,System.Int32)
-  commentId: M:HackRFDotnet.Api.Frequency.op_Division(HackRFDotnet.Api.Frequency,System.Int32)
-  id: op_Division(HackRFDotnet.Api.Frequency,System.Int32)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator /(Frequency, int)
-  nameWithType: Frequency.operator /(Frequency, int)
-  fullName: HackRFDotnet.Api.Frequency.operator /(HackRFDotnet.Api.Frequency, int)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_Division
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 59
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static Frequency operator /(Frequency a, int b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: System.Int32
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Shared Operator /(a As Frequency, b As Integer) As Frequency
-  overload: HackRFDotnet.Api.Frequency.op_Division*
-  nameWithType.vb: Frequency./(Frequency, Integer)
-  fullName.vb: HackRFDotnet.Api.Frequency./(HackRFDotnet.Api.Frequency, Integer)
-  name.vb: /(Frequency, Integer)
-- uid: HackRFDotnet.Api.Frequency.op_Subtraction(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_Subtraction(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  id: op_Subtraction(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator -(Frequency, Frequency)
-  nameWithType: Frequency.operator -(Frequency, Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator -(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_Subtraction
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 63
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static Frequency operator -(Frequency a, Frequency b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Shared Operator -(a As Frequency, b As Frequency) As Frequency
-  overload: HackRFDotnet.Api.Frequency.op_Subtraction*
-  nameWithType.vb: Frequency.-(Frequency, Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.-(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  name.vb: -(Frequency, Frequency)
-- uid: HackRFDotnet.Api.Frequency.op_Addition(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  commentId: M:HackRFDotnet.Api.Frequency.op_Addition(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  id: op_Addition(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
-  parent: HackRFDotnet.Api.Frequency
-  langs:
-  - csharp
-  - vb
-  name: operator +(Frequency, Frequency)
-  nameWithType: Frequency.operator +(Frequency, Frequency)
-  fullName: HackRFDotnet.Api.Frequency.operator +(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  type: Operator
-  source:
-    remote:
-      path: HackRFDotnet/Api/Frequency.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: op_Addition
-    path: HackRFDotnet/Api/Frequency.cs
-    startLine: 67
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public static Frequency operator +(Frequency a, Frequency b)
-    parameters:
-    - id: a
-      type: HackRFDotnet.Api.Frequency
-    - id: b
-      type: HackRFDotnet.Api.Frequency
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Shared Operator +(a As Frequency, b As Frequency) As Frequency
-  overload: HackRFDotnet.Api.Frequency.op_Addition*
-  nameWithType.vb: Frequency.+(Frequency, Frequency)
-  fullName.vb: HackRFDotnet.Api.Frequency.+(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Frequency)
-  name.vb: +(Frequency, Frequency)
-references:
-- uid: HackRFDotnet.Api
-  commentId: N:HackRFDotnet.Api
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api
-  nameWithType: HackRFDotnet.Api
-  fullName: HackRFDotnet.Api
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-- uid: System.Object
-  commentId: T:System.Object
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: HackRFDotnet.Api.Hertz
-  commentId: T:HackRFDotnet.Api.Hertz
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.Hertz.html
-  name: Hertz
-  nameWithType: Hertz
-  fullName: HackRFDotnet.Api.Hertz
-- uid: HackRFDotnet.Api.Hertz.Hz
-  commentId: P:HackRFDotnet.Api.Hertz.Hz
-  parent: HackRFDotnet.Api.Hertz
-  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Hz
-  name: Hz
-  nameWithType: Hertz.Hz
-  fullName: HackRFDotnet.Api.Hertz.Hz
-- uid: HackRFDotnet.Api.Hertz.Mhz
-  commentId: P:HackRFDotnet.Api.Hertz.Mhz
-  parent: HackRFDotnet.Api.Hertz
-  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Mhz
-  name: Mhz
-  nameWithType: Hertz.Mhz
-  fullName: HackRFDotnet.Api.Hertz.Mhz
-- uid: HackRFDotnet.Api.Hertz.Khz
-  commentId: P:HackRFDotnet.Api.Hertz.Khz
-  parent: HackRFDotnet.Api.Hertz
-  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Khz
-  name: Khz
-  nameWithType: Hertz.Khz
-  fullName: HackRFDotnet.Api.Hertz.Khz
-- uid: HackRFDotnet.Api.Hertz.Equals(System.Object)
-  commentId: M:HackRFDotnet.Api.Hertz.Equals(System.Object)
-  parent: HackRFDotnet.Api.Hertz
-  isExternal: true
-  href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Equals_System_Object_
-  name: Equals(object)
-  nameWithType: Hertz.Equals(object)
-  fullName: HackRFDotnet.Api.Hertz.Equals(object)
-  nameWithType.vb: Hertz.Equals(Object)
-  fullName.vb: HackRFDotnet.Api.Hertz.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: HackRFDotnet.Api.Hertz.Equals(System.Object)
-    name: Equals
-    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Equals_System_Object_
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.Api.Hertz.Equals(System.Object)
-    name: Equals
-    href: HackRFDotnet.Api.Hertz.html#HackRFDotnet_Api_Hertz_Equals_System_Object_
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: HackRFDotnet.Api.Frequency.#ctor*
-  commentId: Overload:HackRFDotnet.Api.Frequency.#ctor
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency__ctor_System_Int64_
-  name: Frequency
-  nameWithType: Frequency.Frequency
-  fullName: HackRFDotnet.Api.Frequency.Frequency
-  nameWithType.vb: Frequency.New
-  fullName.vb: HackRFDotnet.Api.Frequency.New
-  name.vb: New
-- uid: System.Int64
-  commentId: T:System.Int64
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int64
-  name: long
-  nameWithType: long
-  fullName: long
-  nameWithType.vb: Long
-  fullName.vb: Long
-  name.vb: Long
-- uid: HackRFDotnet.Api.Frequency.FromHz*
-  commentId: Overload:HackRFDotnet.Api.Frequency.FromHz
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromHz_System_Int64_
-  name: FromHz
-  nameWithType: Frequency.FromHz
-  fullName: HackRFDotnet.Api.Frequency.FromHz
-- uid: HackRFDotnet.Api.Frequency
-  commentId: T:HackRFDotnet.Api.Frequency
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.Frequency.html
-  name: Frequency
-  nameWithType: Frequency
-  fullName: HackRFDotnet.Api.Frequency
-- uid: HackRFDotnet.Api.Frequency.FromKHz*
-  commentId: Overload:HackRFDotnet.Api.Frequency.FromKHz
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromKHz_System_Double_
-  name: FromKHz
-  nameWithType: Frequency.FromKHz
-  fullName: HackRFDotnet.Api.Frequency.FromKHz
-- uid: System.Double
-  commentId: T:System.Double
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.double
-  name: double
-  nameWithType: double
-  fullName: double
-  nameWithType.vb: Double
-  fullName.vb: Double
-  name.vb: Double
-- uid: HackRFDotnet.Api.Frequency.FromMHz*
-  commentId: Overload:HackRFDotnet.Api.Frequency.FromMHz
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromMHz_System_Double_
-  name: FromMHz
-  nameWithType: Frequency.FromMHz
-  fullName: HackRFDotnet.Api.Frequency.FromMHz
-- uid: HackRFDotnet.Api.Frequency.FromGHz*
-  commentId: Overload:HackRFDotnet.Api.Frequency.FromGHz
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_FromGHz_System_Double_
-  name: FromGHz
-  nameWithType: Frequency.FromGHz
-  fullName: HackRFDotnet.Api.Frequency.FromGHz
-- uid: HackRFDotnet.Api.Frequency.op_GreaterThan*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_GreaterThan
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_GreaterThan_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-  name: operator >
-  nameWithType: Frequency.operator >
-  fullName: HackRFDotnet.Api.Frequency.operator >
-  nameWithType.vb: Frequency.>
-  fullName.vb: HackRFDotnet.Api.Frequency.>
-  name.vb: '>'
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_GreaterThan*
-    name: '>'
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_GreaterThan_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: HackRFDotnet.Api.Frequency.op_LessThan*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_LessThan
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_LessThan_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-  name: operator <
-  nameWithType: Frequency.operator <
-  fullName: HackRFDotnet.Api.Frequency.operator <
-  nameWithType.vb: Frequency.<
-  fullName.vb: HackRFDotnet.Api.Frequency.<
-  name.vb: <
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_LessThan*
-    name: <
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_LessThan_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-- uid: HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_GreaterThanOrEqual_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-  name: operator >=
-  nameWithType: Frequency.operator >=
-  fullName: HackRFDotnet.Api.Frequency.operator >=
-  nameWithType.vb: Frequency.>=
-  fullName.vb: HackRFDotnet.Api.Frequency.>=
-  name.vb: '>='
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual*
-    name: '>='
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_GreaterThanOrEqual_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-- uid: HackRFDotnet.Api.Frequency.op_LessThanOrEqual*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_LessThanOrEqual
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_LessThanOrEqual_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-  name: operator <=
-  nameWithType: Frequency.operator <=
-  fullName: HackRFDotnet.Api.Frequency.operator <=
-  nameWithType.vb: Frequency.<=
-  fullName.vb: HackRFDotnet.Api.Frequency.<=
-  name.vb: <=
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_LessThanOrEqual*
-    name: <=
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_LessThanOrEqual_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-- uid: HackRFDotnet.Api.Frequency.op_Equality*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_Equality
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Equality_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-  name: operator ==
-  nameWithType: Frequency.operator ==
-  fullName: HackRFDotnet.Api.Frequency.operator ==
-  nameWithType.vb: Frequency.=
-  fullName.vb: HackRFDotnet.Api.Frequency.=
-  name.vb: =
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_Equality*
-    name: ==
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Equality_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-- uid: HackRFDotnet.Api.Frequency.op_Inequality*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_Inequality
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Inequality_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-  name: operator !=
-  nameWithType: Frequency.operator !=
-  fullName: HackRFDotnet.Api.Frequency.operator !=
-  nameWithType.vb: Frequency.<>
-  fullName.vb: HackRFDotnet.Api.Frequency.<>
-  name.vb: <>
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_Inequality*
-    name: '!='
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Inequality_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-- uid: HackRFDotnet.Api.Frequency.op_Modulus*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_Modulus
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Modulus_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-  name: operator %
-  nameWithType: Frequency.operator %
-  fullName: HackRFDotnet.Api.Frequency.operator %
-  nameWithType.vb: Frequency.Mod
-  fullName.vb: HackRFDotnet.Api.Frequency.Mod
-  name.vb: Mod
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_Modulus*
-    name: '%'
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Modulus_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-- uid: HackRFDotnet.Api.Frequency.op_UnaryNegation*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_UnaryNegation
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_UnaryNegation_HackRFDotnet_Api_Frequency_
-  name: operator -
-  nameWithType: Frequency.operator -
-  fullName: HackRFDotnet.Api.Frequency.operator -
-  nameWithType.vb: Frequency.-
-  fullName.vb: HackRFDotnet.Api.Frequency.-
-  name.vb: '-'
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_UnaryNegation*
-    name: '-'
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_UnaryNegation_HackRFDotnet_Api_Frequency_
-- uid: HackRFDotnet.Api.Frequency.op_Division*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_Division
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Division_HackRFDotnet_Api_Frequency_System_Int32_
-  name: operator /
-  nameWithType: Frequency.operator /
-  fullName: HackRFDotnet.Api.Frequency.operator /
-  nameWithType.vb: Frequency./
-  fullName.vb: HackRFDotnet.Api.Frequency./
-  name.vb: /
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_Division*
-    name: /
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Division_HackRFDotnet_Api_Frequency_System_Int32_
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: HackRFDotnet.Api.Frequency.op_Subtraction*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_Subtraction
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Subtraction_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-  name: operator -
-  nameWithType: Frequency.operator -
-  fullName: HackRFDotnet.Api.Frequency.operator -
-  nameWithType.vb: Frequency.-
-  fullName.vb: HackRFDotnet.Api.Frequency.-
-  name.vb: '-'
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_Subtraction*
-    name: '-'
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Subtraction_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-- uid: HackRFDotnet.Api.Frequency.op_Addition*
-  commentId: Overload:HackRFDotnet.Api.Frequency.op_Addition
-  href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Addition_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
-  name: operator +
-  nameWithType: Frequency.operator +
-  fullName: HackRFDotnet.Api.Frequency.operator +
-  nameWithType.vb: Frequency.+
-  fullName.vb: HackRFDotnet.Api.Frequency.+
-  name.vb: +
-  spec.csharp:
-  - name: operator
-  - name: " "
-  - uid: HackRFDotnet.Api.Frequency.op_Addition*
-    name: +
-    href: HackRFDotnet.Api.Frequency.html#HackRFDotnet_Api_Frequency_op_Addition_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+### YamlMime:ApiPage
+title: Struct Frequency
+body:
+- api1: Struct Frequency
+  id: HackRFDotnet_Api_Frequency
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L6
+  metadata:
+    uid: HackRFDotnet.Api.Frequency
+    commentId: T:HackRFDotnet.Api.Frequency
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api
+      url: HackRFDotnet.Api.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: Frequency of a signal.
+- code: 'public readonly record struct Frequency : IEquatable<Frequency>'
+- h4: Implements
+- list:
+  - text: IEquatable<Frequency>
+    url: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Constructors
+- api3: Frequency(long)
+  id: HackRFDotnet_Api_Frequency__ctor_System_Int64_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L9
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.#ctor(System.Int64)
+    commentId: M:HackRFDotnet.Api.Frequency.#ctor(System.Int64)
+- code: public Frequency(long hz)
+- h4: Parameters
+- parameters:
+  - name: hz
+    type:
+    - text: long
+      url: https://learn.microsoft.com/dotnet/api/system.int64
+- api3: Frequency(Hertz)
+  id: HackRFDotnet_Api_Frequency__ctor_HackRFDotnet_Api_Hertz_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L11
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.#ctor(HackRFDotnet.Api.Hertz)
+    commentId: M:HackRFDotnet.Api.Frequency.#ctor(HackRFDotnet.Api.Hertz)
+- code: public Frequency(Hertz hertz)
+- h4: Parameters
+- parameters:
+  - name: hertz
+    type:
+    - text: Hertz
+      url: HackRFDotnet.Api.Hertz.html
+- h2: Properties
+- api3: Hz
+  id: HackRFDotnet_Api_Frequency_Hz
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L15
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.Hz
+    commentId: P:HackRFDotnet.Api.Frequency.Hz
+- code: public long Hz { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: long
+      url: https://learn.microsoft.com/dotnet/api/system.int64
+- h2: Methods
+- api3: FromGHz(double)
+  id: HackRFDotnet_Api_Frequency_FromGHz_System_Double_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L37
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.FromGHz(System.Double)
+    commentId: M:HackRFDotnet.Api.Frequency.FromGHz(System.Double)
+- code: public static Frequency FromGHz(double ghz)
+- h4: Parameters
+- parameters:
+  - name: ghz
+    type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: FromHz(Hertz)
+  id: HackRFDotnet_Api_Frequency_FromHz_HackRFDotnet_Api_Hertz_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L21
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.FromHz(HackRFDotnet.Api.Hertz)
+    commentId: M:HackRFDotnet.Api.Frequency.FromHz(HackRFDotnet.Api.Hertz)
+- code: public static Frequency FromHz(Hertz hz)
+- h4: Parameters
+- parameters:
+  - name: hz
+    type:
+    - text: Hertz
+      url: HackRFDotnet.Api.Hertz.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: FromHz(long)
+  id: HackRFDotnet_Api_Frequency_FromHz_System_Int64_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L25
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.FromHz(System.Int64)
+    commentId: M:HackRFDotnet.Api.Frequency.FromHz(System.Int64)
+- code: public static Frequency FromHz(long hz)
+- h4: Parameters
+- parameters:
+  - name: hz
+    type:
+    - text: long
+      url: https://learn.microsoft.com/dotnet/api/system.int64
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: FromKHz(double)
+  id: HackRFDotnet_Api_Frequency_FromKHz_System_Double_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L29
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.FromKHz(System.Double)
+    commentId: M:HackRFDotnet.Api.Frequency.FromKHz(System.Double)
+- code: public static Frequency FromKHz(double khz)
+- h4: Parameters
+- parameters:
+  - name: khz
+    type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: FromMHz(double)
+  id: HackRFDotnet_Api_Frequency_FromMHz_System_Double_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L33
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.FromMHz(System.Double)
+    commentId: M:HackRFDotnet.Api.Frequency.FromMHz(System.Double)
+- code: public static Frequency FromMHz(double mhz)
+- h4: Parameters
+- parameters:
+  - name: mhz
+    type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h2: Operators
+- api3: operator +(Frequency, Frequency)
+  id: HackRFDotnet_Api_Frequency_op_Addition_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L77
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_Addition(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+    commentId: M:HackRFDotnet.Api.Frequency.op_Addition(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+- code: public static Frequency operator +(Frequency a, Frequency b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: operator /(Frequency, int)
+  id: HackRFDotnet_Api_Frequency_op_Division_HackRFDotnet_Api_Frequency_System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L65
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_Division(HackRFDotnet.Api.Frequency,System.Int32)
+    commentId: M:HackRFDotnet.Api.Frequency.op_Division(HackRFDotnet.Api.Frequency,System.Int32)
+- code: public static Frequency operator /(Frequency a, int b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: operator /(Frequency, double)
+  id: HackRFDotnet_Api_Frequency_op_Division_HackRFDotnet_Api_Frequency_System_Double_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L69
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_Division(HackRFDotnet.Api.Frequency,System.Double)
+    commentId: M:HackRFDotnet.Api.Frequency.op_Division(HackRFDotnet.Api.Frequency,System.Double)
+- code: public static Frequency operator /(Frequency a, double b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: operator >(Frequency, Frequency)
+  id: HackRFDotnet_Api_Frequency_op_GreaterThan_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L41
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_GreaterThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+    commentId: M:HackRFDotnet.Api.Frequency.op_GreaterThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+- code: public static bool operator >(Frequency a, Frequency b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- api3: operator >=(Frequency, Frequency)
+  id: HackRFDotnet_Api_Frequency_op_GreaterThanOrEqual_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L49
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+    commentId: M:HackRFDotnet.Api.Frequency.op_GreaterThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+- code: public static bool operator >=(Frequency a, Frequency b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- api3: implicit operator Bandwidth(Frequency)
+  id: HackRFDotnet_Api_Frequency_op_Implicit_HackRFDotnet_Api_Frequency__HackRFDotnet_Api_Bandwidth
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L89
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_Implicit(HackRFDotnet.Api.Frequency)~HackRFDotnet.Api.Bandwidth
+    commentId: M:HackRFDotnet.Api.Frequency.op_Implicit(HackRFDotnet.Api.Frequency)~HackRFDotnet.Api.Bandwidth
+- code: public static implicit operator Bandwidth(Frequency f)
+- h4: Parameters
+- parameters:
+  - name: f
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+- api3: implicit operator Hertz(Frequency)
+  id: HackRFDotnet_Api_Frequency_op_Implicit_HackRFDotnet_Api_Frequency__HackRFDotnet_Api_Hertz
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L93
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_Implicit(HackRFDotnet.Api.Frequency)~HackRFDotnet.Api.Hertz
+    commentId: M:HackRFDotnet.Api.Frequency.op_Implicit(HackRFDotnet.Api.Frequency)~HackRFDotnet.Api.Hertz
+- code: public static implicit operator Hertz(Frequency f)
+- h4: Parameters
+- parameters:
+  - name: f
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: Hertz
+      url: HackRFDotnet.Api.Hertz.html
+- api3: operator <(Frequency, Frequency)
+  id: HackRFDotnet_Api_Frequency_op_LessThan_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L45
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_LessThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+    commentId: M:HackRFDotnet.Api.Frequency.op_LessThan(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+- code: public static bool operator <(Frequency a, Frequency b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- api3: operator <=(Frequency, Frequency)
+  id: HackRFDotnet_Api_Frequency_op_LessThanOrEqual_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L53
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_LessThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+    commentId: M:HackRFDotnet.Api.Frequency.op_LessThanOrEqual(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+- code: public static bool operator <=(Frequency a, Frequency b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- api3: operator %(Frequency, Frequency)
+  id: HackRFDotnet_Api_Frequency_op_Modulus_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L57
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_Modulus(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+    commentId: M:HackRFDotnet.Api.Frequency.op_Modulus(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+- code: public static Frequency operator %(Frequency a, Frequency b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: operator *(Frequency, int)
+  id: HackRFDotnet_Api_Frequency_op_Multiply_HackRFDotnet_Api_Frequency_System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L81
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_Multiply(HackRFDotnet.Api.Frequency,System.Int32)
+    commentId: M:HackRFDotnet.Api.Frequency.op_Multiply(HackRFDotnet.Api.Frequency,System.Int32)
+- code: public static Frequency operator *(Frequency a, int b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: operator *(Frequency, double)
+  id: HackRFDotnet_Api_Frequency_op_Multiply_HackRFDotnet_Api_Frequency_System_Double_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L85
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_Multiply(HackRFDotnet.Api.Frequency,System.Double)
+    commentId: M:HackRFDotnet.Api.Frequency.op_Multiply(HackRFDotnet.Api.Frequency,System.Double)
+- code: public static Frequency operator *(Frequency a, double b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: operator -(Frequency, Frequency)
+  id: HackRFDotnet_Api_Frequency_op_Subtraction_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Frequency_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L73
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_Subtraction(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+    commentId: M:HackRFDotnet.Api.Frequency.op_Subtraction(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Frequency)
+- code: public static Frequency operator -(Frequency a, Frequency b)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: b
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: operator -(Frequency)
+  id: HackRFDotnet_Api_Frequency_op_UnaryNegation_HackRFDotnet_Api_Frequency_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Frequency.cs#L61
+  metadata:
+    uid: HackRFDotnet.Api.Frequency.op_UnaryNegation(HackRFDotnet.Api.Frequency)
+    commentId: M:HackRFDotnet.Api.Frequency.op_UnaryNegation(HackRFDotnet.Api.Frequency)
+- code: public static Frequency operator -(Frequency a)
+- h4: Parameters
+- parameters:
+  - name: a
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+languageId: csharp
+metadata:
+  description: Frequency of a signal.

@@ -10,7 +10,8 @@
           ]
         }
       ],
-      "dest": "docs/api"
+      "dest": "docs/api",
+      "outputFormat": "apiPage"
     }
   ],
   "build": {
@@ -39,6 +40,7 @@
     "globalMetadata": {
       "_appName": "HackrfDotnet",
       "_appTitle": "HackrfDotnet",
+      "_appFooter": "<span>Github <a href=\"https://github.com/Realynx/HackRFDotnet\">HackRfDotnet</a>.</span>",
       "_enableSearch": true,
       "pdf": true
     }

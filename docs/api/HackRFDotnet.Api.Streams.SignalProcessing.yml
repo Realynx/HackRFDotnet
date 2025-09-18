@@ -1,70 +1,26 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.Api.Streams.SignalProcessing
-  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
-  id: HackRFDotnet.Api.Streams.SignalProcessing
-  children:
-  - HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
-  - HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.Api.Streams.SignalProcessing
-  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder.html
-  name: SignalProcessingBuilder
-  nameWithType: SignalProcessingBuilder
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingBuilder
-- uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-  commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-  parent: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline.html
-  name: SignalProcessingPipeline
-  nameWithType: SignalProcessingPipeline
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline
-- uid: HackRFDotnet.Api.Streams.SignalProcessing
-  commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalProcessing
-  nameWithType: HackRFDotnet.Api.Streams.SignalProcessing
-  fullName: HackRFDotnet.Api.Streams.SignalProcessing
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalProcessing
-    name: SignalProcessing
-    href: HackRFDotnet.Api.Streams.SignalProcessing.html
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.Streams.SignalProcessing
+body:
+- api1: Namespace HackRFDotnet.Api.Streams.SignalProcessing
+  id: HackRFDotnet_Api_Streams_SignalProcessing
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing
+    commentId: N:HackRFDotnet.Api.Streams.SignalProcessing
+- h3: Namespaces
+- parameters:
+  - type:
+      text: HackRFDotnet.Api.Streams.SignalProcessing.Effects
+      url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.html
+  - type:
+      text: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
+      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.html
+  - type:
+      text: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
+      url: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.html
+- h3: Classes
+- parameters:
+  - type:
+      text: SignalProcessingPipeline<TInput>
+      url: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.html
+    description: Effects chain processor.
+languageId: csharp

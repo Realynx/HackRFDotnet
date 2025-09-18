@@ -1,62 +1,26 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.Api.Streams.SignalStreams
-  commentId: N:HackRFDotnet.Api.Streams.SignalStreams
-  id: HackRFDotnet.Api.Streams.SignalStreams
-  children:
-  - HackRFDotnet.Api.Streams.SignalStreams.SignalStream
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.Api.Streams.SignalStreams
-  nameWithType: HackRFDotnet.Api.Streams.SignalStreams
-  fullName: HackRFDotnet.Api.Streams.SignalStreams
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
-  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.SignalStream
-  parent: HackRFDotnet.Api.Streams.SignalStreams
-  href: HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html
-  name: SignalStream
-  nameWithType: SignalStream
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.SignalStream
-- uid: HackRFDotnet.Api.Streams.SignalStreams
-  commentId: N:HackRFDotnet.Api.Streams.SignalStreams
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalStreams
-  nameWithType: HackRFDotnet.Api.Streams.SignalStreams
-  fullName: HackRFDotnet.Api.Streams.SignalStreams
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams
-    name: SignalStreams
-    href: HackRFDotnet.Api.Streams.SignalStreams.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams
-    name: SignalStreams
-    href: HackRFDotnet.Api.Streams.SignalStreams.html
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.Streams.SignalStreams
+body:
+- api1: Namespace HackRFDotnet.Api.Streams.SignalStreams
+  id: HackRFDotnet_Api_Streams_SignalStreams
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams
+    commentId: N:HackRFDotnet.Api.Streams.SignalStreams
+- h3: Namespaces
+- parameters:
+  - type:
+      text: HackRFDotnet.Api.Streams.SignalStreams.Analogue
+      url: HackRFDotnet.Api.Streams.SignalStreams.Analogue.html
+  - type:
+      text: HackRFDotnet.Api.Streams.SignalStreams.Digital
+      url: HackRFDotnet.Api.Streams.SignalStreams.Digital.html
+- h3: Classes
+- parameters:
+  - type:
+      text: SignalStream<TOutput>
+      url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html
+    description: >-
+      A SignalStream allows you to process effects from a pipeline, and read the result like a stream reader.
+
+      Stream must be created from a <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref>
+languageId: csharp

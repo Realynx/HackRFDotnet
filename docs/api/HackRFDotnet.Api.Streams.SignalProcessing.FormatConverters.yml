@@ -1,0 +1,23 @@
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
+body:
+- api1: Namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
+  id: HackRFDotnet_Api_Streams_SignalProcessing_FormatConverters
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
+    commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
+- h3: Classes
+- parameters:
+  - type:
+      text: AmDecoder
+      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.AmDecoder.html
+  - type:
+      text: BpskDecoder
+      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.BpskDecoder.html
+  - type:
+      text: FmDecoder
+      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.FmDecoder.html
+  - type:
+      text: QpskDecoder
+      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.html
+languageId: csharp

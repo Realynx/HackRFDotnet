@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Realynx/HackRFDotnet/new/master/apiSpec/new?filename=HackRFDotnet_Api_Utilities_SignalUtilities.md&amp;value=---%0Auid%3A%20HackRFDotnet.Api.Utilities.SignalUtilities%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +39,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,257 +84,121 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="HackRFDotnet.Api.Utilities.SignalUtilities">
+        <article data-uid="">
+<h1 class='section api' data-uid='HackRFDotnet.Api.Utilities.SignalUtilities' data-commentid='T:HackRFDotnet.Api.Utilities.SignalUtilities' id='HackRFDotnet_Api_Utilities_SignalUtilities'>Class SignalUtilities    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs#L5'><i class='bi bi-code-slash'></i></a></h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='HackRFDotnet.Api.Utilities.html'>HackRFDotnet.Api.Utilities</a></dd></dl><dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
+</div><pre><code class='lang-csharp'>public class SignalUtilities</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
+</div>
+<div>
+<a href='HackRFDotnet.Api.Utilities.SignalUtilities.html'>SignalUtilities</a>
+</div>
 
+</dd></dl><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)'>object.Equals(object?, object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gethashcode'>object.GetHashCode()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gettype'>object.GetType()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone'>object.MemberwiseClone()</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.referenceequals'>object.ReferenceEquals(object?, object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
+</div>
 
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)' data-commentid='M:HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)' id='HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_System_Span_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_Frequency_HackRFDotnet_Api_SampleRate_'>ApplyFrequencyOffset(Span&lt;IQ&gt;, Frequency, SampleRate)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs#L37'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static void ApplyFrequencyOffset(Span&lt;IQ&gt; iqFrame, Frequency freqOffset, SampleRate sampleRate)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>iqFrame</code> <a href='https://learn.microsoft.com/dotnet/api/system.span-1'>Span</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;  </dt>
+<dd>
 
-  <h1 id="HackRFDotnet_Api_Utilities_SignalUtilities" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities" class="text-break">
-Class SignalUtilities  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs/#L5"><i class="bi bi-code-slash"></i></a>
-  </h1>
 
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="HackRFDotnet.html">HackRFDotnet</a>.<a class="xref" href="HackRFDotnet.Api.html">Api</a>.<a class="xref" href="HackRFDotnet.Api.Utilities.html">Utilities</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
-  </div>
 
-  <div class="markdown summary"></div>
-  <div class="markdown conceptual"></div>
+</dd><dt><code>freqOffset</code> <a href='HackRFDotnet.Api.Frequency.html'>Frequency</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SignalUtilities</code></pre>
-  </div>
 
 
+</dd><dt><code>sampleRate</code> <a href='HackRFDotnet.Api.SampleRate.html'>SampleRate</a>  </dt>
+<dd>
 
 
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">SignalUtilities</span></div>
-    </dd>
-  </dl>
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Utilities.SignalUtilities.CalculateRmsDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})' data-commentid='M:HackRFDotnet.Api.Utilities.SignalUtilities.CalculateRmsDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})' id='HackRFDotnet_Api_Utilities_SignalUtilities_CalculateRmsDb_System_ReadOnlySpan_HackRFDotnet_Api_Streams_IQ__'>CalculateRmsDb(ReadOnlySpan&lt;IQ&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs#L90'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static float CalculateRmsDb(ReadOnlySpan&lt;IQ&gt; iqFrame)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>iqFrame</code> <a href='https://learn.microsoft.com/dotnet/api/system.readonlyspan-1'>ReadOnlySpan</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;  </dt>
+<dd>
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-  </dd></dl>
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})' data-commentid='M:HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})' id='HackRFDotnet_Api_Utilities_SignalUtilities_CalculateSignalDb_System_ReadOnlySpan_HackRFDotnet_Api_Streams_IQ__'>CalculateSignalDb(ReadOnlySpan&lt;IQ&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs#L75'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static float CalculateSignalDb(ReadOnlySpan&lt;IQ&gt; iqFrame)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>iqFrame</code> <a href='https://learn.microsoft.com/dotnet/api/system.readonlyspan-1'>ReadOnlySpan</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;  </dt>
+<dd>
 
 
-  <h2 class="section" id="methods">Methods
-</h2>
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <a id="HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset*"></a>
 
-  <h3 id="HackRFDotnet_Api_Utilities_SignalUtilities_ApplyFrequencyOffset_System_Span_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_Frequency_HackRFDotnet_Api_SampleRate_" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.ApplyFrequencyOffset(System.Span{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)">
-  ApplyFrequencyOffset(Span&lt;IQ&gt;, Frequency, SampleRate)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs/#L37"><i class="bi bi-code-slash"></i></a>
-  </h3>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)' data-commentid='M:HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)' id='HackRFDotnet_Api_Utilities_SignalUtilities_FrequencyResolution_System_Int32_HackRFDotnet_Api_SampleRate_System_Boolean_'>FrequencyResolution(int, SampleRate, bool)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs#L69'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static long FrequencyResolution(int length, SampleRate sampleRate, bool positiveOnly = true)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>length</code> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void ApplyFrequencyOffset(Span&lt;IQ&gt; iqFrame, Frequency freqOffset, SampleRate sampleRate)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>iqFrame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a>&gt;</dt>
-    <dd></dd>
-    <dt><code>freqOffset</code> <a class="xref" href="HackRFDotnet.Api.Frequency.html">Frequency</a></dt>
-    <dd></dd>
-    <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
-    <dd></dd>
-  </dl>
 
+</dd><dt><code>sampleRate</code> <a href='HackRFDotnet.Api.SampleRate.html'>SampleRate</a>  </dt>
+<dd>
 
 
 
+</dd><dt><code>positiveOnly</code> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int64'>long</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Utilities.SignalUtilities.IQCorrection(System.Span{HackRFDotnet.Api.Streams.IQ})' data-commentid='M:HackRFDotnet.Api.Utilities.SignalUtilities.IQCorrection(System.Span{HackRFDotnet.Api.Streams.IQ})' id='HackRFDotnet_Api_Utilities_SignalUtilities_IQCorrection_System_Span_HackRFDotnet_Api_Streams_IQ__'>IQCorrection(Span&lt;IQ&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs#L6'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static void IQCorrection(Span&lt;IQ&gt; iqFrame)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>iqFrame</code> <a href='https://learn.microsoft.com/dotnet/api/system.span-1'>Span</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;  </dt>
+<dd>
 
 
-  <a id="HackRFDotnet_Api_Utilities_SignalUtilities_CalculateRmsDb_" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.CalculateRmsDb*"></a>
 
-  <h3 id="HackRFDotnet_Api_Utilities_SignalUtilities_CalculateRmsDb_System_ReadOnlySpan_HackRFDotnet_Api_Streams_IQ__" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.CalculateRmsDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})">
-  CalculateRmsDb(ReadOnlySpan&lt;IQ&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs/#L90"><i class="bi bi-code-slash"></i></a>
-  </h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Utilities.SignalUtilities.NormalizeRms(System.Span{System.Single},System.Single)' data-commentid='M:HackRFDotnet.Api.Utilities.SignalUtilities.NormalizeRms(System.Span{System.Single},System.Single)' id='HackRFDotnet_Api_Utilities_SignalUtilities_NormalizeRms_System_Span_System_Single__System_Single_'>NormalizeRms(Span&lt;float&gt;, float)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs#L105'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public static void NormalizeRms(Span&lt;float&gt; buffer, float targetRms = 0.04)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>buffer</code> <a href='https://learn.microsoft.com/dotnet/api/system.span-1'>Span</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>&gt;  </dt>
+<dd>
 
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float CalculateRmsDb(ReadOnlySpan&lt;IQ&gt; iqFrame)</code></pre>
-  </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>iqFrame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a>&gt;</dt>
-    <dd></dd>
-  </dl>
+</dd><dt><code>targetRms</code> <a href='https://learn.microsoft.com/dotnet/api/system.single'>float</a>  </dt>
+<dd>
 
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
 
 
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Utilities_SignalUtilities_CalculateSignalDb_" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb*"></a>
-
-  <h3 id="HackRFDotnet_Api_Utilities_SignalUtilities_CalculateSignalDb_System_ReadOnlySpan_HackRFDotnet_Api_Streams_IQ__" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.CalculateSignalDb(System.ReadOnlySpan{HackRFDotnet.Api.Streams.IQ})">
-  CalculateSignalDb(ReadOnlySpan&lt;IQ&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs/#L75"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float CalculateSignalDb(ReadOnlySpan&lt;IQ&gt; iqFrame)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>iqFrame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Utilities_SignalUtilities_FrequencyResolution_" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution*"></a>
-
-  <h3 id="HackRFDotnet_Api_Utilities_SignalUtilities_FrequencyResolution_System_Int32_HackRFDotnet_Api_SampleRate_System_Boolean_" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.FrequencyResolution(System.Int32,HackRFDotnet.Api.SampleRate,System.Boolean)">
-  FrequencyResolution(int, SampleRate, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs/#L69"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long FrequencyResolution(int length, SampleRate sampleRate, bool positiveOnly = true)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
-    <dd></dd>
-    <dt><code>positiveOnly</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Utilities_SignalUtilities_IQCorrection_" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.IQCorrection*"></a>
-
-  <h3 id="HackRFDotnet_Api_Utilities_SignalUtilities_IQCorrection_System_Span_HackRFDotnet_Api_Streams_IQ__" data-uid="HackRFDotnet.Api.Utilities.SignalUtilities.IQCorrection(System.Span{HackRFDotnet.Api.Streams.IQ})">
-  IQCorrection(Span&lt;IQ&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs/#L6"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void IQCorrection(Span&lt;IQ&gt; iqFrame)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>iqFrame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</dd></dl>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Utilities/SignalUtilities.cs/#L5" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -350,7 +214,7 @@ Class SignalUtilities  <a class="header-action link-secondary" title="View sourc
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <span>Github <a href="https://github.com/Realynx/HackRFDotnet">HackRfDotnet</a>.</span>
         </div>
       </div>
     </footer>

@@ -1,54 +1,14 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.Api.Extensions
-  commentId: N:HackRFDotnet.Api.Extensions
-  id: HackRFDotnet.Api.Extensions
-  children:
-  - HackRFDotnet.Api.Extensions.RfDeviceExtensions
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.Api.Extensions
-  nameWithType: HackRFDotnet.Api.Extensions
-  fullName: HackRFDotnet.Api.Extensions
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.Api.Extensions.RfDeviceExtensions
-  commentId: T:HackRFDotnet.Api.Extensions.RfDeviceExtensions
-  parent: HackRFDotnet.Api.Extensions
-  href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html
-  name: RfDeviceExtensions
-  nameWithType: RfDeviceExtensions
-  fullName: HackRFDotnet.Api.Extensions.RfDeviceExtensions
-- uid: HackRFDotnet.Api.Extensions
-  commentId: N:HackRFDotnet.Api.Extensions
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Extensions
-  nameWithType: HackRFDotnet.Api.Extensions
-  fullName: HackRFDotnet.Api.Extensions
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Extensions
-    name: Extensions
-    href: HackRFDotnet.Api.Extensions.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Extensions
-    name: Extensions
-    href: HackRFDotnet.Api.Extensions.html
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.Extensions
+body:
+- api1: Namespace HackRFDotnet.Api.Extensions
+  id: HackRFDotnet_Api_Extensions
+  metadata:
+    uid: HackRFDotnet.Api.Extensions
+    commentId: N:HackRFDotnet.Api.Extensions
+- h3: Classes
+- parameters:
+  - type:
+      text: RfDeviceExtensions
+      url: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html
+languageId: csharp

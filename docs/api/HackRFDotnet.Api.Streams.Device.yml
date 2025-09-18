@@ -1,30 +1,23 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.Api.Streams.Device
-  commentId: N:HackRFDotnet.Api.Streams.Device
-  id: HackRFDotnet.Api.Streams.Device
-  children:
-  - HackRFDotnet.Api.Streams.Device.IQDeviceStream
-  - HackRFDotnet.Api.Streams.Device.IQFileStream
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.Api.Streams.Device
-  nameWithType: HackRFDotnet.Api.Streams.Device
-  fullName: HackRFDotnet.Api.Streams.Device
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream
-  commentId: T:HackRFDotnet.Api.Streams.Device.IQDeviceStream
-  href: HackRFDotnet.Api.Streams.Device.IQDeviceStream.html
-  name: IQDeviceStream
-  nameWithType: IQDeviceStream
-  fullName: HackRFDotnet.Api.Streams.Device.IQDeviceStream
-- uid: HackRFDotnet.Api.Streams.Device.IQFileStream
-  commentId: T:HackRFDotnet.Api.Streams.Device.IQFileStream
-  href: HackRFDotnet.Api.Streams.Device.IQFileStream.html
-  name: IQFileStream
-  nameWithType: IQFileStream
-  fullName: HackRFDotnet.Api.Streams.Device.IQFileStream
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.Streams.Device
+body:
+- api1: Namespace HackRFDotnet.Api.Streams.Device
+  id: HackRFDotnet_Api_Streams_Device
+  metadata:
+    uid: HackRFDotnet.Api.Streams.Device
+    commentId: N:HackRFDotnet.Api.Streams.Device
+- h3: Classes
+- parameters:
+  - type:
+      text: IQDeviceStream
+      url: HackRFDotnet.Api.Streams.Device.IQDeviceStream.html
+    description: >-
+      IQ Stream from the Rf Device.
+
+      This stream is the root of all data processed with the library.
+
+      This stream must remain immutable from all other SignalStreams.SignalStream.
+  - type:
+      text: IQFileStream
+      url: HackRFDotnet.Api.Streams.Device.IQFileStream.html
+languageId: csharp

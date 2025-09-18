@@ -1,78 +1,21 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals
-  commentId: N:HackRFDotnet.NativeApi.Enums.Peripherals
-  id: HackRFDotnet.NativeApi.Enums.Peripherals
-  children:
-  - HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.NativeApi.Enums.Peripherals
-  nameWithType: HackRFDotnet.NativeApi.Enums.Peripherals
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals
-  href: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.html
-  name: LedState
-  nameWithType: LedState
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.LedState
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals
-  href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.html
-  name: OperacakePorts
-  nameWithType: OperacakePorts
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
-  commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals
-  href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.html
-  name: OperacakeSwitchingMode
-  nameWithType: OperacakeSwitchingMode
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals
-  commentId: N:HackRFDotnet.NativeApi.Enums.Peripherals
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Enums.Peripherals
-  nameWithType: HackRFDotnet.NativeApi.Enums.Peripherals
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.Peripherals
-    name: Peripherals
-    href: HackRFDotnet.NativeApi.Enums.Peripherals.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.Peripherals
-    name: Peripherals
-    href: HackRFDotnet.NativeApi.Enums.Peripherals.html
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.NativeApi.Enums.Peripherals
+body:
+- api1: Namespace HackRFDotnet.NativeApi.Enums.Peripherals
+  id: HackRFDotnet_NativeApi_Enums_Peripherals
+  metadata:
+    uid: HackRFDotnet.NativeApi.Enums.Peripherals
+    commentId: N:HackRFDotnet.NativeApi.Enums.Peripherals
+- h3: Enums
+- parameters:
+  - type:
+      text: LedState
+      url: HackRFDotnet.NativeApi.Enums.Peripherals.LedState.html
+  - type:
+      text: OperacakePorts
+      url: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.html
+  - type:
+      text: OperacakeSwitchingMode
+      url: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode.html
+    description: Opera Cake port switching mode. Set via <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.SetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte%2cHackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode)" data-throw-if-not-resolved="false"></xref> and queried via <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Operacake.GetOperacakeMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cSystem.Byte%2cHackRFDotnet.NativeApi.Enums.Peripherals.OperacakeSwitchingMode*)" data-throw-if-not-resolved="false"></xref>.
+languageId: csharp

@@ -1,33 +1,20 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  id: HackrfUsbBoardId
-  parent: HackRFDotnet.NativeApi.Enums.System
-  children:
-  - HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
-  - HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_INVALID
-  - HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
-  - HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_RAD1O
-  langs:
-  - csharp
-  - vb
-  name: HackrfUsbBoardId
-  nameWithType: HackrfUsbBoardId
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  type: Enum
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: HackrfUsbBoardId
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-    startLine: 11
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: >-
+### YamlMime:ApiPage
+title: Enum HackrfUsbBoardId
+body:
+- api1: Enum HackrfUsbBoardId
+  id: HackRFDotnet_NativeApi_Enums_System_HackrfUsbBoardId
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs#L12
+  metadata:
+    uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+    commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Enums.System
+      url: HackRFDotnet.NativeApi.Enums.System.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: >-
     USB board ID (product ID) enum
 
 
@@ -36,219 +23,37 @@ items:
     Only used in <xref href="HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids" data-throw-if-not-resolved="false"></xref> field of <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList" data-throw-if-not-resolved="false"></xref>,
 
     and can be converted into human-readable string via <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)" data-throw-if-not-resolved="false"></xref>.
-  example: []
-  syntax:
-    content: public enum HackrfUsbBoardId
-    content.vb: Public Enum HackrfUsbBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
-  id: USB_BOARD_ID_JAWBREAKER
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  langs:
-  - csharp
-  - vb
-  name: USB_BOARD_ID_JAWBREAKER
-  nameWithType: HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_JAWBREAKER
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: USB_BOARD_ID_JAWBREAKER
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-    startLine: 15
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Jawbreaker (beta platform) USB product id
-  example: []
-  syntax:
-    content: USB_BOARD_ID_JAWBREAKER = 24651
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
-  id: USB_BOARD_ID_HACKRF_ONE
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  langs:
-  - csharp
-  - vb
-  name: USB_BOARD_ID_HACKRF_ONE
-  nameWithType: HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_HACKRF_ONE
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: USB_BOARD_ID_HACKRF_ONE
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-    startLine: 20
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: HackRF One USB product id
-  example: []
-  syntax:
-    content: USB_BOARD_ID_HACKRF_ONE = 24713
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_RAD1O
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_RAD1O
-  id: USB_BOARD_ID_RAD1O
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  langs:
-  - csharp
-  - vb
-  name: USB_BOARD_ID_RAD1O
-  nameWithType: HackrfUsbBoardId.USB_BOARD_ID_RAD1O
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_RAD1O
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: USB_BOARD_ID_RAD1O
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-    startLine: 25
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: RAD1O (custom version) USB product id
-  example: []
-  syntax:
-    content: USB_BOARD_ID_RAD1O = 52245
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_INVALID
-  commentId: F:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_INVALID
-  id: USB_BOARD_ID_INVALID
-  parent: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  langs:
-  - csharp
-  - vb
-  name: USB_BOARD_ID_INVALID
-  nameWithType: HackrfUsbBoardId.USB_BOARD_ID_INVALID
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.USB_BOARD_ID_INVALID
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: USB_BOARD_ID_INVALID
-    path: HackRFDotnet/NativeApi/Enums/System/HackrfUsbBoardId.cs
-    startLine: 30
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.System
-  summary: Invalid / unknown USB product id
-  example: []
-  syntax:
-    content: USB_BOARD_ID_INVALID = 65535
-    return:
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-references:
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids
-  commentId: F:HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids
-  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.html#HackRFDotnet_NativeApi_Structs_Devices_HackRFDeviceList_usb_board_ids
-  name: usb_board_ids
-  nameWithType: HackRFDeviceList.usb_board_ids
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDeviceList.usb_board_ids
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_QueryDeviceList
-  name: QueryDeviceList()
-  nameWithType: HackRfNativeLib.Devices.QueryDeviceList()
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList()
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList
-    name: QueryDeviceList
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_QueryDeviceList
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.QueryDeviceList
-    name: QueryDeviceList
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Devices.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Devices_QueryDeviceList
-  - name: (
-  - name: )
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_UsbBoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfUsbBoardId_
-  name: UsbBoardIdName(HackrfUsbBoardId)
-  nameWithType: HackRfNativeLib.Firmware.UsbBoardIdName(HackrfUsbBoardId)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-    name: UsbBoardIdName
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_UsbBoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfUsbBoardId_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-    name: HackrfUsbBoardId
-    href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-    name: UsbBoardIdName
-    isExternal: true
-    href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_UsbBoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfUsbBoardId_
-  - name: (
-  - uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-    name: HackrfUsbBoardId
-    href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
-  - name: )
-- uid: HackRFDotnet.NativeApi.Enums.System
-  commentId: N:HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Enums.System
-  nameWithType: HackRFDotnet.NativeApi.Enums.System
-  fullName: HackRFDotnet.NativeApi.Enums.System
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.System
-    name: System
-    href: HackRFDotnet.NativeApi.Enums.System.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.System
-    name: System
-    href: HackRFDotnet.NativeApi.Enums.System.html
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  parent: HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
-  name: HackrfUsbBoardId
-  nameWithType: HackrfUsbBoardId
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
+- code: public enum HackrfUsbBoardId
+- h2: Fields
+- parameters:
+  - name: USB_BOARD_ID_HACKRF_ONE
+    default: "24713"
+    description: >+
+      HackRF One USB product id
+
+  - name: USB_BOARD_ID_INVALID
+    default: "65535"
+    description: >+
+      Invalid / unknown USB product id
+
+  - name: USB_BOARD_ID_JAWBREAKER
+    default: "24651"
+    description: >+
+      Jawbreaker (beta platform) USB product id
+
+  - name: USB_BOARD_ID_RAD1O
+    default: "52245"
+    description: >+
+      RAD1O (custom version) USB product id
+
+languageId: csharp
+metadata:
+  description: >-
+    USB board ID (product ID) enum
+
+
+    Contains USB-IF product id (field `idProduct` in `libusb_device_descriptor`). Can be used to identify general type of hardware.
+
+    Only used in  field of ,
+
+    and can be converted into human-readable string via .

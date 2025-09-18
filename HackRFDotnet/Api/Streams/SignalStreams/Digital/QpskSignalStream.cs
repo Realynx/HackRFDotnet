@@ -1,58 +1,32 @@
-﻿//using System.Buffers;
+﻿using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.Streams.SignalProcessing;
+using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
 
-//using HackRFDotnet.Api.Streams.Interfaces;
-//using HackRFDotnet.Api.Streams.SignalProcessing;
+namespace HackRFDotnet.Api.Streams.SignalStreams.Digital;
+public class QpskSignalStream : SignalStream<byte> {
+    public QpskSignalStream(IIQStream iQStream, Bandwidth signalBandwidth)
+        : base(iQStream, BuildFxChain(iQStream, signalBandwidth, out _), false) {
 
-//namespace HackRFDotnet.Api.Streams.SignalStreams.Digital;
-//public class QpskSignalStream : SignalStream<byte> {
-//    public QpskSignalStream(IIQStream iQStream, SignalProcessingPipeline<IQ>? processingPipeline = null, bool keepOpen = true)
-//        : base(iQStream, processingPipeline, keepOpen) {
+    }
 
-//    }
+    private static SignalProcessingPipeline<IQ> BuildFxChain(IIQStream deviceStream, Bandwidth stationBandwidth, out SampleRate reducedRate) {
+        var signalPipeline = new SignalProcessingPipeline<IQ>();
 
-//    public int Read(Span<byte> buffer, int count) {
-//        // we need 4 IQ symbols to make 1 output byte (since 4 * 2 bits = 8 bits)
-//        var symbolsNeeded = count * 4;
+        signalPipeline
+            .WithRootEffect(new IQDownSampleEffect(deviceStream.SampleRate,
+                stationBandwidth.NyquistSampleRate, out reducedRate, out var producedChunkSize))
 
-//        var iqBuffer = ArrayPool<IQ>.Shared.Rent(symbolsNeeded);
+            .AddChildEffect(new FftEffect(true, producedChunkSize))
+            .AddChildEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
+            .AddChildEffect(new FftEffect(false, producedChunkSize))
+            .AddChildEffect(new QpskDecoder());
 
-//        try {
-//            ReadSpan(iqBuffer.AsSpan(0, symbolsNeeded));
+        return signalPipeline;
+    }
 
-//            var bitIndex = 0;
-//            byte currentByte = 0;
-//            var outIndex = 0;
-
-//            for (var x = 0; x < symbolsNeeded; x++) {
-//                var I = iqBuffer[x].I;
-//                var Q = iqBuffer[x].Q;
-
-//                // QPSK hard decision (Gray coded):
-//                // (+,+) -> 00
-//                // (-,+) -> 01
-//                // (-,-) -> 11
-//                // (+,-) -> 10
-
-//                var bit0 = I < 0 ? 1 : 0; // first bit from I sign
-//                var bit1 = Q < 0 ? 1 : 0; // second bit from Q sign
-
-//                // pack into current byte (MSB first)
-//                currentByte = (byte)((currentByte << 1) | bit0);
-//                bitIndex++;
-//                currentByte = (byte)((currentByte << 1) | bit1);
-//                bitIndex++;
-
-//                if (bitIndex == 8) {
-//                    buffer[outIndex++] = currentByte;
-//                    currentByte = 0;
-//                    bitIndex = 0;
-//                }
-//            }
-
-//            return count;
-//        }
-//        finally {
-//            ArrayPool<IQ>.Shared.Return(iqBuffer);
-//        }
-//    }
-//}
+    public int Read(Span<byte> buffer, int count) {
+        ReadSpan(buffer.Slice(0, count));
+        return count;
+    }
+}

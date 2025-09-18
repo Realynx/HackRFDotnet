@@ -6,7 +6,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class IQDeviceStream | HackrfDotnet ">
       
-      <meta name="description" content="IQ Stream from the Rf Device. This stream is the root of all data processed with the library. This stream must remain immutable from all other .">
+      <meta name="description" content="IQ Stream from the Rf Device.
+This stream is the root of all data processed with the library.
+This stream must remain immutable from all other SignalStreams.SignalStream.">
       <link rel="icon" href="../../favicon.ico">
       <link rel="stylesheet" href="../../public/docfx.min.css">
       <link rel="stylesheet" href="../../public/main.css">
@@ -16,7 +18,7 @@
       <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Realynx/HackRFDotnet/new/master/apiSpec/new?filename=HackRFDotnet_Api_Streams_Device_IQDeviceStream.md&amp;value=---%0Auid%3A%20HackRFDotnet.Api.Streams.Device.IQDeviceStream%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +41,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,418 +86,124 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream">
-
-
-
-  <h1 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream" class="text-break">
-Class IQDeviceStream  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L13"><i class="bi bi-code-slash"></i></a>
-  </h1>
-
-  <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="HackRFDotnet.html">HackRFDotnet</a>.<a class="xref" href="HackRFDotnet.Api.html">Api</a>.<a class="xref" href="HackRFDotnet.Api.Streams.html">Streams</a>.<a class="xref" href="HackRFDotnet.Api.Streams.Device.html">Device</a></dd></dl>
-  <dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
-  </div>
-
-  <div class="markdown summary"><p>IQ Stream from the Rf Device.
+        <article data-uid="">
+<h1 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream' data-commentid='T:HackRFDotnet.Api.Streams.Device.IQDeviceStream' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream'>Class IQDeviceStream    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L15'><i class='bi bi-code-slash'></i></a></h1>
+ <div class="facts text-secondary">
+<dl><dt>Namespace</dt><dd><a href='HackRFDotnet.Api.Streams.Device.html'>HackRFDotnet.Api.Streams.Device</a></dd></dl><dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
+</div><p>IQ Stream from the Rf Device.
 This stream is the root of all data processed with the library.
-This stream must remain immutable from all other <a class="xref" href="HackRFDotnet.Api.Streams.SignalStreams.SignalStream.html">SignalStream</a>.</p>
+This stream must remain immutable from all other SignalStreams.SignalStream.</p>
+<pre><code class='lang-csharp'>public class IQDeviceStream : IDisposable, IIQStream</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
 </div>
-  <div class="markdown conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IQDeviceStream : IDisposable, IIQStream</code></pre>
-  </div>
-
-
-
-
-  <dl class="typelist inheritance">
-    <dt>Inheritance</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">IQDeviceStream</span></div>
-    </dd>
-  </dl>
-
-  <dl class="typelist implements">
-    <dt>Implements</dt>
-    <dd>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-      <div><a class="xref" href="HackRFDotnet.Api.Streams.Interfaces.IIQStream.html">IIQStream</a></div>
-    </dd>
-  </dl>
-
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-  </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="constructors">Constructors
-</h2>
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream__ctor_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.#ctor*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream__ctor_HackRFDotnet_Api_DigitalRadioDevice_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.#ctor(HackRFDotnet.Api.DigitalRadioDevice)">
-  IQDeviceStream(DigitalRadioDevice)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L32"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IQDeviceStream(DigitalRadioDevice rfDevice)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rfDevice</code> <a class="xref" href="HackRFDotnet.Api.DigitalRadioDevice.html">DigitalRadioDevice</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_RfDevice" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.RfDevice">
-  RfDevice
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L14"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly DigitalRadioDevice RfDevice</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.DigitalRadioDevice.html">DigitalRadioDevice</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_BufferLength_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_BufferLength" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength">
-  BufferLength
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L26"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The number of bytes available to read in the buffer.</p>
+<div>
+<a href='HackRFDotnet.Api.Streams.Device.IQDeviceStream.html'>IQDeviceStream</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int BufferLength { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_SampleRate_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_SampleRate" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate">
-  SampleRate
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L20"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The capture sample rate from the device.</p>
+</dd></dl><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.idisposable'>IDisposable</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SampleRate SampleRate { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_Close_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.Close*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_Close" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.Close">
-  Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L47"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Close the stream on the device.</p>
+<div>
+<a href='HackRFDotnet.Api.Streams.Interfaces.IIQStream.html'>IIQStream</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_Dispose_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.Dispose*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_Dispose" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.Dispose">
-  Dispose()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L103"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</dd></dl><h4 class='section'>Inherited Members</h4><dl class="typelist"><dd>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)'>object.Equals(object?)</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_OpenRx_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_OpenRx_HackRFDotnet_Api_SampleRate_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx(HackRFDotnet.Api.SampleRate)">
-  OpenRx(SampleRate?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L38"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Open an Rx stream to read IQ samples.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)'>object.Equals(object?, object?)</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OpenRx(SampleRate? sampleRate = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_ReadBuffer_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.ReadBuffer*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_ReadBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})">
-  ReadBuffer(Span&lt;IQ&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L66"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Fill a span with data from the ring buffer.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gethashcode'>object.GetHashCode()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ReadBuffer(Span&lt;IQ&gt; iqBuffer)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>iqBuffer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_SetSampleRate_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.SetSampleRate*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_SetSampleRate_HackRFDotnet_Api_SampleRate_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.SetSampleRate(HackRFDotnet.Api.SampleRate)">
-  SetSampleRate(SampleRate)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L51"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Set the capture sample rate of the stream and device.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.gettype'>object.GetType()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetSampleRate(SampleRate sampleRate)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>sampleRate</code> <a class="xref" href="HackRFDotnet.Api.SampleRate.html">SampleRate</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_TxBuffer_" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.TxBuffer*"></a>
-
-  <h3 id="HackRFDotnet_Api_Streams_Device_IQDeviceStream_TxBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__" data-uid="HackRFDotnet.Api.Streams.Device.IQDeviceStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})">
-  TxBuffer(Span&lt;IQ&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L62"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Open a Tx stream to write IQ samples.</p>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone'>object.MemberwiseClone()</a>
 </div>
-  <div class="markdown level1 conceptual"></div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.referenceequals'>object.ReferenceEquals(object?, object?)</a>
+</div>
+<div>
+<a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
+</div>
 
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int TxBuffer(Span&lt;IQ&gt; iqFrame)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>iqFrame</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;<a class="xref" href="HackRFDotnet.Api.Streams.IQ.html">IQ</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
+</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.#ctor(HackRFDotnet.Api.DigitalRadioDevice)' data-commentid='M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.#ctor(HackRFDotnet.Api.DigitalRadioDevice)' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream__ctor_HackRFDotnet_Api_DigitalRadioDevice_'>IQDeviceStream(DigitalRadioDevice)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L34'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public IQDeviceStream(DigitalRadioDevice rfDevice)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>rfDevice</code> <a href='HackRFDotnet.Api.DigitalRadioDevice.html'>DigitalRadioDevice</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.RfDevice' data-commentid='F:HackRFDotnet.Api.Streams.Device.IQDeviceStream.RfDevice' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream_RfDevice'>RfDevice    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L16'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>public readonly DigitalRadioDevice RfDevice</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.DigitalRadioDevice.html'>DigitalRadioDevice</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength' data-commentid='P:HackRFDotnet.Api.Streams.Device.IQDeviceStream.BufferLength' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream_BufferLength'>BufferLength    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L28'><i class='bi bi-code-slash'></i></a></h3>
+ <p>The number of bytes available to read in the buffer.</p>
+<pre><code class='lang-csharp'>public int BufferLength { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate' data-commentid='P:HackRFDotnet.Api.Streams.Device.IQDeviceStream.SampleRate' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream_SampleRate'>SampleRate    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L22'><i class='bi bi-code-slash'></i></a></h3>
+ <p>The capture sample rate from the device.</p>
+<pre><code class='lang-csharp'>public SampleRate SampleRate { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.SampleRate.html'>SampleRate</a>  </dt>
+<dd>
 
 
 
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.Close' data-commentid='M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.Close' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream_Close'>Close()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L49'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Close the stream on the device.</p>
+<pre><code class='lang-csharp'>public void Close()</code></pre><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.Dispose' data-commentid='M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.Dispose' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream_Dispose'>Dispose()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L108'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+<pre><code class='lang-csharp'>public void Dispose()</code></pre><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx(System.Nullable{HackRFDotnet.Api.SampleRate})' data-commentid='M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx(System.Nullable{HackRFDotnet.Api.SampleRate})' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream_OpenRx_System_Nullable_HackRFDotnet_Api_SampleRate__'>OpenRx(SampleRate?)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L40'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Open an Rx stream to read IQ samples.</p>
+<pre><code class='lang-csharp'>public void OpenRx(SampleRate? sampleRate = null)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>sampleRate</code> <a href='HackRFDotnet.Api.SampleRate.html'>SampleRate</a>?  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})' data-commentid='M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream_ReadBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__'>ReadBuffer(Span&lt;IQ&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L68'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Fill a span with data from the ring buffer.</p>
+<pre><code class='lang-csharp'>public int ReadBuffer(Span&lt;IQ&gt; iqBuffer)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>iqBuffer</code> <a href='https://learn.microsoft.com/dotnet/api/system.span-1'>Span</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;  </dt>
+<dd>
+
+
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.SetSampleRate(HackRFDotnet.Api.SampleRate)' data-commentid='M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.SetSampleRate(HackRFDotnet.Api.SampleRate)' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream_SetSampleRate_HackRFDotnet_Api_SampleRate_'>SetSampleRate(SampleRate)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L53'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Set the capture sample rate of the stream and device.</p>
+<pre><code class='lang-csharp'>public void SetSampleRate(SampleRate sampleRate)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>sampleRate</code> <a href='HackRFDotnet.Api.SampleRate.html'>SampleRate</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.Device.IQDeviceStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})' data-commentid='M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})' id='HackRFDotnet_Api_Streams_Device_IQDeviceStream_TxBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__'>TxBuffer(Span&lt;IQ&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L64'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Open a Tx stream to write IQ samples.</p>
+<pre><code class='lang-csharp'>public int TxBuffer(Span&lt;IQ&gt; iqFrame)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>iqFrame</code> <a href='https://learn.microsoft.com/dotnet/api/system.span-1'>Span</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;  </dt>
+<dd>
+
+
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.int32'>int</a>  </dt>
+<dd>
+
+
+
+</dd></dl>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 
@@ -511,7 +219,7 @@ This stream must remain immutable from all other <a class="xref" href="HackRFDot
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <span>Github <a href="https://github.com/Realynx/HackRFDotnet">HackRfDotnet</a>.</span>
         </div>
       </div>
     </footer>

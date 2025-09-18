@@ -1,84 +1,23 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  commentId: N:HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  id: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  children:
-  - HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream
-  - HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream
-  - HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream
-  langs:
-  - csharp
-  - vb
-  name: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  nameWithType: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  type: Namespace
-  assemblies:
-  - HackRFDotnet
-references:
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream
-  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream
-  href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.html
-  name: AmSignalStream
-  nameWithType: AmSignalStream
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream
-  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream
-  href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream.html
-  name: FmSignalStream
-  nameWithType: FmSignalStream
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream
-  commentId: T:HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream
-  parent: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.html
-  name: WaveSignalStream
-  nameWithType: WaveSignalStream
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream
-- uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  commentId: N:HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  nameWithType: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  fullName: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams
-    name: SignalStreams
-    href: HackRFDotnet.Api.Streams.SignalStreams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-    name: Analogue
-    href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams
-    name: Streams
-    href: HackRFDotnet.Api.Streams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams
-    name: SignalStreams
-    href: HackRFDotnet.Api.Streams.SignalStreams.html
-  - name: .
-  - uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue
-    name: Analogue
-    href: HackRFDotnet.Api.Streams.SignalStreams.Analogue.html
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue
+body:
+- api1: Namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue
+  id: HackRFDotnet_Api_Streams_SignalStreams_Analogue
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue
+    commentId: N:HackRFDotnet.Api.Streams.SignalStreams.Analogue
+- h3: Classes
+- parameters:
+  - type:
+      text: AmSignalStream
+      url: HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream.html
+    description: Demodulate AM audio from the <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref>.
+  - type:
+      text: FmSignalStream
+      url: HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream.html
+    description: Demodulate FM audio from <xref href="HackRFDotnet.Api.Streams.Interfaces.IIQStream" data-throw-if-not-resolved="false"></xref>.
+  - type:
+      text: WaveSignalStream
+      url: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.html
+    description: NAudio <xref href="NAudio.Wave.ISampleProvider" data-throw-if-not-resolved="false"></xref> base stream implementation, <xref href="HackRFDotnet.Api.Streams.SignalStreams.Analogue.AmSignalStream" data-throw-if-not-resolved="false"></xref> and <xref href="HackRFDotnet.Api.Streams.SignalStreams.Analogue.FmSignalStream" data-throw-if-not-resolved="false"></xref> stream inherit this.
+languageId: csharp

@@ -39,7 +39,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,59 +84,52 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects">
+        <article data-uid="">
+<h1 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalProcessing.Effects' data-commentid='N:HackRFDotnet.Api.Streams.SignalProcessing.Effects' id='HackRFDotnet_Api_Streams_SignalProcessing_Effects'>Namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects   </h1>
+ <h3 class='section'>Classes</h3><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.html'>FftEffect</a>  </dt>
+<dd>
 
-  <h1 id="HackRFDotnet_Api_Streams_SignalProcessing_Effects" data-uid="HackRFDotnet.Api.Streams.SignalProcessing.Effects" class="text-break">Namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
 
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.BasicSignalScanningEffect.html">BasicSignalScanningEffect</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.DownSampleEffect.html">DownSampleEffect</a></dt>
-      <dd><p><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.DownSampleEffect.html">DownSampleEffect</a> removes extraneous information from your signal using your desired bandwidth.
-Example: an FM radio's band is around 200 kHz; the minimum sample rate required to represent this is 400 kS/s (400,000 samples per second).
-It is recommended that you reduce the sample rate of your audio signal this way before further signal processing to save CPU.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.html">FftEffect</a></dt>
-      <dd><p>Fast Fourier Transform Effect.
+<p>Fast Fourier Transform Effect.
 Can be used for forward and inverse transforms.
 Must be given a chunk with a size that is a multiple of 2 [Length % 2 == 0]
 Must be configured with a chunk size for caching a convert buffer.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html">FrequencyCenteringEffect</a></dt>
-      <dd><p>Shift the frequency by a <a class="xref" href="HackRFDotnet.Api.Frequency.html">Frequency</a> offset.
+
+</dd><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.html'>FrequencyCenteringEffect</a>  </dt>
+<dd>
+
+
+<p>Shift the frequency by a <a class="xref" href="HackRFDotnet.Api.Frequency.html">Frequency</a> offset.
 This only works for IQ samples, we can shift frequency without losing information.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.html">LowPassFilterEffect</a></dt>
-      <dd><p>Low Pass Filter Effect to remove unwanted signals from the input signal.
+
+</dd><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.html'>IQDownSampleEffect</a>  </dt>
+<dd>
+
+
+<p><span class="xref">HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect</span> removes extraneous information from your signal using your desired bandwidth.
+Example: an FM radio's band is around 200 kHz; the minimum sample rate required to represent this is 400 kS/s (400,000 samples per second).
+It is recommended that you reduce the sample rate of your audio signal this way before further signal processing to save CPU.</p>
+
+</dd><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.html'>LowPassFilterEffect</a>  </dt>
+<dd>
+
+
+<p>Low Pass Filter Effect to remove unwanted signals from the input signal.
 Configured with a bandwidth to limit via the filter.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect.html">SignalEffect</a></dt>
-      <dd><p>Signal effect base class.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.html">SquelchEffect</a></dt>
-      <dd><p>Squelch Effect to remove noise when there is no detected signal present.</p>
-</dd>
-    </dl>
+
+</dd><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html'>SignalEffect&lt;TInput, TOutput&gt;</a>  </dt>
+<dd>
 
 
+<p>Signal effect base class.</p>
+
+</dd><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.html'>SquelchEffect</a>  </dt>
+<dd>
+
+
+<p>Squelch Effect to remove noise when there is no detected signal present.</p>
+
+</dd></dl>
 </article>
 
         <div class="contribution d-print-none">
@@ -155,7 +148,7 @@ Configured with a bandwidth to limit via the filter.</p>
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          <span>Github <a href="https://github.com/Realynx/HackRFDotnet">HackRfDotnet</a>.</span>
         </div>
       </div>
     </footer>

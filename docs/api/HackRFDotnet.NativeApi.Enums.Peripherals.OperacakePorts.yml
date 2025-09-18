@@ -1,290 +1,36 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  id: OperacakePorts
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals
-  children:
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA1
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA2
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA3
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA4
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB1
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB2
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB3
-  - HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB4
-  langs:
-  - csharp
-  - vb
-  name: OperacakePorts
-  nameWithType: OperacakePorts
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  type: Enum
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: OperacakePorts
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-    startLine: 1
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: public enum OperacakePorts
-    content.vb: Public Enum OperacakePorts
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA1
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA1
-  id: OPERACAKE_PA1
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  langs:
-  - csharp
-  - vb
-  name: OPERACAKE_PA1
-  nameWithType: OperacakePorts.OPERACAKE_PA1
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA1
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: OPERACAKE_PA1
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-    startLine: 2
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: OPERACAKE_PA1 = 0
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA2
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA2
-  id: OPERACAKE_PA2
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  langs:
-  - csharp
-  - vb
-  name: OPERACAKE_PA2
-  nameWithType: OperacakePorts.OPERACAKE_PA2
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA2
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: OPERACAKE_PA2
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-    startLine: 3
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: OPERACAKE_PA2 = 1
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA3
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA3
-  id: OPERACAKE_PA3
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  langs:
-  - csharp
-  - vb
-  name: OPERACAKE_PA3
-  nameWithType: OperacakePorts.OPERACAKE_PA3
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA3
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: OPERACAKE_PA3
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-    startLine: 4
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: OPERACAKE_PA3 = 2
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA4
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA4
-  id: OPERACAKE_PA4
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  langs:
-  - csharp
-  - vb
-  name: OPERACAKE_PA4
-  nameWithType: OperacakePorts.OPERACAKE_PA4
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PA4
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: OPERACAKE_PA4
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-    startLine: 5
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: OPERACAKE_PA4 = 3
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB1
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB1
-  id: OPERACAKE_PB1
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  langs:
-  - csharp
-  - vb
-  name: OPERACAKE_PB1
-  nameWithType: OperacakePorts.OPERACAKE_PB1
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB1
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: OPERACAKE_PB1
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-    startLine: 6
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: OPERACAKE_PB1 = 4
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB2
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB2
-  id: OPERACAKE_PB2
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  langs:
-  - csharp
-  - vb
-  name: OPERACAKE_PB2
-  nameWithType: OperacakePorts.OPERACAKE_PB2
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB2
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: OPERACAKE_PB2
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-    startLine: 7
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: OPERACAKE_PB2 = 5
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB3
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB3
-  id: OPERACAKE_PB3
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  langs:
-  - csharp
-  - vb
-  name: OPERACAKE_PB3
-  nameWithType: OperacakePorts.OPERACAKE_PB3
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB3
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: OPERACAKE_PB3
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-    startLine: 8
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: OPERACAKE_PB3 = 6
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB4
-  commentId: F:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB4
-  id: OPERACAKE_PB4
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  langs:
-  - csharp
-  - vb
-  name: OPERACAKE_PB4
-  nameWithType: OperacakePorts.OPERACAKE_PB4
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.OPERACAKE_PB4
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: OPERACAKE_PB4
-    path: HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs
-    startLine: 9
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums.Peripherals
-  syntax:
-    content: OPERACAKE_PB4 = 7
-    return:
-      type: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-references:
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals
-  commentId: N:HackRFDotnet.NativeApi.Enums.Peripherals
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Enums.Peripherals
-  nameWithType: HackRFDotnet.NativeApi.Enums.Peripherals
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.Peripherals
-    name: Peripherals
-    href: HackRFDotnet.NativeApi.Enums.Peripherals.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.Peripherals
-    name: Peripherals
-    href: HackRFDotnet.NativeApi.Enums.Peripherals.html
-- uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
-  parent: HackRFDotnet.NativeApi.Enums.Peripherals
-  href: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts.html
-  name: OperacakePorts
-  nameWithType: OperacakePorts
-  fullName: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
+### YamlMime:ApiPage
+title: Enum OperacakePorts
+body:
+- api1: Enum OperacakePorts
+  id: HackRFDotnet_NativeApi_Enums_Peripherals_OperacakePorts
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/Peripherals/OperacakePorts.cs#L2
+  metadata:
+    uid: HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
+    commentId: T:HackRFDotnet.NativeApi.Enums.Peripherals.OperacakePorts
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Enums.Peripherals
+      url: HackRFDotnet.NativeApi.Enums.Peripherals.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public enum OperacakePorts
+- h2: Fields
+- parameters:
+  - name: OPERACAKE_PA1
+    default: "0"
+  - name: OPERACAKE_PA2
+    default: "1"
+  - name: OPERACAKE_PA3
+    default: "2"
+  - name: OPERACAKE_PA4
+    default: "3"
+  - name: OPERACAKE_PB1
+    default: "4"
+  - name: OPERACAKE_PB2
+    default: "5"
+  - name: OPERACAKE_PB3
+    default: "6"
+  - name: OPERACAKE_PB4
+    default: "7"
+languageId: csharp

@@ -1,124 +1,30 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Enums.SweepStyle
-  commentId: T:HackRFDotnet.NativeApi.Enums.SweepStyle
-  id: SweepStyle
-  parent: HackRFDotnet.NativeApi.Enums
-  children:
-  - HackRFDotnet.NativeApi.Enums.SweepStyle.INTERLEAVED
-  - HackRFDotnet.NativeApi.Enums.SweepStyle.LINEAR
-  langs:
-  - csharp
-  - vb
-  name: SweepStyle
-  nameWithType: SweepStyle
-  fullName: HackRFDotnet.NativeApi.Enums.SweepStyle
-  type: Enum
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/SweepStyle.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: SweepStyle
-    path: HackRFDotnet/NativeApi/Enums/SweepStyle.cs
-    startLine: 1
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums
-  syntax:
-    content: public enum SweepStyle
-    content.vb: Public Enum SweepStyle
-- uid: HackRFDotnet.NativeApi.Enums.SweepStyle.LINEAR
-  commentId: F:HackRFDotnet.NativeApi.Enums.SweepStyle.LINEAR
-  id: LINEAR
-  parent: HackRFDotnet.NativeApi.Enums.SweepStyle
-  langs:
-  - csharp
-  - vb
-  name: LINEAR
-  nameWithType: SweepStyle.LINEAR
-  fullName: HackRFDotnet.NativeApi.Enums.SweepStyle.LINEAR
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/SweepStyle.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: LINEAR
-    path: HackRFDotnet/NativeApi/Enums/SweepStyle.cs
-    startLine: 5
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums
-  summary: step_width is added to the current frequency at each step.
-  example: []
-  syntax:
-    content: LINEAR = 0
-    return:
-      type: HackRFDotnet.NativeApi.Enums.SweepStyle
-- uid: HackRFDotnet.NativeApi.Enums.SweepStyle.INTERLEAVED
-  commentId: F:HackRFDotnet.NativeApi.Enums.SweepStyle.INTERLEAVED
-  id: INTERLEAVED
-  parent: HackRFDotnet.NativeApi.Enums.SweepStyle
-  langs:
-  - csharp
-  - vb
-  name: INTERLEAVED
-  nameWithType: SweepStyle.INTERLEAVED
-  fullName: HackRFDotnet.NativeApi.Enums.SweepStyle.INTERLEAVED
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Enums/SweepStyle.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: INTERLEAVED
-    path: HackRFDotnet/NativeApi/Enums/SweepStyle.cs
-    startLine: 10
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Enums
-  summary: Each step is divided into two interleaved sub-steps, allowing the host to select the best portions of the FFT of each sub-step and discard the rest.
-  example: []
-  syntax:
-    content: INTERLEAVED = 1
-    return:
-      type: HackRFDotnet.NativeApi.Enums.SweepStyle
-references:
-- uid: HackRFDotnet.NativeApi.Enums
-  commentId: N:HackRFDotnet.NativeApi.Enums
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Enums
-  nameWithType: HackRFDotnet.NativeApi.Enums
-  fullName: HackRFDotnet.NativeApi.Enums
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-- uid: HackRFDotnet.NativeApi.Enums.SweepStyle
-  commentId: T:HackRFDotnet.NativeApi.Enums.SweepStyle
-  parent: HackRFDotnet.NativeApi.Enums
-  href: HackRFDotnet.NativeApi.Enums.SweepStyle.html
-  name: SweepStyle
-  nameWithType: SweepStyle
-  fullName: HackRFDotnet.NativeApi.Enums.SweepStyle
+### YamlMime:ApiPage
+title: Enum SweepStyle
+body:
+- api1: Enum SweepStyle
+  id: HackRFDotnet_NativeApi_Enums_SweepStyle
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Enums/SweepStyle.cs#L2
+  metadata:
+    uid: HackRFDotnet.NativeApi.Enums.SweepStyle
+    commentId: T:HackRFDotnet.NativeApi.Enums.SweepStyle
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Enums
+      url: HackRFDotnet.NativeApi.Enums.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public enum SweepStyle
+- h2: Fields
+- parameters:
+  - name: INTERLEAVED
+    default: "1"
+    description: >+
+      Each step is divided into two interleaved sub-steps, allowing the host to select the best portions of the FFT of each sub-step and discard the rest.
+
+  - name: LINEAR
+    default: "0"
+    description: >+
+      step_width is added to the current frequency at each step.
+
+languageId: csharp

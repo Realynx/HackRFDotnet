@@ -1,0 +1,101 @@
+### YamlMime:ApiPage
+title: Class SignalProcessingPipeline<TInput>
+body:
+- api1: Class SignalProcessingPipeline<TInput>
+  id: HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_1
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs#L8
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline`1
+    commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline`1
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Streams.SignalProcessing
+      url: HackRFDotnet.Api.Streams.SignalProcessing.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: Effects chain processor.
+- code: 'public class SignalProcessingPipeline<TInput> where TInput : struct'
+- h4: Type Parameters
+- parameters:
+  - name: TInput
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: SignalProcessingPipeline<TInput>
+    url: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.html
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Methods
+- api3: ApplyPipeline(Span<TInput>)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_1_ApplyPipeline_System_Span__0__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs#L16
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline`1.ApplyPipeline(System.Span{`0})
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline`1.ApplyPipeline(System.Span{`0})
+- code: public int ApplyPipeline(Span<TInput> signalTheta)
+- h4: Parameters
+- parameters:
+  - name: signalTheta
+    type:
+    - text: Span
+      url: https://learn.microsoft.com/dotnet/api/system.span-1
+    - <
+    - TInput
+    - '>'
+- h4: Returns
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+- api3: WithRootEffect<TOutput>(SignalEffect<TInput, TOutput>)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_1_WithRootEffect__1_HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect__0___0__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/SignalProcessingPipeline.cs#L11
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline`1.WithRootEffect``1(HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect{`0,``0})
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline`1.WithRootEffect``1(HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect{`0,``0})
+- code: 'public SignalEffect<TInput, TOutput> WithRootEffect<TOutput>(SignalEffect<TInput, TOutput> rootEffect) where TOutput : struct'
+- h4: Parameters
+- parameters:
+  - name: rootEffect
+    type:
+    - text: SignalEffect
+      url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html
+    - <
+    - TInput
+    - ','
+    - " "
+    - TOutput
+    - '>'
+- h4: Returns
+- parameters:
+  - type:
+    - text: SignalEffect
+      url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html
+    - <
+    - TInput
+    - ','
+    - " "
+    - TOutput
+    - '>'
+- h4: Type Parameters
+- parameters:
+  - name: TOutput
+languageId: csharp
+metadata:
+  description: Effects chain processor.

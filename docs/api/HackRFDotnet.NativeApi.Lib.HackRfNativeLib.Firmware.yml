@@ -1,1663 +1,865 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  id: HackRfNativeLib.Firmware
-  parent: HackRFDotnet.NativeApi.Lib
-  children:
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.HackRFM0State*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.Byte)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.UInt32)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
-  - HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
-  langs:
-  - csharp
-  - vb
-  name: HackRfNativeLib.Firmware
-  nameWithType: HackRfNativeLib.Firmware
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  type: Class
-  source:
-    remote:
-      path: HackRFDotnet/NativeApi/Lib/Firmware.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: Firmware
-    path: HackRFDotnet/NativeApi/Lib/Firmware.cs
-    startLine: 8
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  syntax:
-    content: public static class HackRfNativeLib.Firmware
-    content.vb: Public Module HackRfNativeLib.Firmware
-  inheritance:
-  - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
-  id: SetClkoutEnable(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: SetClkoutEnable(HackRFDevice*, byte)
-  nameWithType: HackRfNativeLib.Firmware.SetClkoutEnable(HackRFDevice*, byte)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: Enable / disable CLKOUT
-  example: []
-  syntax:
-    content: public static extern int SetClkoutEnable(HackRFDevice* device, byte value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: value
-      type: System.Byte
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function SetClkoutEnable(device As HackRFDevice*, value As Byte) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable*
-  nameWithType.vb: HackRfNativeLib.Firmware.SetClkoutEnable(HackRFDevice*, Byte)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte)
-  name.vb: SetClkoutEnable(HackRFDevice*, Byte)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  id: GetClkinStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: GetClkinStatus(HackRFDevice*, byte*)
-  nameWithType: HackRfNativeLib.Firmware.GetClkinStatus(HackRFDevice*, byte*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Get CLKIN status
+### YamlMime:ApiPage
+title: Class HackRfNativeLib.Firmware
+body:
+- api1: Class HackRfNativeLib.Firmware
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/NativeApi/Lib/Firmware.cs#L9
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
+    commentId: T:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.NativeApi.Lib
+      url: HackRFDotnet.NativeApi.Lib.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public static class HackRfNativeLib.Firmware
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: HackRfNativeLib.Firmware
+    url: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Methods
+- api3: BoardIdName(HackrfBoardId)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_BoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfBoardId_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
+- markdown: Convert <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardId" data-throw-if-not-resolved="false"></xref> into human-readable string.
+- code: public static extern sbyte* BoardIdName(HackrfBoardId board_id)
+- h4: Parameters
+- parameters:
+  - name: board_id
+    type:
+    - text: HackrfBoardId
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.html
+    description: Enum to convert.
+- h4: Returns
+- parameters:
+  - type:
+    - text: sbyte
+      url: https://learn.microsoft.com/dotnet/api/system.sbyte
+    - '*'
+    description: Human-readable name of board id.
+- api3: BoardRevName(HackrfBoardRev)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_BoardRevName_HackRFDotnet_NativeApi_Enums_System_HackrfBoardRev_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev)
+- markdown: Convert board revision name.
+- code: public static extern sbyte* BoardRevName(HackrfBoardRev board_rev)
+- h4: Parameters
+- parameters:
+  - name: board_rev
+    type:
+    - text: HackrfBoardRev
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.html
+    description: Board revision enum from <xref href="HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*%2cHackRFDotnet.NativeApi.Enums.System.HackrfBoardRev*)" data-throw-if-not-resolved="false"></xref>.
+- h4: Returns
+- parameters:
+  - type:
+    - text: sbyte
+      url: https://learn.microsoft.com/dotnet/api/system.sbyte
+    - '*'
+    description: Human-readable name of board revision. Discards GSG bit.
+- api3: ClearSpiflashStatus(HackRFDevice*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ClearSpiflashStatus_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
+- markdown: >-
+    Clear the status registers of the W25Q80BV SPI flash chip.
 
-    Check if an external clock signal is detected on the CLKIN port.
-  example: []
-  syntax:
-    content: public static extern int GetClkinStatus(HackRFDevice* device, byte* status)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: status
-      type: System.Byte*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function GetClkinStatus(device As HackRFDevice*, status As Byte*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus*
-  nameWithType.vb: HackRfNativeLib.Firmware.GetClkinStatus(HackRFDevice*, Byte*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte*)
-  name.vb: GetClkinStatus(HackRFDevice*, Byte*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.HackRFM0State*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.HackRFM0State*)
-  id: GetMcuState(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.HackRFM0State*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: GetMcuState(HackRFDevice*, HackRFM0State*)
-  nameWithType: HackRfNativeLib.Firmware.GetMcuState(HackRFDevice*, HackRFM0State*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.System.HackRFM0State*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: Get the state of the M0 code on the LPC43xx MCU
-  example: []
-  syntax:
-    content: public static extern int GetMcuState(HackRFDevice* device, HackRFM0State* value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: value
-      type: HackRFDotnet.NativeApi.Structs.System.HackRFM0State*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function GetMcuState(device As HackRFDevice*, value As HackRFM0State*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState*
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  id: LookupBoardIdPlatform(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: LookupBoardIdPlatform(HackrfBoardId)
-  nameWithType: HackRfNativeLib.Firmware.LookupBoardIdPlatform(HackrfBoardId)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: Lookup platform ID (HACKRF_PLATFORM_xxx) from board id (@ref hackrf_board_id)
-  example: []
-  syntax:
-    content: public static extern uint LookupBoardIdPlatform(HackrfBoardId board_id)
-    parameters:
-    - id: board_id
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-      description: ''
-    return:
-      type: System.UInt32
-      description: ''
-    content.vb: Public Shared Function LookupBoardIdPlatform(board_id As HackrfBoardId) As UInteger
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform*
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*)
-  id: ReadUsbApiVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadUsbApiVersion(HackRFDevice*, ushort*)
-  nameWithType: HackRfNativeLib.Firmware.ReadUsbApiVersion(HackRFDevice*, ushort*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, ushort*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: Read version as MM.mm 16-bit value, where MM is the major and mm is the minor version, encoded as the hex digits of the 16-bit number.
-  example: []
-  syntax:
-    content: public static extern int ReadUsbApiVersion(HackRFDevice* device, ushort* version)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: version
-      type: System.UInt16*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadUsbApiVersion(device As HackRFDevice*, version As UShort*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion*
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadUsbApiVersion(HackRFDevice*, UShort*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, UShort*)
-  name.vb: ReadUsbApiVersion(HackRFDevice*, UShort*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  id: EraseSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: EraseSpiflash(HackRFDevice*)
-  nameWithType: HackRfNativeLib.Firmware.EraseSpiflash(HackRFDevice*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Erase firmware image on the SPI flash
-
-    Should be followed by writing a new image, or the HackRF will be soft-bricked (still rescuable in DFU mode)
-  example: []
-  syntax:
-    content: public static extern int EraseSpiflash(HackRFDevice* device)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function EraseSpiflash(device As HackRFDevice*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash*
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
-  id: WriteSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: WriteSpiflash(HackRFDevice*, uint, ushort, byte*)
-  nameWithType: HackRfNativeLib.Firmware.WriteSpiflash(HackRFDevice*, uint, ushort, byte*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, uint, ushort, byte*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Write firmware image on the SPI flash
-
-    Should only be used for firmware updating. Can brick the device, but it's still rescuable in DFU mode.
-  example: []
-  syntax:
-    content: public static extern int WriteSpiflash(HackRFDevice* device, uint address, ushort length, byte* data)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: address
-      type: System.UInt32
-      description: ''
-    - id: length
-      type: System.UInt16
-      description: ''
-    - id: data
-      type: System.Byte*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function WriteSpiflash(device As HackRFDevice*, address As UInteger, length As UShort, data As Byte*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash*
-  nameWithType.vb: HackRfNativeLib.Firmware.WriteSpiflash(HackRFDevice*, UInteger, UShort, Byte*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, UInteger, UShort, Byte*)
-  name.vb: WriteSpiflash(HackRFDevice*, UInteger, UShort, Byte*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
-  id: ReadSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadSpiflash(HackRFDevice*, uint, ushort, byte*)
-  nameWithType: HackRfNativeLib.Firmware.ReadSpiflash(HackRFDevice*, uint, ushort, byte*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, uint, ushort, byte*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Read firmware image on the SPI flash
-
-    Should only be used for firmware verification.
-  example: []
-  syntax:
-    content: public static extern int ReadSpiflash(HackRFDevice* device, uint address, ushort length, byte* data)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: address
-      type: System.UInt32
-      description: ''
-    - id: length
-      type: System.UInt16
-      description: ''
-    - id: data
-      type: System.Byte*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadSpiflash(device As HackRFDevice*, address As UInteger, length As UShort, data As Byte*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash*
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadSpiflash(HackRFDevice*, UInteger, UShort, Byte*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, UInteger, UShort, Byte*)
-  name.vb: ReadSpiflash(HackRFDevice*, UInteger, UShort, Byte*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  id: SpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: SpiflashStatus(HackRFDevice*, byte*)
-  nameWithType: HackRfNativeLib.Firmware.SpiflashStatus(HackRFDevice*, byte*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Read the status registers of the W25Q80BV SPI flash chip
-
-    See the datasheet for details of the status registers. The two registers are read in order.
-  example: []
-  syntax:
-    content: public static extern int SpiflashStatus(HackRFDevice* device, byte* data)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: data
-      type: System.Byte*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function SpiflashStatus(device As HackRFDevice*, data As Byte*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus*
-  nameWithType.vb: HackRfNativeLib.Firmware.SpiflashStatus(HackRFDevice*, Byte*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte*)
-  name.vb: SpiflashStatus(HackRFDevice*, Byte*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  id: ClearSpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ClearSpiflashStatus(HackRFDevice*)
-  nameWithType: HackRfNativeLib.Firmware.ClearSpiflashStatus(HackRFDevice*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Clear the status registers of the W25Q80BV SPI flash chip
 
     See the datasheet for details of the status registers.
-  example: []
-  syntax:
-    content: public static extern int ClearSpiflashStatus(HackRFDevice* device)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ClearSpiflashStatus(device As HackRFDevice*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus*
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.UInt32)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.UInt32)
-  id: WriteCpld(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.UInt32)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: WriteCpld(HackRFDevice*, byte*, uint)
-  nameWithType: HackRfNativeLib.Firmware.WriteCpld(HackRFDevice*, byte*, uint)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte*, uint)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Write configuration bitstream into the XC2C64A-7VQ100C CPLD
 
-    device will need to be reset after hackrf_cpld_write
-  example: []
-  syntax:
-    content: public static extern int WriteCpld(HackRFDevice* device, byte* data, uint total_length)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: data
-      type: System.Byte*
-      description: ''
-    - id: total_length
-      type: System.UInt32
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function WriteCpld(device As HackRFDevice*, data As Byte*, total_length As UInteger) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld*
-  nameWithType.vb: HackRfNativeLib.Firmware.WriteCpld(HackRFDevice*, Byte*, UInteger)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte*, UInteger)
-  name.vb: WriteCpld(HackRFDevice*, Byte*, UInteger)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  id: ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadBoardId(HackRFDevice*, byte*)
-  nameWithType: HackRfNativeLib.Firmware.ReadBoardId(HackRFDevice*, byte*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Read @ref hackrf_board_id from a device
 
-    The result can be converted into a human-readable string via @ref hackrf_board_id_name
-  example: []
-  syntax:
-    content: public static extern int ReadBoardId(HackRFDevice* device, byte* value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: value
-      type: System.Byte*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadBoardId(device As HackRFDevice*, value As Byte*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId*
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadBoardId(HackRFDevice*, Byte*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte*)
-  name.vb: ReadBoardId(HackRFDevice*, Byte*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.Byte)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.Byte)
-  id: ReadVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.Byte)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadVersion(HackRFDevice*, byte*, byte)
-  nameWithType: HackRfNativeLib.Firmware.ReadVersion(HackRFDevice*, byte*, byte)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte*, byte)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: Read HackRF firmware version as a string
-  example: []
-  syntax:
-    content: public static extern int ReadVersion(HackRFDevice* device, byte* version, byte length)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: version
-      type: System.Byte*
-      description: ''
-    - id: length
-      type: System.Byte
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadVersion(device As HackRFDevice*, version As Byte*, length As Byte) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion*
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadVersion(HackRFDevice*, Byte*, Byte)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte*, Byte)
-  name.vb: ReadVersion(HackRFDevice*, Byte*, Byte)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
-  id: ReadMax2837(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadMax2837(HackRFDevice*, byte, ushort*)
-  nameWithType: HackRfNativeLib.Firmware.ReadMax2837(HackRFDevice*, byte, ushort*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte, ushort*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Directly read the registers of the MAX2837 transceiver IC,
+    Requires USB API version 0x0103 or above!
+- code: public static extern HackrfError ClearSpiflashStatus(HackRFDevice* device)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to clear.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: EraseSpiflash(HackRFDevice*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_EraseSpiflash_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*)
+- markdown: >-
+    Erase firmware image on the SPI flash.
 
-    Intended for debugging purposes only!
-  example: []
-  syntax:
-    content: public static extern int ReadMax2837(HackRFDevice* device, byte register_number, ushort* value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: register_number
-      type: System.Byte
-      description: ''
-    - id: value
-      type: System.UInt16*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadMax2837(device As HackRFDevice*, register_number As Byte, value As UShort*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837*
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadMax2837(HackRFDevice*, Byte, UShort*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte, UShort*)
-  name.vb: ReadMax2837(HackRFDevice*, Byte, UShort*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
-  id: hackrf_max2837_write(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: hackrf_max2837_write(HackRFDevice*, byte, ushort)
-  nameWithType: HackRfNativeLib.Firmware.hackrf_max2837_write(HackRFDevice*, byte, ushort)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte, ushort)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Directly write the registers of the MAX2837 transceiver IC
 
-    Intended for debugging purposes only!
-  example: []
-  syntax:
-    content: public static extern int hackrf_max2837_write(HackRFDevice* device, byte register_number, ushort value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: register_number
-      type: System.Byte
-      description: ''
-    - id: value
-      type: System.UInt16
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function hackrf_max2837_write(device As HackRFDevice*, register_number As Byte, value As UShort) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write*
-  nameWithType.vb: HackRfNativeLib.Firmware.hackrf_max2837_write(HackRFDevice*, Byte, UShort)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte, UShort)
-  name.vb: hackrf_max2837_write(HackRFDevice*, Byte, UShort)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16*)
-  id: ReadSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadSi5351c(HackRFDevice*, ushort, ushort*)
-  nameWithType: HackRfNativeLib.Firmware.ReadSi5351c(HackRFDevice*, ushort, ushort*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, ushort, ushort*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Directly read the registers of the Si5351C clock generator IC
+    Should be followed by writing a new image, or the HackRF will be soft-bricked (still rescuable in DFU mode).
+- code: public static extern HackrfError EraseSpiflash(HackRFDevice* device)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to erase.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: GetClkinStatus(HackRFDevice*, byte*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_GetClkinStatus_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+- markdown: >-
+    Get CLKIN status.
 
-    Intended for debugging purposes only!
-  example: []
-  syntax:
-    content: public static extern int ReadSi5351c(HackRFDevice* device, ushort register_number, ushort* value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: register_number
-      type: System.UInt16
-      description: ''
-    - id: value
-      type: System.UInt16*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadSi5351c(device As HackRFDevice*, register_number As UShort, value As UShort*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c*
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadSi5351c(HackRFDevice*, UShort, UShort*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, UShort, UShort*)
-  name.vb: ReadSi5351c(HackRFDevice*, UShort, UShort*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16)
-  id: WriteSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: WriteSi5351c(HackRFDevice*, ushort, ushort)
-  nameWithType: HackRfNativeLib.Firmware.WriteSi5351c(HackRFDevice*, ushort, ushort)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, ushort, ushort)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Directly write the registers of the Si5351 clock generator IC
 
-    Intended for debugging purposes only!
-  example: []
-  syntax:
-    content: public static extern int WriteSi5351c(HackRFDevice* device, ushort register_number, ushort value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: register_number
-      type: System.UInt16
-      description: ''
-    - id: value
-      type: System.UInt16
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function WriteSi5351c(device As HackRFDevice*, register_number As UShort, value As UShort) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c*
-  nameWithType.vb: HackRfNativeLib.Firmware.WriteSi5351c(HackRFDevice*, UShort, UShort)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, UShort, UShort)
-  name.vb: WriteSi5351c(HackRFDevice*, UShort, UShort)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
-  id: ReadRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadRffc5071(HackRFDevice*, byte, ushort*)
-  nameWithType: HackRfNativeLib.Firmware.ReadRffc5071(HackRFDevice*, byte, ushort*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte, ushort*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Directly read the registers of the RFFC5071/5072 mixer-synthesizer IC
+    Check if an external clock signal is detected on the CLKIN port.
 
-    Intended for debugging purposes only!
-  example: []
-  syntax:
-    content: public static extern int ReadRffc5071(HackRFDevice* device, byte register_number, ushort* value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: register_number
-      type: System.Byte
-      description: ''
-    - id: value
-      type: System.UInt16*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadRffc5071(device As HackRFDevice*, register_number As Byte, value As UShort*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071*
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadRffc5071(HackRFDevice*, Byte, UShort*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte, UShort*)
-  name.vb: ReadRffc5071(HackRFDevice*, Byte, UShort*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
-  id: WriteRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: WriteRffc5071(HackRFDevice*, byte, ushort)
-  nameWithType: HackRfNativeLib.Firmware.WriteRffc5071(HackRFDevice*, byte, ushort)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte, ushort)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Directly write the registers of the RFFC5071/5072 mixer-synthesizer IC
 
-    Intended for debugging purposes only!
-  example: []
-  syntax:
-    content: public static extern int WriteRffc5071(HackRFDevice* device, byte register_number, ushort value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: register_number
-      type: System.Byte
-      description: ''
-    - id: value
-      type: System.UInt16
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function WriteRffc5071(device As HackRFDevice*, register_number As Byte, value As UShort) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071*
-  nameWithType.vb: HackRfNativeLib.Firmware.WriteRffc5071(HackRFDevice*, Byte, UShort)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte, UShort)
-  name.vb: WriteRffc5071(HackRFDevice*, Byte, UShort)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*)
-  id: ReadBoardPartIdSerialNo(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadBoardPartIdSerialNo(HackRFDevice*, ReadPartidSerialNo*)
-  nameWithType: HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo(HackRFDevice*, ReadPartidSerialNo*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Read board part ID and serial number
+    Requires USB API version 0x0106 or above!
+- code: public static extern HackrfError GetClkinStatus(HackRFDevice* device, byte* status)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to read status from.
+  - name: status
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    - '*'
+    description: External clock detected (0/1).
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: GetMcuState(HackRFDevice*, HackRFM0State*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_GetMcuState_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_System_HackRFM0State__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.HackRFM0State*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.HackRFM0State*)
+- markdown: >-
+    Get the state of the M0 code on the LPC43xx MCU.
+
+
+    Requires USB API version 0x0106 or above!
+- code: public static extern HackrfError GetMcuState(HackRFDevice* device, HackRFM0State* value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: value
+    type:
+    - text: HackRFM0State
+      url: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.html
+    - '*'
+    description: MCU code state.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: LookupBoardIdPlatform(HackrfBoardId)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_LookupBoardIdPlatform_HackRFDotnet_NativeApi_Enums_System_HackrfBoardId_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
+- markdown: Lookup platform ID (HACKRF_PLATFORM_xxx) from board id (<xref href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardId" data-throw-if-not-resolved="false"></xref>).
+- code: public static extern uint LookupBoardIdPlatform(HackrfBoardId board_id)
+- h4: Parameters
+- parameters:
+  - name: board_id
+    type:
+    - text: HackrfBoardId
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardId" data-throw-if-not-resolved="false"></xref> enum variant to convert.
+- h4: Returns
+- parameters:
+  - type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+    description: >-
+      <xref href="HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_JAWBREAKER" data-throw-if-not-resolved="false"></xref>, <xref href="HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_OG" data-throw-if-not-resolved="false"></xref>, <xref href="HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_RAD1O" data-throw-if-not-resolved="false"></xref>,
+
+      <xref href="HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_R9" data-throw-if-not-resolved="false"></xref> or 0
+- api3: ReadBoardId(HackRFDevice*, byte*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardId_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+- markdown: >-
+    Read <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardId" data-throw-if-not-resolved="false"></xref> from a device.
+
+
+    The result can be converted into a human-readable string via <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardId" data-throw-if-not-resolved="false"></xref>.
+- code: public static extern HackrfError ReadBoardId(HackRFDevice* device, byte* value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: value
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    - '*'
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardId" data-throw-if-not-resolved="false"></xref> enum value.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: ReadBoardPartIdSerialNo(HackRFDevice*, ReadPartidSerialNo*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardPartIdSerialNo_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_System_ReadPartidSerialNo__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*)
+- markdown: >-
+    Read board part ID and serial number.
+
 
     Read MCU part id and serial number. See the documentation of the MCU for details!
-  example: []
-  syntax:
-    content: public static extern int ReadBoardPartIdSerialNo(HackRFDevice* device, ReadPartidSerialNo* read_partid_serialno)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: read_partid_serialno
-      type: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadBoardPartIdSerialNo(device As HackRFDevice*, read_partid_serialno As ReadPartidSerialNo*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo*
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  id: BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: BoardIdName(HackrfBoardId)
-  nameWithType: HackRfNativeLib.Firmware.BoardIdName(HackrfBoardId)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardId)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: Convert @ref hackrf_board_id into human-readable string
-  example: []
-  syntax:
-    content: public static extern sbyte* BoardIdName(HackrfBoardId board_id)
-    parameters:
-    - id: board_id
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-      description: ''
-    return:
-      type: System.SByte*
-      description: ''
-    content.vb: Public Shared Function BoardIdName(board_id As HackrfBoardId) As SByte*
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName*
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-  id: UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: UsbBoardIdName(HackrfUsbBoardId)
-  nameWithType: HackRfNativeLib.Firmware.UsbBoardIdName(HackrfUsbBoardId)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: Convert @ref hackrf_usb_board_id into human-readable string.
-  example: []
-  syntax:
-    content: public static extern sbyte* UsbBoardIdName(HackrfUsbBoardId usb_board_id)
-    parameters:
-    - id: usb_board_id
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-      description: ''
-    return:
-      type: System.SByte*
-      description: ''
-    content.vb: Public Shared Function UsbBoardIdName(usb_board_id As HackrfUsbBoardId) As SByte*
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName*
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
-  id: SetHardwareSyncMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: SetHardwareSyncMode(HackRFDevice*, byte)
-  nameWithType: HackRfNativeLib.Firmware.SetHardwareSyncMode(HackRFDevice*, byte)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Set hardware sync mode (hardware triggering)
+- code: public static extern HackrfError ReadBoardPartIdSerialNo(HackRFDevice* device, ReadPartidSerialNo* read_partid_serialno)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: read_partid_serialno
+    type:
+    - text: ReadPartidSerialNo
+      url: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.html
+    - '*'
+    description: Result of query.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: ReadBoardRev(HackRFDevice*, HackrfBoardRev*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardRev_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Enums_System_HackrfBoardRev__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev*)
+- markdown: Read board revision of device.
+- code: public static extern HackrfError ReadBoardRev(HackRFDevice* device, HackrfBoardRev* value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to read board revision from.
+  - name: value
+    type:
+    - text: HackrfBoardRev
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.html
+    - '*'
+    description: Revision enum, will become one of <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev" data-throw-if-not-resolved="false"></xref>. Should be initialized with <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.BOARD_REV_UNDETECTED" data-throw-if-not-resolved="false"></xref>.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_ERROR_LIBUSB" data-throw-if-not-resolved="false"></xref>.
+- api3: ReadMax2837(HackRFDevice*, byte, ushort*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadMax2837_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_UInt16__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
+- markdown: >-
+    Directly read the registers of the MAX2837 transceiver IC.
 
-    See the documentation on hardware triggering for details
-  example: []
-  syntax:
-    content: public static extern int SetHardwareSyncMode(HackRFDevice* device, byte value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: value
-      type: System.Byte
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function SetHardwareSyncMode(device As HackRFDevice*, value As Byte) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode*
-  nameWithType.vb: HackRfNativeLib.Firmware.SetHardwareSyncMode(HackRFDevice*, Byte)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte)
-  name.vb: SetHardwareSyncMode(HackRFDevice*, Byte)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  id: ReadBoardRev(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadBoardRev(HackRFDevice*, byte*)
-  nameWithType: HackRfNativeLib.Firmware.ReadBoardRev(HackRFDevice*, byte*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, byte*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: Read board revision of device
-  example: []
-  syntax:
-    content: public static extern int ReadBoardRev(HackRFDevice* device, byte* value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: value
-      type: System.Byte*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadBoardRev(device As HackRFDevice*, value As Byte*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev*
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadBoardRev(HackRFDevice*, Byte*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, Byte*)
-  name.vb: ReadBoardRev(HackRFDevice*, Byte*)
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev)
-  id: BoardRevName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: BoardRevName(HackrfBoardRev)
-  nameWithType: HackRfNativeLib.Firmware.BoardRevName(HackrfBoardRev)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName(HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: Convert board revision name
-  example: []
-  syntax:
-    content: public static extern nint BoardRevName(HackrfBoardRev board_rev)
-    parameters:
-    - id: board_rev
-      type: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
-      description: ''
-    return:
-      type: System.IntPtr
-      description: ''
-    content.vb: Public Shared Function BoardRevName(board_rev As HackrfBoardRev) As IntPtr
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName*
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
-  commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
-  id: ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
-  parent: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware
-  langs:
-  - csharp
-  - vb
-  name: ReadSupportedPlatform(HackRFDevice*, uint*)
-  nameWithType: HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDevice*, uint*)
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, uint*)
-  type: Method
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.NativeApi.Lib
-  summary: >-
-    Read supported platform of device
 
-    Returns a combination of @ref HACKRF_PLATFORM_JAWBREAKER | @ref HACKRF_PLATFORM_HACKRF1_OG | @ref HACKRF_PLATFORM_RAD1O | @ref HACKRF_PLATFORM_HACKRF1_R9
-  example: []
-  syntax:
-    content: public static extern int ReadSupportedPlatform(HackRFDevice* device, uint* value)
-    parameters:
-    - id: device
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-      description: ''
-    - id: value
-      type: System.UInt32*
-      description: ''
-    return:
-      type: System.Int32
-      description: ''
-    content.vb: Public Shared Function ReadSupportedPlatform(device As HackRFDevice*, value As UInteger*) As Integer
-  overload: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform*
-  nameWithType.vb: HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDevice*, UInteger*)
-  fullName.vb: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*, UInteger*)
-  name.vb: ReadSupportedPlatform(HackRFDevice*, UInteger*)
-references:
-- uid: HackRFDotnet.NativeApi.Lib
-  commentId: N:HackRFDotnet.NativeApi.Lib
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Lib
-  nameWithType: HackRFDotnet.NativeApi.Lib
-  fullName: HackRFDotnet.NativeApi.Lib
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Lib
-    name: Lib
-    href: HackRFDotnet.NativeApi.Lib.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Lib
-    name: Lib
-    href: HackRFDotnet.NativeApi.Lib.html
-- uid: System.Object
-  commentId: T:System.Object
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_SetClkoutEnable_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_
-  name: SetClkoutEnable
-  nameWithType: HackRfNativeLib.Firmware.SetClkoutEnable
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  name: HackRFDevice*
-  nameWithType: HackRFDevice*
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
-- uid: System.Byte
-  commentId: T:System.Byte
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte
-  nameWithType: byte
-  fullName: byte
-  nameWithType.vb: Byte
-  fullName.vb: Byte
-  name.vb: Byte
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_GetClkinStatus_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
-  name: GetClkinStatus
-  nameWithType: HackRfNativeLib.Firmware.GetClkinStatus
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetClkinStatus
-- uid: System.Byte*
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.byte
-  name: byte*
-  nameWithType: byte*
-  fullName: byte*
-  nameWithType.vb: Byte*
-  fullName.vb: Byte*
-  name.vb: Byte*
-  spec.csharp:
-  - uid: System.Byte
-    name: byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '*'
-  spec.vb:
-  - uid: System.Byte
-    name: Byte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.byte
-  - name: '*'
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_GetMcuState_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_System_HackRFM0State__
-  name: GetMcuState
-  nameWithType: HackRfNativeLib.Firmware.GetMcuState
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.GetMcuState
-- uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State*
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.html
-  name: HackRFM0State*
-  nameWithType: HackRFM0State*
-  fullName: HackRFDotnet.NativeApi.Structs.System.HackRFM0State*
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-    name: HackRFM0State
-    href: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.html
-  - name: '*'
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Structs.System.HackRFM0State
-    name: HackRFM0State
-    href: HackRFDotnet.NativeApi.Structs.System.HackRFM0State.html
-  - name: '*'
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_LookupBoardIdPlatform_HackRFDotnet_NativeApi_Enums_System_HackrfBoardId_
-  name: LookupBoardIdPlatform
-  nameWithType: HackRfNativeLib.Firmware.LookupBoardIdPlatform
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.LookupBoardIdPlatform
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-  parent: HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId.html
-  name: HackrfBoardId
-  nameWithType: HackrfBoardId
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardId
-- uid: System.UInt32
-  commentId: T:System.UInt32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uint32
-  name: uint
-  nameWithType: uint
-  fullName: uint
-  nameWithType.vb: UInteger
-  fullName.vb: UInteger
-  name.vb: UInteger
-- uid: HackRFDotnet.NativeApi.Enums.System
-  commentId: N:HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Enums.System
-  nameWithType: HackRFDotnet.NativeApi.Enums.System
-  fullName: HackRFDotnet.NativeApi.Enums.System
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.System
-    name: System
-    href: HackRFDotnet.NativeApi.Enums.System.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums
-    name: Enums
-    href: HackRFDotnet.NativeApi.Enums.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Enums.System
-    name: System
-    href: HackRFDotnet.NativeApi.Enums.System.html
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadUsbApiVersion_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16__
-  name: ReadUsbApiVersion
-  nameWithType: HackRfNativeLib.Firmware.ReadUsbApiVersion
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion
-- uid: System.UInt16*
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uint16
-  name: ushort*
-  nameWithType: ushort*
-  fullName: ushort*
-  nameWithType.vb: UShort*
-  fullName.vb: UShort*
-  name.vb: UShort*
-  spec.csharp:
-  - uid: System.UInt16
-    name: ushort
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint16
-  - name: '*'
-  spec.vb:
-  - uid: System.UInt16
-    name: UShort
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint16
-  - name: '*'
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_EraseSpiflash_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__
-  name: EraseSpiflash
-  nameWithType: HackRfNativeLib.Firmware.EraseSpiflash
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.EraseSpiflash
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_WriteSpiflash_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt32_System_UInt16_System_Byte__
-  name: WriteSpiflash
-  nameWithType: HackRfNativeLib.Firmware.WriteSpiflash
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash
-- uid: System.UInt16
-  commentId: T:System.UInt16
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uint16
-  name: ushort
-  nameWithType: ushort
-  fullName: ushort
-  nameWithType.vb: UShort
-  fullName.vb: UShort
-  name.vb: UShort
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadSpiflash_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt32_System_UInt16_System_Byte__
-  name: ReadSpiflash
-  nameWithType: HackRfNativeLib.Firmware.ReadSpiflash
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_SpiflashStatus_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
-  name: SpiflashStatus
-  nameWithType: HackRfNativeLib.Firmware.SpiflashStatus
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ClearSpiflashStatus_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__
-  name: ClearSpiflashStatus
-  nameWithType: HackRfNativeLib.Firmware.ClearSpiflashStatus
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ClearSpiflashStatus
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_WriteCpld_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__System_UInt32_
-  name: WriteCpld
-  nameWithType: HackRfNativeLib.Firmware.WriteCpld
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardId_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
-  name: ReadBoardId
-  nameWithType: HackRfNativeLib.Firmware.ReadBoardId
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardId
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadVersion_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__System_Byte_
-  name: ReadVersion
-  nameWithType: HackRfNativeLib.Firmware.ReadVersion
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadMax2837_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_UInt16__
-  name: ReadMax2837
-  nameWithType: HackRfNativeLib.Firmware.ReadMax2837
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadMax2837
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_hackrf_max2837_write_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_UInt16_
-  name: hackrf_max2837_write
-  nameWithType: HackRfNativeLib.Firmware.hackrf_max2837_write
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadSi5351c_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16_System_UInt16__
-  name: ReadSi5351c
-  nameWithType: HackRfNativeLib.Firmware.ReadSi5351c
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_WriteSi5351c_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16_System_UInt16_
-  name: WriteSi5351c
-  nameWithType: HackRfNativeLib.Firmware.WriteSi5351c
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadRffc5071_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_UInt16__
-  name: ReadRffc5071
-  nameWithType: HackRfNativeLib.Firmware.ReadRffc5071
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_WriteRffc5071_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_UInt16_
-  name: WriteRffc5071
-  nameWithType: HackRfNativeLib.Firmware.WriteRffc5071
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardPartIdSerialNo_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__HackRFDotnet_NativeApi_Structs_System_ReadPartidSerialNo__
-  name: ReadBoardPartIdSerialNo
-  nameWithType: HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardPartIdSerialNo
-- uid: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.html
-  name: ReadPartidSerialNo*
-  nameWithType: ReadPartidSerialNo*
-  fullName: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo*
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
-    name: ReadPartidSerialNo
-    href: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.html
-  - name: '*'
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo
-    name: ReadPartidSerialNo
-    href: HackRFDotnet.NativeApi.Structs.System.ReadPartidSerialNo.html
-  - name: '*'
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_BoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfBoardId_
-  name: BoardIdName
-  nameWithType: HackRfNativeLib.Firmware.BoardIdName
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardIdName
-- uid: System.SByte*
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.sbyte
-  name: sbyte*
-  nameWithType: sbyte*
-  fullName: sbyte*
-  nameWithType.vb: SByte*
-  fullName.vb: SByte*
-  name.vb: SByte*
-  spec.csharp:
-  - uid: System.SByte
-    name: sbyte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.sbyte
-  - name: '*'
-  spec.vb:
-  - uid: System.SByte
-    name: SByte
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.sbyte
-  - name: '*'
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_UsbBoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfUsbBoardId_
-  name: UsbBoardIdName
-  nameWithType: HackRfNativeLib.Firmware.UsbBoardIdName
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-  parent: HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
-  name: HackrfUsbBoardId
-  nameWithType: HackrfUsbBoardId
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_SetHardwareSyncMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_
-  name: SetHardwareSyncMode
-  nameWithType: HackRfNativeLib.Firmware.SetHardwareSyncMode
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadBoardRev_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
-  name: ReadBoardRev
-  nameWithType: HackRfNativeLib.Firmware.ReadBoardRev
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadBoardRev
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_BoardRevName_HackRFDotnet_NativeApi_Enums_System_HackrfBoardRev_
-  name: BoardRevName
-  nameWithType: HackRfNativeLib.Firmware.BoardRevName
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.BoardRevName
-- uid: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
-  commentId: T:HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
-  parent: HackRFDotnet.NativeApi.Enums.System
-  href: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev.html
-  name: HackrfBoardRev
-  nameWithType: HackrfBoardRev
-  fullName: HackRFDotnet.NativeApi.Enums.System.HackrfBoardRev
-- uid: System.IntPtr
-  commentId: T:System.IntPtr
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.intptr
-  name: nint
-  nameWithType: nint
-  fullName: nint
-  nameWithType.vb: IntPtr
-  fullName.vb: System.IntPtr
-  name.vb: IntPtr
-- uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform*
-  commentId: Overload:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.html#HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadSupportedPlatform_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt32__
-  name: ReadSupportedPlatform
-  nameWithType: HackRfNativeLib.Firmware.ReadSupportedPlatform
-  fullName: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform
-- uid: System.UInt32*
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uint32
-  name: uint*
-  nameWithType: uint*
-  fullName: uint*
-  nameWithType.vb: UInteger*
-  fullName.vb: UInteger*
-  name.vb: UInteger*
-  spec.csharp:
-  - uid: System.UInt32
-    name: uint
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint32
-  - name: '*'
-  spec.vb:
-  - uid: System.UInt32
-    name: UInteger
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.uint32
-  - name: '*'
+    Intended for debugging purposes only!
+- code: public static extern HackrfError ReadMax2837(HackRFDevice* device, byte register_number, ushort* value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: register_number
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    description: Register number to read.
+  - name: value
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    - '*'
+    description: Value of the specified register.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: ReadRffc5071(HackRFDevice*, byte, ushort*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadRffc5071_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_UInt16__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16*)
+- markdown: >-
+    Directly read the registers of the RFFC5071/5072 mixer-synthesizer IC.
+
+
+    Intended for debugging purposes only!
+- code: public static extern HackrfError ReadRffc5071(HackRFDevice* device, byte register_number, ushort* value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: register_number
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    description: Register number to read.
+  - name: value
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    - '*'
+    description: Value of the specified register.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: ReadSi5351c(HackRFDevice*, ushort, ushort*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadSi5351c_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16_System_UInt16__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16*)
+- markdown: >-
+    Directly read the registers of the Si5351C clock generator IC.
+
+
+    Intended for debugging purposes only!
+- code: public static extern HackrfError ReadSi5351c(HackRFDevice* device, ushort register_number, ushort* value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: register_number
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    description: Register number to read.
+  - name: value
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    - '*'
+    description: Value of the specified register.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: ReadSpiflash(HackRFDevice*, uint, ushort, byte*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadSpiflash_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt32_System_UInt16_System_Byte__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
+- markdown: >-
+    Read firmware image on the SPI flash.
+
+
+    Should only be used for firmware verification.
+- code: public static extern HackrfError ReadSpiflash(HackRFDevice* device, uint address, ushort length, byte* data)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to read from.
+  - name: address
+    type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+    description: Address to read from. Firmware should start at 0
+  - name: length
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    description: Length of data to read. Must be at most 256.
+  - name: data
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    - '*'
+    description: Pointer to buffer.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: ReadSupportedPlatform(HackRFDevice*, uint*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadSupportedPlatform_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt32__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadSupportedPlatform(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32*)
+- markdown: >-
+    Read supported platform of device.
+
+
+    Returns a combination of <xref href="HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_JAWBREAKER" data-throw-if-not-resolved="false"></xref> | <xref href="HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_OG" data-throw-if-not-resolved="false"></xref> |
+
+    <xref href="HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_RAD1O" data-throw-if-not-resolved="false"></xref> | <xref href="HackRFDotnet.NativeApi.NativeConstants.HACKRF_PLATFORM_HACKRF1_R9" data-throw-if-not-resolved="false"></xref>.
+
+
+    Requires USB API version 0x0106 or above!
+- code: public static extern HackrfError ReadSupportedPlatform(HackRFDevice* device, uint* value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: value
+    type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+    - '*'
+    description: Supported platform bitfield.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: ReadUsbApiVersion(HackRFDevice*, ushort*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadUsbApiVersion_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadUsbApiVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16*)
+- markdown: >-
+    Read HackRF USB API version.
+
+
+    Read version as MM.mm 16-bit value, where MM is the major and mm is the minor version, encoded as the hex digits of the 16-bit number.
+- code: public static extern HackrfError ReadUsbApiVersion(HackRFDevice* device, ushort* version)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: version
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    - '*'
+    description: USB API version.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: ReadVersion(HackRFDevice*, byte*, byte)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_ReadVersion_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__System_Byte_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.Byte)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.ReadVersion(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.Byte)
+- markdown: Read HackRF firmware version as a string.
+- code: public static extern HackrfError ReadVersion(HackRFDevice* device, byte* version, byte length)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: version
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    - '*'
+    description: Version string.
+  - name: length
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    description: Length of allocated string **without null byte** (so set it to `length(arr)-1`).
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: SetClkoutEnable(HackRFDevice*, byte)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_SetClkoutEnable_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetClkoutEnable(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
+- markdown: >-
+    Enable / disable CLKOUT.
+
+
+    Requires USB API version 0x0103 or above!
+- code: public static extern HackrfError SetClkoutEnable(HackRFDevice* device, byte value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to configure.
+  - name: value
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    description: Clock output enabled (0/1).
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: SetHardwareSyncMode(HackRFDevice*, byte)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_SetHardwareSyncMode_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SetHardwareSyncMode(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte)
+- markdown: >-
+    Set hardware sync mode (hardware triggering).
+
+
+    See the documentation on hardware triggering for details.
+
+
+    Requires USB API version 0x0102 or above!
+- code: public static extern HackrfError SetHardwareSyncMode(HackRFDevice* device, byte value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to configure.
+  - name: value
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    description: Enable (1) or disable (0) hardware triggering.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: SpiflashStatus(HackRFDevice*, byte*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_SpiflashStatus_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.SpiflashStatus(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*)
+- markdown: >-
+    Read the status registers of the W25Q80BV SPI flash chip.
+
+
+    See the datasheet for details of the status registers. The two registers are read in order.
+
+
+    Requires USB API version 0x0103 or above!
+- code: public static extern HackrfError SpiflashStatus(HackRFDevice* device, byte* data)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: data
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    - '*'
+    description: char[2] array of the status registers.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: UsbBoardIdName(HackrfUsbBoardId)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_UsbBoardIdName_HackRFDotnet_NativeApi_Enums_System_HackrfUsbBoardId_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.UsbBoardIdName(HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId)
+- markdown: Convert <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfBoardId" data-throw-if-not-resolved="false"></xref> into human-readable string.
+- code: public static extern sbyte* UsbBoardIdName(HackrfUsbBoardId usb_board_id)
+- h4: Parameters
+- parameters:
+  - name: usb_board_id
+    type:
+    - text: HackrfUsbBoardId
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfUsbBoardId.html
+    description: Enum to convert.
+- h4: Returns
+- parameters:
+  - type:
+    - text: sbyte
+      url: https://learn.microsoft.com/dotnet/api/system.sbyte
+    - '*'
+    description: Human-readable name of board id.
+- api3: WriteCpld(HackRFDevice*, byte*, uint)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_WriteCpld_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte__System_UInt32_
+  deprecated: This function writes the bitstream, but the firmware auto-overrides at each reset, so no changes will take effect.
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.UInt32)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteCpld(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte*,System.UInt32)
+- markdown: >-
+    Write configuration bitstream into the XC2C64A-7VQ100C CPLD.
+
+
+    Device will need to be reset after hackrf_cpld_write.
+- code: >-
+    [Obsolete("This function writes the bitstream, but the firmware auto-overrides at each reset, so no changes will take effect.")]
+
+    public static extern HackrfError WriteCpld(HackRFDevice* device, byte* data, uint total_length)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: device to configure.
+  - name: data
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    - '*'
+    description: CPLD bitstream data.
+  - name: total_length
+    type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+    description: length of the bitstream to write.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: WriteRffc5071(HackRFDevice*, byte, ushort)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_WriteRffc5071_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_UInt16_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteRffc5071(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
+- markdown: >-
+    Directly write the registers of the RFFC5071/5072 mixer-synthesizer IC.
+
+
+    Intended for debugging purposes only!
+- code: public static extern HackrfError WriteRffc5071(HackRFDevice* device, byte register_number, ushort value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to write.
+  - name: register_number
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    description: Register number to write.
+  - name: value
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    description: Value to write in the specified register.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: WriteSi5351c(HackRFDevice*, ushort, ushort)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_WriteSi5351c_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt16_System_UInt16_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSi5351c(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt16,System.UInt16)
+- markdown: >-
+    Directly write the registers of the Si5351 clock generator IC.
+
+
+    Intended for debugging purposes only!
+- code: public static extern HackrfError WriteSi5351c(HackRFDevice* device, ushort register_number, ushort value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to write.
+  - name: register_number
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    description: Register number to write.
+  - name: value
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    description: Value to write in the specified register.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: WriteSpiflash(HackRFDevice*, uint, ushort, byte*)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_WriteSpiflash_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_UInt32_System_UInt16_System_Byte__
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.WriteSpiflash(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.UInt32,System.UInt16,System.Byte*)
+- markdown: >-
+    Write firmware image on the SPI flash.
+
+
+    Should only be used for firmware updating. Can brick the device, but it's still rescuable in DFU mode.
+- code: public static extern HackrfError WriteSpiflash(HackRFDevice* device, uint address, ushort length, byte* data)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to write on.
+  - name: address
+    type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+    description: Address to write to. Should start at 0.
+  - name: length
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    description: Length of data to write. Must be at most 256.
+  - name: data
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    - '*'
+    description: Data to write.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+- api3: hackrf_max2837_write(HackRFDevice*, byte, ushort)
+  id: HackRFDotnet_NativeApi_Lib_HackRfNativeLib_Firmware_hackrf_max2837_write_HackRFDotnet_NativeApi_Structs_Devices_HackRFDevice__System_Byte_System_UInt16_
+  metadata:
+    uid: HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
+    commentId: M:HackRFDotnet.NativeApi.Lib.HackRfNativeLib.Firmware.hackrf_max2837_write(HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*,System.Byte,System.UInt16)
+- markdown: >-
+    Directly write the registers of the MAX2837 transceiver IC.
+
+
+    Intended for debugging purposes only!
+- code: public static extern HackrfError hackrf_max2837_write(HackRFDevice* device, byte register_number, ushort value)
+- h4: Parameters
+- parameters:
+  - name: device
+    type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+    description: Device to query.
+  - name: register_number
+    type:
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    description: Register number to read.
+  - name: value
+    type:
+    - text: ushort
+      url: https://learn.microsoft.com/dotnet/api/system.uint16
+    description: Value of the specified register.
+- h4: Returns
+- parameters:
+  - type:
+    - text: HackrfError
+      url: HackRFDotnet.NativeApi.Enums.System.HackrfError.html
+    description: <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError.HACKRF_SUCCESS" data-throw-if-not-resolved="false"></xref> on success or <xref href="HackRFDotnet.NativeApi.Enums.System.HackrfError" data-throw-if-not-resolved="false"></xref> variant.
+languageId: csharp

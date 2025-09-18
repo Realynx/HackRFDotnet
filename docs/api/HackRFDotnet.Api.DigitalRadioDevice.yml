@@ -1,961 +1,239 @@
-### YamlMime:ManagedReference
-items:
-- uid: HackRFDotnet.Api.DigitalRadioDevice
-  commentId: T:HackRFDotnet.Api.DigitalRadioDevice
-  id: DigitalRadioDevice
-  parent: HackRFDotnet.Api
-  children:
-  - HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
-  - HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
-  - HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
-  - HackRFDotnet.Api.DigitalRadioDevice.Dispose
-  - HackRFDotnet.Api.DigitalRadioDevice.Frequency
-  - HackRFDotnet.Api.DigitalRadioDevice.IsConnected
-  - HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
-  - HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
-  - HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
-  - HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
-  - HackRFDotnet.Api.DigitalRadioDevice.StopRx
-  langs:
-  - csharp
-  - vb
-  name: DigitalRadioDevice
-  nameWithType: DigitalRadioDevice
-  fullName: HackRFDotnet.Api.DigitalRadioDevice
-  type: Class
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: DigitalRadioDevice
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 10
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Radio Device to receive IQ Samples with.
-  example: []
-  syntax:
-    content: 'public class DigitalRadioDevice : IDisposable'
-    content.vb: Public Class DigitalRadioDevice Implements IDisposable
-  inheritance:
-  - System.Object
-  implements:
-  - System.IDisposable
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
-  extensionMethods:
-  - HackRFDotnet.Api.DigitalRadioDevice.HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification
-- uid: HackRFDotnet.Api.DigitalRadioDevice.Frequency
-  commentId: P:HackRFDotnet.Api.DigitalRadioDevice.Frequency
-  id: Frequency
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: Frequency
-  nameWithType: DigitalRadioDevice.Frequency
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.Frequency
-  type: Property
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: Frequency
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 14
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Current frequency tuned to.
-  example: []
-  syntax:
-    content: public Frequency Frequency { get; set; }
-    parameters: []
-    return:
-      type: HackRFDotnet.Api.Frequency
-    content.vb: Public Property Frequency As Frequency
-  overload: HackRFDotnet.Api.DigitalRadioDevice.Frequency*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
-  commentId: P:HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
-  id: Bandwidth
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: Bandwidth
-  nameWithType: DigitalRadioDevice.Bandwidth
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
-  type: Property
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: Bandwidth
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 19
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Current capture bandwidth.
-  example: []
-  syntax:
-    content: public Bandwidth Bandwidth { get; set; }
-    parameters: []
-    return:
-      type: HackRFDotnet.Api.Bandwidth
-    content.vb: Public Property Bandwidth As Bandwidth
-  overload: HackRFDotnet.Api.DigitalRadioDevice.Bandwidth*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
-  commentId: P:HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
-  id: DeviceSamplingRate
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: DeviceSamplingRate
-  nameWithType: DigitalRadioDevice.DeviceSamplingRate
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
-  type: Property
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: DeviceSamplingRate
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 24
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Current capture sample rate.
-  example: []
-  syntax:
-    content: public SampleRate DeviceSamplingRate { get; set; }
-    parameters: []
-    return:
-      type: HackRFDotnet.Api.SampleRate
-    content.vb: Public Property DeviceSamplingRate As SampleRate
-  overload: HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.IsConnected
-  commentId: P:HackRFDotnet.Api.DigitalRadioDevice.IsConnected
-  id: IsConnected
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: IsConnected
-  nameWithType: DigitalRadioDevice.IsConnected
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.IsConnected
-  type: Property
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: IsConnected
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 29
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Is the device connected to the usb host in the native library?
-  example: []
-  syntax:
-    content: public bool IsConnected { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property IsConnected As Boolean
-  overload: HackRFDotnet.Api.DigitalRadioDevice.IsConnected*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
-  commentId: F:HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
-  id: DevicePtr
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: DevicePtr
-  nameWithType: DigitalRadioDevice.DevicePtr
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
-  type: Field
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: DevicePtr
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 35
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  syntax:
-    content: public readonly HackRFDevice* DevicePtr
-    return:
-      type: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-    content.vb: Public ReadOnly DevicePtr As HackRFDevice*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
-  id: SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: SetAmplifications(uint, uint, bool)
-  nameWithType: DigitalRadioDevice.SetAmplifications(uint, uint, bool)
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(uint, uint, bool)
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: SetAmplifications
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 48
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Set the Lna, Vga, and Internal amp settings for the Rf Device.
-  example: []
-  syntax:
-    content: public void SetAmplifications(uint lna, uint vga, bool internalAmp)
-    parameters:
-    - id: lna
-      type: System.UInt32
-      description: ''
-    - id: vga
-      type: System.UInt32
-      description: ''
-    - id: internalAmp
-      type: System.Boolean
-      description: ''
-    content.vb: Public Sub SetAmplifications(lna As UInteger, vga As UInteger, internalAmp As Boolean)
-  overload: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications*
-  nameWithType.vb: DigitalRadioDevice.SetAmplifications(UInteger, UInteger, Boolean)
-  fullName.vb: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(UInteger, UInteger, Boolean)
-  name.vb: SetAmplifications(UInteger, UInteger, Boolean)
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
-  id: SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: SetFrequency(Frequency, Bandwidth)
-  nameWithType: DigitalRadioDevice.SetFrequency(Frequency, Bandwidth)
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency, HackRFDotnet.Api.Bandwidth)
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: SetFrequency
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 60
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Set the tuning frequency and bandwidth for the Rf Device.
-  example: []
-  syntax:
-    content: public bool SetFrequency(Frequency radioFrequency, Bandwidth bandwidth)
-    parameters:
-    - id: radioFrequency
-      type: HackRFDotnet.Api.Frequency
-      description: ''
-    - id: bandwidth
-      type: HackRFDotnet.Api.Bandwidth
-      description: ''
-    return:
-      type: System.Boolean
-      description: ''
-    content.vb: Public Function SetFrequency(radioFrequency As Frequency, bandwidth As Bandwidth) As Boolean
-  overload: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
-  id: SetSampleRate(HackRFDotnet.Api.SampleRate)
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: SetSampleRate(SampleRate)
-  nameWithType: DigitalRadioDevice.SetSampleRate(SampleRate)
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: SetSampleRate
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 75
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: >-
+### YamlMime:ApiPage
+title: Class DigitalRadioDevice
+body:
+- api1: Class DigitalRadioDevice
+  id: HackRFDotnet_Api_DigitalRadioDevice
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L11
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice
+    commentId: T:HackRFDotnet.Api.DigitalRadioDevice
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api
+      url: HackRFDotnet.Api.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: Radio Device to receive IQ Samples with.
+- code: 'public class DigitalRadioDevice : IDisposable'
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: DigitalRadioDevice
+    url: HackRFDotnet.Api.DigitalRadioDevice.html
+- h4: Implements
+- list:
+  - text: IDisposable
+    url: https://learn.microsoft.com/dotnet/api/system.idisposable
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h4: Extension Methods
+- list:
+  - text: RfDeviceExtensions.AttenuateAmplification(DigitalRadioDevice)
+    url: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html#HackRFDotnet_Api_Extensions_RfDeviceExtensions_AttenuateAmplification_HackRFDotnet_Api_DigitalRadioDevice_
+- h2: Fields
+- api3: DevicePtr
+  id: HackRFDotnet_Api_DigitalRadioDevice_DevicePtr
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L36
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
+    commentId: F:HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
+- code: public readonly HackRFDevice* DevicePtr
+- h4: Field Value
+- parameters:
+  - type:
+    - text: HackRFDevice
+      url: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
+    - '*'
+- h2: Properties
+- api3: Bandwidth
+  id: HackRFDotnet_Api_DigitalRadioDevice_Bandwidth
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L20
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
+    commentId: P:HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
+- markdown: Current capture bandwidth.
+- code: public Bandwidth Bandwidth { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+- api3: DeviceSamplingRate
+  id: HackRFDotnet_Api_DigitalRadioDevice_DeviceSamplingRate
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L25
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
+    commentId: P:HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
+- markdown: Current capture sample rate.
+- code: public SampleRate DeviceSamplingRate { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+- api3: Frequency
+  id: HackRFDotnet_Api_DigitalRadioDevice_Frequency
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L15
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.Frequency
+    commentId: P:HackRFDotnet.Api.DigitalRadioDevice.Frequency
+- markdown: Current frequency tuned to.
+- code: public Frequency Frequency { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: IsConnected
+  id: HackRFDotnet_Api_DigitalRadioDevice_IsConnected
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L30
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.IsConnected
+    commentId: P:HackRFDotnet.Api.DigitalRadioDevice.IsConnected
+- markdown: Is the device connected to the usb host in the native library?
+- code: public bool IsConnected { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- h2: Methods
+- api3: Dispose()
+  id: HackRFDotnet_Api_DigitalRadioDevice_Dispose
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L120
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.Dispose
+    commentId: M:HackRFDotnet.Api.DigitalRadioDevice.Dispose
+- markdown: Dispose the Rf Device from the library.
+- code: public void Dispose()
+- api3: SetAmplifications(uint, uint, bool)
+  id: HackRFDotnet_Api_DigitalRadioDevice_SetAmplifications_System_UInt32_System_UInt32_System_Boolean_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L49
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
+    commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
+- markdown: Set the Lna, Vga, and Internal amp settings for the Rf Device.
+- code: public void SetAmplifications(uint lna, uint vga, bool internalAmp)
+- h4: Parameters
+- parameters:
+  - name: lna
+    type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+    description: ''
+  - name: vga
+    type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+    description: ''
+  - name: internalAmp
+    type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+    description: ''
+- api3: SetFrequency(Frequency, Bandwidth)
+  id: HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L61
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+    commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+- markdown: Set the tuning frequency and bandwidth for the Rf Device.
+- code: public bool SetFrequency(Frequency radioFrequency, Bandwidth bandwidth)
+- h4: Parameters
+- parameters:
+  - name: radioFrequency
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+    description: ''
+  - name: bandwidth
+    type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+    description: ''
+- api3: SetSampleRate(SampleRate)
+  id: HackRFDotnet_Api_DigitalRadioDevice_SetSampleRate_HackRFDotnet_Api_SampleRate_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L76
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
+    commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
+- markdown: >-
     Set the sample rate for the radio device to capture data at.
 
     This will also set the baseband filter the smallest filter 
 
     that fits the sample rate's Nyquist frequency cutoff.
-  example: []
-  syntax:
-    content: public void SetSampleRate(SampleRate sampleRate)
-    parameters:
-    - id: sampleRate
-      type: HackRFDotnet.Api.SampleRate
-      description: ''
-    content.vb: Public Sub SetSampleRate(sampleRate As SampleRate)
-  overload: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
-  id: StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: StartRx(HackRFSampleBlockCallback)
-  nameWithType: DigitalRadioDevice.StartRx(HackRFSampleBlockCallback)
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: StartRx
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 91
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Start receiving data from the RfDevice.
-  example: []
-  syntax:
-    content: public bool StartRx(HackRFSampleBlockCallback rxCallback)
-    parameters:
-    - id: rxCallback
-      type: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-      description: ''
-    return:
-      type: System.Boolean
-      description: ''
-    content.vb: Public Function StartRx(rxCallback As HackRFSampleBlockCallback) As Boolean
-  overload: HackRFDotnet.Api.DigitalRadioDevice.StartRx*
-  exceptions:
-  - type: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
-    commentId: T:HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
+- code: public void SetSampleRate(SampleRate sampleRate)
+- h4: Parameters
+- parameters:
+  - name: sampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
     description: ''
-- uid: HackRFDotnet.Api.DigitalRadioDevice.StopRx
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.StopRx
-  id: StopRx
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: StopRx()
-  nameWithType: DigitalRadioDevice.StopRx()
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.StopRx()
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: StopRx
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 111
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Stop receiving data from the Rf Device.
-  example: []
-  syntax:
-    content: public bool StopRx()
-    return:
-      type: System.Boolean
-      description: ''
-    content.vb: Public Function StopRx() As Boolean
-  overload: HackRFDotnet.Api.DigitalRadioDevice.StopRx*
-- uid: HackRFDotnet.Api.DigitalRadioDevice.Dispose
-  commentId: M:HackRFDotnet.Api.DigitalRadioDevice.Dispose
-  id: Dispose
-  parent: HackRFDotnet.Api.DigitalRadioDevice
-  langs:
-  - csharp
-  - vb
-  name: Dispose()
-  nameWithType: DigitalRadioDevice.Dispose()
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.Dispose()
-  type: Method
-  source:
-    remote:
-      path: HackRFDotnet/Api/DigitalRadioDevice.cs
-      branch: master
-      repo: https://github.com/Realynx/HackRFDotnet.git
-    id: Dispose
-    path: HackRFDotnet/Api/DigitalRadioDevice.cs
-    startLine: 119
-  assemblies:
-  - HackRFDotnet
-  namespace: HackRFDotnet.Api
-  summary: Dispose the Rf Device from the library.
-  example: []
-  syntax:
-    content: public void Dispose()
-    content.vb: Public Sub Dispose()
-  overload: HackRFDotnet.Api.DigitalRadioDevice.Dispose*
-  implements:
-  - System.IDisposable.Dispose
-references:
-- uid: HackRFDotnet.Api
-  commentId: N:HackRFDotnet.Api
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api
-  nameWithType: HackRFDotnet.Api
-  fullName: HackRFDotnet.Api
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-- uid: System.Object
-  commentId: T:System.Object
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object
-  name: object
-  nameWithType: object
-  fullName: object
-  nameWithType.vb: Object
-  fullName.vb: Object
-  name.vb: Object
-- uid: System.IDisposable
-  commentId: T:System.IDisposable
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.idisposable
-  name: IDisposable
-  nameWithType: IDisposable
-  fullName: System.IDisposable
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  name: Equals(object)
-  nameWithType: object.Equals(object)
-  fullName: object.Equals(object)
-  nameWithType.vb: Object.Equals(Object)
-  fullName.vb: Object.Equals(Object)
-  name.vb: Equals(Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  name: Equals(object, object)
-  nameWithType: object.Equals(object, object)
-  fullName: object.Equals(object, object)
-  nameWithType.vb: Object.Equals(Object, Object)
-  fullName.vb: Object.Equals(Object, Object)
-  name.vb: Equals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  name: GetHashCode()
-  nameWithType: object.GetHashCode()
-  fullName: object.GetHashCode()
-  nameWithType.vb: Object.GetHashCode()
-  fullName.vb: Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
-  - name: (
-  - name: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  name: GetType()
-  nameWithType: object.GetType()
-  fullName: object.GetType()
-  nameWithType.vb: Object.GetType()
-  fullName.vb: Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  name: ReferenceEquals(object, object)
-  nameWithType: object.ReferenceEquals(object, object)
-  fullName: object.ReferenceEquals(object, object)
-  nameWithType.vb: Object.ReferenceEquals(Object, Object)
-  fullName.vb: Object.ReferenceEquals(Object, Object)
-  name.vb: ReferenceEquals(Object, Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
-  - name: (
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: ','
-  - name: " "
-  - uid: System.Object
-    name: Object
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object
-  - name: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  name: ToString()
-  nameWithType: object.ToString()
-  fullName: object.ToString()
-  nameWithType.vb: Object.ToString()
-  fullName.vb: Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
-  - name: (
-  - name: )
-- uid: HackRFDotnet.Api.DigitalRadioDevice.HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification
-  commentId: M:HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-  parent: HackRFDotnet.Api.Extensions.RfDeviceExtensions
-  definition: HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-  href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html#HackRFDotnet_Api_Extensions_RfDeviceExtensions_AttenuateAmplification_HackRFDotnet_Api_DigitalRadioDevice_
-  name: AttenuateAmplification(DigitalRadioDevice)
-  nameWithType: RfDeviceExtensions.AttenuateAmplification(DigitalRadioDevice)
-  fullName: HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-  spec.csharp:
-  - uid: HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-    name: AttenuateAmplification
-    href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html#HackRFDotnet_Api_Extensions_RfDeviceExtensions_AttenuateAmplification_HackRFDotnet_Api_DigitalRadioDevice_
-  - name: (
-  - uid: HackRFDotnet.Api.DigitalRadioDevice
-    name: DigitalRadioDevice
-    href: HackRFDotnet.Api.DigitalRadioDevice.html
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-    name: AttenuateAmplification
-    href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html#HackRFDotnet_Api_Extensions_RfDeviceExtensions_AttenuateAmplification_HackRFDotnet_Api_DigitalRadioDevice_
-  - name: (
-  - uid: HackRFDotnet.Api.DigitalRadioDevice
-    name: DigitalRadioDevice
-    href: HackRFDotnet.Api.DigitalRadioDevice.html
-  - name: )
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
-- uid: HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-  commentId: M:HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-  href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html#HackRFDotnet_Api_Extensions_RfDeviceExtensions_AttenuateAmplification_HackRFDotnet_Api_DigitalRadioDevice_
-  name: AttenuateAmplification(DigitalRadioDevice)
-  nameWithType: RfDeviceExtensions.AttenuateAmplification(DigitalRadioDevice)
-  fullName: HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-  spec.csharp:
-  - uid: HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-    name: AttenuateAmplification
-    href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html#HackRFDotnet_Api_Extensions_RfDeviceExtensions_AttenuateAmplification_HackRFDotnet_Api_DigitalRadioDevice_
-  - name: (
-  - uid: HackRFDotnet.Api.DigitalRadioDevice
-    name: DigitalRadioDevice
-    href: HackRFDotnet.Api.DigitalRadioDevice.html
-  - name: )
-  spec.vb:
-  - uid: HackRFDotnet.Api.Extensions.RfDeviceExtensions.AttenuateAmplification(HackRFDotnet.Api.DigitalRadioDevice)
-    name: AttenuateAmplification
-    href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html#HackRFDotnet_Api_Extensions_RfDeviceExtensions_AttenuateAmplification_HackRFDotnet_Api_DigitalRadioDevice_
-  - name: (
-  - uid: HackRFDotnet.Api.DigitalRadioDevice
-    name: DigitalRadioDevice
-    href: HackRFDotnet.Api.DigitalRadioDevice.html
-  - name: )
-- uid: HackRFDotnet.Api.Extensions.RfDeviceExtensions
-  commentId: T:HackRFDotnet.Api.Extensions.RfDeviceExtensions
-  parent: HackRFDotnet.Api.Extensions
-  href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html
-  name: RfDeviceExtensions
-  nameWithType: RfDeviceExtensions
-  fullName: HackRFDotnet.Api.Extensions.RfDeviceExtensions
-- uid: HackRFDotnet.Api.Extensions
-  commentId: N:HackRFDotnet.Api.Extensions
-  href: HackRFDotnet.html
-  name: HackRFDotnet.Api.Extensions
-  nameWithType: HackRFDotnet.Api.Extensions
-  fullName: HackRFDotnet.Api.Extensions
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Extensions
-    name: Extensions
-    href: HackRFDotnet.Api.Extensions.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.Api
-    name: Api
-    href: HackRFDotnet.Api.html
-  - name: .
-  - uid: HackRFDotnet.Api.Extensions
-    name: Extensions
-    href: HackRFDotnet.Api.Extensions.html
-- uid: HackRFDotnet.Api.DigitalRadioDevice.Frequency*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.Frequency
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_Frequency
-  name: Frequency
-  nameWithType: DigitalRadioDevice.Frequency
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.Frequency
-- uid: HackRFDotnet.Api.Frequency
-  commentId: T:HackRFDotnet.Api.Frequency
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.Frequency.html
-  name: Frequency
-  nameWithType: Frequency
-  fullName: HackRFDotnet.Api.Frequency
-- uid: HackRFDotnet.Api.DigitalRadioDevice.Bandwidth*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_Bandwidth
-  name: Bandwidth
-  nameWithType: DigitalRadioDevice.Bandwidth
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
-- uid: HackRFDotnet.Api.Bandwidth
-  commentId: T:HackRFDotnet.Api.Bandwidth
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.Bandwidth.html
-  name: Bandwidth
-  nameWithType: Bandwidth
-  fullName: HackRFDotnet.Api.Bandwidth
-- uid: HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_DeviceSamplingRate
-  name: DeviceSamplingRate
-  nameWithType: DigitalRadioDevice.DeviceSamplingRate
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
-- uid: HackRFDotnet.Api.SampleRate
-  commentId: T:HackRFDotnet.Api.SampleRate
-  parent: HackRFDotnet.Api
-  href: HackRFDotnet.Api.SampleRate.html
-  name: SampleRate
-  nameWithType: SampleRate
-  fullName: HackRFDotnet.Api.SampleRate
-- uid: HackRFDotnet.Api.DigitalRadioDevice.IsConnected*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.IsConnected
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_IsConnected
-  name: IsConnected
-  nameWithType: DigitalRadioDevice.IsConnected
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.IsConnected
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-  isExternal: true
-  href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  name: HackRFDevice*
-  nameWithType: HackRFDevice*
-  fullName: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice*
-  spec.csharp:
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
-  spec.vb:
-  - uid: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice
-    name: HackRFDevice
-    href: HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html
-  - name: '*'
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetAmplifications_System_UInt32_System_UInt32_System_Boolean_
-  name: SetAmplifications
-  nameWithType: DigitalRadioDevice.SetAmplifications
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications
-- uid: System.UInt32
-  commentId: T:System.UInt32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uint32
-  name: uint
-  nameWithType: uint
-  fullName: uint
-  nameWithType.vb: UInteger
-  fullName.vb: UInteger
-  name.vb: UInteger
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
-  name: SetFrequency
-  nameWithType: DigitalRadioDevice.SetFrequency
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency
-- uid: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_SetSampleRate_HackRFDotnet_Api_SampleRate_
-  name: SetSampleRate
-  nameWithType: DigitalRadioDevice.SetSampleRate
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate
-- uid: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
-  commentId: T:HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
-  href: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException.html
-  name: NullCallbackException
-  nameWithType: NullCallbackException
-  fullName: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException
-- uid: HackRFDotnet.Api.DigitalRadioDevice.StartRx*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.StartRx
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_StartRx_HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_
-  name: StartRx
-  nameWithType: DigitalRadioDevice.StartRx
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.StartRx
-- uid: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-  commentId: T:HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-  parent: HackRFDotnet.NativeApi.Structs
-  href: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html
-  name: HackRFSampleBlockCallback
-  nameWithType: HackRFSampleBlockCallback
-  fullName: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback
-- uid: HackRFDotnet.NativeApi.Structs
-  commentId: N:HackRFDotnet.NativeApi.Structs
-  href: HackRFDotnet.html
-  name: HackRFDotnet.NativeApi.Structs
-  nameWithType: HackRFDotnet.NativeApi.Structs
-  fullName: HackRFDotnet.NativeApi.Structs
-  spec.csharp:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-  spec.vb:
-  - uid: HackRFDotnet
-    name: HackRFDotnet
-    href: HackRFDotnet.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi
-    name: NativeApi
-    href: HackRFDotnet.NativeApi.html
-  - name: .
-  - uid: HackRFDotnet.NativeApi.Structs
-    name: Structs
-    href: HackRFDotnet.NativeApi.Structs.html
-- uid: HackRFDotnet.Api.DigitalRadioDevice.StopRx*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.StopRx
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_StopRx
-  name: StopRx
-  nameWithType: DigitalRadioDevice.StopRx
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.StopRx
-- uid: HackRFDotnet.Api.DigitalRadioDevice.Dispose*
-  commentId: Overload:HackRFDotnet.Api.DigitalRadioDevice.Dispose
-  href: HackRFDotnet.Api.DigitalRadioDevice.html#HackRFDotnet_Api_DigitalRadioDevice_Dispose
-  name: Dispose
-  nameWithType: DigitalRadioDevice.Dispose
-  fullName: HackRFDotnet.Api.DigitalRadioDevice.Dispose
-- uid: System.IDisposable.Dispose
-  commentId: M:System.IDisposable.Dispose
-  parent: System.IDisposable
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
-  name: Dispose()
-  nameWithType: IDisposable.Dispose()
-  fullName: System.IDisposable.Dispose()
-  spec.csharp:
-  - uid: System.IDisposable.Dispose
-    name: Dispose
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.IDisposable.Dispose
-    name: Dispose
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
-  - name: (
-  - name: )
+- api3: StartRx(HackRFSampleBlockCallback)
+  id: HackRFDotnet_Api_DigitalRadioDevice_StartRx_HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L92
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
+    commentId: M:HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
+- markdown: Start receiving data from the RfDevice.
+- code: public bool StartRx(HackRFSampleBlockCallback rxCallback)
+- h4: Parameters
+- parameters:
+  - name: rxCallback
+    type:
+    - text: HackRFSampleBlockCallback
+      url: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+    description: ''
+- h4: Exceptions
+- parameters:
+  - type:
+    - text: NullCallbackException
+      url: HackRFDotnet.Api.Streams.Exceptions.NullCallbackException.html
+    description: ''
+- api3: StopRx()
+  id: HackRFDotnet_Api_DigitalRadioDevice_StopRx
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L112
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.StopRx
+    commentId: M:HackRFDotnet.Api.DigitalRadioDevice.StopRx
+- markdown: Stop receiving data from the Rf Device.
+- code: public bool StopRx()
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+    description: ''
+languageId: csharp
+metadata:
+  description: Radio Device to receive IQ Samples with.
