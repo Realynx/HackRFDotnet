@@ -2,8 +2,8 @@
 
 namespace HackRFDotnet.NativeApi.Structs {
     /// <summary>
-    /// Helper struct for hackrf_bias_t_user_setting. If 'do_update' is true, then the values of 'change_on_mode_entry' and 'enabled' will be used as the new default.
-    /// If 'do_update' is false, the current default will not change.
+    /// Helper struct for <see cref="HackRFBiasTUserSettingReq"/>. If <see cref="do_update"/> is <see langword="true"/>, then the values of <see cref="change_on_mode_entry"/> and <see cref="enabled"/> will be used as the new default.
+    /// If <see cref="do_update"/> is <see langword="false"/>, the current default will not change.
     /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct HackRFBoolUserSetting {
