@@ -6,16 +6,6 @@
 public readonly record struct Bandwidth {
     private readonly Hertz _hertz;
 
-    /// <summary>
-    /// https://en.wikipedia.org/wiki/Nyquist_rate
-    /// The smallest sample rate that can be used to represent the bandwidth.
-    /// </summary>
-    public SampleRate NyquistSampleRate {
-        get {
-            return new SampleRate(_hertz * 2);
-        }
-    }
-
     public Bandwidth(long hz) : this(new Hertz(hz)) { }
 
     public Bandwidth(Hertz hertz) {
@@ -25,6 +15,16 @@ public readonly record struct Bandwidth {
     public long Hz {
         get {
             return _hertz.Hz;
+        }
+    }
+
+    /// <summary>
+    /// https://en.wikipedia.org/wiki/Nyquist_rate
+    /// The smallest sample rate that can be used to represent the bandwidth.
+    /// </summary>
+    public SampleRate NyquistSampleRate {
+        get {
+            return new SampleRate(_hertz * 2);
         }
     }
 

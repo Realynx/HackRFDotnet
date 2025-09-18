@@ -4,13 +4,22 @@
 /// Number of oscillations per second.
 /// </summary>
 public readonly record struct Hertz {
+    public Hertz(long hz) {
+        Hz = hz;
+    }
+
     /// <summary>
     /// Number of oscillations per second.
     /// </summary>
-    public readonly long Hz;
+    public long Hz { get; }
 
-    public Hertz(long hz) {
-        Hz = hz;
+    /// <summary>
+    /// Number of oscillations per second divided by 1,000
+    /// </summary>
+    public double Khz {
+        get {
+            return Hz / 1_000d;
+        }
     }
 
     /// <summary>
@@ -19,15 +28,6 @@ public readonly record struct Hertz {
     public double Mhz {
         get {
             return Hz / 1_000_000d;
-        }
-    }
-
-    /// <summary>
-    /// Number of oscillations per second divided by 1,000
-    /// </summary>
-    public double Khz {
-        get {
-            return Hz / 1_000d;
         }
     }
 

@@ -25,15 +25,15 @@ public record struct SampleRate {
         }
     }
 
-    public double Msps {
-        get {
-            return _hertz.Mhz;
-        }
-    }
-
     public double Ksps {
         get {
             return _hertz.Khz;
+        }
+    }
+
+    public double Msps {
+        get {
+            return _hertz.Mhz;
         }
     }
 
