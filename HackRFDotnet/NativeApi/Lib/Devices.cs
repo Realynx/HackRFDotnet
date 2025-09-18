@@ -81,6 +81,6 @@ public static partial class HackRfNativeLib {
         /// <param name="value">Enable UI. Must be 1 or 0.</param>
         /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError.HACKRF_ERROR_LIBUSB"/> on usb error.</returns>
         [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_set_ui_enable")]
-        public static extern int SetDeviceUiEnabled(HackRFDevice* device, byte value);
+        public static extern HackrfError SetDeviceUiEnabled(HackRFDevice* device, byte value);
     }
 }

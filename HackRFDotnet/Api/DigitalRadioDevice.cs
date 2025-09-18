@@ -63,7 +63,7 @@ namespace HackRFDotnet.Api {
             Bandwidth = bandwidth;
 
             // This shifts the signal to offset the 0 dc spike away from the signal we want.
-            radioFrequency -= new Frequency(DeviceSamplingRate.NyquistFrequencyBandwidth / 2);
+            radioFrequency -= (Frequency)(DeviceSamplingRate.NyquistFrequencyBandwidth / 2);
             return HackRfNativeLib.DeviceStreaming.SetFrequency(DevicePtr, (uint)radioFrequency.Hz) == 0;
         }
 

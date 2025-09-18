@@ -2,18 +2,18 @@
 /// <summary>
 /// Number of oscillations per second.
 /// </summary>
-public class Hertz {
+public readonly record struct Hertz {
     /// <summary>
     /// Number of oscillations per second.
     /// </summary>
-    public long Hz { get; set; }
+    public readonly long Hz;
 
     /// <summary>
     /// Number of oscillations per second divided by 1,000,000
     /// </summary>
     public double Mhz {
         get {
-            return Hz / 1_000_000f;
+            return Hz / 1_000_000d;
         }
     }
 
@@ -22,7 +22,7 @@ public class Hertz {
     /// </summary>
     public double Khz {
         get {
-            return Hz / 1_000f;
+            return Hz / 1_000d;
         }
     }
 
@@ -35,15 +35,15 @@ public class Hertz {
     }
 
     public static Hertz FromKHz(double khz) {
-        return new Hertz((long)(khz * 1_000f));
+        return new Hertz((long)(khz * 1_000d));
     }
 
     public static Hertz FromMHz(double mhz) {
-        return new Hertz((long)(mhz * 1_000_000f));
+        return new Hertz((long)(mhz * 1_000_000d));
     }
 
     public static Hertz FromGHz(double ghz) {
-        return new Hertz((long)(ghz * 1_000_000_000f));
+        return new Hertz((long)(ghz * 1_000_000_000d));
     }
 
     public static bool operator >(Hertz a, Hertz b) {
@@ -60,14 +60,6 @@ public class Hertz {
 
     public static bool operator <=(Hertz a, Hertz b) {
         return a.Hz <= b.Hz;
-    }
-
-    public static bool operator ==(Hertz a, Hertz b) {
-        return a.Hz == b.Hz;
-    }
-
-    public static bool operator !=(Hertz a, Hertz b) {
-        return a.Hz != b.Hz;
     }
 
     public static Hertz operator %(Hertz a, Hertz b) {
@@ -90,15 +82,11 @@ public class Hertz {
         return new Hertz(a.Hz + b.Hz);
     }
 
-    public override bool Equals(object obj) {
-        if (ReferenceEquals(this, obj)) {
-            return true;
-        }
+    public static Hertz operator *(Hertz a, int b) {
+        return new Hertz(a.Hz * b);
+    }
 
-        if (obj is null) {
-            return false;
-        }
-
-        return obj is Hertz hertz && hertz.Hz == Hz;
+    public static Hertz operator *(Hertz a, double b) {
+        return new Hertz((long)(a.Hz * b));
     }
 }

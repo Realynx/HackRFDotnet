@@ -38,9 +38,9 @@ public static partial class HackRfNativeLib {
         /// </summary>
         /// <param name="device">Device to query.</param>
         /// <param name="value">MCU code state.</param>
-        /// <returns>><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
+        /// <returns><see cref="HackrfError.HACKRF_SUCCESS"/> on success or <see cref="HackrfError"/> variant.</returns>
         [DllImport(NativeConstants.HACK_RF_DLL, CallingConvention = CallingConvention.Cdecl, EntryPoint = "hackrf_get_m0_state")]
-        public static extern int GetMcuState(HackRFDevice* device, HackRFM0State* value);
+        public static extern HackrfError GetMcuState(HackRFDevice* device, HackRFM0State* value);
 
         /// <summary>Lookup platform ID (HACKRF_PLATFORM_xxx) from board id (<see cref="HackrfBoardId"/>).</summary>
         /// <param name="board_id"><see cref="HackrfBoardId"/> enum variant to convert.</param>

@@ -2,80 +2,92 @@
 /// <summary>
 /// Bandwidth of a signal sample.
 /// </summary>
-public class Bandwidth : Hertz {
+public readonly record struct Bandwidth {
+    private readonly Hertz _hertz;
+
+    public long Hz {
+        get {
+            return _hertz.Hz;
+        }
+    }
+
     /// <summary>
     /// https://en.wikipedia.org/wiki/Nyquist_rate
     /// The smallest sample rate that can be used to represent the bandwidth.
     /// </summary>
     public SampleRate NyquistSampleRate {
         get {
-            return new SampleRate(Hz * 2);
+            return new SampleRate(_hertz * 2);
         }
     }
 
-    public Bandwidth(long hz) : base(hz) {
+    public Bandwidth(long hz) : this(new Hertz(hz)) { }
+
+    public Bandwidth(Hertz hertz) {
+        _hertz = hertz;
     }
 
-    public Bandwidth(Hertz hz) : base(hz.Hz) {
-    }
-
-    public static new Bandwidth FromHz(long hz) {
+    public static Bandwidth FromHz(long hz) {
         return new Bandwidth(hz);
     }
 
-    public static new Bandwidth FromKHz(double khz) {
-        return new Bandwidth((long)(khz * 1_000f));
+    public static Bandwidth FromKHz(double khz) {
+        return new Bandwidth(Hertz.FromKHz(khz));
     }
 
-    public static new Bandwidth FromMHz(double mhz) {
-        return new Bandwidth((long)(mhz * 1_000_000f));
+    public static Bandwidth FromMHz(double mhz) {
+        return new Bandwidth(Hertz.FromMHz(mhz));
     }
 
-    public static new Bandwidth FromGHz(double ghz) {
-        return new Bandwidth((long)(ghz * 1_000_000_000f));
+    public static Bandwidth FromGHz(double ghz) {
+        return new Bandwidth(Hertz.FromGHz(ghz));
     }
 
     public static bool operator >(Bandwidth a, Bandwidth b) {
-        return a.Hz > b.Hz;
+        return a._hertz > b._hertz;
     }
 
     public static bool operator <(Bandwidth a, Bandwidth b) {
-        return a.Hz < b.Hz;
+        return a._hertz < b._hertz;
     }
 
     public static bool operator >=(Bandwidth a, Bandwidth b) {
-        return a.Hz >= b.Hz;
+        return a._hertz >= b._hertz;
     }
 
     public static bool operator <=(Bandwidth a, Bandwidth b) {
-        return a.Hz <= b.Hz;
-    }
-
-    public static bool operator ==(Bandwidth a, Bandwidth b) {
-        return a.Hz == b.Hz;
-    }
-
-    public static bool operator !=(Bandwidth a, Bandwidth b) {
-        return a.Hz != b.Hz;
+        return a._hertz <= b._hertz;
     }
 
     public static Bandwidth operator %(Bandwidth a, Bandwidth b) {
-        return new Bandwidth(a.Hz % b.Hz);
+        return new Bandwidth(a._hertz % b._hertz);
     }
 
     public static Bandwidth operator -(Bandwidth a) {
-        return new Bandwidth(-a.Hz);
+        return new Bandwidth(-a._hertz);
     }
 
     public static Bandwidth operator /(Bandwidth a, int b) {
-        return new Bandwidth(a.Hz / b);
+        return new Bandwidth(a._hertz / b);
     }
 
     public static Bandwidth operator -(Bandwidth a, Bandwidth b) {
-        return new Bandwidth(a.Hz - b.Hz);
+        return new Bandwidth(a._hertz - b._hertz);
     }
 
     public static Bandwidth operator +(Bandwidth a, Bandwidth b) {
-        return new Bandwidth(a.Hz + b.Hz);
+        return new Bandwidth(a._hertz + b._hertz);
+    }
+
+    public static Bandwidth operator *(Bandwidth a, int b) {
+        return new Bandwidth(a._hertz * b);
+    }
+
+    public static Bandwidth operator *(Bandwidth a, double b) {
+        return new Bandwidth(a._hertz * b);
+    }
+
+    public static implicit operator Frequency(Bandwidth b) {
+        return new Frequency(b._hertz);
     }
 }

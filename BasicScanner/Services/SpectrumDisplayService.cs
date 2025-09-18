@@ -74,7 +74,7 @@ public unsafe class SpectrumDisplayService {
             .WithRootEffect(new IQDownSampleEffect(signalStream.SampleRate, spectrumSize.NyquistSampleRate,
                 processingSize, out var reducedSampleRate, out var producedChunkSize))
 
-            .AddChildEffect(new FrequencyCenteringEffect(new Frequency(spectrumSize), reducedSampleRate))
+            .AddChildEffect(new FrequencyCenteringEffect(spectrumSize, reducedSampleRate))
             .AddChildEffect(new FftEffect(true, producedChunkSize));
 
         var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, reducedSampleRate);
