@@ -1,27 +1,26 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 using HackRFDotnet.Api.Streams.Exceptions;
 
 namespace HackRFDotnet.Api.Streams.Buffers;
-internal struct ThreadPointer {
-    public int readStart;
-    public bool empty = true;
-    public bool full = false;
-
-    public ThreadPointer() {
-    }
-}
 
 /// <summary>
-/// <see cref="ThreadedRingBuffer"/> allows for multi threadded access to a single ring buffer. Writing is not thread synced.
+/// <see cref="ThreadedRingBuffer{T}"/> allows for multithreaded access to a single ring buffer. Writing is not thread synced.
 /// </summary>
-/// <typeparam name="T"></typeparam>
 internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
+    private struct ThreadPointer() {
+        public int ReadStart;
+        public bool Empty = true;
+        public bool Full = false;
+    }
+
     private int? _writerId = null;
     private int _writerStart = 0;
 
     private readonly Dictionary<int, ThreadPointer> _threadIdPointers = [];
     private readonly bool _multiWrite;
+    private readonly Lock _writeLock = new();
 
     public ThreadedRingBuffer(int capacity, bool multiWrite = false) : base(capacity) {
         _multiWrite = multiWrite;
@@ -30,19 +29,17 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public int BytesAvailable() {
         var threadId = Environment.CurrentManagedThreadId;
-        if (!_threadIdPointers.TryGetValue(threadId, out var state)) {
-            _threadIdPointers.Add(threadId, state);
-        }
+        ref var state = ref CollectionsMarshal.GetValueRefOrAddDefault(_threadIdPointers, threadId, out _);
 
-        if (state.full) {
+        if (state.Full) {
             return Length;
         }
 
-        if (state.empty) {
+        if (state.Empty) {
             return 0;
         }
 
-        var difference = _writerStart - state.readStart;
+        var difference = _writerStart - state.ReadStart;
         return difference < 0 ? Length + difference : difference;
     }
 
@@ -51,29 +48,25 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
         return ReadSpan(emptyMemory, emptyMemory.Length);
     }
 
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public int ReadSpan(Span<T> emptyMemory, int count) {
         var threadId = Environment.CurrentManagedThreadId;
-        _threadIdPointers.TryGetValue(threadId, out var state);
+        ref var state = ref CollectionsMarshal.GetValueRefOrAddDefault(_threadIdPointers, threadId, out _);
 
-        var readBytes = ReadSpan(emptyMemory, state.readStart, count);
-        var newReadPoint = (state.readStart + readBytes) % Length;
+        var readBytes = ReadSpan(emptyMemory, state.ReadStart, count);
+        var newReadPoint = (state.ReadStart + readBytes) % Length;
 
-        var looped = (state.readStart + readBytes) >= Length;
-        if ((looped && _writerStart > state.readStart) || (newReadPoint > _writerStart && state.readStart < _writerStart)) {
-            state.readStart = _writerStart;
-            state.empty = true;
+        var looped = (state.ReadStart + readBytes) >= Length;
+        if ((looped && _writerStart > state.ReadStart) || (newReadPoint > _writerStart && state.ReadStart < _writerStart)) {
+            state.ReadStart = _writerStart;
+            state.Empty = true;
 
-            _threadIdPointers[threadId] = state;
             return readBytes;
         }
 
-        state.readStart = newReadPoint;
-        _threadIdPointers[threadId] = state;
+        state.ReadStart = newReadPoint;
         return readBytes;
     }
 
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void WriteSpan(Span<T> inputData, int? threadId = null) {
         threadId ??= Environment.CurrentManagedThreadId;
 
@@ -84,32 +77,31 @@ internal class ThreadedRingBuffer<T> : UnsafeRingBuffer<T> {
             throw new BufferConcurrencyException("Cannot have more than one writing thread.");
         }
 
-        lock (this) {
+        lock (_writeLock) {
             WriteSpan(inputData, inputData.Length);
         }
     }
 
-    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void WriteSpan(Span<T> inputData, int count) {
         Write(inputData, _writerStart, count);
 
         var newWritePoint = (_writerStart + count) % Length;
         var looped = (_writerStart + count) >= Length;
 
-        lock (this) {
+        lock (_writeLock) {
             foreach (var thread in _threadIdPointers) {
                 var existingValue = thread.Value;
-                if (newWritePoint == existingValue.readStart ||
-                    (looped && existingValue.readStart > _writerStart) ||
-                    (newWritePoint > existingValue.readStart && _writerStart < existingValue.readStart)) {
-                    existingValue.readStart = newWritePoint;
-                    existingValue.full = true;
+                if (newWritePoint == existingValue.ReadStart ||
+                    (looped && existingValue.ReadStart > _writerStart) ||
+                    (newWritePoint > existingValue.ReadStart && _writerStart < existingValue.ReadStart)) {
+                    existingValue.ReadStart = newWritePoint;
+                    existingValue.Full = true;
                 }
                 else {
-                    existingValue.full = false;
+                    existingValue.Full = false;
                 }
 
-                existingValue.empty = false;
+                existingValue.Empty = false;
                 _threadIdPointers[thread.Key] = existingValue;
             }
 

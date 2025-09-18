@@ -1,12 +1,10 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
 namespace HackRFDotnet.Api.Streams.Buffers;
 /// <summary>
 /// <see cref="UnsafeRingBuffer{T}"/> does not store any pointers to offset read or write.
-/// You are meant to track your own pointers when using <see cref="UnsafeRingBuffer{T}"/>
+/// You are meant to track your own pointers when using <see cref="UnsafeRingBuffer{T}"/>.
 /// </summary>
-/// <typeparam name="T"></typeparam>
 internal class UnsafeRingBuffer<T> {
     public int Length { get; init; }
     private readonly T[] _array;
@@ -17,10 +15,9 @@ internal class UnsafeRingBuffer<T> {
     }
 
     /// <summary>
-    /// Write memory to the buffer, accounts for overlapping
-    /// This gets called in loops alot so we inline it.
+    /// Write memory to the buffer, accounts for overlapping.
+    /// This gets called in loops a lot so we inline it.
     /// </summary>
-    /// <param name="bufferData"></param>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public void Write(ReadOnlySpan<T> bufferData, int offset, int count) {
         if (count == 0 || count > Length) {
@@ -38,13 +35,10 @@ internal class UnsafeRingBuffer<T> {
         }
     }
 
-    /// <summary>
-    /// Read memory from the buffer into another buffer.
-    /// </summary>
-    /// <param name="emptyMemory">The memory to be filled</param>
-    /// <param name="offset">The offset from 0 in the ring buffer</param>
+    /// <summary>Read memory from the buffer into another buffer.</summary>
+    /// <param name="emptyMemory">The memory to be filled.</param>
+    /// <param name="offset">The offset from 0 in the ring buffer.</param>
     /// <param name="count">The number of bytes to be read. If larger than the buffer size, you will get duplicate data.</param>
-    /// <returns></returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public int ReadSpan(Span<T> emptyMemory, int offset, int count) {
         if (count == 0) {
@@ -68,18 +62,12 @@ internal class UnsafeRingBuffer<T> {
         return count;
     }
 
-
-    /// <summary>
-    /// Copy a new span from the ring buffer, accounts for overlapping.
-    /// </summary>
-    /// <param name="offset"></param>
-    /// <param name="count"></param>
-    /// <returns></returns>
+    /// <summary>Copy the ring buffer into a new array. Accounts for overlapping.</summary>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public Span<T> MakeCopySpan(int offset, int count) {
-        var transferSpan = new T[count].AsSpan();
-        _ = ReadSpan(transferSpan, offset, count);
+    public T[] ToArray(int offset, int count) {
+        var array = new T[count];
+        _ = ReadSpan(array, offset, count);
 
-        return transferSpan;
+        return array;
     }
 }
