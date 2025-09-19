@@ -12,6 +12,7 @@ using HackRFDotnet.Api.Utilities;
 namespace BasicScanner.Services;
 public unsafe class SpectrumDisplayService {
     private IQ[] _displayBuffer = [];
+    private readonly short _inBandColor = (short)ConsoleColor.Blue;
 
     // This idea doesn't work so well with these colors :c
     private readonly short[] _rainbowColors =
@@ -75,7 +76,7 @@ public unsafe class SpectrumDisplayService {
             .WithRootEffect(new IQDownSampleEffect(signalStream.SampleRate, spectrumSize.NyquistSampleRate,
                 PROCESSING_SIZE, out var reducedSampleRate, out var producedChunkSize))
 
-            .AddChildEffect(new FrequencyCenteringEffect(spectrumSize, reducedSampleRate))
+            .AddChildEffect(new FrequencyCenteringEffect(new Bandwidth(reducedSampleRate.Sps / 2), reducedSampleRate))
             .AddChildEffect(new FftEffect(true, producedChunkSize));
 
         var resolution = SignalUtilities.FrequencyResolution(producedChunkSize, reducedSampleRate);
@@ -102,7 +103,8 @@ public unsafe class SpectrumDisplayService {
             _ = effectsPipeline.ApplyPipeline(_displayBuffer.AsSpan());
 
             ref var spectrumPtr = ref MemoryMarshal.GetArrayDataReference(spectrumMatrix);
-            var spectrumSpan = MemoryMarshal.Cast<byte, char>(MemoryMarshal.CreateSpan(ref spectrumPtr, spectrumMatrix.Length * spectrumMatrix.Rank * sizeof(char)));
+            var spectrumSpan = MemoryMarshal.Cast<byte, char>(MemoryMarshal
+                .CreateSpan(ref spectrumPtr, spectrumMatrix.Length * spectrumMatrix.Rank * sizeof(char)));
             spectrumSpan.Fill(empty);
 
             var average = _displayBuffer.Average(i => i.Magnitude) / 5;
@@ -126,7 +128,21 @@ public unsafe class SpectrumDisplayService {
                     var bufferIndex = (y * maxWidth) + x;
                     var matrixY = maxHeight - 1 - y;
                     buffer[bufferIndex].UnicodeChar = spectrumMatrix[x, matrixY];
-                    buffer[bufferIndex].Attributes = _rainbowColors[color];
+
+                    var freq = rfDevice.Frequency;
+                    var band = rfDevice.Bandwidth;
+
+                    var binIndex = (int)((long)x * producedChunkSize / maxWidth);
+                    var binOffsetHz = (binIndex - (producedChunkSize / 2)) * resolution;
+                    var currentFrequency = freq.Hz + binOffsetHz;
+
+                    if (currentFrequency >= (freq.Hz - (band.Hz / 2)) &&
+                        currentFrequency <= (freq.Hz + (band.Hz / 2))) {
+                        buffer[bufferIndex].Attributes = _inBandColor;
+                    }
+                    else {
+                        buffer[bufferIndex].Attributes = _rainbowColors[color];
+                    }
                 }
             }
 

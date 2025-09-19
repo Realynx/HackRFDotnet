@@ -1,10 +1,15 @@
-﻿using HackRFDotnet.Api;
+﻿using System.Buffers;
+using System.Text;
+using System.Text.Unicode;
+
+using HackRFDotnet.Api;
 using HackRFDotnet.Api.Extensions;
 using HackRFDotnet.Api.Services;
 using HackRFDotnet.Api.Streams;
 using HackRFDotnet.Api.Streams.Device;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
+using HackRFDotnet.Api.Streams.SignalStreams.Digital;
 
 using Microsoft.Extensions.Hosting;
 
@@ -25,7 +30,7 @@ internal class MainService : IHostedService {
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
     public async Task StartAsync(CancellationToken cancellationToken) {
-        Console.WriteLine("looking for HackRf Device...");
+        Console.WriteLine("Looking for HackRf Device...");
 
         var deviceList = _rfDeviceControllerService.FindDevices();
         Console.WriteLine($"Found {deviceList.devicecount} HackRf devices... Opening Rx");
@@ -40,9 +45,9 @@ internal class MainService : IHostedService {
         using var deviceStream = new IQDeviceStream(rfDevice);
         deviceStream.OpenRx(SampleRate.FromMsps(20));
 
-        FrequencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        //FrequencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
         //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
-        //HdRadioPlay(rfDevice, deviceStream);
+        var task = Task.Run(() => HdRadioPlay(rfDevice, deviceStream));
 
         DisplaySpectrumCliBasic(rfDevice, deviceStream);
 
@@ -51,29 +56,36 @@ internal class MainService : IHostedService {
         }
     }
 
-    //private static void HdRadioPlay(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
-    //    rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(200));
-    //    var effectsPipeline = new SignalProcessingBuilder()
-    //        .AddSignalEffect(new DownSampleEffect(deviceStream.SampleRate,
-    //            rfDevice.Bandwidth.NyquistSampleRate, out var reducedSampleRate, out var producedChunkSize))
+    private static void HdRadioPlay(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+        var fmFrequency = Frequency.FromMHz(98.7f);
 
-    //        .AddSignalEffect(new FftEffect(true, producedChunkSize))
-    //        .AddSignalEffect(new FrequencyCenteringEffect(Frequency.FromKHz(-192), reducedSampleRate))
-    //        .AddSignalEffect(new LowPassFilterEffect(reducedSampleRate, Bandwidth.FromKHz(8)))
-    //        .AddSignalEffect(new FftEffect(false, producedChunkSize))
+        rfDevice.SetFrequency(Frequency.FromMHz(98.862500f), Bandwidth.FromKHz(76));
+        var pskSignalStream = new QpskSignalStream(deviceStream, Bandwidth.FromKHz(76));
 
-    //        .BuildPipeline();
+        var top = Console.CursorTop;
+        while (true) {
+            var dataBuffer = ArrayPool<byte>.Shared.Rent(256);
 
-    //    var pskSignalStream = new QpskSignalStream(deviceStream, effectsPipeline, keepOpen: false);
+            try {
+                Console.CursorLeft = 0;
+                Console.CursorTop = top;
 
+                pskSignalStream.Read(dataBuffer, 256);
 
-    //    var hdRadioSignalStream = new HdRadioSignalStream(deviceStream, reducedSampleRate, stereo: true,
-    //        processingPipeline: effectsPipeline, keepOpen: false);
+                var hexString = string.Join(string.Empty, dataBuffer.Select(x => x.ToString("x2")));
+                // Console.Write(Encoding.UTF8.GetString(dataBuffer));
+            }
+            finally {
+                ArrayPool<byte>.Shared.Return(dataBuffer);
+            }
+        }
+        //var hdRadioSignalStream = new HdRadioSignalStream(deviceStream, reducedSampleRate, stereo: true,
+        //    processingPipeline: effectsPipeline, keepOpen: false);
 
-    //    // And AnaloguePlayer let's us resample and pipe an audio out the speakers.
-    //    var digitalPlayer = new DigitalPlayer(hdRadioSignalStream);
-    //    digitalPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
-    //}
+        //// And AnaloguePlayer let's us resample and pipe an audio out the speakers.
+        //var digitalPlayer = new DigitalPlayer(hdRadioSignalStream);
+        //digitalPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
+    }
 
     private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));

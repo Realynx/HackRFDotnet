@@ -3,7 +3,7 @@
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 using HackRFDotnet.Api.Utilities;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
+namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Decoders;
 public class FmDecoder : SignalEffect<IQ, float> {
     public FmDecoder() {
 

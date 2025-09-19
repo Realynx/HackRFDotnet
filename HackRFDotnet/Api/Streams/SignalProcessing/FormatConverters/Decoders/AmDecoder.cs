@@ -2,7 +2,7 @@
 
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
+namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Decoders;
 public class AmDecoder : SignalEffect<IQ, float> {
     public AmDecoder() {
 

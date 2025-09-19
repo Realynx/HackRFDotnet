@@ -2,7 +2,7 @@
 
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
+namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Decoders;
 public class QpskDecoder : SignalEffect<IQ, byte> {
     public QpskDecoder() {
 
@@ -29,9 +29,9 @@ public class QpskDecoder : SignalEffect<IQ, byte> {
             var bit1 = Q < 0 ? 1 : 0; // second bit from Q sign
 
             // pack into current byte (MSB first)
-            currentByte = (byte)((currentByte << 1) | bit0);
+            currentByte = (byte)(currentByte << 1 | bit0);
             bitIndex++;
-            currentByte = (byte)((currentByte << 1) | bit1);
+            currentByte = (byte)(currentByte << 1 | bit1);
             bitIndex++;
 
             if (bitIndex == 8) {
