@@ -1,6 +1,5 @@
 ﻿using System.Buffers;
 using System.Text;
-using System.Text.Unicode;
 
 using HackRFDotnet.Api;
 using HackRFDotnet.Api.Extensions;
@@ -60,7 +59,7 @@ internal class MainService : IHostedService {
         var fmFrequency = Frequency.FromMHz(98.7f);
 
         rfDevice.SetFrequency(Frequency.FromMHz(98.862500f), Bandwidth.FromKHz(76));
-        var pskSignalStream = new QpskSignalStream(deviceStream, Bandwidth.FromKHz(76));
+        var pskSignalStream = new OfdmSignalStream(deviceStream, Bandwidth.FromKHz(76));
 
         var top = Console.CursorTop;
         while (true) {
@@ -73,7 +72,7 @@ internal class MainService : IHostedService {
                 pskSignalStream.Read(dataBuffer, 256);
 
                 var hexString = string.Join(string.Empty, dataBuffer.Select(x => x.ToString("x2")));
-                // Console.Write(Encoding.UTF8.GetString(dataBuffer));
+                Console.Write(Encoding.UTF8.GetString(dataBuffer));
             }
             finally {
                 ArrayPool<byte>.Shared.Return(dataBuffer);
@@ -89,7 +88,7 @@ internal class MainService : IHostedService {
 
     private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
-        rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(200));
+        rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(120));
         var fmSignalStream = new FmSignalStream(deviceStream, Bandwidth.FromKHz(200), stereo: true);
 
         var fmPlayer = new AnaloguePlayer(fmSignalStream);

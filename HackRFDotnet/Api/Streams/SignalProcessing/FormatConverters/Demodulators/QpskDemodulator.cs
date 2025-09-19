@@ -2,9 +2,9 @@
 
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Decoders;
-public class QpskDecoder : SignalEffect<IQ, byte> {
-    public QpskDecoder() {
+namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators;
+public class QpskDemodulator : SignalEffect<IQ, byte> {
+    public QpskDemodulator() {
 
     }
 

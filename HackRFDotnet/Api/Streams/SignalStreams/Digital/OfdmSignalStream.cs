@@ -4,10 +4,9 @@ using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams.Digital;
-public class QpskSignalStream : SignalStream<byte> {
-    public QpskSignalStream(IIQStream iQStream, Bandwidth signalBandwidth)
+public class OfdmSignalStream : SignalStream<byte> {
+    public OfdmSignalStream(IIQStream iQStream, Bandwidth signalBandwidth)
         : base(iQStream, BuildFxChain(iQStream, signalBandwidth, out _), false) {
-
     }
 
     private static SignalProcessingPipeline<IQ> BuildFxChain(IIQStream deviceStream, Bandwidth stationBandwidth, out SampleRate reducedRate) {
@@ -19,8 +18,7 @@ public class QpskSignalStream : SignalStream<byte> {
 
             .AddChildEffect(new FftEffect(true, producedChunkSize))
             .AddChildEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
-            .AddChildEffect(new FftEffect(false, producedChunkSize))
-            .AddChildEffect(new QpskDemodulator());
+            .AddChildEffect(new OfdmDemodulator());
 
         return signalPipeline;
     }

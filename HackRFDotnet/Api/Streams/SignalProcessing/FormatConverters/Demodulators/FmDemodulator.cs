@@ -3,9 +3,9 @@
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 using HackRFDotnet.Api.Utilities;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Decoders;
-public class FmDecoder : SignalEffect<IQ, float> {
-    public FmDecoder() {
+namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators;
+public class FmDemodulator : SignalEffect<IQ, float> {
+    public FmDemodulator() {
 
     }
 

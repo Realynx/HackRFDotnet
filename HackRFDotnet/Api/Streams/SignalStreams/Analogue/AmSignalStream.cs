@@ -1,7 +1,7 @@
 ﻿using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
-using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Decoders;
+using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators;
 
 
 namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
@@ -27,7 +27,7 @@ public class AmSignalStream : WaveSignalStream {
             .AddChildEffect(new FftEffect(true, producedChunkSize))
             .AddChildEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
             .AddChildEffect(new FftEffect(false, producedChunkSize))
-            .AddChildEffect(new AmDecoder());
+            .AddChildEffect(new AmDemodulator());
 
         return signalPipeline;
     }
