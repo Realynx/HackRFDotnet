@@ -1,9 +1,15 @@
-﻿namespace HackRFDotnet.Api;
+﻿using HackRFDotnet.Api.Streams;
+
+namespace HackRFDotnet.Api;
 
 /// <summary>
 /// Bandwidth of a signal sample.
 /// </summary>
 public readonly record struct Bandwidth {
+    public static readonly Bandwidth FmChannel = FromKHz(20);
+    public static readonly Bandwidth AmChannel = FromKHz(10);
+    public static readonly Bandwidth WideFmChannel = FromKHz(200);
+
     private readonly Hertz _hertz;
 
     public Bandwidth(long hz) : this(new Hertz(hz)) { }

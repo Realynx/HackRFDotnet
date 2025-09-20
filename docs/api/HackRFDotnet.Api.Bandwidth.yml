@@ -3,7 +3,7 @@ title: Struct Bandwidth
 body:
 - api1: Struct Bandwidth
   id: HackRFDotnet_Api_Bandwidth
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L6
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L8
   metadata:
     uid: HackRFDotnet.Api.Bandwidth
     commentId: T:HackRFDotnet.Api.Bandwidth
@@ -37,7 +37,7 @@ body:
 - h2: Constructors
 - api3: Bandwidth(long)
   id: HackRFDotnet_Api_Bandwidth__ctor_System_Int64_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L9
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L15
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.#ctor(System.Int64)
     commentId: M:HackRFDotnet.Api.Bandwidth.#ctor(System.Int64)
@@ -50,7 +50,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.int64
 - api3: Bandwidth(Hertz)
   id: HackRFDotnet_Api_Bandwidth__ctor_HackRFDotnet_Api_Hertz_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L11
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L17
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.#ctor(HackRFDotnet.Api.Hertz)
     commentId: M:HackRFDotnet.Api.Bandwidth.#ctor(HackRFDotnet.Api.Hertz)
@@ -61,10 +61,47 @@ body:
     type:
     - text: Hertz
       url: HackRFDotnet.Api.Hertz.html
+- h2: Fields
+- api3: AmChannel
+  id: HackRFDotnet_Api_Bandwidth_AmChannel
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L10
+  metadata:
+    uid: HackRFDotnet.Api.Bandwidth.AmChannel
+    commentId: F:HackRFDotnet.Api.Bandwidth.AmChannel
+- code: public static readonly Bandwidth AmChannel
+- h4: Field Value
+- parameters:
+  - type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+- api3: FmChannel
+  id: HackRFDotnet_Api_Bandwidth_FmChannel
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L9
+  metadata:
+    uid: HackRFDotnet.Api.Bandwidth.FmChannel
+    commentId: F:HackRFDotnet.Api.Bandwidth.FmChannel
+- code: public static readonly Bandwidth FmChannel
+- h4: Field Value
+- parameters:
+  - type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+- api3: WideFmChannel
+  id: HackRFDotnet_Api_Bandwidth_WideFmChannel
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L11
+  metadata:
+    uid: HackRFDotnet.Api.Bandwidth.WideFmChannel
+    commentId: F:HackRFDotnet.Api.Bandwidth.WideFmChannel
+- code: public static readonly Bandwidth WideFmChannel
+- h4: Field Value
+- parameters:
+  - type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
 - h2: Properties
 - api3: Hz
   id: HackRFDotnet_Api_Bandwidth_Hz
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L15
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L21
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.Hz
     commentId: P:HackRFDotnet.Api.Bandwidth.Hz
@@ -76,7 +113,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.int64
 - api3: NyquistSampleRate
   id: HackRFDotnet_Api_Bandwidth_NyquistSampleRate
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L25
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L31
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.NyquistSampleRate
     commentId: P:HackRFDotnet.Api.Bandwidth.NyquistSampleRate
@@ -93,7 +130,7 @@ body:
 - h2: Methods
 - api3: FromGHz(double)
   id: HackRFDotnet_Api_Bandwidth_FromGHz_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L47
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L53
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.FromGHz(System.Double)
     commentId: M:HackRFDotnet.Api.Bandwidth.FromGHz(System.Double)
@@ -111,7 +148,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: FromHz(Hertz)
   id: HackRFDotnet_Api_Bandwidth_FromHz_HackRFDotnet_Api_Hertz_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L31
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L37
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.FromHz(HackRFDotnet.Api.Hertz)
     commentId: M:HackRFDotnet.Api.Bandwidth.FromHz(HackRFDotnet.Api.Hertz)
@@ -129,7 +166,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: FromHz(long)
   id: HackRFDotnet_Api_Bandwidth_FromHz_System_Int64_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L35
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L41
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.FromHz(System.Int64)
     commentId: M:HackRFDotnet.Api.Bandwidth.FromHz(System.Int64)
@@ -147,7 +184,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: FromKHz(double)
   id: HackRFDotnet_Api_Bandwidth_FromKHz_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L39
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L45
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.FromKHz(System.Double)
     commentId: M:HackRFDotnet.Api.Bandwidth.FromKHz(System.Double)
@@ -165,7 +202,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: FromMHz(double)
   id: HackRFDotnet_Api_Bandwidth_FromMHz_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L43
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L49
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.FromMHz(System.Double)
     commentId: M:HackRFDotnet.Api.Bandwidth.FromMHz(System.Double)
@@ -184,7 +221,7 @@ body:
 - h2: Operators
 - api3: operator +(Bandwidth, Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_Addition_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Bandwidth_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L87
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L93
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_Addition(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_Addition(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
@@ -206,7 +243,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: operator /(Bandwidth, int)
   id: HackRFDotnet_Api_Bandwidth_op_Division_HackRFDotnet_Api_Bandwidth_System_Int32_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L75
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L81
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_Division(HackRFDotnet.Api.Bandwidth,System.Int32)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_Division(HackRFDotnet.Api.Bandwidth,System.Int32)
@@ -228,7 +265,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: operator /(Bandwidth, double)
   id: HackRFDotnet_Api_Bandwidth_op_Division_HackRFDotnet_Api_Bandwidth_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L79
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L85
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_Division(HackRFDotnet.Api.Bandwidth,System.Double)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_Division(HackRFDotnet.Api.Bandwidth,System.Double)
@@ -250,7 +287,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: operator >(Bandwidth, Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_GreaterThan_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Bandwidth_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L51
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L57
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_GreaterThan(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_GreaterThan(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
@@ -272,7 +309,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: operator >=(Bandwidth, Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_GreaterThanOrEqual_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Bandwidth_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L59
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L65
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_GreaterThanOrEqual(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_GreaterThanOrEqual(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
@@ -294,7 +331,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: implicit operator Frequency(Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_Implicit_HackRFDotnet_Api_Bandwidth__HackRFDotnet_Api_Frequency
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L99
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L105
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_Implicit(HackRFDotnet.Api.Bandwidth)~HackRFDotnet.Api.Frequency
     commentId: M:HackRFDotnet.Api.Bandwidth.op_Implicit(HackRFDotnet.Api.Bandwidth)~HackRFDotnet.Api.Frequency
@@ -312,7 +349,7 @@ body:
       url: HackRFDotnet.Api.Frequency.html
 - api3: implicit operator Hertz(Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_Implicit_HackRFDotnet_Api_Bandwidth__HackRFDotnet_Api_Hertz
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L103
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L109
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_Implicit(HackRFDotnet.Api.Bandwidth)~HackRFDotnet.Api.Hertz
     commentId: M:HackRFDotnet.Api.Bandwidth.op_Implicit(HackRFDotnet.Api.Bandwidth)~HackRFDotnet.Api.Hertz
@@ -330,7 +367,7 @@ body:
       url: HackRFDotnet.Api.Hertz.html
 - api3: operator <(Bandwidth, Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_LessThan_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Bandwidth_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L55
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L61
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_LessThan(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_LessThan(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
@@ -352,7 +389,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: operator <=(Bandwidth, Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_LessThanOrEqual_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Bandwidth_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L63
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L69
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_LessThanOrEqual(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_LessThanOrEqual(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
@@ -374,7 +411,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: operator %(Bandwidth, Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_Modulus_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Bandwidth_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L67
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L73
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_Modulus(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_Modulus(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
@@ -396,7 +433,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: operator *(Bandwidth, int)
   id: HackRFDotnet_Api_Bandwidth_op_Multiply_HackRFDotnet_Api_Bandwidth_System_Int32_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L91
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L97
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_Multiply(HackRFDotnet.Api.Bandwidth,System.Int32)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_Multiply(HackRFDotnet.Api.Bandwidth,System.Int32)
@@ -418,7 +455,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: operator *(Bandwidth, double)
   id: HackRFDotnet_Api_Bandwidth_op_Multiply_HackRFDotnet_Api_Bandwidth_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L95
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L101
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_Multiply(HackRFDotnet.Api.Bandwidth,System.Double)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_Multiply(HackRFDotnet.Api.Bandwidth,System.Double)
@@ -440,7 +477,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: operator -(Bandwidth, Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_Subtraction_HackRFDotnet_Api_Bandwidth_HackRFDotnet_Api_Bandwidth_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L83
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L89
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_Subtraction(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_Subtraction(HackRFDotnet.Api.Bandwidth,HackRFDotnet.Api.Bandwidth)
@@ -462,7 +499,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: operator -(Bandwidth)
   id: HackRFDotnet_Api_Bandwidth_op_UnaryNegation_HackRFDotnet_Api_Bandwidth_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L71
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Bandwidth.cs#L77
   metadata:
     uid: HackRFDotnet.Api.Bandwidth.op_UnaryNegation(HackRFDotnet.Api.Bandwidth)
     commentId: M:HackRFDotnet.Api.Bandwidth.op_UnaryNegation(HackRFDotnet.Api.Bandwidth)
