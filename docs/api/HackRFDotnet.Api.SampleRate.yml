@@ -3,7 +3,7 @@ title: Struct SampleRate
 body:
 - api1: Struct SampleRate
   id: HackRFDotnet_Api_SampleRate
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L3
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L5
   metadata:
     uid: HackRFDotnet.Api.SampleRate
     commentId: T:HackRFDotnet.Api.SampleRate
@@ -36,7 +36,7 @@ body:
 - h2: Constructors
 - api3: SampleRate(long)
   id: HackRFDotnet_Api_SampleRate__ctor_System_Int64_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L6
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L8
   metadata:
     uid: HackRFDotnet.Api.SampleRate.#ctor(System.Int64)
     commentId: M:HackRFDotnet.Api.SampleRate.#ctor(System.Int64)
@@ -49,7 +49,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.int64
 - api3: SampleRate(Hertz)
   id: HackRFDotnet_Api_SampleRate__ctor_HackRFDotnet_Api_Hertz_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L8
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L10
   metadata:
     uid: HackRFDotnet.Api.SampleRate.#ctor(HackRFDotnet.Api.Hertz)
     commentId: M:HackRFDotnet.Api.SampleRate.#ctor(HackRFDotnet.Api.Hertz)
@@ -63,7 +63,7 @@ body:
 - h2: Properties
 - api3: Ksps
   id: HackRFDotnet_Api_SampleRate_Ksps
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L28
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L30
   metadata:
     uid: HackRFDotnet.Api.SampleRate.Ksps
     commentId: P:HackRFDotnet.Api.SampleRate.Ksps
@@ -75,7 +75,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.double
 - api3: Msps
   id: HackRFDotnet_Api_SampleRate_Msps
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L34
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L36
   metadata:
     uid: HackRFDotnet.Api.SampleRate.Msps
     commentId: P:HackRFDotnet.Api.SampleRate.Msps
@@ -87,7 +87,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.double
 - api3: NyquistFrequencyBandwidth
   id: HackRFDotnet_Api_SampleRate_NyquistFrequencyBandwidth
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L16
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L18
   metadata:
     uid: HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
     commentId: P:HackRFDotnet.Api.SampleRate.NyquistFrequencyBandwidth
@@ -103,7 +103,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: Sps
   id: HackRFDotnet_Api_SampleRate_Sps
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L22
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L24
   metadata:
     uid: HackRFDotnet.Api.SampleRate.Sps
     commentId: P:HackRFDotnet.Api.SampleRate.Sps
@@ -116,7 +116,7 @@ body:
 - h2: Methods
 - api3: FromGsps(double)
   id: HackRFDotnet_Api_SampleRate_FromGsps_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L52
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L54
   metadata:
     uid: HackRFDotnet.Api.SampleRate.FromGsps(System.Double)
     commentId: M:HackRFDotnet.Api.SampleRate.FromGsps(System.Double)
@@ -134,7 +134,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: FromKsps(double)
   id: HackRFDotnet_Api_SampleRate_FromKsps_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L44
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L46
   metadata:
     uid: HackRFDotnet.Api.SampleRate.FromKsps(System.Double)
     commentId: M:HackRFDotnet.Api.SampleRate.FromKsps(System.Double)
@@ -152,7 +152,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: FromMsps(double)
   id: HackRFDotnet_Api_SampleRate_FromMsps_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L48
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L50
   metadata:
     uid: HackRFDotnet.Api.SampleRate.FromMsps(System.Double)
     commentId: M:HackRFDotnet.Api.SampleRate.FromMsps(System.Double)
@@ -170,7 +170,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: FromSps(long)
   id: HackRFDotnet_Api_SampleRate_FromSps_System_Int64_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L40
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L42
   metadata:
     uid: HackRFDotnet.Api.SampleRate.FromSps(System.Int64)
     commentId: M:HackRFDotnet.Api.SampleRate.FromSps(System.Int64)
@@ -186,10 +186,24 @@ body:
   - type:
     - text: SampleRate
       url: HackRFDotnet.Api.SampleRate.html
+- api3: ToString()
+  id: HackRFDotnet_Api_SampleRate_ToString
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L110
+  metadata:
+    uid: HackRFDotnet.Api.SampleRate.ToString
+    commentId: M:HackRFDotnet.Api.SampleRate.ToString
+- markdown: Returns the fully qualified type name of this instance.
+- code: public override string ToString()
+- h4: Returns
+- parameters:
+  - type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+    description: The fully qualified type name.
 - h2: Operators
 - api3: operator +(SampleRate, SampleRate)
   id: HackRFDotnet_Api_SampleRate_op_Addition_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L92
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L94
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_Addition(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.SampleRate.op_Addition(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
@@ -211,7 +225,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: operator /(SampleRate, int)
   id: HackRFDotnet_Api_SampleRate_op_Division_HackRFDotnet_Api_SampleRate_System_Int32_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L80
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L82
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_Division(HackRFDotnet.Api.SampleRate,System.Int32)
     commentId: M:HackRFDotnet.Api.SampleRate.op_Division(HackRFDotnet.Api.SampleRate,System.Int32)
@@ -233,7 +247,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: operator /(SampleRate, double)
   id: HackRFDotnet_Api_SampleRate_op_Division_HackRFDotnet_Api_SampleRate_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L84
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L86
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_Division(HackRFDotnet.Api.SampleRate,System.Double)
     commentId: M:HackRFDotnet.Api.SampleRate.op_Division(HackRFDotnet.Api.SampleRate,System.Double)
@@ -255,7 +269,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: operator >(SampleRate, SampleRate)
   id: HackRFDotnet_Api_SampleRate_op_GreaterThan_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L56
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L58
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_GreaterThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.SampleRate.op_GreaterThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
@@ -277,7 +291,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: operator >=(SampleRate, SampleRate)
   id: HackRFDotnet_Api_SampleRate_op_GreaterThanOrEqual_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L64
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L66
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_GreaterThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.SampleRate.op_GreaterThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
@@ -299,7 +313,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: implicit operator Hertz(SampleRate)
   id: HackRFDotnet_Api_SampleRate_op_Implicit_HackRFDotnet_Api_SampleRate__HackRFDotnet_Api_Hertz
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L104
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L106
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_Implicit(HackRFDotnet.Api.SampleRate)~HackRFDotnet.Api.Hertz
     commentId: M:HackRFDotnet.Api.SampleRate.op_Implicit(HackRFDotnet.Api.SampleRate)~HackRFDotnet.Api.Hertz
@@ -317,7 +331,7 @@ body:
       url: HackRFDotnet.Api.Hertz.html
 - api3: operator <(SampleRate, SampleRate)
   id: HackRFDotnet_Api_SampleRate_op_LessThan_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L60
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L62
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_LessThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.SampleRate.op_LessThan(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
@@ -339,7 +353,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: operator <=(SampleRate, SampleRate)
   id: HackRFDotnet_Api_SampleRate_op_LessThanOrEqual_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L68
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L70
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_LessThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.SampleRate.op_LessThanOrEqual(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
@@ -361,7 +375,7 @@ body:
       url: https://learn.microsoft.com/dotnet/api/system.boolean
 - api3: operator %(SampleRate, SampleRate)
   id: HackRFDotnet_Api_SampleRate_op_Modulus_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L72
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L74
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_Modulus(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.SampleRate.op_Modulus(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
@@ -383,7 +397,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: operator *(SampleRate, int)
   id: HackRFDotnet_Api_SampleRate_op_Multiply_HackRFDotnet_Api_SampleRate_System_Int32_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L96
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L98
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_Multiply(HackRFDotnet.Api.SampleRate,System.Int32)
     commentId: M:HackRFDotnet.Api.SampleRate.op_Multiply(HackRFDotnet.Api.SampleRate,System.Int32)
@@ -405,7 +419,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: operator *(SampleRate, double)
   id: HackRFDotnet_Api_SampleRate_op_Multiply_HackRFDotnet_Api_SampleRate_System_Double_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L100
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L102
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_Multiply(HackRFDotnet.Api.SampleRate,System.Double)
     commentId: M:HackRFDotnet.Api.SampleRate.op_Multiply(HackRFDotnet.Api.SampleRate,System.Double)
@@ -427,7 +441,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: operator -(SampleRate, SampleRate)
   id: HackRFDotnet_Api_SampleRate_op_Subtraction_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L88
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L90
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_Subtraction(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.SampleRate.op_Subtraction(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate)
@@ -449,7 +463,7 @@ body:
       url: HackRFDotnet.Api.SampleRate.html
 - api3: operator -(SampleRate)
   id: HackRFDotnet_Api_SampleRate_op_UnaryNegation_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L76
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SampleRate.cs#L78
   metadata:
     uid: HackRFDotnet.Api.SampleRate.op_UnaryNegation(HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.SampleRate.op_UnaryNegation(HackRFDotnet.Api.SampleRate)

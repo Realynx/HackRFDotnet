@@ -1,4 +1,6 @@
 - name: Introduction
-  href: introduction.md
+  href: 00-introduction.md
 - name: Getting Started
-  href: getting-started.md
+  href: 01-start.md
+- name: Getting Started DI
+  href: 02-di.md

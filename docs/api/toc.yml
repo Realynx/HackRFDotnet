@@ -18,16 +18,26 @@
   href: HackRFDotnet.Api.Extensions.yml
   items:
   - name: Classes
+  - name: HostBuilderExtensions
+    href: HackRFDotnet.Api.Extensions.HostBuilderExtensions.yml
   - name: RfDeviceExtensions
     href: HackRFDotnet.Api.Extensions.RfDeviceExtensions.yml
+- name: HackRFDotnet.Api.Interfaces
+  href: HackRFDotnet.Api.Interfaces.yml
+  items:
+  - name: Interfaces
+  - name: IDigitalRadioDevice
+    href: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.yml
+  - name: IRfDeviceService
+    href: HackRFDotnet.Api.Interfaces.IRfDeviceService.yml
 - name: HackRFDotnet.Api.Services
   href: HackRFDotnet.Api.Services.yml
   items:
   - name: Classes
   - name: AnaloguePlayer
     href: HackRFDotnet.Api.Services.AnaloguePlayer.yml
-  - name: RfDeviceControllerService
-    href: HackRFDotnet.Api.Services.RfDeviceControllerService.yml
+  - name: RfDeviceService
+    href: HackRFDotnet.Api.Services.RfDeviceService.yml
 - name: HackRFDotnet.Api.Streams
   href: HackRFDotnet.Api.Streams.yml
   items:
@@ -81,18 +91,30 @@
     href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.yml
   - name: SquelchEffect
     href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.yml
+- name: HackRFDotnet.Api.Streams.SignalProcessing.ErrorRate
+  href: HackRFDotnet.Api.Streams.SignalProcessing.ErrorRate.yml
+  items:
+  - name: Classes
+  - name: BitErrorRate
+    href: HackRFDotnet.Api.Streams.SignalProcessing.ErrorRate.BitErrorRate.yml
 - name: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
   href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.yml
   items:
   - name: Classes
-  - name: AmDecoder
-    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.AmDecoder.yml
-  - name: BpskDecoder
-    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.BpskDecoder.yml
-  - name: FmDecoder
-    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.FmDecoder.yml
-  - name: QpskDecoder
-    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.yml
+  - name: OfdmChannelizer
+    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer.yml
+- name: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators
+  href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.yml
+  items:
+  - name: Classes
+  - name: AmDemodulator
+    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.AmDemodulator.yml
+  - name: BpskDemodulator
+    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.BpskDemodulator.yml
+  - name: FmDemodulator
+    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.FmDemodulator.yml
+  - name: QpskDemodulator
+    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.QpskDemodulator.yml
 - name: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
   href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.yml
   items:
@@ -119,6 +141,8 @@
   href: HackRFDotnet.Api.Streams.SignalStreams.Digital.yml
   items:
   - name: Classes
+  - name: OfdmSignalStream
+    href: HackRFDotnet.Api.Streams.SignalStreams.Digital.OfdmSignalStream.yml
   - name: QpskSignalStream
     href: HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream.yml
 - name: HackRFDotnet.Api.Utilities

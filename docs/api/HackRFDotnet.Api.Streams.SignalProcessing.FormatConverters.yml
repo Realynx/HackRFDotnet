@@ -6,18 +6,22 @@ body:
   metadata:
     uid: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
     commentId: N:HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
+- h3: Namespaces
+- parameters:
+  - type:
+      text: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators
+      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.html
 - h3: Classes
 - parameters:
   - type:
-      text: AmDecoder
-      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.AmDecoder.html
-  - type:
-      text: BpskDecoder
-      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.BpskDecoder.html
-  - type:
-      text: FmDecoder
-      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.FmDecoder.html
-  - type:
-      text: QpskDecoder
-      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.html
+      text: OfdmChannelizer
+      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer.html
+    description: >-
+      This is discover the channel division inside an OFDM stream.
+
+      It will then divide the samples into each channel via FFT.
+
+      Each bin will be a channel with a complex number.
+
+      Use this complex number at each bin to demodulate information from the complex plane.
 languageId: csharp

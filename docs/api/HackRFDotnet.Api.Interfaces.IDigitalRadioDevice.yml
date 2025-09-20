@@ -1,0 +1,174 @@
+### YamlMime:ApiPage
+title: Interface IDigitalRadioDevice
+body:
+- api1: Interface IDigitalRadioDevice
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L5
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice
+    commentId: T:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Interfaces
+      url: HackRFDotnet.Api.Interfaces.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public interface IDigitalRadioDevice
+- h2: Properties
+- api3: Bandwidth
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_Bandwidth
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L6
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.Bandwidth
+    commentId: P:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.Bandwidth
+- code: Bandwidth Bandwidth { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+- api3: DeviceSamplingRate
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_DeviceSamplingRate
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L7
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.DeviceSamplingRate
+    commentId: P:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.DeviceSamplingRate
+- code: SampleRate DeviceSamplingRate { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+- api3: DeviceStream
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_DeviceStream
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L8
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.DeviceStream
+    commentId: P:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.DeviceStream
+- code: IIQStream? DeviceStream { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: IIQStream
+      url: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html
+    - '?'
+- api3: Frequency
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_Frequency
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L9
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.Frequency
+    commentId: P:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.Frequency
+- code: Frequency Frequency { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+- api3: IsConnected
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_IsConnected
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L10
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.IsConnected
+    commentId: P:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.IsConnected
+- code: bool IsConnected { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- h2: Methods
+- api3: Dispose()
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_Dispose
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L12
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.Dispose
+    commentId: M:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.Dispose
+- code: void Dispose()
+- api3: SetAmplifications(uint, uint, bool)
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_SetAmplifications_System_UInt32_System_UInt32_System_Boolean_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L13
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
+    commentId: M:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
+- code: void SetAmplifications(uint lna, uint vga, bool internalAmp)
+- h4: Parameters
+- parameters:
+  - name: lna
+    type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: vga
+    type:
+    - text: uint
+      url: https://learn.microsoft.com/dotnet/api/system.uint32
+  - name: internalAmp
+    type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- api3: SetFrequency(Frequency, Bandwidth)
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L14
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+    commentId: M:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
+- code: bool SetFrequency(Frequency radioFrequency, Bandwidth bandwidth)
+- h4: Parameters
+- parameters:
+  - name: radioFrequency
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: bandwidth
+    type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- api3: SetSampleRate(SampleRate)
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_SetSampleRate_HackRFDotnet_Api_SampleRate_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L15
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
+    commentId: M:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
+- code: void SetSampleRate(SampleRate sampleRate)
+- h4: Parameters
+- parameters:
+  - name: sampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+- api3: StartRx(HackRFSampleBlockCallback)
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_StartRx_HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L16
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
+    commentId: M:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
+- code: bool StartRx(HackRFSampleBlockCallback rxCallback)
+- h4: Parameters
+- parameters:
+  - name: rxCallback
+    type:
+    - text: HackRFSampleBlockCallback
+      url: HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+- api3: StopRx()
+  id: HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_StopRx
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/IDigitalRadioDevice.cs#L17
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.StopRx
+    commentId: M:HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.StopRx
+- code: bool StopRx()
+- h4: Returns
+- parameters:
+  - type:
+    - text: bool
+      url: https://learn.microsoft.com/dotnet/api/system.boolean
+languageId: csharp

@@ -9,6 +9,9 @@ body:
 - h3: Classes
 - parameters:
   - type:
+      text: OfdmSignalStream
+      url: HackRFDotnet.Api.Streams.SignalStreams.Digital.OfdmSignalStream.html
+  - type:
       text: QpskSignalStream
       url: HackRFDotnet.Api.Streams.SignalStreams.Digital.QpskSignalStream.html
 languageId: csharp

@@ -12,6 +12,6 @@ body:
       text: AnaloguePlayer
       url: HackRFDotnet.Api.Services.AnaloguePlayer.html
   - type:
-      text: RfDeviceControllerService
-      url: HackRFDotnet.Api.Services.RfDeviceControllerService.html
+      text: RfDeviceService
+      url: HackRFDotnet.Api.Services.RfDeviceService.html
 languageId: csharp

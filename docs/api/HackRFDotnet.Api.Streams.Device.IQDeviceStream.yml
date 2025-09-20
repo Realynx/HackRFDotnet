@@ -106,7 +106,7 @@ body:
 - h2: Methods
 - api3: Close()
   id: HackRFDotnet_Api_Streams_Device_IQDeviceStream_Close
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L50
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L51
   metadata:
     uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.Close
     commentId: M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.Close
@@ -114,7 +114,7 @@ body:
 - code: public void Close()
 - api3: Dispose()
   id: HackRFDotnet_Api_Streams_Device_IQDeviceStream_Dispose
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L109
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L110
   metadata:
     uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.Dispose
     commentId: M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.Dispose
@@ -122,7 +122,7 @@ body:
 - code: public void Dispose()
 - api3: OpenRx(SampleRate?)
   id: HackRFDotnet_Api_Streams_Device_IQDeviceStream_OpenRx_System_Nullable_HackRFDotnet_Api_SampleRate__
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L41
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L42
   metadata:
     uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx(System.Nullable{HackRFDotnet.Api.SampleRate})
     commentId: M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.OpenRx(System.Nullable{HackRFDotnet.Api.SampleRate})
@@ -139,7 +139,7 @@ body:
     optional: true
 - api3: ReadBuffer(Span<IQ>)
   id: HackRFDotnet_Api_Streams_Device_IQDeviceStream_ReadBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L69
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L70
   metadata:
     uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
     commentId: M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.ReadBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
@@ -164,7 +164,7 @@ body:
     description: ''
 - api3: SetSampleRate(SampleRate)
   id: HackRFDotnet_Api_Streams_Device_IQDeviceStream_SetSampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L54
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L55
   metadata:
     uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.SetSampleRate(HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.SetSampleRate(HackRFDotnet.Api.SampleRate)
@@ -179,7 +179,7 @@ body:
     description: ''
 - api3: TxBuffer(Span<IQ>)
   id: HackRFDotnet_Api_Streams_Device_IQDeviceStream_TxBuffer_System_Span_HackRFDotnet_Api_Streams_IQ__
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L65
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/Device/IQDeviceStream.cs#L66
   metadata:
     uid: HackRFDotnet.Api.Streams.Device.IQDeviceStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})
     commentId: M:HackRFDotnet.Api.Streams.Device.IQDeviceStream.TxBuffer(System.Span{HackRFDotnet.Api.Streams.IQ})

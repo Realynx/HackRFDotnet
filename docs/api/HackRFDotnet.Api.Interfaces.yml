@@ -1,0 +1,17 @@
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.Interfaces
+body:
+- api1: Namespace HackRFDotnet.Api.Interfaces
+  id: HackRFDotnet_Api_Interfaces
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces
+    commentId: N:HackRFDotnet.Api.Interfaces
+- h3: Interfaces
+- parameters:
+  - type:
+      text: IDigitalRadioDevice
+      url: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.html
+  - type:
+      text: IRfDeviceService
+      url: HackRFDotnet.Api.Interfaces.IRfDeviceService.html
+languageId: csharp

@@ -88,7 +88,7 @@ body:
     description: The chunk size after down sampling.
 - api3: IQDownSampleEffect(SampleRate, SampleRate, int, out SampleRate, out int)
   id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_IQDownSampleEffect__ctor_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_System_Int32_HackRFDotnet_Api_SampleRate__System_Int32__
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/IQDownSampleEffect.cs#L63
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/IQDownSampleEffect.cs#L67
   metadata:
     uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.#ctor(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate,System.Int32,HackRFDotnet.Api.SampleRate@,System.Int32@)
     commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.#ctor(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate,System.Int32,HackRFDotnet.Api.SampleRate@,System.Int32@)
@@ -124,7 +124,7 @@ body:
 - h2: Methods
 - api3: Dispose()
   id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_IQDownSampleEffect_Dispose
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/IQDownSampleEffect.cs#L123
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/IQDownSampleEffect.cs#L127
   metadata:
     uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.Dispose
     commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.Dispose
@@ -132,7 +132,7 @@ body:
 - code: public void Dispose()
 - api3: TransformSignal(Span<IQ>, int)
   id: HackRFDotnet_Api_Streams_SignalProcessing_Effects_IQDownSampleEffect_TransformSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/IQDownSampleEffect.cs#L93
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/Effects/IQDownSampleEffect.cs#L97
   metadata:
     uid: HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
     commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)

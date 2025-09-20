@@ -9,6 +9,9 @@ body:
 - h3: Classes
 - parameters:
   - type:
+      text: HostBuilderExtensions
+      url: HackRFDotnet.Api.Extensions.HostBuilderExtensions.html
+  - type:
       text: RfDeviceExtensions
       url: HackRFDotnet.Api.Extensions.RfDeviceExtensions.html
 languageId: csharp

@@ -3,7 +3,7 @@ title: Class DigitalRadioDevice
 body:
 - api1: Class DigitalRadioDevice
   id: HackRFDotnet_Api_DigitalRadioDevice
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L11
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L13
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice
     commentId: T:HackRFDotnet.Api.DigitalRadioDevice
@@ -15,7 +15,7 @@ body:
   - name: Assembly
     value: HackRFDotnet.dll
 - markdown: Radio Device to receive IQ Samples with.
-- code: 'public class DigitalRadioDevice : IDisposable'
+- code: 'public class DigitalRadioDevice : IDigitalRadioDevice, IDisposable'
 - h4: Inheritance
 - inheritance:
   - text: object
@@ -24,6 +24,8 @@ body:
     url: HackRFDotnet.Api.DigitalRadioDevice.html
 - h4: Implements
 - list:
+  - text: IDigitalRadioDevice
+    url: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.html
   - text: IDisposable
     url: https://learn.microsoft.com/dotnet/api/system.idisposable
 - h4: Inherited Members
@@ -49,7 +51,7 @@ body:
 - h2: Fields
 - api3: DevicePtr
   id: HackRFDotnet_Api_DigitalRadioDevice_DevicePtr
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L36
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L43
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
     commentId: F:HackRFDotnet.Api.DigitalRadioDevice.DevicePtr
@@ -63,7 +65,7 @@ body:
 - h2: Properties
 - api3: Bandwidth
   id: HackRFDotnet_Api_DigitalRadioDevice_Bandwidth
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L20
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L22
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
     commentId: P:HackRFDotnet.Api.DigitalRadioDevice.Bandwidth
@@ -76,7 +78,7 @@ body:
       url: HackRFDotnet.Api.Bandwidth.html
 - api3: DeviceSamplingRate
   id: HackRFDotnet_Api_DigitalRadioDevice_DeviceSamplingRate
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L25
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L27
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
     commentId: P:HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate
@@ -87,9 +89,23 @@ body:
   - type:
     - text: SampleRate
       url: HackRFDotnet.Api.SampleRate.html
+- api3: DeviceStream
+  id: HackRFDotnet_Api_DigitalRadioDevice_DeviceStream
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L32
+  metadata:
+    uid: HackRFDotnet.Api.DigitalRadioDevice.DeviceStream
+    commentId: P:HackRFDotnet.Api.DigitalRadioDevice.DeviceStream
+- markdown: The immutable stream running on this device.
+- code: public IIQStream? DeviceStream { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: IIQStream
+      url: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html
+    - '?'
 - api3: Frequency
   id: HackRFDotnet_Api_DigitalRadioDevice_Frequency
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L15
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L17
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.Frequency
     commentId: P:HackRFDotnet.Api.DigitalRadioDevice.Frequency
@@ -102,7 +118,7 @@ body:
       url: HackRFDotnet.Api.Frequency.html
 - api3: IsConnected
   id: HackRFDotnet_Api_DigitalRadioDevice_IsConnected
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L30
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L37
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.IsConnected
     commentId: P:HackRFDotnet.Api.DigitalRadioDevice.IsConnected
@@ -116,7 +132,7 @@ body:
 - h2: Methods
 - api3: Dispose()
   id: HackRFDotnet_Api_DigitalRadioDevice_Dispose
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L120
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L127
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.Dispose
     commentId: M:HackRFDotnet.Api.DigitalRadioDevice.Dispose
@@ -124,7 +140,7 @@ body:
 - code: public void Dispose()
 - api3: SetAmplifications(uint, uint, bool)
   id: HackRFDotnet_Api_DigitalRadioDevice_SetAmplifications_System_UInt32_System_UInt32_System_Boolean_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L49
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L56
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
     commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)
@@ -149,7 +165,7 @@ body:
     description: ''
 - api3: SetFrequency(Frequency, Bandwidth)
   id: HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L61
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L68
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
     commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)
@@ -175,7 +191,7 @@ body:
     description: ''
 - api3: SetSampleRate(SampleRate)
   id: HackRFDotnet_Api_DigitalRadioDevice_SetSampleRate_HackRFDotnet_Api_SampleRate_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L76
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L83
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
     commentId: M:HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)
@@ -195,7 +211,7 @@ body:
     description: ''
 - api3: StartRx(HackRFSampleBlockCallback)
   id: HackRFDotnet_Api_DigitalRadioDevice_StartRx_HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L92
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L99
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
     commentId: M:HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)
@@ -222,7 +238,7 @@ body:
     description: ''
 - api3: StopRx()
   id: HackRFDotnet_Api_DigitalRadioDevice_StopRx
-  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L112
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L119
   metadata:
     uid: HackRFDotnet.Api.DigitalRadioDevice.StopRx
     commentId: M:HackRFDotnet.Api.DigitalRadioDevice.StopRx

@@ -1,0 +1,109 @@
+### YamlMime:ApiPage
+title: Class OfdmSignalStream
+body:
+- api1: Class OfdmSignalStream
+  id: HackRFDotnet_Api_Streams_SignalStreams_Digital_OfdmSignalStream
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Digital/OfdmSignalStream.cs#L7
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.Digital.OfdmSignalStream
+    commentId: T:HackRFDotnet.Api.Streams.SignalStreams.Digital.OfdmSignalStream
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Streams.SignalStreams.Digital
+      url: HackRFDotnet.Api.Streams.SignalStreams.Digital.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: 'public class OfdmSignalStream : SignalStream<byte>, IDisposable'
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: SignalStream<byte>
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html
+  - text: OfdmSignalStream
+    url: HackRFDotnet.Api.Streams.SignalStreams.Digital.OfdmSignalStream.html
+- h4: Implements
+- list:
+  - text: IDisposable
+    url: https://learn.microsoft.com/dotnet/api/system.idisposable
+- h4: Inherited Members
+- list:
+  - text: SignalStream<byte>.Center
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Center
+  - text: SignalStream<byte>.Bandwidth
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Bandwidth
+  - text: SignalStream<byte>.SampleRate
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_SampleRate
+  - text: SignalStream<byte>._processingPipeline
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__processingPipeline
+  - text: SignalStream<byte>._iQStream
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__iQStream
+  - text: SignalStream<byte>._keepOpen
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__keepOpen
+  - text: SignalStream<byte>.ReadSpan(Span<byte>)
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_ReadSpan_System_Span__0__
+  - text: SignalStream<byte>.SetBand(Frequency, Bandwidth)
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_
+  - text: SignalStream<byte>.Dispose()
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Dispose
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Constructors
+- api3: OfdmSignalStream(IIQStream, Bandwidth)
+  id: HackRFDotnet_Api_Streams_SignalStreams_Digital_OfdmSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_Bandwidth_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Digital/OfdmSignalStream.cs#L8
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.Digital.OfdmSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Bandwidth)
+    commentId: M:HackRFDotnet.Api.Streams.SignalStreams.Digital.OfdmSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Bandwidth)
+- code: public OfdmSignalStream(IIQStream iQStream, Bandwidth signalBandwidth)
+- h4: Parameters
+- parameters:
+  - name: iQStream
+    type:
+    - text: IIQStream
+      url: HackRFDotnet.Api.Streams.Interfaces.IIQStream.html
+  - name: signalBandwidth
+    type:
+    - text: Bandwidth
+      url: HackRFDotnet.Api.Bandwidth.html
+- h2: Methods
+- api3: Read(Span<byte>, int)
+  id: HackRFDotnet_Api_Streams_SignalStreams_Digital_OfdmSignalStream_Read_System_Span_System_Byte__System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Digital/OfdmSignalStream.cs#L24
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalStreams.Digital.OfdmSignalStream.Read(System.Span{System.Byte},System.Int32)
+    commentId: M:HackRFDotnet.Api.Streams.SignalStreams.Digital.OfdmSignalStream.Read(System.Span{System.Byte},System.Int32)
+- code: public int Read(Span<byte> buffer, int count)
+- h4: Parameters
+- parameters:
+  - name: buffer
+    type:
+    - text: Span
+      url: https://learn.microsoft.com/dotnet/api/system.span-1
+    - <
+    - text: byte
+      url: https://learn.microsoft.com/dotnet/api/system.byte
+    - '>'
+  - name: count
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+- h4: Returns
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+languageId: csharp

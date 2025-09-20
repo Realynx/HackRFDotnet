@@ -12,6 +12,9 @@ body:
       text: HackRFDotnet.Api.Extensions
       url: HackRFDotnet.Api.Extensions.html
   - type:
+      text: HackRFDotnet.Api.Interfaces
+      url: HackRFDotnet.Api.Interfaces.html
+  - type:
       text: HackRFDotnet.Api.Services
       url: HackRFDotnet.Api.Services.html
   - type:

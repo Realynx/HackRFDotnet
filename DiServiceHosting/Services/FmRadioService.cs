@@ -31,7 +31,6 @@ internal class FmRadioService : IHostedService, IDisposable {
         var fmPlayer = new AnaloguePlayer(_signalStream);
         fmPlayer.PlayStreamAsync(_radioDevice.Frequency, _radioDevice.Bandwidth, SampleRate.FromKsps(48));
 
-
         return Task.CompletedTask;
     }
 

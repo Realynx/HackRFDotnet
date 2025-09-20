@@ -1,0 +1,94 @@
+### YamlMime:ApiPage
+title: Class HostBuilderExtensions
+body:
+- api1: Class HostBuilderExtensions
+  id: HackRFDotnet_Api_Extensions_HostBuilderExtensions
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Extensions/HostBuilderExtensions.cs#L9
+  metadata:
+    uid: HackRFDotnet.Api.Extensions.HostBuilderExtensions
+    commentId: T:HackRFDotnet.Api.Extensions.HostBuilderExtensions
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Extensions
+      url: HackRFDotnet.Api.Extensions.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public static class HostBuilderExtensions
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: HostBuilderExtensions
+    url: HackRFDotnet.Api.Extensions.HostBuilderExtensions.html
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Methods
+- api3: UseFirstRadioDevice(HostBuilder, SampleRate)
+  id: HackRFDotnet_Api_Extensions_HostBuilderExtensions_UseFirstRadioDevice_Microsoft_Extensions_Hosting_HostBuilder_HackRFDotnet_Api_SampleRate_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Extensions/HostBuilderExtensions.cs#L17
+  metadata:
+    uid: HackRFDotnet.Api.Extensions.HostBuilderExtensions.UseFirstRadioDevice(Microsoft.Extensions.Hosting.HostBuilder,HackRFDotnet.Api.SampleRate)
+    commentId: M:HackRFDotnet.Api.Extensions.HostBuilderExtensions.UseFirstRadioDevice(Microsoft.Extensions.Hosting.HostBuilder,HackRFDotnet.Api.SampleRate)
+- markdown: Will automatically open the first device, create a stream, and add the instances as singletons to the DI host.
+- code: public static HostBuilder UseFirstRadioDevice(this HostBuilder hostBuilder, SampleRate sampleRate)
+- h4: Parameters
+- parameters:
+  - name: hostBuilder
+    type:
+    - text: HostBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.hostbuilder
+    description: ''
+  - name: sampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: HostBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.hostbuilder
+    description: ''
+- h4: Exceptions
+- parameters:
+  - type:
+    - text: Exception
+      url: https://learn.microsoft.com/dotnet/api/system.exception
+    description: ''
+- api3: UseRfDeviceController(HostBuilder)
+  id: HackRFDotnet_Api_Extensions_HostBuilderExtensions_UseRfDeviceController_Microsoft_Extensions_Hosting_HostBuilder_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Extensions/HostBuilderExtensions.cs#L39
+  metadata:
+    uid: HackRFDotnet.Api.Extensions.HostBuilderExtensions.UseRfDeviceController(Microsoft.Extensions.Hosting.HostBuilder)
+    commentId: M:HackRFDotnet.Api.Extensions.HostBuilderExtensions.UseRfDeviceController(Microsoft.Extensions.Hosting.HostBuilder)
+- markdown: You must open the IQDeviceStream manually for each device managed via the <xref href="HackRFDotnet.Api.Services.RfDeviceService" data-throw-if-not-resolved="false"></xref>
+- code: public static HostBuilder UseRfDeviceController(this HostBuilder hostBuilder)
+- h4: Parameters
+- parameters:
+  - name: hostBuilder
+    type:
+    - text: HostBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.hostbuilder
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: HostBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.hostbuilder
+    description: ''
+languageId: csharp

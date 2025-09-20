@@ -86,25 +86,19 @@
 
         <article data-uid="">
 <h1 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters' data-commentid='N:HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters' id='HackRFDotnet_Api_Streams_SignalProcessing_FormatConverters'>Namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters   </h1>
- <h3 class='section'>Classes</h3><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.AmDecoder.html'>AmDecoder</a>  </dt>
+ <h3 class='section'>Namespaces</h3><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.html'>HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators</a>  </dt>
 <dd>
 
 
 
-</dd><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.BpskDecoder.html'>BpskDecoder</a>  </dt>
+</dd></dl><h3 class='section'>Classes</h3><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer.html'>OfdmChannelizer</a>  </dt>
 <dd>
 
 
-
-</dd><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.FmDecoder.html'>FmDecoder</a>  </dt>
-<dd>
-
-
-
-</dd><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.QpskDecoder.html'>QpskDecoder</a>  </dt>
-<dd>
-
-
+<p>This is discover the channel division inside an OFDM stream.
+It will then divide the samples into each channel via FFT.
+Each bin will be a channel with a complex number.
+Use this complex number at each bin to demodulate information from the complex plane.</p>
 
 </dd></dl>
 </article>

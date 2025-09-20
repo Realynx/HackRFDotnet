@@ -85,11 +85,11 @@
         </div>
 
         <article data-uid="">
-<h1 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice' data-commentid='T:HackRFDotnet.Api.DigitalRadioDevice' id='HackRFDotnet_Api_DigitalRadioDevice'>Class DigitalRadioDevice    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L11'><i class='bi bi-code-slash'></i></a></h1>
+<h1 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice' data-commentid='T:HackRFDotnet.Api.DigitalRadioDevice' id='HackRFDotnet_Api_DigitalRadioDevice'>Class DigitalRadioDevice    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L13'><i class='bi bi-code-slash'></i></a></h1>
  <div class="facts text-secondary">
 <dl><dt>Namespace</dt><dd><a href='HackRFDotnet.Api.html'>HackRFDotnet.Api</a></dd></dl><dl><dt>Assembly</dt><dd>HackRFDotnet.dll</dd></dl>
 </div><p>Radio Device to receive IQ Samples with.</p>
-<pre><code class='lang-csharp'>public class DigitalRadioDevice : IDisposable</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
+<pre><code class='lang-csharp'>public class DigitalRadioDevice : IDigitalRadioDevice, IDisposable</code></pre><h4 class='section'>Inheritance</h4><dl class="typelist inheritance"><dd>
 <div>
 <a href='https://learn.microsoft.com/dotnet/api/system.object'>object</a>
 </div>
@@ -98,6 +98,9 @@
 </div>
 
 </dd></dl><h4 class='section'>Implements</h4><dl class="typelist"><dd>
+<div>
+<a href='HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.html'>IDigitalRadioDevice</a>
+</div>
 <div>
 <a href='https://learn.microsoft.com/dotnet/api/system.idisposable'>IDisposable</a>
 </div>
@@ -130,43 +133,50 @@
 <a href='HackRFDotnet.Api.Extensions.RfDeviceExtensions.html#HackRFDotnet_Api_Extensions_RfDeviceExtensions_AttenuateAmplification_HackRFDotnet_Api_DigitalRadioDevice_'>RfDeviceExtensions.AttenuateAmplification(DigitalRadioDevice)</a>
 </div>
 
-</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.DevicePtr' data-commentid='F:HackRFDotnet.Api.DigitalRadioDevice.DevicePtr' id='HackRFDotnet_Api_DigitalRadioDevice_DevicePtr'>DevicePtr    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L36'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.DevicePtr' data-commentid='F:HackRFDotnet.Api.DigitalRadioDevice.DevicePtr' id='HackRFDotnet_Api_DigitalRadioDevice_DevicePtr'>DevicePtr    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L43'><i class='bi bi-code-slash'></i></a></h3>
  <pre><code class='lang-csharp'>public readonly HackRFDevice* DevicePtr</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.NativeApi.Structs.Devices.HackRFDevice.html'>HackRFDevice</a>*  </dt>
 <dd>
 
 
 
-</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.Bandwidth' data-commentid='P:HackRFDotnet.Api.DigitalRadioDevice.Bandwidth' id='HackRFDotnet_Api_DigitalRadioDevice_Bandwidth'>Bandwidth    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L20'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.Bandwidth' data-commentid='P:HackRFDotnet.Api.DigitalRadioDevice.Bandwidth' id='HackRFDotnet_Api_DigitalRadioDevice_Bandwidth'>Bandwidth    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L22'><i class='bi bi-code-slash'></i></a></h3>
  <p>Current capture bandwidth.</p>
 <pre><code class='lang-csharp'>public Bandwidth Bandwidth { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Bandwidth.html'>Bandwidth</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate' data-commentid='P:HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate' id='HackRFDotnet_Api_DigitalRadioDevice_DeviceSamplingRate'>DeviceSamplingRate    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L25'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate' data-commentid='P:HackRFDotnet.Api.DigitalRadioDevice.DeviceSamplingRate' id='HackRFDotnet_Api_DigitalRadioDevice_DeviceSamplingRate'>DeviceSamplingRate    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L27'><i class='bi bi-code-slash'></i></a></h3>
  <p>Current capture sample rate.</p>
 <pre><code class='lang-csharp'>public SampleRate DeviceSamplingRate { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.SampleRate.html'>SampleRate</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.Frequency' data-commentid='P:HackRFDotnet.Api.DigitalRadioDevice.Frequency' id='HackRFDotnet_Api_DigitalRadioDevice_Frequency'>Frequency    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L15'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.DeviceStream' data-commentid='P:HackRFDotnet.Api.DigitalRadioDevice.DeviceStream' id='HackRFDotnet_Api_DigitalRadioDevice_DeviceStream'>DeviceStream    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L32'><i class='bi bi-code-slash'></i></a></h3>
+ <p>The immutable stream running on this device.</p>
+<pre><code class='lang-csharp'>public IIQStream? DeviceStream { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.Interfaces.IIQStream.html'>IIQStream</a>?  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.Frequency' data-commentid='P:HackRFDotnet.Api.DigitalRadioDevice.Frequency' id='HackRFDotnet_Api_DigitalRadioDevice_Frequency'>Frequency    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L17'><i class='bi bi-code-slash'></i></a></h3>
  <p>Current frequency tuned to.</p>
 <pre><code class='lang-csharp'>public Frequency Frequency { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Frequency.html'>Frequency</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.IsConnected' data-commentid='P:HackRFDotnet.Api.DigitalRadioDevice.IsConnected' id='HackRFDotnet_Api_DigitalRadioDevice_IsConnected'>IsConnected    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L30'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.IsConnected' data-commentid='P:HackRFDotnet.Api.DigitalRadioDevice.IsConnected' id='HackRFDotnet_Api_DigitalRadioDevice_IsConnected'>IsConnected    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L37'><i class='bi bi-code-slash'></i></a></h3>
  <p>Is the device connected to the usb host in the native library?</p>
 <pre><code class='lang-csharp'>public bool IsConnected { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.Dispose' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.Dispose' id='HackRFDotnet_Api_DigitalRadioDevice_Dispose'>Dispose()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L120'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.Dispose' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.Dispose' id='HackRFDotnet_Api_DigitalRadioDevice_Dispose'>Dispose()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L127'><i class='bi bi-code-slash'></i></a></h3>
  <p>Dispose the Rf Device from the library.</p>
-<pre><code class='lang-csharp'>public void Dispose()</code></pre><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)' id='HackRFDotnet_Api_DigitalRadioDevice_SetAmplifications_System_UInt32_System_UInt32_System_Boolean_'>SetAmplifications(uint, uint, bool)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L49'><i class='bi bi-code-slash'></i></a></h3>
+<pre><code class='lang-csharp'>public void Dispose()</code></pre><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.SetAmplifications(System.UInt32,System.UInt32,System.Boolean)' id='HackRFDotnet_Api_DigitalRadioDevice_SetAmplifications_System_UInt32_System_UInt32_System_Boolean_'>SetAmplifications(uint, uint, bool)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L56'><i class='bi bi-code-slash'></i></a></h3>
  <p>Set the Lna, Vga, and Internal amp settings for the Rf Device.</p>
 <pre><code class='lang-csharp'>public void SetAmplifications(uint lna, uint vga, bool internalAmp)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>lna</code> <a href='https://learn.microsoft.com/dotnet/api/system.uint32'>uint</a>  </dt>
 <dd>
@@ -183,7 +193,7 @@
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)' id='HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_'>SetFrequency(Frequency, Bandwidth)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L61'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.SetFrequency(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)' id='HackRFDotnet_Api_DigitalRadioDevice_SetFrequency_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_'>SetFrequency(Frequency, Bandwidth)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L68'><i class='bi bi-code-slash'></i></a></h3>
  <p>Set the tuning frequency and bandwidth for the Rf Device.</p>
 <pre><code class='lang-csharp'>public bool SetFrequency(Frequency radioFrequency, Bandwidth bandwidth)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>radioFrequency</code> <a href='HackRFDotnet.Api.Frequency.html'>Frequency</a>  </dt>
 <dd>
@@ -200,7 +210,7 @@
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)' id='HackRFDotnet_Api_DigitalRadioDevice_SetSampleRate_HackRFDotnet_Api_SampleRate_'>SetSampleRate(SampleRate)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L76'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.SetSampleRate(HackRFDotnet.Api.SampleRate)' id='HackRFDotnet_Api_DigitalRadioDevice_SetSampleRate_HackRFDotnet_Api_SampleRate_'>SetSampleRate(SampleRate)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L83'><i class='bi bi-code-slash'></i></a></h3>
  <p>Set the sample rate for the radio device to capture data at.
 This will also set the baseband filter the smallest filter
 that fits the sample rate's Nyquist frequency cutoff.</p>
@@ -209,7 +219,7 @@ that fits the sample rate's Nyquist frequency cutoff.</p>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)' id='HackRFDotnet_Api_DigitalRadioDevice_StartRx_HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_'>StartRx(HackRFSampleBlockCallback)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L92'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.StartRx(HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback)' id='HackRFDotnet_Api_DigitalRadioDevice_StartRx_HackRFDotnet_NativeApi_Structs_HackRFSampleBlockCallback_'>StartRx(HackRFSampleBlockCallback)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L99'><i class='bi bi-code-slash'></i></a></h3>
  <p>Start receiving data from the RfDevice.</p>
 <pre><code class='lang-csharp'>public bool StartRx(HackRFSampleBlockCallback rxCallback)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>rxCallback</code> <a href='HackRFDotnet.NativeApi.Structs.HackRFSampleBlockCallback.html'>HackRFSampleBlockCallback</a>  </dt>
 <dd>
@@ -226,7 +236,7 @@ that fits the sample rate's Nyquist frequency cutoff.</p>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.StopRx' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.StopRx' id='HackRFDotnet_Api_DigitalRadioDevice_StopRx'>StopRx()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L112'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.DigitalRadioDevice.StopRx' data-commentid='M:HackRFDotnet.Api.DigitalRadioDevice.StopRx' id='HackRFDotnet_Api_DigitalRadioDevice_StopRx'>StopRx()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/DigitalRadioDevice.cs#L119'><i class='bi bi-code-slash'></i></a></h3>
  <p>Stop receiving data from the Rf Device.</p>
 <pre><code class='lang-csharp'>public bool StopRx()</code></pre><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
 <dd>

@@ -1,0 +1,106 @@
+### YamlMime:ApiPage
+title: Class OfdmChannelizer
+body:
+- api1: Class OfdmChannelizer
+  id: HackRFDotnet_Api_Streams_SignalProcessing_FormatConverters_OfdmChannelizer
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/FormatConverters/OfdmChannelizer.cs#L12
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer
+    commentId: T:HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
+      url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: >-
+    This is discover the channel division inside an OFDM stream.
+
+    It will then divide the samples into each channel via FFT.
+
+    Each bin will be a channel with a complex number.
+
+    Use this complex number at each bin to demodulate information from the complex plane.
+- code: 'public class OfdmChannelizer : SignalEffect<IQ, IQ>, ISignalEffectInput<IQ>'
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: SignalEffect<IQ, IQ>
+    url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html
+  - text: OfdmChannelizer
+    url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer.html
+- h4: Implements
+- list:
+  - text: ISignalEffectInput<IQ>
+    url: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput-1.html
+- h4: Inherited Members
+- list:
+  - text: SignalEffect<IQ, IQ>.TransformSignal(Span<IQ>, int)
+    url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_TransformSignal_System_Span__0__System_Int32_
+  - text: SignalEffect<IQ, IQ>.AddChildEffect<TFormat>(SignalEffect<IQ, TFormat>)
+    url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect_2_AddChildEffect__1_HackRFDotnet_Api_Streams_SignalProcessing_Effects_SignalEffect__1___0__
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Constructors
+- api3: OfdmChannelizer()
+  id: HackRFDotnet_Api_Streams_SignalProcessing_FormatConverters_OfdmChannelizer__ctor
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/FormatConverters/OfdmChannelizer.cs#L14
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer.#ctor
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer.#ctor
+- code: public OfdmChannelizer()
+- h2: Methods
+- api3: TransformSignal(Span<IQ>, int)
+  id: HackRFDotnet_Api_Streams_SignalProcessing_FormatConverters_OfdmChannelizer_TransformSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalProcessing/FormatConverters/OfdmChannelizer.cs#L18
+  metadata:
+    uid: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+    commentId: M:HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+- markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
+- code: public override int TransformSignal(Span<IQ> signalTheta, int length)
+- h4: Parameters
+- parameters:
+  - name: signalTheta
+    type:
+    - text: Span
+      url: https://learn.microsoft.com/dotnet/api/system.span-1
+    - <
+    - text: IQ
+      url: HackRFDotnet.Api.Streams.IQ.html
+    - '>'
+    description: ''
+  - name: length
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+languageId: csharp
+metadata:
+  description: >-
+    This is discover the channel division inside an OFDM stream.
+
+    It will then divide the samples into each channel via FFT.
+
+    Each bin will be a channel with a complex number.
+
+    Use this complex number at each bin to demodulate information from the complex plane.

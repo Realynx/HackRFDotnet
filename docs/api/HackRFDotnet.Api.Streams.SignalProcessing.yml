@@ -12,6 +12,9 @@ body:
       text: HackRFDotnet.Api.Streams.SignalProcessing.Effects
       url: HackRFDotnet.Api.Streams.SignalProcessing.Effects.html
   - type:
+      text: HackRFDotnet.Api.Streams.SignalProcessing.ErrorRate
+      url: HackRFDotnet.Api.Streams.SignalProcessing.ErrorRate.html
+  - type:
       text: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
       url: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.html
   - type:
