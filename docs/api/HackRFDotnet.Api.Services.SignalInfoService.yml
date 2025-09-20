@@ -1,0 +1,182 @@
+### YamlMime:ApiPage
+title: Class SignalInfoService
+body:
+- api1: Class SignalInfoService
+  id: HackRFDotnet_Api_Services_SignalInfoService
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L13
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService
+    commentId: T:HackRFDotnet.Api.Services.SignalInfoService
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Services
+      url: HackRFDotnet.Api.Services.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: >-
+    <xref href="HackRFDotnet.Api.Services.SignalInfoService" data-throw-if-not-resolved="false"></xref> Will poll your device capture signal and track information about it's power and noise.
+
+    You can access this types properties to get up to date signal information for the device's capture bandwidth.
+- code: 'public class SignalInfoService : ISignalInfoService'
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: SignalInfoService
+    url: HackRFDotnet.Api.Services.SignalInfoService.html
+- h4: Implements
+- list:
+  - text: ISignalInfoService
+    url: HackRFDotnet.Api.Interfaces.ISignalInfoService.html
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Constructors
+- api3: SignalInfoService(IDigitalRadioDevice)
+  id: HackRFDotnet_Api_Services_SignalInfoService__ctor_HackRFDotnet_Api_Interfaces_IDigitalRadioDevice_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L64
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.#ctor(HackRFDotnet.Api.Interfaces.IDigitalRadioDevice)
+    commentId: M:HackRFDotnet.Api.Services.SignalInfoService.#ctor(HackRFDotnet.Api.Interfaces.IDigitalRadioDevice)
+- code: public SignalInfoService(IDigitalRadioDevice rfDeviceService)
+- h4: Parameters
+- parameters:
+  - name: rfDeviceService
+    type:
+    - text: IDigitalRadioDevice
+      url: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.html
+- h2: Properties
+- api3: AggregationTime
+  id: HackRFDotnet_Api_Services_SignalInfoService_AggregationTime
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L17
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.AggregationTime
+    commentId: P:HackRFDotnet.Api.Services.SignalInfoService.AggregationTime
+- markdown: The amount of time over which signal metrics are aggregated to represent transient behavior.
+- code: public TimeSpan AggregationTime { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: TimeSpan
+      url: https://learn.microsoft.com/dotnet/api/system.timespan
+- api3: AveragePower
+  id: HackRFDotnet_Api_Services_SignalInfoService_AveragePower
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L37
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.AveragePower
+    commentId: P:HackRFDotnet.Api.Services.SignalInfoService.AveragePower
+- markdown: The average power of the signal over the aggregation period.
+- code: public double AveragePower { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: DominantFrequency
+  id: HackRFDotnet_Api_Services_SignalInfoService_DominantFrequency
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L57
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.DominantFrequency
+    commentId: P:HackRFDotnet.Api.Services.SignalInfoService.DominantFrequency
+- markdown: The frequency bin with the strongest signal, typically determined via an FFT of the signal buffer.
+- code: public double DominantFrequency { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: MinPower
+  id: HackRFDotnet_Api_Services_SignalInfoService_MinPower
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L27
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.MinPower
+    commentId: P:HackRFDotnet.Api.Services.SignalInfoService.MinPower
+- markdown: The minimum power observed in the signal over the aggregation period.
+- code: public double MinPower { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: NoiseFloor
+  id: HackRFDotnet_Api_Services_SignalInfoService_NoiseFloor
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L47
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.NoiseFloor
+    commentId: P:HackRFDotnet.Api.Services.SignalInfoService.NoiseFloor
+- markdown: An estimate of the signal's noise floor, representing the background noise level.
+- code: public double NoiseFloor { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: PeakPower
+  id: HackRFDotnet_Api_Services_SignalInfoService_PeakPower
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L22
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.PeakPower
+    commentId: P:HackRFDotnet.Api.Services.SignalInfoService.PeakPower
+- markdown: The highest instantaneous power seen in the signal buffer.
+- code: public double PeakPower { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: PowerVariance
+  id: HackRFDotnet_Api_Services_SignalInfoService_PowerVariance
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L32
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.PowerVariance
+    commentId: P:HackRFDotnet.Api.Services.SignalInfoService.PowerVariance
+- markdown: The variance of signal power over the aggregation period, representing signal fluctuations.
+- code: public double PowerVariance { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: RMS
+  id: HackRFDotnet_Api_Services_SignalInfoService_RMS
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L42
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.RMS
+    commentId: P:HackRFDotnet.Api.Services.SignalInfoService.RMS
+- markdown: The root-mean-square (RMS) of the signal samples, commonly used to measure signal strength.
+- code: public double RMS { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: SignalToNoiseRatio
+  id: HackRFDotnet_Api_Services_SignalInfoService_SignalToNoiseRatio
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Services/SignalInfoService.cs#L52
+  metadata:
+    uid: HackRFDotnet.Api.Services.SignalInfoService.SignalToNoiseRatio
+    commentId: P:HackRFDotnet.Api.Services.SignalInfoService.SignalToNoiseRatio
+- markdown: The signal-to-noise ratio (SNR) calculated over the aggregation period.
+- code: public double SignalToNoiseRatio { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+languageId: csharp
+metadata:
+  description: " Will poll your device capture signal and track information about it's power and noise.\r\nYou can access this types properties to get up to date signal information for the device's capture bandwidth."

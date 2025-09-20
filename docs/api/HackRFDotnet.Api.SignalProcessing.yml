@@ -1,0 +1,29 @@
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.SignalProcessing
+body:
+- api1: Namespace HackRFDotnet.Api.SignalProcessing
+  id: HackRFDotnet_Api_SignalProcessing
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing
+    commentId: N:HackRFDotnet.Api.SignalProcessing
+- h3: Namespaces
+- parameters:
+  - type:
+      text: HackRFDotnet.Api.SignalProcessing.Effects
+      url: HackRFDotnet.Api.SignalProcessing.Effects.html
+  - type:
+      text: HackRFDotnet.Api.SignalProcessing.ErrorRate
+      url: HackRFDotnet.Api.SignalProcessing.ErrorRate.html
+  - type:
+      text: HackRFDotnet.Api.SignalProcessing.FormatConverters
+      url: HackRFDotnet.Api.SignalProcessing.FormatConverters.html
+  - type:
+      text: HackRFDotnet.Api.SignalProcessing.Interfaces
+      url: HackRFDotnet.Api.SignalProcessing.Interfaces.html
+- h3: Classes
+- parameters:
+  - type:
+      text: SignalProcessingPipeline<TInput>
+      url: HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline-1.html
+    description: Effects chain processor.
+languageId: csharp

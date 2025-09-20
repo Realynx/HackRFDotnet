@@ -1,0 +1,165 @@
+### YamlMime:ApiPage
+title: Class IQDownSampleEffect
+body:
+- api1: Class IQDownSampleEffect
+  id: HackRFDotnet_Api_SignalProcessing_Effects_IQDownSampleEffect
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Effects/IQDownSampleEffect.cs#L18
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect
+    commentId: T:HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.SignalProcessing.Effects
+      url: HackRFDotnet.Api.SignalProcessing.Effects.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: >-
+    <xref href="HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect" data-throw-if-not-resolved="false"></xref> removes extraneous information from your signal using your desired bandwidth.
+
+    Example: an FM radio's band is around 200 kHz; the minimum sample rate required to represent this is 400 kS/s (400,000 samples per second).
+
+    It is recommended that you reduce the sample rate of your audio signal this way before further signal processing to save CPU.
+- code: 'public class IQDownSampleEffect : SignalEffect<IQ, IQ>, ISignalEffectInput<IQ>, IDisposable'
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: SignalEffect<IQ, IQ>
+    url: HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.html
+  - text: IQDownSampleEffect
+    url: HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.html
+- h4: Implements
+- list:
+  - text: ISignalEffectInput<IQ>
+    url: HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput-1.html
+  - text: IDisposable
+    url: https://learn.microsoft.com/dotnet/api/system.idisposable
+- h4: Inherited Members
+- list:
+  - text: SignalEffect<IQ, IQ>.TransformSignal(Span<IQ>, int)
+    url: HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_SignalProcessing_Effects_SignalEffect_2_TransformSignal_System_Span__0__System_Int32_
+  - text: SignalEffect<IQ, IQ>.AddChildEffect<TFormat>(SignalEffect<IQ, TFormat>)
+    url: HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_SignalProcessing_Effects_SignalEffect_2_AddChildEffect__1_HackRFDotnet_Api_SignalProcessing_Effects_SignalEffect__1___0__
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Constructors
+- api3: IQDownSampleEffect(SampleRate, SampleRate, out SampleRate, out int)
+  id: HackRFDotnet_Api_SignalProcessing_Effects_IQDownSampleEffect__ctor_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate__System_Int32__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Effects/IQDownSampleEffect.cs#L37
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.#ctor(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate@,System.Int32@)
+    commentId: M:HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.#ctor(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate@,System.Int32@)
+- markdown: Configure a signal down sampler. You should do this to reduce cpu time when processing your signal.
+- code: public IQDownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, out SampleRate newSampleRate, out int producedChunkSize)
+- h4: Parameters
+- parameters:
+  - name: sampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+    description: Sample rate of the incoming signal.
+  - name: reducedSampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+    description: Desired reduced sample rate.
+  - name: newSampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+    description: The closest possible sample rate achievable.
+  - name: producedChunkSize
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: The chunk size after down sampling.
+- api3: IQDownSampleEffect(SampleRate, SampleRate, int, out SampleRate, out int)
+  id: HackRFDotnet_Api_SignalProcessing_Effects_IQDownSampleEffect__ctor_HackRFDotnet_Api_SampleRate_HackRFDotnet_Api_SampleRate_System_Int32_HackRFDotnet_Api_SampleRate__System_Int32__
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Effects/IQDownSampleEffect.cs#L68
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.#ctor(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate,System.Int32,HackRFDotnet.Api.SampleRate@,System.Int32@)
+    commentId: M:HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.#ctor(HackRFDotnet.Api.SampleRate,HackRFDotnet.Api.SampleRate,System.Int32,HackRFDotnet.Api.SampleRate@,System.Int32@)
+- markdown: Configure a signal down sampler. You should do this to reduce cpu time when processing your signal.
+- code: public IQDownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, int processingSize, out SampleRate newSampleRate, out int producedChunkSize)
+- h4: Parameters
+- parameters:
+  - name: sampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+    description: Sample rate of the incoming signal.
+  - name: reducedSampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+    description: Desired reduced sample rate.
+  - name: processingSize
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: The input chunk size. Used to calculate the nearest achievable sample rate.
+  - name: newSampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+    description: The closest possible sample rate achievable.
+  - name: producedChunkSize
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: The chunk size after down sampling.
+- h2: Methods
+- api3: Dispose()
+  id: HackRFDotnet_Api_SignalProcessing_Effects_IQDownSampleEffect_Dispose
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Effects/IQDownSampleEffect.cs#L128
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.Dispose
+    commentId: M:HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.Dispose
+- markdown: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+- code: public void Dispose()
+- api3: TransformSignal(Span<IQ>, int)
+  id: HackRFDotnet_Api_SignalProcessing_Effects_IQDownSampleEffect_TransformSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Effects/IQDownSampleEffect.cs#L98
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+    commentId: M:HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+- markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
+- code: public override int TransformSignal(Span<IQ> signalTheta, int length)
+- h4: Parameters
+- parameters:
+  - name: signalTheta
+    type:
+    - text: Span
+      url: https://learn.microsoft.com/dotnet/api/system.span-1
+    - <
+    - text: IQ
+      url: HackRFDotnet.Api.Streams.IQ.html
+    - '>'
+    description: ''
+  - name: length
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+languageId: csharp
+metadata:
+  description: " removes extraneous information from your signal using your desired bandwidth.\r\nExample: an FM radio's band is around 200 kHz; the minimum sample rate required to represent this is 400 kS/s (400,000 samples per second).\r\nIt is recommended that you reduce the sample rate of your audio signal this way before further signal processing to save CPU."

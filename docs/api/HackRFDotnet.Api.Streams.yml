@@ -18,9 +18,6 @@ body:
       text: HackRFDotnet.Api.Streams.Interfaces
       url: HackRFDotnet.Api.Streams.Interfaces.html
   - type:
-      text: HackRFDotnet.Api.Streams.SignalProcessing
-      url: HackRFDotnet.Api.Streams.SignalProcessing.html
-  - type:
       text: HackRFDotnet.Api.Streams.SignalStreams
       url: HackRFDotnet.Api.Streams.SignalStreams.html
 - h3: Classes

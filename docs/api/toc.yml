@@ -30,6 +30,8 @@
     href: HackRFDotnet.Api.Interfaces.IDigitalRadioDevice.yml
   - name: IRfDeviceService
     href: HackRFDotnet.Api.Interfaces.IRfDeviceService.yml
+  - name: ISignalInfoService
+    href: HackRFDotnet.Api.Interfaces.ISignalInfoService.yml
 - name: HackRFDotnet.Api.Services
   href: HackRFDotnet.Api.Services.yml
   items:
@@ -38,6 +40,60 @@
     href: HackRFDotnet.Api.Services.AnaloguePlayer.yml
   - name: RfDeviceService
     href: HackRFDotnet.Api.Services.RfDeviceService.yml
+  - name: SignalInfoService
+    href: HackRFDotnet.Api.Services.SignalInfoService.yml
+- name: HackRFDotnet.Api.SignalProcessing
+  href: HackRFDotnet.Api.SignalProcessing.yml
+  items:
+  - name: Classes
+  - name: SignalProcessingPipeline<TInput>
+    href: HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline-1.yml
+- name: HackRFDotnet.Api.SignalProcessing.Effects
+  href: HackRFDotnet.Api.SignalProcessing.Effects.yml
+  items:
+  - name: Classes
+  - name: FftEffect
+    href: HackRFDotnet.Api.SignalProcessing.Effects.FftEffect.yml
+  - name: FrequencyCenteringEffect
+    href: HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.yml
+  - name: IQDownSampleEffect
+    href: HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.yml
+  - name: LowPassFilterEffect
+    href: HackRFDotnet.Api.SignalProcessing.Effects.LowPassFilterEffect.yml
+  - name: SignalEffect<TInput, TOutput>
+    href: HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.yml
+  - name: SquelchEffect
+    href: HackRFDotnet.Api.SignalProcessing.Effects.SquelchEffect.yml
+- name: HackRFDotnet.Api.SignalProcessing.ErrorRate
+  href: HackRFDotnet.Api.SignalProcessing.ErrorRate.yml
+  items:
+  - name: Classes
+  - name: BitErrorRate
+    href: HackRFDotnet.Api.SignalProcessing.ErrorRate.BitErrorRate.yml
+- name: HackRFDotnet.Api.SignalProcessing.FormatConverters
+  href: HackRFDotnet.Api.SignalProcessing.FormatConverters.yml
+  items:
+  - name: Classes
+  - name: OfdmChannelizer
+    href: HackRFDotnet.Api.SignalProcessing.FormatConverters.OfdmChannelizer.yml
+- name: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators
+  href: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.yml
+  items:
+  - name: Classes
+  - name: AmDemodulator
+    href: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.AmDemodulator.yml
+  - name: BpskDemodulator
+    href: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.BpskDemodulator.yml
+  - name: FmDemodulator
+    href: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.FmDemodulator.yml
+  - name: QpskDemodulator
+    href: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.QpskDemodulator.yml
+- name: HackRFDotnet.Api.SignalProcessing.Interfaces
+  href: HackRFDotnet.Api.SignalProcessing.Interfaces.yml
+  items:
+  - name: Interfaces
+  - name: ISignalEffectInput<TInput>
+    href: HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput-1.yml
 - name: HackRFDotnet.Api.Streams
   href: HackRFDotnet.Api.Streams.yml
   items:
@@ -69,58 +125,6 @@
   - name: Interfaces
   - name: IIQStream
     href: HackRFDotnet.Api.Streams.Interfaces.IIQStream.yml
-- name: HackRFDotnet.Api.Streams.SignalProcessing
-  href: HackRFDotnet.Api.Streams.SignalProcessing.yml
-  items:
-  - name: Classes
-  - name: SignalProcessingPipeline<TInput>
-    href: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.yml
-- name: HackRFDotnet.Api.Streams.SignalProcessing.Effects
-  href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.yml
-  items:
-  - name: Classes
-  - name: FftEffect
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FftEffect.yml
-  - name: FrequencyCenteringEffect
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.FrequencyCenteringEffect.yml
-  - name: IQDownSampleEffect
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.IQDownSampleEffect.yml
-  - name: LowPassFilterEffect
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.LowPassFilterEffect.yml
-  - name: SignalEffect<TInput, TOutput>
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SignalEffect-2.yml
-  - name: SquelchEffect
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Effects.SquelchEffect.yml
-- name: HackRFDotnet.Api.Streams.SignalProcessing.ErrorRate
-  href: HackRFDotnet.Api.Streams.SignalProcessing.ErrorRate.yml
-  items:
-  - name: Classes
-  - name: BitErrorRate
-    href: HackRFDotnet.Api.Streams.SignalProcessing.ErrorRate.BitErrorRate.yml
-- name: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters
-  href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.yml
-  items:
-  - name: Classes
-  - name: OfdmChannelizer
-    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.OfdmChannelizer.yml
-- name: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators
-  href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.yml
-  items:
-  - name: Classes
-  - name: AmDemodulator
-    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.AmDemodulator.yml
-  - name: BpskDemodulator
-    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.BpskDemodulator.yml
-  - name: FmDemodulator
-    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.FmDemodulator.yml
-  - name: QpskDemodulator
-    href: HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators.QpskDemodulator.yml
-- name: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces
-  href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.yml
-  items:
-  - name: Interfaces
-  - name: ISignalEffectInput<TInput>
-    href: HackRFDotnet.Api.Streams.SignalProcessing.Interfaces.ISignalEffectInput-1.yml
 - name: HackRFDotnet.Api.Streams.SignalStreams
   href: HackRFDotnet.Api.Streams.SignalStreams.yml
   items:

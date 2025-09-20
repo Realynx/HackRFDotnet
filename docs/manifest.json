@@ -185,6 +185,16 @@
     },
     {
       "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Interfaces.ISignalInfoService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Interfaces.ISignalInfoService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Interfaces.yml",
       "output": {
         ".html": {
@@ -225,10 +235,220 @@
     },
     {
       "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.Services.SignalInfoService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.Services.SignalInfoService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
       "source_relative_path": "docs/api/HackRFDotnet.Api.Services.yml",
       "output": {
         ".html": {
           "relative_path": "docs/api/HackRFDotnet.Api.Services.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.FftEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.FftEffect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.LowPassFilterEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.LowPassFilterEffect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.SquelchEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.SquelchEffect.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Effects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.ErrorRate.BitErrorRate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.ErrorRate.BitErrorRate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.ErrorRate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.ErrorRate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.AmDemodulator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.AmDemodulator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.BpskDemodulator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.BpskDemodulator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.FmDemodulator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.FmDemodulator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.QpskDemodulator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.QpskDemodulator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.OfdmChannelizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.OfdmChannelizer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.FormatConverters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ApiPage",
+      "source_relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/api/HackRFDotnet.Api.SignalProcessing.html"
         }
       },
       "version": ""

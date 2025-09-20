@@ -14,4 +14,7 @@ body:
   - type:
       text: IRfDeviceService
       url: HackRFDotnet.Api.Interfaces.IRfDeviceService.html
+  - type:
+      text: ISignalInfoService
+      url: HackRFDotnet.Api.Interfaces.ISignalInfoService.html
 languageId: csharp

@@ -14,4 +14,11 @@ body:
   - type:
       text: RfDeviceService
       url: HackRFDotnet.Api.Services.RfDeviceService.html
+  - type:
+      text: SignalInfoService
+      url: HackRFDotnet.Api.Services.SignalInfoService.html
+    description: >-
+      <xref href="HackRFDotnet.Api.Services.SignalInfoService" data-throw-if-not-resolved="false"></xref> Will poll your device capture signal and track information about it's power and noise.
+
+      You can access this types properties to get up to date signal information for the device's capture bandwidth.
 languageId: csharp

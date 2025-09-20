@@ -1,0 +1,53 @@
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.SignalProcessing.Effects
+body:
+- api1: Namespace HackRFDotnet.Api.SignalProcessing.Effects
+  id: HackRFDotnet_Api_SignalProcessing_Effects
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Effects
+    commentId: N:HackRFDotnet.Api.SignalProcessing.Effects
+- h3: Classes
+- parameters:
+  - type:
+      text: FftEffect
+      url: HackRFDotnet.Api.SignalProcessing.Effects.FftEffect.html
+    description: >-
+      Fast Fourier Transform Effect.
+
+      Can be used for forward and inverse transforms.
+
+      Must be given a chunk with a size that is a multiple of 2 [Length % 2 == 0]
+
+      Must be configured with a chunk size for caching a convert buffer.
+  - type:
+      text: FrequencyCenteringEffect
+      url: HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.html
+    description: >-
+      Shift the frequency by a <xref href="HackRFDotnet.Api.Frequency" data-throw-if-not-resolved="false"></xref> offset.
+
+      This only works for IQ samples, we can shift frequency without losing information.
+  - type:
+      text: IQDownSampleEffect
+      url: HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.html
+    description: >-
+      <xref href="HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect" data-throw-if-not-resolved="false"></xref> removes extraneous information from your signal using your desired bandwidth.
+
+      Example: an FM radio's band is around 200 kHz; the minimum sample rate required to represent this is 400 kS/s (400,000 samples per second).
+
+      It is recommended that you reduce the sample rate of your audio signal this way before further signal processing to save CPU.
+  - type:
+      text: LowPassFilterEffect
+      url: HackRFDotnet.Api.SignalProcessing.Effects.LowPassFilterEffect.html
+    description: >-
+      Low Pass Filter Effect to remove unwanted signals from the input signal.
+
+      Configured with a bandwidth to limit via the filter.
+  - type:
+      text: SignalEffect<TInput, TOutput>
+      url: HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.html
+    description: Signal effect base class.
+  - type:
+      text: SquelchEffect
+      url: HackRFDotnet.Api.SignalProcessing.Effects.SquelchEffect.html
+    description: Squelch Effect to remove noise when there is no detected signal present.
+languageId: csharp

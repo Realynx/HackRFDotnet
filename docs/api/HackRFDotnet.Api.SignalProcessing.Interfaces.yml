@@ -1,0 +1,14 @@
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.SignalProcessing.Interfaces
+body:
+- api1: Namespace HackRFDotnet.Api.SignalProcessing.Interfaces
+  id: HackRFDotnet_Api_SignalProcessing_Interfaces
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Interfaces
+    commentId: N:HackRFDotnet.Api.SignalProcessing.Interfaces
+- h3: Interfaces
+- parameters:
+  - type:
+      text: ISignalEffectInput<TInput>
+      url: HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput-1.html
+languageId: csharp

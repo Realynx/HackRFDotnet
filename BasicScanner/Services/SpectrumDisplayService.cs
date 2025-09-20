@@ -59,6 +59,10 @@ public class SpectrumDisplayService : IHostedService {
         _ = Task.Run(SpectrumRenderLoop);
     }
 
+    public Task StopAsync(CancellationToken cancellationToken) {
+        throw new NotImplementedException();
+    }
+
     private async Task SpectrumRenderLoop() {
         var maxHeight = Console.WindowHeight;
         var maxWidth = Console.WindowWidth;
@@ -149,9 +153,5 @@ public class SpectrumDisplayService : IHostedService {
                 }
             }
         }
-    }
-
-    public Task StopAsync(CancellationToken cancellationToken) {
-        throw new NotImplementedException();
     }
 }

@@ -119,7 +119,19 @@
 <a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
 </div>
 
-</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Extensions.HostBuilderExtensions.UseFirstRadioDevice(Microsoft.Extensions.Hosting.HostBuilder,HackRFDotnet.Api.SampleRate)' data-commentid='M:HackRFDotnet.Api.Extensions.HostBuilderExtensions.UseFirstRadioDevice(Microsoft.Extensions.Hosting.HostBuilder,HackRFDotnet.Api.SampleRate)' id='HackRFDotnet_Api_Extensions_HostBuilderExtensions_UseFirstRadioDevice_Microsoft_Extensions_Hosting_HostBuilder_HackRFDotnet_Api_SampleRate_'>UseFirstRadioDevice(HostBuilder, SampleRate)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Extensions/HostBuilderExtensions.cs#L17'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Extensions.HostBuilderExtensions.AddHackRfDotnetServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)' data-commentid='M:HackRFDotnet.Api.Extensions.HostBuilderExtensions.AddHackRfDotnetServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)' id='HackRFDotnet_Api_Extensions_HostBuilderExtensions_AddHackRfDotnetServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_'>AddHackRfDotnetServices(IServiceCollection)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Extensions/HostBuilderExtensions.cs#L53'><i class='bi bi-code-slash'></i></a></h3>
+ <p>Add default services from HackRfDotnet's service library.</p>
+<pre><code class='lang-csharp'>public static IServiceCollection AddHackRfDotnetServices(this IServiceCollection serviceDescriptors)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>serviceDescriptors</code> <a href='https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection'>IServiceCollection</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h4 class='section'>Returns</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection'>IServiceCollection</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Extensions.HostBuilderExtensions.UseFirstRadioDevice(Microsoft.Extensions.Hosting.HostBuilder,HackRFDotnet.Api.SampleRate)' data-commentid='M:HackRFDotnet.Api.Extensions.HostBuilderExtensions.UseFirstRadioDevice(Microsoft.Extensions.Hosting.HostBuilder,HackRFDotnet.Api.SampleRate)' id='HackRFDotnet_Api_Extensions_HostBuilderExtensions_UseFirstRadioDevice_Microsoft_Extensions_Hosting_HostBuilder_HackRFDotnet_Api_SampleRate_'>UseFirstRadioDevice(HostBuilder, SampleRate)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Extensions/HostBuilderExtensions.cs#L17'><i class='bi bi-code-slash'></i></a></h3>
  <p>Will automatically open the first device, create a stream, and add the instances as singletons to the DI host.</p>
 <pre><code class='lang-csharp'>public static HostBuilder UseFirstRadioDevice(this HostBuilder hostBuilder, SampleRate sampleRate)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>hostBuilder</code> <a href='https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.hostbuilder'>HostBuilder</a>  </dt>
 <dd>

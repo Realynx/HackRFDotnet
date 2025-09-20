@@ -1,0 +1,108 @@
+### YamlMime:ApiPage
+title: Class FrequencyCenteringEffect
+body:
+- api1: Class FrequencyCenteringEffect
+  id: HackRFDotnet_Api_SignalProcessing_Effects_FrequencyCenteringEffect
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Effects/FrequencyCenteringEffect.cs#L9
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect
+    commentId: T:HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.SignalProcessing.Effects
+      url: HackRFDotnet.Api.SignalProcessing.Effects.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- markdown: >-
+    Shift the frequency by a <xref href="HackRFDotnet.Api.Frequency" data-throw-if-not-resolved="false"></xref> offset.
+
+    This only works for IQ samples, we can shift frequency without losing information.
+- code: 'public class FrequencyCenteringEffect : SignalEffect<IQ, IQ>, ISignalEffectInput<IQ>'
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: SignalEffect<IQ, IQ>
+    url: HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.html
+  - text: FrequencyCenteringEffect
+    url: HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.html
+- h4: Implements
+- list:
+  - text: ISignalEffectInput<IQ>
+    url: HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput-1.html
+- h4: Inherited Members
+- list:
+  - text: SignalEffect<IQ, IQ>.TransformSignal(Span<IQ>, int)
+    url: HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_SignalProcessing_Effects_SignalEffect_2_TransformSignal_System_Span__0__System_Int32_
+  - text: SignalEffect<IQ, IQ>.AddChildEffect<TFormat>(SignalEffect<IQ, TFormat>)
+    url: HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.html#HackRFDotnet_Api_SignalProcessing_Effects_SignalEffect_2_AddChildEffect__1_HackRFDotnet_Api_SignalProcessing_Effects_SignalEffect__1___0__
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Constructors
+- api3: FrequencyCenteringEffect(Frequency, SampleRate)
+  id: HackRFDotnet_Api_SignalProcessing_Effects_FrequencyCenteringEffect__ctor_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_SampleRate_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Effects/FrequencyCenteringEffect.cs#L13
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+    commentId: M:HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.#ctor(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.SampleRate)
+- code: public FrequencyCenteringEffect(Frequency frequencyOffset, SampleRate sampleRate)
+- h4: Parameters
+- parameters:
+  - name: frequencyOffset
+    type:
+    - text: Frequency
+      url: HackRFDotnet.Api.Frequency.html
+  - name: sampleRate
+    type:
+    - text: SampleRate
+      url: HackRFDotnet.Api.SampleRate.html
+- h2: Methods
+- api3: TransformSignal(Span<IQ>, int)
+  id: HackRFDotnet_Api_SignalProcessing_Effects_FrequencyCenteringEffect_TransformSignal_System_Span_HackRFDotnet_Api_Streams_IQ__System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Effects/FrequencyCenteringEffect.cs#L18
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+    commentId: M:HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.TransformSignal(System.Span{HackRFDotnet.Api.Streams.IQ},System.Int32)
+- markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
+- code: public override int TransformSignal(Span<IQ> signalTheta, int length)
+- h4: Parameters
+- parameters:
+  - name: signalTheta
+    type:
+    - text: Span
+      url: https://learn.microsoft.com/dotnet/api/system.span-1
+    - <
+    - text: IQ
+      url: HackRFDotnet.Api.Streams.IQ.html
+    - '>'
+    description: ''
+  - name: length
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+languageId: csharp
+metadata:
+  description: >-
+    Shift the frequency by a  offset.
+
+    This only works for IQ samples, we can shift frequency without losing information.

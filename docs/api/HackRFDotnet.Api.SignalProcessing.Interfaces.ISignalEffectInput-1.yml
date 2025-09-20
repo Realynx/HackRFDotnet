@@ -1,0 +1,51 @@
+### YamlMime:ApiPage
+title: Interface ISignalEffectInput<TInput>
+body:
+- api1: Interface ISignalEffectInput<TInput>
+  id: HackRFDotnet_Api_SignalProcessing_Interfaces_ISignalEffectInput_1
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Interfaces/ISignalEffect.cs#L3
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput`1
+    commentId: T:HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput`1
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.SignalProcessing.Interfaces
+      url: HackRFDotnet.Api.SignalProcessing.Interfaces.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public interface ISignalEffectInput<TInput>
+- h4: Type Parameters
+- parameters:
+  - name: TInput
+- h2: Methods
+- api3: TransformSignal(Span<TInput>, int)
+  id: HackRFDotnet_Api_SignalProcessing_Interfaces_ISignalEffectInput_1_TransformSignal_System_Span__0__System_Int32_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/SignalProcessing/Interfaces/ISignalEffect.cs#L10
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput`1.TransformSignal(System.Span{`0},System.Int32)
+    commentId: M:HackRFDotnet.Api.SignalProcessing.Interfaces.ISignalEffectInput`1.TransformSignal(System.Span{`0},System.Int32)
+- markdown: Manipulate in-place, the signal provided and return a new length is samples were reduced.
+- code: int TransformSignal(Span<TInput> signalTheta, int length)
+- h4: Parameters
+- parameters:
+  - name: signalTheta
+    type:
+    - text: Span
+      url: https://learn.microsoft.com/dotnet/api/system.span-1
+    - <
+    - TInput
+    - '>'
+    description: ''
+  - name: length
+    type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: int
+      url: https://learn.microsoft.com/dotnet/api/system.int32
+    description: ''
+languageId: csharp

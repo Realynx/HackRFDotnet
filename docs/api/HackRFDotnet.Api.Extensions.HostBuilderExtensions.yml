@@ -38,6 +38,27 @@ body:
   - text: object.ToString()
     url: https://learn.microsoft.com/dotnet/api/system.object.tostring
 - h2: Methods
+- api3: AddHackRfDotnetServices(IServiceCollection)
+  id: HackRFDotnet_Api_Extensions_HostBuilderExtensions_AddHackRfDotnetServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Extensions/HostBuilderExtensions.cs#L53
+  metadata:
+    uid: HackRFDotnet.Api.Extensions.HostBuilderExtensions.AddHackRfDotnetServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+    commentId: M:HackRFDotnet.Api.Extensions.HostBuilderExtensions.AddHackRfDotnetServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- markdown: Add default services from HackRfDotnet's service library.
+- code: public static IServiceCollection AddHackRfDotnetServices(this IServiceCollection serviceDescriptors)
+- h4: Parameters
+- parameters:
+  - name: serviceDescriptors
+    type:
+    - text: IServiceCollection
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+    description: ''
+- h4: Returns
+- parameters:
+  - type:
+    - text: IServiceCollection
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+    description: ''
 - api3: UseFirstRadioDevice(HostBuilder, SampleRate)
   id: HackRFDotnet_Api_Extensions_HostBuilderExtensions_UseFirstRadioDevice_Microsoft_Extensions_Hosting_HostBuilder_HackRFDotnet_Api_SampleRate_
   src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Extensions/HostBuilderExtensions.cs#L17

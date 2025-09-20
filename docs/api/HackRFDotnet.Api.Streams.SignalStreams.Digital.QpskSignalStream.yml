@@ -29,6 +29,10 @@ body:
     url: https://learn.microsoft.com/dotnet/api/system.idisposable
 - h4: Inherited Members
 - list:
+  - text: SignalStream<byte>.BufferKeepingDelay
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_BufferKeepingDelay
+  - text: SignalStream<byte>.BufferKeepingCallback
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_BufferKeepingCallback
   - text: SignalStream<byte>.Center
     url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Center
   - text: SignalStream<byte>.Bandwidth

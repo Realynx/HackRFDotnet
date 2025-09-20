@@ -37,6 +37,10 @@ body:
     url: https://learn.microsoft.com/dotnet/api/system.idisposable
 - h4: Inherited Members
 - list:
+  - text: SignalStream<float>.BufferKeepingDelay
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_BufferKeepingDelay
+  - text: SignalStream<float>.BufferKeepingCallback
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_BufferKeepingCallback
   - text: SignalStream<float>.Center
     url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Center
   - text: SignalStream<float>.Bandwidth
@@ -71,11 +75,11 @@ body:
     url: https://learn.microsoft.com/dotnet/api/system.object.tostring
 - h2: Constructors
 - api3: WaveSignalStream(IIQStream, SignalProcessingPipeline<IQ>, SampleRate, bool, bool)
-  id: HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_SampleRate_System_Boolean_System_Boolean_
+  id: HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_SignalProcessing_SignalProcessingPipeline_HackRFDotnet_Api_Streams_IQ__HackRFDotnet_Api_SampleRate_System_Boolean_System_Boolean_
   src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/Analogue/WaveSignalStream.cs#L14
   metadata:
-    uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.SampleRate,System.Boolean,System.Boolean)
-    commentId: M:HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.SampleRate,System.Boolean,System.Boolean)
+    uid: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.SampleRate,System.Boolean,System.Boolean)
+    commentId: M:HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},HackRFDotnet.Api.SampleRate,System.Boolean,System.Boolean)
 - code: public WaveSignalStream(IIQStream deviceStream, SignalProcessingPipeline<IQ> processingPipeline, SampleRate sampleRate, bool stero = true, bool keepOpen = true)
 - h4: Parameters
 - parameters:
@@ -86,7 +90,7 @@ body:
   - name: processingPipeline
     type:
     - text: SignalProcessingPipeline
-      url: HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.html
+      url: HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline-1.html
     - <
     - text: IQ
       url: HackRFDotnet.Api.Streams.IQ.html

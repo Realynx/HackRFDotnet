@@ -1,0 +1,23 @@
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators
+body:
+- api1: Namespace HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators
+  id: HackRFDotnet_Api_SignalProcessing_FormatConverters_Demodulators
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators
+    commentId: N:HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators
+- h3: Classes
+- parameters:
+  - type:
+      text: AmDemodulator
+      url: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.AmDemodulator.html
+  - type:
+      text: BpskDemodulator
+      url: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.BpskDemodulator.html
+  - type:
+      text: FmDemodulator
+      url: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.FmDemodulator.html
+  - type:
+      text: QpskDemodulator
+      url: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.QpskDemodulator.html
+languageId: csharp

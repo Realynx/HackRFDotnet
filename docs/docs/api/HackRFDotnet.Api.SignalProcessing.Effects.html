@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace HackRFDotnet.Api.SignalProcessing.Effects | HackrfDotnet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace HackRFDotnet.Api.SignalProcessing.Effects | HackrfDotnet ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ApiPage">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="HackrfDotnet">
+            HackrfDotnet
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 class='section api' data-uid='HackRFDotnet.Api.SignalProcessing.Effects' data-commentid='N:HackRFDotnet.Api.SignalProcessing.Effects' id='HackRFDotnet_Api_SignalProcessing_Effects'>Namespace HackRFDotnet.Api.SignalProcessing.Effects   </h1>
+ <h3 class='section'>Classes</h3><dl class='parameters'><dt> <a href='HackRFDotnet.Api.SignalProcessing.Effects.FftEffect.html'>FftEffect</a>  </dt>
+<dd>
+
+
+<p>Fast Fourier Transform Effect.
+Can be used for forward and inverse transforms.
+Must be given a chunk with a size that is a multiple of 2 [Length % 2 == 0]
+Must be configured with a chunk size for caching a convert buffer.</p>
+
+</dd><dt> <a href='HackRFDotnet.Api.SignalProcessing.Effects.FrequencyCenteringEffect.html'>FrequencyCenteringEffect</a>  </dt>
+<dd>
+
+
+<p>Shift the frequency by a <span class="xref">HackRFDotnet.Api.Frequency</span> offset.
+This only works for IQ samples, we can shift frequency without losing information.</p>
+
+</dd><dt> <a href='HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect.html'>IQDownSampleEffect</a>  </dt>
+<dd>
+
+
+<p><span class="xref">HackRFDotnet.Api.SignalProcessing.Effects.IQDownSampleEffect</span> removes extraneous information from your signal using your desired bandwidth.
+Example: an FM radio's band is around 200 kHz; the minimum sample rate required to represent this is 400 kS/s (400,000 samples per second).
+It is recommended that you reduce the sample rate of your audio signal this way before further signal processing to save CPU.</p>
+
+</dd><dt> <a href='HackRFDotnet.Api.SignalProcessing.Effects.LowPassFilterEffect.html'>LowPassFilterEffect</a>  </dt>
+<dd>
+
+
+<p>Low Pass Filter Effect to remove unwanted signals from the input signal.
+Configured with a bandwidth to limit via the filter.</p>
+
+</dd><dt> <a href='HackRFDotnet.Api.SignalProcessing.Effects.SignalEffect-2.html'>SignalEffect&lt;TInput, TOutput&gt;</a>  </dt>
+<dd>
+
+
+<p>Signal effect base class.</p>
+
+</dd><dt> <a href='HackRFDotnet.Api.SignalProcessing.Effects.SquelchEffect.html'>SquelchEffect</a>  </dt>
+<dd>
+
+
+<p>Squelch Effect to remove noise when there is no detected signal present.</p>
+
+</dd></dl>
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Github <a href="https://github.com/Realynx/HackRFDotnet">HackRfDotnet</a>.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

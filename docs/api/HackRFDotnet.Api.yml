@@ -18,6 +18,9 @@ body:
       text: HackRFDotnet.Api.Services
       url: HackRFDotnet.Api.Services.html
   - type:
+      text: HackRFDotnet.Api.SignalProcessing
+      url: HackRFDotnet.Api.SignalProcessing.html
+  - type:
       text: HackRFDotnet.Api.Streams
       url: HackRFDotnet.Api.Streams.html
   - type:

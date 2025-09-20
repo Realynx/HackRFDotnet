@@ -1,0 +1,27 @@
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.SignalProcessing.FormatConverters
+body:
+- api1: Namespace HackRFDotnet.Api.SignalProcessing.FormatConverters
+  id: HackRFDotnet_Api_SignalProcessing_FormatConverters
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.FormatConverters
+    commentId: N:HackRFDotnet.Api.SignalProcessing.FormatConverters
+- h3: Namespaces
+- parameters:
+  - type:
+      text: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators
+      url: HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators.html
+- h3: Classes
+- parameters:
+  - type:
+      text: OfdmChannelizer
+      url: HackRFDotnet.Api.SignalProcessing.FormatConverters.OfdmChannelizer.html
+    description: >-
+      This is discover the channel division inside an OFDM stream.
+
+      It will then divide the samples into each channel via FFT.
+
+      Each bin will be a channel with a complex number.
+
+      Use this complex number at each bin to demodulate information from the complex plane.
+languageId: csharp

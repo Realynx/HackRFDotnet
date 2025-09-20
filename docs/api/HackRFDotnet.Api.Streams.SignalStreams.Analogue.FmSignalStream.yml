@@ -37,6 +37,10 @@ body:
     url: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream_WaveFormat
   - text: WaveSignalStream.Read(float[], int, int)
     url: HackRFDotnet.Api.Streams.SignalStreams.Analogue.WaveSignalStream.html#HackRFDotnet_Api_Streams_SignalStreams_Analogue_WaveSignalStream_Read_System_Single___System_Int32_System_Int32_
+  - text: SignalStream<float>.BufferKeepingDelay
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_BufferKeepingDelay
+  - text: SignalStream<float>.BufferKeepingCallback
+    url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_BufferKeepingCallback
   - text: SignalStream<float>.Center
     url: HackRFDotnet.Api.Streams.SignalStreams.SignalStream-1.html#HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Center
   - text: SignalStream<float>.Bandwidth

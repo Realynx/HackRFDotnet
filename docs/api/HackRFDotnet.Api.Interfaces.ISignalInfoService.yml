@@ -1,0 +1,127 @@
+### YamlMime:ApiPage
+title: Interface ISignalInfoService
+body:
+- api1: Interface ISignalInfoService
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L3
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService
+    commentId: T:HackRFDotnet.Api.Interfaces.ISignalInfoService
+- facts:
+  - name: Namespace
+    value:
+      text: HackRFDotnet.Api.Interfaces
+      url: HackRFDotnet.Api.Interfaces.html
+  - name: Assembly
+    value: HackRFDotnet.dll
+- code: public interface ISignalInfoService
+- h2: Properties
+- api3: AggregationTime
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService_AggregationTime
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L4
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService.AggregationTime
+    commentId: P:HackRFDotnet.Api.Interfaces.ISignalInfoService.AggregationTime
+- code: TimeSpan AggregationTime { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: TimeSpan
+      url: https://learn.microsoft.com/dotnet/api/system.timespan
+- api3: AveragePower
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService_AveragePower
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L5
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService.AveragePower
+    commentId: P:HackRFDotnet.Api.Interfaces.ISignalInfoService.AveragePower
+- code: double AveragePower { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: DominantFrequency
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService_DominantFrequency
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L6
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService.DominantFrequency
+    commentId: P:HackRFDotnet.Api.Interfaces.ISignalInfoService.DominantFrequency
+- code: double DominantFrequency { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: MinPower
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService_MinPower
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L7
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService.MinPower
+    commentId: P:HackRFDotnet.Api.Interfaces.ISignalInfoService.MinPower
+- code: double MinPower { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: NoiseFloor
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService_NoiseFloor
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L8
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService.NoiseFloor
+    commentId: P:HackRFDotnet.Api.Interfaces.ISignalInfoService.NoiseFloor
+- code: double NoiseFloor { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: PeakPower
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService_PeakPower
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L9
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService.PeakPower
+    commentId: P:HackRFDotnet.Api.Interfaces.ISignalInfoService.PeakPower
+- code: double PeakPower { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: PowerVariance
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService_PowerVariance
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L10
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService.PowerVariance
+    commentId: P:HackRFDotnet.Api.Interfaces.ISignalInfoService.PowerVariance
+- code: double PowerVariance { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: RMS
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService_RMS
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L11
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService.RMS
+    commentId: P:HackRFDotnet.Api.Interfaces.ISignalInfoService.RMS
+- code: double RMS { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+- api3: SignalToNoiseRatio
+  id: HackRFDotnet_Api_Interfaces_ISignalInfoService_SignalToNoiseRatio
+  src: https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Interfaces/ISignalInfoService.cs#L12
+  metadata:
+    uid: HackRFDotnet.Api.Interfaces.ISignalInfoService.SignalToNoiseRatio
+    commentId: P:HackRFDotnet.Api.Interfaces.ISignalInfoService.SignalToNoiseRatio
+- code: double SignalToNoiseRatio { get; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: double
+      url: https://learn.microsoft.com/dotnet/api/system.double
+languageId: csharp

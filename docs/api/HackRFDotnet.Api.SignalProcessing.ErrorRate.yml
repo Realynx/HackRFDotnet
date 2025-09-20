@@ -1,0 +1,14 @@
+### YamlMime:ApiPage
+title: Namespace HackRFDotnet.Api.SignalProcessing.ErrorRate
+body:
+- api1: Namespace HackRFDotnet.Api.SignalProcessing.ErrorRate
+  id: HackRFDotnet_Api_SignalProcessing_ErrorRate
+  metadata:
+    uid: HackRFDotnet.Api.SignalProcessing.ErrorRate
+    commentId: N:HackRFDotnet.Api.SignalProcessing.ErrorRate
+- h3: Classes
+- parameters:
+  - type:
+      text: BitErrorRate
+      url: HackRFDotnet.Api.SignalProcessing.ErrorRate.BitErrorRate.html
+languageId: csharp

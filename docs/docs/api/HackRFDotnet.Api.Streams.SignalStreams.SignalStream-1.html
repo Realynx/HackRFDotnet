@@ -132,13 +132,13 @@ Stream must be created from a <span class="xref">HackRFDotnet.Api.Streams.Interf
 <a href='https://learn.microsoft.com/dotnet/api/system.object.tostring'>object.ToString()</a>
 </div>
 
-</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},System.Boolean)' data-commentid='M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},System.Boolean)' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_Streams_SignalProcessing_SignalProcessingPipeline_HackRFDotnet_Api_Streams_IQ__System_Boolean_'>SignalStream(IIQStream, SignalProcessingPipeline&lt;IQ&gt;?, bool)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L32'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h2 class='section'>Constructors</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},System.Boolean)' data-commentid='M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.#ctor(HackRFDotnet.Api.Streams.Interfaces.IIQStream,HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline{HackRFDotnet.Api.Streams.IQ},System.Boolean)' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__ctor_HackRFDotnet_Api_Streams_Interfaces_IIQStream_HackRFDotnet_Api_SignalProcessing_SignalProcessingPipeline_HackRFDotnet_Api_Streams_IQ__System_Boolean_'>SignalStream(IIQStream, SignalProcessingPipeline&lt;IQ&gt;?, bool)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L45'><i class='bi bi-code-slash'></i></a></h3>
  <pre><code class='lang-csharp'>public SignalStream(IIQStream iQStream, SignalProcessingPipeline&lt;IQ&gt;? processingPipeline = null, bool keepOpen = true)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>iQStream</code> <a href='HackRFDotnet.Api.Streams.Interfaces.IIQStream.html'>IIQStream</a>  </dt>
 <dd>
 
 
 
-</dd><dt><code>processingPipeline</code> <a href='HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.html'>SignalProcessingPipeline</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;?  </dt>
+</dd><dt><code>processingPipeline</code> <a href='HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline-1.html'>SignalProcessingPipeline</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;?  </dt>
 <dd>
 
 
@@ -148,51 +148,68 @@ Stream must be created from a <span class="xref">HackRFDotnet.Api.Streams.Interf
 
 
 
-</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._iQStream' data-commentid='F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._iQStream' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__iQStream'>_iQStream    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L29'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h2 class='section'>Fields</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._iQStream' data-commentid='F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._iQStream' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__iQStream'>_iQStream    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L42'><i class='bi bi-code-slash'></i></a></h3>
  <pre><code class='lang-csharp'>protected readonly IIQStream _iQStream</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.Interfaces.IIQStream.html'>IIQStream</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._keepOpen' data-commentid='F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._keepOpen' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__keepOpen'>_keepOpen    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L30'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._keepOpen' data-commentid='F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._keepOpen' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__keepOpen'>_keepOpen    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L43'><i class='bi bi-code-slash'></i></a></h3>
  <pre><code class='lang-csharp'>protected readonly bool _keepOpen</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.boolean'>bool</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._processingPipeline' data-commentid='F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._processingPipeline' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__processingPipeline'>_processingPipeline    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L27'><i class='bi bi-code-slash'></i></a></h3>
- <pre><code class='lang-csharp'>protected SignalProcessingPipeline&lt;IQ&gt;? _processingPipeline</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Streams.SignalProcessing.SignalProcessingPipeline-1.html'>SignalProcessingPipeline</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;?  </dt>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._processingPipeline' data-commentid='F:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1._processingPipeline' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1__processingPipeline'>_processingPipeline    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L40'><i class='bi bi-code-slash'></i></a></h3>
+ <pre><code class='lang-csharp'>protected SignalProcessingPipeline&lt;IQ&gt;? _processingPipeline</code></pre><h4 class='section'>Field Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.SignalProcessing.SignalProcessingPipeline-1.html'>SignalProcessingPipeline</a>&lt;<a href='HackRFDotnet.Api.Streams.IQ.html'>IQ</a>&gt;?  </dt>
 <dd>
 
 
 
-</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Bandwidth' data-commentid='P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Bandwidth' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Bandwidth'>Bandwidth    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L16'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h2 class='section'>Properties</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Bandwidth' data-commentid='P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Bandwidth' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Bandwidth'>Bandwidth    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L29'><i class='bi bi-code-slash'></i></a></h3>
  <pre><code class='lang-csharp'>public Bandwidth Bandwidth { get; protected set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Bandwidth.html'>Bandwidth</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Center' data-commentid='P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Center' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Center'>Center    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L15'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.BufferKeepingCallback' data-commentid='P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.BufferKeepingCallback' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_BufferKeepingCallback'>BufferKeepingCallback    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L26'><i class='bi bi-code-slash'></i></a></h3>
+ <p>This callback is invoked every time after the buffer keeper has written to the ring buffer.
+The span written is provided as an argument. Use this for real time workloads or polling.</p>
+<pre><code class='lang-csharp'>public Action&lt;Span&lt;TOutput&gt;&gt;? BufferKeepingCallback { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.action-1'>Action</a>&lt;<a href='https://learn.microsoft.com/dotnet/api/system.span-1'>Span</a>&lt;TOutput&gt;&gt;?  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.BufferKeepingDelay' data-commentid='P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.BufferKeepingDelay' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_BufferKeepingDelay'>BufferKeepingDelay    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L20'><i class='bi bi-code-slash'></i></a></h3>
+ <p>This is a special value used if your DSP chain does not need to be real time.
+You can set this to a higher value to force the buffer keeping loop to pause every interval.
+This will allow you to conserve CPU time for DSP chains that require polling updates.</p>
+<pre><code class='lang-csharp'>public TimeSpan BufferKeepingDelay { get; set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='https://learn.microsoft.com/dotnet/api/system.timespan'>TimeSpan</a>  </dt>
+<dd>
+
+
+
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Center' data-commentid='P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Center' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Center'>Center    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L28'><i class='bi bi-code-slash'></i></a></h3>
  <pre><code class='lang-csharp'>public Frequency Center { get; protected set; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.Frequency.html'>Frequency</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SampleRate' data-commentid='P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SampleRate' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_SampleRate'>SampleRate    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L18'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SampleRate' data-commentid='P:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SampleRate' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_SampleRate'>SampleRate    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L31'><i class='bi bi-code-slash'></i></a></h3>
  <pre><code class='lang-csharp'>public SampleRate SampleRate { get; }</code></pre><h4 class='section'>Property Value</h4><dl class='parameters'><dt> <a href='HackRFDotnet.Api.SampleRate.html'>SampleRate</a>  </dt>
 <dd>
 
 
 
-</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Dispose' data-commentid='M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Dispose' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Dispose'>Dispose()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L80'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h2 class='section'>Methods</h2><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Dispose' data-commentid='M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.Dispose' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_Dispose'>Dispose()    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L98'><i class='bi bi-code-slash'></i></a></h3>
  <p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
-<pre><code class='lang-csharp'>public void Dispose()</code></pre><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.ReadSpan(System.Span{`0})' data-commentid='M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.ReadSpan(System.Span{`0})' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_ReadSpan_System_Span__0__'>ReadSpan(Span&lt;TOutput&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L41'><i class='bi bi-code-slash'></i></a></h3>
+<pre><code class='lang-csharp'>public void Dispose()</code></pre><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.ReadSpan(System.Span{`0})' data-commentid='M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.ReadSpan(System.Span{`0})' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_ReadSpan_System_Span__0__'>ReadSpan(Span&lt;TOutput&gt;)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L54'><i class='bi bi-code-slash'></i></a></h3>
  <pre><code class='lang-csharp'>public void ReadSpan(Span&lt;TOutput&gt; dataBuffer)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>dataBuffer</code> <a href='https://learn.microsoft.com/dotnet/api/system.span-1'>Span</a>&lt;TOutput&gt;  </dt>
 <dd>
 
 
 
-</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)' data-commentid='M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_'>SetBand(Frequency, Bandwidth)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L75'><i class='bi bi-code-slash'></i></a></h3>
+</dd></dl><h3 class='section api' data-uid='HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)' data-commentid='M:HackRFDotnet.Api.Streams.SignalStreams.SignalStream`1.SetBand(HackRFDotnet.Api.Frequency,HackRFDotnet.Api.Bandwidth)' id='HackRFDotnet_Api_Streams_SignalStreams_SignalStream_1_SetBand_HackRFDotnet_Api_Frequency_HackRFDotnet_Api_Bandwidth_'>SetBand(Frequency, Bandwidth)    <a class='header-action link-secondary' title='View source' href='https://github.com/Realynx/HackRFDotnet/blob/master/HackRFDotnet/Api/Streams/SignalStreams/SignalStream.cs#L93'><i class='bi bi-code-slash'></i></a></h3>
  <p>Set the band and bandwidth the filtering engine will use.</p>
 <pre><code class='lang-csharp'>public void SetBand(Frequency center, Bandwidth bandwidth)</code></pre><h4 class='section'>Parameters</h4><dl class='parameters'><dt><code>center</code> <a href='HackRFDotnet.Api.Frequency.html'>Frequency</a>  </dt>
 <dd>
