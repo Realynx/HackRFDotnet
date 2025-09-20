@@ -2,10 +2,10 @@
 using HackRFDotnet.NativeApi.Structs.Devices;
 
 namespace HackRFDotnet.Api.Services;
-public unsafe class RfDeviceControllerService {
+public unsafe class RfDeviceService {
     public readonly List<DigitalRadioDevice> RfDevices = new();
 
-    public RfDeviceControllerService() {
+    public RfDeviceService() {
         HackRfNativeLib.Init();
     }
 

@@ -4,11 +4,13 @@ Amplitude modulation - The phase of the audio signal is encoded in the changes o
 Frequency modulation - The phase of the audio signal is encoded in the changes of the phase on the carrier rf wave.
 
 ```cs
+var rfDeviceService = new RfDeviceService();
+
 Console.WriteLine("Looking for HackRf Device...");
-var deviceList = _rfDeviceControllerService.FindDevices();
+var deviceList = rfDeviceService.FindDevices();
 
 Console.WriteLine($"Found {deviceList.devicecount} HackRf devices... Opening Rx");
-using var rfDevice = _rfDeviceControllerService.ConnectToFirstDevice();
+using var rfDevice = rfDeviceService.ConnectToFirstDevice();
 
 if (rfDevice is null) {
     Console.WriteLine("Could not connect to Rf Device");

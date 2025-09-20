@@ -12,6 +12,6 @@ internal class Startup {
             .AddSingleton<SpectrumDisplayService>();
 
         serviceCollection
-            .AddSingleton<RfDeviceControllerService>();
+            .AddSingleton<RfDeviceService>();
     }
 }

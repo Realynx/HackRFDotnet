@@ -14,10 +14,10 @@ using Microsoft.Extensions.Hosting;
 
 namespace BasicScanner.Services;
 internal class MainService : IHostedService {
-    private readonly RfDeviceControllerService _rfDeviceControllerService;
+    private readonly RfDeviceService _rfDeviceControllerService;
     private readonly SpectrumDisplayService _spectrumDisplayService;
 
-    public MainService(RfDeviceControllerService rfDeviceControllerService, SpectrumDisplayService spectrumDisplayService) {
+    public MainService(RfDeviceService rfDeviceControllerService, SpectrumDisplayService spectrumDisplayService) {
         _rfDeviceControllerService = rfDeviceControllerService;
         _spectrumDisplayService = spectrumDisplayService;
     }
@@ -44,9 +44,9 @@ internal class MainService : IHostedService {
         using var deviceStream = new IQDeviceStream(rfDevice);
         deviceStream.OpenRx(SampleRate.FromMsps(20));
 
-        //FrequencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
+        FrequencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
         //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
-        var task = Task.Run(() => HdRadioPlay(rfDevice, deviceStream));
+        //var task = Task.Run(() => HdRadioPlay(rfDevice, deviceStream));
 
         DisplaySpectrumCliBasic(rfDevice, deviceStream);
 

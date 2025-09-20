@@ -1,7 +1,7 @@
 ﻿using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
-using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators;
+using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams.Digital;
 public class OfdmSignalStream : SignalStream<byte> {
@@ -16,9 +16,7 @@ public class OfdmSignalStream : SignalStream<byte> {
             .WithRootEffect(new IQDownSampleEffect(deviceStream.SampleRate,
                 stationBandwidth.NyquistSampleRate, out reducedRate, out var producedChunkSize))
 
-            .AddChildEffect(new FftEffect(true, producedChunkSize))
-            .AddChildEffect(new LowPassFilterEffect(reducedRate, stationBandwidth))
-            .AddChildEffect(new OfdmDemodulator());
+            .AddChildEffect(new OfdmChannelizer());
 
         return signalPipeline;
     }
