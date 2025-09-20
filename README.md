@@ -1,5 +1,5 @@
 ### Speedrun The docs:  
-https://realynx.github.io/HackRFDotnet/HackRFDotnetDocs/getting-started.html
+https://realynx.github.io/HackRFDotnet/HackRFDotnetDocs/01-start.html
 
 # HackRF Dotnet
 A complete hackrf library in C# dotnet with perormance in mind.
