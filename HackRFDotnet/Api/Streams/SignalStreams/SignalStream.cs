@@ -12,6 +12,19 @@ namespace HackRFDotnet.Api.Streams.SignalStreams;
 /// Stream must be created from a <see cref="IIQStream"/>.
 /// </summary>
 public class SignalStream<TOutput> : IDisposable where TOutput : struct {
+    /// <summary>
+    /// This is a special value used if your DSP chain does not need to be real time.
+    /// You can set this to a higher value to force the buffer keeping loop to pause every interval.
+    /// This will allow you to conserve CPU time for DSP chains that require polling updates.
+    /// </summary>
+    public TimeSpan BufferKeepingDelay { get; set; } = TimeSpan.Zero;
+
+    /// <summary>
+    /// This callback is invoked every time after the buffer keeper has written to the ring buffer.
+    /// The span written is provided as an argument. Use this for real time workloads or polling.
+    /// </summary>
+    public Action<Span<TOutput>>? BufferKeepingCallback { get; set; }
+
     public Frequency Center { get; protected set; } = Frequency.FromMHz(94.7f);
     public Bandwidth Bandwidth { get; protected set; } = Bandwidth.FromKHz(200);
 
@@ -34,7 +47,7 @@ public class SignalStream<TOutput> : IDisposable where TOutput : struct {
         _processingPipeline = processingPipeline;
         _keepOpen = keepOpen;
 
-        _filteredBuffer = new RingBuffer<TOutput>((int)(TimeSpan.FromMilliseconds(25).TotalSeconds * _iQStream.SampleRate.Sps));
+        _filteredBuffer = new RingBuffer<TOutput>((int)(TimeSpan.FromMilliseconds(15).TotalSeconds * _iQStream.SampleRate.Sps));
         new Thread(BufferKeeping).Start();
     }
 
@@ -64,6 +77,11 @@ public class SignalStream<TOutput> : IDisposable where TOutput : struct {
 
             var convertedData = MemoryMarshal.Cast<IQ, TOutput>(convertedPairs);
             _filteredBuffer.Write(convertedData.Slice(0, sampleCount));
+            BufferKeepingCallback?.Invoke(convertedData.Slice(0, sampleCount));
+
+            if (BufferKeepingDelay > TimeSpan.Zero) {
+                Thread.Sleep(BufferKeepingDelay);
+            }
         }
     }
 

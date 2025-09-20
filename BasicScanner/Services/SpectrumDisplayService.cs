@@ -3,9 +3,9 @@
 using BasicScanner.NativeMethods;
 
 using HackRFDotnet.Api;
+using HackRFDotnet.Api.SignalProcessing;
+using HackRFDotnet.Api.SignalProcessing.Effects;
 using HackRFDotnet.Api.Streams;
-using HackRFDotnet.Api.Streams.SignalProcessing;
-using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Utilities;
 

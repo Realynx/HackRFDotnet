@@ -3,9 +3,11 @@ using System.Text;
 
 using HackRFDotnet.Api;
 using HackRFDotnet.Api.Extensions;
+using HackRFDotnet.Api.Interfaces;
 using HackRFDotnet.Api.Services;
 using HackRFDotnet.Api.Streams;
 using HackRFDotnet.Api.Streams.Device;
+using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 using HackRFDotnet.Api.Streams.SignalStreams.Digital;
@@ -14,12 +16,15 @@ using Microsoft.Extensions.Hosting;
 
 namespace BasicScanner.Services;
 internal class MainService : IHostedService {
-    private readonly RfDeviceService _rfDeviceControllerService;
+    private readonly DigitalRadioDevice _radioDevice;
     private readonly SpectrumDisplayService _spectrumDisplayService;
+    private readonly ISignalInfoService _signalInfoService;
 
-    public MainService(RfDeviceService rfDeviceControllerService, SpectrumDisplayService spectrumDisplayService) {
-        _rfDeviceControllerService = rfDeviceControllerService;
+    public MainService(IDigitalRadioDevice radioDevice, SpectrumDisplayService spectrumDisplayService,
+        ISignalInfoService signalInfoService) {
+        _radioDevice = (DigitalRadioDevice)radioDevice;
         _spectrumDisplayService = spectrumDisplayService;
+        _signalInfoService = signalInfoService;
     }
 
     /// <summary>
@@ -29,37 +34,27 @@ internal class MainService : IHostedService {
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
     public async Task StartAsync(CancellationToken cancellationToken) {
-        Console.WriteLine("Looking for HackRf Device...");
+        _radioDevice.AttenuateAmplification();
+        FrequencyDemodulateAndPlayAsAudio(_radioDevice);
+        //AmplitudeDemodulateAndPlayAsAudio(_radioDevice);
+        //var task = Task.Run(() => HdRadioPlay(_radioDevice));
 
-        var deviceList = _rfDeviceControllerService.FindDevices();
-        Console.WriteLine($"Found {deviceList.devicecount} HackRf devices... Opening Rx");
-
-        using var rfDevice = _rfDeviceControllerService.ConnectToFirstDevice();
-        if (rfDevice is null) {
-            Console.WriteLine("Could not connect to Rf Device");
-            return;
-        }
-
-        rfDevice.AttenuateAmplification();
-        using var deviceStream = new IQDeviceStream(rfDevice);
-        deviceStream.OpenRx(SampleRate.FromMsps(20));
-
-        FrequencyDemodulateAndPlayAsAudio(rfDevice, deviceStream);
-        //AmplitudeDemodulateAndPlayAsAudio(rfDevice, deviceStream);
-        //var task = Task.Run(() => HdRadioPlay(rfDevice, deviceStream));
-
-        DisplaySpectrumCliBasic(rfDevice, deviceStream);
+        // DisplaySpectrumCliBasic(_radioDevice);
 
         for (; ; ) {
-            await Task.Delay(TimeSpan.FromSeconds(10));
+            Console.Write($"Signal to noise: {_signalInfoService.SignalToNoiseRatio}");
+            Console.CursorLeft = 0;
+            Console.CursorTop = 0;
+
+            await Task.Delay(TimeSpan.FromSeconds(1));
         }
     }
 
-    private static void HdRadioPlay(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+    private static void HdRadioPlay(DigitalRadioDevice rfDevice) {
         var fmFrequency = Frequency.FromMHz(98.7f);
 
         rfDevice.SetFrequency(Frequency.FromMHz(98.862500f), Bandwidth.FromKHz(76));
-        var pskSignalStream = new OfdmSignalStream(deviceStream, Bandwidth.FromKHz(76));
+        var pskSignalStream = new OfdmSignalStream(rfDevice.DeviceStream, Bandwidth.FromKHz(76));
 
         var top = Console.CursorTop;
         while (true) {
@@ -78,7 +73,7 @@ internal class MainService : IHostedService {
                 ArrayPool<byte>.Shared.Return(dataBuffer);
             }
         }
-        //var hdRadioSignalStream = new HdRadioSignalStream(deviceStream, reducedSampleRate, stereo: true,
+        //var hdRadioSignalStream = new HdRadioSignalStream(rfDevice.DeviceStream, reducedSampleRate, stereo: true,
         //    processingPipeline: effectsPipeline, keepOpen: false);
 
         //// And AnaloguePlayer let's us resample and pipe an audio out the speakers.
@@ -86,26 +81,26 @@ internal class MainService : IHostedService {
         //digitalPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, 48000);
     }
 
-    private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+    private static void FrequencyDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice) {
         //rfDevice.SetFrequency(RadioBand.FromMHz(162.55f), RadioBand.FromKHz(20));
         rfDevice.SetFrequency(Frequency.FromMHz(98.7f), Bandwidth.FromKHz(120));
-        var fmSignalStream = new FmSignalStream(deviceStream, Bandwidth.FromKHz(200), stereo: true);
+        var fmSignalStream = new FmSignalStream(rfDevice.DeviceStream, Bandwidth.FromKHz(200), stereo: true);
 
         var fmPlayer = new AnaloguePlayer(fmSignalStream);
         fmPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, SampleRate.FromKsps(48));
     }
 
-    private static void AmplitudeDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+    private static void AmplitudeDemodulateAndPlayAsAudio(DigitalRadioDevice rfDevice) {
         rfDevice.SetFrequency(Frequency.FromMHz(118.4f), Bandwidth.FromKHz(10));
-        var amSignalStream = new AmSignalStream(deviceStream, Bandwidth.FromKHz(10));
+        var amSignalStream = new AmSignalStream(rfDevice.DeviceStream, Bandwidth.FromKHz(10));
 
         var amPlayer = new AnaloguePlayer(amSignalStream);
         amPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, SampleRate.FromKsps(48));
     }
 
-    private void DisplaySpectrumCliBasic(DigitalRadioDevice rfDevice, IQDeviceStream deviceStream) {
+    private void DisplaySpectrumCliBasic(DigitalRadioDevice rfDevice) {
         var _thread = new Thread(async () => {
-            var signalStream = new SignalStream<IQ>(deviceStream);
+            var signalStream = new SignalStream<IQ>(rfDevice.DeviceStream);
             await _spectrumDisplayService.StartAsync(rfDevice, signalStream, new CancellationTokenSource().Token);
         });
 

@@ -1,10 +1,16 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using HackRFDotnet.Api;
+using HackRFDotnet.Api.Extensions;
+
+using Microsoft.Extensions.Hosting;
 
 namespace BasicScanner {
     internal class Program {
         static async Task Main(string[] args) {
             var appHost = new HostBuilder();
-            appHost.ConfigureServices(Startup.ConfigureServices);
+
+            appHost
+                .UseFirstRadioDevice(SampleRate.FromMsps(20))
+                .ConfigureServices(Startup.ConfigureServices);
 
             await appHost.RunConsoleAsync();
         }

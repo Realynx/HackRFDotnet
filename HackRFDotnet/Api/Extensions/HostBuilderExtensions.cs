@@ -44,4 +44,16 @@ public static class HostBuilderExtensions {
 
         return hostBuilder;
     }
+
+    /// <summary>
+    /// Add default services from HackRfDotnet's service library.
+    /// </summary>
+    /// <param name="serviceDescriptors"></param>
+    /// <returns></returns>
+    public static IServiceCollection AddHackRfDotnetServices(this IServiceCollection serviceDescriptors) {
+        serviceDescriptors
+            .AddSingleton<ISignalInfoService, SignalInfoService>();
+
+        return serviceDescriptors;
+    }
 }
