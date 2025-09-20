@@ -5,25 +5,18 @@ using HackRFDotnet.Api;
 using HackRFDotnet.Api.Extensions;
 using HackRFDotnet.Api.Interfaces;
 using HackRFDotnet.Api.Services;
-using HackRFDotnet.Api.Streams;
-using HackRFDotnet.Api.Streams.Device;
-using HackRFDotnet.Api.Streams.Interfaces;
-using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 using HackRFDotnet.Api.Streams.SignalStreams.Digital;
 
 using Microsoft.Extensions.Hosting;
 
-namespace BasicScanner.Services;
+namespace RadioSpectrum.Services;
 internal class MainService : IHostedService {
     private readonly DigitalRadioDevice _radioDevice;
-    private readonly SpectrumDisplayService _spectrumDisplayService;
     private readonly ISignalInfoService _signalInfoService;
 
-    public MainService(IDigitalRadioDevice radioDevice, SpectrumDisplayService spectrumDisplayService,
-        ISignalInfoService signalInfoService) {
+    public MainService(IDigitalRadioDevice radioDevice, ISignalInfoService signalInfoService) {
         _radioDevice = (DigitalRadioDevice)radioDevice;
-        _spectrumDisplayService = spectrumDisplayService;
         _signalInfoService = signalInfoService;
     }
 
@@ -38,16 +31,6 @@ internal class MainService : IHostedService {
         FrequencyDemodulateAndPlayAsAudio(_radioDevice);
         //AmplitudeDemodulateAndPlayAsAudio(_radioDevice);
         //var task = Task.Run(() => HdRadioPlay(_radioDevice));
-
-        // DisplaySpectrumCliBasic(_radioDevice);
-
-        for (; ; ) {
-            Console.Write($"Signal to noise: {_signalInfoService.SignalToNoiseRatio}");
-            Console.CursorLeft = 0;
-            Console.CursorTop = 0;
-
-            await Task.Delay(TimeSpan.FromSeconds(1));
-        }
     }
 
     private static void HdRadioPlay(DigitalRadioDevice rfDevice) {
@@ -96,15 +79,6 @@ internal class MainService : IHostedService {
 
         var amPlayer = new AnaloguePlayer(amSignalStream);
         amPlayer.PlayStreamAsync(rfDevice.Frequency, rfDevice.Bandwidth, SampleRate.FromKsps(48));
-    }
-
-    private void DisplaySpectrumCliBasic(DigitalRadioDevice rfDevice) {
-        var _thread = new Thread(async () => {
-            var signalStream = new SignalStream<IQ>(rfDevice.DeviceStream);
-            await _spectrumDisplayService.StartAsync(rfDevice, signalStream, new CancellationTokenSource().Token);
-        });
-
-        _thread.Start();
     }
 
     public Task StopAsync(CancellationToken cancellationToken) {

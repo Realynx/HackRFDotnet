@@ -3,7 +3,7 @@ using HackRFDotnet.Api.Extensions;
 
 using Microsoft.Extensions.Hosting;
 
-namespace BasicScanner {
+namespace RadioSpectrum {
     internal class Program {
         static async Task Main(string[] args) {
             var appHost = new HostBuilder();

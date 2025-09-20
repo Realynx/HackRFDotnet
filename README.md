@@ -10,7 +10,7 @@ https://realynx.github.io/HackRFDotnet/
 
 
 
-> [!WARNING]
+> [!CAUTION]
 > **Legal Notice:** HackRF devices are capable of transmitting and receiving radio signals. Use of these devices is subject to local, regional, and national laws and regulations. HackRfDotnet and its maintainers ([Realynx](https://github.com/Realynx/)) provide this library for **educational, experimental, and research purposes only**.  
 >
 > **You are solely responsible** for any use of your HackRF device, including compliance with spectrum licensing, transmission power limits, and prohibited frequency bands. HackRfDotnet, Realynx (including its members), and [Great Scott Gadgets](https://github.com/greatscottgadgets/hackrf) **are not responsible** for damages, legal penalties, or regulatory violations resulting from improper or unlawful use.  

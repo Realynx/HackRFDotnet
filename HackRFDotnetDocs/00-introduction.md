@@ -16,14 +16,14 @@ These pipelines allow for real-time demodulation, filtering, and transformation,
 Below is a table of contents linking to our documentation and example programs, showing both basic usage and advanced scenarios.
 
 ## Getting Started
-00 [Setting Up Radio](./01-start.html) – Learn how to initialize and configure your HackRF device.  
+01 [Setting Up Radio](./01-start.html) – Learn how to initialize and configure your HackRF device.  
 02 [Setting Up Radio In DI](./02-di.html) – Using HackRfDotnet with dependency injection for managed device lifecycles and service integration.  
 
 ## Advanced
 05 [Scanning Frequencies](./getting-started.html)  
 
 
-> [!WARNING]
+> [!CAUTION]
 > **Legal Notice:** HackRF devices are capable of transmitting and receiving radio signals. Use of these devices is subject to local, regional, and national laws and regulations. HackRfDotnet and its maintainers ([Realynx](https://github.com/Realynx/)) provide this library for **educational, experimental, and research purposes only**.  
 >
 > **You are solely responsible** for any use of your HackRF device, including compliance with spectrum licensing, transmission power limits, and prohibited frequency bands. HackRfDotnet, Realynx (including its members), and [Great Scott Gadgets](https://github.com/greatscottgadgets/hackrf) **are not responsible** for damages, legal penalties, or regulatory violations resulting from improper or unlawful use.  

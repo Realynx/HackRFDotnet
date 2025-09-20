@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackRFDotnet", "HackRFDotnet\HackRFDotnet.csproj", "{3DDACD8E-572A-44C1-86D0-A63F1D01E4C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicScanner", "BasicScanner\BasicScanner.csproj", "{C191E4E4-DEE7-4228-868A-9D76CA4ABEA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioSpectrum", "BasicScanner\RadioSpectrum.csproj", "{C191E4E4-DEE7-4228-868A-9D76CA4ABEA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackRFDotnet.Benchmarks", "HackRFDotnet.Benchmarks\HackRFDotnet.Benchmarks.csproj", "{C17BDC8C-11C3-4EED-ADE7-88D81A08FA4F}"
 EndProject

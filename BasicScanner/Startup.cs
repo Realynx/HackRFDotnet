@@ -1,16 +1,15 @@
-﻿using BasicScanner.Services;
-
-using HackRFDotnet.Api.Extensions;
+﻿using HackRFDotnet.Api.Extensions;
 
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BasicScanner;
+using RadioSpectrum.Services;
+
+namespace RadioSpectrum;
 internal class Startup {
     public static void ConfigureServices(IServiceCollection serviceCollection) {
         serviceCollection
             .AddHackRfDotnetServices()
-            .AddHostedService<MainService>()
-            .AddSingleton<SpectrumDisplayService>();
-
+            .AddHostedService<SpectrumDisplayService>()
+            .AddHostedService<MainService>();
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
-namespace BasicScanner.NativeMethods;
+namespace RadioSpectrum.NativeMethods;
 
 [StructLayout(LayoutKind.Sequential)]
 public struct COORD {
@@ -32,11 +32,11 @@ public struct CHAR_INFO {
 
 public static class Kernel32Methods {
     [DllImport("kernel32.dll", SetLastError = true)]
-    public static extern IntPtr GetStdHandle(int nStdHandle);
+    public static extern nint GetStdHandle(int nStdHandle);
 
     [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
     public static extern unsafe bool WriteConsoleOutputW(
-        IntPtr hConsoleOutput,
+        nint hConsoleOutput,
         CHAR_INFO* lpBuffer,
         COORD dwBufferSize,
         COORD dwBufferCoord,
