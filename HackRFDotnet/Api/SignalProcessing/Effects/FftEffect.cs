@@ -2,9 +2,11 @@
 
 using FftwF.Dotnet;
 
+using HackRFDotnet.Api.Streams;
+
 using MathNet.Numerics;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+namespace HackRFDotnet.Api.SignalProcessing.Effects;
 /// <summary>
 /// Fast Fourier Transform Effect.
 /// Can be used for forward and inverse transforms.

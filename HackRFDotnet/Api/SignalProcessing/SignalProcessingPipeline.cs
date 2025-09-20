@@ -1,7 +1,7 @@
-﻿using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
-using HackRFDotnet.Api.Streams.SignalProcessing.Interfaces;
+﻿using HackRFDotnet.Api.SignalProcessing.Effects;
+using HackRFDotnet.Api.SignalProcessing.Interfaces;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing;
+namespace HackRFDotnet.Api.SignalProcessing;
 /// <summary>
 /// Effects chain processor.
 /// </summary>

@@ -1,4 +1,4 @@
-﻿namespace HackRFDotnet.Api.Streams.SignalProcessing.Interfaces;
+﻿namespace HackRFDotnet.Api.SignalProcessing.Interfaces;
 
 public interface ISignalEffectInput<TInput> {
     /// <summary>

@@ -1,6 +1,7 @@
-﻿using HackRFDotnet.Api.Utilities;
+﻿using HackRFDotnet.Api.Streams;
+using HackRFDotnet.Api.Utilities;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+namespace HackRFDotnet.Api.SignalProcessing.Effects;
 /// <summary>
 /// Shift the frequency by a <see cref="Frequency"/> offset.
 /// This only works for IQ samples, we can shift frequency without losing information.

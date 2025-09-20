@@ -1,7 +1,7 @@
-﻿using HackRFDotnet.Api.Streams.Interfaces;
-using HackRFDotnet.Api.Streams.SignalProcessing;
-using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
-using HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators;
+﻿using HackRFDotnet.Api.SignalProcessing;
+using HackRFDotnet.Api.Streams.Interfaces;
+using HackRFDotnet.Api.SignalProcessing.Effects;
+using HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams.Analogue;
 /// <summary>

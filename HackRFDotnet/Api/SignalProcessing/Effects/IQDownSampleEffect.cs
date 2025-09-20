@@ -2,12 +2,13 @@
 
 using FftwF.Dotnet;
 
+using HackRFDotnet.Api.Streams;
 using HackRFDotnet.Api.Streams.SignalStreams;
 using HackRFDotnet.Api.Utilities;
 
 using MathNet.Numerics;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+namespace HackRFDotnet.Api.SignalProcessing.Effects;
 
 /// <summary>
 /// <see cref="IQDownSampleEffect"/> removes extraneous information from your signal using your desired bandwidth.
@@ -105,7 +106,7 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
         var resolution = SignalUtilities.FrequencyResolution(length, _iqSampleRate, true);
         var nyquist = _reducedSampledRate.Sps / 2.0;
         for (var x = 0; x < length; x++) {
-            var freq = (x < length / 2) ? x * resolution : (x - length) * resolution;
+            var freq = x < length / 2 ? x * resolution : (x - length) * resolution;
 
             if (Math.Abs(freq) > nyquist) {
                 _fftOutBuffer[x] = Complex32.Zero;

@@ -1,9 +1,10 @@
 ﻿using System.Runtime.InteropServices;
 
-using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+using HackRFDotnet.Api.SignalProcessing.Effects;
+using HackRFDotnet.Api.Streams;
 using HackRFDotnet.Api.Utilities;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters.Demodulators;
+namespace HackRFDotnet.Api.SignalProcessing.FormatConverters.Demodulators;
 public class FmDemodulator : SignalEffect<IQ, float> {
     public FmDemodulator() {
 

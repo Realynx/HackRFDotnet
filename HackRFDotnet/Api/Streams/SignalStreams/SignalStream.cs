@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
 using System.Runtime.InteropServices;
 
+using HackRFDotnet.Api.SignalProcessing;
 using HackRFDotnet.Api.Streams.Buffers;
 using HackRFDotnet.Api.Streams.Interfaces;
-using HackRFDotnet.Api.Streams.SignalProcessing;
 using HackRFDotnet.Api.Utilities;
 
 namespace HackRFDotnet.Api.Streams.SignalStreams;

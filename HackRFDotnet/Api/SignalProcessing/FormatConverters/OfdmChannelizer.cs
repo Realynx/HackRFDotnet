@@ -1,7 +1,8 @@
-﻿using HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+﻿using HackRFDotnet.Api.SignalProcessing.Effects;
+using HackRFDotnet.Api.Streams;
 using HackRFDotnet.Api.Utilities;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.FormatConverters;
+namespace HackRFDotnet.Api.SignalProcessing.FormatConverters;
 
 /// <summary>
 /// This is discover the channel division inside an OFDM stream.
@@ -23,7 +24,7 @@ public class OfdmChannelizer : SignalEffect<IQ, IQ> {
             return length;
         }
 
-        (int fftSize, int prefixSize) = detectedSymbolDetails.Value;
+        (var fftSize, var prefixSize) = detectedSymbolDetails.Value;
 
         return base.TransformSignal(signalTheta, length);
     }

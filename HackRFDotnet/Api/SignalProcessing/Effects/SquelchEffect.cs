@@ -1,4 +1,6 @@
-﻿namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+﻿using HackRFDotnet.Api.Streams;
+
+namespace HackRFDotnet.Api.SignalProcessing.Effects;
 /// <summary>
 /// Squelch Effect to remove noise when there is no detected signal present.
 /// </summary>
@@ -26,7 +28,7 @@ public class SquelchEffect : SignalEffect<IQ, IQ> {
         for (var x = length; x < signalTheta.Length; x++) {
             var i = signalTheta[x].I;
             var q = signalTheta[x].Q;
-            basebandNoise += (i * i) + (q * q);
+            basebandNoise += i * i + q * q;
         }
         var basebandNoiseFloor = basebandNoise / signalTheta.Length;
 
@@ -34,7 +36,7 @@ public class SquelchEffect : SignalEffect<IQ, IQ> {
         for (var x = 0; x < length; x++) {
             var i = signalTheta[x].I;
             var q = signalTheta[x].Q;
-            channelNoise += (i * i) + (q * q);
+            channelNoise += i * i + q * q;
         }
         var channelNoiseFloor = channelNoise / length;
 

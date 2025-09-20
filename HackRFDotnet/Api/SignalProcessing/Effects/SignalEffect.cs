@@ -1,8 +1,8 @@
 ﻿using System.Runtime.InteropServices;
 
-using HackRFDotnet.Api.Streams.SignalProcessing.Interfaces;
+using HackRFDotnet.Api.SignalProcessing.Interfaces;
 
-namespace HackRFDotnet.Api.Streams.SignalProcessing.Effects;
+namespace HackRFDotnet.Api.SignalProcessing.Effects;
 /// <summary>
 /// Signal effect base class.
 /// </summary>
