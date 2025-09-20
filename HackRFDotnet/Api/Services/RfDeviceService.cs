@@ -1,8 +1,9 @@
-﻿using HackRFDotnet.NativeApi.Lib;
+﻿using HackRFDotnet.Api.Interfaces;
+using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs.Devices;
 
 namespace HackRFDotnet.Api.Services;
-public unsafe class RfDeviceService {
+public unsafe class RfDeviceService : IRfDeviceService {
     public readonly List<DigitalRadioDevice> RfDevices = new();
 
     public RfDeviceService() {

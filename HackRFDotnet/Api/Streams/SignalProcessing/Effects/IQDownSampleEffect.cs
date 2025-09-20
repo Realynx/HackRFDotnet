@@ -34,6 +34,10 @@ public unsafe class IQDownSampleEffect : SignalEffect<IQ, IQ>, IDisposable {
     /// <param name="newSampleRate">The closest possible sample rate achievable.</param>
     /// <param name="producedChunkSize">The chunk size after down sampling.</param>
     public IQDownSampleEffect(SampleRate sampleRate, SampleRate reducedSampleRate, out SampleRate newSampleRate, out int producedChunkSize) {
+        if (reducedSampleRate > sampleRate) {
+            throw new ArgumentException($"{nameof(reducedSampleRate)} cannot be larger than original {nameof(sampleRate)}.");
+        }
+
         _iqSampleRate = sampleRate;
         _reducedSampledRate = reducedSampleRate;
 

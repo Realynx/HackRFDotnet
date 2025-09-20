@@ -34,6 +34,7 @@ namespace HackRFDotnet.Api.Streams.Device {
 
         public IQDeviceStream(DigitalRadioDevice rfDevice) {
             RfDevice = rfDevice;
+            rfDevice.DeviceStream = this;
 
             _transferBufferSize = (int)HackRfNativeLib.DeviceStreaming.GetTransferBufferSize(rfDevice.DevicePtr);
         }

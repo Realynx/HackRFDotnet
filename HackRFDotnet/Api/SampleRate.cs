@@ -1,4 +1,6 @@
-﻿namespace HackRFDotnet.Api;
+﻿using System.Reflection;
+
+namespace HackRFDotnet.Api;
 
 public record struct SampleRate {
     private readonly Hertz _hertz;
@@ -103,5 +105,9 @@ public record struct SampleRate {
 
     public static implicit operator Hertz(SampleRate s) {
         return s._hertz;
+    }
+
+    public override string ToString() {
+        return Sps.ToString();
     }
 }

@@ -1,4 +1,6 @@
-﻿using HackRFDotnet.Api.Streams.Exceptions;
+﻿using HackRFDotnet.Api.Interfaces;
+using HackRFDotnet.Api.Streams.Exceptions;
+using HackRFDotnet.Api.Streams.Interfaces;
 using HackRFDotnet.NativeApi.Enums.Peripherals;
 using HackRFDotnet.NativeApi.Lib;
 using HackRFDotnet.NativeApi.Structs;
@@ -8,7 +10,7 @@ namespace HackRFDotnet.Api {
     /// <summary>
     /// Radio Device to receive IQ Samples with.
     /// </summary>
-    public unsafe class DigitalRadioDevice : IDisposable {
+    public unsafe class DigitalRadioDevice : IDigitalRadioDevice, IDisposable {
         /// <summary>
         /// Current frequency tuned to.
         /// </summary>
@@ -23,6 +25,11 @@ namespace HackRFDotnet.Api {
         /// Current capture sample rate.
         /// </summary>
         public SampleRate DeviceSamplingRate { get; set; } = SampleRate.FromMsps(10);
+
+        /// <summary>
+        /// The immutable stream running on this device.
+        /// </summary>
+        public IIQStream? DeviceStream { get; internal set; } = null;
 
         /// <summary>
         /// Is the device connected to the usb host in the native library?
